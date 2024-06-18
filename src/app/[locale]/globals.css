@@ -9,3 +9,22 @@ body {
 .sarabun {
   font-family: var(--font-sarabun);
 }
+
+/* swiper */
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  line-height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
+}

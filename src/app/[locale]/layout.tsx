@@ -3,13 +3,16 @@ import { Kanit, Sarabun } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 
+import 'swiper/css'
+import 'swiper/css/pagination'
 import './globals.css'
 import { LocaleEnum } from '@/enums/LocaleEnum'
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 const sarabun = Sarabun({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
-  subsets: ['latin'],
+  subsets: ['thai'],
   variable: '--font-sarabun',
 })
 const kanit = Kanit({
@@ -45,6 +48,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
