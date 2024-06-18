@@ -1,0 +1,81 @@
+{
+  "Menu": {
+    "about": {
+      "name": "ABOUT",
+      "menu": {
+        "whoWeAre": "WHO WE ARE",
+        "whatWeBelieve": "What We Believe"
+      }
+    },
+    "facilities": {
+      "name": "เครื่องมือและสิ่งอำนวยความสะดวก",
+      "menu": {
+        "facilities": "สิ่งอำนวยความสะดวกภายในท่าเรือ",
+        "technology": "เทคโนโลยี",
+        "dockOperatingSystem": "ระบบปฏิบัติการท่าเรือ",
+        "equipment": "เครื่องมือและอุปกรณ์",
+        "instructions": "คำแนะนำเกี่ยวกับขั้นตอนการปฏิบัติการ"
+      }
+    },
+    "service": {
+      "name": "Services",
+      "menu": {
+        "containerizedCargo": "Containerized Cargo",
+        "multipurposeTerminal": "Multipurpose Terminal",
+        "warehousing": "Warehousing",
+        "valueAddedServices": "Value Added Services"
+      }
+    },
+    "news": "ข่าวประชาสัมพันธ์",
+    "eService": {
+      "name": "e-service",
+      "menu": {
+        "trackByContainer": "Track by Container",
+        "trackByBookingNumber": "Track by Booking Number",
+        "trackByBLNumber": "Track by B/L Number",
+        "containerDepotBooking": "Container Depot Booking",
+        "bookQBCDS": "Container Depot Booking"
+      }
+    },
+    "investorRelations": {
+      "name": "Investor Relations",
+      "menu": {
+        "inroductionVideo": "วีดีโอแนะนำบริษัท",
+        "financialReport": {
+          "name": "รายงานและข้อมูลทางการเงิน",
+          "menu": {
+            "annualReport": "รายงานประจำปี",
+            "financialInformation": "ข้อมูลทางการเงิน",
+            "performanceReport": "รายงานผลการดำเนินงาน",
+            "publishedDocument": "เอกสารเผยแพร่"
+          }
+        },
+        "shareholderInformation": {
+          "name": "ข้อมูลผู้ถือหุ้น",
+          "menu": {
+            "majorShareholders": "รายชื่อผู้ถือหุ้นรายใหญ่",
+            "dividendPayment": "การจ่ายเงินปันผล"
+          }
+        },
+        "shareholderMeeting": "การประชุมผู้ถือหุ้น",
+        "analysisAndSupervision": {
+          "name": "การวิเคราะห์และการกำกับดูแล",
+          "menu": {
+            "securitiesAnalysis": "บทวิเคราะห์หลักทรัพย์",
+            "corporateGovernance": "การกำกับดูแลกิจการที่ดี"
+          }
+        },
+        "sustainability": {
+          "name": "ความยั่งยืน",
+          "menu": {
+            "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน",
+            "activity": "กิจกรรม"
+          }
+        },
+        "warrant": "ใบสำคัญแสดงสิทธิ",
+        "stockInformation": "ข้อมูลตลาดและหุ้น",
+        "factsheet": "Factsheet"
+      }
+    }
+  }
+}
