@@ -1,12 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Kanit, Sarabun } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 
 import './globals.css'
 import { LocaleEnum } from '@/enums/LocaleEnum'
+import { Header } from '@/components/Header'
 
-const inter = Inter({ subsets: ['latin'] })
+const sarabun = Sarabun({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-sarabun',
+})
+const kanit = Kanit({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['thai'],
+  variable: '--font-kanit',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,7 +33,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${sarabun.variable} ${kanit.variable}`}>
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
         <meta
@@ -31,8 +41,9 @@ export default async function LocaleLayout({
           content='width=device-width, initial-scale=1.0, user-scalable=no'
         />
       </head>
-      <body className={inter.className}>
+      <body>
         <NextIntlClientProvider messages={messages}>
+          <Header locale={locale} />
           {children}
         </NextIntlClientProvider>
       </body>
