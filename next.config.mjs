@@ -18,6 +18,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'sahathaiterminal.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'swiperjs.com',
+      },
     ],
   },
 }

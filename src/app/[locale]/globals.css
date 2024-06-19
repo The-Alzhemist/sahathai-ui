@@ -30,3 +30,12 @@ body {
   width: 10px;
   height: 10px;
 }
+
+/* custome-banner */
+.custome-banner {
+  height: 417px;
+
+  .swiper-slide-active {
+    z-index: 2;
+  }
+}

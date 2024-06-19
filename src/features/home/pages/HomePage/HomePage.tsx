@@ -5,6 +5,7 @@ import { Service } from './components/Service'
 import { News } from './components/News'
 import { Highlight } from './components/Highlight'
 import { ContactUs } from './components/ContactUs'
+import { Slide } from '@/components/Slide'
 
 export function HomePage() {
   return (
@@ -16,6 +17,7 @@ export function HomePage() {
       <News />
       <Highlight />
       <ContactUs />
+      <Slide />
     </main>
   )
 }
