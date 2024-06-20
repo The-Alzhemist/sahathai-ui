@@ -34,8 +34,17 @@ export function Header({ locale }: HeaderProps) {
       </Link>
       <div className='flex items-center text-white kanit font-[300]'>
         <Menu label={t('about.name')}>
-          <MenuItem label={t('about.menu.whoWeAre')} link='' />
-          <MenuItem label={t('about.menu.whatWeBelieve')} link='' />
+          <MenuItem
+            label={t('about.menu.commitmentSuccess')}
+            link='/commitment-success'
+          />
+          <MenuItem
+            label={t('about.menu.corporateGroupAndOrganizationalStructure')}
+            link=''
+          />
+          <MenuItem label={t('about.menu.boardAndExecutives')} link='' />
+          <MenuItem label={t('about.menu.antiCorruptionPolicy')} link='' />
+          <MenuItem label={t('about.menu.visionMissionValues')} link='' />
         </Menu>
         <Menu label={t('facilities.name')}>
           <MenuItem label={t('facilities.menu.facilities')} link='' />

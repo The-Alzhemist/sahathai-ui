@@ -1,0 +1,30 @@
+{
+  "CommitmentSuccessPage": {
+    "title": "ความมุ่งมั่นและความสำเร็จของเรา",
+    "description": "สหไทย เทอร์มินอล เป็นบริษัทเอกชน เริ่มเปิดดำเนินกิจการครั้งแรก ในปี พ.ศ. 2550 โดยบริษัทฯ มีพื้นที่ในการปฏิบัติการทั้งหมด 315,200 ตารางเมตร ประกอบด้วยพื้นที่ซ่อมบำรุงตู้คอนเทนเนอร์ สำนักงานศุลกากรภายในพื้นที่ท่าเรือ และมีเครื่องมือประจำท่าเรือสำหรับยกขนสินค้าอย่างครบวงจร พร้อมบุคลากรที่มีทักษะและความเชี่ยวชาญ สหไทย เทอร์มินอล ตั้งอยู่บริเวณริมแม่น้ำเจ้าพระยา ให้บริการลูกค้าอย่างครบวงจร คุณสามารถวางใจได้ว่า เรามีโซลูชั่นที่ครอบคลุมและมีบริการเสริมพร้อมตอบสนองทุกความต้องการ ทุกบริการของเราได้รับการรับรองด้วยมาตรฐานระดับโลก ขณะเดียวกัน เราสามารถให้บริการได้อย่างยืดหยุ่น ซึ่งผู้ปฏิบัติการท่าเทียบเรืออิสระเท่านั้นที่สามารถเสนอบริการเหล่านี้ได้",
+    "item1": {
+      "title": "COMPANY NAME",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "item2": {
+      "title": "COMPANY NAME",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "item3": {
+      "title": "COMPANY NAME",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "item4": {
+      "title": "COMPANY NAME",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "item5": {
+      "title": "COMPANY NAME",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "item6": {
+      "title": "COMPANY NAME",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }
+  }
+}

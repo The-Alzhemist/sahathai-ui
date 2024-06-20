@@ -3,8 +3,11 @@
     "about": {
       "name": "เกี่ยวกับเรา",
       "menu": {
-        "whoWeAre": "เราคือใคร",
-        "whatWeBelieve": "ความมุ่งมั่นของเรา"
+        "commitmentSuccess": "ความมุ่งมั่นและความสำเร็จของเรา",
+        "corporateGroupAndOrganizationalStructure": "โครงสร้างกลุ่มบริษัทและโครงสร้างองค์กร",
+        "boardAndExecutives": "คณะกรรมการ & คณะผู้บริหาร",
+        "antiCorruptionPolicy": "นโยบายการต่อต้านการทุจริต",
+        "visionMissionValues": "วิสัยทัศน์ พันธกิจ และค่านิยมหลัก"
       }
     },
     "facilities": {
