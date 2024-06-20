@@ -7,7 +7,12 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale)) notFound()
 
   // Define the list of pages
-  const pages = ['Menu', 'HomePage', 'CommitmentSuccessPage']
+  const pages = [
+    'Menu',
+    'HomePage',
+    'CommitmentSuccessPage',
+    'CorporateGroupOrganizationalStructurePage',
+  ]
 
   const messages = {}
 
