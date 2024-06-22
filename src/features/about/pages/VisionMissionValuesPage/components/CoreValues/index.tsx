@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { CoreValuesItem } from '../CoreValuesItem'
 
 export function CoreValues() {
-  const t = useTranslations('VisionMissionValuesPage.coreValues')
+  const t = useTranslations('VisionMissionValuesPage.CoreValues')
 
   return (
     <section className='mt-[84px] relative h-[592px]'>

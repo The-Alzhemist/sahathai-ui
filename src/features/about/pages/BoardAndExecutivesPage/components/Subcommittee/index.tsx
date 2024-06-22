@@ -7,7 +7,7 @@ import { SubcommitteeEnum } from './interface'
 import { Link } from '@/libs/intl/navigation'
 
 export function Subcommittee() {
-  const t = useTranslations('BoardAndExecutivesPage.subcommittee')
+  const t = useTranslations('BoardAndExecutivesPage.Subcommittee')
   const [activeTab, setActiveTab] = useState(SubcommitteeEnum.Audit)
   return (
     <section className='py-[117px] bg-dark-60'>

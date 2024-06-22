@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import { PeopleCard } from '../PeopleCard'
 
 export function Board() {
-  const t = useTranslations('BoardAndExecutivesPage.board')
+  const t = useTranslations('BoardAndExecutivesPage.Board')
 
   return (
     <section className='bg-dark-60'>

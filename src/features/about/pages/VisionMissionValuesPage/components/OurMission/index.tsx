@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { MissionCard } from '../MissionCard'
 
 export function OurMission() {
-  const t = useTranslations('VisionMissionValuesPage.ourMission')
+  const t = useTranslations('VisionMissionValuesPage.OurMission')
 
   return (
     <section className='py-[80px]'>

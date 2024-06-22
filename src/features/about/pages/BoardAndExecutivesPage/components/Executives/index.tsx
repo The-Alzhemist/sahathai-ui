@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { PeopleCard } from '../PeopleCard'
 
 export function Executives() {
-  const t = useTranslations('BoardAndExecutivesPage.executives')
+  const t = useTranslations('BoardAndExecutivesPage.Executives')
 
   return (
     <section>

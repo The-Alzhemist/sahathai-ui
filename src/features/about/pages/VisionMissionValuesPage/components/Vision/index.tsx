@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 export function Vision() {
-  const t = useTranslations('VisionMissionValuesPage.vision')
+  const t = useTranslations('VisionMissionValuesPage.Vision')
 
   return (
     <section className='flex flex-wrap justify-center items-center gap-[121px] py-[91px] bg-dark-60'>
