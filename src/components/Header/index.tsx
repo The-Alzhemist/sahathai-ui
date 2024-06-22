@@ -46,7 +46,10 @@ export function Header({ locale }: HeaderProps) {
             label={t('about.menu.boardAndExecutives')}
             link='/boar-and-executives'
           />
-          <MenuItem label={t('about.menu.antiCorruptionPolicy')} link='' />
+          <MenuItem
+            label={t('about.menu.antiCorruptionPolicy')}
+            link='/anti-corruption-policy'
+          />
           <MenuItem label={t('about.menu.visionMissionValues')} link='' />
         </Menu>
         <Menu label={t('facilities.name')}>

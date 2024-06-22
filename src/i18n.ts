@@ -13,6 +13,7 @@ export default getRequestConfig(async ({ locale }) => {
     'CommitmentSuccessPage',
     'CorporateGroupOrganizationalStructurePage',
     'BoardAndExecutivesPage',
+    'AntiCorruptionPolicyPage',
   ]
 
   const messages = {}
