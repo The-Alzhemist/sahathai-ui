@@ -7,6 +7,8 @@ import { TextAreaField } from '@/components/forms/TextAreaField'
 
 export function AntiCorruptionPolicyPage() {
   const t = useTranslations('AntiCorruptionPolicyPage')
+  const common = useTranslations('common')
+
   return (
     <main>
       <section className='bg-dark-60 space-y-[24px] p-[40px]'>
@@ -55,7 +57,7 @@ export function AntiCorruptionPolicyPage() {
                 className='p-[18px] rounded-[30px] font-[700] leading-[18px] w-full bg-dark text-white'
                 type='submit'
               >
-                {t('report.sendMessage')}
+                {common('sendMessage')}
               </button>
             </Form>
           </Formik>

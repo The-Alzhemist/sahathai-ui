@@ -36,6 +36,7 @@ const config: Config = {
         white: {
           DEFAULT: '#FFFFFF',
           1: '#D9D9D9',
+          2: '#DDE1E6',
         },
       },
       boxShadow: {

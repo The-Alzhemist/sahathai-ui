@@ -55,12 +55,18 @@ export function Header({ locale }: HeaderProps) {
             link='/vision-mission-values'
           />
         </Menu>
-        <Menu label={t('facilities.name')}>
-          <MenuItem label={t('facilities.menu.facilities')} link='' />
-          <MenuItem label={t('facilities.menu.technology')} link='' />
-          <MenuItem label={t('facilities.menu.dockOperatingSystem')} link='' />
-          <MenuItem label={t('facilities.menu.equipment')} link='' />
-          <MenuItem label={t('facilities.menu.instructions')} link='' />
+        <Menu label={t('capabilities.name')}>
+          <MenuItem
+            label={t('capabilities.menu.facilities')}
+            link='/port-facilities'
+          />
+          <MenuItem label={t('capabilities.menu.technology')} link='' />
+          <MenuItem
+            label={t('capabilities.menu.dockOperatingSystem')}
+            link=''
+          />
+          <MenuItem label={t('capabilities.menu.equipment')} link='' />
+          <MenuItem label={t('capabilities.menu.instructions')} link='' />
         </Menu>
         <Menu label={t('service.name')}>
           <MenuItem label={t('service.menu.containerizedCargo')} link='' />

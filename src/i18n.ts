@@ -8,6 +8,7 @@ export default getRequestConfig(async ({ locale }) => {
 
   // Define the list of pages
   const pages = [
+    'common',
     'Menu',
     'HomePage',
     'CommitmentSuccessPage',
@@ -15,6 +16,7 @@ export default getRequestConfig(async ({ locale }) => {
     'BoardAndExecutivesPage',
     'AntiCorruptionPolicyPage',
     'VisionMissionValuesPage',
+    'PortFacilitiesPage',
   ]
 
   const messages = {}
