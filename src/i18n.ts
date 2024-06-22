@@ -12,6 +12,7 @@ export default getRequestConfig(async ({ locale }) => {
     'HomePage',
     'CommitmentSuccessPage',
     'CorporateGroupOrganizationalStructurePage',
+    'BoardAndExecutivesPage',
   ]
 
   const messages = {}

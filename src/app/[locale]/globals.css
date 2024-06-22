@@ -11,6 +11,76 @@ body {
 .sarabun {
   font-family: 'Sarabun', sans-serif;
 }
+/*  */
+.headline-1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 56px;
+}
+
+.headline-2 {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.headline-3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.headline-4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.subtitle-1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.subtitle-2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.body-1 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.body-2 {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.caption {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.overline {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+}
 
 /* swiper */
 .swiper-pagination {
