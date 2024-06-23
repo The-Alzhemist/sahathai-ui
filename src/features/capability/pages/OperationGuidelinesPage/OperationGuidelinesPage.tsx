@@ -11,7 +11,7 @@ export function OperationGuidelinesPage() {
   const [activeTab, setActive] = useState<TabType>('docking')
 
   return (
-    <main>
+    <main className='mb-[63px]'>
       <section className='py-[40px] bg-dark-60'>
         <h1 className='font-[700] text-[36px] leading-[44px] text-center'>
           {t('title')}
