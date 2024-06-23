@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { GeneralWarehouse } from './components/GeneralWarehouse'
 import { FreeZone } from './components/FreeZone'
 import { CustomsOfficePortArea } from './components/CustomsOfficePortArea'
-import { ContactUs } from './components/ContactUs'
+import { ContactUs } from '../../components/ContactUs'
 
 export function PortFacilitiesPage() {
   const t = useTranslations('PortFacilitiesPage')

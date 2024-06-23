@@ -17,6 +17,7 @@ export default getRequestConfig(async ({ locale }) => {
     'AntiCorruptionPolicyPage',
     'VisionMissionValuesPage',
     'PortFacilitiesPage',
+    'TechnologyEquipmentPage',
   ]
 
   const messages = {}

@@ -60,12 +60,14 @@ export function Header({ locale }: HeaderProps) {
             label={t('capabilities.menu.facilities')}
             link='/port-facilities'
           />
-          <MenuItem label={t('capabilities.menu.technology')} link='' />
+          <MenuItem
+            label={t('capabilities.menu.technologyEquipment')}
+            link='/technology-and-equipment'
+          />
           <MenuItem
             label={t('capabilities.menu.dockOperatingSystem')}
             link=''
           />
-          <MenuItem label={t('capabilities.menu.equipment')} link='' />
           <MenuItem label={t('capabilities.menu.instructions')} link='' />
         </Menu>
         <Menu label={t('service.name')}>
