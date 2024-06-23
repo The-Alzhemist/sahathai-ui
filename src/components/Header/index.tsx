@@ -65,8 +65,8 @@ export function Header({ locale }: HeaderProps) {
             link='/technology-and-equipment'
           />
           <MenuItem
-            label={t('capabilities.menu.dockOperatingSystem')}
-            link=''
+            label={t('capabilities.menu.harborOperatingSystem')}
+            link='/harbor-operating-system'
           />
           <MenuItem label={t('capabilities.menu.instructions')} link='' />
         </Menu>

@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ locale }) => {
     'VisionMissionValuesPage',
     'PortFacilitiesPage',
     'TechnologyEquipmentPage',
+    'HarborOperatingSystemPage',
   ]
 
   const messages = {}
