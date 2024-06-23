@@ -16,7 +16,7 @@
         "facilities": "สิ่งอำนวยความสะดวกภายในท่าเรือ",
         "technologyEquipment": "เทคโนโลยีเครื่องมือและอุปกรณ์",
         "harborOperatingSystem": "ระบบปฏิบัติการท่าเรือ",
-        "instructions": "คำแนะนำเกี่ยวกับขั้นตอนการปฏิบัติการ"
+        "operationGuidelines": "คำแนะนำเกี่ยวกับขั้นตอนการปฏิบัติการ"
       }
     },
     "service": {

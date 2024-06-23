@@ -68,7 +68,10 @@ export function Header({ locale }: HeaderProps) {
             label={t('capabilities.menu.harborOperatingSystem')}
             link='/harbor-operating-system'
           />
-          <MenuItem label={t('capabilities.menu.instructions')} link='' />
+          <MenuItem
+            label={t('capabilities.menu.operationGuidelines')}
+            link='/operation-guidelines'
+          />
         </Menu>
         <Menu label={t('service.name')}>
           <MenuItem label={t('service.menu.containerizedCargo')} link='' />
