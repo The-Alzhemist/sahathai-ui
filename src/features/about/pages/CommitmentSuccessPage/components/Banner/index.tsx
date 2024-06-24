@@ -5,10 +5,10 @@ export function Banner() {
   const t = useTranslations('CommitmentSuccessPage')
 
   return (
-    <section className='relative'>
+    <section className='relative h-[555px] flex flex-col justify-end'>
       <Image
-        className='w-full h-[555px] object-cover'
-        src='/about/banner.png'
+        className='absolute top-0 left-0 w-full h-full object-cover'
+        src='/about/commitment-success.png'
         width={0}
         height={0}
         sizes='100vw'
@@ -17,7 +17,7 @@ export function Banner() {
 
       <div className='absolute top-0 h-full w-full bg-[linear-gradient(62.08deg,rgba(0,0,0,0.8)_54.29%,rgba(0,0,0,0)_77.94%)]' />
 
-      <section className='max-w-[1440px] mx-auto px-[102px] pb-[52px] absolute bottom-0 left-0'>
+      <section className='max-w-[1440px] mx-auto px-[102px] pb-[52px] z-[1]'>
         <h1 className='font-[600] text-[64px] leading-[96px] text-white'>
           {t('title')}
         </h1>
