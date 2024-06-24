@@ -13,18 +13,10 @@ const config: Config = {
           20: '#CCCCCC',
         },
         blue: {
-          DEFAULT: '#1C4470',
-          400: '#285C8E',
-          300: '#3B80C3',
-          200: '#5C96D1',
-          100: '#74A8DC',
+          DEFAULT: '#0593D1',
         },
         red: {
-          DEFAULT: '#9F3126',
-          400: '#C43D30',
-          300: '#E54C3C',
-          200: '#ED6F62',
-          100: '#F28D81',
+          DEFAULT: '#F23724',
         },
         dark: {
           DEFAULT: '#535353',
