@@ -21,7 +21,7 @@ export function Header({ locale }: HeaderProps) {
     })
   }
   return (
-    <nav className='h-[62px] bg-dark flex items-center justify-between'>
+    <nav className='h-[62px] bg-black flex items-center justify-between'>
       <Link href='/'>
         <Image
           className='ml-[26px]'
