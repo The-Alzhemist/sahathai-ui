@@ -1,5 +1,6 @@
 export interface CommitmentSuccessContentProps {
-  year: number
-  title: string
-  description: string
+  year: string
+  imageUrl: string
+  title?: string
+  description?: string
 }

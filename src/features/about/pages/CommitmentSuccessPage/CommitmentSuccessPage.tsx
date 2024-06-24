@@ -1,66 +1,27 @@
 import { useTranslations } from 'next-intl'
+
+import { Title } from '@/components/Title'
 import { CommitmentSuccessCard } from './components/CommitmentSuccessCard'
 import { CommitmentSuccessContent } from './components/CommitmentSuccessContent'
+import { Banner } from './components/Banner'
+import { CommitmentSuccess } from './components/CommitmentSuccess'
 
 export function CommitmentSuccessPage() {
   const t = useTranslations('CommitmentSuccessPage')
+  const common = useTranslations('common')
 
   return (
-    <main className='max-w-[1196px] mx-auto py-[100px]'>
-      <h1 className='text-center font-[700] text-[36px] leading-[44px]'>
-        {t('title')}
-      </h1>
-      <p className='mt-[26px] max-w-[945px] mx-auto font-[400] leading-[24px] sarabun text-center text-dark-300'>
-        {t('description')}
-      </p>
-      <CommitmentSuccessCard className='mt-[74px]'>
-        <div className='w-[562px] h-[242px] shrink-0 bg-dark-80 rounded-[8px] mx-auto' />
-        <CommitmentSuccessContent
-          year={2008}
-          title={t('item1.title')}
-          description={t('item1.description')}
-        />
-      </CommitmentSuccessCard>
-      <CommitmentSuccessCard>
-        <CommitmentSuccessContent
-          year={2008}
-          title={t('item2.title')}
-          description={t('item2.description')}
-        />
-        <div className='w-[562px] h-[242px] shrink-0 bg-dark-80 rounded-[8px] mx-auto' />
-      </CommitmentSuccessCard>
-      <CommitmentSuccessCard>
-        <div className='w-[562px] h-[242px] shrink-0 bg-dark-80 rounded-[8px] mx-auto' />
-        <CommitmentSuccessContent
-          year={2008}
-          title={t('item3.title')}
-          description={t('item3.description')}
-        />
-      </CommitmentSuccessCard>
-      <CommitmentSuccessCard>
-        <CommitmentSuccessContent
-          year={2008}
-          title={t('item4.title')}
-          description={t('item4.description')}
-        />
-        <div className='w-[562px] h-[242px] shrink-0 bg-dark-80 rounded-[8px] mx-auto' />
-      </CommitmentSuccessCard>
-      <CommitmentSuccessCard>
-        <div className='w-[562px] h-[242px] shrink-0 bg-dark-80 rounded-[8px] mx-auto' />
-        <CommitmentSuccessContent
-          year={2008}
-          title={t('item5.title')}
-          description={t('item5.description')}
-        />
-      </CommitmentSuccessCard>
-      <CommitmentSuccessCard>
-        <CommitmentSuccessContent
-          year={2008}
-          title={t('item6.title')}
-          description={t('item6.description')}
-        />
-        <div className='w-[562px] h-[242px] shrink-0 bg-dark-80 rounded-[8px] mx-auto' />
-      </CommitmentSuccessCard>
+    <main>
+      <Banner />
+      <Title>
+        <h2 className='text-center headline-2 text-white'>
+          {common('sahathaiTerminal')}
+        </h2>
+        <p className='mt-[8px] text-center headline-4 text-white'>
+          {t('startingBusiness')}
+        </p>
+      </Title>
+      <CommitmentSuccess />
     </main>
   )
 }
