@@ -22,7 +22,7 @@
     "service": {
       "name": "บริการ",
       "menu": {
-        "containerizedCargo": "บริการสินค้าบรรจุตู้",
+        "containerServices": "บริการสินค้าบรรจุตู้",
         "multipurposeTerminal": "ท่าเรือเอนกประสงค์",
         "warehousing": "บริการคลังสินค้า",
         "valueAddedServices": "บริการเพิ่มมูลค่า"

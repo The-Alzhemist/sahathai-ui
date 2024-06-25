@@ -22,7 +22,7 @@
     "service": {
       "name": "Services",
       "menu": {
-        "containerizedCargo": "Containerized Cargo",
+        "containerServices": "Containerized Cargo",
         "multipurposeTerminal": "Multipurpose Terminal",
         "warehousing": "Warehousing",
         "valueAddedServices": "Value Added Services"
