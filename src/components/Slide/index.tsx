@@ -5,8 +5,9 @@ import { cn } from '@/libs/util'
 import { NextButton } from './NextButton'
 import { useRef } from 'react'
 import { PrevButton } from './PrevButton'
+import { SlideProps } from './interface'
 
-export function Slide() {
+export function Slide({ className }: SlideProps) {
   const swiperRef = useRef<SwiperRef>(null)
   const arr = [
     'https://swiperjs.com/demos/images/nature-1.jpg',
@@ -21,7 +22,7 @@ export function Slide() {
   ]
 
   return (
-    <section className='relative mx-auto max-w-[1156px]'>
+    <section className={cn('relative mx-auto max-w-[1156px]', className)}>
       <Swiper
         ref={swiperRef}
         centeredSlides={true}

@@ -1,3 +1,7 @@
+export interface SlideProps {
+  className?: string
+}
+
 export interface NextButtonProps {
   onClick: () => void
 }
