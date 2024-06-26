@@ -24,7 +24,7 @@
       "menu": {
         "containerServices": "Containerized Cargo",
         "multipurposeTerminal": "Multipurpose Terminal",
-        "warehousing": "Warehousing",
+        "warehouseServices": "Warehousing",
         "valueAddedServices": "Value Added Services"
       }
     },
