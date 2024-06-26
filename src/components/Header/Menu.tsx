@@ -189,7 +189,7 @@ export const MenuComponent = React.forwardRef<
                 <div
                   ref={refs.setFloating}
                   className={cn(
-                    'py-[10px] shadow-1 min-w-[277px] outline-none bg-white',
+                    'py-[10px] shadow-1 min-w-[277px] outline-none bg-white z-10',
                     { 'rounded-[6px]': !isNested }
                   )}
                   style={floatingStyles}
