@@ -14,6 +14,7 @@ const config: Config = {
         },
         blue: {
           DEFAULT: '#0593D1',
+          300: '#0194D3',
         },
         red: {
           DEFAULT: '#F23724',
@@ -34,6 +35,7 @@ const config: Config = {
       },
       boxShadow: {
         1: '0px 1px 3px 0px #A6AFC366',
+        2: '0px 4px 24px 0px #0000000D',
       },
     },
   },

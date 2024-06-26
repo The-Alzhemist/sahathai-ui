@@ -22,6 +22,7 @@ export default getRequestConfig(async ({ locale }) => {
     'OperationGuidelinesPage',
     'ContainerServicesPage',
     'ValueAddedServicesPage',
+    'NewsPage',
   ]
 
   const messages = {}
