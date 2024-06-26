@@ -83,7 +83,10 @@ export function Header({ locale }: HeaderProps) {
             label={t('service.menu.warehouseServices')}
             link='/warehouse-services'
           />
-          <MenuItem label={t('service.menu.valueAddedServices')} link='' />
+          <MenuItem
+            label={t('service.menu.valueAddedServices')}
+            link='/value-added-services'
+          />
         </Menu>
         <Link className='px-[16px] py-[18px] hover:bg-dark-100' href='/news'>
           {t('news')}

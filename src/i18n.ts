@@ -21,6 +21,7 @@ export default getRequestConfig(async ({ locale }) => {
     'HarborOperatingSystemPage',
     'OperationGuidelinesPage',
     'ContainerServicesPage',
+    'ValueAddedServicesPage',
   ]
 
   const messages = {}
