@@ -3,11 +3,11 @@ import { useTranslations } from 'next-intl'
 import { Formik, Form } from 'formik'
 
 import { Slide } from '@/components/Slide'
-import { Strength } from './components/Strength'
 import { InputField } from '@/components/forms/InputField'
 import { TextAreaField } from '@/components/forms/TextAreaField'
 import { Content } from './components/Content'
 import { Card } from './components/Card'
+import { Strength } from '../../components/Strength'
 
 export function ContainerServicesPage() {
   const t = useTranslations('ContainerServicesPage')
