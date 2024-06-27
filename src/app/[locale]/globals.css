@@ -109,3 +109,28 @@ body {
     z-index: 2;
   }
 }
+/* table */
+thead {
+  tr {
+    background-color: #efefef;
+
+    th {
+      padding: 14px 24px;
+    }
+  }
+}
+
+tbody {
+  tr:nth-child(even) {
+    background: #efefef;
+  }
+
+  tr:nth-child(odd) {
+    background: #fff;
+  }
+
+  tr > td {
+    text-align: center;
+    padding: 14px 24px;
+  }
+}

@@ -108,7 +108,7 @@ export function Header({ locale }: HeaderProps) {
               label={t(
                 'investorRelations.menu.financialReport.menu.annualReport'
               )}
-              link=''
+              link='/annual-report'
             />
             <MenuItem
               label={t(
