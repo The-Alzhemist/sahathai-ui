@@ -1,5 +1,5 @@
-import { FinancialReportsPage } from '@/features/investorRelations/pages/FinancialReportsPage'
+import { FinancialReportPage } from '@/features/investorRelations/pages/FinancialReportPage'
 
 export default function FinancialReports() {
-  return <FinancialReportsPage />
+  return <FinancialReportPage />
 }

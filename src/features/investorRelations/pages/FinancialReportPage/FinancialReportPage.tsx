@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl'
 import ReactPaginate from 'react-paginate'
 import { DownloadButton } from '../../components/DownloadButton'
 
-export function FinancialReportsPage() {
-  const t = useTranslations('FinancialReportsPage')
+export function FinancialReportPage() {
+  const t = useTranslations('FinancialReportPage')
   const common = useTranslations('common')
 
   return (
