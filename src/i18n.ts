@@ -27,6 +27,7 @@ export default getRequestConfig(async ({ locale }) => {
     'AnnualReportPage',
     'FinancialReportsPage',
     'PerformanceReportPage',
+    'PublishedDocumentPage',
   ]
 
   const messages = {}
