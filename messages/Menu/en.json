@@ -42,7 +42,7 @@
     "investorRelations": {
       "name": "Investor Relations",
       "menu": {
-        "inroductionVideo": "วีดีโอแนะนำบริษัท",
+        "aboutUsVideo": "วีดีโอแนะนำบริษัท",
         "financialReport": {
           "name": "รายงานและข้อมูลทางการเงิน",
           "menu": {

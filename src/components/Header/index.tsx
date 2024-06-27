@@ -100,8 +100,8 @@ export function Header({ locale }: HeaderProps) {
         </Menu>
         <Menu label={t('investorRelations.name')}>
           <MenuItem
-            label={t('investorRelations.menu.inroductionVideo')}
-            link=''
+            label={t('investorRelations.menu.aboutUsVideo')}
+            link='/about-us-video'
           />
           <Menu label={t('investorRelations.menu.financialReport.name')}>
             <MenuItem
