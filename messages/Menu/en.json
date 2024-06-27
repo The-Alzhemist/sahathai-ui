@@ -47,7 +47,7 @@
           "name": "รายงานและข้อมูลทางการเงิน",
           "menu": {
             "annualReport": "รายงานประจำปี",
-            "financialInformation": "ข้อมูลทางการเงิน",
+            "financialReports": "ข้อมูลทางการเงิน",
             "performanceReport": "รายงานผลการดำเนินงาน",
             "publishedDocument": "เอกสารเผยแพร่"
           }
