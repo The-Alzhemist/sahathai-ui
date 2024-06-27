@@ -24,6 +24,7 @@ export default getRequestConfig(async ({ locale }) => {
     'ValueAddedServicesPage',
     'NewsPage',
     'AboutUsVideoPage',
+    'AnnualReportPage',
   ]
 
   const messages = {}
