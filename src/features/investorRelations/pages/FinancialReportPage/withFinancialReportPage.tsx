@@ -1,11 +1,11 @@
 import { FunctionComponentType } from '@/models/FunctionComponentType'
 
-export function withFinancialReportsPage(
+export function withFinancialReportPage(
   Component: React.FC<FunctionComponentType>
 ) {
-  function WithFinancialReportsPage() {
+  function WithFinancialReportPage() {
     return <Component />
   }
 
-  return WithFinancialReportsPage
+  return WithFinancialReportPage
 }
