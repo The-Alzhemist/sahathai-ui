@@ -1,11 +1,10 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import ReactPaginate from 'react-paginate'
-
 import { DownloadButton } from '../../components/DownloadButton'
 
-export function AnnualReportPage() {
-  const t = useTranslations('AnnualReportPage')
+export function FinancialReportsPage() {
+  const t = useTranslations('FinancialReportsPage')
   const common = useTranslations('common')
 
   return (
@@ -15,9 +14,10 @@ export function AnnualReportPage() {
         <thead>
           <tr>
             <th>{common('year')}</th>
-            <th>{t('annualReport')}</th>
-            <th>{t('report56-1')}</th>
-            <th>{t('56-1OneReport')}</th>
+            <th>{common('q1')}</th>
+            <th>{common('q2')}</th>
+            <th>{common('q3')}</th>
+            <th>{common('annual')}</th>
           </tr>
         </thead>
         <tbody>
@@ -28,6 +28,9 @@ export function AnnualReportPage() {
                   2566
                 </div>
                 <div className='text-[14px] leading-[22px]'>2023</div>
+              </td>
+              <td>
+                <DownloadButton className='mx-auto' />
               </td>
               <td>
                 <DownloadButton className='mx-auto' />
