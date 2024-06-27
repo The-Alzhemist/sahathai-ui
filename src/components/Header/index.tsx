@@ -126,7 +126,7 @@ export function Header({ locale }: HeaderProps) {
               label={t(
                 'investorRelations.menu.financialReport.menu.publishedDocument'
               )}
-              link=''
+              link='/published-document'
             />
           </Menu>
           <Menu label={t('investorRelations.menu.shareholderInformation.name')}>
