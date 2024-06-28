@@ -1,0 +1,16 @@
+{
+  "MajorShareholderPage": {
+    "title": "Major Shareholders (รายชื่อผู้ถือหุ้นรายใหญ่)",
+    "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date} ประเภท : {type}",
+    "minorityShareholders": "จำนวนผู้ถือหุ้นรายย่อย (Free float)",
+    "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
+    "numberShareholder": "จำนวนผู้ถือหุ้นทั้งหมด",
+    "scriptlessShares": "% การถือหุ้นแบบไร้ใบหุ้น",
+    "annualReport": "รายงานประจำปี",
+    "order": "ลำดับ",
+    "majorShareholder": "ผู้ถือหุ้นรายใหญ่",
+    "numberShares": "จำนวนหุ้น (หุ้น)",
+    "shares": "% หุ้น",
+    "stockDistribution": "ดูข้อมูลการกระจายหุ้น"
+  }
+}
