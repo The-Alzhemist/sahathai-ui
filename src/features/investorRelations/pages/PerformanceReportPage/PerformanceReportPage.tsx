@@ -10,7 +10,7 @@ export function PerformanceReportPage() {
   return (
     <main className='max-w-[1303px] w-full mx-auto py-[80px]'>
       <h1 className='font-[700] text-[24px] leading-[44px]'>{t('title')}</h1>
-      <table className='w-full mt-[32px]'>
+      <table className='w-full mt-[32px] report'>
         <thead>
           <tr>
             <th>{common('year')}</th>
