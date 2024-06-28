@@ -30,6 +30,7 @@ export default getRequestConfig(async ({ locale }) => {
     'PublishedDocumentPage',
     'MajorShareholderPage',
     'DividendPaymentPage',
+    'ShareholderMeetingPage',
   ]
 
   const messages = {}
