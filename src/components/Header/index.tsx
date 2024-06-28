@@ -140,7 +140,7 @@ export function Header({ locale }: HeaderProps) {
               label={t(
                 'investorRelations.menu.shareholderInformation.menu.dividendPayment'
               )}
-              link=''
+              link='/dividend-payments'
             />
           </Menu>
           <MenuItem
