@@ -31,6 +31,7 @@ export default getRequestConfig(async ({ locale }) => {
     'MajorShareholderPage',
     'DividendPaymentPage',
     'ShareholderMeetingPage',
+    'SustainabilityManagementPage',
   ]
 
   const messages = {}
