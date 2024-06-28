@@ -145,7 +145,7 @@ export function Header({ locale }: HeaderProps) {
           </Menu>
           <MenuItem
             label={t('investorRelations.menu.shareholderMeeting')}
-            link=''
+            link='/shareholder-meetings'
           />
           <Menu label={t('investorRelations.menu.analysisAndSupervision.name')}>
             <MenuItem
