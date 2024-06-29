@@ -6,7 +6,7 @@ import { YoutubeIcon } from '../icons/YoutubeIcon'
 
 export function Footer() {
   return (
-    <footer className='flex justify-between py-[26px] px-[80px] bg-dark text-white'>
+    <footer className='flex justify-between py-[26px] px-[80px] bg-blue-300 text-white body-s'>
       CompanyName @ 202X. All rights reserved.
       <div className='flex gap-x-[16px]'>
         <YoutubeIcon width='24' height='24' />
