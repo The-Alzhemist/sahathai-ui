@@ -1,0 +1,18 @@
+{
+  "Header": {
+    "MenuTop": {
+      "contactUs": "ติดต่อเรา",
+      "joinUs": "ร่วมงานกับเรา",
+      "search": "ค้นหา"
+    },
+    "Menu": {
+      "aboutUs": "เกี่ยวกับเรา",
+      "capabilities": "เครื่องมือและสิ่งอำนวยความสะดวก",
+      "service": "บริการ",
+      "customsDepartment": "กรมศุลกากร",
+      "news": "ข่าวประชาสัมพันธ์",
+      "eService": "e-service",
+      "investorRelations": "นักลงทุนสัมพันธ์"
+    }
+  }
+}
