@@ -16,6 +16,8 @@ const config: Config = {
           DEFAULT: '#0593D1',
           300: '#0194D3',
           400: '#015A99',
+          600: '#E0F6FF',
+          700: '#74A8DC',
         },
         red: {
           DEFAULT: '#F23724',
@@ -38,6 +40,7 @@ const config: Config = {
         1: '0px 1px 3px 0px #A6AFC366',
         2: '0px 4px 24px 0px #0000000D',
         3: '0px 3px 8px 0px #00000014',
+        4: '0px 3px 15.2px 5px #00000003',
       },
     },
   },

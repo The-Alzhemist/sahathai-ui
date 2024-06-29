@@ -7,6 +7,7 @@ import { SearchIcon } from '@/components/icons/SearchIcon'
 import { LocaleEnum } from '@/enums/LocaleEnum'
 import { Link, usePathname, useRouter } from '@/libs/intl/navigation'
 import { MenuTopProps } from './interface'
+import { cn } from '@/libs/util'
 
 export function MenuTop({ locale }: MenuTopProps) {
   const t = useTranslations('Header.MenuTop')
@@ -35,8 +36,11 @@ export function MenuTop({ locale }: MenuTopProps) {
         </li>
         <li>
           <Link
-            href=''
-            className='py-[18px] px-[24px] hover:bg-blue-400 flex items-center'
+            className={cn(
+              'py-[18px] px-[24px] hover:bg-blue-400 flex items-center',
+              { 'bg-blue-400': pathname.includes('join-us') }
+            )}
+            href='/join-us'
           >
             {t('joinUs')}
           </Link>

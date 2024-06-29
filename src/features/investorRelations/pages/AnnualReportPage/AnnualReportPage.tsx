@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl'
 import ReactPaginate from 'react-paginate'
 
-import { DownloadButton } from '../../components/DownloadButton'
+import { DownloadButton } from '@/components/DownloadButton'
 
 export function AnnualReportPage() {
   const t = useTranslations('AnnualReportPage')
@@ -30,13 +30,13 @@ export function AnnualReportPage() {
                 <div className='text-[14px] leading-[22px]'>2023</div>
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
             </tr>
           ))}
