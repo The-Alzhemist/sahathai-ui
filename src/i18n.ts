@@ -9,7 +9,6 @@ export default getRequestConfig(async ({ locale }) => {
   // Define the list of pages
   const pages = [
     'common',
-    'Menu',
     'HomePage',
     'CommitmentSuccessPage',
     'CorporateGroupOrganizationalStructurePage',
@@ -32,6 +31,7 @@ export default getRequestConfig(async ({ locale }) => {
     'DividendPaymentPage',
     'ShareholderMeetingPage',
     'SustainabilityManagementPage',
+    'Header',
   ]
 
   const messages = {}
