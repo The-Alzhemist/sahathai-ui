@@ -1,12 +1,14 @@
+'use client'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import { Link } from '@/libs/intl/navigation'
+import { Link, usePathname } from '@/libs/intl/navigation'
 import { MenuItemProps } from './interface'
 import { cn } from '@/libs/util'
 
 export function Menu() {
   const t = useTranslations('Header.Menu')
+  const pathname = usePathname()
 
   return (
     <div className='flex items-center px-[40px] container'>
@@ -21,7 +23,12 @@ export function Menu() {
         <Menu.Item href=''>{t('customsDepartment')}</Menu.Item>
         <Menu.Item href=''>{t('news')}</Menu.Item>
         <Menu.Item href=''>{t('eService')}</Menu.Item>
-        <Menu.Item href=''>{t('investorRelations')}</Menu.Item>
+        <Menu.Item
+          href='/investor-information'
+          isActive={pathname.includes('investor-information')}
+        >
+          {t('investorRelations')}
+        </Menu.Item>
       </ul>
     </div>
   )

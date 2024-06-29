@@ -1,0 +1,10 @@
+{
+  "investorRelations": {
+    "title": "นักลงทุนสัมพันธ์",
+    "menu": {
+      "investorInformation": "ข้อมูลสำหรับนักลงทุน",
+      "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
+      "codeConduct": "CODE OF CONDUCT"
+    }
+  }
+}
