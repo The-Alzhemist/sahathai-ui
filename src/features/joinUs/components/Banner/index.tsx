@@ -15,7 +15,7 @@ export function Banner() {
         alt=''
       />
 
-      <section className='max-w-[924px] mx-auto mb-[59px] z-[1] p-[14px] text-white'>
+      <section className='max-w-[924px] w-full mx-auto mb-[59px] z-[1] p-[14px] text-white'>
         <h1 className='font-[700] text-[36px] leading-[44px] text-center whitespace-pre-wrap'>
           {t('title')}
         </h1>
