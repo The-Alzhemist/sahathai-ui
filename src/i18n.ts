@@ -33,6 +33,7 @@ export default getRequestConfig(async ({ locale }) => {
     'SustainabilityManagementPage',
     'Header',
     'JoinUsPage',
+    'investorRelations',
   ]
 
   const messages = {}
