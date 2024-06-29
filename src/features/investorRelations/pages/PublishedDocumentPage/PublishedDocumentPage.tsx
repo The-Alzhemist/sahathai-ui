@@ -1,7 +1,7 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import ReactPaginate from 'react-paginate'
-import { DownloadButton } from '../../components/DownloadButton'
+import { DownloadButton } from '@/components/DownloadButton'
 
 export function PublishedDocumentPage() {
   const t = useTranslations('PublishedDocumentPage')
@@ -30,16 +30,16 @@ export function PublishedDocumentPage() {
                 <div className='text-[14px] leading-[22px]'>2023</div>
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
               <td>
-                <DownloadButton className='mx-auto' />
+                <DownloadButton className='mx-auto' href='' />
               </td>
             </tr>
           ))}

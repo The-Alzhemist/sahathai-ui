@@ -4,7 +4,7 @@ import { DownloadIcon } from '@/components/icons/DownloadIcon'
 import { cn } from '@/libs/util'
 import { DownloadButtonProps } from './interface'
 
-export function DownloadButton({ className }: DownloadButtonProps) {
+export function DownloadButton({ className, href }: DownloadButtonProps) {
   const common = useTranslations('common')
 
   return (
@@ -13,8 +13,10 @@ export function DownloadButton({ className }: DownloadButtonProps) {
         'w-fit block px-[19px] py-[4px] border border-dark-80 rounded-[50px]',
         className
       )}
+      href={href}
+      target='_blank'
     >
-      <button className='font-[500] leading-[24px] flex items-center gap-[4px]'>
+      <button className='medium flex items-center gap-[4px] text-dark'>
         <DownloadIcon width='24' height='24' />
         {common('download')}
       </button>
