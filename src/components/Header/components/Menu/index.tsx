@@ -25,7 +25,10 @@ export function Menu() {
         <Menu.Item href=''>{t('eService')}</Menu.Item>
         <Menu.Item
           href='/investor-information'
-          isActive={pathname.includes('investor-information')}
+          isActive={
+            pathname.includes('investor-information') ||
+            pathname.includes('sustainability-management')
+          }
         >
           {t('investorRelations')}
         </Menu.Item>
