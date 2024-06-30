@@ -1,0 +1,42 @@
+{
+  "InvestorInformationPage": {
+    "StockMarketInformation": { "title": "ข้อมูลตลาดหุ้น" },
+    "FinancialReports": {
+      "title": "รายงานและข้อมูลทางการเงิน",
+      "oneReport": "One Report",
+      "otherFinancialStatements": "งบการเงินอื่นๆ"
+    },
+    "Shareholder": {
+      "title": "ผู้ถือหุ้น",
+      "order": "ลำดับ",
+      "numberShares": "จำนวนหุ้น (หุ้น)",
+      "shares": "% หุ้น",
+      "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date} ประเภท : {type}",
+      "minorityShareholders": "จำนวนผู้ถือหุ้นรายย่อย (Free float)",
+      "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
+      "numberShareholder": "จำนวนผู้ถือหุ้นทั้งหมด",
+      "scriptlessShares": "% การถือหุ้นแบบไร้ใบหุ้น",
+      "stockDistribution": "ดูข้อมูลการกระจายหุ้น"
+    },
+    "DividendPayment": {
+      "title": "การจ่ายเงินปันผล",
+      "dividendPaymentDate": "วันจ่ายปันผล",
+      "dividend": "เงินปันผล\n(บาท/หุ้น)",
+      "unit": "หน่วย",
+      "financialPeriod": "รอบผลประกอบการ"
+    },
+    "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
+    "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
+    "OneReportTable": {
+      "annualReport": "Annual Report/\nรายงานประจำปี",
+      "report56-1": "Report 56-1/\nรายงาน 56-1",
+      "56-1OneReport": "56-1 One\nReport"
+    },
+    "OtherFinancialStatementsTable": {
+      "q1": "ไตรมาส 1",
+      "q2": "ไตรมาส 2",
+      "q3": "ไตรมาส 3",
+      "annual": "ประจำปี"
+    }
+  }
+}

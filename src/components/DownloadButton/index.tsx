@@ -10,7 +10,7 @@ export function DownloadButton({ className, href }: DownloadButtonProps) {
   return (
     <a
       className={cn(
-        'w-fit block px-[19px] py-[4px] border border-dark-80 rounded-[50px]',
+        'w-fit block px-[19px] py-[4px] border border-dark-80 rounded-[50px] bg-white',
         className
       )}
       href={href}
