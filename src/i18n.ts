@@ -22,11 +22,11 @@ export default getRequestConfig(async ({ locale }) => {
     'ContainerServicesPage',
     'ValueAddedServicesPage',
     'NewsPage',
-    'SustainabilityManagementPage',
     'Header',
     'JoinUsPage',
     'investorRelations',
     'InvestorInformationPage',
+    'SustainabilityManagementPage',
   ]
 
   const messages = {}

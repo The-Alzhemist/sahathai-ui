@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { DividendPaymentProps } from './interface'
 
 export function DividendPayment({ className }: DividendPaymentProps) {
@@ -9,7 +9,7 @@ export function DividendPayment({ className }: DividendPaymentProps) {
   return (
     <section className={className}>
       <h2
-        id={InvestorRelationEnum.DividendPayment}
+        id={InvestorInformationEnum.DividendPayment}
         className='headline-2 text-black-80'
       >
         {t('title')}

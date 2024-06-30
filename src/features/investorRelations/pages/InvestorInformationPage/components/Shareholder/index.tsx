@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { ShareholderProps } from './interface'
 import { ShareholderCard } from '../ShareholderCard'
 
@@ -11,7 +11,7 @@ export function Shareholder({ className }: ShareholderProps) {
   return (
     <section className={className}>
       <h2
-        id={InvestorRelationEnum.Shareholder}
+        id={InvestorInformationEnum.Shareholder}
         className='headline-2 text-black-80'
       >
         {t('title')}

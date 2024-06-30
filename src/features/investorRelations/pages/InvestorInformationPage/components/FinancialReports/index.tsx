@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 import { FinancialReportsEnum } from '@/enums/investorRelations/FinancialReportsEnum'
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Tabs } from '../Tabs'
 import { Tab } from '../Tabs/Tab'
 import { OneReportTable } from '../OneReportTable'
@@ -19,7 +19,7 @@ export function FinancialReports({ className }: FinancialReportsProps) {
   return (
     <section className={className}>
       <h2
-        id={InvestorRelationEnum.FinancialReports}
+        id={InvestorInformationEnum.FinancialReports}
         className='headline-2 text-black-80'
       >
         {t('title')}
