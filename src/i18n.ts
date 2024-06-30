@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getRequestConfig } from 'next-intl/server'
 
-const locales = ['th', 'en']
+const locales = ['th', 'en', 'cn']
 
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale)) notFound()
@@ -22,18 +22,11 @@ export default getRequestConfig(async ({ locale }) => {
     'ContainerServicesPage',
     'ValueAddedServicesPage',
     'NewsPage',
-    'AboutUsVideoPage',
-    'AnnualReportPage',
-    'FinancialReportPage',
-    'PerformanceReportPage',
-    'PublishedDocumentPage',
-    'MajorShareholderPage',
-    'DividendPaymentPage',
-    'ShareholderMeetingPage',
     'SustainabilityManagementPage',
     'Header',
     'JoinUsPage',
     'investorRelations',
+    'InvestorInformationPage',
   ]
 
   const messages = {}

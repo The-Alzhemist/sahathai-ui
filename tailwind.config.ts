@@ -11,6 +11,7 @@ const config: Config = {
           60: '#666666',
           40: '#999999',
           20: '#CCCCCC',
+          1: '#1E1D1D',
         },
         blue: {
           DEFAULT: '#0593D1',
@@ -34,6 +35,8 @@ const config: Config = {
           DEFAULT: '#FFFFFF',
           1: '#D9D9D9',
           2: '#DDE1E6',
+          3: '#F1F1F1',
+          4: '#F2F2F2',
         },
       },
       boxShadow: {

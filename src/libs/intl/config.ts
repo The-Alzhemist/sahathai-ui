@@ -1,12 +1,13 @@
 import { Pathnames } from 'next-intl/routing'
 
-export const locales = ['th', 'en'] as const
+export const locales = ['th', 'en', 'cn'] as const
 
 export const pathnames = {
   '/': '/',
   '/pathnames': {
     th: '/pathnames',
     en: '/pathnames',
+    cn: '/pathnames',
   },
 } satisfies Pathnames<typeof locales>
 

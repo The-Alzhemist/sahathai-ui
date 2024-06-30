@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware'
 
-const locales = ['th', 'en']
+const locales = ['th', 'en', 'cn']
 
 export default createMiddleware({
   locales,
@@ -8,5 +8,5 @@ export default createMiddleware({
 })
 
 export const config = {
-  matcher: ['/', '/(th|en)/:path*'],
+  matcher: ['/', '/(th|en|cn)/:path*'],
 }
