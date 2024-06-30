@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 
 export function StockMarketInformation() {
   const t = useTranslations('InvestorInformationPage.StockMarketInformation')
@@ -8,7 +8,7 @@ export function StockMarketInformation() {
   return (
     <section>
       <h2
-        id={InvestorRelationEnum.StockMarketInformation}
+        id={InvestorInformationEnum.StockMarketInformation}
         className='headline-2 text-black-80'
       >
         {t('title')}

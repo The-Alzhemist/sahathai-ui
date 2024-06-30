@@ -1,5 +1,5 @@
 import { LocaleButton } from '@/components/LocaleButton'
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { useTranslations } from 'next-intl'
 
 export function CompanyIntroductionVideo() {
@@ -11,7 +11,7 @@ export function CompanyIntroductionVideo() {
         <div className='flex items-center justify-between'>
           <h2
             className='font-[700] text-[36px] leading-[44px] text-white'
-            id={InvestorRelationEnum.CompanyIntroductionVideo}
+            id={InvestorInformationEnum.CompanyIntroductionVideo}
           >
             {t('title')}
           </h2>

@@ -22,6 +22,7 @@ const config: Config = {
         },
         red: {
           DEFAULT: '#F23724',
+          300: '#E54C3C',
         },
         dark: {
           DEFAULT: '#535353',
@@ -37,6 +38,11 @@ const config: Config = {
           2: '#DDE1E6',
           3: '#F1F1F1',
           4: '#F2F2F2',
+        },
+        green: {
+          DEFAULT: '#2E9D5E',
+          1: '#EEFFFB',
+          2: '#D5EADE',
         },
       },
       boxShadow: {

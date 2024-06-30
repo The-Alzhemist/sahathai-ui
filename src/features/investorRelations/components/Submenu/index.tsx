@@ -19,6 +19,7 @@ Submenu.Item = function Item({
       className={cn('py-[23px] px-[16px] text-white button hover:bg-blue-400', {
         'bg-blue-400': isActive,
       })}
+      scroll={false}
     >
       {text}
     </Link>

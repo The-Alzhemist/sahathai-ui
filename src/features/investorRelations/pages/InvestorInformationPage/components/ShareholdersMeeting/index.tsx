@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 
 import { Pagination } from '@/components/Pagination'
 import { cn } from '@/libs/util'
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { ShareholdersMeetingCard } from '../ShareholdersMeetingCard'
 import { ShareholdersMeetingProps } from './interface'
 
@@ -13,7 +13,7 @@ export function ShareholdersMeeting({ className }: ShareholdersMeetingProps) {
   return (
     <section className={cn('max-w-[893px] w-full', className)}>
       <h2
-        id={InvestorRelationEnum.ShareholdersMeeting}
+        id={InvestorInformationEnum.ShareholdersMeeting}
         className='headline-2 text-black-80'
       >
         {t('title')}
