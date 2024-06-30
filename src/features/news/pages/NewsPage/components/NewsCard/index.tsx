@@ -11,7 +11,9 @@ export function NewsCard({ title, description, createdAt }: NewsCardProps) {
       <div className='w-full h-[200px] bg-dark' />
       <div className='p-[16px]'>
         <h2 className='headline-4 line-clamp-2'>{title}</h2>
-        <p className='mt-[8px] body-2 line-clamp-2'>{description}</p>
+        <p className='mt-[8px] body-2 line-clamp-2 text-black-60'>
+          {description}
+        </p>
         <div className='mt-[8px] caption'>
           {DateTime.fromISO(createdAt).toFormat('dd LLLL yyyy')}
         </div>

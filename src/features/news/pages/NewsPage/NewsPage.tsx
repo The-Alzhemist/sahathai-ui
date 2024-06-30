@@ -1,16 +1,13 @@
-import { useTranslations } from 'next-intl'
-
-import { Slide } from '@/components/Slide'
+'use client'
+import { Pagination } from '@/components/Pagination'
 import { NewsCard } from './components/NewsCard'
+import { Banner } from './components/Banner'
+import { Brochure } from './components/Brochure'
 
 export function NewsPage() {
-  const t = useTranslations('NewsPage')
-
   return (
-    <main className='py-[80px]'>
-      <h1 className='font-[700] text-[36px] leading-[44px] text-center'>
-        {t('title')}
-      </h1>
+    <main className='mb-[195px]'>
+      <Banner />
       <section className='mt-[80px] max-w-[897px] mx-auto flex flex-wrap gap-x-[24px] gap-y-[32px]'>
         <NewsCard
           title='SAHATHAI TERMINAL ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย'
@@ -42,11 +39,13 @@ export function NewsPage() {
           description='Sahathai Terminal ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย ระหว่างสมาคมตัวแทนออกของรับอนุญาตไทย (Thai Authorized Customs Brokers Association: TACBA) และสมาคมสัตววิทยาแห่งลอนดอน (ZSL) ประเทศไทย ซึ่งจัดขึ้นในวันที่ 28 พฤษภาคมที่ผ่านมา ณ ห้องเดอะแซมเบอร์ ชั้น B โรงแรมเอส 31 สุขุมวิท กรุงเทพมหานคร'
           createdAt='2010-11-12T13:14:15Z'
         />
+        <Pagination
+          className='w-full news'
+          pageCount={10}
+          pageChange={() => {}}
+        />
       </section>
-      <h2 className='my-[55px] font-[700] text-[36px] leading-[44px] text-center'>
-        {t('imageOfSahathai')}
-      </h2>
-      <Slide />
+      <Brochure className='mt-[98px]' />
     </main>
   )
 }

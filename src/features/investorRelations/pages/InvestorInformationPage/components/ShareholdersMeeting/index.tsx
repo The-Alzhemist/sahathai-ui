@@ -26,7 +26,11 @@ export function ShareholdersMeeting({ className }: ShareholdersMeetingProps) {
           />
         ))}
       </div>
-      <Pagination className='mt-[40px]' pageCount={10} pageChange={() => {}} />
+      <Pagination
+        className='mt-[40px] investor-relations'
+        pageCount={10}
+        pageChange={() => {}}
+      />
     </section>
   )
 }

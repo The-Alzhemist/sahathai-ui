@@ -11,7 +11,7 @@ export function Pagination({
 }: PaginationProps) {
   return (
     <ReactPaginate
-      className={cn('flex justify-end gap-[8px] pagination ml-auto', className)}
+      className={cn('flex justify-end gap-[8px] ml-auto', className)}
       breakLabel='...'
       nextLabel={
         <ChevronDownIcon className='-rotate-90' width='18' height='18' />
