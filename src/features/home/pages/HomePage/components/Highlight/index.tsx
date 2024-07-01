@@ -1,20 +1,21 @@
 import { LocationCheckIcon } from '@/components/icons/LocationCheckIcon'
 import { useTranslations } from 'next-intl'
 import { HighlightCard } from '../HighlightCard'
+import { LikeIcon } from '@/components/icons/LikeIcon'
+import { NavigationOneIcon } from '@/components/icons/NavigationOneIcon'
 
 export function Highlight() {
   const t = useTranslations('HomePage.Highlight')
 
   return (
-    <section className='mt-[80px] pb-[80px]'>
-      <h2 className='font-[700] text-[36px] leading-[44px] text-center'>
-        {t('bestOption')}&nbsp;
-        <span className='font-[400]'>{t('logisticAndSupplyChain')}</span>
+    <section className='mt-[152px] max-w-[897px] mx-auto'>
+      <h2 className='text-[34px] leading-[36px] text-center text-blue-400'>
+        {t('title')}
       </h2>
-      <p className='mt-[8px] font-[500] text-[20px] leading-[24px] text-dark text-center'>
+      <p className='mt-[8px] body-1 text-black-60 text-center'>
         {t('description')}
       </p>
-      <div className='mt-[56px] flex justify-center flex-wrap gap-[10px]'>
+      <div className='mt-[40px] flex justify-center flex-wrap gap-[24px]'>
         <HighlightCard
           title={t('location.title')}
           description={t('location.description')}
@@ -25,13 +26,13 @@ export function Highlight() {
           title={t('flexibility.title')}
           description={t('flexibility.description')}
         >
-          <LocationCheckIcon className='text-white' width='48' height='48' />
+          <LikeIcon className='text-white' width='48' height='48' />
         </HighlightCard>
         <HighlightCard
           title={t('locationEasyAccess.title')}
           description={t('locationEasyAccess.description')}
         >
-          <LocationCheckIcon className='text-white' width='48' height='48' />
+          <NavigationOneIcon className='text-white' width='48' height='48' />
         </HighlightCard>
       </div>
     </section>

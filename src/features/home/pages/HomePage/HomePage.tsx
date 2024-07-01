@@ -1,10 +1,11 @@
+import { ContactUs } from '@/components/ContactUs'
 import { Banner } from './components/Banner'
 import { About } from './components/About'
 import { License } from './components/License'
 import { Service } from './components/Service'
 import { News } from './components/News'
 import { Highlight } from './components/Highlight'
-import { ContactUs } from './components/ContactUs'
+import { OurSubsidiaries } from './components/OurSubsidiaries'
 
 export function HomePage() {
   return (
@@ -15,7 +16,8 @@ export function HomePage() {
       <Service />
       <News />
       <Highlight />
-      <ContactUs />
+      <OurSubsidiaries />
+      <ContactUs className='mt-[142px] mb-[373px]' />
     </main>
   )
 }

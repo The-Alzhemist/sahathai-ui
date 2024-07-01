@@ -10,17 +10,23 @@ export function TextAreaField({
   ...props
 }: TextAreaProps) {
   return (
-    <div className={cn('space-y-[4px]', className)}>
-      {label && <div className='text-[14px] text-dark'>{label}</div>}
+    <div className={cn('space-y-[10px]', className)}>
+      {label && <div className='subtitle-1 text-black-2'>{label}</div>}
       <textarea
         className={cn(
-          'block text-dark placeholder:text-dark-60 w-full px-[16px] py-[10px] rounded-[6px] focus:outline-none border border-dark-60 focus:border-dark resize-none disabled:text-dark-60',
+          'medium block text-black-2 placeholder:text-dark-30 w-full p-[20px] rounded-[6px] focus:outline-none border border-black-20 focus:border-blue resize-none',
           textAreaClassName
         )}
         value={value}
         maxLength={maxLength}
         {...props}
       />
+      {maxLength && (
+        <div className='text-right text-[14px] leading-[22px] inter text-dark-40'>
+          {((value as string)?.length ?? 0).toLocaleString()}&nbsp;/&nbsp;
+          {maxLength.toLocaleString()}
+        </div>
+      )}
     </div>
   )
 }

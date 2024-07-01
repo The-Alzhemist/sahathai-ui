@@ -6,16 +6,16 @@ export function HighlightCard({
   children,
 }: HighlightCardProps) {
   return (
-    <div className='max-w-[348px] w-full p-[16px] rounded-[8px] bg-dark-60'>
-      <div className='p-[26px] rounded-full bg-dark w-[100px] h-[100px] mx-auto'>
+    <div className='max-w-[283px] w-full p-[16px] rounded-[8px] shadow-6'>
+      <div className='p-[26px] rounded-full bg-blue-400 w-[100px] h-[100px] mx-auto'>
         {children}
       </div>
-      <div className='mt-[24px] text-center font-[700] text-[24px] leading-[44px]'>
+      <h3 className='mt-[24px] text-center headline-4 text-blue-400'>
         {title}
-      </div>
-      <div className='mt-[12px] text-center sarabun text-[16px] leading-[24px] text-dark-300'>
+      </h3>
+      <p className='mt-[12px] text-center body-1 text-black-60'>
         {description}
-      </div>
+      </p>
     </div>
   )
 }

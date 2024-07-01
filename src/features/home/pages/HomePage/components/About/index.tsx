@@ -1,53 +1,44 @@
 import { useTranslations } from 'next-intl'
 
-import { Link } from '@/libs/intl/navigation'
 import { AboutCard } from '../AboutCard'
-import { ArrowRightCircleIcon } from '@/components/icons/ArrowRightCircleIcon'
 
 export function About() {
   const t = useTranslations('HomePage.About')
 
   return (
-    <section className='p-[80px_78px]'>
-      <h1 className='text-[30px] font-[600] leading-[36px] text-center'>
+    <section className='max-w-[897px] mx-auto p-[72px_0_152px]'>
+      <h1 className='text-[36px] leading-[56px] text-center text-blue-800'>
         {t('title')}
       </h1>
-      <p className='mt-[20px] text-[20px] font-[500] leading-[24px] text-dark-300 max-w-[910px] text-center mx-auto'>
+      <p className='mt-[8px] body-1 text-black-60 text-center'>
         {t('description')}
       </p>
-      <div className='flex justify-center gap-y-[40px] flex-wrap gap-x-[20px] mt-[40px] max-w-[1060px] mx-auto'>
+      <div className='flex justify-center gap-y-[40px] flex-wrap gap-x-[24px] mt-[40px] max-w-[1060px] mx-auto'>
         <AboutCard
           title={t('comprehensiveService.title')}
           description={t('comprehensiveService.description')}
+          imageUrl='/home/comprehensive-service.png'
         />
         <AboutCard
           title={t('globalTransportationNetwork.title')}
           description={t('globalTransportationNetwork.description')}
+          imageUrl='/home/global-transportation-network.png'
         />
         <AboutCard
           title={t('convenientLocation.title')}
           description={t('convenientLocation.description')}
-        />
-        <AboutCard
-          title={t('worldClassStandards.title')}
-          description={t('worldClassStandards.description')}
+          imageUrl='/home/convenient-location.png'
         />
         <AboutCard
           title={t('coversAllNeeds.title')}
           description={t('coversAllNeeds.description')}
+          imageUrl='/home/covers-all-needs.png'
         />
-        <Link
-          href=''
-          className='w-[320px] m-[10px] bg-dark-60 rounded-[8px] flex flex-col justify-center items-center'
-        >
-          <h2 className='text-[30px] font-[600] leading-[36px]'>
-            {t('other.title')}
-          </h2>
-          <p className='whitespace-pre mt-[8px] text-[18px] leading-[28px] text-center'>
-            {t('other.description')}
-          </p>
-          <ArrowRightCircleIcon className='mt-[34px]' width='96' height='96' />
-        </Link>
+        <AboutCard
+          title={t('worldClassStandards.title')}
+          description={t('worldClassStandards.description')}
+          imageUrl='/home/world-class-standards.png'
+        />
       </div>
     </section>
   )

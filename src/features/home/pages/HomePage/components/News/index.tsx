@@ -1,48 +1,32 @@
-'use client'
 import { useTranslations } from 'next-intl'
-import { Pagination } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { NewsCard } from '../NewsCard'
+
+import { NewsCard } from '@/components/NewsCard'
 
 export function News() {
   const t = useTranslations('HomePage.News')
+
   return (
-    <section className='mt-[80px] pt-[44px] pb-[20px] bg-dark-60'>
-      <h2 className='font-[700] text-[36px] leading-[44px] text-center'>
+    <section className='mt-[152px] max-w-[897px] mx-auto'>
+      <h2 className='text-[34px] leading-[36px] text-center text-blue-400'>
         {t('title')}
       </h2>
-      <p className='font-[500] text-[20px] leading-[24px] text-center mt-[8px]'>
-        {t('description')}
-      </p>
-
-      <Swiper
-        slidesPerView='auto'
-        spaceBetween={10}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className='mt-[56px] pb-[30px] max-w-[1200px] w-full'
-      >
-        <SwiperSlide className='max-w-[393px] w-full'>
-          <NewsCard description='1เรายึดมั่นในการเติบโตไปด้วยกันในระยะยาวกับคู่ค้าของเรา ซึ่งสหไทยเทอร์มินอล ถือเป็นคู่ค้าที่มีความซื่อสัตย์และเชื่อถือได้ ในการร่วมกับเราเพื่อสร้างมูลค่าที่ดีให้กับลูกค้า' />
-        </SwiperSlide>
-        <SwiperSlide className='max-w-[393px] w-full'>
-          <NewsCard description='2เรายึดมั่นในการเติบโตไปด้วยกันในระยะยาวกับคู่ค้าของเรา ซึ่งสหไทยเทอร์มินอล ถือเป็นคู่ค้าที่มีความซื่อสัตย์และเชื่อถือได้ ในการร่วมกับเราเพื่อสร้างมูลค่าที่ดีให้กับลูกค้า' />
-        </SwiperSlide>
-        <SwiperSlide className='max-w-[393px] w-full'>
-          <NewsCard description='3เรายึดมั่นในการเติบโตไปด้วยกันในระยะยาวกับคู่ค้าของเรา ซึ่งสหไทยเทอร์มินอล ถือเป็นคู่ค้าที่มีความซื่อสัตย์และเชื่อถือได้ ในการร่วมกับเราเพื่อสร้างมูลค่าที่ดีให้กับลูกค้า' />
-        </SwiperSlide>
-        <SwiperSlide className='max-w-[393px] w-full'>
-          <NewsCard description='4เรายึดมั่นในการเติบโตไปด้วยกันในระยะยาวกับคู่ค้าของเรา ซึ่งสหไทยเทอร์มินอล ถือเป็นคู่ค้าที่มีความซื่อสัตย์และเชื่อถือได้ ในการร่วมกับเราเพื่อสร้างมูลค่าที่ดีให้กับลูกค้า' />
-        </SwiperSlide>
-        <SwiperSlide className='max-w-[393px] w-full'>
-          <NewsCard description='5เรายึดมั่นในการเติบโตไปด้วยกันในระยะยาวกับคู่ค้าของเรา ซึ่งสหไทยเทอร์มินอล ถือเป็นคู่ค้าที่มีความซื่อสัตย์และเชื่อถือได้ ในการร่วมกับเราเพื่อสร้างมูลค่าที่ดีให้กับลูกค้า' />
-        </SwiperSlide>
-        <SwiperSlide className='max-w-[393px] w-full'>
-          <NewsCard description='6เรายึดมั่นในการเติบโตไปด้วยกันในระยะยาวกับคู่ค้าของเรา ซึ่งสหไทยเทอร์มินอล ถือเป็นคู่ค้าที่มีความซื่อสัตย์และเชื่อถือได้ ในการร่วมกับเราเพื่อสร้างมูลค่าที่ดีให้กับลูกค้า' />
-        </SwiperSlide>
-      </Swiper>
+      <div className='mt-[40px] flex flex-wrap gap-[24px]'>
+        <NewsCard
+          title='SAHATHAI TERMINAL ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย'
+          description='Sahathai Terminal ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย ระหว่างสมาคมตัวแทนออกของรับอนุญาตไทย (Thai Authorized Customs Brokers Association: TACBA) และสมาคมสัตววิทยาแห่งลอนดอน (ZSL) ประเทศไทย ซึ่งจัดขึ้นในวันที่ 28 พฤษภาคมที่ผ่านมา ณ ห้องเดอะแซมเบอร์ ชั้น B โรงแรมเอส 31 สุขุมวิท กรุงเทพมหานคร'
+          createdAt='2010-11-12T13:14:15Z'
+        />
+        <NewsCard
+          title='SAHATHAI TERMINAL ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย'
+          description='Sahathai Terminal ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย ระหว่างสมาคมตัวแทนออกของรับอนุญาตไทย (Thai Authorized Customs Brokers Association: TACBA) และสมาคมสัตววิทยาแห่งลอนดอน (ZSL) ประเทศไทย ซึ่งจัดขึ้นในวันที่ 28 พฤษภาคมที่ผ่านมา ณ ห้องเดอะแซมเบอร์ ชั้น B โรงแรมเอส 31 สุขุมวิท กรุงเทพมหานคร'
+          createdAt='2010-11-12T13:14:15Z'
+        />
+        <NewsCard
+          title='SAHATHAI TERMINAL ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย'
+          description='Sahathai Terminal ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย ระหว่างสมาคมตัวแทนออกของรับอนุญาตไทย (Thai Authorized Customs Brokers Association: TACBA) และสมาคมสัตววิทยาแห่งลอนดอน (ZSL) ประเทศไทย ซึ่งจัดขึ้นในวันที่ 28 พฤษภาคมที่ผ่านมา ณ ห้องเดอะแซมเบอร์ ชั้น B โรงแรมเอส 31 สุขุมวิท กรุงเทพมหานคร'
+          createdAt='2010-11-12T13:14:15Z'
+        />
+      </div>
     </section>
   )
 }
