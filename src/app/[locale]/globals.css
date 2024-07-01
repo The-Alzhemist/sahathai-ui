@@ -42,12 +42,14 @@ body {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+  letter-spacing: 0.15px;
 }
 
 .subtitle-1 {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  letter-spacing: 0.15px;
 }
 
 .subtitle-2 {
@@ -68,6 +70,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  letter-spacing: 0.5px;
 }
 
 .body-2 {
@@ -75,6 +78,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  letter-spacing: 0.25px;
 }
 
 .body-s {
@@ -88,6 +92,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+  letter-spacing: 1.25px;
 }
 
 .caption {
@@ -95,6 +100,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+  letter-spacing: 0.4px;
 }
 
 .overline {

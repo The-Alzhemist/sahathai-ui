@@ -4,8 +4,8 @@ import { InputFieldProps } from './interface'
 
 export function InputField({ label, className, ...props }: InputFieldProps) {
   return (
-    <div className={cn('space-y-[4px]', className)}>
-      {label && <div className='text-[14px] text-dark'>{label}</div>}
+    <div className={cn('space-y-[10px]', className)}>
+      {label && <div className='subtitle-1 text-black-2'>{label}</div>}
       <Input {...props} />
     </div>
   )

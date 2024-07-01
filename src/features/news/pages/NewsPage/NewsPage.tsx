@@ -1,6 +1,6 @@
 'use client'
 import { Pagination } from '@/components/Pagination'
-import { NewsCard } from './components/NewsCard'
+import { NewsCard } from '@/components/NewsCard'
 import { Banner } from './components/Banner'
 import { Brochure } from './components/Brochure'
 

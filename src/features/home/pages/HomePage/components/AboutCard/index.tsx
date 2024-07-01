@@ -1,15 +1,16 @@
+import Image from 'next/image'
 import { AboutCardProps } from './interface'
 
-export function AboutCard({ title, description }: AboutCardProps) {
+export function AboutCard({ title, description, imageUrl }: AboutCardProps) {
   return (
-    <div className='p-[10px] w-[340px] h-[430px]'>
-      <div className='w-[320px] h-[242px] bg-dark-80 rounded-[8px]' />
-      <h2 className='text-[24px] font-[700] leading-[44px] line-clamp-1 mt-[21px]'>
-        {title}
-      </h2>
-      <p className='mt-[11px] line-clamp-3 text-[18px] leading-[28px]'>
-        {description}
-      </p>
+    <div className='max-w-[283px] w-full'>
+      <div className='rounded-[8px] overflow-hidden'>
+        <div className='relative pt-[85.51%] w-full'>
+          <Image src={imageUrl} fill alt='' />
+        </div>
+      </div>
+      <h2 className='headline-4 mt-[16px] text-blue-400'>{title}</h2>
+      <p className='mt-[8px] body-1 text-black-60'>{description}</p>
     </div>
   )
 }

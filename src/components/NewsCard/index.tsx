@@ -19,7 +19,7 @@ export function NewsCard({ title, description, createdAt }: NewsCardProps) {
         </div>
         <Link
           href=''
-          className='mt-[16px] py-[5px] px-[20px] button bg-blue-300 text-white block w-fit rounded-[8px]'
+          className='mt-[16px] py-[5px] px-[20px] button bg-blue-400 text-white block w-fit rounded-[8px]'
         >
           {common('readMore')}
         </Link>

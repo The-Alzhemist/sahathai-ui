@@ -1,0 +1,35 @@
+{
+  "ContactUs": {
+    "title": "ติดต่อเรา",
+    "nameField": {
+      "label": "ชื่อ",
+      "placeholder": "กรอกชื่อ"
+    },
+    "phoneNumberField": {
+      "label": "เบอร์โทรติดต่อ",
+      "placeholder": "กรอกเบอร์โทร"
+    },
+    "emailField": {
+      "placeholder": "กรอกอีเมล"
+    },
+    "contactForm": "แบบฟอร์มติดต่อ",
+    "fraudComplaintForm": "แบบฟอร์มร้องเรียนการทุจริต",
+    "message": {
+      "label": "ข้อความ",
+      "placeholder": "กรุณาพิมพ์ข้อความถึงเรา"
+    },
+    "contactNumber": {
+      "title": "เบอร์โทรติดต่อ",
+      "description": "+66 (0) 2386 8000"
+    },
+    "fax": {
+      "title": "โทรสาร",
+      "description": "+66 (0) 2386 8008"
+    },
+    "address": {
+      "title": "ที่อยู่",
+      "description": "บริษัท สหไทย เทอร์มินอล จำกัด (มหาชน) 51/1 หมู่ 3 ถนนปู่เจ้าสมิงพราย  ตำบลบางหญ้าแพรก อำเภอพระประแดง จังหวัดสมุทรปราการ 10130 ประเทศไทย"
+    },
+    "submit": "ส่งข้อมูล"
+  }
+}
