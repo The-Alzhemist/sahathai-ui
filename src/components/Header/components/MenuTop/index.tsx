@@ -11,12 +11,12 @@ export function MenuTop() {
   const pathname = usePathname()
 
   return (
-    <div className='bg-blue-300'>
+    <div className='bg-blue-800'>
       <ul className='flex justify-end w-full medium text-white container'>
         <li>
           <Link
             href=''
-            className='py-[18px] px-[24px] hover:bg-blue-400 flex items-center'
+            className='py-[18px] px-[24px] hover:bg-blue-500 flex items-center'
           >
             {t('contactUs')}
           </Link>
@@ -24,8 +24,8 @@ export function MenuTop() {
         <li>
           <Link
             className={cn(
-              'py-[18px] px-[24px] hover:bg-blue-400 flex items-center',
-              { 'bg-blue-400': pathname.includes('join-us') }
+              'py-[18px] px-[24px] hover:bg-blue-500 flex items-center',
+              { 'bg-blue-500': pathname.includes('join-us') }
             )}
             href='/join-us'
           >
@@ -33,7 +33,7 @@ export function MenuTop() {
           </Link>
         </li>
         <li>
-          <LocaleButton className='hover:bg-blue-400' />
+          <LocaleButton className='hover:bg-blue-500' />
         </li>
         <li>
           <div className='py-[18px] px-[24px] flex items-center gap-[10px]'>

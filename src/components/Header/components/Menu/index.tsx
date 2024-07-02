@@ -11,12 +11,12 @@ export function Menu() {
   const pathname = usePathname()
 
   return (
-    <div className='flex items-center px-[40px] container'>
+    <div className='flex items-center px-[40px] container bg-blue-400'>
       <Link href='/' className='shrink-0 p-[10px]'>
         <Image src='/logo.png' width={101} height={24} alt='' priority />
       </Link>
 
-      <ul className='flex justify-end w-full button text-black-80'>
+      <ul className='flex justify-end w-full button text-white'>
         <Menu.Item href=''>{t('aboutUs')}</Menu.Item>
         <Menu.Item href=''>{t('capabilities')}</Menu.Item>
         <Menu.Item href=''>{t('service')}</Menu.Item>
@@ -45,8 +45,8 @@ Menu.Item = function Item({ children, href, isActive = false }: MenuItemProps) {
       <Link
         href={href}
         className={cn(
-          'py-[23px] px-[16px] hover:text-blue-300 flex items-center',
-          { 'text-blue-300': isActive }
+          'py-[23px] px-[16px] hover:bg-blue-500 flex items-center',
+          { 'bg-blue-500': isActive }
         )}
       >
         {children}
