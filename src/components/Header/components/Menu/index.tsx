@@ -17,7 +17,9 @@ export function Menu() {
       </Link>
 
       <ul className='flex justify-end w-full button text-white'>
-        <Menu.Item href=''>{t('aboutUs')}</Menu.Item>
+        <Menu.Item href='/about-us' isActive={pathname.includes('about-us')}>
+          {t('aboutUs')}
+        </Menu.Item>
         <Menu.Item href=''>{t('capabilities')}</Menu.Item>
         <Menu.Item href=''>{t('service')}</Menu.Item>
         <Menu.Item href=''>{t('customsDepartment')}</Menu.Item>

@@ -1,3 +1,4 @@
+import { Line } from '@/components/Line'
 import { CardProps } from './interface'
 
 export function Card({ title, descriptions }: CardProps) {
@@ -6,10 +7,7 @@ export function Card({ title, descriptions }: CardProps) {
       <h2 className='font-[700] text-[24px] leading-[44px] text-center'>
         {title}
       </h2>
-      <div className='max-w-[56px] flex items-center mx-auto my-[6px]'>
-        <hr className='flex-1 border-b-2 border-b-blue-300' />
-        <hr className='flex-1 border-b-2 border-b-red-300' />
-      </div>
+      <Line className='my-[6px]' />
       {descriptions.map((description, index) => (
         <div className='grid grid-cols-[3px_1fr] text-black-60' key={index}>
           <span className='text-[16px] sarabun'>&bull;</span>

@@ -60,6 +60,7 @@ const config: Config = {
         4: '0px 3px 15.2px 5px #00000003',
         5: '0px 4px 8px 0px #ADC4D524',
         6: '0px 1px 4px 0px #0C0C0D1A',
+        7: ' 0px 4px 24px 0px #00000024',
       },
     },
   },
