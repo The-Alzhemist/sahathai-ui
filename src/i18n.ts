@@ -28,6 +28,7 @@ export default getRequestConfig(async ({ locale }) => {
     'SustainabilityManagementPage',
     'NewsPage',
     'ContactUs',
+    'AboutUsPage',
   ]
 
   const messages = {}
