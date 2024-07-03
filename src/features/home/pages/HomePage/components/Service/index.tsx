@@ -50,7 +50,7 @@ export function Service() {
         </div>
         <div className='w-full'>
           <Link
-            className='flex gap-[8px] subtitle-1 text-white items-center block w-fit mx-auto'
+            className='flex gap-[8px] subtitle-1 text-white items-center block w-fit mx-auto transition-all hover:scale-125'
             href='#'
           >
             {common('seeMore')}
