@@ -10,7 +10,6 @@ export default getRequestConfig(async ({ locale }) => {
   const pages = [
     'common',
     'HomePage',
-    'CommitmentSuccessPage',
     'CorporateGroupOrganizationalStructurePage',
     'BoardAndExecutivesPage',
     'AntiCorruptionPolicyPage',

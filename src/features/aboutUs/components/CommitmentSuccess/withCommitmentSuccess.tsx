@@ -1,11 +1,11 @@
 import { FunctionComponentType } from '@/models/FunctionComponentType'
 
-export function withCommitmentSuccessPage(
+export function withCommitmentSuccess(
   Component: React.FC<FunctionComponentType>
 ) {
-  function WithCommitmentSuccessPage() {
+  function WithCommitmentSuccess() {
     return <Component />
   }
 
-  return WithCommitmentSuccessPage
+  return WithCommitmentSuccess
 }
