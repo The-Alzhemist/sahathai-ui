@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import { NewsCard } from '@/components/NewsCard'
+import { Animation } from '@/components/Animation'
 
 export function News() {
   const t = useTranslations('HomePage.News')
@@ -10,7 +11,7 @@ export function News() {
       <h2 className='text-[34px] leading-[36px] text-center text-blue-400'>
         {t('title')}
       </h2>
-      <div className='mt-[40px] flex flex-wrap gap-[24px]'>
+      <Animation className='mt-[40px] flex flex-wrap gap-[24px]'>
         <NewsCard
           title='SAHATHAI TERMINAL ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย'
           description='Sahathai Terminal ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย ระหว่างสมาคมตัวแทนออกของรับอนุญาตไทย (Thai Authorized Customs Brokers Association: TACBA) และสมาคมสัตววิทยาแห่งลอนดอน (ZSL) ประเทศไทย ซึ่งจัดขึ้นในวันที่ 28 พฤษภาคมที่ผ่านมา ณ ห้องเดอะแซมเบอร์ ชั้น B โรงแรมเอส 31 สุขุมวิท กรุงเทพมหานคร'
@@ -26,7 +27,7 @@ export function News() {
           description='Sahathai Terminal ร่วมออกบูธภายในพิธีลงนามข้อตกลงความร่วมมือเพื่อส่งเสริมศักยภาพและความร่วมมือการต่อต้านการค้าสัตว์ป่า ตัวนิ่ม สัตว์ป่าอื่น และพันธุ์พืชที่ผิดกฏหมาย ระหว่างสมาคมตัวแทนออกของรับอนุญาตไทย (Thai Authorized Customs Brokers Association: TACBA) และสมาคมสัตววิทยาแห่งลอนดอน (ZSL) ประเทศไทย ซึ่งจัดขึ้นในวันที่ 28 พฤษภาคมที่ผ่านมา ณ ห้องเดอะแซมเบอร์ ชั้น B โรงแรมเอส 31 สุขุมวิท กรุงเทพมหานคร'
           createdAt='2010-11-12T13:14:15Z'
         />
-      </div>
+      </Animation>
     </section>
   )
 }

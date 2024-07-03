@@ -1,5 +1,7 @@
-import { Line } from '@/components/Line'
 import { useTranslations } from 'next-intl'
+
+import { Line } from '@/components/Line'
+import { Animation } from '@/components/Animation'
 
 export function Banner() {
   const t = useTranslations('AboutUsPage.VisionMissionValues.Banner')
@@ -7,7 +9,7 @@ export function Banner() {
 
   return (
     <section className='relative py-[64px] bg-[url("/about-us/banner.png")] bg-cover h-[838px]'>
-      <section className='pl-[72px] border-l-[4px] border-blue-300 w-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+      <Animation className='pl-[72px] border-l-[4px] border-blue-300 w-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
         <div className='max-w-[336px] w-full'>
           <h1 className='headline-3 text-blue-300'>
             {common('sahathai')}
@@ -23,7 +25,7 @@ export function Banner() {
             {t('vision.description')}
           </p>
         </div>
-      </section>
+      </Animation>
     </section>
   )
 }

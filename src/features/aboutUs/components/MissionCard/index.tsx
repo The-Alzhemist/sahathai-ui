@@ -1,4 +1,5 @@
 import { cn } from '@/libs/util'
+import { Animation } from '@/components/Animation'
 import { MissionCardProps } from './interface'
 
 export function MissionCard({
@@ -7,7 +8,7 @@ export function MissionCard({
   className,
 }: MissionCardProps) {
   return (
-    <div className='max-w-[436px] w-full'>
+    <Animation className='max-w-[436px] w-full'>
       <div className='relative pt-[76.38%] w-full'>
         <div
           className={cn(
@@ -21,6 +22,6 @@ export function MissionCard({
           </p>
         </div>
       </div>
-    </div>
+    </Animation>
   )
 }
