@@ -1,9 +1,25 @@
+'use client'
 import Image from 'next/image'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
+
 import { AboutCardProps } from './interface'
+import { cn } from '@/libs/util'
 
 export function AboutCard({ title, description, imageUrl }: AboutCardProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <div className='max-w-[283px] w-full'>
+    <div
+      ref={ref}
+      className={cn(
+        'max-w-[283px] w-full transition-all opacity-0 duration-700',
+        {
+          'opacity-100': isInView,
+        }
+      )}
+    >
       <div className='rounded-[8px] overflow-hidden'>
         <div className='relative pt-[85.51%] w-full'>
           <Image src={imageUrl} fill alt='' />

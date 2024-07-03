@@ -1,8 +1,14 @@
+'use client'
+import { cn } from '@/libs/util'
+import { useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useRef } from 'react'
 
 export function Banner() {
   const t = useTranslations('HomePage.Banner')
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   return (
     <section className='relative h-[392px] flex flex-col justify-end'>
@@ -15,8 +21,18 @@ export function Banner() {
         alt='เชื่อมโยง คุณสู่โลจิสติกส์ไทย'
       />
 
-      <section className='max-w-[1440px] w-full mx-auto mb-[130px] pl-[106px] z-[1] text-white'>
-        <h1>
+      <section
+        ref={ref}
+        className='max-w-[1440px] w-full mx-auto mb-[130px] pl-[106px] z-[1] text-white'
+      >
+        <h1
+          className={cn(
+            'transition-all duration-700 translate-x-[-200px] opacity-0',
+            {
+              'translate-x-0 opacity-100': isInView,
+            }
+          )}
+        >
           <span className='font-[600] text-[64px] leading-[96px] text-blue-300'>
             {t('title')}
           </span>
