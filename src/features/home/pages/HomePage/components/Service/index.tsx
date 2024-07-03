@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/libs/intl/navigation'
 import { ArrowRightCircleIcon } from '@/components/icons/ArrowRightCircleIcon'
 import { ServiceCard } from '../ServiceCard'
+import { Animation } from '@/components/Animation'
 
 export function Service() {
   const t = useTranslations('HomePage.Service')
@@ -14,7 +15,7 @@ export function Service() {
         {t('title')}
       </h2>
 
-      <div className='mt-[40px] w-[934px] flex flex-wrap gap-[40px] mx-auto'>
+      <Animation className='mt-[40px] w-[934px] flex flex-wrap gap-[40px] mx-auto'>
         <div className='p-[24px] rounded-[8px] shadow-5 space-y-[32px] max-w-[447px] w-full bg-white'>
           <ServiceCard
             className='border-b border-white-5'
@@ -56,7 +57,7 @@ export function Service() {
             <ArrowRightCircleIcon width='40' height='40' />
           </Link>
         </div>
-      </div>
+      </Animation>
     </section>
   )
 }

@@ -14,7 +14,7 @@ export function AboutCard({ title, description, imageUrl }: AboutCardProps) {
     <div
       ref={ref}
       className={cn(
-        'max-w-[283px] w-full transition-all opacity-0 duration-700',
+        'max-w-[283px] w-full transition-all opacity-0 duration-1000',
         {
           'opacity-100': isInView,
         }

@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
+import { Animation } from '@/components/Animation'
+
 export function License() {
   const t = useTranslations('HomePage.License')
   return (
@@ -11,7 +13,7 @@ export function License() {
       <p className='mt-[8px] body-2 text-black-60 text-center'>
         {t('description')}
       </p>
-      <div className='flex flex-wrap justify-center mt-[40px] gap-[27.4px]'>
+      <Animation className='flex flex-wrap justify-center mt-[40px] gap-[27.4px]'>
         <figure>
           <Image src='/home/license1.png' width={142.32} height={88} alt='' />
           <figcaption className='text-black-60 caption mt-[8px]'>
@@ -42,7 +44,7 @@ export function License() {
             {t('iso')}
           </figcaption>
         </figure>
-      </div>
+      </Animation>
     </section>
   )
 }

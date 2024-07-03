@@ -1,8 +1,10 @@
-import { LocationCheckIcon } from '@/components/icons/LocationCheckIcon'
 import { useTranslations } from 'next-intl'
-import { HighlightCard } from '../HighlightCard'
+
+import { LocationCheckIcon } from '@/components/icons/LocationCheckIcon'
 import { LikeIcon } from '@/components/icons/LikeIcon'
 import { NavigationOneIcon } from '@/components/icons/NavigationOneIcon'
+import { Animation } from '@/components/Animation'
+import { HighlightCard } from '../HighlightCard'
 
 export function Highlight() {
   const t = useTranslations('HomePage.Highlight')
@@ -15,7 +17,7 @@ export function Highlight() {
       <p className='mt-[8px] body-1 text-black-60 text-center'>
         {t('description')}
       </p>
-      <div className='mt-[40px] flex justify-center flex-wrap gap-[24px]'>
+      <Animation className='mt-[40px] flex justify-center flex-wrap gap-[24px]'>
         <HighlightCard
           title={t('location.title')}
           description={t('location.description')}
@@ -34,7 +36,7 @@ export function Highlight() {
         >
           <NavigationOneIcon className='text-white' width='48' height='48' />
         </HighlightCard>
-      </div>
+      </Animation>
     </section>
   )
 }
