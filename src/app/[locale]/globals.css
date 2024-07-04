@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -11,8 +12,8 @@ body {
   font-family: 'Kanit', sans-serif;
 }
 
-.sarabun {
-  font-family: 'Sarabun', sans-serif;
+.k2d {
+  font-family: 'K2D', sans-serif;
 }
 
 .inter {
@@ -21,42 +22,77 @@ body {
 
 /*  */
 .headline-1 {
+  font-family: 'Prompt', sans-serif;
   font-size: 48px;
   font-weight: 500;
-  line-height: 56px;
+  line-height: 72.58px;
 }
 
 .headline-2 {
+  font-family: 'Prompt', sans-serif;
   font-size: 34px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 51.41px;
 }
 
 .headline-3 {
+  font-family: 'Prompt', sans-serif;
   font-size: 24px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.18px;
+  line-height: 36.29px;
+  letter-spacing: 0.18000000715255737px;
 }
 
 .headline-4 {
+  font-family: 'Prompt', sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  line-height: 30.24px;
+}
+
+.headline-5 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.22px;
+}
+
+.headline-6 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24.19px;
+}
+
+.span-whitespace {
+  font-family: 'Prompt', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54.43px;
+}
+
+.span-subtitle {
+  font-family: 'Prompt', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54.43px;
 }
 
 .subtitle-1 {
+  font-family: 'Prompt', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.15px;
+  line-height: 24.19px;
+  letter-spacing: 0.15000000596046448px;
 }
 
 .subtitle-2 {
+  font-family: 'Prompt', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 21.17px;
+  letter-spacing: 0.10000000149011612px;
 }
 
 .medium {
@@ -67,18 +103,18 @@ body {
 }
 
 .body-1 {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'K2D', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 20.8px;
   letter-spacing: 0.5px;
 }
 
 .body-2 {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'K2D', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 18.2px;
   letter-spacing: 0.25px;
 }
 
@@ -90,22 +126,23 @@ body {
 }
 
 .button {
-  font-size: 14px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 24.19px;
   letter-spacing: 1.25px;
 }
 
 .caption {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'K2D', sans-serif;
   font-size: 12px;
   font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0.4px;
+  line-height: 15.6px;
+  letter-spacing: 0.4000000059604645px;
 }
 
 .overline {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'K2D', sans-serif;
   font-size: 10px;
   font-weight: 500;
   line-height: 16px;

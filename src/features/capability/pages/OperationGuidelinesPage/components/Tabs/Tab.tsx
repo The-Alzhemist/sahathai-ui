@@ -5,7 +5,7 @@ export function Tab({ isActive = false, children, onClick }: TabProps) {
   return (
     <button
       className={cn(
-        'leading-[24px] sarabun bg-white-1 p-[18px] rounded-[8px] w-full',
+        'leading-[24px] k2d bg-white-1 p-[18px] rounded-[8px] w-full',
         {
           'bg-dark-100': isActive,
         }

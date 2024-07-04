@@ -72,7 +72,7 @@ SideMenu.Item = function Item({
     <li>
       <Link
         className={cn(
-          'p-[16px] rounded-[8px] bg-white-3 block text-center text-black-40 leading-[24px] sarabun',
+          'p-[16px] rounded-[8px] bg-white-3 block text-center text-black-40 leading-[24px] k2d',
           {
             'bg-blue text-white': isActive,
           }

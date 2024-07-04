@@ -9,7 +9,7 @@ export function GeneralWarehouse() {
       <h2 className='text-center font-[700] text-[36px] leading-[44px]'>
         {t('title')}
       </h2>
-      <p className='mt-[32px] whitespace-pre-wrap text-center text-[18px] leading-[28px] sarabun'>
+      <p className='mt-[32px] whitespace-pre-wrap text-center text-[18px] leading-[28px] k2d'>
         {t('description')}
       </p>
       <div className='mt-[48px] flex justify-center flex-wrap gap-[24px] max-w-[1280px] mx-auto'>

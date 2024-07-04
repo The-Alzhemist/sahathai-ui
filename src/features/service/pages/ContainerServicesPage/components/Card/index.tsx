@@ -12,7 +12,7 @@ export function Card({ className, title, description }: CardProps) {
       <div className='max-w-[569px] w-full h-[337px] bg-dark' />
       <div className='max-w-[569px] w-full'>
         <h2 className='font-[700] text-[36px] leading-[44px]'>{title}</h2>
-        <p className='mt-[40px] text-[18px] leading-[28px] sarabun'>
+        <p className='mt-[40px] text-[18px] leading-[28px] k2d'>
           {description}
         </p>
       </div>

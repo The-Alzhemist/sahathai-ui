@@ -9,10 +9,10 @@ export function CustomsOfficePortArea() {
         <h2 className='font-[700] text-[36px] leading-[44px] text-center'>
           {t('title')}
         </h2>
-        <p className='mt-[8px] text-[18px] leading-[28px] sarabun whitespace-pre-wrap'>
+        <p className='mt-[8px] text-[18px] leading-[28px] k2d whitespace-pre-wrap'>
           {t('description')}
         </p>
-        <p className='mt-[40px] text-[18px] leading-[28px] sarabun whitespace-pre-wrap'>
+        <p className='mt-[40px] text-[18px] leading-[28px] k2d whitespace-pre-wrap'>
           {t('description2')}
         </p>
       </section>
