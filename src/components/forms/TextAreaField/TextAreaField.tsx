@@ -14,7 +14,7 @@ export function TextAreaField({
       {label && <div className='subtitle-1 text-black-2'>{label}</div>}
       <textarea
         className={cn(
-          'medium block text-black-2 placeholder:text-dark-30 w-full p-[20px] rounded-[6px] focus:outline-none border border-black-20 focus:border-blue resize-none',
+          'body-1 block text-black-2 placeholder:text-dark-20 w-full p-[20px] rounded-[6px] focus:outline-none border border-black-20 focus:border-blue resize-none',
           textAreaClassName
         )}
         value={value}

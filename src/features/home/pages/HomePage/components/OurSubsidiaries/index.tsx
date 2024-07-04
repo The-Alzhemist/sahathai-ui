@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
+import { OurSubsidiariesCard } from '../OurSubsidiariesCard'
 
 export function OurSubsidiaries() {
   const t = useTranslations('HomePage.OurSubsidiaries')
@@ -11,14 +12,57 @@ export function OurSubsidiaries() {
         {t('title')}
       </h2>
       <p className='body-1 mt-[8px] text-center'>{t('description')}</p>
-      <Animation className='flex flex-wrap justify-center gap-[44px] mt-[64px]'>
-        <Image src='/home/bcds.png' width={219.1} height={72} alt='' />
-        <Image src='/home/bbt.png' width={121.5} height={72} alt='' />
-      </Animation>
-      <Animation className='flex flex-wrap justify-center gap-[131px] mt-[48px]'>
-        <Image src='/home/bts.png' width={113.66} height={72} alt='' />
-        <Image src='/home/bbs.png' width={95.82} height={72} alt='' />
-        <Image src='/home/blp.png' width={107.35} height={72} alt='' />
+      <Animation className='flex flex-wrap justify-center gap-[24px] mt-[64px] p-[8px]'>
+        <OurSubsidiariesCard>
+          <Image
+            className='w-[107.78px] h-[53.33px]'
+            src='/home/bts.png'
+            width={0}
+            height={0}
+            alt=''
+            sizes='100vw'
+          />
+        </OurSubsidiariesCard>
+        <OurSubsidiariesCard>
+          <Image
+            className='w-[104.44px] h-[57.78px]'
+            src='/home/bcds.png'
+            width={0}
+            height={0}
+            alt=''
+            sizes='100vw'
+          />
+        </OurSubsidiariesCard>
+        <OurSubsidiariesCard>
+          <Image
+            className='w-[101.11px] h-[60px]'
+            src='/home/bbt.png'
+            width={0}
+            height={0}
+            alt=''
+            sizes='100vw'
+          />
+        </OurSubsidiariesCard>
+        <OurSubsidiariesCard>
+          <Image
+            className='w-[101.11px] h-[62.22px]'
+            src='/home/bbs.png'
+            width={0}
+            height={0}
+            alt=''
+            sizes='100vw'
+          />
+        </OurSubsidiariesCard>
+        <OurSubsidiariesCard>
+          <Image
+            className='w-[90px] h-[60px]'
+            src='/home/blp.png'
+            width={0}
+            height={0}
+            alt=''
+            sizes='100vw'
+          />
+        </OurSubsidiariesCard>
       </Animation>
     </section>
   )
