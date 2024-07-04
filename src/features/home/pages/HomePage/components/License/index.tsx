@@ -16,31 +16,37 @@ export function License() {
       <Animation className='flex flex-wrap justify-center mt-[40px] gap-[27.4px]'>
         <figure>
           <Image src='/home/license1.png' width={142.32} height={88} alt='' />
-          <figcaption className='text-black-60 caption mt-[8px]'>
+          <figcaption className='text-black-60 caption text-center mt-[8px] max-w-[101px] mx-auto'>
             {t('iso')}
           </figcaption>
         </figure>
         <figure>
-          <Image src='/home/license2.png' width={58.67} height={88} alt='' />
-          <figcaption className='text-black-60 caption mt-[8px]'>
+          <Image
+            className='mx-auto'
+            src='/home/license2.png'
+            width={58.67}
+            height={88}
+            alt=''
+          />
+          <figcaption className='text-black-60 caption text-center mt-[8px] max-w-[101px] mx-auto'>
             {t('iso')}
           </figcaption>
         </figure>
         <figure>
           <Image src='/home/license3.png' width={151.01} height={88} alt='' />
-          <figcaption className='text-black-60 caption mt-[8px]'>
+          <figcaption className='text-black-60 caption text-center mt-[8px] max-w-[101px] mx-auto'>
             {t('iso')}
           </figcaption>
         </figure>
         <figure>
           <Image src='/home/license4.png' width={129.68} height={88} alt='' />
-          <figcaption className='text-black-60 caption mt-[8px]'>
+          <figcaption className='text-black-60 caption text-center mt-[8px] max-w-[101px] mx-auto'>
             {t('iso')}
           </figcaption>
         </figure>
         <figure>
           <Image src='/home/license5.png' width={221.19} height={88} alt='' />
-          <figcaption className='text-black-60 caption mt-[8px]'>
+          <figcaption className='text-black-60 caption text-center mt-[8px] max-w-[101px] mx-auto'>
             {t('iso')}
           </figcaption>
         </figure>
