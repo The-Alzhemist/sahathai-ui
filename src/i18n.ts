@@ -11,7 +11,6 @@ export default getRequestConfig(async ({ locale }) => {
     'common',
     'HomePage',
     'CorporateGroupOrganizationalStructurePage',
-    'BoardAndExecutivesPage',
     'AntiCorruptionPolicyPage',
     'VisionMissionValuesPage',
     'PortFacilitiesPage',

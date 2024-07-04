@@ -3,7 +3,7 @@ import { FunctionComponentType } from '@/models/FunctionComponentType'
 
 export function Tabs({ children, className }: FunctionComponentType) {
   return (
-    <div className={cn('p-[10px] flex gap-x-[16px] items-center', className)}>
+    <div className={cn('flex gap-x-[24px] items-center', className)}>
       {children}
     </div>
   )

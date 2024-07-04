@@ -5,9 +5,9 @@ export function Tab({ isActive = false, children, onClick }: TabProps) {
   return (
     <button
       className={cn(
-        'text-[20px] leading-[24px] p-[10px] rounded-[8px] font-[500]',
+        'py-[15px] subtitle-1 border-b-2 border-white text-black-20 whitespace-nowrap',
         {
-          'bg-dark-80 font-[700]': isActive,
+          'text-blue-400 border-blue-400': isActive,
         }
       )}
       type='button'
