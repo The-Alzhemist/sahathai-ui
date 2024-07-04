@@ -1,4 +1,5 @@
-import { CommitmentSuccess } from '../../components/CommitmentSuccess/CommitmentSuccess'
+import { BoardAndExecutives } from '../../components/BoardAndExecutives'
+import { CommitmentSuccess } from '../../components/CommitmentSuccess'
 import { VisionMissionValues } from '../../components/VisionMissionValues'
 
 export function AboutUsPage() {
@@ -6,6 +7,7 @@ export function AboutUsPage() {
     <main>
       <VisionMissionValues />
       <CommitmentSuccess />
+      <BoardAndExecutives />
     </main>
   )
 }
