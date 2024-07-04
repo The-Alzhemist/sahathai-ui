@@ -14,7 +14,7 @@ export function Strength({ className }: StrengthProps) {
         <h2 className='mt-[24px] font-[700] text-[36px] leading-[44px]'>
           ตอบโจทย์ทุก ความต้องการ
         </h2>
-        <p className='mt-[15px] text-[18px] leading-[28px] sarabun'>
+        <p className='mt-[15px] text-[18px] leading-[28px] k2d'>
           ไม่ว่าคุณจะต้องการจัดเก็บสินค้าประเภทใด ใช้พื้นที่มากน้อยเท่าไหน
           ระดับความปลอดภัยขั้นสูงระดับใด
           เราสามารถตอบโจทย์ทุกความต้องการของคุณได้
@@ -25,7 +25,7 @@ export function Strength({ className }: StrengthProps) {
         <h2 className='mt-[24px] font-[700] text-[36px] leading-[44px]'>
           ตอบโจทย์ทุก ความต้องการ
         </h2>
-        <p className='mt-[15px] text-[18px] leading-[28px] sarabun'>
+        <p className='mt-[15px] text-[18px] leading-[28px] k2d'>
           ไม่ว่าคุณจะต้องการจัดเก็บสินค้าประเภทใด ใช้พื้นที่มากน้อยเท่าไหน
           ระดับความปลอดภัยขั้นสูงระดับใด
           เราสามารถตอบโจทย์ทุกความต้องการของคุณได้
@@ -36,7 +36,7 @@ export function Strength({ className }: StrengthProps) {
         <h2 className='mt-[24px] font-[700] text-[36px] leading-[44px]'>
           ตอบโจทย์ทุก ความต้องการ
         </h2>
-        <p className='mt-[15px] text-[18px] leading-[28px] sarabun'>
+        <p className='mt-[15px] text-[18px] leading-[28px] k2d'>
           ไม่ว่าคุณจะต้องการจัดเก็บสินค้าประเภทใด ใช้พื้นที่มากน้อยเท่าไหน
           ระดับความปลอดภัยขั้นสูงระดับใด
           เราสามารถตอบโจทย์ทุกความต้องการของคุณได้

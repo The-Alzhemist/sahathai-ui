@@ -9,9 +9,7 @@ export function HarborOperatingSystemCard({
       <h2 className='font-[700] text-[24px] leading-[44px] text-center'>
         {title}
       </h2>
-      <p className='mt-[24px] leading-[24px] sarabun text-center'>
-        {description}
-      </p>
+      <p className='mt-[24px] leading-[24px] k2d text-center'>{description}</p>
     </div>
   )
 }

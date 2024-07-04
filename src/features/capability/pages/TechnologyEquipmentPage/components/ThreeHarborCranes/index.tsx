@@ -17,13 +17,13 @@ export function ThreeHarborCranes() {
           <h3 className='font-[500] text-[20px] leading-[24px]'>
             {t('higherWorkEfficiency.title')}
           </h3>
-          <p className='leading-[24px] sarabun'>
+          <p className='leading-[24px] k2d'>
             {t('higherWorkEfficiency.description')}
           </p>
           <h3 className='font-[500] text-[20px] leading-[24px]'>
             {t('maintainTravelSchedule.title')}
           </h3>
-          <p className='leading-[24px] sarabun'>
+          <p className='leading-[24px] k2d'>
             {t('maintainTravelSchedule.description')}
           </p>
           <p className='mt-[56px] text-[18px] leading-[28px]'>

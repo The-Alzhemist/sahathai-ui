@@ -10,8 +10,8 @@ export function Card({ title, descriptions }: CardProps) {
       <Line className='my-[6px]' />
       {descriptions.map((description, index) => (
         <div className='grid grid-cols-[3px_1fr] text-black-60' key={index}>
-          <span className='text-[16px] sarabun'>&bull;</span>
-          <p className='leading-[24px] sarabun whitespace-pre-wrap pl-[10px]'>
+          <span className='text-[16px] k2d'>&bull;</span>
+          <p className='leading-[24px] k2d whitespace-pre-wrap pl-[10px]'>
             {description}
           </p>
           <br />

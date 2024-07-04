@@ -16,11 +16,11 @@ export function OperationGuidelinesPage() {
         <h1 className='font-[700] text-[36px] leading-[44px] text-center'>
           {t('title')}
         </h1>
-        <h2 className='mt-[24px] text-[18px] leading-[28px] text-center sarabun'>
+        <h2 className='mt-[24px] text-[18px] leading-[28px] text-center k2d'>
           {t('subTitle')}
         </h2>
       </section>
-      <p className='py-[41px] leading-[24px] sarabun text-center whitespace-pre-wrap'>
+      <p className='py-[41px] leading-[24px] k2d text-center whitespace-pre-wrap'>
         {t('description')}
       </p>
       <section className='max-w-[1240px] flex gap-[10px] mx-auto'>

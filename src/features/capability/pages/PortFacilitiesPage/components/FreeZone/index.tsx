@@ -9,7 +9,7 @@ export function FreeZone() {
       <h2 className='font-[700] text-[36px] leading-[44px] text-center'>
         {t('title')}
       </h2>
-      <p className='mt-[32px] text-[18px] leading-[28px] sarabun text-center'>
+      <p className='mt-[32px] text-[18px] leading-[28px] k2d text-center'>
         {t('description')}
       </p>
       <section className='mt-[48px] flex items-center flex-wrap gap-[80px]'>
