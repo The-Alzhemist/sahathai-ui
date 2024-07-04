@@ -10,9 +10,6 @@ export default getRequestConfig(async ({ locale }) => {
   const pages = [
     'common',
     'HomePage',
-    'CorporateGroupOrganizationalStructurePage',
-    'AntiCorruptionPolicyPage',
-    'VisionMissionValuesPage',
     'PortFacilitiesPage',
     'TechnologyEquipmentPage',
     'HarborOperatingSystemPage',
