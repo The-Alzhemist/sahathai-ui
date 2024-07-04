@@ -6,7 +6,7 @@ export function HighlightCard({
   children,
 }: HighlightCardProps) {
   return (
-    <div className='max-w-[283px] w-full p-[16px] rounded-[8px] shadow-6'>
+    <div className='max-w-[283px] min-h-[356px] w-full p-[16px] rounded-[8px] shadow-6'>
       <div className='p-[26px] rounded-full bg-blue-400 w-[100px] h-[100px] mx-auto'>
         {children}
       </div>
