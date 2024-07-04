@@ -13,7 +13,7 @@ export function Subcommittee() {
   const [activeTab, setActiveTab] = useState(SubcommitteeEnum.Audit)
 
   return (
-    <section className='mt-[16px] mb-[244px] space-y-[40px]'>
+    <section className='mt-[16px] space-y-[40px]'>
       <h2 className='headline-2 text-center text-blue-400'>{t('title')}</h2>
 
       <Tabs>
