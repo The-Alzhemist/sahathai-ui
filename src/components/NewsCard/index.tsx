@@ -28,7 +28,7 @@ export function NewsCard({
         <p className='mt-[8px] body-2 line-clamp-2 text-black-60'>
           {description}
         </p>
-        <div className='mt-[8px] caption'>
+        <div className='mt-[8px] caption text-black-80'>
           {DateTime.fromISO(createdAt).toFormat('dd LLLL yyyy')}
         </div>
         <Link
