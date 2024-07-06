@@ -20,8 +20,8 @@ export function Menu() {
         <Menu.Item href='/about-us' isActive={pathname.includes('about-us')}>
           {t('aboutUs')}
         </Menu.Item>
+        <Menu.Item href='/services'>{t('service')}</Menu.Item>
         <Menu.Item href=''>{t('capabilities')}</Menu.Item>
-        <Menu.Item href=''>{t('service')}</Menu.Item>
         <Menu.Item href=''>{t('customsDepartment')}</Menu.Item>
         <Menu.Item href='/news' isActive={pathname.includes('news')}>
           {t('news')}

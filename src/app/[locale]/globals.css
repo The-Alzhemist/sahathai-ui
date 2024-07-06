@@ -141,6 +141,13 @@ body {
   letter-spacing: 0.4000000059604645px;
 }
 
+.reg-20 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+}
+
 .overline {
   font-family: 'K2D', sans-serif;
   font-size: 10px;
