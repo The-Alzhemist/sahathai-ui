@@ -1,25 +1,26 @@
 'use client'
 import { Form, Formik } from 'formik'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 import { InputField } from '@/components/forms/InputField'
 import { TextAreaField } from '@/components/forms/TextAreaField'
 import { cn } from '@/libs/util'
 import { ContactUsProps } from './interface'
-import Image from 'next/image'
 import { Card } from './Card'
 import { TelephoneIcon } from '../icons/TelephoneIcon'
 import { RadioField } from '../forms/RadioField'
 import { PrinterIcon } from '../icons/PrinterIcon'
 import { EnvelopeIcon } from '../icons/EnvelopeIcon'
 import { LocationIcon } from '../icons/LocationIcon'
+import { Animation } from '../Animation'
 
 export function ContactUs({ className }: ContactUsProps) {
   const t = useTranslations('ContactUs')
   const common = useTranslations('common')
 
   return (
-    <section
+    <Animation
       className={cn(
         'max-w-[896px] mx-auto flex flex-wrap justify-center gap-x-[107px] gap-y-[40px]',
         className
@@ -115,6 +116,6 @@ export function ContactUs({ className }: ContactUsProps) {
         height={574}
         alt=''
       />
-    </section>
+    </Animation>
   )
 }
