@@ -3,12 +3,26 @@ import { useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
 import { NewsCardProps } from './interface'
+import { cn } from '@/libs/util'
 
-export function NewsCard({ title, description, createdAt }: NewsCardProps) {
+export function NewsCard({
+  title,
+  description,
+  createdAt,
+  direction = 'vertical',
+}: NewsCardProps) {
   const common = useTranslations('common')
   return (
-    <div className='w-[283px] rounded-[8px] overflow-hidden shadow-2'>
-      <div className='w-full h-[200px] bg-dark' />
+    <div
+      className={cn('w-[283px] rounded-[8px] overflow-hidden shadow-2', {
+        'flex w-full': direction === 'horizontal',
+      })}
+    >
+      <div
+        className={cn('w-full h-[200px] bg-dark', {
+          'w-[440px] shrink-0': direction === 'horizontal',
+        })}
+      />
       <div className='p-[16px]'>
         <h2 className='headline-4 line-clamp-2'>{title}</h2>
         <p className='mt-[8px] body-2 line-clamp-2 text-black-60'>
