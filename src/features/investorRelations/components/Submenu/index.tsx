@@ -4,7 +4,7 @@ import { SubmenuItemProps, SubmenuProps } from './interface'
 
 export function Submenu({ children }: SubmenuProps) {
   return (
-    <section className='bg-blue-300 flex justify-center'>{children}</section>
+    <section className='flex justify-center gap-[40px]'>{children}</section>
   )
 }
 
@@ -16,9 +16,12 @@ Submenu.Item = function Item({
   return (
     <Link
       href={href}
-      className={cn('py-[23px] px-[16px] text-white button hover:bg-blue-400', {
-        'bg-blue-400': isActive,
-      })}
+      className={cn(
+        'subtitle-1 text-dark-80 py-[15px] border-b-2 border-white',
+        {
+          'text-blue-400 border-blue-400': isActive,
+        }
+      )}
       scroll={false}
     >
       {text}

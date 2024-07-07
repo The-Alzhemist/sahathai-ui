@@ -12,7 +12,6 @@ export default getRequestConfig(async ({ locale }) => {
     'HomePage',
     'PortFacilitiesPage',
     'TechnologyEquipmentPage',
-    'HarborOperatingSystemPage',
     'OperationGuidelinesPage',
     'Header',
     'JoinUsPage',
@@ -23,6 +22,7 @@ export default getRequestConfig(async ({ locale }) => {
     'ContactUs',
     'AboutUsPage',
     'ServicesPage',
+    'CodeConductPage',
   ]
 
   const messages = {}
