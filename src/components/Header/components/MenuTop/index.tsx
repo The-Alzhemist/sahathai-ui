@@ -15,7 +15,7 @@ export function MenuTop() {
       <ul className='flex justify-end w-full medium text-white container'>
         <li>
           <Link
-            href=''
+            href='/contact-us'
             className='py-[18px] px-[24px] hover:bg-blue-500 flex items-center'
           >
             {t('contactUs')}
