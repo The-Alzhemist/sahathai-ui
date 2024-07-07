@@ -101,6 +101,20 @@ body {
   line-height: 24px;
 }
 
+.small-medium {
+  font-family: 'Inter', 'Noto Sans Thai';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.small-reg {
+  font-family: 'Inter', 'Noto Sans Thai';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
 .body-1 {
   font-family: 'K2D', sans-serif;
   font-size: 16px;
@@ -190,7 +204,7 @@ body {
 /* table */
 thead {
   tr {
-    background-color: #0593d1;
+    background-color: #015a99;
     color: #fff;
 
     th {
@@ -202,14 +216,14 @@ thead {
 tbody {
   tr > td {
     text-align: center;
-    padding: 16px 24px;
+    padding: 8px;
   }
 }
 
 .report {
   tbody {
     tr:nth-child(even) {
-      background: #f6fcff;
+      background: #efefef;
     }
 
     tr:nth-child(odd) {
@@ -243,8 +257,8 @@ tbody {
   }
 
   li.selected > a {
-    border: 1px solid #0593d1;
-    background-color: #0593d1;
+    border: 1px solid #015a99;
+    background-color: #015a99;
     color: #fff;
   }
 }

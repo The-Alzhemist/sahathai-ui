@@ -1,0 +1,75 @@
+import { useTranslations } from 'next-intl'
+
+import { Link } from '@/libs/intl/navigation'
+import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
+import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
+import { Animation } from '@/components/Animation'
+import { ShareholderCard } from '../ShareholderCard'
+
+export function Shareholder() {
+  const t = useTranslations('InvestorInformationPage.Shareholder')
+
+  return (
+    <Animation>
+      <h2
+        id={InvestorInformationEnum.Shareholder}
+        className='headline-2 text-black-80'
+      >
+        {t('title')}
+      </h2>
+
+      <table className='w-full report shadow-6 rounded-[10px] overflow-hidden mt-[37px]'>
+        <thead>
+          <tr>
+            <th className='subtitle-1'>{t('order')}</th>
+            <th className='subtitle-1'>{t('title')}</th>
+            <th className='subtitle-1'>{t('numberShares')}</th>
+            <th className='subtitle-1'>{t('shares')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Array.from({ length: 10 }).map((_, index) => (
+            <tr key={index}>
+              <td className='body-2 p-[16px]'>{index + 1}</td>
+              <td className='body-2 p-[16px]'>บริษัท รัตน โฮลดิ้ง จำกัด</td>
+              <td className='body-2 p-[16px]'>209,828,258</td>
+              <td className='body-2 p-[16px]'>34.56</td>
+            </tr>
+          ))}
+          <tr>
+            <td className='p-[16px] headline-4 text-blue-400' colSpan={2}>
+              รวม
+            </td>
+            <td className='body-2 p-[16px]'>209,828,258</td>
+            <td className='body-2 p-[16px]'>34.56</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p className='mt-[32px] body-2'>{t('note')}</p>
+
+      <ShareholderCard
+        className='mt-[112px]'
+        title={t('shareholderOverview', { date: '11/03/2567', type: 'XM' })}
+      >
+        <ShareholderCard.Item title={t('minorityShareholders')} value='3,473' />
+        <ShareholderCard.Item title={t('minorityShareholding')} value='44.36' />
+      </ShareholderCard>
+      <ShareholderCard
+        className='mt-[48px]'
+        title={t('shareholderOverview', { date: '11/03/2567', type: 'XM' })}
+      >
+        <ShareholderCard.Item title={t('numberShareholder')} value='3,473' />
+        <ShareholderCard.Item title={t('scriptlessShares')} value='44.36' />
+      </ShareholderCard>
+
+      <Link
+        className='mt-[9px] mx-auto w-fit block text-blue-400 subtitle-1 flex items-center gap-[9px]'
+        href='#'
+      >
+        {t('stockDistribution')}
+        <ArrowRightIcon width='16' height='16' />
+      </Link>
+    </Animation>
+  )
+}

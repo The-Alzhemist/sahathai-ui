@@ -16,7 +16,8 @@
       "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
       "numberShareholder": "จำนวนผู้ถือหุ้นทั้งหมด",
       "scriptlessShares": "% การถือหุ้นแบบไร้ใบหุ้น",
-      "stockDistribution": "ดูข้อมูลการกระจายหุ้น"
+      "stockDistribution": "ดูข้อมูลการกระจายหุ้น",
+      "note": "หมายเหตุ: * อื่นๆ ประกอบด้วยผู้ถือหุ้นรายบุคคลในกลุ่มครอบครัวรัตนศิริวิไล โดยผู้ถือหุ้นแต่ละรายถือหุ้นน้อยกว่าร้อยละ 3.00"
     },
     "DividendPayment": {
       "title": "การจ่ายเงินปันผล",
@@ -28,8 +29,6 @@
     "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
     "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
     "OneReportTable": {
-      "annualReport": "Annual Report/\nรายงานประจำปี",
-      "report56-1": "Report 56-1/\nรายงาน 56-1",
       "56-1OneReport": "56-1 One\nReport"
     },
     "OtherFinancialStatementsTable": {

@@ -15,11 +15,11 @@ import {
 } from '@floating-ui/react'
 import { LocaleEnum } from '@/enums/LocaleEnum'
 import { usePathname, useRouter } from '@/libs/intl/navigation'
-import { cn } from '@/libs/util'
-import { GlobeIcon } from '../icons/GlobeIcon'
-import { LocaleButtonProps } from './interface'
+import { GlobeIcon } from '@/components/icons/GlobeIcon'
+import { ThailandIcon } from '@/components/icons/ThailandIcon'
+import { ChevronDownIcon } from '@/components/icons/ChevronDownIcon'
 
-export function LocaleButton({ className }: LocaleButtonProps) {
+export function LocaleButton() {
   const [isOpen, setIsOpen] = useState(false)
   const locale = useLocale()
 
@@ -66,26 +66,28 @@ export function LocaleButton({ className }: LocaleButtonProps) {
   return (
     <Fragment>
       <button
-        className={cn(
-          'py-[18px] px-[24px] flex items-center uppercase gap-[10px] uppercase',
-          className
-        )}
+        className='py-[18px] px-[24px] flex items-center uppercase gap-[10px] uppercase medium text-black-80'
         type='button'
         {...getReferenceProps()}
         ref={refs.setReference}
       >
-        <GlobeIcon width='24' height='24' />
-        {locale}
+        {locale === LocaleEnum.TH ? (
+          <ThailandIcon width='28' height='20' />
+        ) : (
+          <GlobeIcon width='20' height='20' />
+        )}
+        {locale === LocaleEnum.TH ? locale : LocaleEnum.EN}
+        <ChevronDownIcon width='24' height='24' />
       </button>
       {isOpen && (
         <ul
-          className='relative p-[4px] rounded-[6px] z-[10] shadow-3 bg-white w-full text-black-80 uppercase'
+          className='relative p-[4px] rounded-[6px] z-[10] bg-white w-full shadow-3 text-black-80 medium uppercase'
           ref={refs.setFloating}
           style={floatingStyles}
           {...getFloatingProps()}
         >
           <li
-            className='py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
+            className='py-[10px] px-[12px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
             {...getItemProps({
               onClick() {
                 handleLocaleChange(LocaleEnum.TH)
@@ -95,7 +97,7 @@ export function LocaleButton({ className }: LocaleButtonProps) {
             {LocaleEnum.TH}
           </li>
           <li
-            className='py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
+            className='py-[10px] px-[12px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
             {...getItemProps({
               onClick() {
                 handleLocaleChange(LocaleEnum.EN)
@@ -103,16 +105,6 @@ export function LocaleButton({ className }: LocaleButtonProps) {
             })}
           >
             {LocaleEnum.EN}
-          </li>
-          <li
-            className='py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
-            {...getItemProps({
-              onClick() {
-                handleLocaleChange(LocaleEnum.CN)
-              },
-            })}
-          >
-            {LocaleEnum.CN}
           </li>
         </ul>
       )}
