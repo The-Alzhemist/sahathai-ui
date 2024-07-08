@@ -21,7 +21,9 @@ export function Menu() {
           {t('aboutUs')}
         </Menu.Item>
         <Menu.Item href='/services'>{t('service')}</Menu.Item>
-        <Menu.Item href=''>{t('capabilities')}</Menu.Item>
+        <Menu.Item href='/infrastructure-containers'>
+          {t('infrastructureContainers')}
+        </Menu.Item>
         <Menu.Item href=''>{t('customsDepartment')}</Menu.Item>
         <Menu.Item href='/news' isActive={pathname.includes('news')}>
           {t('news')}
