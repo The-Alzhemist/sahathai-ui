@@ -10,9 +10,6 @@ export default getRequestConfig(async ({ locale }) => {
   const pages = [
     'common',
     'HomePage',
-    'PortFacilitiesPage',
-    'TechnologyEquipmentPage',
-    'OperationGuidelinesPage',
     'Header',
     'JoinUsPage',
     'investorRelations',
@@ -23,6 +20,7 @@ export default getRequestConfig(async ({ locale }) => {
     'AboutUsPage',
     'ServicesPage',
     'CodeConductPage',
+    'InfrastructureContainersPage',
   ]
 
   const messages = {}
