@@ -67,7 +67,7 @@ export function LocaleButton({ className }: LocaleButtonProps) {
     <Fragment>
       <button
         className={cn(
-          'py-[18px] px-[24px] flex items-center uppercase gap-[10px] uppercase',
+          'flex items-center uppercase gap-[10px] uppercase',
           className
         )}
         type='button'

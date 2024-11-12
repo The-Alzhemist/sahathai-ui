@@ -5,6 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: '#0194D3',
+        },
+        secondary: {
+          DEFAULT: '#C43D30',
+        },
+        background: {
+          DEFAULT: '#005494',
+        },
+        // --------- old -----------
         black: {
           DEFAULT: '#000000',
           80: '#333333',
@@ -58,13 +68,14 @@ const config: Config = {
         },
       },
       boxShadow: {
-        1: '0px 1px 3px 0px #A6AFC366',
-        2: '0px 4px 24px 0px #0000000D',
-        3: '0px 3px 8px 0px #00000014',
-        4: '0px 3px 15.2px 5px #00000003',
-        5: '0px 4px 8px 0px #ADC4D524',
-        6: '0px 1px 4px 0px #0C0C0D1A',
-        7: ' 0px 4px 24px 0px #00000024',
+        1: '0px 8px 20px 0px #00000026',
+        // 1: '0px 1px 3px 0px #A6AFC366',
+        // 2: '0px 4px 24px 0px #0000000D',
+        // 3: '0px 3px 8px 0px #00000014',
+        // 4: '0px 3px 15.2px 5px #00000003',
+        // 5: '0px 4px 8px 0px #ADC4D524',
+        // 6: '0px 1px 4px 0px #0C0C0D1A',
+        // 7: ' 0px 4px 24px 0px #00000024',
       },
     },
   },
