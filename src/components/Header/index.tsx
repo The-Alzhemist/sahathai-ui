@@ -1,11 +1,45 @@
-import { MenuTop } from './components/MenuTop'
-import { Menu } from './components/Menu'
+'use client'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+
+import { Link, usePathname } from '@/libs/intl/navigation'
+import { cn } from '@/libs/util'
+import { LocaleButton } from '@/components/LocaleButton'
+import { SearchInput } from './SearchInput'
 
 export function Header() {
+  const t = useTranslations('Header')
+  const pathname = usePathname()
+
   return (
-    <nav className='bg-blue-400'>
-      <MenuTop />
-      <Menu />
+    <nav className='px-[10px] py-[8px] flex justify-between items-center container shadow-1 sticky top-0 bg-white z-10'>
+      <Link href='/' className='shrink-0 p-[10px]'>
+        <Image src='/logo.png' width={101} height={24} alt='' priority />
+      </Link>
+
+      <ul className='flex justify-end items-center w-full medium text-background gap-[42px]'>
+        <li>
+          <Link href='/contact-us' className='flex items-center'>
+            {t('contactUs')}
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={cn('flex items-center', {
+              'bg-blue-500': pathname.includes('join-us'),
+            })}
+            href='/join-us'
+          >
+            {t('joinUs')}
+          </Link>
+        </li>
+        <li>
+          <LocaleButton />
+        </li>
+        <li>
+          <SearchInput className='max-w-[200px]' />
+        </li>
+      </ul>
     </nav>
   )
 }
