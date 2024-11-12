@@ -1,9 +1,11 @@
 'use client'
-import { cn } from '@/libs/util'
 import { useInView } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useRef } from 'react'
+
+import { cn } from '@/libs/util'
+import { Menu } from '../Menu'
 
 export function Banner() {
   const t = useTranslations('HomePage.Banner')
@@ -11,7 +13,7 @@ export function Banner() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section className='relative h-[392px] flex flex-col justify-end'>
+    <section className='relative h-[490px] flex flex-col justify-end'>
       <Image
         className='absolute top-0 left-0 w-full h-full object-cover'
         src='/home/banner.png'
@@ -23,7 +25,7 @@ export function Banner() {
 
       <section
         ref={ref}
-        className='max-w-[1440px] w-full mx-auto mb-[130px] pl-[106px] z-[1] text-white'
+        className='max-w-[1440px] w-full mx-auto mb-[11.25%] pl-[12.64%] z-[1] text-white'
       >
         <h1
           className={cn(
@@ -33,10 +35,10 @@ export function Banner() {
             }
           )}
         >
-          <span className='font-[600] text-[64px] leading-[96px] text-blue-300'>
+          <span className='font-[600] text-[64px] leading-[96px] text-primary'>
             {t('title')}
           </span>
-          <span className='ml-[16px] font-[600] text-[64px] leading-[96px] text-red-400'>
+          <span className='ml-[16px] font-[600] text-[64px] leading-[96px] text-secondary'>
             {t('title2')}
           </span>
           <br />
@@ -45,6 +47,7 @@ export function Banner() {
           </span>
         </h1>
       </section>
+      <Menu />
     </section>
   )
 }
