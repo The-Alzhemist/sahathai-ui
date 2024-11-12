@@ -14,6 +14,12 @@ const config: Config = {
         background: {
           DEFAULT: '#005494',
         },
+        navy: {
+          DEFAULT: '#015A99',
+        },
+        gray: {
+          DEFAULT: '#999999',
+        },
         // --------- old -----------
         black: {
           DEFAULT: '#000000',
@@ -69,6 +75,8 @@ const config: Config = {
       },
       boxShadow: {
         1: '0px 8px 20px 0px #00000026',
+        2: '0px 7px 20px 0px #00000026',
+
         // 1: '0px 1px 3px 0px #A6AFC366',
         // 2: '0px 4px 24px 0px #0000000D',
         // 3: '0px 3px 8px 0px #00000014',
