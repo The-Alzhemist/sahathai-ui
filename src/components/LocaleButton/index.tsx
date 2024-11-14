@@ -66,10 +66,7 @@ export function LocaleButton({ className }: LocaleButtonProps) {
   return (
     <Fragment>
       <button
-        className={cn(
-          'flex items-center uppercase gap-[10px] uppercase',
-          className
-        )}
+        className={cn('flex items-center uppercase gap-[10px]', className)}
         type='button'
         {...getReferenceProps()}
         ref={refs.setReference}

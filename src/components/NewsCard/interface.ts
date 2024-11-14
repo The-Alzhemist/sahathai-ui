@@ -1,6 +1,6 @@
 export interface NewsCardProps {
   title: string
-  description: string
+  content: string
   createdAt: string
   direction?: 'horizontal' | 'vertical'
 }

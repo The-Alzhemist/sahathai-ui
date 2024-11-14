@@ -1,3 +1,5 @@
 export interface OurSubsidiariesCardProps {
-  children: React.ReactNode
+  imageUrl: string
+  width: number
+  height: number
 }

@@ -1,21 +1,26 @@
+import Image from 'next/image'
+
 import { HighlightCardProps } from './interface'
 
 export function HighlightCard({
   title,
   description,
-  children,
+  imageUrl,
+  imageSize,
 }: HighlightCardProps) {
   return (
-    <div className='max-w-[283px] min-h-[356px] w-full p-[16px] rounded-[8px] shadow-6'>
-      <div className='p-[26px] rounded-full bg-blue-400 w-[100px] h-[100px] mx-auto'>
-        {children}
-      </div>
-      <h3 className='mt-[24px] text-center headline-4 text-blue-400'>
+    <div className='max-w-[266px] w-full p-[24px] rounded-[8px] shadow-5'>
+      <Image
+        className='mx-auto'
+        src={imageUrl}
+        width={imageSize}
+        height={imageSize}
+        alt=''
+      />
+      <h3 className='mt-[28px] text-center headline-4 text-navy !font-[500]'>
         {title}
       </h3>
-      <p className='mt-[12px] text-center body-1 text-black-60'>
-        {description}
-      </p>
+      <p className='mt-[15px] body-2 text-black-6'>{description}</p>
     </div>
   )
 }

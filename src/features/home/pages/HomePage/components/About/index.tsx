@@ -1,42 +1,43 @@
 import { useTranslations } from 'next-intl'
 
 import { AboutCard } from '../AboutCard'
+import { SahathaiText } from '@/components/SahathaiText'
 
 export function About() {
   const t = useTranslations('HomePage.About')
 
   return (
-    <section className='max-w-[897px] mx-auto p-[72px_0_152px]'>
-      <h1 className='text-[36px] leading-[56px] text-center text-blue-800'>
-        {t('title')}
-      </h1>
-      <p className='mt-[8px] body-1 text-black-60 text-center'>
-        {t('description')}
-      </p>
-      <div className='flex justify-center gap-y-[40px] flex-wrap gap-x-[24px] mt-[40px] max-w-[1060px] mx-auto'>
+    <section className='max-w-[1041px] mx-auto pt-[80px] pb-[93px]'>
+      <div className='flex items-center max-w-[896px] mx-auto'>
+        <SahathaiText className='shrink-0' h='h2' />
+        <p className='ml-[50px] pl-[50px] border-l border-black-6 body-1 text-darkGray py-[8.5px] !leading-[29px]'>
+          {t('content')}
+        </p>
+      </div>
+      <div className='flex justify-center gap-y-[45px] flex-wrap gap-x-[25px] mt-[72px] w-full'>
         <AboutCard
           title={t('comprehensiveService.title')}
-          description={t('comprehensiveService.description')}
+          content={t('comprehensiveService.content')}
           imageUrl='/home/comprehensive-service.png'
         />
         <AboutCard
           title={t('globalTransportationNetwork.title')}
-          description={t('globalTransportationNetwork.description')}
+          content={t('globalTransportationNetwork.content')}
           imageUrl='/home/global-transportation-network.png'
         />
         <AboutCard
           title={t('convenientLocation.title')}
-          description={t('convenientLocation.description')}
+          content={t('convenientLocation.content')}
           imageUrl='/home/convenient-location.png'
         />
         <AboutCard
           title={t('coversAllNeeds.title')}
-          description={t('coversAllNeeds.description')}
+          content={t('coversAllNeeds.content')}
           imageUrl='/home/covers-all-needs.png'
         />
         <AboutCard
           title={t('worldClassStandards.title')}
-          description={t('worldClassStandards.description')}
+          content={t('worldClassStandards.content')}
           imageUrl='/home/world-class-standards.png'
         />
       </div>

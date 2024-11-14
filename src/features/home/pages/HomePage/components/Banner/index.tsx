@@ -13,9 +13,9 @@ export function Banner() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section className='relative h-[490px] flex flex-col justify-end'>
+    <section className='relative h-[520px] flex flex-col justify-end'>
       <Image
-        className='absolute top-0 left-0 w-full h-full object-cover'
+        className='absolute top-0 left-0 w-full object-cover h-[490px]'
         src='/home/banner.png'
         width={0}
         height={0}
@@ -25,9 +25,9 @@ export function Banner() {
 
       <section
         ref={ref}
-        className='max-w-[1440px] w-full mx-auto mb-[11.25%] pl-[12.64%] z-[1] text-white'
+        className='max-w-[1440px] w-full mx-auto mb-[13.33%] pl-[12.64%] z-[1] text-white'
       >
-        <h1
+        <div
           className={cn(
             'transition-all duration-700 translate-x-[-200px] opacity-0',
             {
@@ -35,17 +35,18 @@ export function Banner() {
             }
           )}
         >
-          <span className='font-[600] text-[64px] leading-[96px] text-primary'>
-            {t('title')}
-          </span>
-          <span className='ml-[16px] font-[600] text-[64px] leading-[96px] text-secondary'>
-            {t('title2')}
-          </span>
-          <br />
-          <span className='font-[400] text-[36px] leading-[54px]'>
+          <div style={{ textShadow: '0px 2px 8.6px #00000080' }}>
+            <span className='font-[600] text-[64px] leading-[96px] text-primary'>
+              {t('title')}
+            </span>
+            <span className='ml-[16px] font-[600] text-[64px] leading-[96px] text-secondary'>
+              {t('title2')}
+            </span>
+          </div>
+          <span className='font-[400] text-[36px] leading-[44px]'>
             {t('subTitle')}
           </span>
-        </h1>
+        </div>
       </section>
       <Menu />
     </section>
