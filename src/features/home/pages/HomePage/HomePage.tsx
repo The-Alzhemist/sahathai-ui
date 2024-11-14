@@ -6,6 +6,7 @@ import { Service } from './components/Service'
 import { News } from './components/News'
 import { Highlight } from './components/Highlight'
 import { OurSubsidiaries } from './components/OurSubsidiaries'
+import { HamburgerMenu } from './components/HamburgerMenu'
 
 export function HomePage() {
   return (
@@ -17,7 +18,8 @@ export function HomePage() {
       <News />
       <Highlight />
       <OurSubsidiaries />
-      <ContactUs className='mt-[142px] mb-[373px]' />
+      <ContactUs className='mt-[94px] mb-[111px]' />
+      <HamburgerMenu />
     </main>
   )
 }

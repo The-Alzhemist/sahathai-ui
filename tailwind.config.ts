@@ -17,19 +17,31 @@ const config: Config = {
         navy: {
           DEFAULT: '#015A99',
         },
-        gray: {
-          DEFAULT: '#999999',
+        darkGray: {
+          DEFAULT: '#454545',
         },
-        // --------- old -----------
+        white: {
+          DEFAULT: '#FFFFFF',
+          1: '#F5F5F5',
+          2: '#DFE4EA',
+        },
+        modellBgDark: {
+          DEFAULT: '#08254F',
+        },
+        border: {
+          DEFAULT: '#A8DBFF',
+        },
         black: {
           DEFAULT: '#000000',
-          80: '#333333',
-          60: '#666666',
-          40: '#999999',
-          20: '#CCCCCC',
-          1: '#1E1D1D',
-          2: '#111928',
+          2: '#637381',
+          3: '#333333',
+          6: '#666666',
+          9: '#999999',
         },
+        placeholder: {
+          DEFAULT: '#9CA3AF',
+        },
+        // --------- old -----------
         blue: {
           DEFAULT: '#0593D1',
           50: '#F9FCFF',
@@ -58,15 +70,6 @@ const config: Config = {
           30: '#9CA3AF',
           20: '#D0D5DD',
         },
-        white: {
-          DEFAULT: '#FFFFFF',
-          1: '#D9D9D9',
-          2: '#DDE1E6',
-          3: '#F1F1F1',
-          4: '#F2F2F2',
-          5: '#F0F0F0',
-          6: '#DFE4EA',
-        },
         green: {
           DEFAULT: '#2E9D5E',
           1: '#EEFFFB',
@@ -76,6 +79,10 @@ const config: Config = {
       boxShadow: {
         1: '0px 8px 20px 0px #00000026',
         2: '0px 7px 20px 0px #00000026',
+        3: '0px 7px 20px 0px #0000001A',
+        4: '0px 3px 10px 0px #00000026',
+        5: '0px 5px 11.3px 0px #00000026',
+        6: '0px 3px 25px 0px #0000000D',
 
         // 1: '0px 1px 3px 0px #A6AFC366',
         // 2: '0px 4px 24px 0px #0000000D',

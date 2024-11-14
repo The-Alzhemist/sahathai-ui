@@ -11,9 +11,9 @@ export function Footer() {
       <div className='flex gap-x-[16px]'>
         <YoutubeIcon width='24' height='24' />
         <FacebookIcon width='24' height='24' />
-        <TwitterIcon width='24' height='24' />
+        {/* <TwitterIcon width='24' height='24' /> */}
         <InstagramIcon width='24' height='24' />
-        <LinkedinIcon width='24' height='24' />
+        {/* <LinkedinIcon width='24' height='24' /> */}
       </div>
     </footer>
   )

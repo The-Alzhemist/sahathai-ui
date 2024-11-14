@@ -1,9 +1,11 @@
+import { IconProps } from '../icons/interface'
+
 export interface ContactUsProps {
   className?: string
 }
 
 export interface CardProps {
-  icon: React.ReactNode
+  Icon: React.FC<IconProps>
   title: string
   description: string
 }

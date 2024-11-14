@@ -1,41 +1,45 @@
 import { useTranslations } from 'next-intl'
 
-import { LocationCheckIcon } from '@/components/icons/LocationCheckIcon'
-import { LikeIcon } from '@/components/icons/LikeIcon'
-import { NavigationOneIcon } from '@/components/icons/NavigationOneIcon'
 import { Animation } from '@/components/Animation'
+import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 import { HighlightCard } from '../HighlightCard'
+import Image from 'next/image'
 
 export function Highlight() {
   const t = useTranslations('HomePage.Highlight')
 
   return (
-    <section className='mt-[152px] max-w-[897px] mx-auto'>
-      <h2 className='text-[34px] leading-[36px] text-center text-blue-400'>
-        {t('title')}
-      </h2>
-      <p className='mt-[8px] body-1 text-black-60 text-center'>
-        {t('description')}
-      </p>
-      <Animation className='mt-[40px] flex justify-center flex-wrap gap-[24px]'>
+    <section className='mt-[132px] max-w-[951px] mx-auto'>
+      <div className='grid grid-cols-[36px_1fr] gap-x-[16px] gap-y-[8px]'>
+        <DoubleQuoteIcon
+          className='text-secondary self-center'
+          width='36'
+          height='17'
+        />
+        <h2 className='headline-2 text-navy'>{t('title')}</h2>
+        <div />
+        <p className='body-1 text-black-6'>{t('description')}</p>
+      </div>
+
+      <Animation className='mt-[50px] flex justify-center flex-wrap gap-[32px]'>
         <HighlightCard
           title={t('location.title')}
           description={t('location.description')}
-        >
-          <LocationCheckIcon className='text-white' width='48' height='48' />
-        </HighlightCard>
+          imageUrl='/home/location.png'
+          imageSize={70}
+        />
         <HighlightCard
           title={t('flexibility.title')}
           description={t('flexibility.description')}
-        >
-          <LikeIcon className='text-white' width='48' height='48' />
-        </HighlightCard>
+          imageUrl='/home/customer-review.png'
+          imageSize={78}
+        />
         <HighlightCard
           title={t('locationEasyAccess.title')}
           description={t('locationEasyAccess.description')}
-        >
-          <NavigationOneIcon className='text-white' width='48' height='48' />
-        </HighlightCard>
+          imageUrl='/home/target.png'
+          imageSize={70}
+        />
       </Animation>
     </section>
   )

@@ -1,5 +1,5 @@
 export interface AboutCardProps {
   title: string
-  description: string
+  content: string
   imageUrl: string
 }

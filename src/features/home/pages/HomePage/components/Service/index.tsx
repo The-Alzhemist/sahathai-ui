@@ -2,61 +2,64 @@ import { useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
 import { ArrowRightCircleIcon } from '@/components/icons/ArrowRightCircleIcon'
-import { ServiceCard } from '../ServiceCard'
 import { Animation } from '@/components/Animation'
+import { ServiceCard } from '../ServiceCard'
 
 export function Service() {
   const t = useTranslations('HomePage.Service')
   const common = useTranslations('common')
 
   return (
-    <section className='mt-[152px] py-[64px] bg-[url("/home/service.png")] bg-cover'>
-      <h2 className='text-[34px] leading-[36px] text-white text-center'>
-        {t('title')}
-      </h2>
+    <section className='mt-[122px] py-[62px] bg-modellBgDark'>
+      <h2 className='headline-2 text-white text-center'>{t('title')}</h2>
 
-      <Animation className='mt-[40px] w-[934px] flex flex-wrap gap-[40px] mx-auto'>
-        <div className='p-[24px] rounded-[8px] shadow-5 space-y-[32px] max-w-[447px] w-full bg-white'>
+      <Animation className='mt-[80px] w-full max-w-[1038px] mx-auto'>
+        <div className='flex flex-wrap gap-x-[24px] gap-y-[75px]'>
           <ServiceCard
-            className='border-b border-white-5'
             title={t('containerMaintenanceRepairServices.title')}
-            description={t('containerMaintenanceRepairServices.description')}
+            content={t('containerMaintenanceRepairServices.content')}
+            imageUrl='/home/container.png'
+            imageSize={75}
           />
           <ServiceCard
-            className='border-b border-white-5'
             title={t('containerFreightStationContainerYard.title')}
-            description={t('containerFreightStationContainerYard.description')}
+            content={t('containerFreightStationContainerYard.content')}
+            imageUrl='/home/container2.png'
+            imageSize={62}
           />
           <ServiceCard
             title={t('freeTradeZone.title')}
-            description={t('freeTradeZone.description')}
+            content={t('freeTradeZone.content')}
+            imageUrl='/home/taxes.png'
+            imageSize={68}
           />
-        </div>
-        <div className='p-[24px] rounded-[8px] shadow-5 space-y-[32px] max-w-[447px] w-full bg-white'>
           <ServiceCard
-            className='border-b border-white-5'
             title={t('coastalShippingServices.title')}
-            description={t('coastalShippingServices.description')}
+            content={t('coastalShippingServices.content')}
+            imageUrl='/home/cargo-ship.png'
+            imageSize={76}
           />
           <ServiceCard
-            className='border-b border-white-5'
             title={t('bulkCargoProjectCargo.title')}
-            description={t('bulkCargoProjectCargo.description')}
+            content={t('bulkCargoProjectCargo.content')}
+            imageUrl='/home/road-freight.png'
+            imageSize={70}
           />
           <ServiceCard
             title={t('automatedContainerReadingTechnology.title')}
-            description={t('automatedContainerReadingTechnology.description')}
+            content={t('automatedContainerReadingTechnology.content')}
+            imageUrl='/home/phone.png'
+            imageSize={64}
           />
         </div>
-        <div className='w-full'>
-          <Link
-            className='flex gap-[8px] subtitle-1 text-white items-center block w-fit mx-auto transition-all hover:scale-125'
-            href='#'
-          >
-            {common('seeMore')}
-            <ArrowRightCircleIcon width='40' height='40' />
-          </Link>
-        </div>
+
+        <Link
+          className='mt-[40px] flex gap-[20px] subtitle-1 text-white items-center block w-fit mx-auto transition-all hover:scale-125'
+          href='/services'
+        >
+          {common('seeMore')}
+          <ArrowRightCircleIcon width='40' height='40' />
+        </Link>
       </Animation>
     </section>
   )
