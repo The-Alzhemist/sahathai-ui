@@ -45,7 +45,7 @@ export function Timeline() {
       >
         <Image
           className='mb-[20px]'
-          src='/about-us/bbt.png'
+          src='/bbt.png'
           width={90}
           height={41}
           alt=''
@@ -61,7 +61,7 @@ export function Timeline() {
       >
         <Image
           className='mb-[20px]'
-          src='/about-us/bbs.png'
+          src='/bbs.png'
           width={90}
           height={41}
           alt=''

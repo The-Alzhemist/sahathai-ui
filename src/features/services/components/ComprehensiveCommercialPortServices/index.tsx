@@ -1,77 +1,73 @@
+import { Fragment } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+
 import { Animation } from '@/components/Animation'
+import { ComprehensiveCommercialPortCard } from '../ComprehensiveCommercialPortCard'
 
 export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')
+
   return (
-    <Animation className='mt-[72px] max-w-[896px] w-full mx-auto py-[24px] shadow-2 space-y-[40px]'>
-      <section className='px-[24px]'>
-        <h2 className='headline-2 text-blue-400 text-center'>{t('title')}</h2>
-        <p className='mt-[17px] body-1 text-center text-black-60'>
-          {t('description')}
-        </p>
-      </section>
-      <Image
-        className='px-[5px]'
-        src='/services/comprehensive-commercial-port-services.png'
-        alt=''
-        width={886}
-        height={250}
-      />
-      <section className='px-[24px] space-y-[16px]'>
-        <h3 className='reg-20 text-blue-300 underline'>
-          {t('commercialDockingServices.title')}
-        </h3>
-        <p className='body-1 text-black-60 whitespace-pre-wrap'>
-          {t('commercialDockingServices.description')}
-        </p>
-      </section>
-      <section className='px-[24px] space-y-[16px]'>
-        <h3 className='reg-20 text-blue-300 underline'>
-          {t('terminalHandlingService.title')}
-        </h3>
-        <div className='grid grid-cols-[10px_1fr] body-1 text-black-60'>
-          <span>&bull;</span>
-          <p>{t('terminalHandlingService.description')}</p>
-          <span>&bull;</span>
-          <p>{t('terminalHandlingService.description2')}</p>
-        </div>
-      </section>
-      <section className='px-[24px] space-y-[16px]'>
-        <h3 className='reg-20 text-blue-300 underline'>
-          {t('volumeContainersServicedPast3Years.title')}
-        </h3>
-        <div className='grid grid-cols-[10px_1fr] body-1 text-black-60'>
-          <span>&bull;</span>
-          <p>{t('volumeContainersServicedPast3Years.description')}</p>
-          <span>&bull;</span>
-          <p>{t('volumeContainersServicedPast3Years.description2')}</p>
-        </div>
-      </section>
-      <section className='px-[24px] space-y-[16px]'>
-        <h3 className='reg-20 text-blue-300 underline'>
-          {t('containerFreightStation.title')}
-        </h3>
-        <div className='grid grid-cols-[10px_1fr] body-1 text-black-60'>
-          <span>&bull;</span>
-          <p>{t('containerFreightStation.description')}</p>
-          <span>&bull;</span>
-          <p>{t('containerFreightStation.description2')}</p>
-          <span>&bull;</span>
-          <p>{t('containerFreightStation.description3')}</p>
-        </div>
-      </section>
-      <section className='px-[24px] space-y-[16px]'>
-        <h3 className='reg-20 text-blue-300 underline'>
-          {t('containerDepot.title')}
-        </h3>
-        <div className='grid grid-cols-[10px_1fr] body-1 text-black-60'>
-          <span>&bull;</span>
-          <p>{t('containerDepot.description')}</p>
-          <span>&bull;</span>
-          <p>{t('containerDepot.description2')}</p>
-        </div>
+    <Animation className='mt-[130px] max-w-[1040px] w-full mx-auto'>
+      <h2 className='text-navy text-[40px] font-[500] leading-[60.48px] text-center'>
+        {t('title')}
+      </h2>
+      <p className='mt-[15px] body-1 text-center text-black-6'>
+        {t('content')}
+      </p>
+
+      <section className='flex justify-center flex-wrap mt-[80px] mb-[120px] gap-[25px]'>
+        <ComprehensiveCommercialPortCard
+          title={
+            <Fragment>
+              {t('commercialDock.title')}&nbsp;|&nbsp;
+              <Image src='/bbt.png' width={46} height={20.7} alt='' />
+            </Fragment>
+          }
+          content={t('commercialDock.content')}
+          imageUrl='/services/commercial-dock.png'
+          link='/services/commercial-dock'
+        />
+        <ComprehensiveCommercialPortCard
+          title={
+            <Fragment>
+              {t('bargeServices.title')}&nbsp;|&nbsp;
+              <Image src='/bbs.png' width={43} height={19.59} alt='' />
+            </Fragment>
+          }
+          content={t('bargeServices.content')}
+          imageUrl='/services/barge-services.png'
+          link='/services/barge-services'
+        />
+        <ComprehensiveCommercialPortCard
+          title={t('containerHandling.title')}
+          content={t('containerHandling.content')}
+          imageUrl='/services/container-handling.png'
+          link='/services/container-handling'
+        />
+        <ComprehensiveCommercialPortCard
+          title={
+            <Fragment>
+              {t('containerMaintenance.title')}&nbsp;|&nbsp;
+              <Image src='/bcds.png' width={55} height={18.99} alt='' />
+            </Fragment>
+          }
+          content={t('containerMaintenance.content')}
+          imageUrl='/services/container-maintenance.png'
+          link='/services/container-maintenance'
+        />
+        <ComprehensiveCommercialPortCard
+          title={
+            <Fragment>
+              {t('groundContainerTransportationServices.title')}&nbsp;|&nbsp;
+              <Image src='/bts.png' width={40} height={16} alt='' />
+            </Fragment>
+          }
+          content={t('groundContainerTransportationServices.content')}
+          imageUrl='/services/ground-container-transportation-services.png'
+          link='/services/ground-container-transportation-services'
+        />
       </section>
     </Animation>
   )

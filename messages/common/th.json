@@ -19,6 +19,7 @@
     "dateAppointment": "วันที่ได้รับการแต่งตั้ง",
     "positionHeldInListCompany": "การดำรงตำแหน่งในบริษัทจดทะเบียน",
     "positionHeldInOtherCompany": "การดำรงตำแหน่งในบริษัทอื่น",
-    "pastPositionHeld": "การดำรงตำแหน่งในอดีต"
+    "pastPositionHeld": "การดำรงตำแหน่งในอดีต",
+    "back": "กลับไปหน้าแรก"
   }
 }
