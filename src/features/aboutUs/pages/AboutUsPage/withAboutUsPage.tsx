@@ -33,7 +33,7 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
       [t]
     )
 
-    const [active, setActive] = useState(tabs[2].title)
+    const [active, setActive] = useState(tabs[0].title)
 
     const componentProps = {
       tabs,
