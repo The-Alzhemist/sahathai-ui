@@ -8,7 +8,7 @@ export function OurSubsidiaries() {
   const t = useTranslations('HomePage.OurSubsidiaries')
 
   return (
-    <section className='mt-[128px] bg-[url("/home/our-subsidiary.jpeg")] bg-cover bg-center'>
+    <section className='mt-[128px] bg-[url("/background.jpeg")] bg-cover bg-center'>
       <section className='bg-modellBgDark/60 text-white pt-[66px] pb-[94px]'>
         <h2 className='headline-2 text-center !font-[600]'>{t('title')}</h2>
         <p className='body-2 mt-[10px] text-center !font-[700]'>

@@ -1,21 +1,17 @@
+import { Menu } from '@/components/Menu'
 import { ContactUs } from '@/components/ContactUs'
-import { ContainerServices } from '../../components/ContainerServices'
-import { MultipurposePort } from '../../components/MultipurposePort'
-import { WarehouseServices } from '../../components/WarehouseServices'
 import { ComprehensiveCommercialPortServices } from '../../components/ComprehensiveCommercialPortServices'
-import { ImportExportAgent } from '../../components/ImportExportAgent'
-import { OtherRelatedServiceBusinesses } from '../../components/OtherRelatedServiceBusinesses'
+import { ContainerStorageWarehouseServices } from '../../components/ContainerStorageWarehouseServices'
+import { InventoryManagementServices } from '../../components/InventoryManagementServices'
 
 export function ServicesPage() {
   return (
-    <main className='py-[80px]'>
-      <ContainerServices />
-      <MultipurposePort />
-      <WarehouseServices />
+    <main>
+      <Menu />
       <ComprehensiveCommercialPortServices />
-      <ImportExportAgent />
-      <OtherRelatedServiceBusinesses />
-      <ContactUs className='mt-[72px]' />
+      <ContainerStorageWarehouseServices />
+      <InventoryManagementServices />
+      <ContactUs className='pt-[80px] pb-[114px]' />
     </main>
   )
 }

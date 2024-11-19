@@ -39,6 +39,7 @@ const config: Config = {
           2: '#637381',
           3: '#333333',
           6: '#666666',
+          8: '#C8C8C8',
         },
         placeholder: {
           DEFAULT: '#9CA3AF',
