@@ -21,6 +21,10 @@ body {
   font-family: 'Inter', 'Noto Sans Thai';
 }
 
+.prompt {
+  font-family: 'Prompt', sans-serif;
+}
+
 .headline-1 {
   font-family: 'Prompt', sans-serif;
   font-size: 48px;
@@ -31,14 +35,14 @@ body {
 .headline-2 {
   font-family: 'Prompt', sans-serif;
   font-size: 34px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 51.41px;
 }
 
 .headline-3 {
   font-family: 'Prompt', sans-serif;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 36.29px;
   letter-spacing: 0.18000000715255737px;
 }
@@ -46,14 +50,14 @@ body {
 .headline-4 {
   font-family: 'Prompt', sans-serif;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 24px;
 }
 
 .headline-5 {
   font-family: 'Prompt', sans-serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 27.22px;
 }
 
@@ -62,13 +66,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 24.19px;
-}
-
-.span-whitespace {
-  font-family: 'Prompt', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 54.43px;
 }
 
 .span-subtitle {
@@ -168,10 +165,10 @@ body {
   letter-spacing: 0.15000000596046448px;
 }
 
-.overline {
+.caption-mini {
   font-family: 'K2D', sans-serif;
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 16px;
 }
 

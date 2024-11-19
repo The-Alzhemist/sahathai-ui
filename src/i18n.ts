@@ -21,6 +21,7 @@ export default getRequestConfig(async ({ locale }) => {
     'ServicesPage',
     'CodeConductPage',
     'InfrastructureContainersPage',
+    'Menu',
   ]
 
   const messages = {}

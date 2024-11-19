@@ -11,31 +11,19 @@ import {
   FloatingArrow,
   size as elementSize,
 } from '@floating-ui/react'
-import { useTranslations } from 'next-intl'
 
 import { cn } from '@/libs/util'
 import { ListIcon } from '@/components/icons/ListIcon'
 import { useRouter } from '@/libs/intl/navigation'
 import { XIcon } from '@/components/icons/XIcon'
+import { useSubmenu } from '@/hooks/useSubmenu'
 import { HamburgerMenuProps } from './interface'
 
 export function HamburgerMenu({ className }: HamburgerMenuProps) {
   const arrowRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
-  const t = useTranslations('HomePage.Menu')
   const router = useRouter()
-
-  const menus = [
-    { title: t('aboutUs'), pathname: '/about-us' },
-    { title: t('service'), pathname: '/services' },
-    {
-      title: t('infrastructureContainers'),
-      pathname: '/infrastructure-containers',
-    },
-    { title: t('news'), pathname: '/news' },
-    { title: t('eService'), pathname: '#' },
-    { title: t('investorRelations'), pathname: '/investor-information' },
-  ]
+  const { menus } = useSubmenu()
 
   const { refs, floatingStyles, context } = useFloating<HTMLLabelElement>({
     placement: 'top-end',

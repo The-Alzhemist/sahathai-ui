@@ -1,4 +1,4 @@
 export interface SahathaiTextProps {
   className?: string
-  h: 'h2'
+  h: 'h1' | 'h2' | 'h3'
 }

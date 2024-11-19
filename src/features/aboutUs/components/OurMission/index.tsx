@@ -1,35 +1,35 @@
 import { useTranslations } from 'next-intl'
 
-import { Line } from '@/components/Line'
 import { MissionCard } from '../MissionCard'
 
 export function OurMission() {
   const t = useTranslations('AboutUsPage.VisionMissionValues.OurMission')
 
   return (
-    <section className='mt-[80px] max-w-[896px] w-full mx-auto'>
-      <h2 className='headline-1 text-blue-400'>{t('title')}</h2>
-      <Line className='mt-[14px]' />
-      <div className='mt-[49px] flex flex-wrap gap-[24px]'>
+    <section className='mt-[80px] max-w-[930px] w-full mx-auto'>
+      <h2 className='text-[40px] leading-[60.48px] font-[500] text-navy prompt text-center'>
+        {t('title')}
+      </h2>
+      <div className='mt-[50px] flex flex-wrap gap-x-[50px] gap-y-[42px]'>
         <MissionCard
-          className='bg-[url("/about-us/mission-to-customers.png")] bg-cover'
+          imageUrl='/about-us/mission-to-customers.png'
           title={t('missionToCustomers.title')}
-          description={t('missionToCustomers.description')}
+          content={t('missionToCustomers.content')}
         />
         <MissionCard
-          className='bg-[url("/about-us/mission-to-shareholders.png")] bg-cover'
+          imageUrl='/about-us/mission-to-shareholders.png'
           title={t('missionToShareholders.title')}
-          description={t('missionToShareholders.description')}
+          content={t('missionToShareholders.content')}
         />
         <MissionCard
-          className='bg-[url("/about-us/mission-to-employees.png")] bg-cover'
+          imageUrl='/about-us/mission-to-employees.png'
           title={t('missionToEmployees.title')}
-          description={t('missionToEmployees.description')}
+          content={t('missionToEmployees.content')}
         />
         <MissionCard
-          className='bg-[url("/about-us/mission-to-society.png")] bg-cover'
+          imageUrl='/about-us/mission-to-society.png'
           title={t('missionToSociety.title')}
-          description={t('missionToSociety.description')}
+          content={t('missionToSociety.content')}
         />
       </div>
     </section>

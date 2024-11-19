@@ -6,12 +6,12 @@ export function Slogan() {
   const t = useTranslations('AboutUsPage.VisionMissionValues.Slogan')
 
   return (
-    <Animation className='max-w-[673px] w-full mx-auto mt-[101px]'>
-      <div className='headline-1 text-center'>{`\u2018\u2019`}</div>
-      <br />
-      <p className='headline-2 text-center'>{t('title')}</p>
-      <br />
-      <div className='headline-1 text-center'>{`\u2018\u2019`}</div>
-    </Animation>
+    <section className='bg-[url("/about-us/slogan.jpeg")] bg-center bg-cover mt-[120px]'>
+      <section className='bg-modellBgDark/60 text-white py-[116px]'>
+        <Animation className='max-w-[543px] w-full mx-auto'>
+          <p className='headline-3 text-center'>{t('title')}</p>
+        </Animation>
+      </section>
+    </section>
   )
 }
