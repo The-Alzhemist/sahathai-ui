@@ -1,12 +1,12 @@
 import { CoreValues } from '../CoreValues'
 import { OurMission } from '../OurMission'
-import { Banner } from '../Banner'
+import { Vision } from '../Vision'
 import { Slogan } from '../Slogan'
 
 export function VisionMissionValues() {
   return (
-    <section>
-      <Banner />
+    <section className='mb-[128px]'>
+      <Vision />
       <Slogan />
       <OurMission />
       <CoreValues />

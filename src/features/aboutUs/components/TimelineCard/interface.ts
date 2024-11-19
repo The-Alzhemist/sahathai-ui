@@ -1,9 +1,7 @@
 export interface TimelineCardProps {
   className?: string
-  contentClassName?: string
   year: string
   imageUrl: string
-  logoUrl: string
+  contentPosition: 'left' | 'right'
   children: React.ReactNode
-  position: 'right' | 'left'
 }

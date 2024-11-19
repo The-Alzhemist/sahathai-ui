@@ -6,7 +6,7 @@ import { cn } from '@/libs/util'
 import { MenuItemProps } from './interface'
 
 export function Menu() {
-  const t = useTranslations('HomePage.Menu')
+  const t = useTranslations('Menu')
 
   return (
     <div className='absolute left-1/2 -translate-x-1/2 bottom-0 max-w-[1200px] w-full px-[112px] bg-white rounded-[7px] shadow-2'>

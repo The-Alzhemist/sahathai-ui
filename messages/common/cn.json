@@ -13,6 +13,12 @@
     "email": "อีเมล",
     "sahathai": "สหไทย",
     "terminal": "เทอร์มินอล",
-    "clickHere": "คลิกที่นี่"
+    "clickHere": "คลิกที่นี่",
+    "education": "การศึกษา",
+    "trainingHistory": "ประวัติการอบรม",
+    "dateAppointment": "วันที่ได้รับการแต่งตั้ง",
+    "positionHeldInListCompany": "การดำรงตำแหน่งในบริษัทจดทะเบียน",
+    "positionHeldInOtherCompany": "การดำรงตำแหน่งในบริษัทอื่น",
+    "pastPositionHeld": "การดำรงตำแหน่งในอดีต"
   }
 }

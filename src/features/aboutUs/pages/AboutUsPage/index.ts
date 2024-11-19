@@ -1,3 +1,4 @@
+'use client'
 import { AboutUsPage } from './AboutUsPage'
 import { withAboutUsPage } from './withAboutUsPage'
 

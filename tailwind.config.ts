@@ -7,9 +7,11 @@ const config: Config = {
       colors: {
         primary: {
           DEFAULT: '#0194D3',
+          1: '#00467B',
         },
         secondary: {
           DEFAULT: '#C43D30',
+          1: '#E54C3C',
         },
         background: {
           DEFAULT: '#005494',
@@ -30,16 +32,19 @@ const config: Config = {
         },
         border: {
           DEFAULT: '#A8DBFF',
+          1: '#D5D5D5',
         },
         black: {
           DEFAULT: '#000000',
           2: '#637381',
           3: '#333333',
           6: '#666666',
-          9: '#999999',
         },
         placeholder: {
           DEFAULT: '#9CA3AF',
+        },
+        lightGray: {
+          DEFAULT: '#999999',
         },
         // --------- old -----------
         blue: {
@@ -83,6 +88,8 @@ const config: Config = {
         4: '0px 3px 10px 0px #00000026',
         5: '0px 5px 11.3px 0px #00000026',
         6: '0px 3px 25px 0px #0000000D',
+        7: '0px 1px 10px 2px #00000026',
+        8: '0px 3px 30px 0px #0000001A',
 
         // 1: '0px 1px 3px 0px #A6AFC366',
         // 2: '0px 4px 24px 0px #0000000D',

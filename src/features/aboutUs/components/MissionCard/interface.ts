@@ -1,5 +1,5 @@
 export interface MissionCardProps {
-  className: string
+  imageUrl: string
   title: string
-  description: string
+  content: string
 }
