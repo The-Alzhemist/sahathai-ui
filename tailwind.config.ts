@@ -91,7 +91,7 @@ const config: Config = {
         6: '0px 3px 25px 0px #0000000D',
         7: '0px 1px 10px 2px #00000026',
         8: '0px 3px 30px 0px #0000001A',
-
+        9: '0px 3px 4px 0px #00000040',
         // 1: '0px 1px 3px 0px #A6AFC366',
         // 2: '0px 4px 24px 0px #0000000D',
         // 3: '0px 3px 8px 0px #00000014',
