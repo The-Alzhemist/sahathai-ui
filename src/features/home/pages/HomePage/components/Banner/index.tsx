@@ -25,7 +25,7 @@ export function Banner() {
 
       <section
         ref={ref}
-        className='max-w-[1440px] w-full mx-auto mb-[13.33%] pl-[12.64%] z-[1] text-white'
+        className='container mb-[13.33%] pl-[12.64%] z-[1] text-white'
       >
         <div
           className={cn(

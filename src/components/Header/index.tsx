@@ -18,7 +18,7 @@ export function Header() {
           <Image src='/logo.png' width={101} height={24} alt='' priority />
         </Link>
 
-        <ul className='flex justify-end items-center w-full medium text-background gap-[42px]'>
+        <ul className='flex justify-end items-center w-full medium text-background gap-[42px] mobile:hidden'>
           <li>
             <Link href='/contact-us' className='flex items-center'>
               {t('contactUs')}

@@ -11,10 +11,12 @@ export function Service() {
 
   return (
     <section className='mt-[122px] py-[62px] bg-modellBgDark'>
-      <h2 className='headline-2 text-white text-center'>{t('title')}</h2>
+      <h2 className='headline-2 text-white text-center container-mini'>
+        {t('title')}
+      </h2>
 
-      <Animation className='mt-[80px] w-full max-w-[1038px] mx-auto'>
-        <div className='flex flex-wrap gap-x-[24px] gap-y-[75px]'>
+      <Animation className='mt-[80px] w-full container-mini'>
+        <div className='flex justify-center flex-wrap gap-x-[24px] gap-y-[75px]'>
           <ServiceCard
             title={t('containerMaintenanceRepairServices.title')}
             content={t('containerMaintenanceRepairServices.content')}

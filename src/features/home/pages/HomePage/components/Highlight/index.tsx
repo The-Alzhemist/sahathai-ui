@@ -3,14 +3,13 @@ import { useTranslations } from 'next-intl'
 import { Animation } from '@/components/Animation'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 import { HighlightCard } from '../HighlightCard'
-import Image from 'next/image'
 
 export function Highlight() {
   const t = useTranslations('HomePage.Highlight')
 
   return (
-    <section className='mt-[132px] max-w-[951px] mx-auto'>
-      <div className='grid grid-cols-[36px_1fr] gap-x-[16px] gap-y-[8px]'>
+    <section className='container mt-[132px]'>
+      <div className='max-w-[951px] mx-auto grid grid-cols-[36px_1fr] gap-x-[16px] gap-y-[8px]'>
         <DoubleQuoteIcon
           className='text-secondary self-center'
           width='36'
@@ -21,7 +20,7 @@ export function Highlight() {
         <p className='body-1 text-black-6'>{t('description')}</p>
       </div>
 
-      <Animation className='mt-[50px] flex justify-center flex-wrap gap-[32px]'>
+      <Animation className='max-w-[951px] mx-auto mt-[50px] flex justify-center flex-wrap gap-[32px]'>
         <HighlightCard
           title={t('location.title')}
           description={t('location.description')}
