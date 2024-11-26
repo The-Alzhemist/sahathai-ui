@@ -4,6 +4,13 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      screens: {
+        mobile: { max: '867px' },
+        'tablet-mobile': { max: '1024px' },
+        'desktop-tablet': { min: '868px' },
+        tablet: { min: '868px', max: '1024px' },
+        desktop: { min: '1025px' },
+      },
       colors: {
         primary: {
           DEFAULT: '#0194D3',

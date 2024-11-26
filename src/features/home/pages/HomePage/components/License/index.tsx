@@ -8,7 +8,7 @@ import { LicenseCard } from '../LicenseCard'
 export function License() {
   const t = useTranslations('HomePage.License')
   return (
-    <section className='max-w-[896px] w-full mx-auto'>
+    <section className='container'>
       <DoubleQuoteIcon
         className='text-secondary mx-auto mb-[59px]'
         width='36'
@@ -17,7 +17,7 @@ export function License() {
       <h2 className='headline-2 text-navy text-center mb-[10px]'>
         {t('title')}
       </h2>
-      <p className='body-2 text-black-6 text-center mb-[45px]'>
+      <p className='body-2 text-black-6 text-center mb-[45px] max-w-[896px] mx-auto'>
         {t('content')}
       </p>
       <Animation className='flex flex-wrap justify-center gap-[15px]'>

@@ -22,9 +22,7 @@ export function ContactUs({ className }: ContactUsProps) {
   const common = useTranslations('common')
 
   return (
-    <Animation
-      className={cn('max-w-[1040px] mx-auto space-y-[52px]', className)}
-    >
+    <Animation className={cn('container-mini space-y-[52px]', className)}>
       <h2 className='w-full text-center text-[32px] leading-[48.38px] font-[500] text-navy'>
         {t('title')}
       </h2>
@@ -40,7 +38,7 @@ export function ContactUs({ className }: ContactUsProps) {
       >
         {({ values }) => (
           <Form>
-            <div className='flex gap-[24px]'>
+            <div className='flex gap-[24px] mobile:flex-col'>
               <ContactTypeField
                 className='flex-1'
                 name='type'
@@ -58,8 +56,8 @@ export function ContactUs({ className }: ContactUsProps) {
                 Icon={WarningIcon}
               />
             </div>
-            <div className='flex gap-[70px] px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px]'>
-              <div className='max-w-[416px] w-full shrink-0 space-y-[15px]'>
+            <div className='flex gap-[70px] px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
+              <div className='max-w-[416px] w-full shrink-0 space-y-[15px] mobile:max-w-none'>
                 <InputField
                   name='name'
                   label={t('nameField.label')}

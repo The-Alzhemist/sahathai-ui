@@ -7,10 +7,10 @@ export function About() {
   const t = useTranslations('HomePage.About')
 
   return (
-    <section className='max-w-[1041px] mx-auto pt-[80px] pb-[93px]'>
-      <div className='flex items-center max-w-[896px] mx-auto'>
+    <section className='container-mini pt-[80px] pb-[93px]'>
+      <div className='flex items-center max-w-[896px] mx-auto mobile:flex-col'>
         <SahathaiText className='shrink-0' h='h2' />
-        <p className='ml-[50px] pl-[50px] border-l border-black-6 body-1 text-darkGray py-[8.5px] !leading-[29px]'>
+        <p className='desktop-tablet:ml-[50px] desktop-tablet:pl-[50px] desktop-tablet:border-l mobile:mt-[50px] mobile:pt-[50px] mobile:border-t border-black-6 body-1 text-darkGray py-[8.5px] !leading-[29px]'>
           {t('content')}
         </p>
       </div>

@@ -9,8 +9,8 @@ export function Menu() {
   const t = useTranslations('Menu')
 
   return (
-    <div className='absolute left-1/2 -translate-x-1/2 bottom-0 max-w-[1200px] w-full px-[112px] bg-white rounded-[7px] shadow-2'>
-      <ul className='group flex justify-center items-center gap-[21px] medium text-navy'>
+    <div className='absolute left-1/2 -translate-x-1/2 bottom-0 max-w-[1200px] w-full px-[40px] bg-white rounded-[7px] shadow-2'>
+      <ul className='group flex justify-center items-center gap-[21px] medium text-navy overflow-x-auto'>
         <Menu.Item href='/about-us'>{t('aboutUs')}</Menu.Item>
         <Menu.Item href='/services'>{t('service')}</Menu.Item>
         <Menu.Item href='/infrastructure-containers'>
@@ -32,7 +32,7 @@ export function Menu() {
 
 Menu.Item = function Item({ children, href, className }: MenuItemProps) {
   return (
-    <li className='group-hover:text-black-9'>
+    <li className='group-hover:text-black-9 whitespace-nowrap'>
       <Link
         href={href}
         className={cn(
