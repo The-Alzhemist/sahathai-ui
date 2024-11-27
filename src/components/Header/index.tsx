@@ -2,14 +2,12 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import { Link, usePathname } from '@/libs/intl/navigation'
-import { cn } from '@/libs/util'
+import { Link } from '@/libs/intl/navigation'
 import { LocaleButton } from '@/components/LocaleButton'
 import { SearchInput } from './SearchInput'
 
 export function Header() {
   const t = useTranslations('Header')
-  const pathname = usePathname()
 
   return (
     <div className='shadow-1 sticky top-0 bg-white z-10'>
@@ -25,12 +23,7 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <Link
-              className={cn('flex items-center', {
-                'bg-blue-500': pathname.includes('join-us'),
-              })}
-              href='/join-us'
-            >
+            <Link className='flex items-center' href='/join-us'>
               {t('joinUs')}
             </Link>
           </li>
