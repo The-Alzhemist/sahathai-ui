@@ -23,10 +23,7 @@ export function Banner() {
         alt='เชื่อมโยง คุณสู่โลจิสติกส์ไทย'
       />
 
-      <section
-        ref={ref}
-        className='container mb-[13.33%] pl-[12.64%] z-[1] text-white'
-      >
+      <section ref={ref} className='mb-[13.33%] pl-[12.64%] z-[1] text-white'>
         <div
           className={cn(
             'transition-all duration-700 translate-x-[-200px] opacity-0',
