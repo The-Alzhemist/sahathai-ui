@@ -6,7 +6,7 @@ export function Tabs({ className, tabs, style, active, onChange }: TabsProps) {
   return (
     <div
       className={cn(
-        'flex justify-center items-center gap-x-[10px]',
+        'flex justify-center items-center gap-x-[10px] overflow-x-auto',
         className,
         {
           'p-[4px] border-[2px] border-primary rounded-full':
