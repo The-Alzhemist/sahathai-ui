@@ -11,11 +11,14 @@ export function CoreValues() {
   const t = useTranslations('AboutUsPage.VisionMissionValues.CoreValues')
 
   return (
-    <section className='mt-[100px] max-w-[1040px] w-full mx-auto'>
-      <h2 className='prompt text-[40px] font-[500] leading-[60.48px] text-navy'>
+    <section className='mt-[100px] max-w-[1064px] w-full mx-auto px-3'>
+      <h2 className='prompt text-[40px] font-[500] leading-[60.48px] text-navy text-center md:text-left'>
         {t('title')}
       </h2>
-      <Line className='mt-[14px]' />
+        <div className='flex justify-center md:justify-start'>
+            <Line className='mt-[14px]' />
+        </div>
+
 
       <div className='mt-[50px] flex justify-center flex-wrap gap-[24px]'>
         <CoreValuesItem
