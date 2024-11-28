@@ -22,8 +22,8 @@ export function BoardAndExecutives() {
 
   return (
     <section className='mt-[80px]'>
-      <SahathaiText className='max-w-[1040px] w-full mx-auto' h='h1' />
-      <p className='max-w-[1040px] w-full mx-auto mt-[24px] body-1 text-black-6'>
+      <SahathaiText className='max-w-[1040px] w-full mx-auto px-5' h='h1' />
+      <p className='max-w-[1040px] w-full mx-auto mt-[24px] body-1 text-black-6 px-5'>
         {t('content')}
       </p>
 
