@@ -10,7 +10,7 @@ export function OurMission() {
       <h2 className='text-[40px] leading-[60.48px] font-[500] text-navy prompt text-center'>
         {t('title')}
       </h2>
-      <div className='mt-[50px] flex flex-wrap gap-x-[50px] gap-y-[42px]'>
+      <div className='mt-[50px] flex flex-col  md:flex-row  items-center  justify-center flex-wrap  gap-x-5 gap-y-7 md:gap-x-6 md:gap-y-6 px-5 md:px-2'>
         <MissionCard
           imageUrl='/about-us/mission-to-customers.png'
           title={t('missionToCustomers.title')}
