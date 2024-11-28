@@ -27,7 +27,7 @@ export function Board({ onClick }: BoardProps) {
   return (
     <section className='max-w-[1040px] mx-auto w-full'>
       <h2 className='headline-2 text-center text-white'>{t('title')}</h2>
-      <section className='max-w-[734px] w-full mx-auto mt-[40px] flex flex-wrap gap-x-[60px] gap-y-[20px]'>
+      <section className='max-w-[734px] w-full mx-auto mt-[40px] flex flex-wrap  justify-center gap-x-5 md:gap-x-[60px] gap-y-[20px]'>
         <PeopleCard
           name={yuthVorachattarn('fullName')}
           imageClassName='left-[-21.52px] top-0 w-[258.86px]'
