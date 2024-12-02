@@ -10,7 +10,7 @@ export function Menu() {
 
   return (
     <div className='absolute left-1/2 -translate-x-1/2 bottom-0 max-w-[1200px] w-full px-[40px] bg-white rounded-[7px] shadow-2'>
-      <ul className='group flex justify-center items-center gap-[21px] medium text-navy overflow-x-auto'>
+      <ul className='group flex justify-start md:justify-center items-center gap-[21px] medium text-navy overflow-x-auto'>
         <Menu.Item href='/about-us'>{t('aboutUs')}</Menu.Item>
         <Menu.Item href='/services'>{t('service')}</Menu.Item>
         <Menu.Item href='/infrastructure-containers'>

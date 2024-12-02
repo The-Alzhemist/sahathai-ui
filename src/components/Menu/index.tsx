@@ -5,8 +5,8 @@ export function Menu() {
   const { menus } = useSubmenu()
 
   return (
-    <div className='fixed top-[60px] bg-background text-white rounded-b-[30px] w-full z-10 overflow-x-auto'>
-      <ul className='container flex items-center justify-center'>
+    <div className='fixed top-[60px] bg-background text-white  md:rounded-b-[30px] w-full z-10 '>
+      <ul className=' flex justify-start md:justify-center overflow-y-scroll'>
         {menus.map(menu => (
           <li key={menu.title}>
             <Link
