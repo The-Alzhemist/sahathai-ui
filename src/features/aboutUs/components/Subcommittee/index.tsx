@@ -36,20 +36,22 @@ export function Subcommittee() {
   const [activeTab, setActiveTab] = useState<string>(SubcommitteeEnum.Audit)
 
   return (
-    <section className='mt-[90px] mb-[85px] max-w-[1040px] w-full mx-auto'>
+    <section className='mt-[90px] mb-[85px] max-w-[1040px] w-full mx-auto px-5'>
       <h2 className='headline-2 text-center text-navy'>{t('title')}</h2>
 
-      <Tabs
-        className='mt-[40px] w-fit mx-auto'
-        tabs={tabs}
-        style='border'
-        active={activeTab}
-        onChange={setActiveTab}
-      />
+      <div className='flex'>
+        <Tabs
+          className='mt-[40px] w-fit mx-auto'
+          tabs={tabs}
+          style='border'
+          active={activeTab}
+          onChange={setActiveTab}
+        />
+      </div>
 
       <Animation
         key={activeTab}
-        className='whitespace-pre-wrap body-1 text-black-6 mt-[50px] rounded-[15px] p-[44px] shadow-8'
+        className='whitespace-pre-wrap body-1 text-black-6 mt-[50px] rounded-[15px] p-5 md:p-9 shadow-8'
       >
         {t(`${activeTab}.content`)}
         {activeTab === SubcommitteeEnum.Audit ? (
