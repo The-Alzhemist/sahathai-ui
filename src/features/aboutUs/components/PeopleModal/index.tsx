@@ -17,7 +17,7 @@ import { RoongrojWhangteeranon } from './RoongrojWhangteeranon'
 
 export function PeopleModal({ people, onClose }: PeopleModalProps) {
   return (
-    <Modal className='max-w-[770px] w-full' onClose={onClose}>
+    <Modal className='max-w-[770px] w-[90%] ' onClose={onClose}>
       {people === PeopleEnum.YuthVorachattarn && <YuthVorachattarn />}
       {people === PeopleEnum.VithitLeenutaphong && <VithitLeenutaphong />}
       {people === PeopleEnum.VilaiChattanrassamee && <VilaiChattanrassamee />}

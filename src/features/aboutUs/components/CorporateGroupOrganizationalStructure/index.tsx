@@ -8,7 +8,7 @@ export function CorporateGroupOrganizationalStructure() {
   const t = useTranslations('AboutUsPage.CorporateGroupOrganizationalStructure')
 
   return (
-    <section className='mt-[80px] mb-[134px] max-w-[1040px] w-full mx-auto'>
+    <section className='mt-[80px] mb-[134px] max-w-[1040px] w-full mx-auto px-5'>
       <h2 className='text-navy headline-2'>{t('corporateGroup')}</h2>
       <Line className='my-[8px]' />
       <Animation className='w-full mt-[50px] shadow-8 rounded-[15px] overflow-hidden'>
