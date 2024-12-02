@@ -21,7 +21,7 @@ export function Modal({ children, className, onClose }: ModalProps) {
         )}
       >
         <button
-          className='absolute top-[20px] right-[16px]'
+          className='absolute top-[20px] right-[16px] z-20'
           type='button'
           onClick={onClose}
         >

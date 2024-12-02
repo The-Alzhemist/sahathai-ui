@@ -16,13 +16,16 @@ export function AboutUsPage({ tabs, active, setActive }: AboutPageProps) {
     <main>
       <Menu />
       <Banner />
-      <Tabs
-        className='mt-[40px]'
-        tabs={tabs}
-        style='normal'
-        active={active}
-        onChange={setActive}
-      />
+      <div className='flex justify-center px-2'>
+        <Tabs
+          className='mt-[40px]'
+          tabs={tabs}
+          style='normal'
+          active={active}
+          onChange={setActive}
+        />
+      </div>
+
       {active === t('visionMission') ? (
         <VisionMissionValues />
       ) : active === t('ourCommitmentSuccess') ? (
