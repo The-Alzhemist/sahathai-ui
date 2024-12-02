@@ -14,7 +14,7 @@ export function ContainerStorageWarehouseServices() {
         <section className='bg-modellBgDark/60 text-white pt-[71px] pb-[83px]'>
           <Animation>
             <h2 className='headline-2 text-center'>{t('title')}</h2>
-            <section className='mt-[60px] flex justify-center gap-[73px]'>
+            <section className='mt-[60px] flex  flex-col md:flex-row justify-center items-center gap-[73px]'>
               <MiniCard
                 imageUrl='/services/container.png'
                 content={t('content1')}
@@ -32,7 +32,7 @@ export function ContainerStorageWarehouseServices() {
           </Animation>
         </section>
       </Background>
-      <section className='max-w-[1040px] w-full mx-auto space-y-[100px] py-[170px]'>
+      <section className='max-w-[1040px] w-full mx-auto space-y-10 md:space-y-[100px] py-10 md:py-[170px] px-5'>
         <Card
           imageUrl='/services/free-trade-zone-container-yard.png'
           title={t('freeTradeZoneContainerYard.title')}
