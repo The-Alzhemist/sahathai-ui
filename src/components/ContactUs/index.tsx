@@ -56,7 +56,7 @@ export function ContactUs({ className }: ContactUsProps) {
                 Icon={WarningIcon}
               />
             </div>
-            <div className='flex gap-[70px] px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
+            <div className='flex gap-[70px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
               <div className='max-w-[416px] w-full shrink-0 space-y-[15px] mobile:max-w-none'>
                 <InputField
                   name='name'
