@@ -25,7 +25,7 @@ export function Collapse({ title, content, imageUrl }: CollapseProps) {
         )}
       </div>
       {toggle && (
-        <div className='flex gap-[30px] pb-[28px]'>
+        <div className='flex flex-col md:flex-row gap-[30px] pb-[28px]'>
           <div className='max-w-[230px] w-full shadow-9'>
             <div className='relative pt-[59.13%] w-full'>
               <Image src={imageUrl} fill alt='' />
