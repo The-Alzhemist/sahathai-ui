@@ -10,7 +10,7 @@ export function MachineryEquipment() {
       <h2 className='prompt text-[40px] font-[500] text-center text-navy'>
         {t('title')}
       </h2>
-      <div className='mt-[50px] space-y-[20px] max-w-[862px] w-full mx-auto'>
+      <div className='mt-[50px] space-y-[20px] max-w-[862px] w-full mx-auto px-5'>
         <Collapse
           title={t('gantryCrane.title')}
           content={t('gantryCrane.content')}
