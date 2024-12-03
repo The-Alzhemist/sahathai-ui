@@ -12,82 +12,106 @@ export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
   const [activeTab, setActive] = useState<TabType>('docking')
 
+  const tabs: { key: TabType; title: string }[] = [
+    { key: 'docking', title: t('docking.title') },
+    { key: 'operatingHours', title: t('operatingHours.title') },
+    { key: 'cfsLcl', title: t('cfsLcl.title') },
+    { key: 'responsibilityScope', title: t('responsibilityScope.title') },
+    { key: 'regulationsCargoShips', title: t('regulationsCargoShips.title') },
+    { key: 'safetyRegulations', title: t('safetyRegulations.title') },
+    { key: 'hazardousGoods', title: t('hazardousGoods.title') },
+    {
+      key: 'requestPermissionContact',
+      title: t('requestPermissionContact.title'),
+    },
+    {
+      key: 'documentSubmissionProcess',
+      title: t('documentSubmissionProcess.title'),
+    },
+    { key: 'bookingProcess', title: t('bookingProcess.title') },
+    { key: 'serviceCharge', title: t('serviceCharge.title') },
+  ]
+
   return (
-    <Animation className='mt-[61px] max-w-[928px] w-full mx-auto'>
+    <Animation className='mt-[61px] max-w-[928px] w-full mx-auto px-5 '>
       <h1 className='headline-2 text-center text-blue-400'>{t('title')}</h1>
-      <section className='w-full flex gap-[24px] p-[16px] mt-[20px] shadow-2'>
-        <Tabs className='w-[206px] shrink-0'>
-          <Tab
-            isActive={activeTab === 'docking'}
-            onClick={() => setActive('docking')}
-          >
-            {t('docking.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'operatingHours'}
-            onClick={() => setActive('operatingHours')}
-          >
-            {t('operatingHours.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'cfsLcl'}
-            onClick={() => setActive('cfsLcl')}
-          >
-            {t('cfsLcl.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'responsibilityScope'}
-            onClick={() => setActive('responsibilityScope')}
-          >
-            {t('responsibilityScope.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'regulationsCargoShips'}
-            onClick={() => setActive('regulationsCargoShips')}
-          >
-            {t('regulationsCargoShips.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'safetyRegulations'}
-            onClick={() => setActive('safetyRegulations')}
-          >
-            {t('safetyRegulations.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'hazardousGoods'}
-            onClick={() => setActive('hazardousGoods')}
-          >
-            {t('hazardousGoods.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'requestPermissionContact'}
-            onClick={() => setActive('requestPermissionContact')}
-          >
-            {t('requestPermissionContact.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'documentSubmissionProcess'}
-            onClick={() => setActive('documentSubmissionProcess')}
-          >
-            {t('documentSubmissionProcess.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'bookingProcess'}
-            onClick={() => setActive('bookingProcess')}
-          >
-            {t('bookingProcess.title')}
-          </Tab>
-          <Tab
-            isActive={activeTab === 'serviceCharge'}
-            onClick={() => setActive('serviceCharge')}
-          >
-            {t('serviceCharge.title')}
-          </Tab>
+      <section className='w-full flex flex-col md:flex-row gap-[24px] p-[16px] mt-[20px] shadow-2 rounded-[5px]'>
+        <Tabs className='flex  overflow-x-scroll md:block w-full md:w-[206px] shrink-0'>
+          {tabs.map(({ key, title }) => (
+            <Tab
+              key={key}
+              isActive={activeTab === key}
+              onClick={() => setActive(key)}
+            >
+              {title}
+            </Tab>
+          ))}
         </Tabs>
+
         {activeTab === 'docking' && (
           <Docking
             imageUrl='/infrastructure-containers/docking.png'
             description={t('docking.description')}
+          />
+        )}
+        {activeTab === 'operatingHours' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('operatingHours.description')}
+          />
+        )}
+        {activeTab === 'cfsLcl' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('cfsLcl.description')}
+          />
+        )}
+        {activeTab === 'responsibilityScope' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('responsibilityScope.description')}
+          />
+        )}
+        {activeTab === 'regulationsCargoShips' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('regulationsCargoShips.description')}
+          />
+        )}
+        {activeTab === 'safetyRegulations' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('safetyRegulations.description')}
+          />
+        )}
+        {activeTab === 'hazardousGoods' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('hazardousGoods.description')}
+          />
+        )}
+        {activeTab === 'requestPermissionContact' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('requestPermissionContact.description')}
+          />
+        )}
+        {activeTab === 'documentSubmissionProcess' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('documentSubmissionProcess.description')}
+          />
+        )}
+        {activeTab === 'bookingProcess' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('bookingProcess.description')}
+          />
+        )}
+        {activeTab === 'serviceCharge' && (
+          <Docking
+            imageUrl='/infrastructure-containers/docking.png'
+            description={t('serviceCharge.description')}
           />
         )}
       </section>
