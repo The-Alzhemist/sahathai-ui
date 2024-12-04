@@ -11,7 +11,7 @@ import { Animation } from '@/components/Animation'
 export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
   return (
-    <main className='pt-[56px] pb-[184px]'>
+    <main className='pt-[56px] pb-[184px] px-5 bg-white'>
       <Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />
       <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
         {t('title')}

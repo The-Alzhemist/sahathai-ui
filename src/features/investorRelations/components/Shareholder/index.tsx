@@ -18,33 +18,35 @@ export function Shareholder() {
         {t('title')}
       </h2>
 
-      <table className='w-full report shadow-6 rounded-[10px] overflow-hidden mt-[37px]'>
-        <thead>
-          <tr>
-            <th className='subtitle-1'>{t('order')}</th>
-            <th className='subtitle-1'>{t('title')}</th>
-            <th className='subtitle-1'>{t('numberShares')}</th>
-            <th className='subtitle-1'>{t('shares')}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Array.from({ length: 10 }).map((_, index) => (
-            <tr key={index}>
-              <td className='body-2 p-[16px]'>{index + 1}</td>
-              <td className='body-2 p-[16px]'>บริษัท รัตน โฮลดิ้ง จำกัด</td>
+      <section className='overflow-scroll'>
+        <table className='report shadow-6 rounded-[10px] mt-[37px] overflow-hidden w-full'>
+          <thead>
+            <tr>
+              <th className='subtitle-1'>{t('order')}</th>
+              <th className='subtitle-1 min-w-[200px]'>{t('title')}</th>
+              <th className='subtitle-1'>{t('numberShares')}</th>
+              <th className='subtitle-1'>{t('shares')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Array.from({ length: 10 }).map((_, index) => (
+              <tr key={index}>
+                <td className='body-2 p-[16px]'>{index + 1}</td>
+                <td className='body-2 p-[16px]'>บริษัท รัตน โฮลดิ้ง จำกัด</td>
+                <td className='body-2 p-[16px]'>209,828,258</td>
+                <td className='body-2 p-[16px]'>34.56</td>
+              </tr>
+            ))}
+            <tr>
+              <td className='p-[16px] headline-4 text-blue-400' colSpan={2}>
+                รวม
+              </td>
               <td className='body-2 p-[16px]'>209,828,258</td>
               <td className='body-2 p-[16px]'>34.56</td>
             </tr>
-          ))}
-          <tr>
-            <td className='p-[16px] headline-4 text-blue-400' colSpan={2}>
-              รวม
-            </td>
-            <td className='body-2 p-[16px]'>209,828,258</td>
-            <td className='body-2 p-[16px]'>34.56</td>
-          </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </section>
 
       <p className='mt-[32px] body-2'>{t('note')}</p>
 

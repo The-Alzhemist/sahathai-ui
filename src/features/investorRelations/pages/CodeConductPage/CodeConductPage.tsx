@@ -9,7 +9,7 @@ export function CodeConductPage() {
   const t = useTranslations('CodeConductPage')
 
   return (
-    <main className='pt-[56px] pb-[176px] max-w-[896px] w-full mx-auto'>
+    <main className='pt-[56px] pb-[176px] max-w-[896px] w-full mx-auto px-5 bg-white'>
       <Tabs activeMenu={InvestorRelationEnum.CodeConduct} />
       <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
         {t('title')}
