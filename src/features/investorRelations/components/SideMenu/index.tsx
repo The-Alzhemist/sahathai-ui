@@ -78,6 +78,7 @@ SideMenu.Item = function Item({
           'p-[16px] rounded-[8px] bg-white-3 block text-center text-black-40 subtitle-1',
           {
             'bg-blue-400 text-white': isActive,
+            'bg-[#F1F1F1] text-[#999999]': !isActive,
           }
         )}
         href={href}
