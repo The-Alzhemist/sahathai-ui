@@ -7,11 +7,13 @@ import { SustainabilityManagementPolicy } from '../../components/SustainabilityM
 import { Tabs } from '../../components/Tabs'
 import { RiskCard } from '../../components/RiskCard'
 import { Animation } from '@/components/Animation'
+import { Menu } from '@/components/Menu'
 
 export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
   return (
-    <main className='pt-[56px] pb-[184px]'>
+    <main className='pt-[100px] pb-[184px] px-5 bg-white'>
+      <Menu />
       <Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />
       <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
         {t('title')}
