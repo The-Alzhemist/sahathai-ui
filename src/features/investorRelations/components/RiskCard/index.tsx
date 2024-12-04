@@ -3,7 +3,7 @@ import { RiskCardProps, SectionProps, TitleProps } from './interface'
 
 export function RiskCard({ children }: RiskCardProps) {
   return (
-    <Animation className='mt-[46px] p-[24px] rounded-[8px] shadow-2 max-w-[1140px] w-full mx-auto'>
+    <Animation className='mt-[46px] p-[24px] rounded-[8px] shadow-2 max-w-[1140px] w-full mx-auto '>
       {children}
     </Animation>
   )
