@@ -7,7 +7,7 @@ export function Banner() {
   const t = useTranslations('JoinUsPage.Banner')
 
   return (
-    <section className='relative h-[424px] flex flex-col justify-end'>
+    <section className='relative h-[600px] md:h-[424px] flex flex-col justify-end'>
       <Image
         className='absolute top-0 left-0 w-full h-full object-cover'
         src='/join-us/banner.png'
@@ -17,7 +17,7 @@ export function Banner() {
         alt=''
       />
 
-      <Animation className='max-w-[896px] w-full mx-auto mb-[85px] z-[1] p-[14px] text-white'>
+      <Animation className='max-w-[896px] w-full mx-auto mb-[85px] z-[1] px-5 pt-1ุ6 md:p-[14px] text-white'>
         <h1 className='font-[700] text-[36px] leading-[44px] text-center whitespace-pre-wrap'>
           {t('title')}
         </h1>

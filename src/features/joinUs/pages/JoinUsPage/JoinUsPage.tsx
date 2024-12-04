@@ -6,8 +6,13 @@ export function JoinUsPage() {
   return (
     <main className='space-y-[40px] mb-[57px]'>
       <Banner />
-      <Policy />
-      <ContactHumanResources />
+      <section className='px-5'>
+        <Policy />
+      </section>
+
+      <section className='px-5'>
+        <ContactHumanResources />
+      </section>
     </main>
   )
 }
