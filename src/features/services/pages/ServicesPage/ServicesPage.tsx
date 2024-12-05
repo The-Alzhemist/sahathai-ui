@@ -1,8 +1,9 @@
 import { Menu } from '@/components/Menu'
-import { ContactUs } from '@/components/ContactUs'
+
 import { ComprehensiveCommercialPortServices } from '../../components/ComprehensiveCommercialPortServices'
 import { ContainerStorageWarehouseServices } from '../../components/ContainerStorageWarehouseServices'
 import { InventoryManagementServices } from '../../components/InventoryManagementServices'
+import ContactUs from '@/components/ContactUs/ContactUs'
 
 export function ServicesPage() {
   return (
