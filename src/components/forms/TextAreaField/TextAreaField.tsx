@@ -7,6 +7,7 @@ export function TextAreaField({
   maxLength,
   value,
   textAreaClassName,
+  meta,
   ...props
 }: TextAreaProps) {
   return (
@@ -26,6 +27,9 @@ export function TextAreaField({
           {((value as string)?.length ?? 0).toLocaleString()}&nbsp;/&nbsp;
           {maxLength.toLocaleString()}
         </div>
+      )}
+      {meta.touched && meta.error && (
+        <div className='text-red-500'>{meta.error}</div>
       )}
     </div>
   )

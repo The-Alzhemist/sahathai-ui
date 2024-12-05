@@ -20,7 +20,8 @@
     "react-dom": "^18",
     "react-paginate": "^8.2.0",
     "swiper": "^11.1.4",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "yup": "^1.5.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

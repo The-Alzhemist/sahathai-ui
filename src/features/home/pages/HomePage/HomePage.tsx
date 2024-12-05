@@ -1,4 +1,3 @@
-import { ContactUs } from '@/components/ContactUs'
 import { Banner } from './components/Banner'
 import { About } from './components/About'
 import { License } from './components/License'
@@ -7,6 +6,7 @@ import { News } from './components/News'
 import { Highlight } from './components/Highlight'
 import { OurSubsidiaries } from './components/OurSubsidiaries'
 import { HamburgerMenu } from './components/HamburgerMenu'
+import ContactUs from '@/components/ContactUs/ContactUs'
 
 export function HomePage() {
   return (
