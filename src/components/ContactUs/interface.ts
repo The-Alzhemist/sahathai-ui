@@ -2,7 +2,7 @@ import { IconProps } from '../icons/interface'
 
 export interface ContactUsProps {
   className?: string
-  handleOnSubmitForm: (value: ContactUsForm) => void
+  handleOnSubmitForm: (value: ContactUsForm, resetForm: any) => void
 }
 
 export interface ContactUsAcceptProps {

@@ -44,7 +44,7 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
       }
     }, [state.submitting, state.errors, state.succeeded])
 
-    const handleOnSubmitForm = async (value: ContactUsForm) => {
+    const handleOnSubmitForm = async (value: ContactUsForm, resetForm: any) => {
       console.log('submit form')
       alert(JSON.stringify(value))
 
@@ -70,7 +70,8 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
 
         formData.append('Contact from data:', customFormattedText.trim())
 
-        await sendDataToFromSpree(formData)
+        // await sendDataToFromSpree(formData)
+        resetForm()
       } catch (error) {
         console.error(error)
         toast.error('Cannot sent your message, please try again')
