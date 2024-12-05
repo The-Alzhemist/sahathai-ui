@@ -61,12 +61,15 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
         const message = value.message || '-'
 
         const customFormattedText = `
-      ประเภทการติดต่อ(contact type): ${contactType}
-      ชื่อผู้ติดต่อ(contact name): ${contactName}
-      หมายเลขโทรศัพท์(phone number): ${contactPhone}
-      อีเมล(e-mail): ${contactEmail}
-      ข้อความ(message): ${message}
-        `
+        <div>
+          <h3>รายละเอียดการติดต่อ</h3>
+          <p><strong style="width: 300px;">ประเภทการติดต่อ (contact type):</strong> ${contactType}</p>
+          <p><strong style="width: 300px;">ชื่อผู้ติดต่อ (contact name):</strong> ${contactName}</p>
+          <p><strong style="width: 300px;" >หมายเลขโทรศัพท์ (phone number):</strong> ${contactPhone}</p>
+          <p><strong style="width: 300px;" >อีเมล (e-mail):</strong> ${contactEmail}</p>
+          <p><strong style="width: 300px;">ข้อความ (message):</strong> ${message}</p>
+        </div>
+      `
 
         formData.append('Contact from data:', customFormattedText.trim())
 
