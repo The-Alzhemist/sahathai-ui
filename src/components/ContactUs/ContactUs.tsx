@@ -21,6 +21,7 @@ import withContactUs from '@/components/ContactUs/withContactUs'
 import { contactUsInitialValue } from '@/components/ContactUs/ContactUsInitialValue'
 import { contactUsValidationSchema } from '@/components/ContactUs/ContactUsValidation'
 import { Card } from '@/components/ContactUs/components/Card/Card'
+import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 
 const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
   const t = useTranslations('ContactUs')
@@ -46,7 +47,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 name='type'
                 text={t('contactForm')}
                 value='contact-form'
-                checked={values.type === 'contact-form'}
+                checked={values.type === ContactUsTypeEnum.CONTACT}
                 Icon={MailIcon}
               />
               <ContactTypeField
@@ -54,7 +55,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 name='type'
                 text={t('fraudComplaintForm')}
                 value='fraud-complaint-form'
-                checked={values.type === 'fraud-complaint-form'}
+                checked={values.type === ContactUsTypeEnum.FRAUD_COMPLAINT}
                 Icon={WarningIcon}
               />
             </div>
