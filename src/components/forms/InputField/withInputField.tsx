@@ -1,5 +1,5 @@
 import { useField } from 'formik'
-import { InputFieldProps } from './interface'
+import { InputFieldAcceptProps, InputFieldProps } from './interface'
 
 export function withInputField(Component: React.FC<InputFieldProps>) {
   function WithInputField({
@@ -8,15 +8,16 @@ export function withInputField(Component: React.FC<InputFieldProps>) {
     className,
     placeholder,
     disabled = false,
-  }: InputFieldProps) {
-    const [field] = useField(name)
+  }: InputFieldAcceptProps) {
+    const [field, meta] = useField(name)
 
-    const componentProps = {
-      ...field,
+    const componentProps: InputFieldProps = {
       placeholder,
       label,
       className,
       disabled,
+      meta,
+      ...field,
     }
 
     return <Component {...componentProps} />
