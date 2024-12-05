@@ -1,12 +1,22 @@
 import { useField } from 'formik'
-import { TextAreaProps } from './interface'
+import { TextAreaAcceptProps, TextAreaProps } from './interface'
 
 export function withTextAreaField(Component: React.FC<TextAreaProps>) {
-  function WithTextAreaField(props: TextAreaProps) {
-    const [field] = useField(props.name)
+  function WithTextAreaField({
+    name,
+    label,
+    maxLength,
+    placeholder,
+    textAreaClassName,
+  }: TextAreaAcceptProps) {
+    const [field, meta] = useField(name)
 
-    const componentProps = {
-      ...props,
+    const componentProps: TextAreaProps = {
+      meta,
+      label,
+      maxLength,
+      placeholder,
+      textAreaClassName,
       ...field,
     }
 

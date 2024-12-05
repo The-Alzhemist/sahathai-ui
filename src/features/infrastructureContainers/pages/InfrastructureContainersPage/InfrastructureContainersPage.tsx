@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl'
 
-import { ContactUs } from '@/components/ContactUs'
 import { Menu } from '@/components/Menu'
 import { OperationGuidelines } from '../../components/OperationGuidelines'
 import { MachineryEquipment } from '../../components/MachineryEquipment'
 import { LogisticInnovation } from '../../components/LogisticInnovation'
+import ContactUs from '@/components/ContactUs/ContactUs'
 
 export function InfrastructureContainersPage() {
   const t = useTranslations('InfrastructureContainersPage')

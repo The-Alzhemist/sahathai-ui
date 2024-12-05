@@ -1,4 +1,4 @@
-import { CardProps } from './interface'
+import { CardProps } from '@/components/ContactUs/interface'
 
 export function Card({ Icon, title, description }: CardProps) {
   return (
