@@ -73,7 +73,7 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
 
         formData.append('Contact from data:', customFormattedText.trim())
 
-        // await sendDataToFromSpree(formData)
+        await sendDataToFromSpree(formData)
         resetForm()
       } catch (error) {
         console.error(error)
