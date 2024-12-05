@@ -50,6 +50,15 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
 
       try {
         const formData = new FormData()
+        const currentDate = new Date()
+        const day = currentDate.getDate() // Get the day without leading zero
+        const month = currentDate.getMonth() + 1 // Get the month (adding 1 because months are 0-indexed)
+        const year = currentDate.getFullYear()
+        const hours = currentDate.getHours() // Get hours without leading zero
+        const minutes = currentDate.getMinutes() // Get minutes without leading zero
+
+        const formattedDate = `${day}-${month}-${year} ${hours}:${minutes}`
+
         const contactType =
           value.type === ContactUsTypeEnum.CONTACT
             ? 'แบบฟอร์มติดต่อ (contact)'
@@ -59,16 +68,13 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
         const contactPhone = value.phone || '-'
         const contactEmail = value.email || '-'
         const message = value.message || '-'
-
         const customFormattedText = `
-        <div>
-          <h3>รายละเอียดการติดต่อ</h3>
-          <p><strong style="width: 300px;">ประเภทการติดต่อ (contact type):</strong> ${contactType}</p>
-          <p><strong style="width: 300px;">ชื่อผู้ติดต่อ (contact name):</strong> ${contactName}</p>
-          <p><strong style="width: 300px;" >หมายเลขโทรศัพท์ (phone number):</strong> ${contactPhone}</p>
-          <p><strong style="width: 300px;" >อีเมล (e-mail):</strong> ${contactEmail}</p>
-          <p><strong style="width: 300px;">ข้อความ (message):</strong> ${message}</p>
-        </div>
+        ประเภทการติดต่อ (contact type): ${contactType}
+        วันที่ (date):                   ${formattedDate}
+        ชื่อผู้ติดต่อ (contact name):       ${contactName}
+        หมายเลขโทรศัพท์ (phone number): ${contactPhone}
+        อีเมล (e-mail):                ${contactEmail}
+        ข้อความ (message):             ${message}
       `
 
         formData.append('Contact from data:', customFormattedText.trim())
