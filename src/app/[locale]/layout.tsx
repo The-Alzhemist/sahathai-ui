@@ -8,6 +8,8 @@ import './globals.css'
 import { LocaleEnum } from '@/enums/LocaleEnum'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const metadata: Metadata = {
   title: 'เทคโนโลยี - Sahathai Terminal',
@@ -37,6 +39,7 @@ export default async function LocaleLayout({
           <Header />
           {children}
           <Footer />
+          <ToastContainer />
         </NextIntlClientProvider>
       </body>
     </html>
