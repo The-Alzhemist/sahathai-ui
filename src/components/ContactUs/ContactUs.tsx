@@ -35,8 +35,8 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
       <Formik
         initialValues={contactUsInitialValue}
         validationSchema={contactUsValidationSchema}
-        onSubmit={v => {
-          handleOnSubmitForm(v)
+        onSubmit={(v, { resetForm }) => {
+          handleOnSubmitForm(v, resetForm)
         }}
       >
         {({ values }) => (
