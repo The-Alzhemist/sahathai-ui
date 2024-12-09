@@ -6,6 +6,8 @@ import { NewsCardProps } from './interface'
 import { cn } from '@/libs/util'
 import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 
+import Image from 'next/image'
+
 export function NewsCard({
   title,
   content,
@@ -13,16 +15,15 @@ export function NewsCard({
   direction = 'vertical',
 }: NewsCardProps) {
   const common = useTranslations('common')
+
   return (
-    <div
-      className={cn('w-[266px] rounded-[8px] overflow-hidden', {
-        'flex w-full': direction === 'horizontal',
-      })}
-    >
-      <div
-        className={cn('w-full h-[240px] bg-dark', {
-          'w-[440px] shrink-0': direction === 'horizontal',
-        })}
+    <div className={cn('w-[266px]  overflow-hidden')}>
+      <Image
+        src='https://images.pexels.com/photos/8833426/pexels-photo-8833426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        alt='Picture of the author'
+        width={500}
+        height={500}
+        className='w-full h-auto object-cover rounded-[8px]'
       />
 
       <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>{title}</h2>
@@ -32,7 +33,7 @@ export function NewsCard({
       </div>
       <Link
         href=''
-        className='mt-[23px] button-small text-navy block w-fit flex gap-[10px] items-center'
+        className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center'
       >
         <button
           className='p-[10px] bg-navy rounded-full text-white'
