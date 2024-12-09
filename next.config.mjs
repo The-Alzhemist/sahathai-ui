@@ -22,6 +22,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'swiperjs.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com', // Your image's domain
+        pathname: '/**', // Matches all paths under the domain
+      },
     ],
   },
 }
