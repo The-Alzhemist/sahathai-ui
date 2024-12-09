@@ -7,6 +7,7 @@ import { Highlight } from './components/Highlight'
 import { OurSubsidiaries } from './components/OurSubsidiaries'
 import { HamburgerMenu } from './components/HamburgerMenu'
 import ContactUs from '@/components/ContactUs/ContactUs'
+import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 
 export function HomePage() {
   return (
@@ -20,6 +21,7 @@ export function HomePage() {
       <OurSubsidiaries />
       <ContactUs className='mt-[94px] mb-[111px]' />
       <HamburgerMenu />
+      <CookieConsentFloatingBar />
     </main>
   )
 }
