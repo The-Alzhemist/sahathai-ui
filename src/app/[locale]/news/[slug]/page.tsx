@@ -27,15 +27,7 @@ export async function generateStaticParams() {
     }
   })
 }
-
-export default async function Page({ params }: any) {
-  // const post: Post = await fetch(`https://api.vercel.app/blog/1`).then(res =>
-  //   res.json()
-  // )
-  console.log('!!params::::::::::::::!', params.slug)
-  return (
-    <main>
-      <h1>{params.slug}</h1>
-    </main>
-  )
+export default function Page({ params }: { params: { slug: string } }) {
+  console.log('params::::::::::::::::', params)
+  return <h1>My Page</h1>
 }

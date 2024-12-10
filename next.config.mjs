@@ -29,6 +29,7 @@ const nextConfig = {
       },
     ],
   },
+  logging: true,
 }
 
 export default withNextIntl(nextConfig)
