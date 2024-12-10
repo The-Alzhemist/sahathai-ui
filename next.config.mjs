@@ -29,7 +29,9 @@ const nextConfig = {
       },
     ],
   },
-  logging: true,
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 }
 
 export default withNextIntl(nextConfig)
