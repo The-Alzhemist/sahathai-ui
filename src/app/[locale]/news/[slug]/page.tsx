@@ -14,22 +14,28 @@ export const revalidate = 60
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
-  const posts: Post[] = await fetch('https://api.vercel.app/blog').then(res =>
-    res.json()
-  )
-  return posts.map(post => ({
-    id: String(post.id),
-  }))
+  // const posts: Post[] = await fetch('https://api.vercel.app/blog').then(res =>
+  //   res.json()
+  // )
+  // return posts.map(post => ({
+  //   id: String(post.id),
+  // }))
+  const userId = [1, 2, 3]
+  return userId.map(id => {
+    return {
+      id: id,
+    }
+  })
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const post: Post = await fetch(`https://api.vercel.app/blog/1`).then(res =>
-    res.json()
-  )
+export default async function Page({ params }: any) {
+  // const post: Post = await fetch(`https://api.vercel.app/blog/1`).then(res =>
+  //   res.json()
+  // )
+  console.log('!!params::::::::::::::!', params.slug)
   return (
     <main>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+      <h1>{params.slug}</h1>
     </main>
   )
 }
