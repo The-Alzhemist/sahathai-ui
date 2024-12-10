@@ -20,10 +20,10 @@ export async function generateStaticParams() {
   // return posts.map(post => ({
   //   id: String(post.id),
   // }))
-  const userId = [1, 2, 3]
-  return userId.map(id => {
+  const slugs = ['1', '2', '3']
+  return slugs.map(slug => {
     return {
-      id: id,
+      slug: slug,
     }
   })
 }
