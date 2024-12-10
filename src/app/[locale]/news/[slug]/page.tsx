@@ -6,7 +6,7 @@ interface Post {
 
 // Next.js will invalidate the cache when a
 // request comes in, at most once every 600 seconds.(10 mins)
-export const revalidate = 600
+export const revalidate = 60
 
 // We'll prerender only the params from `generateStaticParams` at build time.
 // If a request comes in for a path that hasn't been generated,
