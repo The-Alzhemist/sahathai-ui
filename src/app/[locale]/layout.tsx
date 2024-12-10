@@ -10,6 +10,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import StoryblokProvider from '@/components/StoryBokProvider'
 
 export const metadata: Metadata = {
   title: 'เทคโนโลยี - Sahathai Terminal',
@@ -26,22 +27,24 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel='icon' href='/favicon.ico' sizes='any' />
-        <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1.0, user-scalable=no'
-        />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-          <ToastContainer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <StoryblokProvider>
+      <html lang={locale}>
+        <head>
+          <link rel='icon' href='/favicon.ico' sizes='any' />
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1.0, user-scalable=no'
+          />
+        </head>
+        <body>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+            <Footer />
+            <ToastContainer />
+          </NextIntlClientProvider>
+        </body>
+      </html>
+    </StoryblokProvider>
   )
 }

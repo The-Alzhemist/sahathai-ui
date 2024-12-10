@@ -1,4 +1,7 @@
 import { unstable_setRequestLocale } from 'next-intl/server'
+import { StoryblokClient, ISbStoriesParams } from '@storyblok/react'
+import { StoryblokStory } from '@storyblok/react/rsc'
+import { getStoryblokApi } from '@/libs/storyblok'
 
 interface Post {
   id: string
@@ -21,11 +24,19 @@ export async function generateStaticParams() {
   )
 }
 
-export default function Page({ params }: any) {
+export default async function Page({ params }: any) {
   const { slug, locale } = params
   console.log('params::::::::::::::::', params)
+  const { data } = await fetchData()
 
   unstable_setRequestLocale(locale) // Set the locale for static rendering
 
   return <div>xxxxxx</div>
+}
+
+export async function fetchData() {
+  let sbParams: ISbStoriesParams = { version: 'draft' }
+
+  const storyblokApi: StoryblokClient = getStoryblokApi()
+  return storyblokApi.get(`cdn/stories/home`, sbParams)
 }
