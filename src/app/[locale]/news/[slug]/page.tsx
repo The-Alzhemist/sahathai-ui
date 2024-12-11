@@ -1,6 +1,11 @@
-import { unstable_setRequestLocale } from 'next-intl/server'
-import { StoryblokClient, ISbStoriesParams } from '@storyblok/react'
+// import { unstable_setRequestLocale } from 'next-intl/server'
+import {
+  StoryblokClient,
+  ISbStoriesParams,
+  StoryblokComponent,
+} from '@storyblok/react'
 import { StoryblokStory } from '@storyblok/react/rsc'
+
 import { getStoryblokApi } from '@/libs/storyblok'
 
 interface Post {
@@ -26,17 +31,31 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: any) {
   const { slug, locale } = params
-  console.log('params::::::::::::::::', params)
+  // unstable_setRequestLocale(locale) // Set the locale for static rendering
+
   const { data } = await fetchData()
+  console.log('data:::', data.story)
+  console.log('body:::', JSON.stringify(data.story.content.body))
 
-  unstable_setRequestLocale(locale) // Set the locale for static rendering
+  return (
+    <section className='relative flex-col'>
+      <div className='w-full'>
+        slug: {slug}, lang: {locale} , uuid: {data.story.uuid}
+      </div>
 
-  return <div>xxxxxx</div>
+      <div className='bg-yellow-200'>
+        <StoryblokStory story={data.story} />
+        {/* <StoryblokComponent blok={data.story.content} /> */}
+      </div>
+    </section>
+  )
 }
 
 export async function fetchData() {
-  let sbParams: ISbStoriesParams = { version: 'draft' }
+  let sbParams: ISbStoriesParams = {
+    version: 'H1wfrTArHm3VE441H8WQ5wtt' as 'draft' | 'published' | undefined,
+  }
 
-  const storyblokApi: StoryblokClient = getStoryblokApi()
-  return storyblokApi.get(`cdn/stories/home`, sbParams)
+  const storyblokApi = getStoryblokApi()
+  return storyblokApi.get(`cdn/stories/news/1`, sbParams, { cache: 'no-store' })
 }
