@@ -3,6 +3,6 @@
 import { getStoryblokApi } from '@/libs/storyblok'
 
 export default function StoryblokProvider({ children }: any) {
-  getStoryblokApi()
+  getStoryblokApi() // Re-initialize on the client
   return children
 }

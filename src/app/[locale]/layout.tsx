@@ -11,6 +11,7 @@ import { Footer } from '@/components/Footer'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import StoryblokProvider from '@/components/StoryBokProvider'
+import { storyblokInit, apiPlugin } from '@storyblok/react/rsc'
 
 export const metadata: Metadata = {
   title: 'เทคโนโลยี - Sahathai Terminal',
@@ -25,6 +26,11 @@ export default async function LocaleLayout({
   params: { locale: LocaleEnum }
 }>) {
   const messages = await getMessages()
+
+  storyblokInit({
+    accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
+    use: [apiPlugin],
+  })
 
   return (
     <StoryblokProvider>
