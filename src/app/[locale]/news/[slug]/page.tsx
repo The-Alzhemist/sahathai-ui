@@ -1,12 +1,12 @@
-// import { unstable_setRequestLocale } from 'next-intl/server'
 import {
   StoryblokClient,
   ISbStoriesParams,
   StoryblokComponent,
 } from '@storyblok/react'
-import { StoryblokStory } from '@storyblok/react/rsc'
+import { StoryblokServerComponent, StoryblokStory } from '@storyblok/react/rsc'
 
-import { getStoryblokApi } from '@/libs/storyblok'
+import { fetchData, getStoryblokApi } from '@/libs/storyblok'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
 interface Post {
   id: string
@@ -18,8 +18,8 @@ export const revalidate = 60 // Revalidate every 10 minutes
 export const dynamicParams = false // Only generate pre-defined paths
 
 export async function generateStaticParams() {
-  const locales = ['th', 'en', 'cn'] // Define all supported locales
-  const slugs = ['1', '2', '3'] // Your slugs
+  const locales = ['th', 'en'] // Define all supported locales
+  const slugs = ['1'] // Your slugs
 
   return slugs.flatMap(slug =>
     locales.map(locale => ({
@@ -31,31 +31,34 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: any) {
   const { slug, locale } = params
-  // unstable_setRequestLocale(locale) // Set the locale for static rendering
+  const { data } = await fetchData('1')
+  console.log('data:::', data)
+  unstable_setRequestLocale(locale) // Set the locale for static rendering
 
-  const { data } = await fetchData()
-  console.log('data:::', data.story)
-  console.log('body:::', JSON.stringify(data.story.content.body))
+  // console.log('data:::', data.story)
+  // console.log('body:::', JSON.stringify(data.story.content.body))
 
   return (
     <section className='relative flex-col'>
-      <div className='w-full'>
-        slug: {slug}, lang: {locale} , uuid: {data.story.uuid}
-      </div>
+      <section className='max-w-[990px] px-5 mx-auto mt-[80px]'>
+        <div className='flex justify-between mb-8'>
+          <h1 className='text-xl md:text-3xl text-navy'>ข่าวประชาสัมพันธ์</h1>
+          <button className='text-sm text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl'>
+            กลับไปหน้าแรก
+          </button>
+        </div>
 
-      <div className='bg-yellow-200'>
-        <StoryblokStory story={data.story} />
-        {/* <StoryblokComponent blok={data.story.content} /> */}
-      </div>
+        <StoryblokStory story={data?.story} />
+      </section>
     </section>
   )
 }
 
-export async function fetchData() {
-  let sbParams: ISbStoriesParams = {
-    version: 'H1wfrTArHm3VE441H8WQ5wtt' as 'draft' | 'published' | undefined,
-  }
+// export async function fetchData() {
+//   let sbParams: ISbStoriesParams = {
+//     version: 'H1wfrTArHm3VE441H8WQ5wtt' as 'draft' | 'published' | undefined,
+//   }
 
-  const storyblokApi = getStoryblokApi()
-  return storyblokApi.get(`cdn/stories/news/1`, sbParams, { cache: 'no-store' })
-}
+//   const storyblokApi = getStoryblokApi()
+//   return storyblokApi.get(`cdn/stories/news/1`, sbParams, { cache: 'no-store' })
+// }
