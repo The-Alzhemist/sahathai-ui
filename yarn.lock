@@ -1339,6 +1339,26 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.3.tgz#391d528054f758f81e53210f1a1eebcf1a8b1d20"
   integrity sha512-qC/xYId4NMebE6w/V33Fh9gWxLgURiNYgVNObbJl2LZv0GUUItCcCqC5axQSwRaAgaxl2mELq1rMzlswaQ0Zxg==
 
+"@storyblok/js@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-3.1.9.tgz#01830a03814e053e65fccfa885f17fbcb16ab4f6"
+  integrity sha512-N8QB/yn8wQxM+G9kV/RHTsynuTyaMNwiAI2KFiwuT9QPo+Zea4EmikNJY1KxrA1Q8G8YiZEm7OBp1B3QDycA6g==
+  dependencies:
+    "@storyblok/richtext" "^3.0.0"
+    storyblok-js-client "^6.10.3"
+
+"@storyblok/react@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@storyblok/react/-/react-4.2.0.tgz#a9c6f14507cac06551c17a5f73d945f3e71e938e"
+  integrity sha512-pJ9TTPZp2pi9/7Zz6V+BRaFhfJKl/QTeQDKeMBfuhMLkmLNeXxIYwufaWwrlDcctwyzSnsGACby7PWNWWZV3Cg==
+  dependencies:
+    "@storyblok/js" "3.1.9"
+
+"@storyblok/richtext@^3.0.0":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@storyblok/richtext/-/richtext-3.0.2.tgz#98b85029aa62a79ea0191708f7d924e25d37f176"
+  integrity sha512-KBLx9ycNVMyVnNyPiwBH5g9uWmiJpMzp9YvpnnADXlPLoksusrwI56BusSM8HaIgJgcnB5RR0LvhySkPFdC8Zg==
+
 "@stripe/react-stripe-js@^1.7.1":
   version "1.16.5"
   resolved "https://registry.yarnpkg.com/@stripe/react-stripe-js/-/react-stripe-js-1.16.5.tgz#51cf862b50ca91ae6193c77a5bec889e81047f10"
@@ -4035,6 +4055,11 @@ source-map-js@^1.0.1, source-map-js@^1.0.2, source-map-js@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.0.tgz#16b809c162517b5b8c3e7dcd315a2a5c2612b2af"
   integrity sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==
+
+storyblok-js-client@^6.10.3:
+  version "6.10.3"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-6.10.3.tgz#db5dd9fe46e35e8d034eaf611168a41461914558"
+  integrity sha512-q6YK/f+F8PAJLsKR7jzlTRO9yIUXWLON2Fy02QjywYaSYwyS9ETzIuOtmCSstLrDAP5I+Vnw9PzEU30roxS15g==
 
 streamsearch@^1.1.0:
   version "1.1.0"
