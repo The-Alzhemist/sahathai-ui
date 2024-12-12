@@ -1,26 +1,34 @@
 import BlogTitle from '@/components/Storyblok/BlogTitle'
 import FallbackComponent from '@/components/Storyblok/FallbackComponent'
-import Page from '@/components/Storyblok/page'
-import { apiPlugin, storyblokInit } from '@storyblok/react/rsc'
+import EventNewsDetailCard from '@/components/Storyblok/news/EventNewsDetailCard'
+import Page from '@/components/Storyblok/Page'
 
-// export const getStoryblokApi = storyblokInit({
-//   accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
-//   use: [apiPlugin],
-//   components: {
-//     blogTitle: BlogTitle,
-//   },
-//   enableFallbackComponent: true,
-// })
+import {
+  apiPlugin,
+  ISbStoriesParams,
+  storyblokInit,
+} from '@storyblok/react/rsc'
 
 export const getStoryblokApi = storyblokInit({
   accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
   use: [apiPlugin],
   components: {
     blogTitle: BlogTitle,
+    eventNewsDetailCard: EventNewsDetailCard,
     page: Page,
   },
 
-  // enableFallbackComponent: true,
   enableFallbackComponent: true,
   customFallbackComponent: FallbackComponent,
 })
+
+export async function fetchData(slug: string) {
+  const sbParams: ISbStoriesParams = {
+    version: 'published', // or 'draft' based on your needs
+  }
+
+  const storyblokApi = getStoryblokApi()
+  return storyblokApi.get(`cdn/stories/news/${slug}`, sbParams, {
+    cache: 'no-store',
+  })
+}

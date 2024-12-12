@@ -1,9 +1,9 @@
 import { storyblokEditable } from '@storyblok/react/rsc'
 
-const FallbackComponent = ({ blok }) => {
+const FallbackComponent = ({ blok }: any) => {
   return (
     <h2 data-cy='fallback' {...storyblokEditable(blok)}>
-      This component doesn't exists: {blok.component}
+      This component doesnt exists: {blok.component}
     </h2>
   )
 }
