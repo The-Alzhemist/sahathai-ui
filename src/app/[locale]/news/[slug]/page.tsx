@@ -14,29 +14,39 @@ interface Post {
   content: string
 }
 
-export const revalidate = 60 // Revalidate every 10 minutes
-export const dynamicParams = false // Only generate pre-defined paths
+export const revalidate = 60
+export const dynamicParams = false
 
 export async function generateStaticParams() {
-  const locales = ['th', 'en'] // Define all supported locales
-  const slugs = ['1'] // Your slugs
+  const locales = ['th', 'en']
+  const slugs = ['1']
+  const { data } = await fetchData('1')
 
-  return slugs.flatMap(slug =>
+  // const a = slugs.map(slug =>
+  //   locales.map(locale => ({
+  //     slug,
+  //     locale,
+  //     data,
+  //   }))
+  // )
+
+  // console.log('a:::', a)
+
+  return slugs.map(slug =>
     locales.map(locale => ({
       slug,
       locale,
+      data,
     }))
   )
 }
 
 export default async function Page({ params }: any) {
+  console.log('param::', params)
   const { slug, locale } = params
   const { data } = await fetchData('1')
-  console.log('data:::', data)
-  unstable_setRequestLocale(locale) // Set the locale for static rendering
 
-  // console.log('data:::', data.story)
-  // console.log('body:::', JSON.stringify(data.story.content.body))
+  unstable_setRequestLocale(locale)
 
   return (
     <section className='relative flex-col'>
@@ -53,12 +63,3 @@ export default async function Page({ params }: any) {
     </section>
   )
 }
-
-// export async function fetchData() {
-//   let sbParams: ISbStoriesParams = {
-//     version: 'H1wfrTArHm3VE441H8WQ5wtt' as 'draft' | 'published' | undefined,
-//   }
-
-//   const storyblokApi = getStoryblokApi()
-//   return storyblokApi.get(`cdn/stories/news/1`, sbParams, { cache: 'no-store' })
-// }

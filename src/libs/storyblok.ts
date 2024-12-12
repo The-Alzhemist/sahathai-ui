@@ -24,11 +24,11 @@ export const getStoryblokApi = storyblokInit({
 
 export async function fetchData(slug: string) {
   const sbParams: ISbStoriesParams = {
-    version: 'published', // or 'draft' based on your needs
+    version: 'draft', // or 'draft' based on your needs
   }
 
   const storyblokApi = getStoryblokApi()
-  return storyblokApi.get(`cdn/stories/news/${slug}`, sbParams, {
+  return storyblokApi.get(`cdn/stories/news/1`, sbParams, {
     cache: 'no-store',
   })
 }
