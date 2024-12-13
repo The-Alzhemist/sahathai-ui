@@ -33,8 +33,10 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: any) {
   console.log('param::', params)
-  const { slug, locale, data } = params
-  // const { data } = await fetchData()
+  const { slug, locale } = params
+  const { data } = await fetchData() // this line problem when build
+
+  console.log('data:::', data)
 
   unstable_setRequestLocale(locale)
 
@@ -53,3 +55,5 @@ export default async function Page({ params }: any) {
     </section>
   )
 }
+
+export const dynamic = 'force-static'
