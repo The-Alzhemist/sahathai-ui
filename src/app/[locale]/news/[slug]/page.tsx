@@ -20,19 +20,9 @@ export const dynamicParams = false
 export async function generateStaticParams() {
   const locales = ['th', 'en']
   const slugs = ['1']
-  const { data } = await fetchData('1')
+  const { data } = await fetchData()
 
-  // const a = slugs.map(slug =>
-  //   locales.map(locale => ({
-  //     slug,
-  //     locale,
-  //     data,
-  //   }))
-  // )
-
-  // console.log('a:::', a)
-
-  return slugs.map(slug =>
+  return slugs.flatMap(slug =>
     locales.map(locale => ({
       slug,
       locale,
@@ -43,8 +33,8 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: any) {
   console.log('param::', params)
-  const { slug, locale } = params
-  const { data } = await fetchData('1')
+  const { slug, locale, data } = params
+  // const { data } = await fetchData()
 
   unstable_setRequestLocale(locale)
 

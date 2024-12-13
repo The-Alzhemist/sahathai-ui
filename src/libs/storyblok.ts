@@ -22,7 +22,7 @@ export const getStoryblokApi = storyblokInit({
   customFallbackComponent: FallbackComponent,
 })
 
-export async function fetchData(slug: string) {
+export async function fetchData() {
   const sbParams: ISbStoriesParams = {
     version: 'draft', // or 'draft' based on your needs
   }
