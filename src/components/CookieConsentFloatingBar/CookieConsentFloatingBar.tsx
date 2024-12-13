@@ -2,31 +2,34 @@
 
 import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
 import withCookieConsentFloatingBar from './withCookieConsentFloatingBar'
+import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 const CookieConsentFloatingBar = ({
   handleOnClickAccept,
   isOpen,
 }: CookieConsentFloatingBarProps) => {
+  const t = useTranslations('CookieConsentFloatingBar')
   return (
     isOpen && (
       <section className={`flex justify-center shadow-2xl`}>
-        <div className='bg-white sm:w-[90%] border-t-2 sm:border-2 border-gray-900 fixed z-50 bottom-0 md:bottom-10 p-5 sm:rounded-lg  w-full max-w-[800px] flex justify-between gap-x-5 flex-col sm:flex-row'>
+        <div className='bg-white sm:w-[90%] border-t-2 fixed z-50 bottom-0 md:bottom-10 p-5 sm:rounded-lg  w-full max-w-[800px] flex justify-between gap-x-5 flex-col sm:flex-row'>
           <div className='flex flex-col justify-center mb-5 sm:mb-0'>
-            <div className='text-xl font-semibold mb-2'>Cookie consent</div>
-            <div className='text-sm font-light'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
-              molestiae ea dignissimos molestias necessitatibus, velit itaque
-              magnam, voluptatum eveniet, quibusdam officia vitae eum porro
-              nulla fuga nihil ullam placeat veritatis.
+            <div className='text-xl font-semibold mb-2'>{t('Title')}</div>
+            <div className='text-sm font-light flex gap-x-2'>
+              {t('Description')}
+              <Link className='text-primary border-b border-primary' href={''}>
+                {t('ReadPolicy')}
+              </Link>
             </div>
           </div>
 
           <div className='flex flex-row-reverse gap-x-3  justify-start sm:justify-center  sm:flex-col'>
             <button
-              className=' w-[150px] h-[40px] sm:h-[40px] flex justify-center items-center'
+              className=' w-[150px] h-[40px] sm:h-[40px] flex justify-center items-center bg-navy text-white rounded-full'
               onClick={() => handleOnClickAccept(true)}
             >
-              Accept
+              {t('Accept')}
             </button>
             <div
               className='text-xs cursor-pointer absolute top-1 
