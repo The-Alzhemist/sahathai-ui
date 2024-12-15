@@ -10,7 +10,7 @@ export function Header() {
   const t = useTranslations('Header')
 
   return (
-    <div className='shadow-1 sticky top-0 bg-white z-10'>
+    <div className='shadow-1 sticky top-0 bg-white z-20'>
       <div className='px-[10px] py-[8px] flex justify-between items-center container'>
         <Link href='/' className='shrink-0 p-[10px]'>
           <Image src='/logo.png' width={101} height={24} alt='' priority />

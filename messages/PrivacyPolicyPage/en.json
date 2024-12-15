@@ -1,0 +1,24 @@
+{
+  "PrivacyPolicyPage": {
+    "CookiePolicy": {
+      "title": "COOKIES POLICY",
+      "description": "When visiting our website, some information regarding to your visit will be automatically kept by COOKIES. This policy will describe what they are, how they work, for which reasons and even how to delete and/or block. By using our website, you are agreeing that we can use cookies in line with this policy."
+    },
+    "WhatAreCookies": {
+      "title": "WHAT ARE COOKIES?",
+      "description": "Cookies are small piece of files containing information which being able to store on your computer and/or device (tablets, smartphones and etc.) by your web browser while you are visiting our website. In general, cookies do not harm your computer and/or device With Cookies we can enhance the user experience in our online services by remembering your language and retain user preferences, store information for things like your unique identifier and security, goods and services. Cookies can also measure traffic in our online services, to modify content based on browsing actions and previous visits, or for advertising purposes. In these cases, your personal data may be collected."
+    },
+    "HowWeUseCookies": {
+      "title": "HOW WE USE COOKIES?",
+      "description": "To enhance user experience and your visit’s satisfaction, we use cookies to recognize you more quickly, make our website’s friendliness to you and simplify your browsing. By doing so, third-parties services are also included and perform on our behalf. They also use (Internet Protocol) IP addresses and cookies to create, process transactional data, or to associate accounts with you for statistical and marketing purposes."
+    },
+    "HowToManageCookies": {
+      "title": "HOW TO MANAGE COOKIES?",
+      "description": "Cookies can be blocked/erased from your browser."
+    },
+    "UpdateCookiesPolicy": {
+      "title": "UPDATES TO THE COOKIES POLICY?",
+      "description": "This policy may be updated to properly comply with upcoming rules and regulations. So, to ensure that you get with updated version, we recommended checking this page from time to time."
+    }
+  }
+}

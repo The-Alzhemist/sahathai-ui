@@ -23,6 +23,7 @@ export default getRequestConfig(async ({ locale }) => {
     'InfrastructureContainersPage',
     'Menu',
     'CookieConsentFloatingBar',
+    'PrivacyPolicyPage',
   ]
 
   const messages = {}
