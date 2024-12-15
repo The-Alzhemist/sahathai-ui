@@ -18,7 +18,11 @@ const CookieConsentFloatingBar = ({
             <div className='text-xl font-semibold mb-2'>{t('Title')}</div>
             <div className='text-sm font-light flex gap-x-2'>
               {t('Description')}
-              <Link className='text-primary border-b border-primary' href={''}>
+              {/* TODO:   href='/privacy-policy' need to change to navigate with locale */}
+              <Link
+                className='text-primary border-b border-primary'
+                href='en/privacy-policy'
+              >
                 {t('ReadPolicy')}
               </Link>
             </div>
