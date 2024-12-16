@@ -2,7 +2,6 @@ import { storyblokEditable } from '@storyblok/react/rsc'
 import { renderRichText } from '@storyblok/react'
 
 const EventNewsDetailCard: React.FC<any> = ({ blok }) => {
-  console.log('blok::::::::::', blok.newsTitle)
   const renderedRichText = renderRichText(blok.newsDescription)
   return (
     <main {...storyblokEditable(blok)} className='mb-10'>

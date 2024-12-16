@@ -1,6 +1,7 @@
 import BlogTitle from '@/components/Storyblok/BlogTitle'
 import FallbackComponent from '@/components/Storyblok/FallbackComponent'
 import EventNewsDetailCard from '@/components/Storyblok/news/EventNewsDetailCard'
+
 import Page from '@/components/Storyblok/Page'
 
 import {
@@ -28,7 +29,14 @@ export async function fetchData() {
   }
 
   const storyblokApi = getStoryblokApi()
-  return storyblokApi.get(`cdn/stories/news/1`, sbParams, {
+  // return storyblokApi.get(`cdn/stories/news/1`, sbParams, {
+  //   cache: 'no-store',
+  // })
+
+  const storyBookData = storyblokApi.get(`cdn/stories/news/1`, sbParams, {
     cache: 'no-store',
   })
+
+  console.log('storyBookData:::', storyBookData)
+  return storyBookData
 }

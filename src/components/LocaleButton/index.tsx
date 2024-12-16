@@ -25,14 +25,14 @@ export function LocaleButton({ className }: LocaleButtonProps) {
 
   const router = useRouter()
   const pathname = usePathname()
-  const queryStrings = useSearchParams()
+  // const queryStrings = useSearchParams()
 
   function handleLocaleChange(value: LocaleEnum) {
-    const query = queryStrings.toString()
-    router.replace(query ? `${pathname}?${query}` : pathname, {
-      locale: value,
-      scroll: false,
-    })
+    // const query = queryStrings.toString()
+    // router.replace(query ? `${pathname}?${query}` : pathname, {
+    //   locale: 'th',
+    //   scroll: false,
+    // })
   }
 
   const { refs, floatingStyles, context } = useFloating<HTMLLabelElement>({
