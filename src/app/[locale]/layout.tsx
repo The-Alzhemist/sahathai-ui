@@ -25,8 +25,9 @@ export default async function LocaleLayout({
   children: React.ReactNode
   params: { locale: LocaleEnum }
 }>) {
-  const messages = await getMessages()
   unstable_setRequestLocale(locale)
+  const messages = await getMessages()
+
   // storyblokInit({
   //   accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
   //   use: [apiPlugin],
