@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -26,31 +26,29 @@ export default async function LocaleLayout({
   params: { locale: LocaleEnum }
 }>) {
   const messages = await getMessages()
-
-  storyblokInit({
-    accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
-    use: [apiPlugin],
-  })
+  unstable_setRequestLocale(locale)
+  // storyblokInit({
+  //   accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
+  //   use: [apiPlugin],
+  // })
 
   return (
-    <StoryblokProvider>
-      <html lang={locale}>
-        <head>
-          <link rel='icon' href='/favicon.ico' sizes='any' />
-          <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1.0, user-scalable=no'
-          />
-        </head>
-        <body>
-          <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <Footer />
-            <ToastContainer />
-          </NextIntlClientProvider>
-        </body>
-      </html>
-    </StoryblokProvider>
+    <html lang={locale}>
+      <head>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, user-scalable=no'
+        />
+      </head>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+          <ToastContainer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   )
 }
