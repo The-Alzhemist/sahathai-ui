@@ -33,9 +33,7 @@ export async function fetchData() {
   //   cache: 'no-store',
   // })
 
-  const storyBookData = storyblokApi.get(`cdn/stories/news/1`, sbParams, {
-    cache: 'no-store',
-  })
+  const storyBookData = storyblokApi.get(`cdn/stories/news/1`, sbParams)
 
   console.log('storyBookData:::', storyBookData)
   return storyBookData
