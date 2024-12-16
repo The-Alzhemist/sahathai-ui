@@ -28,9 +28,9 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: any }) {
-  const { slug, locale, data } = params
-  // const { data } = await fetchData()
-  console.log('data:::', data)
+  const { slug, locale } = params
+  const { data } = await fetchData()
+
   // const id = (await params).slug
   // const locale = (await params).locale
 
