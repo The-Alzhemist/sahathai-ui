@@ -1,6 +1,7 @@
 export interface NewsCardProps {
   title: string
-  content: string
+  content: any
   createdAt: string
+  fullSlug: string
   direction?: 'horizontal' | 'vertical'
 }
