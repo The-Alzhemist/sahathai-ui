@@ -25,13 +25,13 @@ export const getStoryblokApi = storyblokInit({
   customFallbackComponent: FallbackComponent,
 })
 
-export async function fetchData() {
+export async function fetchData(slug: string) {
   const sbParams: ISbStoriesParams = {
     version: 'draft', // or 'draft' based on your needs
   }
 
   const storyblokApi = getStoryblokApi()
-  const storyBookData = storyblokApi.get(`cdn/stories/news/1`, sbParams)
+  const storyBookData = storyblokApi.get(`cdn/stories/news/${slug}`, sbParams)
   return storyBookData
 }
 
