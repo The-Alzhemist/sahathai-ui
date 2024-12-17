@@ -1,4 +1,4 @@
-import { fetchData } from '@/libs/storyblok'
+import { fetchData, fetchNewsBlogListData } from '@/libs/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
 
 interface Post {
@@ -12,23 +12,25 @@ export const revalidate = 60 // revalidate every 10 min
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
-  const locales = ['th', 'en']
+  const locales = ['th', 'en', 'cn']
 
-  const slugs = ['1']
-  const { data } = await fetchData()
+  const { data } = await fetchNewsBlogListData()
+  const dataSlugs = await data.stories.map((d: any) => {
+    return d.slug
+  })
 
-  return slugs.flatMap(slug =>
+  const slugs = await dataSlugs
+  return slugs.flatMap((slug: any) =>
     locales.map(locale => ({
       slug: slug,
       locale: locale,
-      data,
     }))
   )
 }
 
 export default async function Page({ params }: { params: any }) {
   const { slug, locale } = params
-  const { data } = await fetchData()
+  const { data } = await fetchData(slug)
 
   return (
     <section className='relative flex-col'>
