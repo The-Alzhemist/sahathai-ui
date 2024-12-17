@@ -4,6 +4,25 @@ import { fetchNewsBlogListData } from '@/libs/storyblok'
 
 import React from 'react'
 
+export const revalidate = 60 // revalidate every 10 min
+
+export const dynamicParams = true // or false, to 404 on unknown paths
+
+export async function generateStaticParams() {
+  const locales = ['th', 'en']
+
+  const slugs = ['1', '2', '3']
+  const { data } = await fetchNewsBlogListData()
+
+  return slugs.flatMap(slug =>
+    locales.map(locale => ({
+      slug: slug,
+      locale: locale,
+      data,
+    }))
+  )
+}
+
 export default async function NewsBlogList() {
   const { data } = await fetchNewsBlogListData()
   const datas = data
