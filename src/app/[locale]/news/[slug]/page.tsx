@@ -1,6 +1,5 @@
 import { fetchData } from '@/libs/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
-import { unstable_setRequestLocale } from 'next-intl/server'
 
 interface Post {
   id: string
@@ -8,7 +7,7 @@ interface Post {
   content: string
 }
 
-export const revalidate = 60
+export const revalidate = 60 // revalidate every 10 min
 
 export const dynamicParams = true // or false, to 404 on unknown paths
 
@@ -30,14 +29,6 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: any }) {
   const { slug, locale } = params
   const { data } = await fetchData()
-
-  // const id = (await params).slug
-  // const locale = (await params).locale
-
-  // console.log('id::', id, locale)
-  // const post: Post = await fetch(`https://api.vercel.app/blog/${id}`).then(
-  //   res => res.json()
-  // )
 
   return (
     <section className='relative flex-col'>

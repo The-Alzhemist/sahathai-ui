@@ -1,5 +1,6 @@
 import BlogTitle from '@/components/Storyblok/BlogTitle'
 import FallbackComponent from '@/components/Storyblok/FallbackComponent'
+import Grid from '@/components/Storyblok/Grid'
 import EventNewsDetailCard from '@/components/Storyblok/news/EventNewsDetailCard'
 
 import Page from '@/components/Storyblok/Page'
@@ -17,6 +18,7 @@ export const getStoryblokApi = storyblokInit({
     blogTitle: BlogTitle,
     eventNewsDetailCard: EventNewsDetailCard,
     page: Page,
+    grid: Grid,
   },
 
   enableFallbackComponent: true,
@@ -29,12 +31,18 @@ export async function fetchData() {
   }
 
   const storyblokApi = getStoryblokApi()
-  // return storyblokApi.get(`cdn/stories/news/1`, sbParams, {
-  //   cache: 'no-store',
-  // })
-
   const storyBookData = storyblokApi.get(`cdn/stories/news/1`, sbParams)
+  return storyBookData
+}
 
-  console.log('storyBookData:::', storyBookData)
+export async function fetchNewsBlogListData() {
+  const storyblokApi = getStoryblokApi()
+
+  const sbParams: ISbStoriesParams = {
+    version: 'draft', // or 'draft' based on your needs
+    starts_with: 'news/',
+    is_startpage: false,
+  }
+  const storyBookData = storyblokApi.get(`cdn/stories`, sbParams)
   return storyBookData
 }
