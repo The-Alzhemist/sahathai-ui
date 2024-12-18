@@ -22,7 +22,7 @@ import { LocaleButtonProps } from './interface'
 export function LocaleButton({ className }: LocaleButtonProps) {
   const [isOpen, setIsOpen] = useState(false)
   const locale = useLocale()
-
+  console.log('searchParams:::', locale)
   const router = useRouter()
   const pathname = usePathname()
   // const queryStrings = useSearchParams()
@@ -30,9 +30,13 @@ export function LocaleButton({ className }: LocaleButtonProps) {
   function handleLocaleChange(value: LocaleEnum) {
     // const query = queryStrings.toString()
     // router.replace(query ? `${pathname}?${query}` : pathname, {
-    //   locale: 'th',
+    //   locale: locale as 'th' | 'en' | 'cn' | undefined,
     //   scroll: false,
     // })
+    router.replace(pathname, {
+      locale: value,
+      scroll: false,
+    })
   }
 
   const { refs, floatingStyles, context } = useFloating<HTMLLabelElement>({
