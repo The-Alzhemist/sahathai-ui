@@ -1,25 +1,40 @@
-import { DateTime } from 'luxon'
 import { useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
 import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 import { LastestNewsProps } from '@/components/LastestNews/interface'
+import { fetchNewsBlogListData } from '@/libs/storyblok'
+import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 
-export function LastestNews({
-  title,
-  content,
-  createdAt,
-  direction = 'vertical',
-}: LastestNewsProps) {
+export async function generateStaticParams() {
+  const locales = ['th', 'en']
+
+  const slugs = ['1', '2', '3']
+  const { data } = await fetchNewsBlogListData()
+
+  return slugs.flatMap(slug =>
+    locales.map(locale => ({
+      slug: slug,
+      locale: locale,
+      data,
+    }))
+  )
+}
+
+export async function LastestNews() {
   const common = useTranslations('common')
+  const { data } = await fetchNewsBlogListData()
+  const datas = data
+
+  const latestNews = datas.stories.filter(
+    (d: any, index: number) => index === 0
+  )[0]
+
   return (
     <section
       className={cn(
-        'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden',
-        {
-          'flex w-full': direction === 'horizontal',
-        }
+        'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden'
       )}
     >
       <div className='w-full md:w-[48%]'>
@@ -27,15 +42,19 @@ export function LastestNews({
       </div>
 
       <div className='w-full md:w-[52%] p-5'>
-        <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>Hello</h2>
-        <p className='mt-[10px] body-2 line-clamp-2 text-black-6'>{content}</p>
-        <div className='mt-[10px] caption text-black-3'>
-          {DateTime.fromISO(createdAt).toFormat('dd LLLL yyyy')}
-        </div>
+        <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>
+          {latestNews.content.body[0].newsTitle}
+        </h2>
+        <p className='mt-[10px] body-2 line-clamp-2 text-black-6'>
+          {extractTextFieldsStoryblok(
+            latestNews.content.body[0].newsDescription
+          )}
+        </p>
+        <div className='mt-[10px] caption text-black-3'>mock date</div>
 
         <Link
-          href=''
-          className='mt-[23px] button-small text-navy block w-fit flex gap-[10px] items-center'
+          href={`/news/${latestNews.slug}`}
+          className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center'
         >
           <button
             className='p-[10px] bg-navy rounded-full text-white'
@@ -48,4 +67,7 @@ export function LastestNews({
       </div>
     </section>
   )
+}
+
+{
 }
