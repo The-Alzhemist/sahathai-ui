@@ -1,3 +1,4 @@
+'use client'
 import ReactPaginate from 'react-paginate'
 
 import { PaginationProps } from './interface'
@@ -16,7 +17,9 @@ export function Pagination({
       nextLabel={
         <ChevronDownIcon className='-rotate-90' width='18' height='18' />
       }
-      onPageChange={value => pageChange(value.selected)}
+      onPageChange={value => {
+        return pageChange(value.selected + 1)
+      }}
       pageRangeDisplayed={5}
       pageCount={pageCount}
       previousLabel={
