@@ -35,13 +35,18 @@ export async function fetchData(slug: string) {
   return storyBookData
 }
 
-export async function fetchNewsBlogListData() {
+export async function fetchNewsBlogListData(
+  page: number = 1,
+  perPage: number = 3
+) {
   const storyblokApi = getStoryblokApi()
 
   const sbParams: ISbStoriesParams = {
     version: 'draft', // or 'draft' based on your needs
     starts_with: 'news/',
     is_startpage: false,
+    page: page,
+    per_page: perPage,
   }
   const storyBookData = storyblokApi.get(`cdn/stories`, sbParams)
   return storyBookData
