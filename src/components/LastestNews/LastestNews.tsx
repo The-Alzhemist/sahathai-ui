@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
@@ -7,24 +7,25 @@ import { LastestNewsProps } from '@/components/LastestNews/interface'
 import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 
-export async function generateStaticParams() {
-  const locales = ['th', 'en']
+// export async function generateStaticParams() {
+//   const locales = ['th', 'en']
 
-  const slugs = ['1', '2', '3']
-  const { data } = await fetchNewsBlogListData()
+//   const slugs = ['1', '2', '3']
+//   const { data } = await fetchNewsBlogListData()
 
-  return slugs.flatMap(slug =>
-    locales.map(locale => ({
-      slug: slug,
-      locale: locale,
-      data,
-    }))
-  )
-}
+//   return slugs.flatMap(slug =>
+//     locales.map(locale => ({
+//       slug: slug,
+//       locale: locale,
+//       data,
+//     }))
+//   )
+// }
 
 export async function LastestNews() {
+  const locale = useLocale()
   const common = useTranslations('common')
-  const { data } = await fetchNewsBlogListData()
+  const { data } = await fetchNewsBlogListData(1, 10, locale)
   const datas = data
 
   const latestNews = datas.stories.filter(
