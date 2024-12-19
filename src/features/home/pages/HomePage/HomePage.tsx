@@ -8,6 +8,8 @@ import { OurSubsidiaries } from './components/OurSubsidiaries'
 import { HamburgerMenu } from './components/HamburgerMenu'
 import ContactUs from '@/components/ContactUs/ContactUs'
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
+import { getTranslations } from 'next-intl/server'
+import { Metadata } from 'next'
 
 export function HomePage() {
   return (
