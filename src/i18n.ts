@@ -24,6 +24,7 @@ export default getRequestConfig(async ({ locale }) => {
     'Menu',
     'CookieConsentFloatingBar',
     'PrivacyPolicyPage',
+    'Seo',
   ]
 
   const messages = {}
