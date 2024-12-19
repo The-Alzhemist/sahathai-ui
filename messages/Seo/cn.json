@@ -1,0 +1,36 @@
+{
+  "MetaData": {
+    "Home": {
+      "Title": "Sahathai | 首页",
+      "Description": "在 Sahathai 码头体验世界级服务。全面、便利，满足您所有需求。"
+    },
+    "AboutUs": {
+      "Title": "Sahathai | 关于我们",
+      "Description": "Sahathai 码头提供可靠的物流和运输服务，拥有专业团队和现代化设施。"
+    },
+    "Service": {
+      "Title": "Sahathai | 服务",
+      "Description": "提供高效的物流服务、安全的货物管理以及满足您需求的存储解决方案。"
+    },
+    "Infrastructure": {
+      "Title": "Sahathai | 基础设施",
+      "Description": "Sahathai 码头提供优质设施和高质量服务，以满足客户的所有需求。"
+    },
+    "News": {
+      "Title": "Sahathai | 新闻",
+      "Description": "随时关注 Sahathai 码头的最新动态和重要信息，确保您不会错过任何消息。"
+    },
+    "JoinUs": {
+      "Title": "Sahathai | 加入我们",
+      "Description": "探索 Sahathai 码头的激动人心的职业机会，成为我们成功和成长的一部分。"
+    },
+    "ContactUs": {
+      "Title": "Sahathai | 联系我们",
+      "Description": "如有咨询、信息或服务需求，请联系 Sahathai 码头。我们很乐意为您提供帮助。"
+    },
+    "PrivacyPolicy": {
+      "Title": "Sahathai | 隐私政策",
+      "Description": "探索我们与尊贵客户合作的成功项目，展示我们的专业知识和奉献精神。"
+    }
+  }
+}
