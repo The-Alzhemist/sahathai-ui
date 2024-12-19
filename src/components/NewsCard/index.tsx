@@ -13,7 +13,7 @@ export function NewsCard({
   title,
   content,
   createdAt,
-  fullSlug,
+  slug,
   direction = 'vertical',
 }: NewsCardProps) {
   const common = useTranslations('common')
@@ -40,7 +40,7 @@ export function NewsCard({
         {newsDate}
       </div>
       <Link
-        href={`/${fullSlug}`}
+        href={`/news/${slug}`}
         className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center'
       >
         <button
