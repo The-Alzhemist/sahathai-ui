@@ -14,18 +14,19 @@ export const dynamicParams = true // or false, to 404 on unknown paths
 export async function generateStaticParams() {
   const locales = ['th', 'en', 'cn']
 
-  const { data } = await fetchNewsBlogListData()
-  const dataSlugs = await data.stories.map((d: any) => {
-    return d.slug
-  })
-
-  const slugs = await dataSlugs
-  return slugs.flatMap((slug: any) =>
-    locales.map(locale => ({
-      slug: slug,
-      locale: locale,
-    }))
+  // Fetch stories for all locales
+  const allLocalizedSlugs = await Promise.all(
+    locales.map(async locale => {
+      const { data } = await fetchNewsBlogListData(1, 100, locale) // Pass the `lang` parameter here
+      return data.stories.map((story: any) => ({
+        slug: story.slug,
+        locale,
+      }))
+    })
   )
+
+  // Flatten the localized slugs array
+  return allLocalizedSlugs.flat()
 }
 
 export default async function Page({ params }: { params: any }) {
