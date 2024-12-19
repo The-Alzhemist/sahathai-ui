@@ -2,6 +2,7 @@ import { PrivacyPolicyBox } from '@/features/privacy-policy/components/PrivacyPo
 import withPolicyPage from './withPolicyPage'
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
+import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 
 const PolicyPage = () => {
   const t = useTranslations('PrivacyPolicyPage')
@@ -41,6 +42,7 @@ const PolicyPage = () => {
           />
         </div>
       </section>
+      <CookieConsentFloatingBar />
     </main>
   )
 }

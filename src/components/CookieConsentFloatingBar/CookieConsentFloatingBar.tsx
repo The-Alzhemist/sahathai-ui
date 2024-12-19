@@ -3,13 +3,15 @@
 import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
 import withCookieConsentFloatingBar from './withCookieConsentFloatingBar'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 const CookieConsentFloatingBar = ({
   handleOnClickAccept,
   isOpen,
 }: CookieConsentFloatingBarProps) => {
   const t = useTranslations('CookieConsentFloatingBar')
+  const locale = useLocale()
+
   return (
     isOpen && (
       <section className={`flex justify-center shadow-2xl`}>
@@ -21,7 +23,7 @@ const CookieConsentFloatingBar = ({
               {/* TODO:   href='/privacy-policy' need to change to navigate with locale */}
               <Link
                 className='text-primary border-b border-primary'
-                href='en/privacy-policy'
+                href={`${locale}/privacy-policy`}
               >
                 {t('ReadPolicy')}
               </Link>
