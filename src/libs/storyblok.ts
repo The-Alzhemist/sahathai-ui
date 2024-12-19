@@ -37,7 +37,7 @@ export async function fetchData(slug: string) {
 
 export async function fetchNewsBlogListData(
   page: number = 1,
-  perPage: number = 3
+  perPage: number = 10
 ) {
   const storyblokApi = getStoryblokApi()
 
