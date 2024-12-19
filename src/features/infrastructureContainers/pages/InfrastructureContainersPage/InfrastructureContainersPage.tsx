@@ -5,6 +5,7 @@ import { OperationGuidelines } from '../../components/OperationGuidelines'
 import { MachineryEquipment } from '../../components/MachineryEquipment'
 import { LogisticInnovation } from '../../components/LogisticInnovation'
 import ContactUs from '@/components/ContactUs/ContactUs'
+import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 
 export function InfrastructureContainersPage() {
   const t = useTranslations('InfrastructureContainersPage')
@@ -15,6 +16,7 @@ export function InfrastructureContainersPage() {
       <LogisticInnovation />
       <OperationGuidelines />
       <ContactUs className='mt-[80px]' />
+      <CookieConsentFloatingBar />
     </main>
   )
 }

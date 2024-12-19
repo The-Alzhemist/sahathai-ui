@@ -1,29 +1,51 @@
 import { LOCAL_STORAGE_PDPA_KEY } from '@/components/CookieConsentFloatingBar/config'
 import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { addDays, format, isAfter, startOfDay } from 'date-fns'
 
 const withCookieConsentFloatingBar = (
   Component: React.FC<CookieConsentFloatingBarProps>
 ) => {
   const Hoc = () => {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+      setIsOpen(hasConsentExpired())
+    }, [])
 
     const handleOnClickAccept = (isClickAccept: boolean) => {
       setIsOpen(false)
 
       if (isClickAccept) {
-        // expirationDate = 30 วัน
-        const expirationDate = new Date()
-        expirationDate.setDate(expirationDate.getDate() + 30)
+        // Set expiration date to today + 30 days
+        const today = new Date()
+        const expirationDate = addDays(today, 30)
+
+        // console.log('Current Date:', format(today, 'yyyy-MM-dd'))
+        // console.log('Expiration Date:', format(expirationDate, 'yyyy-MM-dd'))
 
         const cookieConsentData = JSON.stringify({
           value: 'true',
-          expires: expirationDate.getTime(),
+          expires: expirationDate,
         })
 
-        typeof window !== 'undefined' &&
-          localStorage.setItem(LOCAL_STORAGE_PDPA_KEY, cookieConsentData)
+        localStorage.setItem(LOCAL_STORAGE_PDPA_KEY, cookieConsentData)
       }
+    }
+
+    const hasConsentExpired = () => {
+      const consentData = localStorage.getItem(LOCAL_STORAGE_PDPA_KEY)
+      if (!consentData) return true
+
+      const { expires } = JSON.parse(consentData)
+      const currentDate = startOfDay(new Date())
+      const expirationDate = startOfDay(new Date(expires))
+
+      // console.log('Current Date:', format(currentDate, 'yyyy-MM-dd'))
+      // console.log('Expiration Date:', format(expirationDate, 'yyyy-MM-dd'))
+
+      // Check if the current date is after the expiration date
+      return isAfter(currentDate, expirationDate)
     }
 
     const newProps: CookieConsentFloatingBarProps = {
@@ -35,4 +57,5 @@ const withCookieConsentFloatingBar = (
 
   return Hoc
 }
+
 export default withCookieConsentFloatingBar
