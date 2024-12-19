@@ -22,7 +22,7 @@ import { LocaleButtonProps } from './interface'
 export function LocaleButton({ className }: LocaleButtonProps) {
   const [isOpen, setIsOpen] = useState(false)
   const locale = useLocale()
-  console.log('searchParams:::', locale)
+
   const router = useRouter()
   const pathname = usePathname()
   // const queryStrings = useSearchParams()

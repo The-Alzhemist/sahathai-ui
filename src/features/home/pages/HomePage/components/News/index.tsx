@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl'
 
-import { NewsCard } from '@/components/NewsCard'
 import { Animation } from '@/components/Animation'
 import LatestNewsHomePageList from '@/features/home/pages/HomePage/components/News/LatestNewsHomePageList/LatestNewsHomePageList'
 

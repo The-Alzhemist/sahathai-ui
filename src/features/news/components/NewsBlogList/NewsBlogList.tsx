@@ -16,8 +16,6 @@ export default function NewsBlogList() {
     })
   }, [])
 
-  console.log('newsBlog::', newsBlog)
-
   return (
     <section className='flex flex-col justify-center items-center'>
       <section className='max-w-[1200px] flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
@@ -33,17 +31,19 @@ export default function NewsBlogList() {
           ))}
       </section>
       <section>
-        <Pagination
-          className='w-full news'
-          pageCount={newsBlog?.stories.length}
-          pageChange={v => {
-            fetchNewsBlogListData(v, newsBlog?.stories.length).then(
-              ({ data }) => {
-                setNewsBlog(data)
-              }
-            )
-          }}
-        />
+        {newsBlog && (
+          <Pagination
+            className='w-full news'
+            pageCount={newsBlog?.stories.length}
+            pageChange={v => {
+              fetchNewsBlogListData(v, newsBlog?.stories.length).then(
+                ({ data }) => {
+                  setNewsBlog(data)
+                }
+              )
+            }}
+          />
+        )}
         length:{newsBlog?.stories.length}
       </section>
     </section>
