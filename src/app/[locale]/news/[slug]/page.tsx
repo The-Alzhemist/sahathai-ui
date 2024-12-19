@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: any }) {
-  const { slug, locale } = params
+  const { slug } = params
   const { data } = await fetchData(slug)
 
   return (

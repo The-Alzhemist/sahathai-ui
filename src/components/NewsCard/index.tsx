@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
 import { NewsCardProps } from './interface'
@@ -17,15 +17,18 @@ export function NewsCard({
   direction = 'vertical',
 }: NewsCardProps) {
   const common = useTranslations('common')
+  const newsDate = content.body[0].newsDate
+  const image = content.body[0].newsImageCover?.filename
+  const imageDefault = '/background.jpeg'
 
   return (
-    <div className={cn('w-[266px]  overflow-hidden')}>
+    <div className={cn('w-full md:w-[266px]  overflow-hidden')}>
       <Image
-        src='https://images.pexels.com/photos/8833426/pexels-photo-8833426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        src={image ? image : imageDefault}
         alt='Picture of the author'
         width={500}
         height={500}
-        className='w-full h-auto object-cover rounded-[8px]'
+        className='w-full h-[250px] md:h-[180px] object-cover rounded-[8px]'
       />
 
       <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>{title}</h2>
@@ -33,7 +36,8 @@ export function NewsCard({
         {extractTextFieldsStoryblok(content)}
       </p>
       <div className='mt-[10px] caption text-black-3'>
-        {DateTime.fromISO(createdAt).toFormat('dd LLLL yyyy')}
+        {/* {DateTime.fromISO(createdAt).toFormat('dd LLLL yyyy')} */}
+        {newsDate}
       </div>
       <Link
         href={`/${fullSlug}`}
