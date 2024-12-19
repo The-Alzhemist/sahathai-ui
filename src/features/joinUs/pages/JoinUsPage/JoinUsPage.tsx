@@ -1,3 +1,4 @@
+import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 import { Banner } from '../../components/Banner'
 import { ContactHumanResources } from '../../components/ContactHumanResources'
 import { Policy } from '../../components/Policy'
@@ -13,6 +14,7 @@ export function JoinUsPage() {
       <section className='px-5'>
         <ContactHumanResources />
       </section>
+      <CookieConsentFloatingBar />
     </main>
   )
 }

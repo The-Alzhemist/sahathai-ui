@@ -6,6 +6,7 @@ import { Animation } from '@/components/Animation'
 import { Menu } from '@/components/Menu'
 import { LastestNews } from '@/components/LastestNews/LastestNews'
 import NewsBlogList from '@/features/news/components/NewsBlogList/NewsBlogList'
+import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 
 export function NewsPage() {
   const t = useTranslations('NewsPage')
@@ -38,6 +39,7 @@ export function NewsPage() {
           <Brochure className='' />
         </section>
       </section>
+      <CookieConsentFloatingBar />
     </main>
   )
 }

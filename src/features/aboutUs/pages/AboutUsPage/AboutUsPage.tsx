@@ -8,6 +8,7 @@ import { BoardAndExecutives } from '../../components/BoardAndExecutives'
 import { CommitmentSuccess } from '../../components/CommitmentSuccess'
 import { CorporateGroupOrganizationalStructure } from '../../components/CorporateGroupOrganizationalStructure'
 import { AboutPageProps } from './interface'
+import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 
 export function AboutUsPage({ tabs, active, setActive }: AboutPageProps) {
   const t = useTranslations('AboutUsPage.Tabs')
@@ -35,6 +36,7 @@ export function AboutUsPage({ tabs, active, setActive }: AboutPageProps) {
       ) : active === t('corporateGroupStructureOrganizationalStructure') ? (
         <CorporateGroupOrganizationalStructure />
       ) : null}
+      <CookieConsentFloatingBar />
     </main>
   )
 }
