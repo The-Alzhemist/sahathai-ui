@@ -1,0 +1,36 @@
+{
+  "MetaData": {
+    "Home": {
+      "Title": "Sahathai | Home",
+      "Description": "Discover world-class services at Sahathai Terminal. Comprehensive, convenient, and tailored to meet all your needs."
+    },
+    "AboutUs": {
+      "Title": "Sahathai | About Us",
+      "Description": "Sahathai Terminal provides reliable logistics and transportation services with expert teams and modern facilities."
+    },
+    "Service": {
+      "Title": "Sahathai | Services",
+      "Description": "Offering efficient logistics services, secure cargo management, and storage solutions tailored to your needs."
+    },
+    "Infrastructure": {
+      "Title": "Sahathai | Infrastructure",
+      "Description": "Sahathai Terminal delivers premium facilities and high-quality services to meet all customer requirements."
+    },
+    "News": {
+      "Title": "Sahathai | News",
+      "Description": "Stay updated with the latest news and key information from Sahathai Terminal so you never miss out."
+    },
+    "JoinUs": {
+      "Title": "Sahathai | Careers",
+      "Description": "Explore exciting career opportunities at Sahathai Terminal and be part of our success and growth."
+    },
+    "ContactUs": {
+      "Title": "Sahathai | Contact Us",
+      "Description": "Reach out to Sahathai Terminal for inquiries, information, or services. We’re happy to assist you."
+    },
+    "PrivacyPolicy": {
+      "Title": "Sahathai | Privacy Policy",
+      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
+    }
+  }
+}
