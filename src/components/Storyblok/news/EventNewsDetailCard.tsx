@@ -7,7 +7,11 @@ const EventNewsDetailCard: React.FC<any> = ({ blok }) => {
     <main {...storyblokEditable(blok)} className='mb-10'>
       <section className='bg-white flex flex-col p-3 md:p-10 rounded-[5px]'>
         <img
-          src='https://placehold.co/600x400'
+          src={
+            blok.newsImageCover
+              ? blok.newsImageCover.filename
+              : '/background.jpeg'
+          }
           className='rounded-[5px] w-90% mx-auto mb-5'
         />
 
