@@ -1,88 +1,88 @@
 {
   "HomePage": {
     "Banner": {
-      "title": "เชื่อมโยง",
-      "title2": "คุณ",
-      "subTitle": "สู่โลจิสติกส์ไทย"
+      "title": "Connecting",
+      "title2": "You",
+      "subTitle": "To Thai Logistics"
     },
     "About": {
-      "title": "สหไทย เทอร์มินอล",
-      "content": "เพิ่มประสิทธิภาพการดำเนินงานของคุณ ลดต้นทุน และเพิ่มผลผลิตด้วยบริการมาตรฐานระดับโลกครบวงจรของเรา ที่พร้อมให้คำปรึกษาและออกแบบโซลูชั่นที่เหมาะสมที่สุดสำหรับธุรกิจของคุณ",
+      "title": "Sahathai Terminal",
+      "content": "Enhance your operational efficiency, reduce costs, and increase productivity with our comprehensive world-class services. We provide consultancy and design tailored solutions to suit your business needs.",
       "comprehensiveService": {
-        "title": "บริการครบวงจร",
-        "content": "บริการโลจิสติกส์ และซัพพลายเชนครบวงจรพร้อมโซลูชั่นเฉพาะสำหรับธุรกิจคุณ"
+        "title": "Comprehensive Services",
+        "content": "Logistics and supply chain solutions tailored for your business."
       },
       "globalTransportationNetwork": {
-        "title": "เครือข่ายการขนส่งทั่วโลก",
-        "content": "เครือข่ายขนส่งทั่วโลกจัดส่งรวดเร็วและมีประสิทธิภาพทุกจุดหมาย"
+        "title": "Global Transportation Network",
+        "content": "Worldwide transportation network for fast and efficient delivery to every destination."
       },
       "convenientLocation": {
-        "title": "ทำเลสะดวก",
-        "content": "ใกล้ถนนวงแหวนรอบนอกกาญจนาภิเษกและสะพานภูมิพลสะดวกขนส่งทั้งทางบกและน้ำ"
+        "title": "Convenient Location",
+        "content": "Located near the Outer Ring Road and Bhumibol Bridge for seamless land and water transport."
       },
       "worldClassStandards": {
-        "title": "มาตรฐานระดับโลก",
-        "content": "รับรองมาตรฐาน ISO 9001, 14001 และ GSV (C-TPAT tier 2) เพื่อความปลอดภัยและน่าเชื่อถือ"
+        "title": "World-Class Standards",
+        "content": "Certified ISO 9001, 14001, and GSV (C-TPAT tier 2) for safety and reliability."
       },
       "coversAllNeeds": {
-        "title": "ครอบคลุมทุกความต้องการ",
-        "content": "บริการขนถ่ายสินค้าครบวงจร โดยทีมงานมืออาชีพ เพื่อคุณภาพสูงสุด"
+        "title": "Covers All Needs",
+        "content": "Comprehensive cargo handling services by professional teams for the highest quality."
       }
     },
     "License": {
-      "title": "ความสำเร็จที่การันตีคุณภาพ",
-      "content": "รางวัลและเกียรติบัตรของเราไม่เพียงแสดงถึงความสำเร็จ แต่ยังเป็นเครื่องยืนยันถึงมาตรฐานการบริการระดับสูงที่เรามอบให้ลูกค้าทุกราย ด้วยความมุ่งมั่นในการพัฒนาอย่างต่อเนื่อง เราภูมิใจนำเสนอผลงานที่ได้รับการยอมรับจากองค์กรชั้นนำทั้งในและต่างประเทศ",
-      "iso": "ISO 9001 และ ISO 14001"
+      "title": "Quality Guaranteed Success",
+      "content": "Our awards and certifications are not only symbols of success but also a testament to the high standards of service we provide to every client. With continuous development, we are proud to present achievements recognized by leading organizations both domestically and internationally.",
+      "iso": "ISO 9001 and ISO 14001"
     },
     "Service": {
-      "title": "บริการครบวงจรเพื่อธุรกิจของคุณ",
+      "title": "Comprehensive Services for Your Business",
       "containerMaintenanceRepairServices": {
-        "title": "บริการบำรุงรักษาและซ่อมแซมตู้คอนเทนเนอร์",
-        "content": "เราจัดการตู้คอนเทนเนอร์ทุกประเภท ไม่ว่าจะเป็น 20, 40, 45 ทีอียู, High cube, หรือ Flat rack ทั้ง FCL และ LCL ภายในพื้นที่ CFS และ CY ขนาด 80,000 ตร.ม. พร้อมอุปกรณ์ทันสมัย เน้นความปลอดภัยทุกขั้นตอน"
+        "title": "Container Maintenance and Repair Services",
+        "content": "We handle all types of containers, including 20, 40, 45 TEU, High cube, or Flat rack, both FCL and LCL, within an 80,000 sq.m. CFS and CY area equipped with modern tools, ensuring safety at every step."
       },
       "containerFreightStationContainerYard": {
-        "title": "สถานีบรรจุและคัดแยกตู้คอนเทนเนอร์ (CFS) และลานจัดเก็บตู้คอนเทนเนอร์ (CY)",
-        "content": "ตรวจ ทำความสะอาด ซ่อมบำรุง พื้นที่จัดเก็บ 59,200 ตร.ม. รองรับ 350,000 ตู้/ปี รับประกันคุณภาพและความปลอดภัย"
+        "title": "Container Freight Station (CFS) and Container Yard (CY)",
+        "content": "Inspection, cleaning, and maintenance services with a storage area of 59,200 sq.m., supporting 350,000 containers per year. Quality and safety guaranteed."
       },
       "freeTradeZone": {
-        "title": "เขตปลอดอากร",
-        "content": "เขตปลอดอากรของเรา ห่างจากสหไทยเทอร์มินอล 200 เมตร มีพื้นที่ 6,400 ตร.ม. ช่วยลดระยะเวลาและต้นทุนโลจิสติกส์"
+        "title": "Free Trade Zone",
+        "content": "Our Free Trade Zone, located 200 meters from Sahathai Terminal, spans 6,400 sq.m., reducing logistics time and costs."
       },
       "coastalShippingServices": {
-        "title": "บริการขนส่งสินค้าเลียบชายฝั่ง",
-        "content": "ท่าเรืออเนกประสงค์พร้อมบริการครบวงจรดูแลตู้คอนเทนเนอร์ครบทุกขั้นตอน รับประกันคุณภาพและความปลอดภัยสูงสุด"
+        "title": "Coastal Shipping Services",
+        "content": "A multi-purpose port offering comprehensive services to handle all types of containers with the highest quality and safety standards."
       },
       "bulkCargoProjectCargo": {
-        "title": "สินค้าเทกองและสินค้าโครงการ",
-        "content": "บริการขนส่งสินค้าทุกประเภท ทั้งเทกอง วางกอง และโครงการขนาดใหญ่ ด้วยความเชี่ยวชาญ อุปกรณ์เฉพาะทางและทีมงานมืออาชีพ รับประกันความปลอดภัยและประสิทธิภาพสูงสุด"
+        "title": "Bulk and Project Cargo",
+        "content": "We provide transportation services for all types of cargo, including bulk, stacked, and large-scale projects, with expertise, specialized equipment, and professional teams ensuring maximum safety and efficiency."
       },
       "automatedContainerReadingTechnology": {
-        "title": "เทคโนโลยีการอ่านตู้สินค้าอัตโนมัติ (OCR)",
-        "content": "นำระบบ OCR มาใช้อ่านหมายเลขตู้สินค้าอัตโนมัติที่ประตูท่าเรือ เพิ่มความแม่นยำ ลดเวลาดำเนินงาน และยกระดับคุณภาพบริการ"
+        "title": "Automated Container Reading Technology (OCR)",
+        "content": "Implementing OCR systems for automatic container number reading at port gates, increasing accuracy, reducing processing time, and enhancing service quality."
       }
     },
     "News": {
-      "title": "ข่าวประชาสัมพันธ์"
+      "title": "News and Announcements"
     },
     "Highlight": {
-      "title": "ตัวเลือกที่ดีที่สุดในบริการโลจิสติกส์และซัพพลายเชน",
-      "description": "ลูกค้าของเราเชื่อมั่นและวางใจในบริการโลจิสติกส์และซัพพลายเชนของเรา",
+      "title": "The Best Choice in Logistics and Supply Chain Services",
+      "description": "Our clients trust and rely on our logistics and supply chain services.",
       "location": {
-        "title": "ที่ตั้งทางยุทธศาสตร์",
-        "description": "สหไทยเทอร์มินอลมีที่ตั้งทางยุทธศาสตร์ที่ช่วยส่งเสริมเศรษฐกิจของอุตสาหกรรมบริเวณปากแม่น้ำเจ้าพระยา กรุงเทพฯ และสมุทรปราการ"
+        "title": "Strategic Location",
+        "description": "Sahathai Terminal's strategic location boosts the economy of the industry around the Chao Phraya River, Bangkok, and Samut Prakan."
       },
       "flexibility": {
-        "title": "การให้บริการที่ยืดหยุ่น",
-        "description": "ท่าเรืออเนกประสงค์ของเราสามารถรองรับเรือได้หลากหลายประเภทไม่ว่าจะเป็นเรือบาร์จหรือเรือขนส่งสินค้าขนาดใหญ่"
+        "title": "Flexible Services",
+        "description": "Our multi-purpose port accommodates various types of vessels, from barges to large cargo ships."
       },
       "locationEasyAccess": {
-        "title": "สถานที่ตั้งเข้าถึงง่าย",
-        "description": "สหไทย เทอร์มินอล ตั้งอยู่ใกล้กับถนนวงแหวนรอบนอกกาญจนาภิเษกและสะพานภูมิพล คุณสามารถเดินทางมาได้อย่างสะดวกและขับรถเชื่อมต่อไปยังจังหวัดอื่นๆ ใกล้เคียงได้อย่างง่ายดาย"
+        "title": "Easily Accessible Location",
+        "description": "Sahathai Terminal is conveniently located near the Outer Ring Road and Bhumibol Bridge, allowing for easy travel and connections to nearby provinces."
       }
     },
     "OurSubsidiaries": {
-      "title": "บริษัทในเครือของเรา",
-      "description": "ลูกค้าของเราเชื่อมั่นและวางใจในบริการโลจิสติกส์และซัพพลายเชนของเรา"
+      "title": "Our Subsidiaries",
+      "description": "Our clients trust and rely on our logistics and supply chain services."
     }
   }
 }
