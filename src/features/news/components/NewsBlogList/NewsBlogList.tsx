@@ -4,15 +4,17 @@ import { NewsCard } from '@/components/NewsCard'
 import { Pagination } from '@/components/Pagination'
 
 import { fetchNewsBlogListData } from '@/libs/storyblok'
+import { useLocale } from 'next-intl'
 
 import React, { useEffect, useState } from 'react'
 
 export default function NewsBlogList() {
   const [newsBlog, setNewsBlog] = useState<any>()
-
+  const locale = useLocale()
   useEffect(() => {
-    fetchNewsBlogListData().then(({ data }) => {
+    fetchNewsBlogListData(1, 99, locale).then(({ data }) => {
       setNewsBlog(data)
+      console.log('data:::', data)
     })
   }, [])
 
