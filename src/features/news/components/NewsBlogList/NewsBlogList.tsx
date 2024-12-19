@@ -28,7 +28,7 @@ export default function NewsBlogList() {
               title={newsBlog.content.body[0].newsTitle}
               content={newsBlog.content}
               createdAt={newsBlog.createdAt}
-              fullSlug={newsBlog.full_slug}
+              slug={newsBlog.slug}
             />
           ))}
       </section>
