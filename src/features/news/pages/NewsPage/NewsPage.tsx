@@ -1,5 +1,3 @@
-import { Pagination } from '@/components/Pagination'
-import { NewsCard } from '@/components/NewsCard'
 import { Brochure } from '../../components/Brochure'
 import { useTranslations } from 'next-intl'
 import { Animation } from '@/components/Animation'
