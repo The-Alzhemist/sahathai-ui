@@ -3,20 +3,28 @@
 import { NewsCard } from '@/components/NewsCard'
 import { Pagination } from '@/components/Pagination'
 
-import { fetchNewsBlogListData } from '@/libs/storyblok'
+import {
+  fetchNewsBlogListData,
+  fetchNewsBlogListLengthData,
+} from '@/libs/storyblok'
 import { useLocale } from 'next-intl'
 
 import React, { useEffect, useState } from 'react'
 
 export default function NewsBlogList() {
   const [newsBlog, setNewsBlog] = useState<any>()
+  const [newsBlogLength, setNewsBLogLength] = useState<number>(1)
   const locale = useLocale()
+  const PER_PAGE = 6
   useEffect(() => {
-    fetchNewsBlogListData(1, 99, locale).then(({ data }) => {
-      setNewsBlog(data)
-      console.log('data:::', data)
+    fetchNewsBlogListLengthData(1, 99, locale).then(({ data }) => {
+      setNewsBLogLength(data.stories.length)
     })
-  }, [])
+    fetchNewsBlogListData(1, PER_PAGE, locale).then(({ data }) => {
+      console.log('data:::', data)
+      setNewsBlog(data)
+    })
+  }, [locale])
 
   return (
     <section className='flex flex-col justify-center items-center'>
@@ -36,17 +44,14 @@ export default function NewsBlogList() {
         {newsBlog && (
           <Pagination
             className='w-full news'
-            pageCount={newsBlog?.stories.length}
+            pageCount={newsBlogLength / PER_PAGE}
             pageChange={v => {
-              fetchNewsBlogListData(v, newsBlog?.stories.length).then(
-                ({ data }) => {
-                  setNewsBlog(data)
-                }
-              )
+              fetchNewsBlogListData(v, PER_PAGE).then(({ data }) => {
+                setNewsBlog(data)
+              })
             }}
           />
         )}
-        length:{newsBlog?.stories.length}
       </section>
     </section>
   )

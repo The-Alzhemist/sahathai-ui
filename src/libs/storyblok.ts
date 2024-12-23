@@ -73,3 +73,23 @@ export async function fetchNewsBlogListData(
   const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
   return storyBookData
 }
+
+export async function fetchNewsBlogListLengthData(
+  page: number = 1,
+  perPage: number = 99,
+  lang: string = 'en' // default language
+) {
+  const storyblokApi = getStoryblokApi()
+
+  const sbParams: ISbStoriesParams = {
+    version: 'draft', // or 'published' based on your needs
+    starts_with: 'news/',
+    is_startpage: false,
+    page: page,
+    per_page: perPage,
+    language: lang, // Storyblok's language filter parameter
+  }
+
+  const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
+  return storyBookData
+}
