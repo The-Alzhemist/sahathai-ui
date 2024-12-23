@@ -25,6 +25,7 @@ export default getRequestConfig(async ({ locale }) => {
     'CookieConsentFloatingBar',
     'PrivacyPolicyPage',
     'Seo',
+    'Footer',
   ]
 
   const messages = {}

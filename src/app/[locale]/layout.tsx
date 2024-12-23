@@ -28,10 +28,10 @@ export default async function LocaleLayout({
   unstable_setRequestLocale(locale)
   const messages = await getMessages()
 
-  storyblokInit({
-    accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
-    use: [apiPlugin],
-  })
+  // storyblokInit({
+  //   accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
+  //   use: [apiPlugin],
+  // })
 
   return (
     <StoryblokProvider>

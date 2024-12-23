@@ -52,3 +52,44 @@ export default async function Page({ params }: { params: any }) {
     </section>
   )
 }
+
+export async function generateMetadata({
+  params: { slug, locale },
+}: {
+  params: {
+    locale: string
+    slug: string
+  }
+}) {
+  const { data } = await fetchData(slug, locale)
+  const { metaTitle, metaDescription, metaImage } = data.story.content.body[0]
+
+  return {
+    title: metaTitle ?? 'Sahathai | blog',
+    description: metaDescription ?? '',
+    openGraph: {
+      title: metaTitle ?? 'Sahathai | blog',
+      description: metaDescription ?? '',
+      images: [
+        {
+          url: metaImage
+            ? metaImage.filename
+            : 'https://sahathai-ui.vercel.app' + '/seo/meta-image-home.jpg',
+          width: 800,
+          height: 600,
+          alt: metaTitle ? metaTitle : 'sahathai-meta-image-blog',
+        },
+        {
+          url: metaImage
+            ? metaImage.filename
+            : 'https://sahathai-ui.vercel.app/' +
+              '/logo/meta/meta-tag-projects.jpg',
+          width: 1800,
+          height: 1600,
+          alt: metaTitle ? metaTitle : 'sahathai-meta-image-blog',
+        },
+      ],
+    },
+    type: 'website',
+  }
+}
