@@ -1,35 +1,41 @@
 {
   "ContactUs": {
-    "title": "ติดต่อเรา",
+    "title": "联系我们",
     "nameField": {
-      "label": "ชื่อ",
-      "placeholder": "กรอกชื่อ"
+      "label": "姓名",
+      "placeholder": "请输入姓名"
     },
     "phoneNumberField": {
-      "label": "เบอร์โทรติดต่อ",
-      "placeholder": "กรอกเบอร์โทร"
+      "label": "联系电话",
+      "placeholder": "请输入电话号码"
     },
     "emailField": {
-      "placeholder": "กรอกอีเมล"
+      "placeholder": "请输入电子邮件"
     },
-    "contactForm": "แบบฟอร์มติดต่อ",
-    "fraudComplaintForm": "แบบฟอร์มร้องเรียนการทุจริต",
+    "contactForm": "联系表单",
+    "fraudComplaintForm": "欺诈投诉表单",
     "message": {
-      "label": "ข้อความ",
-      "placeholder": "กรุณาพิมพ์ข้อความถึงเรา"
+      "label": "留言",
+      "placeholder": "请填写您的留言"
     },
     "contactNumber": {
-      "title": "เบอร์โทรติดต่อ",
+      "title": "联系电话",
       "description": "+66 (0) 2386 8000"
     },
     "fax": {
-      "title": "โทรสาร",
+      "title": "传真",
       "description": "+66 (0) 2386 8008"
     },
     "address": {
-      "title": "ที่อยู่",
-      "description": "บริษัท สหไทย เทอร์มินอล จำกัด (มหาชน) 51/1 หมู่ 3 ถนนปู่เจ้าสมิงพราย  ตำบลบางหญ้าแพรก อำเภอพระประแดง จังหวัดสมุทรปราการ 10130 ประเทศไทย"
+      "title": "地址",
+      "description": "萨泰终端股份有限公司，51/1号，Moo 3，Phu Chao Saming Phrai路，Bang Yai Prak街区，Phra Pradaeng区，Samut Prakan 10130，泰国"
     },
-    "submit": "ส่งข้อมูล"
+    "submit": "提交",
+    "Validate": {
+      "Name": "姓名是必填项",
+      "Phone": "电话号码是必填项",
+      "Email": "电子邮件是必填项",
+      "Content": "内容是必填项"
+    }
   }
 }
