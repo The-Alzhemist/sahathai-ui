@@ -1,5 +1,7 @@
 import { fetchData, fetchNewsBlogListData } from '@/libs/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
+import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 interface Post {
   id: string
@@ -8,7 +10,6 @@ interface Post {
 }
 
 export const revalidate = 60 // revalidate every 10 min
-
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
@@ -31,14 +32,18 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: any }) {
   const { slug, locale } = params
   const { data } = await fetchData(slug, locale)
+  const t = await getTranslations('NewsPage')
 
   return (
     <section className='relative flex-col'>
       <section className='max-w-[990px] px-5 mx-auto mt-[80px]'>
         <div className='flex justify-between mb-8'>
-          <h1 className='text-xl md:text-3xl text-navy'>ข่าวประชาสัมพันธ์</h1>
+          <h1 className='text-xl md:text-3xl text-navy'>
+            {' '}
+            {t('PageContent.Title')}{' '}
+          </h1>
           <button className='text-sm text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl'>
-            กลับไปหน้าแรก
+            {t('PageContent.Back')}
           </button>
         </div>
 
