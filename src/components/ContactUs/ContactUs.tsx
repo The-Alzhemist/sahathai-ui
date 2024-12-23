@@ -22,6 +22,7 @@ import { contactUsInitialValue } from '@/components/ContactUs/ContactUsInitialVa
 import { contactUsValidationSchema } from '@/components/ContactUs/ContactUsValidation'
 import { Card } from '@/components/ContactUs/components/Card/Card'
 import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
+import Link from 'next/link'
 
 const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
   const t = useTranslations('ContactUs')
@@ -117,14 +118,21 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
           </Form>
         )}
       </Formik>
-      <Image
-        className='w-full'
-        src='/contact-us-map.png'
-        width={0}
-        height={0}
-        sizes='100vw'
-        alt=''
-      />
+      <section>
+        <Link
+          href={'https://maps.app.goo.gl/gmcqzcVK9Ucox9Am7'}
+          className='cursor-pointer'
+        >
+          <Image
+            className='w-full'
+            src='/contact-us-map.png'
+            width={0}
+            height={0}
+            sizes='100vw'
+            alt=''
+          />
+        </Link>
+      </section>
     </Animation>
   )
 }

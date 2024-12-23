@@ -1,35 +1,35 @@
 {
   "ContactUs": {
-    "title": "ติดต่อเรา",
+    "title": "Contact Us",
     "nameField": {
-      "label": "ชื่อ",
-      "placeholder": "กรอกชื่อ"
+      "label": "Name",
+      "placeholder": "Enter your name"
     },
     "phoneNumberField": {
-      "label": "เบอร์โทรติดต่อ",
-      "placeholder": "กรอกเบอร์โทร"
+      "label": "Phone Number",
+      "placeholder": "Enter your phone number"
     },
     "emailField": {
-      "placeholder": "กรอกอีเมล"
+      "placeholder": "Enter your email"
     },
-    "contactForm": "แบบฟอร์มติดต่อ",
-    "fraudComplaintForm": "แบบฟอร์มร้องเรียนการทุจริต",
+    "contactForm": "Contact Form",
+    "fraudComplaintForm": "Fraud Complaint Form",
     "message": {
-      "label": "ข้อความ",
-      "placeholder": "กรุณาพิมพ์ข้อความถึงเรา"
+      "label": "Message",
+      "placeholder": "Please type your message to us"
     },
     "contactNumber": {
-      "title": "เบอร์โทรติดต่อ",
+      "title": "Contact Number",
       "description": "+66 (0) 2386 8000"
     },
     "fax": {
-      "title": "โทรสาร",
+      "title": "Fax",
       "description": "+66 (0) 2386 8008"
     },
     "address": {
-      "title": "ที่อยู่",
-      "description": "บริษัท สหไทย เทอร์มินอล จำกัด (มหาชน) 51/1 หมู่ 3 ถนนปู่เจ้าสมิงพราย  ตำบลบางหญ้าแพรก อำเภอพระประแดง จังหวัดสมุทรปราการ 10130 ประเทศไทย"
+      "title": "Address",
+      "description": "Sathai Terminal Public Company Limited, 51/1 Moo 3, Phu Chao Saming Phrai Road, Bang Yai Prak Subdistrict, Phra Pradaeng District, Samut Prakan 10130, Thailand"
     },
-    "submit": "ส่งข้อมูล"
+    "submit": "Submit"
   }
 }

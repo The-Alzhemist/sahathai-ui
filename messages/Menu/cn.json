@@ -1,10 +1,10 @@
 {
   "Menu": {
-    "aboutUs": "เกี่ยวกับเรา",
-    "infrastructureContainers": "โครงสร้างพื้นฐานและคอนเทนเนอร์",
-    "service": "บริการ",
-    "news": "ข่าวประชาสัมพันธ์",
-    "eService": "e-service",
-    "investorRelations": "นักลงทุนสัมพันธ์"
+    "aboutUs": "关于我们",
+    "infrastructureContainers": "基础设施和集装箱",
+    "service": "服务",
+    "news": "新闻",
+    "eService": "电子服务",
+    "investorRelations": "投资者关系"
   }
 }
