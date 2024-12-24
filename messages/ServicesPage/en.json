@@ -1,59 +1,59 @@
 {
   "ServicesPage": {
     "ComprehensiveCommercialPortServices": {
-      "title": "บริการท่าเทียบเรือเชิงพาณิชย์ครบวงจร",
-      "content": "ท่าเทียบเรือแม่น้ำเอกชน 2 ท่า รองรับตู้สินค้าผ่านท่าได้สูงสุด 740,000 TEUs/ปี ลานซ่อมบำรุงตู้เปล่า รองรับได้สูงสุด 350,000 TEUs/ปี",
+      "title": "Comprehensive Commercial Port Services",
+      "content": "Two private river ports capable of handling up to 740,000 TEUs/year. Empty container maintenance yard with a capacity of up to 350,000 TEUs/year.",
       "commercialDock": {
-        "title": "ท่าเทียบเรือเชิงพาณิชย์",
-        "content": "ท่าเรือบาร์จ ขนาดความกว้างหน้าท่า 96 เมตร สามารถจอดเรือพร้อมกันได้ 2 ลำ"
+        "title": "Commercial Dock",
+        "content": "Barge terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
       },
       "bargeServices": {
-        "title": "บริการเรือบาร์จ",
-        "content": "รองรับการเทียบเรือสำหรับเรือขนส่งสินค้าระหว่างประเทศหรือเรือฟีดเดอร์ (Feeder) ขนาดประมาณ 1,000 ทีอียู และเรือบาร์จ (Barge) ขนาดประมาณ 40 - 240 ทีอียูท่าเรือสหไทยมีท่าเรือทั้งหมด 2 ท่า ได้แก่ ท่าเรือสหไทย ขนาดความกว้างหน้าท่า 170 เมตร และท่าเรือบาร์จ ขนาดความกว้างหน้าท่า 65 เมตร ท่าเรือบาร์จของ BBT ขนาดความกว้างหน้าท่า 96 เมตร สามารถจอดเรือพร้อมกันได้ 2 ลำ"
+        "title": "Barge Services",
+        "content": "Supports berthing for international cargo ships or feeder ships (approximately 1,000 TEUs) and barges (approximately 40–240 TEUs). Sahathai Terminal has two ports: Sahathai Terminal with a berth width of 170 meters and BBT Barge Terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
       },
       "containerHandling": {
-        "title": "ขนถ่าย Container  |  CFS LCL",
-        "content": "ที่สหไทย เทอร์มินอล เราจัดการตู้คอนเทนเนอร์ทุกประเภท เช่น ตู้ขนาด 20, 40, 45 ทีอียู ตู้สูงพิเศษ (High cube) และตู้โครงเหล็ก (Flat rack) ทั้งการจัดส่งแบบเต็มตู้ (FCL) และไม่เต็มตู้ (LCL)ในพื้นที่ 80,000 ตารางเมตร สำหรับ CFS และ CY พร้อมอุปกรณ์ทันสมัย เช่น เครนขาสูง และรถยก เราเน้นความปลอดภัยในทุกขั้นตอน ตั้งแต่การยกขน การบรรจุ การนำสินค้าออก และการซ่อมบำรุง ตำแหน่ง CFS ในท่าเรือช่วยให้การขนย้ายเป็นไปอย่างไร้รอยต่อ การบรรจุสินค้าเน้นประสิทธิภาพและความปลอดภัยเพื่อให้มั่นใจว่าสินค้าจะได้รับการจัดส่งอย่างปลอดภัย"
+        "title": "Container Handling | CFS LCL",
+        "content": "At Sahathai Terminal, we handle all types of containers such as 20, 40, 45 TEUs, high cube containers, and flat rack containers. This includes both full container load (FCL) and less than container load (LCL). With an 80,000 square meter area for CFS and CY and modern equipment such as gantry cranes and forklifts, we emphasize safety in every step, from lifting and packing to unloading and maintenance. The CFS location within the terminal ensures seamless transfers, with efficient and safe packing to guarantee secure delivery of goods."
       },
       "containerMaintenance": {
-        "title": "ซ่อมบำรุงตู้คอนเทนเนอร์",
-        "content": "เป็นการให้บริการล้างทำความสะอาด และซ่อมแซมตู้คอนเทนเนอร์ เพื่อนำกลับมาใช้ในการบรรจุสินค้าเพื่อการส่งออก โดยที่มาของตู้คอนเทนเนอร์เปล่าสามารถมาได้จาก การรับคืนตู้คอนเทนเนอร์เปล่าจากผู้นำเข้าสินค้า และ การนำเข้าตู้คอนเทนเนอร์เปล่ามาโดยสายเดินเรือ"
+        "title": "Container Maintenance",
+        "content": "This service includes cleaning and repairing containers to prepare them for export use. Empty containers can originate from importers returning them or shipping lines bringing them in."
       },
       "groundContainerTransportationServices": {
-        "title": "บริการขนส่งตู้คอนเทนเนอร์ทางบก",
-        "content": "บริการ Door to Door เพื่ออำนวยความสะดวกให้ลูกค้าลดการประสานงาน อีกทั้งเป็นทางเลือกให้กับลูกค้าในการขนส่งตู้สินค้าต่อเนื่องจากท่าเรือแหลมฉบัง"
+        "title": "Ground Container Transportation Services",
+        "content": "Door-to-Door services to facilitate customer operations and offer an option for seamless container transportation from Laem Chabang Port."
       }
     },
     "ContainerStorageWarehouseServices": {
-      "title": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า",
-      "content1": "ลานพื้นที่จัดเก็บตู้สินค้า ในเขตปลอดอากร",
-      "content2": "คลังสินค้าทัณฑ์บน ขนาดพื้นที่ 6,301 ตารางเมตร",
-      "content3": "คลังสินค้าเขตปลอดภาษีอากร ขนาดพื้นที่ 10,686 ตารางเมตร",
-      "content4": "คลังสินค้าปกติ ขนาดพื้นที่ 15,606 ตารางเมตร",
+      "title": "Container Storage and Warehouse Services",
+      "content1": "Container storage yards in the Free Trade Zone",
+      "content2": "Bonded warehouse with an area of 6,301 square meters",
+      "content3": "Free Trade Zone warehouse with an area of 10,686 square meters",
+      "content4": "General warehouse with an area of 15,606 square meters",
       "freeTradeZoneContainerYard": {
-        "title": "ลานตู้สินค้าเขตปลอดอากร",
-        "content": "บริษัทฯ มีการให้บริการลานพื้นที่จัดเก็บตู้คอนเทนเนอร์ในเขตปลอดอากร (Free zone yard) ซึ่งผู้ใช้บริการหลักคือผู้ผลิตรถยนต์รายใหญ่รายหนึ่งโดยผู้ผลิตดังกล่าวใช้พื้นที่สำหรับการจัดเก็บชิ้นส่วนรถยนต์ที่นำเข้ามาเพื่อประกอบรถยนต์ในประเทศไทย โดยจะเก็บชิ้นส่วนรถยนต์เหล่านี้ไว้ในเขตปลอดอากร เพื่อบริหารจัดการภาษีอากรจากการนำเข้าชิ้นส่วนรถยนต์ โดยจะทำพิธีการศุลกากรและชำระอากรก็ต่อเมื่อโรงงานผลิตรถยนต์จะทำการเบิกชิ้นส่วนเหล่านี้ไปใช้"
+        "title": "Free Trade Zone Container Yard",
+        "content": "The company provides container storage services in the Free Trade Zone, primarily serving a major automobile manufacturer. This manufacturer uses the space to store imported auto parts for car assembly in Thailand. The parts are stored in the Free Trade Zone to manage import duties and customs clearance, which are paid only when the parts are withdrawn for use in production."
       },
       "generalWarehouseandBondedWarehouse": {
-        "title": "คลังสินค้าทั่วไปและคลังสินค้าทัณฑ์บน",
-        "content": "คลังสินค้าแบบควบคุมอุณภูมิ มีพื้นที่เช่ารวมประมาณ 6,301 ตารางเมตร โดยเป็นพื้นที่ที่ได้รับอนุญาตให้ใช้เก็บสินค้าตามกฎหมายว่าด้วยศุลกากรเพื่อใช้สำหรับ\n \u2022 เก็บของ\n \u2022 แสดง\n \u2022 ขาย\n \u2022 บรรจุ หรือประกอบของที่เก็บไว้\nเพื่อลดต้นทุนในการผลิตหรือนำเข้าสินค้าจากต่างประเทศ"
+        "title": "General and Bonded Warehouse",
+        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n \u2022 Storing\n \u2022 Exhibiting\n \u2022 Selling\n \u2022 Packing or assembling stored items\nThis reduces production or import costs for goods from abroad."
       },
       "coldStorageWarehouse": {
         "title": "Cold Storage Warehouse",
-        "content": "มีการเพิ่มประสิทธิภาพการจัดการคลังสินค้าด้วยระบบอัตโนมัติ โดยใช้ robot ทำงานแทนมนุษย์ภายในคลังสินค้าประเภทห้องเย็น"
+        "content": "Enhancing warehouse efficiency with automated systems using robots to replace human operations within the cold storage facility."
       },
       "freeTradeZoneWarehouse": {
-        "title": "คลังสินค้าเขตปลอดอากร",
-        "content": "เพื่อการบริหารสินค้าให้ทันต่อการผลิตและช่วยวางแผนภาษีนำเข้าคลังสินค้าเขตปลอดอากร ยังมี\n \u2022 ทำเนียบศุลกากร\n \u2022 เจ้าหน้าที่อาหารและยา \n \u2022 เจ้าหน้าที่เกษตร\n \u2022 เจ้าหน้าที่ประมงประจำท่าเรือ\nสามารถดำเนินพิธีการศุลกากรตรวจปล่อยสินค้าได้ทุกประเภทอย่างสะดวกง่ายดาย"
+        "title": "Free Trade Zone Warehouse",
+        "content": "To ensure timely inventory management for production and assist in import tax planning, the Free Trade Zone warehouse offers:\n \u2022 Customs offices\n \u2022 Food and Drug Administration officers\n \u2022 Agricultural officers\n \u2022 Fisheries officers\nAll customs procedures and product inspections can be conveniently carried out at the port."
       },
       "serviceProviderImportExport": {
-        "title": "ผู้บริการเป็นตัวแทนผู้นำเข้าและส่งออก",
-        "content": "บริษัทให้บริการเป็นตัวแทนผู้ส่งสินค้า (Freight Forwarder) รวมถึงการจัดหาตารางเวลา (Slot) สำหรับเรือขนส่งสินค้าของผู้ส่งออกจัดหาตัวแทนหรือผู้ให้บริการช่วง (Sub-contractor) เพื่อเป็นตัวแทนในการปฏิบัติการเดินเรือของบริษัท"
+        "title": "Import and Export Representation Services",
+        "content": "The company acts as a freight forwarder for exporters, including slot arrangement for cargo ships and subcontracting representatives for the company’s shipping operations."
       }
     },
     "InventoryManagementServices": {
-      "title": "บริการดูแลสินค้าในคลังสินค้า",
-      "content": "ทางบริษัทฯ มีการให้บริการในส่วนของการดูแลสินค้าภายในคลังสินค้าของลูกค้า ทำให้การบริการจัดการเป็นไปด้วยความสะดวกสบายมากยิ่งขึ้น"
+      "title": "Inventory Management Services",
+      "content": "The company provides inventory management services for clients' warehouses, ensuring smooth and convenient operations."
     }
   }
 }
