@@ -1,127 +1,127 @@
 {
   "AboutUsPage": {
     "Tabs": {
-      "visionMission": "วิสัยทัศน์และพันธกิจ",
-      "ourCommitmentSuccess": "ความมุ่งมั่นและความสำเร็จของเรา",
-      "boardDirectorsExecutiveCommittee": "คณะกรรมการ & คณะผู้บริหาร",
-      "corporateGroupStructureOrganizationalStructure": "โครงสร้างกลุ่มบริษัทและโครงสร้างองค์กร"
+      "visionMission": "Vision and Mission",
+      "ourCommitmentSuccess": "Our Commitment and Success",
+      "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
+      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
     },
     "VisionMissionValues": {
       "Slogan": {
-        "title": "นี่คือสิ่งที่เราเชื่อมั่นในฐานะผู้ปฏิบัติการท่าเรือชั้นนำแนวทางการปฏิบัติงานของสหไทย เทอร์มินอลความมุ่งมั่นที่เรามีต่อลูกค้าและพันธมิตรของเรา"
+        "title": "This is what we believe in as a leading port operator, the operational approach of Sathai Terminal, and our commitment to our customers and partners."
       },
       "Vision": {
-        "content": "นี่คือสิ่งที่เราเชื่อมั่นในฐานะผู้ปฏิบัติการท่าเรือชั้นนำแนวทางการปฏิบัติงานของสหไทย เทอร์มินอล ความมุ่งมั่นที่เรามีต่อลูกค้าและพันธมิตรของเรา",
+        "content": "This is what we believe in as a leading port operator, the operational approach of Sathai Terminal, and our commitment to our customers and partners.",
         "vision": {
-          "title": "วิสัยทัศน์",
-          "content": "เป็นผู้นำในการให้บริการโลจิสติกส์แบบครบวงจรด้วยนวัตกรรมและโซลูชั่นที่สามารถตอบโจทย์ลูกค้าได้อย่างแท้จริง"
+          "title": "Vision",
+          "content": "To be a leader in providing integrated logistics services with innovative solutions that truly meet customer needs."
         }
       },
       "OurMission": {
-        "title": "พันธกิจ",
+        "title": "Mission",
         "missionToCustomers": {
-          "title": "พันธกิจต่อลูกค้า",
-          "content": "“สร้างมูลค่าให้กับลูกค้า ด้วยระบบโซลูชั่นที่ทันสมัยพร้อมบริการที่มีประสิทธิภาพ”"
+          "title": "Mission to Customers",
+          "content": "“Create value for customers with modern solutions and efficient services.”"
         },
         "missionToShareholders": {
-          "title": "พันธกิจต่อผู้ถือหุ้น",
-          "content": "“สร้างมูลค่าให้กับผู้ถือหุ้น ด้วยการเติบโตที่ยั่งยืนและการบริหารงานที่ได้มาตรฐาน”"
+          "title": "Mission to Shareholders",
+          "content": "“Create value for shareholders with sustainable growth and standardized management.”"
         },
         "missionToEmployees": {
-          "title": "พันธกิจต่อพนักงาน",
-          "content": "“สร้างบรรยากาศการทำงานที่ดี และส่งเสริมการพัฒนาทักษะการเรียนรู้ รวมทั้งส่งเสริมความก้าวหน้าทางการงาน”"
+          "title": "Mission to Employees",
+          "content": "“Create a good work environment, promote skill development, and encourage career advancement.”"
         },
         "missionToSociety": {
-          "title": "พันธกิจต่อสังคม",
-          "content": "“ช่วยเหลือ สนับสนุน และแสดงความรับผิดชอบต่อสังคมและสิ่งแวดล้อม”"
+          "title": "Mission to Society",
+          "content": "“Help, support, and demonstrate responsibility toward society and the environment.”"
         }
       },
       "CoreValues": {
-        "title": "ค่านิยมหลัก",
+        "title": "Core Values",
         "serviceMind": {
           "title": "SERVICE MIND",
-          "content": "บริการด้วยใจ"
+          "content": "Serve with heart."
         },
         "openness": {
           "title": "OPENNESS",
-          "content": "เปิดใจรับความคิดเห็นใหม่ๆและการเปลี่ยนแปลง"
+          "content": "Open to new ideas and change."
         },
         "integrity": {
           "title": "INTEGRITY",
-          "content": "ซื่อสัตย์และโปร่งใส"
+          "content": "Honest and transparent."
         },
         "innovation": {
           "title": "INNOVATION",
-          "content": "สร้างสรรค์สิ่งใหม่ๆที่เป็นประโยชน์"
+          "content": "Create new and useful things."
         }
       }
     },
     "CommitmentSuccess": {
-      "startingBusiness": "เริ่มดำเนินกิจการตั้งแต่ พ.ศ. 2550",
-      "content": "สหไทย เทอร์มินอล เป็นบริษัทเอกชน เริ่มเปิดดำเนินกิจการครั้งแรก ในปี พ.ศ. 2550 โดยบริษัทฯ มีพื้นที่ในการปฏิบัติการทั้งหมด 315,200 ตารางเมตร ประกอบด้วยพื้นที่ซ่อมบำรุงตู้คอนเทนเนอร์ สำนักงานศุลกากรภายในพื้นที่ท่าเรือ และมีเครื่องมือประจำท่าเรือสำหรับยกขนสินค้าอย่างครบวงจร พร้อมบุคลากรที่มีทักษะและความเชี่ยวชาญ สหไทย เทอร์มินอล ตั้งอยู่บริเวณริมแม่น้ำเจ้าพระยา ให้บริการลูกค้าอย่างครบวงจร คุณสามารถวางใจได้ว่า เรามีโซลูชั่นที่ครอบคลุมและมีบริการเสริมพร้อมตอบสนองทุกความต้องการ ทุกบริการของเราได้รับการรับรองด้วยมาตรฐานระดับโลก ขณะเดียวกัน เราสามารถให้บริการได้อย่างยืดหยุ่น ซึ่งผู้ปฏิบัติการท่าเทียบเรืออิสระเท่านั้นที่สามารถเสนอบริการเหล่านี้ได้",
+      "startingBusiness": "Started operations in 2007",
+      "content": "Sahathai Terminal is a private company that began operations in 2007. The company has a total operational area of 315,200 square meters, including a container maintenance area, a customs office within the port area, and full-service port handling equipment, along with skilled and expert personnel. Sathai Terminal is located along the Chao Phraya River, offering comprehensive services to customers. You can trust that we have complete solutions and supplementary services to meet every need. All of our services are certified by global standards, while we are also able to offer flexible services, which only independent port operators can provide.",
       "2551": {
-        "year": "2551",
-        "title": "ก่อตั้งท่าเทียบเรือแม่น้ำสหไทย"
+        "year": "2008",
+        "title": "Established Sahathai River Terminal"
       },
       "2556": {
-        "year": "2556",
-        "title": "เปลี่ยนชื่อเป็น ‘สหไทย เทอร์มินอล’"
+        "year": "2013",
+        "title": "Renamed to 'Sahathai Terminal'"
       },
       "2558": {
-        "year": "2558",
-        "title": "ขยายท่าเทียบเรือใหม่ ",
-        "content": "ขยายท่าเทียบเรือใหม่ร่วมกับ MOL ให้บริการภายใต้ชื่อ ‘Bangkok Barge Terminal’ หรือ BBT "
+        "year": "2015",
+        "title": "Expanded the new dock",
+        "content": "Expanded the new dock with MOL under the name 'Bangkok Barge Terminal' or BBT."
       },
       "2559_2560": {
-        "year": "2559-2560",
-        "title": "เปิดให้บริการขนส่งตู้สินค้าทางน้ำ",
-        "content": "เปิดให้บริการขนส่งตู้สินค้าทางน้ำโดยใช้เรือขนส่งสินค้าชายฝั่ง ด้วยบริการของ Bangkok Barge Service"
+        "year": "2016-2017",
+        "title": "Launched container shipping services by water",
+        "content": "Launched container shipping services by water using coastal cargo vessels through Bangkok Barge Service."
       },
       "2560_2562": {
-        "year": "2560-2562",
-        "content": "สร้าง Depot แห่งใหม่",
-        "content2": "ลานเก็บตู้คอนเทนเนอร์",
-        "content3": "คลังสินค้าปลอดภาษี",
-        "content4": "ตั้งบริษัทร่วมทุนเพื่อลงทุนใน 2 โครงการ (ท่าเรือขนส่งสินค้าระหว่างประเทศ / ศูนย์กระจายสินค้า)"
+        "year": "2017-2019",
+        "content": "Built a new depot",
+        "content2": "Container yard",
+        "content3": "Bonded warehouse",
+        "content4": "Formed a joint venture company to invest in two projects (international cargo port / distribution center)."
       },
       "2568": {
-        "year": "2568",
-        "content": "เราจะเป็นผู้นำในการให้บริการโลจิสติกส์แบบครบวงจรและยั่งยืนโดยมุ่งเน้นไปในกลุ่มบริการท่าเทียบเรือบริการขนส่งทางเรือและทางรถบริการคลังสินค้าและศูนย์กระจายสินค้าและบริการเสริมอื่นๆที่สร้างมูลค่าเพิ่มให้กับลูกค้าของเรา"
+        "year": "2025",
+        "content": "We will be the leader in providing integrated and sustainable logistics services, focusing on port services, maritime and road transportation, warehousing, distribution centers, and other value-added services for our customers."
       }
     },
     "BoardAndExecutives": {
-      "content": "สหไทยเทอร์มินอลให้ความสำคัญกับการสื่อสารภายในองค์กรเป็นอย่างยิ่ง เราให้ความสำคัญกับบุคลากรในทุกระดับและส่งเสริมให้ทุกฝ่ายสื่อสารและปฏิบัติงานร่วมกันอย่างราบรื่น โดยบุคลากรในระดับหัวหน้างานปฏิบัติงานจะร่วมงานกับบุคลากรที่ตนดูแลอย่างใกล้ชิด นับตั้งแต่การขายไปจนถึงการฝึกฝนทักษะ เราให้ความสำคัญกับความเท่าเทียมภายในองค์กรเป็นอย่างมาก เพื่อให้มั่นใจว่า บุคลากรของเราทุกคนมีความเข้าใจและตระหนักถึงคุณค่าที่ทุกคนมีต่อองค์กร และเพื่อให้วางใจได้ว่า บุคลากรทุกคนมีเป้าหมายเดียวกัน นั่นคือ การปฏิบัติงานและให้บริการที่ตรงตามความต้องการของลูกค้ามากที่สุด",
+      "content": "Sathai Terminal places great importance on internal communication within the organization. We value personnel at all levels and promote smooth collaboration across all parties. Supervisors work closely with the personnel under their care, from sales to skill development. We highly emphasize equality within the organization to ensure that all our employees understand and recognize their value to the organization. This ensures that everyone shares a common goal, which is to perform and deliver services that best meet our customers' needs.",
       "Board": {
-        "title": "คณะกรรมการ"
+        "title": "Board of Directors"
       },
       "Executives": {
-        "title": "คณะผู้บริหาร"
+        "title": "Executive Committee"
       },
       "Subcommittee": {
-        "title": "คณะอนุกรรมการ",
+        "title": "Subcommittees",
         "auditCommittee": {
-          "title": "คณะกรรมการตรวจสอบ",
-          "content": "คณะกรรมการตรวจสอบของเรา มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน\nสมาชิกของคณะกรรมการตรวจสอบมีดังนี้\nคุณวิไล¹ ฉัททันต์รัศมี ตำแหน่งประธานกรรมการตรวจสอบ\nคุณยุทธ วรฉัตรธาร ตำแหน่งกรรมการตรวจสอบ\nคุณวิทิต ลีนุตพงษ์ ตำแหน่งกรรมการตรวจสอบ\nพร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน\nหมายเหตุ\n1. เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี\n2. บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์"
+          "title": "Audit Committee",
+          "content": "Our Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
         },
         "executiveCommittee": {
-          "title": "คณะกรรมการบริหาร",
-          "content": "คณะกรรมการตรวจสอบของเรา มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน\nสมาชิกของคณะกรรมการตรวจสอบมีดังนี้\nคุณวิไล¹ ฉัททันต์รัศมี ตำแหน่งประธานกรรมการตรวจสอบ\nคุณยุทธ วรฉัตรธาร ตำแหน่งกรรมการตรวจสอบ\nคุณวิทิต ลีนุตพงษ์ ตำแหน่งกรรมการตรวจสอบ\nพร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน\nหมายเหตุ\n1. เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี\n2. บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์"
+          "title": "Executive Committee",
+          "content": "The Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
         },
         "nominationAndRemunerationCommittee": {
-          "title": "คณะกรรมการสรรหาและกำหนดค่าตอบแทน",
-          "content": "คณะกรรมการตรวจสอบของเรา มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน\nสมาชิกของคณะกรรมการตรวจสอบมีดังนี้\nคุณวิไล¹ ฉัททันต์รัศมี ตำแหน่งประธานกรรมการตรวจสอบ\nคุณยุทธ วรฉัตรธาร ตำแหน่งกรรมการตรวจสอบ\nคุณวิทิต ลีนุตพงษ์ ตำแหน่งกรรมการตรวจสอบ\nพร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน\nหมายเหตุ\n1. เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี\n2. บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์"
+          "title": "Nomination and Remuneration Committee",
+          "content": "The Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
         },
         "enterpriseRiskManagementCommittee": {
-          "title": "คณะกรรมการบริหารความเสี่ยงองค์กร",
-          "content": "คณะกรรมการตรวจสอบของเรา มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน\nสมาชิกของคณะกรรมการตรวจสอบมีดังนี้\nคุณวิไล¹ ฉัททันต์รัศมี ตำแหน่งประธานกรรมการตรวจสอบ\nคุณยุทธ วรฉัตรธาร ตำแหน่งกรรมการตรวจสอบ\nคุณวิทิต ลีนุตพงษ์ ตำแหน่งกรรมการตรวจสอบ\nพร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน\nหมายเหตุ\n1. เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี\n2. บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์"
+          "title": "Enterprise Risk Management Committee",
+          "content": "The Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
         }
       }
     },
     "CorporateGroupOrganizationalStructure": {
-      "corporateGroup": "โครงสร้างกลุ่มบริษัท",
+      "corporateGroup": "Corporate Group Structure",
       "organizationalStructure": {
-        "title": "โครงสร้างองค์กร",
-        "content": "แผนภาพด้านล่างแสดงให้เห็นถึงโครงสร้างองค์กรของเรา ณ วันที่ 10 พฤศจิกายน 2566 คณะกรรมการของบริษัท สหไทย เทอร์มินอล จำกัด (มหาชน) ประกอบด้วย คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ คณะกรรมการตรวจสอบ คณะกรรมการบริหาร และคณะกรรมการสรรหาและพิจารณาค่าตอบแทน"
+        "title": "Organizational Structure",
+        "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
       }
     },
     "YuthVorachattarn": {
