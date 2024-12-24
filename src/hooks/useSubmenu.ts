@@ -6,15 +6,24 @@ export function useSubmenu() {
 
   const menus = useMemo(() => {
     return [
-      { title: t('aboutUs'), pathname: '/about-us' },
-      { title: t('service'), pathname: '/services' },
+      { title: t('aboutUs'), pathname: '/about-us', isExternalLink: false },
+      { title: t('service'), pathname: '/services', isExternalLink: false },
       {
         title: t('infrastructureContainers'),
         pathname: '/infrastructure-containers',
+        isExternalLink: false,
       },
-      { title: t('news'), pathname: '/news' },
-      { title: t('eService'), pathname: '#' },
-      { title: t('investorRelations'), pathname: '/investor-information' },
+      { title: t('news'), pathname: '/news', isExternalLink: false },
+      {
+        title: t('eService'),
+        pathname: 'https://sahathaiterminal.com/th/tracking/',
+        isExternalLink: true,
+      },
+      {
+        title: t('investorRelations'),
+        pathname: '/investor-information',
+        isExternalLink: false,
+      },
     ]
   }, [t])
 
