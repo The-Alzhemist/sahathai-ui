@@ -24,28 +24,38 @@ export function Header() {
           <Image src='/logo.png' width={101} height={24} alt='' priority />
         </Link>
 
-        <ul className='flex justify-end items-center w-full medium text-background gap-[42px] mobile:hidden mr-10'>
-          <li>
-            <Link href='/contact-us' className='flex items-center'>
-              {t('contactUs')}
-            </Link>
-          </li>
-          <li>
-            <Link className='flex items-center' href='/join-us'>
-              {t('joinUs')}
-            </Link>
-          </li>
-          <li>
+        <section className='flex gap-x-5'>
+          <div className='sm:hidden'>
             <LocaleButton />
-          </li>
-          {/* <li>
+          </div>
+
+          <ul className='flex justify-end items-center w-full medium text-background gap-[42px] mobile:hidden mr-10'>
+            <li>
+              <Link href='/contact-us' className='flex items-center'>
+                {t('contactUs')}
+              </Link>
+            </li>
+            <li>
+              <Link className='flex items-center' href='/join-us'>
+                {t('joinUs')}
+              </Link>
+            </li>
+            <li>
+              <LocaleButton />
+            </li>
+            {/* <li>
             <SearchInput className='max-w-[200px]' />
           </li> */}
+            {/* <button onClick={() => handleOnToggleMobileSidebar(true)}>
+            <ListIcon width='25' height='25' />
+          </button> */}
+          </ul>
           <button onClick={() => handleOnToggleMobileSidebar(true)}>
             <ListIcon width='25' height='25' />
           </button>
-        </ul>
+        </section>
       </div>
+
       {isMobileSidebarOpen && (
         <MobileSidebar
           handleOnToggleMobileSidebar={handleOnToggleMobileSidebar}
