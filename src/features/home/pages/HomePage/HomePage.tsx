@@ -23,7 +23,6 @@ export function HomePage() {
       <OurSubsidiaries />
       <ContactUs className='mt-[94px] mb-[111px]' />
       <HamburgerMenu />
-      <CookieConsentFloatingBar />
     </main>
   )
 }

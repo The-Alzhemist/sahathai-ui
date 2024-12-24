@@ -16,7 +16,6 @@ export function InfrastructureContainersPage() {
       <LogisticInnovation />
       <OperationGuidelines />
       <ContactUs className='mt-[80px]' />
-      <CookieConsentFloatingBar />
     </main>
   )
 }

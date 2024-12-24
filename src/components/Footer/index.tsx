@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import { Link } from '@/libs/intl/navigation'
 import { FacebookIcon } from '../icons/FacebookIcon'
 import { InstagramIcon } from '../icons/InstagramIcon'
 import { YoutubeIcon } from '../icons/YoutubeIcon'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 export function Footer() {
   const t = useTranslations('Footer')

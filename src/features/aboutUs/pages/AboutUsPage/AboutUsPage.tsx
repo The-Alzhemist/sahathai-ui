@@ -36,7 +36,6 @@ export function AboutUsPage({ tabs, active, setActive }: AboutPageProps) {
       ) : active === t('corporateGroupStructureOrganizationalStructure') ? (
         <CorporateGroupOrganizationalStructure />
       ) : null}
-      <CookieConsentFloatingBar />
     </main>
   )
 }
