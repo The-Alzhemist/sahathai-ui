@@ -37,7 +37,6 @@ export function NewsPage() {
           <Brochure className='' />
         </section>
       </section>
-      <CookieConsentFloatingBar />
     </main>
   )
 }

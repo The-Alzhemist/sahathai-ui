@@ -1,19 +1,19 @@
 {
   "JoinUsPage": {
     "Banner": {
-      "title": "เรากำลังมองหาบุคลากรที่มีความสามารถ\nเพื่อร่วมเป็นส่วนหนึ่งกับองค์กรที่กำลังเติบโตของเรา",
-      "description": "สหไทย เทอร์มินอล มีโครงการฝึกทักษะบุคลากร รวมทั้งยังมีการส่งเสริมความก้าวหน้าทางการงานอีกด้วย\nตั้งแต่ตำแหน่งบริหารระดับกลางและระดับสูง ไปจนถึงตำแหน่งหัวหน้างานในส่วนของฝ่ายปฏิบัติการและฝ่ายวิศวกรรม\nถ้าคุณเป็นคนหนึ่งที่เชื่อมั่นในทักษะของตนเอง มีประสบการณ์ และสนใจสมัครงานในตำแหน่งที่เปิดรับของเรา\nสามารถศึกษารายละเอียดและกดสมัครงานได้ตามลิ้งก์ด้านล่าง"
+      "title": "We are looking for talented individuals\nto join our growing organization",
+      "description": "Sahathai Terminal offers skill development programs and promotes career advancement\nfrom mid-level and senior management positions to supervisory roles in operations and engineering.\nIf you believe in your skills, have experience, and are interested in applying for one of our open positions,\nyou can review the details and apply via the link below."
     },
     "Policy": {
-      "workplaceSafetyHygienePolicy": "นโยบายและแนวปฏิบัติเกี่ยวกับความปลอดภัยและสุขอนามัยในสถานที่ทำงาน",
-      "employeeCompensationPolicy": "นโยบายอัตราค่าตอบแทนพนักงาน ทั้งระยะสั้นและระยะยาว",
-      "companyPersonnelDevelopmentPolicy": "นโยบายการพัฒนาบุคลากรของบริษัท",
-      "humanResourcesLaborRelationsPolicy": "นโยบายการบริหารทรัพยากรบุคคล และแรงงานสัมพันธ์",
-      "measuresPreventSpreadCovid19Virus": "มาตรการป้องกันการระบาดของโรคติดเชื้อไวรัส Covid-19"
+      "workplaceSafetyHygienePolicy": "Workplace Safety and Hygiene Policy",
+      "employeeCompensationPolicy": "Employee Compensation Policy (short-term and long-term)",
+      "companyPersonnelDevelopmentPolicy": "Company Personnel Development Policy",
+      "humanResourcesLaborRelationsPolicy": "Human Resources and Labor Relations Policy",
+      "measuresPreventSpreadCovid19Virus": "Measures to Prevent the Spread of COVID-19"
     },
     "ContactHumanResources": {
-      "title": "ติดต่อฝ่ายทรัพยากรบุคคลของบริษัทได้ที่",
-      "phoneNumber": "02-386-8000 ต่อ 1511 - 1513"
+      "title": "You can contact the company's Human Resources department at",
+      "phoneNumber": "02-386-8000 ext. 1511 - 1513"
     }
   }
 }
