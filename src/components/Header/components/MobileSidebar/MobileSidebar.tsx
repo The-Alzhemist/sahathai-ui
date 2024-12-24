@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 import { useAnimation } from '@/hooks/useAnimation'
 import { cn } from '@/libs/util'
 import { useMobileSidebarAnimation } from '@/hooks/useMobileSidebarAnimation'
+import { LocaleButton } from '@/components/LocaleButton'
 
 const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   const t = useTranslations('Header')
