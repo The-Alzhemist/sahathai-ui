@@ -18,7 +18,7 @@ export function PeopleCard({
       className='max-w-[202px] w-full cursor-pointer'
       onClick={onClick}
     >
-      <div className='relative w-full overflow-hidden rounded-[15px] overflow-hidden shadow-8 bg-white'>
+      <div className='relative w-full overflow-hidden rounded-[15px] shadow-8 bg-white'>
         <div className='relative pt-[108.91%] w-full'>
           <div className={cn('absolute', imageClassName)}>
             {imageUrl ? (
