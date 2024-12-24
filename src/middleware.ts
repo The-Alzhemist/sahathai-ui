@@ -5,6 +5,7 @@ const locales = ['th', 'en', 'cn']
 export default createMiddleware({
   locales,
   defaultLocale: 'th',
+  localeDetection: true,
 })
 
 export const config = {

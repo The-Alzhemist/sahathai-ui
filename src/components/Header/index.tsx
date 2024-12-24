@@ -16,7 +16,7 @@ export function Header() {
           <Image src='/logo.png' width={101} height={24} alt='' priority />
         </Link>
 
-        <ul className='flex justify-end items-center w-full medium text-background gap-[42px] mobile:hidden'>
+        <ul className='flex justify-end items-center w-full medium text-background gap-[42px] mobile:hidden mr-10'>
           <li>
             <Link href='/contact-us' className='flex items-center'>
               {t('contactUs')}
@@ -30,9 +30,9 @@ export function Header() {
           <li>
             <LocaleButton />
           </li>
-          <li>
+          {/* <li>
             <SearchInput className='max-w-[200px]' />
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
