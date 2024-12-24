@@ -14,7 +14,7 @@ export function JoinUsPage() {
       <section className='px-5'>
         <ContactHumanResources />
       </section>
-      <CookieConsentFloatingBar />
+      {/* <CookieConsentFloatingBar /> */}
     </main>
   )
 }

@@ -42,7 +42,6 @@ const PolicyPage = () => {
           />
         </div>
       </section>
-      <CookieConsentFloatingBar />
     </main>
   )
 }

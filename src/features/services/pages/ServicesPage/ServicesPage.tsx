@@ -14,7 +14,7 @@ export function ServicesPage() {
       <ContainerStorageWarehouseServices />
       <InventoryManagementServices />
       <ContactUs className='pt-[80px] pb-[114px]' />
-      <CookieConsentFloatingBar />
+      {/* <CookieConsentFloatingBar /> */}
     </main>
   )
 }
