@@ -26,12 +26,14 @@ export function Collapse({ title, content, imageUrl }: CollapseProps) {
       </div>
       {toggle && (
         <div className='flex flex-col md:flex-row gap-[30px] pb-[28px]'>
-          <div className='max-w-[230px] w-full shadow-9'>
+          <div className='shadow-9 w-[100%] md:w-[40%]'>
             <div className='relative pt-[59.13%] w-full'>
               <Image src={imageUrl} fill alt='' />
             </div>
           </div>
-          <div className='prompt text-[15.5px] text-darkGray'>{content}</div>
+          <div className='prompt text-[15.5px] text-darkGray w-[100%] md:w-[60%]'>
+            {content}
+          </div>
         </div>
       )}
     </Animation>
