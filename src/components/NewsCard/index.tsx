@@ -22,7 +22,11 @@ export function NewsCard({
   const imageDefault = '/background.jpeg'
 
   return (
-    <div className={cn('w-full md:w-[266px]  overflow-hidden')}>
+    <div
+      className={cn(
+        'w-full md:w-[290px]  overflow-hidden border border-gray-150 rounded-[5px] p-2'
+      )}
+    >
       <Image
         src={image ? image : imageDefault}
         alt='Picture of the author'
@@ -41,13 +45,13 @@ export function NewsCard({
       </div>
       <Link
         href={`/news/${slug}`}
-        className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center'
+        className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center transition-all  hover:scale-110 '
       >
         <button
-          className='p-[10px] bg-navy rounded-full text-white'
+          className='p-[10px] bg-navy rounded-full text-white '
           type='button'
         >
-          <ArrowRightIcon width='20' height='20' />
+          <ArrowRightIcon width='10' height='10' />
         </button>
         {common('readMore')}
       </Link>
