@@ -19,7 +19,11 @@ export function Menu() {
         <Menu.Item className='min-w-[140px]' href='/news'>
           {t('news')}
         </Menu.Item>
-        <Menu.Item className='min-w-[140px]' href=''>
+        <Menu.Item
+          className='min-w-[140px]'
+          href='https://sahathaiterminal.com/th/tracking/'
+          isExternalLink={true}
+        >
           {t('eService')}
         </Menu.Item>
         <Menu.Item className='min-w-[140px]' href='/investor-information'>
@@ -30,18 +34,33 @@ export function Menu() {
   )
 }
 
-Menu.Item = function Item({ children, href, className }: MenuItemProps) {
+Menu.Item = function Item({
+  children,
+  href,
+  className,
+  isExternalLink = false,
+}: MenuItemProps) {
   return (
-    <li className='group-hover:text-black-9 whitespace-nowrap'>
-      <Link
-        href={href}
-        className={cn(
-          'hover:text-navy hover:border-secondary border-b-[3px] border-b-white py-[16.5px] px-[12px] block text-center uppercase min-w-[100px]',
-          className
-        )}
-      >
-        {children}
-      </Link>
-    </li>
+    <>
+      {!isExternalLink && (
+        <li className='group-hover:text-black-9 whitespace-nowrap'>
+          <Link
+            href={href}
+            className={cn(
+              'hover:text-navy hover:border-secondary border-b-[3px] border-b-white py-[16.5px] px-[12px] block text-center uppercase min-w-[100px]',
+              className
+            )}
+          >
+            {children}
+          </Link>
+        </li>
+      )}
+
+      {isExternalLink && (
+        <a target='_blank' rel='noopener noreferrer' href={href}>
+          {children}xx
+        </a>
+      )}
+    </>
   )
 }
