@@ -5,9 +5,17 @@ import Image from 'next/image'
 import { Link } from '@/libs/intl/navigation'
 import { LocaleButton } from '@/components/LocaleButton'
 import { SearchInput } from './SearchInput'
+import { ListIcon } from '@/components/icons/ListIcon'
+import { useState } from 'react'
+import MobileSidebar from '@/components/Header/components/MobileSidebar/MobileSidebar'
 
 export function Header() {
   const t = useTranslations('Header')
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
+
+  const handleOnToggleMobileSidebar = (isOpen: boolean) => {
+    setIsMobileSidebarOpen(isOpen)
+  }
 
   return (
     <div className='shadow-1 sticky top-0 bg-white z-20'>
@@ -33,8 +41,16 @@ export function Header() {
           {/* <li>
             <SearchInput className='max-w-[200px]' />
           </li> */}
+          <button onClick={() => handleOnToggleMobileSidebar(true)}>
+            <ListIcon width='25' height='25' />
+          </button>
         </ul>
       </div>
+      {isMobileSidebarOpen && (
+        <MobileSidebar
+          handleOnToggleMobileSidebar={handleOnToggleMobileSidebar}
+        />
+      )}
     </div>
   )
 }
