@@ -2,8 +2,9 @@
 
 import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
 import withCookieConsentFloatingBar from './withCookieConsentFloatingBar'
-import Link from 'next/link'
+
 import { useLocale, useTranslations } from 'next-intl'
+import { Link } from '@/libs/intl/navigation'
 
 const CookieConsentFloatingBar = ({
   handleOnClickAccept,
@@ -20,10 +21,10 @@ const CookieConsentFloatingBar = ({
             <div className='text-xl font-semibold mb-2'>{t('Title')}</div>
             <div className='text-sm font-light flex gap-x-2'>
               {t('Description')}
-              {/* TODO:   href='/privacy-policy' need to change to navigate with locale */}
+
               <Link
                 className='text-primary border-b border-primary'
-                href={`${locale}/privacy-policy`}
+                href={`/privacy-policy`}
               >
                 {t('ReadPolicy')}
               </Link>
