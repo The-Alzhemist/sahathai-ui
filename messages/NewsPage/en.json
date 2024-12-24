@@ -1,10 +1,10 @@
 {
   "NewsPage": {
-    "latestNews": "ข่าวล่าสุด",
-    "pressRelease": "ข่าวประชาสัมพันธ์",
+    "latestNews": "Latest News",
+    "pressRelease": "Press Release",
     "Brochure": {
-      "title": "ดาวน์โหลดโบรชัวร์ของเราได้ที่นี่",
-      "description": "โบรชัวร์ของเรา มีขนาดไฟล์ PDF 3.3 MB ซึ่งภายในมีข้อมูลเกี่ยวกับบริษัท ท่าเรือ และการปฏิบัติงานของเรา คลิ้กที่ภาพเพื่อดาวน์โหลดหรือคลิ้กเพื่อให้แสดงภาพผ่านเบราวเซอร์"
+      "title": "Download Our Brochure Here",
+      "description": "Our brochure is a PDF file of 3.3 MB, containing information about the company, the port, and our operations. Click on the image to download or click to view the image in the browser."
     },
     "PageContent": {
       "Title": "Press Release",
