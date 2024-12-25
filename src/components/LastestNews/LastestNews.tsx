@@ -35,6 +35,8 @@ export async function LastestNews() {
 
   const image = latestNews.content.body[0].newsImageCover.filename
 
+  const newsDate = latestNews.content.body[0].newsDate
+
   return (
     <section
       className={cn(
@@ -68,7 +70,7 @@ export async function LastestNews() {
             latestNews.content.body[0].newsDescription
           )}
         </p>
-        <div className='mt-[10px] caption text-black-3'>mock date</div>
+        <div className='mt-[10px] caption text-black-3'>{newsDate}</div>
 
         <Link
           href={`/news/${latestNews.slug}`}
