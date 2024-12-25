@@ -2,6 +2,12 @@
   "Header": {
     "contactUs": "联系我们",
     "joinUs": "加入我们",
-    "search": "搜索"
+    "search": "搜索",
+    "infra": "基础设施和容器",
+    "news": "新闻",
+    "eService": "电子服务",
+    "invester": "投资者关系",
+    "aboutUs": "关于我们",
+    "service": "服务"
   }
 }
