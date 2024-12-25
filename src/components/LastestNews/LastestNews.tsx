@@ -6,6 +6,7 @@ import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 import { LastestNewsProps } from '@/components/LastestNews/interface'
 import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
+import Image from 'next/image'
 
 // export async function generateStaticParams() {
 //   const locales = ['th', 'en']
@@ -26,11 +27,15 @@ export async function LastestNews() {
   const locale = useLocale()
   const common = useTranslations('common')
   const { data } = await fetchNewsBlogListData(1, 10, locale)
-  const datas = data
+  const dataBlog = data
 
-  const latestNews = datas.stories.filter(
+  const latestNews = dataBlog.stories.filter(
     (d: any, index: number) => index === 0
   )[0]
+
+  const image = latestNews.content.body[0].newsImageCover.filename
+
+  const newsDate = latestNews.content.body[0].newsDate
 
   return (
     <section
@@ -39,7 +44,21 @@ export async function LastestNews() {
       )}
     >
       <div className='w-full md:w-[48%]'>
-        <img src='https://placehold.co/600x400' className='w-full' />
+        {image ? (
+          <Image
+            src={image}
+            alt='Dynamic image'
+            width={600} // Replace with your desired width
+            height={500} // Replace with your desired height
+            className='w-full h-full'
+          />
+        ) : (
+          <img
+            src='https://placehold.co/600x400'
+            alt='Placeholder image'
+            className='w-full'
+          />
+        )}
       </div>
 
       <div className='w-full md:w-[52%] p-5'>
@@ -51,7 +70,7 @@ export async function LastestNews() {
             latestNews.content.body[0].newsDescription
           )}
         </p>
-        <div className='mt-[10px] caption text-black-3'>mock date</div>
+        <div className='mt-[10px] caption text-black-3'>{newsDate}</div>
 
         <Link
           href={`/news/${latestNews.slug}`}

@@ -29,7 +29,7 @@ const EventNewsDetailCard: React.FC<any> = ({ blok }) => {
           }
           className='rounded-[5px] w-90% mx-auto mb-5'
         />
-        <div className='text-sm text-gray-600 mb-5'>25 June 2024(mock)</div>
+        <div className='text-sm text-gray-600 mb-5'>{blok.newsDate}</div>
         <h2 className=' text-navy font-medium mb-3'>{blok.newsTitle}</h2>
         <div className='text-gray-600' />
         {html}

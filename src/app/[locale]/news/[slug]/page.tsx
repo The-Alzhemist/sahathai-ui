@@ -1,3 +1,4 @@
+import { Link } from '@/libs/intl/navigation'
 import { fetchData, fetchNewsBlogListData } from '@/libs/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
 import { useTranslations } from 'next-intl'
@@ -39,11 +40,10 @@ export default async function Page({ params }: { params: any }) {
       <section className='max-w-[990px] px-5 mx-auto mt-[80px]'>
         <div className='flex justify-between mb-8'>
           <h1 className='text-xl md:text-3xl text-navy'>
-            {' '}
-            {t('PageContent.Title')}{' '}
+            {t('PageContent.Title')}
           </h1>
           <button className='text-sm text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl'>
-            {t('PageContent.Back')}
+            <Link href='/news'> {t('PageContent.Back')}</Link>
           </button>
         </div>
 
