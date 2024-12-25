@@ -34,7 +34,7 @@ export function OperationGuidelines() {
 
   return (
     <section className='bg-[url("/background.jpeg")] bg-center bg-cover py-10'>
-      <Animation className='my-10  max-w-[990px] w-full mx-auto px-5'>
+      <Animation className='my-10  max-w-[930px] w-full mx-auto px-5'>
         <h1 className='headline-2 text-center  text-white'>{t('title')}</h1>
         <section className='w-full flex flex-col md:flex-row gap-[24px] p-[16px] mt-[20px] shadow-2 rounded-[5px] bg-white'>
           <Tabs className='flex  overflow-x-scroll md:block w-full md:w-[206px] shrink-0'>
