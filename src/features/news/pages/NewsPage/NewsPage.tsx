@@ -23,7 +23,7 @@ export function NewsPage() {
         </section>
 
         <section className='bg-white flex justify-center items-center'>
-          <Animation className='max-w-90% md:max-w-[900px] py-9'>
+          <Animation className='max-w-90% md:max-w-[1100px] py-9'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('pressRelease')}
             </h2>
