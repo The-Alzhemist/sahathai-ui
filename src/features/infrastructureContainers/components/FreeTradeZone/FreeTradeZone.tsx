@@ -26,35 +26,33 @@ const FreeTradeZone = () => {
   const cardsData = [
     {
       imageSrc: '/infrastructure-containers/ocr_tax.png',
-      title: t('List.FreeZone.Title'), // Call t() function directly for the title
-      description: t('List.FreeZone.Description'), // Call t() function directly for the description
+      title: t('List.FreeZone.Title'),
+      description: t('List.FreeZone.Description'),
     },
     {
-      imageSrc: '/infrastructure-containers/ocr_tax.png',
-      title: t('List.FreeZone.Title'), // Call t() function directly for the title
-      description: t('List.FreeZone.Description'), // Call t() function directly for the description
+      imageSrc: '/infrastructure-containers/ocr_facility.png',
+      title: t('List.Facility.Title'),
+      description: t('List.Facility.Description'),
     },
     {
-      imageSrc: '/infrastructure-containers/ocr_tax.png',
-      title: t('List.FreeZone.Title'), // Call t() function directly for the title
-      description: t('List.FreeZone.Description'), // Call t() function directly for the description
+      imageSrc: '/infrastructure-containers/ocr_stock.png',
+      title: t('List.Stock.Title'),
+      description: t('List.Stock.Description'),
     },
     {
-      imageSrc: '/infrastructure-containers/ocr_tax.png',
-      title: t('List.FreeZone.Title'), // Call t() function directly for the title
-      description: t('List.FreeZone.Description'), // Call t() function directly for the description
+      imageSrc: '/infrastructure-containers/ocr_fcl.png',
+      title: t('List.Fcl.Title'),
+      description: t('List.Fcl.Description'),
     },
   ]
 
   return (
     <section className='container my-[80px]'>
       <h2 className='headline-2 text-navy text-center mb-[10px]'>
-        เขตปลอดอากร
+        {t('Title')}
       </h2>
       <p className='body-2 text-black-6 text-center mb-[45px] max-w-[896px] mx-auto'>
-        สหไทย เทอร์มินอล
-        เข้าใจและเห็นความสำคัญของการมีสำนักงานศุลกากรในพื้นที่ท่าเรือ
-        ซึ่งมีส่วนสำคัญในการลดเวลาและลดค่าใช้จ่ายให้กับคุณได้
+        {t('Description')}
       </p>
       <div className='max-w-[1100px] grid grid-cols-1 md:grid-cols-2 gap-7 mx-auto'>
         {cardsData.map((card, index) => (
