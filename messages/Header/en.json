@@ -2,6 +2,12 @@
   "Header": {
     "contactUs": "Contact Us",
     "joinUs": "Join Us",
-    "search": "Search"
+    "search": "Search",
+    "infra": "Infrastructure and Containers",
+    "news": "News",
+    "eService": "e-Service",
+    "invester": "Investor Relations",
+    "aboutUs": "About Us",
+    "service": "Services"
   }
 }
