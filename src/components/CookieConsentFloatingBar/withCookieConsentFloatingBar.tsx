@@ -13,6 +13,10 @@ const withCookieConsentFloatingBar = (
 
     useEffect(() => {
       setIsOpen(hasConsentExpired())
+      if (!hasConsentExpired()) {
+        console.log('tag maanger work!!!')
+        TagManager.initialize({ gtmId: GTM_STAGING })
+      }
     }, [])
 
     const handleOnClickAccept = (isClickAccept: boolean) => {
