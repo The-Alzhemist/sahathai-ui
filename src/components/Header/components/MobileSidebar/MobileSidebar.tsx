@@ -35,7 +35,7 @@ const SidebarLink = ({
         href={href}
         target='_blank'
         rel='noopener noreferrer'
-        className='flex items-center gap-x-2'
+        className='flex items-center gap-x-2 text-black-6'
       >
         {icon}
         <span>{label}</span>
@@ -47,7 +47,7 @@ const SidebarLink = ({
     <div onClick={onClick}>
       <Link className='flex items-center gap-x-2' href={href}>
         {icon}
-        <span>{label}</span>
+        <span className='text-black-6'>{label}</span>
       </Link>
     </div>
   )
