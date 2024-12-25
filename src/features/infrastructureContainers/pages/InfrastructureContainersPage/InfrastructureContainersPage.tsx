@@ -6,6 +6,9 @@ import { MachineryEquipment } from '../../components/MachineryEquipment'
 import { LogisticInnovation } from '../../components/LogisticInnovation'
 import ContactUs from '@/components/ContactUs/ContactUs'
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
+import { Background } from '@/components/Background'
+import OpticalCharacterRecognition from '@/features/infrastructureContainers/components/OpticalCharacterRecognition/OpticalCharacterRecognition'
+import FreeTradeZone from '@/features/infrastructureContainers/components/FreeTradeZone/FreeTradeZone'
 
 export function InfrastructureContainersPage() {
   const t = useTranslations('InfrastructureContainersPage')
@@ -14,6 +17,8 @@ export function InfrastructureContainersPage() {
       <Menu />
       <MachineryEquipment />
       <LogisticInnovation />
+      <OpticalCharacterRecognition />
+      <FreeTradeZone />
       <OperationGuidelines />
       <ContactUs className='mt-[80px]' />
     </main>
