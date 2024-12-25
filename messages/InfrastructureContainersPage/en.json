@@ -116,12 +116,24 @@
       "Description": "Sathai Terminal has collaborated with domestic organizations to develop an automatic cargo container reading system, or OCR (Optical Character Recognition), for reading container numbers at the port entrance. The use of OCR technology enhances operational efficiency and smoothness, increases accuracy in verification, and reduces processing time, enabling customers to receive faster and higher-quality service."
     },
     "FreeTradeZone": {
-      "Title": "เขตปลอดอากร",
-      "Description": "สหไทย เทอร์มินอล เข้าใจและเห็นความสำคัญของการมีสำนักงานศุลกากรในพื้นที่ท่าเรือ ซึ่งมีส่วนสำคัญในการลดเวลาและลดค่าใช้จ่ายให้กับคุณได้",
+      "Title": "Free Trade Zone",
+      "Description": "Sahathai Terminal understands the importance of having a customs office within the port area, which plays a key role in reducing time and costs for you.",
       "List": {
         "FreeZone": {
-          "Title": "เขตปลอดอากร",
-          "Description": "ตั้งอยู่ห่างสหไทย เทอร์มินอล เพียง 200 เมตร พื้นที่รวมทั้งสิ้น 6,400 ตารางเมตร"
+          "Title": "Free Trade Zone",
+          "Description": "Located just 200 meters from Sahathai Terminal, with a total area of 6,400 square meters."
+        },
+        "Facility": {
+          "Title": "Facilities",
+          "Description": "Specially designed for seamless cargo handling through the terminal."
+        },
+        "Stock": {
+          "Title": "Storage Services",
+          "Description": "Unlimited time storage service."
+        },
+        "Fcl": {
+          "Title": "Cargo Storage Area",
+          "Description": "Dedicated storage areas for full container load (FCL) and free trade zone-specific areas."
         }
       }
     }

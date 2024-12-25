@@ -33,88 +33,90 @@ export function OperationGuidelines() {
   ]
 
   return (
-    <Animation className='mt-[61px] max-w-[928px] w-full mx-auto px-5 '>
-      <h1 className='headline-2 text-center text-blue-400'>{t('title')}</h1>
-      <section className='w-full flex flex-col md:flex-row gap-[24px] p-[16px] mt-[20px] shadow-2 rounded-[5px]'>
-        <Tabs className='flex  overflow-x-scroll md:block w-full md:w-[206px] shrink-0'>
-          {tabs.map(({ key, title }) => (
-            <Tab
-              key={key}
-              isActive={activeTab === key}
-              onClick={() => setActive(key)}
-            >
-              {title}
-            </Tab>
-          ))}
-        </Tabs>
+    <section className='bg-[url("/background.jpeg")] bg-center bg-cover py-10'>
+      <Animation className='my-10  max-w-[990px] w-full mx-auto px-5'>
+        <h1 className='headline-2 text-center  text-white'>{t('title')}</h1>
+        <section className='w-full flex flex-col md:flex-row gap-[24px] p-[16px] mt-[20px] shadow-2 rounded-[5px] bg-white'>
+          <Tabs className='flex  overflow-x-scroll md:block w-full md:w-[206px] shrink-0'>
+            {tabs.map(({ key, title }) => (
+              <Tab
+                key={key}
+                isActive={activeTab === key}
+                onClick={() => setActive(key)}
+              >
+                {title}
+              </Tab>
+            ))}
+          </Tabs>
 
-        {activeTab === 'docking' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('docking.description')}
-          />
-        )}
-        {activeTab === 'operatingHours' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('operatingHours.description')}
-          />
-        )}
-        {activeTab === 'cfsLcl' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('cfsLcl.description')}
-          />
-        )}
-        {activeTab === 'responsibilityScope' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('responsibilityScope.description')}
-          />
-        )}
-        {activeTab === 'regulationsCargoShips' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('regulationsCargoShips.description')}
-          />
-        )}
-        {activeTab === 'safetyRegulations' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('safetyRegulations.description')}
-          />
-        )}
-        {activeTab === 'hazardousGoods' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('hazardousGoods.description')}
-          />
-        )}
-        {activeTab === 'requestPermissionContact' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('requestPermissionContact.description')}
-          />
-        )}
-        {activeTab === 'documentSubmissionProcess' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('documentSubmissionProcess.description')}
-          />
-        )}
-        {activeTab === 'bookingProcess' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('bookingProcess.description')}
-          />
-        )}
-        {activeTab === 'serviceCharge' && (
-          <Docking
-            imageUrl='/infrastructure-containers/docking.png'
-            description={t('serviceCharge.description')}
-          />
-        )}
-      </section>
-    </Animation>
+          {activeTab === 'docking' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('docking.description')}
+            />
+          )}
+          {activeTab === 'operatingHours' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('operatingHours.description')}
+            />
+          )}
+          {activeTab === 'cfsLcl' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('cfsLcl.description')}
+            />
+          )}
+          {activeTab === 'responsibilityScope' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('responsibilityScope.description')}
+            />
+          )}
+          {activeTab === 'regulationsCargoShips' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('regulationsCargoShips.description')}
+            />
+          )}
+          {activeTab === 'safetyRegulations' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('safetyRegulations.description')}
+            />
+          )}
+          {activeTab === 'hazardousGoods' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('hazardousGoods.description')}
+            />
+          )}
+          {activeTab === 'requestPermissionContact' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('requestPermissionContact.description')}
+            />
+          )}
+          {activeTab === 'documentSubmissionProcess' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('documentSubmissionProcess.description')}
+            />
+          )}
+          {activeTab === 'bookingProcess' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('bookingProcess.description')}
+            />
+          )}
+          {activeTab === 'serviceCharge' && (
+            <Docking
+              imageUrl='/infrastructure-containers/docking.png'
+              description={t('serviceCharge.description')}
+            />
+          )}
+        </section>
+      </Animation>
+    </section>
   )
 }
