@@ -47,7 +47,7 @@ Menu.Item = function Item({
           <Link
             href={href}
             className={cn(
-              'hover:text-navy hover:border-secondary border-b-[3px] border-b-white py-[16.5px] px-[12px] block text-center uppercase min-w-[100px]',
+              'hover:text-navy hover:border-secondary border-b-[3px] border-b-white py-[16.5px] px-[12px] block text-center  min-w-[100px]',
               className
             )}
           >
