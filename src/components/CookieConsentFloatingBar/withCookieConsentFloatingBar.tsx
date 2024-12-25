@@ -2,6 +2,8 @@ import { LOCAL_STORAGE_PDPA_KEY } from '@/components/CookieConsentFloatingBar/co
 import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
 import React, { useEffect, useState } from 'react'
 import { addDays, format, isAfter, startOfDay } from 'date-fns'
+import TagManager from 'react-gtm-module'
+import { GTM_STAGING } from '@/config/environtment'
 
 const withCookieConsentFloatingBar = (
   Component: React.FC<CookieConsentFloatingBarProps>
@@ -20,16 +22,13 @@ const withCookieConsentFloatingBar = (
         // Set expiration date to today + 30 days
         const today = new Date()
         const expirationDate = addDays(today, 30)
-
-        // console.log('Current Date:', format(today, 'yyyy-MM-dd'))
-        // console.log('Expiration Date:', format(expirationDate, 'yyyy-MM-dd'))
-
         const cookieConsentData = JSON.stringify({
           value: 'true',
           expires: expirationDate,
         })
 
         localStorage.setItem(LOCAL_STORAGE_PDPA_KEY, cookieConsentData)
+        TagManager.initialize({ gtmId: GTM_STAGING })
       }
     }
 
