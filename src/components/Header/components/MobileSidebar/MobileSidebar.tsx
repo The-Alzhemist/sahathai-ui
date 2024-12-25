@@ -1,18 +1,63 @@
-import { useState } from 'react'
-import withMobileSidebar from './withMobileSidebar'
-import { MobileSidebarProps } from '@/components/Header/components/MobileSidebar/interface'
-import { Link } from '@/libs/intl/navigation'
-import Image from 'next/image'
-import { ListIcon } from '@/components/icons/ListIcon'
 import { useTranslations } from 'next-intl'
-import { useAnimation } from '@/hooks/useAnimation'
+import Image from 'next/image'
+import { Link } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
+import { UserIcon } from '@/components/icons/UserIcon'
+import { HeadsetIcon } from '@/components/icons/HeadsetIcon'
 import { useMobileSidebarAnimation } from '@/hooks/useMobileSidebarAnimation'
-import { LocaleButton } from '@/components/LocaleButton'
+import { MobileSidebarProps } from '@/components/Header/components/MobileSidebar/interface'
+import withMobileSidebar from './withMobileSidebar'
+import { ShippingIcon } from '@/components/icons/ShippingIcon'
+import { NewspaperIcon } from '@/components/icons/NewsIcon'
+import { DeviceMobileIcon } from '@/components/icons/DeviceMobileIcon'
+import { ChartIcon } from '@/components/icons/ChartIcon'
+import { PhoneIcon } from '@/components/icons/PhoneIcon'
+import { ReadCVIcon } from '@/components/icons/ReadCvIcon'
+
+interface SidebarLinkProps {
+  href: string
+  icon: JSX.Element
+  label: string
+  onClick: () => void
+  isExternalLink?: boolean
+}
+
+const SidebarLink = ({
+  href,
+  icon,
+  label,
+  onClick,
+  isExternalLink = false,
+}: SidebarLinkProps) => {
+  if (isExternalLink) {
+    return (
+      <a
+        href={href}
+        target='_blank'
+        rel='noopener noreferrer'
+        className='flex items-center gap-x-2'
+      >
+        {icon}
+        <span>{label}</span>
+      </a>
+    )
+  }
+
+  return (
+    <div onClick={onClick}>
+      <Link className='flex items-center gap-x-2' href={href}>
+        {icon}
+        <span>{label}</span>
+      </Link>
+    </div>
+  )
+}
 
 const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   const t = useTranslations('Header')
   const { ref, animationClassName } = useMobileSidebarAnimation(isVisible)
+
+  const handleClose = () => handleOnToggle(false)
 
   return (
     <nav
@@ -27,64 +72,65 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
           <Link href='/' className='shrink-0 p-[10px]'>
             <Image src='/logo.png' width={101} height={24} alt='' priority />
           </Link>
-          <div
-            className='text-xl cursor-pointer'
-            onClick={() => handleOnToggle(false)}
-          >
+          <div className='text-xl cursor-pointer' onClick={handleClose}>
             X
           </div>
         </section>
+
         <section className='flex flex-col justify-between h-full'>
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
-            <div onClick={() => handleOnToggle(false)}>
-              <Link href='/contact-us' className='flex items-center'>
-                {t('aboutUs')}
-              </Link>
-            </div>
-
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/join-us'>
-                {t('service')}
-              </Link>
-            </div>
-
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/join-us'>
-                {t('infra')}
-              </Link>
-            </div>
-
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/news'>
-                {t('news')}
-              </Link>
-            </div>
-
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/join-us'>
-                {t('eService')}
-              </Link>
-            </div>
-
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/investor-information'>
-                {t('invester')}
-              </Link>
-            </div>
+            <SidebarLink
+              href='/contact-us'
+              icon={<UserIcon width='20' height='20' />}
+              label={t('aboutUs')}
+              onClick={handleClose}
+            />
+            <SidebarLink
+              href='/services'
+              icon={<HeadsetIcon width='20' height='20' />}
+              label={t('service')}
+              onClick={handleClose}
+            />
+            <SidebarLink
+              href='/infrastructure-containers'
+              icon={<ShippingIcon width='20' height='20' />}
+              label={t('infra')}
+              onClick={handleClose}
+            />
+            <SidebarLink
+              href='/news'
+              icon={<NewspaperIcon width='20' height='20' />}
+              label={t('news')}
+              onClick={handleClose}
+            />
+            <SidebarLink
+              href='https://sahathaiterminal.com/th/tracking/'
+              icon={<DeviceMobileIcon width='20' height='20' />}
+              label={t('eService')}
+              onClick={handleClose}
+              isExternalLink={true}
+            />
+            <SidebarLink
+              href='/investor-information'
+              icon={<ChartIcon width='20' height='20' />}
+              label={t('invester')}
+              onClick={handleClose}
+            />
           </div>
 
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/join-us'>
-                {t('contactUs')}
-              </Link>
-            </div>
-
-            <div onClick={() => handleOnToggle(false)}>
-              <Link className='flex items-center' href='/investor-information'>
-                {t('joinUs')}
-              </Link>
-            </div>
+            <SidebarLink
+              href='/contact-us'
+              icon={<PhoneIcon width='20' height='20' />}
+              label={t('contactUs')}
+              onClick={handleClose}
+            />
+            <SidebarLink
+              href='/john-us'
+              icon={<ReadCVIcon width='20' height='20' />}
+              label={t('joinUs')}
+              onClick={handleClose}
+            />
           </div>
         </section>
       </div>
