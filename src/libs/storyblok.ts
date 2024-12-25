@@ -43,7 +43,6 @@ export const getStoryblokApi = storyblokInit({
 })
 
 export async function fetchData(slug: string, lang: string) {
-  console.log('lang::', lang)
   const sbParams: ISbStoriesParams = {
     version: 'draft', // or 'draft' based on your needs
     language: lang,

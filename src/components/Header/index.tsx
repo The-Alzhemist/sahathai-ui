@@ -50,7 +50,10 @@ export function Header() {
             <ListIcon width='25' height='25' />
           </button> */}
           </ul>
-          <button onClick={() => handleOnToggleMobileSidebar(true)}>
+          <button
+            className='block sm:hidden'
+            onClick={() => handleOnToggleMobileSidebar(true)}
+          >
             <ListIcon width='25' height='25' />
           </button>
         </section>

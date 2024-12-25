@@ -11,7 +11,7 @@ import { Footer } from '@/components/Footer'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import StoryblokProvider from '@/components/StoryBokProvider'
-import { storyblokInit, apiPlugin } from '@storyblok/react/rsc'
+
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 
 export const metadata: Metadata = {

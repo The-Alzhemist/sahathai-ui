@@ -44,9 +44,6 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
     }, [state.submitting, state.errors, state.succeeded])
 
     const handleOnSubmitForm = async (value: ContactUsForm, resetForm: any) => {
-      console.log('submit form:', value)
-      // alert(JSON.stringify(value))
-
       try {
         const formData = new FormData()
         const currentDate = new Date()

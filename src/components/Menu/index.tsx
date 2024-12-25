@@ -11,9 +11,8 @@ export function Menu() {
     <div className='fixed top-[60px] bg-background text-white  md:rounded-b-[30px] w-full z-10 '>
       <ul className=' flex justify-start md:justify-center overflow-y-scroll'>
         {menus.map(menu => {
-          console.log('menu.pathname::', menu.pathname, pathname)
           const isActive = pathname === menu.pathname
-          console.log('isActive::', isActive)
+
           return (
             <li key={menu.title}>
               {menu.isExternalLink && (

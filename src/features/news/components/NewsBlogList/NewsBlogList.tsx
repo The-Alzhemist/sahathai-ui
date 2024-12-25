@@ -21,14 +21,13 @@ export default function NewsBlogList() {
       setNewsBLogLength(data.stories.length)
     })
     fetchNewsBlogListData(1, PER_PAGE, locale).then(({ data }) => {
-      console.log('data:::', data)
       setNewsBlog(data)
     })
   }, [locale])
 
   return (
     <section className='flex flex-col justify-center items-center'>
-      <section className='max-w-[1200px] flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
+      <section className='max-w-[1100px] flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
         {newsBlog &&
           newsBlog.stories.map((newsBlog: any) => (
             <NewsCard
