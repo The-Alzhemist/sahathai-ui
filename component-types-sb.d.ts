@@ -71,6 +71,8 @@ export interface GridStoryblok {
     | GridStoryblok
     | PageStoryblok
     | ShowOneImageStoryblok
+    | ShowThreeImageStoryblok
+    | ShowTwoImageStoryblok
     | TeaserStoryblok
   )[];
   component: "grid";
@@ -86,6 +88,8 @@ export interface PageStoryblok {
     | GridStoryblok
     | PageStoryblok
     | ShowOneImageStoryblok
+    | ShowThreeImageStoryblok
+    | ShowTwoImageStoryblok
     | TeaserStoryblok
   )[];
   component: "page";
@@ -96,6 +100,23 @@ export interface PageStoryblok {
 export interface ShowOneImageStoryblok {
   ImageA?: AssetStoryblok;
   component: "showOneImage";
+  _uid: string;
+  [k: string]: any;
+}
+
+export interface ShowThreeImageStoryblok {
+  ImageA?: AssetStoryblok;
+  ImageB?: AssetStoryblok;
+  ImageC?: AssetStoryblok;
+  component: "showThreeImage";
+  _uid: string;
+  [k: string]: any;
+}
+
+export interface ShowTwoImageStoryblok {
+  ImageA?: AssetStoryblok;
+  ImageB?: AssetStoryblok;
+  component: "showTwoImage";
   _uid: string;
   [k: string]: any;
 }

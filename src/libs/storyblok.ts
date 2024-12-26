@@ -3,21 +3,20 @@ import FallbackComponent from '@/components/Storyblok/FallbackComponent'
 import Grid from '@/components/Storyblok/Grid'
 import EventNewsDetailCard from '@/components/Storyblok/news/EventNewsDetailCard'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
+import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
+import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 
 import Page from '@/components/Storyblok/Page'
+import { STORYBLOK_TOKEN } from '@/config/environtment'
 
 import {
   apiPlugin,
   ISbStoriesParams,
-  RichTextSchema,
   storyblokInit,
 } from '@storyblok/react/rsc'
-import cloneDeep from 'clone-deep'
-
-const mySchema = cloneDeep(RichTextSchema)
 
 export const getStoryblokApi = storyblokInit({
-  accessToken: 'H1wfrTArHm3VE441H8WQ5wtt',
+  accessToken: STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
     blogTitle: BlogTitle,
@@ -25,21 +24,12 @@ export const getStoryblokApi = storyblokInit({
     page: Page,
     grid: Grid,
     showOneImage: ShowOneImage,
+    showTwoImage: ShowTwoImage,
+    showThreeImage: ShowThreeImage,
   },
 
   enableFallbackComponent: true,
   customFallbackComponent: FallbackComponent,
-  // richText: {
-  //   schema: mySchema,
-  //   resolver: (component: any, blok: any) => {
-  //     switch (component) {
-  //       case 'my-custom-component':
-  //         return `<div class="my-component-class">${blok.newsDescription}</div>`
-  //       default:
-  //         return 'Resolver not defined'
-  //     }
-  //   },
-  // },
 })
 
 export async function fetchData(slug: string, lang: string) {
@@ -53,23 +43,6 @@ export async function fetchData(slug: string, lang: string) {
   return storyBookData
 }
 
-// export async function fetchNewsBlogListData(
-//   page: number = 1,
-//   perPage: number = 10
-// ) {
-//   const storyblokApi = getStoryblokApi()
-
-//   const sbParams: ISbStoriesParams = {
-//     version: 'draft', // or 'draft' based on your needs
-//     starts_with: 'news/',
-//     is_startpage: false,
-//     page: page,
-//     per_page: perPage,
-//   }
-//   const storyBookData = storyblokApi.get(`cdn/stories`, sbParams)
-//   return storyBookData
-// }
-
 export async function fetchNewsBlogListData(
   page: number = 1,
   perPage: number = 10,
@@ -78,12 +51,12 @@ export async function fetchNewsBlogListData(
   const storyblokApi = getStoryblokApi()
 
   const sbParams: ISbStoriesParams = {
-    version: 'draft', // or 'published' based on your needs
+    version: 'draft',
     starts_with: 'news/',
     is_startpage: false,
     page: page,
     per_page: perPage,
-    language: lang, // Storyblok's language filter parameter
+    language: lang,
   }
 
   const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
@@ -103,7 +76,7 @@ export async function fetchNewsBlogListLengthData(
     is_startpage: false,
     page: page,
     per_page: perPage,
-    language: lang, // Storyblok's language filter parameter
+    language: lang,
   }
 
   const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
