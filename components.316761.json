@@ -216,6 +216,82 @@
       "component_group_name": ""
     },
     {
+      "name": "showThreeImage",
+      "display_name": null,
+      "description": null,
+      "created_at": "2024-12-26T05:32:01.757Z",
+      "updated_at": "2024-12-26T05:32:43.516Z",
+      "id": 6731580,
+      "schema": {
+        "ImageA": {
+          "type": "asset",
+          "pos": 0,
+          "id": "BwviNTqtREWX4Z1T1yykvw",
+          "required": false
+        },
+        "ImageB": {
+          "type": "asset",
+          "pos": 1,
+          "id": "qWSex-fpTB28NdRUZKPmjQ"
+        },
+        "ImageC": {
+          "type": "asset",
+          "pos": 2,
+          "id": "1mAoJAAFRM2eJS7MaN7jaw"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "showThreeImage",
+      "component_group_uuid": "all",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": ""
+    },
+    {
+      "name": "showTwoImage",
+      "display_name": null,
+      "description": null,
+      "created_at": "2024-12-26T05:13:57.620Z",
+      "updated_at": "2024-12-26T05:17:36.554Z",
+      "id": 6731544,
+      "schema": {
+        "ImageA": {
+          "type": "asset",
+          "pos": 0,
+          "id": "lpBX59RQRla_X-UZHyYUYg"
+        },
+        "ImageB": {
+          "type": "asset",
+          "pos": 1,
+          "id": "bX-2gqy9S1eo0OeqbVMFeA"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "showTwoImage",
+      "component_group_uuid": "all",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": ""
+    },
+    {
       "name": "teaser",
       "display_name": null,
       "description": null,

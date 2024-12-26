@@ -15,7 +15,7 @@ export default function NewsBlogList() {
   const [newsBlog, setNewsBlog] = useState<any>()
   const [newsBlogLength, setNewsBLogLength] = useState<number>(1)
   const locale = useLocale()
-  const PER_PAGE = 6
+  const PER_PAGE = 9
   useEffect(() => {
     fetchNewsBlogListLengthData(1, 99, locale).then(({ data }) => {
       setNewsBLogLength(data.stories.length)
