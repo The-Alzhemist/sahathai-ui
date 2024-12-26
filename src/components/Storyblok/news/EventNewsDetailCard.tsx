@@ -8,6 +8,7 @@ import BlogTitle from '@/components/Storyblok/BlogTitle'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
 import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
+import DownloadLink from '@/components/Storyblok/news/DownloadLink'
 
 interface EventNewsDetailCardProps {
   blok: EventNewsDetailCardStoryblok
@@ -38,6 +39,9 @@ const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
               },
               ['showThreeImage']: (props: any) => {
                 return <ShowThreeImage {...props} />
+              },
+              ['downloadLink']: (props: any) => {
+                return <DownloadLink {...props} />
               },
               ['blogTitle']: props => <BlogTitle {...props} />,
             },
