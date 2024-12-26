@@ -62,7 +62,37 @@ export async function generateMetadata({
   }
 }) {
   const { data } = await fetchData(slug, locale)
-  const { metaTitle, metaDescription, metaImage } = data.story.content.body[0]
+
+  // Check if the body exists and has content
+  const body = data.story.content.body
+  if (!body || body.length === 0) {
+    // Handle the case where the body is empty or undefined
+    return {
+      title: 'Sahathai | blog',
+      description: '',
+      openGraph: {
+        title: 'Sahathai | blog',
+        description: '',
+        images: [
+          {
+            url: 'https://sahathai-ui.vercel.app/seo/meta-image-home.jpg',
+            width: 800,
+            height: 600,
+            alt: 'sahathai-meta-image-blog',
+          },
+          {
+            url: 'https://sahathai-ui.vercel.app/logo/meta/meta-tag-projects.jpg',
+            width: 1800,
+            height: 1600,
+            alt: 'sahathai-meta-image-blog',
+          },
+        ],
+      },
+      type: 'website',
+    }
+  }
+
+  const { metaTitle, metaDescription, metaImage } = body[0]
 
   return {
     title: metaTitle ?? 'Sahathai | blog',
@@ -74,7 +104,7 @@ export async function generateMetadata({
         {
           url: metaImage
             ? metaImage.filename
-            : 'https://sahathai-ui.vercel.app' + '/seo/meta-image-home.jpg',
+            : 'https://sahathai-ui.vercel.app/seo/meta-image-home.jpg',
           width: 800,
           height: 600,
           alt: metaTitle ? metaTitle : 'sahathai-meta-image-blog',
