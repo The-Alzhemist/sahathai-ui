@@ -34,6 +34,41 @@
       "component_group_name": ""
     },
     {
+      "name": "downloadLink",
+      "display_name": null,
+      "description": null,
+      "created_at": "2024-12-26T08:45:49.527Z",
+      "updated_at": "2024-12-26T08:46:04.894Z",
+      "id": 6731986,
+      "schema": {
+        "Title": {
+          "type": "text",
+          "pos": 0,
+          "id": "-jeaZlYMSdK-CGN1pxJshQ"
+        },
+        "linkURL": {
+          "type": "text",
+          "pos": 1,
+          "id": "0DlXMUxeS36PAjzk_qZysA"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "downloadLink",
+      "component_group_uuid": "all",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": ""
+    },
+    {
       "name": "eventNewsDetailCard",
       "display_name": null,
       "description": null,
