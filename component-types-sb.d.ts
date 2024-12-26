@@ -9,6 +9,14 @@ export interface BlogTitleStoryblok {
   [k: string]: any;
 }
 
+export interface DownloadLinkStoryblok {
+  Title?: string;
+  linkURL?: string;
+  component: "downloadLink";
+  _uid: string;
+  [k: string]: any;
+}
+
 export interface AssetStoryblok {
   alt: string | null;
   copyright?: string | null;
@@ -66,6 +74,7 @@ export interface FeatureStoryblok {
 export interface GridStoryblok {
   columns?: (
     | BlogTitleStoryblok
+    | DownloadLinkStoryblok
     | EventNewsDetailCardStoryblok
     | FeatureStoryblok
     | GridStoryblok
@@ -83,6 +92,7 @@ export interface GridStoryblok {
 export interface PageStoryblok {
   body?: (
     | BlogTitleStoryblok
+    | DownloadLinkStoryblok
     | EventNewsDetailCardStoryblok
     | FeatureStoryblok
     | GridStoryblok
