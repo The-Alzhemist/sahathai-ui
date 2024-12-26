@@ -6,7 +6,6 @@ import {
 import Image from 'next/image'
 
 const ShowThreeImage: React.FC<ShowTwoImageStoryblok> = props => {
-  console.log('blok.ImageA::', props.ImageA?.filename)
   return (
     <main
       {...storyblokEditable(props)}

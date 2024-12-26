@@ -6,7 +6,6 @@ import { ShowOneImageStoryblok } from '../../../../component-types-sb'
 import Image from 'next/image'
 
 const ShowOneImage: React.FC<ShowOneImageStoryblok> = props => {
-  console.log('blok.ImageA::', props.ImageA?.filename)
   return (
     <main {...storyblokEditable(props)} className='p-5 flex justify-center'>
       {props.ImageA?.filename ? (
@@ -15,7 +14,7 @@ const ShowOneImage: React.FC<ShowOneImageStoryblok> = props => {
           alt={props.ImageA.alt || 'Image'}
           width={500}
           height={500}
-          className='rounded-md  max-w-[90%] md:max-w-[660px] h-auto object-cover px-10'
+          className='rounded-md  w-[100%] md:w-[90%] h-auto object-cover'
         />
       ) : (
         <div>No image available</div>
@@ -23,7 +22,5 @@ const ShowOneImage: React.FC<ShowOneImageStoryblok> = props => {
     </main>
   )
 }
-
-//
 
 export default ShowOneImage
