@@ -4,13 +4,7 @@ import { StoryblokStory } from '@storyblok/react/rsc'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-interface Post {
-  id: string
-  title: string
-  content: string
-}
-
-export const revalidate = 60 // revalidate every 10 min
+export const revalidate = 600 // revalidate every 600 seconds(10min)
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
@@ -19,13 +13,16 @@ export async function generateStaticParams() {
   // Fetch slugs for each locale
   const slugs = await Promise.all(
     locales.map(async locale => {
-      const { data } = await fetchNewsBlogListData(1, 10, locale) // Pass locale as lang
+      const { data } = await fetchNewsBlogListData(1, 99, locale) // Pass locale as lang
       return data.stories.map((d: any) => ({
         slug: d.slug,
         locale: locale,
       }))
     })
   )
+
+  // console.log('slugs noflat()::', slugs)
+  // console.log('slugs.flat()::', slugs.flat())
 
   return slugs.flat()
 }
@@ -63,10 +60,8 @@ export async function generateMetadata({
 }) {
   const { data } = await fetchData(slug, locale)
 
-  // Check if the body exists and has content
   const body = data.story.content.body
   if (!body || body.length === 0) {
-    // Handle the case where the body is empty or undefined
     return {
       title: 'Sahathai | blog',
       description: '',
