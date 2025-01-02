@@ -2,6 +2,9 @@ import { useTranslations } from 'next-intl'
 
 import { Animation } from '@/components/Animation'
 import LatestNewsHomePageList from '@/features/home/pages/HomePage/components/News/LatestNewsHomePageList/LatestNewsHomePageList'
+import { REVALIDATE_TIME } from '@/config/environtment'
+
+export const revalidate = REVALIDATE_TIME
 
 export function News() {
   const t = useTranslations('HomePage.News')

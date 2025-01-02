@@ -1,10 +1,11 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { Link } from '@/libs/intl/navigation'
 import { fetchDataBySlug, fetchNewsBlogListData } from '@/libs/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-export const revalidate = 600 // revalidate every 600 seconds(10min)
+export const revalidate = REVALIDATE_TIME
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
