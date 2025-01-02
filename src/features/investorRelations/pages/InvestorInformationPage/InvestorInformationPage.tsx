@@ -21,7 +21,7 @@ export async function InvestorInformationPage() {
         </div>
 
         <section className='w-full space-y-[112px]'>
-          <StockMarketInformation />
+          {/* <StockMarketInformation /> */}
           <FinancialReports />
           <Shareholder />
           <DividendPayment className=' w-full' />
