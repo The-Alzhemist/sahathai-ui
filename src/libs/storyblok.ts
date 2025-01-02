@@ -1,6 +1,5 @@
-import BlogTitle from '@/components/Storyblok/BlogTitle'
 import FallbackComponent from '@/components/Storyblok/FallbackComponent'
-import Grid from '@/components/Storyblok/Grid'
+
 import DownloadLink from '@/components/Storyblok/news/DownloadLink'
 import EventNewsDetailCard from '@/components/Storyblok/news/EventNewsDetailCard'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
@@ -20,10 +19,9 @@ export const getStoryblokApi = storyblokInit({
   accessToken: STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
-    blogTitle: BlogTitle,
+    page: Page, // default
     eventNewsDetailCard: EventNewsDetailCard,
-    page: Page,
-    grid: Grid,
+
     showOneImage: ShowOneImage,
     showTwoImage: ShowTwoImage,
     showThreeImage: ShowThreeImage,
