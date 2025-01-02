@@ -1,25 +1,50 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import { DateTime } from 'luxon'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Dropdown } from '@/components/Dropdown'
 import { CalendarIcon } from '@/components/icons/CalendarIcon'
 import { Animation } from '@/components/Animation'
 import { DividendPaymentProps } from './interface'
+import { devidendPaymentInformationList } from '@/features/investorRelations/components/DividendPayment/devidendPaymentInformationList'
 
 export function DividendPayment({ className }: DividendPaymentProps) {
   const t = useTranslations('InvestorInformationPage.DividendPayment')
-  const [year, setYear] = useState(() => DateTime.now().year + 543)
-  const [options] = useState(() => {
-    const y = DateTime.now().year + 543
+  const [selectedYear, setSelectedYear] = useState<any>(
+    () => devidendPaymentInformationList[0].year
+  )
+  // const [year, setYear] = useState(() => DateTime.now().year + 543)
 
-    return Array.from({ length: 10 }).map((_, index) => ({
-      label: String(y - index),
-      value: String(y - index),
-    }))
-  })
+  // const [options] = useState(() => {
+  //   const y = DateTime.now().year + 543
+
+  //   return Array.from({ length: 10 }).map((_, index) => ({
+  //     label: String(y - index),
+  //     value: String(y - index),
+  //   }))
+  // })
+
+  const handleOnFilter = (value: string) => {
+    setSelectedYear(value)
+  }
+
+  const [filterByYear, setFilterByYear] = useState<any>([])
+
+  useEffect(() => {
+    const option = Array.from(
+      new Map(
+        devidendPaymentInformationList.map(item => [
+          String(item.year), // Use the `value` as the key
+          { label: String(item.year), value: String(item.year) },
+        ])
+      ).values()
+    )
+
+    setFilterByYear(option)
+    console.log('setFilterByYear option:', JSON.stringify(option))
+  }, [devidendPaymentInformationList])
 
   return (
     <Animation className={className}>
@@ -32,10 +57,10 @@ export function DividendPayment({ className }: DividendPaymentProps) {
         </h2>
         <Dropdown
           className='w-[250px]'
-          value={String(year)}
-          options={options}
+          value={selectedYear}
+          options={filterByYear}
           icon={<CalendarIcon className='shrink-0' width='24' height='24' />}
-          onSelect={value => setYear(Number(value))}
+          onSelect={handleOnFilter}
         />
       </div>
 
@@ -51,14 +76,18 @@ export function DividendPayment({ className }: DividendPaymentProps) {
           </tr>
         </thead>
         <tbody>
-          {Array.from({ length: 10 }).map((_, index) => (
-            <tr key={index}>
-              <td className='body-2 p-[16px]'>19 พ.ค. 2565</td>
-              <td className='body-2 p-[16px]'>0.0250</td>
-              <td className='body-2 p-[16px]'>บาท</td>
-              <td className='body-2 p-[16px]'>01 ม.ค. 2564 - 31 ธ.ค. 2564</td>
-            </tr>
-          ))}
+          {devidendPaymentInformationList
+            .filter(item => item.year === selectedYear)
+            .map((item, index) => (
+              <tr key={index}>
+                <td className='body-2 p-[16px]'>{item.dividendPaymentDate}</td>
+                <td className='body-2 p-[16px]'>
+                  {item.dividendPaymentAmount}
+                </td>
+                <td className='body-2 p-[16px]'>{item.unit}</td>
+                <td className='body-2 p-[16px]'>{item.financialPeriod}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </Animation>

@@ -15,6 +15,7 @@ export function DownloadButton({ className, href }: DownloadButtonProps) {
       )}
       href={href}
       target='_blank'
+      rel='noopener noreferrer'
     >
       <button className='medium flex items-center gap-[4px] text-dark'>
         <DownloadIcon width='24' height='24' />
