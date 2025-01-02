@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
 import { getTranslations } from 'next-intl/server'
-import { EODHD_STOCK_TOKEN } from '@/config/environtment'
+import { EODHD_STOCK_TOKEN, REVALIDATE_TIME } from '@/config/environtment'
 
 interface StockData {
   date: string
@@ -17,7 +17,7 @@ interface StockData {
   volume: number
 }
 
-export const revalidate = 84600 // Revalidate every 1 day
+export const revalidate = REVALIDATE_TIME
 
 const StockMarketInformation = async () => {
   // free stock api  update t - 3 day, get only 20 times/day
