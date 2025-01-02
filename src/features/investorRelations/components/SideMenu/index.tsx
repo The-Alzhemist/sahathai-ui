@@ -23,7 +23,7 @@ export function SideMenu() {
   }, [queryStrings])
 
   return (
-    <Animation className='w-[170px] shrink-0 sticky top-[24px] h-fit'>
+    <Animation className='w-[170px] shrink-0 sticky top-[150px] h-fit'>
       <ul className='space-y-[8px] mb-[24px]'>
         <SideMenu.Item
           href={`#${InvestorInformationEnum.StockMarketInformation}`}
