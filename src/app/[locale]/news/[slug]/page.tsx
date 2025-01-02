@@ -1,5 +1,5 @@
 import { Link } from '@/libs/intl/navigation'
-import { fetchData, fetchNewsBlogListData } from '@/libs/storyblok'
+import { fetchDataBySlug, fetchNewsBlogListData } from '@/libs/storyblok'
 import { StoryblokStory } from '@storyblok/react/rsc'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: any }) {
   const { slug, locale } = params
-  const { data } = await fetchData(slug, locale)
+  const { data } = await fetchDataBySlug(slug, locale)
   const t = await getTranslations('NewsPage')
 
   return (
@@ -58,7 +58,7 @@ export async function generateMetadata({
     slug: string
   }
 }) {
-  const { data } = await fetchData(slug, locale)
+  const { data } = await fetchDataBySlug(slug, locale)
 
   const body = data.story.content.body
   if (!body || body.length === 0) {
