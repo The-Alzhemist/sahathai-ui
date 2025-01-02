@@ -4,6 +4,7 @@ import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { useLocale } from 'next-intl'
 
 import React from 'react'
+export const revalidate = 3600 // 10 minutes
 
 export default async function LatestNewsHomePageList() {
   const locale = useLocale()
