@@ -4,7 +4,7 @@ import { StoryblokStory } from '@storyblok/react/rsc'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-export const revalidate = 60 // revalidate every 10 min
+export const revalidate = 600 // revalidate every 600 seconds(10min)
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
@@ -21,9 +21,8 @@ export async function generateStaticParams() {
     })
   )
 
-  console.log('slugs noflat()::', slugs)
-
-  console.log('slugs.flat()::', slugs.flat())
+  // console.log('slugs noflat()::', slugs)
+  // console.log('slugs.flat()::', slugs.flat())
 
   return slugs.flat()
 }
