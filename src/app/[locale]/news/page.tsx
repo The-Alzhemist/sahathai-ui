@@ -1,6 +1,8 @@
 import { NewsPage } from '@/features/news/pages/NewsPage'
 import { getTranslations } from 'next-intl/server'
 
+export const revalidate = 3600
+
 export default function News() {
   return <NewsPage />
 }
