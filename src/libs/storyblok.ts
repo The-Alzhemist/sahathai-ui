@@ -1,6 +1,7 @@
 import BlogTitle from '@/components/Storyblok/BlogTitle'
 import FallbackComponent from '@/components/Storyblok/FallbackComponent'
 import Grid from '@/components/Storyblok/Grid'
+import DownloadLink from '@/components/Storyblok/news/DownloadLink'
 import EventNewsDetailCard from '@/components/Storyblok/news/EventNewsDetailCard'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
 import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
@@ -26,6 +27,7 @@ export const getStoryblokApi = storyblokInit({
     showOneImage: ShowOneImage,
     showTwoImage: ShowTwoImage,
     showThreeImage: ShowThreeImage,
+    downloadLink: DownloadLink,
   },
 
   enableFallbackComponent: true,
