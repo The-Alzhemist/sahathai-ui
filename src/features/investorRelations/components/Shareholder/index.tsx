@@ -5,6 +5,7 @@ import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInfor
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { Animation } from '@/components/Animation'
 import { ShareholderCard } from '../ShareholderCard'
+import { investmentStakeholderList } from '@/features/investorRelations/components/Shareholder/InvesterList'
 
 export function Shareholder() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
@@ -29,20 +30,34 @@ export function Shareholder() {
             </tr>
           </thead>
           <tbody>
-            {Array.from({ length: 10 }).map((_, index) => (
+            {investmentStakeholderList.map((item, index) => (
               <tr key={index}>
                 <td className='body-2 p-[16px]'>{index + 1}</td>
-                <td className='body-2 p-[16px]'>บริษัท รัตน โฮลดิ้ง จำกัด</td>
-                <td className='body-2 p-[16px]'>209,828,258</td>
-                <td className='body-2 p-[16px]'>34.56</td>
+                <td className='body-2 p-[16px]'>{item.name}</td>
+                <td className='body-2 p-[16px]'>
+                  {item.stockAmount.toLocaleString()}
+                </td>
+                <td className='body-2 p-[16px]'>{`${item.percentAmount}%`}</td>
               </tr>
             ))}
+
             <tr>
               <td className='p-[16px] headline-4 text-blue-400' colSpan={2}>
                 รวม
               </td>
-              <td className='body-2 p-[16px]'>209,828,258</td>
-              <td className='body-2 p-[16px]'>34.56</td>
+              <td className='body-2 p-[16px]'>
+                {' '}
+                {investmentStakeholderList
+                  .reduce((acc, curr) => acc + curr.stockAmount, 0)
+                  .toLocaleString()}
+              </td>
+              <td className='body-2 p-[16px]'>
+                {' '}
+                {investmentStakeholderList
+                  .reduce((acc, curr) => acc + curr.percentAmount, 0)
+                  .toLocaleString()}
+                %
+              </td>
             </tr>
           </tbody>
         </table>

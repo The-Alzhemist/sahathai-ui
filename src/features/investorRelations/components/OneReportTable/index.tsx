@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import { DownloadButton } from '@/components/DownloadButton'
 import { Fragment } from 'react'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
+import { oneReportInformationList } from '@/features/investorRelations/components/OneReportTable/oneReportInformationList'
 
 export function OneReportTable() {
   const common = useTranslations('common')
@@ -18,14 +19,16 @@ export function OneReportTable() {
           </tr>
         </thead>
         <tbody>
-          {Array.from({ length: 10 }).map((_, index) => (
+          {oneReportInformationList.map((item, index) => (
             <tr key={index}>
               <td>
-                <div className='small-medium text-black-2'>2566</div>
-                <div className='small-reg text-dark-40'>2023</div>
+                <div className='small-medium text-black-2'>
+                  {item.year + 543}
+                </div>
+                <div className='small-reg text-dark-40'>{item.year}</div>
               </td>
               <td>
-                <DownloadButton className='mx-auto' href='' />
+                <DownloadButton className='mx-auto' href={item.linkUrl} />
               </td>
             </tr>
           ))}
