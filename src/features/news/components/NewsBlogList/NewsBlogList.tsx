@@ -9,6 +9,8 @@ import {
 } from '@/libs/storyblok'
 import { useLocale } from 'next-intl'
 
+export const revalidate = 3600 // 10 minutes
+
 import React, { useEffect, useState } from 'react'
 
 export default function NewsBlogList() {
