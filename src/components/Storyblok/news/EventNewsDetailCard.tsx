@@ -1,5 +1,10 @@
 import { storyblokEditable } from '@storyblok/react/rsc'
-import { render } from 'storyblok-rich-text-react-renderer'
+import {
+  render,
+  NODE_OL,
+  NODE_UL,
+  NODE_LI,
+} from 'storyblok-rich-text-react-renderer'
 import { StoryblokRichTextOptions, MarkTypes } from '@storyblok/richtext'
 import { ReactElement } from 'react'
 import { EventNewsDetailCardStoryblok } from '../../../../component-types-sb'
@@ -8,12 +13,25 @@ import BlogTitle from '@/components/Storyblok/BlogTitle'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
 import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
+import DownloadLink from '@/components/Storyblok/news/DownloadLink'
 
 interface EventNewsDetailCardProps {
   blok: EventNewsDetailCardStoryblok
 }
 
 const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
+  const customRenderer = {
+    [NODE_UL]: (children: React.ReactNode) => (
+      <ul className='list-disc  pl-5 space-y-2 '>{children}</ul>
+    ),
+    [NODE_OL]: (children: React.ReactNode) => (
+      <ol className='list-decimal  pl-5 space-y-2'>{children}</ol>
+    ),
+    [NODE_LI]: (children: React.ReactNode) => (
+      <li className='mb-1 text-gray-700 break-words'>{children}</li>
+    ),
+  }
+
   return (
     <main {...storyblokEditable(blok)} className='mb-10'>
       <section className='bg-white flex flex-col p-3 md:p-10 rounded-[5px]'>
@@ -29,6 +47,7 @@ const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
         <h2 className='text-navy font-medium mb-3'>{blok.newsTitle}</h2>
         <div className='text-gray-600 k2d '>
           {render(blok.newsDescription, {
+            nodeResolvers: customRenderer,
             blokResolvers: {
               ['showOneImage']: (props: any) => {
                 return <ShowOneImage {...props} />
@@ -38,6 +57,9 @@ const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
               },
               ['showThreeImage']: (props: any) => {
                 return <ShowThreeImage {...props} />
+              },
+              ['downloadLink']: (props: any) => {
+                return <DownloadLink {...props} />
               },
               ['blogTitle']: props => <BlogTitle {...props} />,
             },
