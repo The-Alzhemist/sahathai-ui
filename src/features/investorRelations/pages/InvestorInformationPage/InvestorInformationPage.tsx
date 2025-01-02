@@ -1,6 +1,6 @@
 import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
 import { SideMenu } from '../../components/SideMenu'
-import { StockMarketInformation } from '../../components/StockMarketInformation'
+
 import { FinancialReports } from '../../components/FinancialReports'
 import { Shareholder } from '../../components/Shareholder'
 import { DividendPayment } from '../../components/DividendPayment'
@@ -8,8 +8,9 @@ import { ShareholdersMeeting } from '../../components/ShareholdersMeeting'
 import { CompanyIntroductionVideo } from '../../components/CompanyIntroductionVideo'
 import { Tabs } from '../../components/Tabs'
 import { Menu } from '@/components/Menu'
+import StockMarketInformation from '@/features/investorRelations/components/StockMarketInformation/StockMarketInformation'
 
-export function InvestorInformationPage() {
+export async function InvestorInformationPage() {
   return (
     <main className='pt-[100px] pb-[176px] bg-white '>
       <Menu />
