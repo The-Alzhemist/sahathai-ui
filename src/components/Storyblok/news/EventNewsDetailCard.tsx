@@ -5,11 +5,9 @@ import {
   NODE_UL,
   NODE_LI,
 } from 'storyblok-rich-text-react-renderer'
-import { StoryblokRichTextOptions, MarkTypes } from '@storyblok/richtext'
-import { ReactElement } from 'react'
+
 import { EventNewsDetailCardStoryblok } from '../../../../component-types-sb'
 import Image from 'next/image'
-import BlogTitle from '@/components/Storyblok/BlogTitle'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
 import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
@@ -61,7 +59,6 @@ const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
               ['downloadLink']: (props: any) => {
                 return <DownloadLink {...props} />
               },
-              ['blogTitle']: props => <BlogTitle {...props} />,
             },
           })}
         </div>
