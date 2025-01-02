@@ -8,20 +8,7 @@ import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import Image from 'next/image'
 
-// export async function generateStaticParams() {
-//   const locales = ['th', 'en']
-
-//   const slugs = ['1', '2', '3']
-//   const { data } = await fetchNewsBlogListData()
-
-//   return slugs.flatMap(slug =>
-//     locales.map(locale => ({
-//       slug: slug,
-//       locale: locale,
-//       data,
-//     }))
-//   )
-// }
+export const revalidate = 3600 // 10 minutes
 
 export async function LastestNews() {
   const locale = useLocale()
