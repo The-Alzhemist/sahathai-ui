@@ -2,6 +2,7 @@
 
 import { NewsCard } from '@/components/NewsCard'
 import { Pagination } from '@/components/Pagination'
+import { REVALIDATE_TIME } from '@/config/environtment'
 
 import {
   fetchNewsBlogListData,
@@ -9,7 +10,7 @@ import {
 } from '@/libs/storyblok'
 import { useLocale } from 'next-intl'
 
-export const revalidate = 3600 // 10 minutes
+export const revalidate = REVALIDATE_TIME
 
 import React, { useEffect, useState } from 'react'
 

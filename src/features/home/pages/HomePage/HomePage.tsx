@@ -10,6 +10,9 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
+import { REVALIDATE_TIME } from '@/config/environtment'
+
+export const revalidate = REVALIDATE_TIME
 
 export function HomePage() {
   return (

@@ -7,8 +7,9 @@ import { LastestNewsProps } from '@/components/LastestNews/interface'
 import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import Image from 'next/image'
+import { REVALIDATE_TIME } from '@/config/environtment'
 
-export const revalidate = 3600 // 10 minutes
+export const revalidate = REVALIDATE_TIME
 
 export async function LastestNews() {
   const locale = useLocale()

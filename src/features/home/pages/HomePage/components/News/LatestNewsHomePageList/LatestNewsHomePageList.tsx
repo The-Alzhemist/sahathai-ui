@@ -1,10 +1,12 @@
 import { NewsCard } from '@/components/NewsCard'
+import { REVALIDATE_TIME } from '@/config/environtment'
 
 import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { useLocale } from 'next-intl'
 
 import React from 'react'
-export const revalidate = 3600 // 10 minutes
+
+export const revalidate = REVALIDATE_TIME
 
 export default async function LatestNewsHomePageList() {
   const locale = useLocale()
