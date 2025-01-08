@@ -10,3 +10,13 @@ export function getHash() {
     ? decodeURIComponent(window.location.hash.replace('#', ''))
     : undefined
 }
+
+export function textBreakAndReturnNewLine(
+  input: string,
+  delimiter: string = '<br/>'
+): string[] {
+  return input
+    .split(delimiter)
+    .map(line => line.trim())
+    .filter(line => line.length > 0)
+}
