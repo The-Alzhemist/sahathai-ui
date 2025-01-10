@@ -13,6 +13,7 @@ import CfsGoods from '@/features/infrastructureContainers/components/OperationGu
 import RegulationsCargoShips from '@/features/infrastructureContainers/components/OperationGuidelines/components/RegulationsCargoShips'
 import SafetyRegulations from '@/features/infrastructureContainers/components/OperationGuidelines/components/SafetyRegulations'
 import HazardousGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/HazardousGoods'
+import RequestPermissionContact from '@/features/infrastructureContainers/components/OperationGuidelines/components/requestPermissionContact'
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
@@ -69,29 +70,11 @@ export function OperationGuidelines() {
           {activeTab === 'safetyRegulations' && <SafetyRegulations />}
           {activeTab === 'hazardousGoods' && <HazardousGoods />}
           {activeTab === 'requestPermissionContact' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('requestPermissionContact.description')}
-            />
+            <RequestPermissionContact />
           )}
-          {activeTab === 'documentSubmissionProcess' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('documentSubmissionProcess.description')}
-            />
-          )}
-          {activeTab === 'bookingProcess' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('bookingProcess.description')}
-            />
-          )}
-          {activeTab === 'serviceCharge' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('serviceCharge.description')}
-            />
-          )}
+          {activeTab === 'documentSubmissionProcess' && <div>No data</div>}
+          {activeTab === 'bookingProcess' && <div>No data</div>}
+          {activeTab === 'serviceCharge' && <div>No data</div>}
         </section>
       </Animation>
     </section>
