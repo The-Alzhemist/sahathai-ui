@@ -7,6 +7,12 @@ import { Tabs } from '../Tabs'
 import { Tab } from '../Tabs/Tab'
 import { TabType } from './interface'
 import { Docking } from './Docking'
+import DockingInfo from '@/features/infrastructureContainers/components/OperationGuidelines/components/DockingInfo'
+import OperatingHours from '@/features/infrastructureContainers/components/OperationGuidelines/components/OperatingHours'
+import CfsGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/CfsGoods'
+import RegulationsCargoShips from '@/features/infrastructureContainers/components/OperationGuidelines/components/RegulationsCargoShips'
+import SafetyRegulations from '@/features/infrastructureContainers/components/OperationGuidelines/components/SafetyRegulations'
+import HazardousGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/HazardousGoods'
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
@@ -50,47 +56,18 @@ export function OperationGuidelines() {
           </Tabs>
 
           {activeTab === 'docking' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('docking.description')}
-            />
+            // <Docking
+            //   imageUrl='/infrastructure-containers/docking.png'
+            //   description={t('docking.description')}
+            // />
+            <DockingInfo />
           )}
-          {activeTab === 'operatingHours' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('operatingHours.description')}
-            />
-          )}
-          {activeTab === 'cfsLcl' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('cfsLcl.description')}
-            />
-          )}
-          {activeTab === 'responsibilityScope' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('responsibilityScope.description')}
-            />
-          )}
-          {activeTab === 'regulationsCargoShips' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('regulationsCargoShips.description')}
-            />
-          )}
-          {activeTab === 'safetyRegulations' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('safetyRegulations.description')}
-            />
-          )}
-          {activeTab === 'hazardousGoods' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('hazardousGoods.description')}
-            />
-          )}
+          {activeTab === 'operatingHours' && <OperatingHours />}
+          {activeTab === 'cfsLcl' && <CfsGoods />}
+          {activeTab === 'responsibilityScope' && <div>No data</div>}
+          {activeTab === 'regulationsCargoShips' && <RegulationsCargoShips />}
+          {activeTab === 'safetyRegulations' && <SafetyRegulations />}
+          {activeTab === 'hazardousGoods' && <HazardousGoods />}
           {activeTab === 'requestPermissionContact' && (
             <Docking
               imageUrl='/infrastructure-containers/docking.png'
