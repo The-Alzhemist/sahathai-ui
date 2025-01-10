@@ -6,14 +6,15 @@ import { Animation } from '@/components/Animation'
 import { Tabs } from '../Tabs'
 import { Tab } from '../Tabs/Tab'
 import { TabType } from './interface'
-import { Docking } from './Docking'
+i
+import RequestPermissionContact from '@/features/infrastructureContainers/components/OperationGuidelines/components/RequestPermissionContact'
+
 import DockingInfo from '@/features/infrastructureContainers/components/OperationGuidelines/components/DockingInfo'
 import OperatingHours from '@/features/infrastructureContainers/components/OperationGuidelines/components/OperatingHours'
 import CfsGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/CfsGoods'
 import RegulationsCargoShips from '@/features/infrastructureContainers/components/OperationGuidelines/components/RegulationsCargoShips'
 import SafetyRegulations from '@/features/infrastructureContainers/components/OperationGuidelines/components/SafetyRegulations'
 import HazardousGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/HazardousGoods'
-import RequestPermissionContact from '@/features/infrastructureContainers/components/OperationGuidelines/components/requestPermissionContact'
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
