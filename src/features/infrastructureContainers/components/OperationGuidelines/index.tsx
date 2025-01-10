@@ -6,7 +6,8 @@ import { Animation } from '@/components/Animation'
 import { Tabs } from '../Tabs'
 import { Tab } from '../Tabs/Tab'
 import { TabType } from './interface'
-import { Docking } from './Docking'
+import RequestPermissionContact from '@/features/infrastructureContainers/components/OperationGuidelines/components/RequestPermissionContact'
+
 import DockingInfo from '@/features/infrastructureContainers/components/OperationGuidelines/components/DockingInfo'
 import OperatingHours from '@/features/infrastructureContainers/components/OperationGuidelines/components/OperatingHours'
 import CfsGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/CfsGoods'
@@ -69,29 +70,11 @@ export function OperationGuidelines() {
           {activeTab === 'safetyRegulations' && <SafetyRegulations />}
           {activeTab === 'hazardousGoods' && <HazardousGoods />}
           {activeTab === 'requestPermissionContact' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('requestPermissionContact.description')}
-            />
+            <RequestPermissionContact />
           )}
-          {activeTab === 'documentSubmissionProcess' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('documentSubmissionProcess.description')}
-            />
-          )}
-          {activeTab === 'bookingProcess' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('bookingProcess.description')}
-            />
-          )}
-          {activeTab === 'serviceCharge' && (
-            <Docking
-              imageUrl='/infrastructure-containers/docking.png'
-              description={t('serviceCharge.description')}
-            />
-          )}
+          {activeTab === 'documentSubmissionProcess' && <div>No data</div>}
+          {activeTab === 'bookingProcess' && <div>No data</div>}
+          {activeTab === 'serviceCharge' && <div>No data</div>}
         </section>
       </Animation>
     </section>
