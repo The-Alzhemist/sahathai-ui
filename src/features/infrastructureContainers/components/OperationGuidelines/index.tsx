@@ -6,7 +6,6 @@ import { Animation } from '@/components/Animation'
 import { Tabs } from '../Tabs'
 import { Tab } from '../Tabs/Tab'
 import { TabType } from './interface'
-i
 import RequestPermissionContact from '@/features/infrastructureContainers/components/OperationGuidelines/components/RequestPermissionContact'
 
 import DockingInfo from '@/features/infrastructureContainers/components/OperationGuidelines/components/DockingInfo'
