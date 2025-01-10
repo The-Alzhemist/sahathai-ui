@@ -6,13 +6,13 @@ export default function CfsGoods() {
   const locale = useLocale()
   return (
     <section>
-      <Image
+      {/* <Image
         className='mb-5'
         src='/infrastructure-containers/docking.png'
         alt=''
         width={666}
         height={328}
-      />
+      /> */}
       {locale === 'th' && <CfsGoodsInfoTH />}
       {locale === 'en' && <CfsGoodsInfoEN />}
       {locale === 'cn' && <CfsGoodsInfoCN />}
