@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 
 import { AboutCard } from '../AboutCard'
 import { SahathaiText } from '@/components/SahathaiText'
-
+import styles from './ford.module.scss';
 export function About() {
   const t = useTranslations('HomePage.About')
 
@@ -14,33 +14,34 @@ export function About() {
           {t('content')}
         </p>
       </div>
-      <div className='flex justify-center gap-y-[45px] flex-wrap gap-x-[25px] mt-[72px] w-full'>
-        <AboutCard
-          title={t('comprehensiveService.title')}
-          content={t('comprehensiveService.content')}
-          imageUrl='/home/comprehensive-service.png'
-        />
-        <AboutCard
-          title={t('globalTransportationNetwork.title')}
-          content={t('globalTransportationNetwork.content')}
-          imageUrl='/home/global-transportation-network.png'
-        />
-        <AboutCard
-          title={t('convenientLocation.title')}
-          content={t('convenientLocation.content')}
-          imageUrl='/home/convenient-location.png'
-        />
-        <AboutCard
-          title={t('coversAllNeeds.title')}
-          content={t('coversAllNeeds.content')}
-          imageUrl='/home/covers-all-needs.png'
-        />
-        <AboutCard
-          title={t('worldClassStandards.title')}
-          content={t('worldClassStandards.content')}
-          imageUrl='/home/world-class-standards.png'
-        />
-      </div>
+        <div className='flex justify-center gap-y-[45px] flex-wrap gap-x-[25px] mt-[72px] w-full'>
+            <AboutCard
+                title={t('comprehensiveService.title')}
+                content={t('comprehensiveService.content')}
+                imageUrl='/home/comprehensive-service.png'
+            />
+            <AboutCard
+                title={t('globalTransportationNetwork.title')}
+                content={t('globalTransportationNetwork.content')}
+                imageUrl='/home/global-transportation-network.png'
+            />
+            <AboutCard
+                title={t('convenientLocation.title')}
+                content={t('convenientLocation.content')}
+                imageUrl='/home/convenient-location.png'
+            />
+            <AboutCard
+                title={t('coversAllNeeds.title')}
+                content={t('coversAllNeeds.content')}
+                imageUrl='/home/covers-all-needs.png'
+            />
+            <AboutCard
+                title={t('worldClassStandards.title')}
+                content={t('worldClassStandards.content')}
+                imageUrl='/home/world-class-standards.png'
+            />
+
+        </div>
     </section>
   )
 }
