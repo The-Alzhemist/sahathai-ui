@@ -5,23 +5,20 @@ import { Position } from './Position'
 import { Content } from './Content'
 import { ContentWrap } from './ContentWrap'
 
-export function BunditRungsimanon() {
-  const t = useTranslations('AboutUsPage.BunditRungsimanon')
+export function SangaSanguansaksri() {
+  const t = useTranslations('AboutUsPage.SangaSanguansaksri')
   const common = useTranslations('common')
 
   return (
     <Fragment>
       <Position
-        imageUrl='/about-us/bundit-rungsimanon.png'
+        imageUrl='/about-us/roongroj-whangteeranon.png'
         fullName={t('fullName')}
         positions={[t('position1')]}
       />
       <ContentWrap>
-        <Content title={common('education')} contents={[t('education1'),t('education2'),t('education3'),t('education4')]} />
-        <Content
-          title={common('trainingHistory')}
-          contents={[t('trainingHistory1')]}
-        />
+        <Content title={common('education')} contents={[t('education1')]} />
+
         <Content
           title={common('dateAppointment')}
           contents={[t('dateAppointment1')]}
