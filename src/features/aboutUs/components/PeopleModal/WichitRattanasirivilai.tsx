@@ -24,7 +24,7 @@ export function WichitRattanasirivilai() {
         />
         <Content
           title={common('dateAppointment')}
-          contents={[t('dateAppointment1')]}
+          contents={[t('dateAppointment1'),t('dateAppointment2'),t('dateAppointment3')]}
         />
         <Content
           title={common('positionHeldInListCompany')}
@@ -32,7 +32,7 @@ export function WichitRattanasirivilai() {
         />
         <Content
           title={common('positionHeldInOtherCompany')}
-          contents={[t('positionHeldInOtherCompany1')]}
+          contents={[t('positionHeldInOtherCompany1'),t('positionHeldInOtherCompany2'),t('positionHeldInOtherCompany3'),t('positionHeldInOtherCompany4'),t('positionHeldInOtherCompany5'),t('positionHeldInOtherCompany6')]}
         />
         <Content
           title={common('pastPositionHeld')}
