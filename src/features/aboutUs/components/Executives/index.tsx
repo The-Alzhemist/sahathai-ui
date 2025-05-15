@@ -15,6 +15,9 @@ export function Executives({ onClick }: ExecutivesProps) {
   const roongrojWhangteeranon = useTranslations(
     'AboutUsPage.RoongrojWhangteeranon'
   )
+  const SangaSanguansaksri = useTranslations(
+    'AboutUsPage.SangaSanguansaksri'
+  )
 
   return (
     <section className='mt-[120px] max-w-[1040px] mx-auto w-full'>
@@ -55,13 +58,13 @@ export function Executives({ onClick }: ExecutivesProps) {
           onClick={() => onClick(PeopleEnum.KittikhunLochaya)}
         />
 
-        <PeopleCard
-          name={minrawiPhodee('fullName')}
-          imageClassName='left-[-34px] top-0 w-[258px]'
-          imageUrl='/about-us/minrawi-phodee.png'
-          jobTitle={minrawiPhodee('position1')}
-          onClick={() => onClick(PeopleEnum.MinrawiPhodee)}
-        />
+        {/*<PeopleCard*/}
+        {/*  name={minrawiPhodee('fullName')}*/}
+        {/*  imageClassName='left-[-34px] top-0 w-[258px]'*/}
+        {/*  imageUrl='/about-us/minrawi-phodee.png'*/}
+        {/*  jobTitle={minrawiPhodee('position1')}*/}
+        {/*  onClick={() => onClick(PeopleEnum.MinrawiPhodee)}*/}
+        {/*/>*/}
 
         <PeopleCard
           name={bunditRungsimanon('fullName')}
@@ -69,6 +72,14 @@ export function Executives({ onClick }: ExecutivesProps) {
           imageUrl='/about-us/bundit-rungsimanon.png'
           jobTitle={bunditRungsimanon('position1')}
           onClick={() => onClick(PeopleEnum.BunditRungsimanon)}
+        />
+
+        <PeopleCard
+          name={SangaSanguansaksri('fullName')}
+          imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
+          imageUrl='/about-us/Sanga_Sanguansaksri.jpg'
+          jobTitle={SangaSanguansaksri('position1')}
+          onClick={() => onClick(PeopleEnum.SangaSanguansaksri)}
         />
 
         <PeopleCard

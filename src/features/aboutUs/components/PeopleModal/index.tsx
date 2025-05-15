@@ -14,6 +14,7 @@ import { KittikhunLochaya } from './KittikhunLochaya'
 import { MinrawiPhodee } from './MinrawiPhodee'
 import { BunditRungsimanon } from './BunditRungsimanon'
 import { RoongrojWhangteeranon } from './RoongrojWhangteeranon'
+import { SangaSanguansaksri } from '@/features/aboutUs/components/PeopleModal/SangaSanguansaksri'
 
 export function PeopleModal({ people, onClose }: PeopleModalProps) {
   return (
@@ -37,6 +38,7 @@ export function PeopleModal({ people, onClose }: PeopleModalProps) {
       {people === PeopleEnum.MinrawiPhodee && <MinrawiPhodee />}
       {people === PeopleEnum.BunditRungsimanon && <BunditRungsimanon />}
       {people === PeopleEnum.RoongrojWhangteeranon && <RoongrojWhangteeranon />}
+      {people === PeopleEnum.SangaSanguansaksri && <SangaSanguansaksri />}
     </Modal>
   )
 }
