@@ -19,6 +19,7 @@
     "dateAppointment": "Appointment date",
     "positionHeldInListCompany": "Position held in listed company",
     "positionHeldInOtherCompany": "Position held in other company",
+    "positionHeldInOtherOrganization": "Position held in other organization",
     "pastPositionHeld": "Past positions held",
     "back": "Back to homepage"
   }

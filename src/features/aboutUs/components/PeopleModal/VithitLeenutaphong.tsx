@@ -17,27 +17,32 @@ export function VithitLeenutaphong() {
         positions={[t('position1'), t('position2'), t('position3')]}
       />
       <ContentWrap>
-        <Content title={common('education')} contents={[t('education1')]} />
+        <Content title={common('education')} contents={[t('education1'),t('education2'),t('education3')]} />
         <Content
           title={common('trainingHistory')}
-          contents={[t('trainingHistory1')]}
+          contents={[t('trainingHistory1'),t('trainingHistory2'),t('trainingHistory3'),t('trainingHistory4'),t('trainingHistory5'),t('trainingHistory6')]}
         />
         <Content
           title={common('dateAppointment')}
-          contents={[t('dateAppointment1')]}
+          contents={[t('dateAppointment1'),t('dateAppointment2'),t('dateAppointment3')]}
         />
         <Content
           title={common('positionHeldInListCompany')}
-          contents={[t('positionHeldInListCompany1')]}
+          contents={[t('positionHeldInListCompany1'),t('positionHeldInListCompany2')]}
+        />
+        <Content
+          title={common('positionHeldInOtherOrganization')}
+          contents={[t('positionHeldInOtherOrganization1'),t('positionHeldInOtherOrganization2'),t('positionHeldInOtherOrganization3')]}
         />
         <Content
           title={common('positionHeldInOtherCompany')}
-          contents={[t('positionHeldInOtherCompany1')]}
+          contents={[t('positionHeldInOtherCompany1'),t('positionHeldInOtherCompany2')]}
         />
         <Content
           title={common('pastPositionHeld')}
-          contents={[t('pastPositionHeld1')]}
+          contents={[t('pastPositionHeld1'),t('pastPositionHeld2')]}
         />
+
       </ContentWrap>
     </Fragment>
   )
