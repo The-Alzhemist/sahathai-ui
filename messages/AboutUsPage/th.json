@@ -345,10 +345,10 @@
     "KittikhunLochaya": {
       "fullName": "คุณกิตติคุณ โลจายะ",
       "position1": "ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการ กลุ่มงานบริการท่าเทียบเรือ",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
+      "education1": "ปริญญาตรี วิศวกรรมศาสตร์บัณฑิต สาขาวิศวกรรมเครื่องกลเรือ ศูนย์ฝึกพาณิชย์นาวี (กรมเจ้าท่า)",
+      "dateAppointment1": " 1 มิถุนายน 2554",
+      "workExperiment1": "1/2/2566 – ปัจจุบัน  ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการ – กลุ่มงานบริการท่าเทียบเรือ บมจ. สหไทย เทอร์มินอล",
+      "workExperiment2": "2554 – 31/1/2566  รองประธานเจ้าหน้าที่ฝ่ายปฏิบัติการ บมจ. สหไทย เทอร์มินอล",
       "positionHeldInOtherCompany1": "",
       "pastPositionHeld1": ""
     },
@@ -365,9 +365,14 @@
     "BunditRungsimanon": {
       "fullName": "คุณบัณฑิต รุ่งสิมานนท์",
       "position1": "ประธานเจ้าหน้าที่ฝ่ายการเงิน",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
+      "education1": "ปริญญาโท สาขาการเงิน มหาวิทยาลัยอัสสัมชัญ",
+      "education2": "ปริญญาโท สาขาการจัดการโลจิสติกส์ จุฬาลงกรณ์มหาวิทยาลัย",
+      "education3": "ปริญญาตรี สาขานิติศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย",
+      "education4": "Bachelor of Law, Chulalongkorn University",
+      "trainingHistory1": "e-learning CFO’s Orientation Course",
+      "dateAppointment1": "1 สิงหาคม 2566",
+      "workExperiment1": "1/8/2566 – ปัจจุบัน ประธานเจ้าหน้าที่ฝ่ายการเงิน บมจ. สหไทย เทอร์มินอล",
+      "workExperiment2": "2561 – 31/7/2566 ระธานเจ้าหน้าที่ฝ่ายการเงิน บจ.เช้งเก้อร์ (ประเทศไทย)",
       "positionHeldInListCompany1": "",
       "positionHeldInOtherCompany1": "",
       "pastPositionHeld1": ""
@@ -375,12 +380,22 @@
     "RoongrojWhangteeranon": {
       "fullName": "คุณรุ่งโรจน์  หวังธีระนนท์",
       "position1": "ผู้จัดการฝ่ายบัญชี",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+      "education1": "ปริญญาโท สาขาบัญชีบริหาร จุฬาลงกรณ์มหาวิทยาลัย",
+      "education2": "ปริญญาตรี สาขาการบัญชี สถาบันเทคโนโลยีราชมงคล",
+      "dateAppointment1": "20 พฤษภาคม 2567",
+      "workExperiment1": "20/5/2567 – ปัจจุบัน ผู้จัดการฝ่ายบัญชี บมจ. สหไทย เทอร์มินอล",
+      "workExperiment2": "15/8/2566  – 7/5/2567 ผู้จัดการฝ่ายบัญชีและการเงิน บจก. อี-ตุ๊ก แฟกทอรี่ (ไทยแลนด์)",
+      "workExperiment3": "20/6/2565 – 15/5/2566 ผู้จัดการอาวุโสฝ่ายบัญชี กิจการร่วมค้า MRT-TCC",
+      "workExperiment4": "1/4/2564 – 17/6/2565  ผู้จัดการฝ่ายบัญชีและการเงิน บจก. คลีนโปร ลอนดรี้",
+      "workExperiment5": "26/6/2560 – 22/10/2563 ผู้จัดการฝ่ายบัญชี บมจ. ฟอร์ท สมาร์ท เซอร์วิส\n\n"
+    },
+    "SangaSanguansaksri": {
+      "fullName": "คุณสง่า สงวนศักดิ์ศรี",
+      "position1": "ประธานเจ้าหน้าที่ฝ่ายพาณิชย์",
+      "education1": "ปริญญาตรี วิทยาศาสตร์บัณฑิต สาขาวิชาวิทยาการเดินเรือ, มหาวิทยาลัยเกษตรศาสตร์",
+      "dateAppointment1": "1 กันยายน 2567",
+      "workExperiment1": "ประธานเจ้าหน้าที่ฝ่ายพาณิชย์ บมจ. สหไทย เทอร์มินอล",
+      "workExperiment2": " Commercial Director, บจ. ฮัทชิสัน แหลมฉบัง เทอร์มินัล"
     }
   }
 }

@@ -18,26 +18,18 @@ export function KittikhunLochaya() {
       />
       <ContentWrap>
         <Content title={common('education')} contents={[t('education1')]} />
-        <Content
-          title={common('trainingHistory')}
-          contents={[t('trainingHistory1')]}
-        />
+
         <Content
           title={common('dateAppointment')}
           contents={[t('dateAppointment1')]}
         />
+
         <Content
-          title={common('positionHeldInListCompany')}
-          contents={[t('positionHeldInListCompany1')]}
+          title={common('workExperience')}
+          contents={[t('workExperiment1'),t('workExperiment2')]}
         />
-        <Content
-          title={common('positionHeldInOtherCompany')}
-          contents={[t('positionHeldInOtherCompany1')]}
-        />
-        <Content
-          title={common('pastPositionHeld')}
-          contents={[t('pastPositionHeld1')]}
-        />
+
+
       </ContentWrap>
     </Fragment>
   )
