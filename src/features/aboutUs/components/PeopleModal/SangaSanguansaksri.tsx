@@ -12,7 +12,7 @@ export function SangaSanguansaksri() {
   return (
     <Fragment>
       <Position
-        imageUrl='/about-us/roongroj-whangteeranon.png'
+        imageUrl='/about-us/Sanga_Sanguansaksri.jpg'
         fullName={t('fullName')}
         positions={[t('position1')]}
       />
