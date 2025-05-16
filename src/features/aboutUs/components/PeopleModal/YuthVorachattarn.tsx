@@ -48,8 +48,6 @@ export function YuthVorachattarn() {
             t('dateAppointment1'),
             t('dateAppointment2'),
             t('dateAppointment3'),
-            t('dateAppointment4'),
-            t('dateAppointment5'),
           ]}
         />
         <Content
@@ -58,7 +56,6 @@ export function YuthVorachattarn() {
             t('positionHeldInListCompany1'),
             t('positionHeldInListCompany2'),
             t('positionHeldInListCompany3'),
-            t('positionHeldInListCompany4'),
           ]}
         />
         <Content
@@ -66,7 +63,6 @@ export function YuthVorachattarn() {
           contents={[
             t('positionHeldInOtherCompany1'),
             t('positionHeldInOtherCompany2'),
-            t('positionHeldInOtherCompany3'),
           ]}
         />
         <Content
