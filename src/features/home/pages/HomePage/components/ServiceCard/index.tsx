@@ -20,8 +20,8 @@ export function ServiceCard({
       <div className='absolute top-0 -translate-y-1/2 px-[20px] bg-modellBgDark'>
         <Image src={imageUrl} width={imageSize} height={imageSize} alt='' />
       </div>
-      <h3 className='headline-4 text-white'>{title}</h3>
-      <p className='mt-[15px] body-2 text-border'>{content}</p>
+      <h3 className='headline-4 text-white whitespace-pre-line'>{title}</h3>
+      <p className='mt-[15px] body-2 text-border whitespace-pre-line'>{content}</p>
     </div>
   )
 }
