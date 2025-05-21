@@ -51,7 +51,7 @@ export async function fetchNewsBlogListData(
   const storyblokApi = getStoryblokApi()
 
   const sbParams: ISbStoriesParams = {
-    version: 'draft',
+    version: 'published',
     starts_with: 'news/',
     is_startpage: false,
     page: page,
