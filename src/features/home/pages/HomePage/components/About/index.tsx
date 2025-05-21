@@ -25,6 +25,11 @@ export function About() {
                 content={t('globalTransportationNetwork.content')}
                 imageUrl='/home/global-transportation-network.png'
             />
+          <AboutCard
+            title={t('worldClassStandards.title')}
+            content={t('worldClassStandards.content')}
+            imageUrl='/home/world-class-standards.png'
+          />
             <AboutCard
                 title={t('convenientLocation.title')}
                 content={t('convenientLocation.content')}
@@ -35,11 +40,7 @@ export function About() {
                 content={t('coversAllNeeds.content')}
                 imageUrl='/home/covers-all-needs.png'
             />
-            <AboutCard
-                title={t('worldClassStandards.title')}
-                content={t('worldClassStandards.content')}
-                imageUrl='/home/world-class-standards.png'
-            />
+
 
         </div>
     </section>

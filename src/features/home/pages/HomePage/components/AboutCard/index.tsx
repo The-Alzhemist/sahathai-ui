@@ -27,7 +27,7 @@ export function AboutCard({ title, content, imageUrl }: AboutCardProps) {
       </div>
       <div className='p-[22px_30px_32px]'>
         <h2 className='headline-4 text-navy'>{title}</h2>
-        <p className='mt-[14px] body-1 text-black-6'>{content}</p>
+        <p className='mt-[14px] body-1 text-black-6 whitespace-pre-line'>{content}</p>
       </div>
     </div>
   )
