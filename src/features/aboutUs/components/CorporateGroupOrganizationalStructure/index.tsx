@@ -21,8 +21,11 @@ export function CorporateGroupOrganizationalStructure() {
         {t('organizationalStructure.title')}
       </h2>
       <Line className='my-[8px]' />
-      <p className='mt-[20px] text-black-6 body-1'>
-        {t('organizationalStructure.content')}
+      <p className='mt-[20px] text-black-6 body-1 whitespace-pre-line'>
+
+        {t.rich(`organizationalStructure.content`, {
+          name: (chunks) => <div className='inline-flex font-semibold  pr-5'>{chunks}</div>,
+        })}
       </p>
 
       <Animation className='w-full mt-[50px] rounded-[15px] shadow-8 overflow-hidden'>
