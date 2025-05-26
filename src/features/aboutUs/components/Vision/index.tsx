@@ -20,13 +20,13 @@ export function Vision() {
       <section className='py-[20px] pr-[30px]'>
         <div className='max-w-[400px] w-full'>
           <SahathaiText h='h3' />
-          <p className='mt-[15px] body-1 text-black-6'>{t('content')}</p>
+          <p className='mt-[15px] body-1 text-black-6 whitespace-pre-line'>{t('content')}</p>
         </div>
 
         <div className='w-full mt-[70px]'>
           <h2 className='headline-1 text-background'>{t('vision.title')}</h2>
           <Line className='my-[22px]' />
-          <p className='mt-[10px] text-xl md:text-[26px] leading-7 md:leading-[48.38px] text-black-6 font-[300]'>
+          <p className='mt-[10px] text-xl md:text-[26px] leading-7 md:leading-[48.38px] text-black-6 font-[300] whitespace-pre-line'>
             {t('vision.content')}
           </p>
         </div>
