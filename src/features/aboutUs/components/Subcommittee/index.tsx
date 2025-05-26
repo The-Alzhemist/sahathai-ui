@@ -9,7 +9,7 @@ import { SubcommitteeEnum } from './interface'
 
 export function Subcommittee() {
   const t = useTranslations('AboutUsPage.BoardAndExecutives.Subcommittee')
-  const common = useTranslations('common')
+
 
   const tabs = useMemo(
     () => [
@@ -53,12 +53,18 @@ export function Subcommittee() {
         key={activeTab}
         className='whitespace-pre-wrap body-1 text-black-6 mt-[50px] rounded-[15px] p-5 md:p-9 shadow-8'
       >
-        {t(`${activeTab}.content`)}
+        <div className='whitespace-pre-line mb-5'>
+          {t.rich(`${activeTab}.content`, {
+            bold: (chunks) => <strong className='font-semibold'>{chunks}</strong>,
+            name: (chunks) => <div className='inline-flex font-semibold w-[200px] pr-5'>{chunks}</div>,
+          })}
+        </div>
+
         {activeTab === SubcommitteeEnum.Audit ? (
           <>
             &nbsp;
-            <Link className='hover:underline' href=''>
-              {common('clickHere')}
+            <Link className='hover:underline text-blue-300 ทะขถ' href='https://sahathaiterminal.com/wp-content/uploads/2019/05/20181130_AC_ID.pdf'>
+              {t(`${activeTab}.clickLinkText`)}
             </Link>
           </>
         ) : null}

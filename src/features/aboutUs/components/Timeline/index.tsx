@@ -114,7 +114,7 @@ export function Timeline() {
           height={76}
           alt=''
         />
-        <p className='body-2 text-black-6'>{t('2568.content')}</p>
+        <p className='body-2 text-black-6 whitespace-pre-line'>{t('2568.content')}</p>
       </TimelineCard>
     </section>
   )
