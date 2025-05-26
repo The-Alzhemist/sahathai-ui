@@ -98,22 +98,24 @@
         "title": "Executive Committee"
       },
       "Subcommittee": {
-        "title": "Subcommittees",
+        "title": "คณะอนุกรรมการ",
         "auditCommittee": {
-          "title": "Audit Committee",
-          "content": "Our Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
+          "title": "คณะกรรมการตรวจสอบ",
+          "content": "<bold>คณะกรรมการตรวจสอบของเรา</bold> มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน\n\n<bold>สมาชิกของคณะกรรมการตรวจสอบมีดังนี้</bold>\n<name>คุณวิไล ฉัททันต์รัศมี</name>ตำแหน่งประธานกรรมการตรวจสอบ\n<name>ุณยุทธ วรฉัตรธาร</name>ตำแหน่งกรรมการตรวจสอบ\n<name>คุณวิทิต ลีนุตพงษ์</name>ตำแหน่งกรรมการตรวจสอบ\n\nพร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน\n\n<bold>หมายเหตุ</bold>\n1. เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี\n2. บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์",
+          "clickLinkText": "คลิกนี่ที่เพื่อดูคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ"
         },
         "executiveCommittee": {
-          "title": "Executive Committee",
-          "content": "The Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
+          "title": "คณะกรรมการบริหาร",
+          "content": "<bold>คณะกรรมการบริหารของเรา</bold>\nมีหน้าที่ผลักดันให้ สหไทย เทอร์มินอล ปฏิบัติงานให้ตรงตามนโยบายและทิศทางที่กำหนด โดยคณะผู้บริหารระดับสูงของเรามีสมาชิกดังนี้\n\n<name>คุณวิจิตร รัตนศิริวิไล</name>ตำแหน่งประธานกรรมการบริหาร\n<name>คุณไชยรัตน์ จงยั่งยืนวงศ์</name>ตำแหน่งกรรมการบริหาร\n<name>คุณสุชิน รัตนศิริวิไล</name> ตำแหน่งกรรมการบริหาร\n<name>คุณอังกูร ศรีสุนทร</name>ตำแหน่งกรรมการบริหาร\n<name>คุณเสาวคุณ ครุจิตร</name>ตำแหน่งกรรมการบริหาร\n<name>คุณบัญชัย ครุจิตร </name>ตำแหน่งกรรมการบริหาร\n"
+
         },
         "nominationAndRemunerationCommittee": {
-          "title": "Nomination and Remuneration Committee",
-          "content": "The Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
+          "title": "คณะกรรมการสรรหาและกำหนดค่าตอบแทน",
+          "content": "สหไทย เทอร์มินอล ได้จัดตั้งคณะกรรมการสรรหาและกำหนดค่าตอบแทน โดยมีสมาชิกที่มีความรับผิดชอบและมีความสามารถ ตามกฎระเบียบที่กำหนด โดยคณะกรรมการสรรหาและกำหนดค่าตอบแทนของเราประกอบด้วย\n\n<name>คุณวิทิต ลีนุตพงษ์</name>ตำแหน่งประธานกรรมการสรรหาและกำหนดค่าตอบแทน\n<name>คุณยุทธ วรฉัตรธาร</name>ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน\n<name>คุณวิไล ฉัททันต์รัศมี</name>ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน\n<name>คุณวิจิตร รัตนศิริวิไล</name>ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน\n<name>คุณเสาวคุณ ครุจิตร</name>ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน\n\n"
         },
         "enterpriseRiskManagementCommittee": {
-          "title": "Enterprise Risk Management Committee",
-          "content": "The Audit Committee is responsible for overseeing the operations of our management board within the company, particularly in the areas of financial reporting and information.\nThe members of the Audit Committee are as follows:\nMs. Wilai¹ Chattantarat, Chairman of the Audit Committee\nMr. Yut Worachatthan, Audit Committee Member\nMr. Witit Leenutpong, Audit Committee Member\nIn addition, the company has established an internal audit office under the Audit Committee and has hired an external agency, Thammaniti Internal Audit Company, to conduct internal audits.\nNote:\n1. The director is knowledgeable and experienced in accounting.\n2. The company has considered the qualifications of independent directors and audit committee members according to the Securities and Exchange Commission's definition."
+          "title": "คณะกรรมการบริหารความเสี่ยงองค์กร",
+          "content": "บริษัทฯมีการแต่งตั้งคณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ ขึ้นเพื่อดูแลและบริหารความเสี่ยงในองค์กร เพื่อให้อยู่ในระดับที่เหมาะสม โดยมีคณะกรรมการ 3 ท่าน ดังนี้\n\n<name>คุณยุทธ วรฉัตรธาร</name>ตำแหน่งประธานคณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ\n<name>คุณวิไล ฉัททันต์รัศมี</name>ตำแหน่งกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ\n<name>คุณบัญชัย ครุจิตร</name>ตำแหน่งกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ"
         }
       }
     },
