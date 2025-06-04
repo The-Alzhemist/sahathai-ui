@@ -6,13 +6,13 @@ export default function DockingInfo() {
   const locale = useLocale()
   return (
     <section>
-      {/* <Image
-        className='mb-5'
-        src='/infrastructure-containers/docking.png'
+       <Image
+        className='mb-5 rounded-md'
+        src='/infrastructure-containers/docking_image.jpg'
         alt=''
         width={666}
         height={328}
-      /> */}
+      />
       {locale === 'th' && <DockingInfoTH />}
       {locale === 'en' && <DockingInfoEN />}
       {locale === 'cn' && <DockingInfoCN />}
@@ -22,60 +22,49 @@ export default function DockingInfo() {
 
 export const DockingInfoTH = () => {
   return (
-    <>
-      <p className='text-gray-800 text-sm mb-3'>
-        สายการเดินเรือหรือตัวแทนสายการเดินเรือ
-        ต้องส่งอีเมล์รายละเอียดของเรือบรรทุกสินค้า บริการ
-        และลักษณะของเรือบรรทุกสินค้า (แผนการจัดเก็บทั่วไป แผนการผูกยึดเรือ
-        แผนการจัดวางตู้สินค้าเย็น ระบบความปลอดภัย
-        และตารางพื้นที่ระวางตู้คอนเทนเนอร์) ให้แก่ สหไทย เทอร์มินอล
-        ล่วงหน้าอย่างน้อย 1 สัปดาห์
-        ก่อนเข้าเทียบท่าสายการเดินเรือหรือตัวแทนสายการเดินเรือ
-        ต้องส่งข้อมูลตารางการเข้าเทียบท่าระยะยาวล่วงหน้าอย่างน้อย 1 เดือน
-        ให้กับสหไทย เทอร์มินอล เพื่อให้สหไทย
-        เทอร์มินอลวางแผนจองตู้คอนเทนเนอร์ให้กับเรือขนส่งสินค้าล่วงหน้าอย่างน้อย
-        7, 3 และ 1 วัน ก่อนเข้าเทียบท่า สายการเดินเรือหรือตัวแทนสายการเดินเรือ
-        ต้องส่งข้อมูลประมาณการของวันที่เรือจะเข้าเทียบท่า (ETA)
-        และปริมาณสินค้าที่จะทำการโหลดขึ้นหรือลงโดยประมาณ เพื่อให้ สหไทย
-        เทอร์มินอล ยืนยันแผนการเข้าเทียบท่า (POB)
-        และประมาณการของวันที่ที่เรือจะออกจากท่าเรือต้นทาง (ETD)
-      </p>
+      <>
+        <p className='text-gray-600 text-sm mb-3'>
+          สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งอีเมล์รายละเอียดของเรือบรรทุกสินค้า บริการ
+          และลักษณะของเรือบรรทุกสินค้า (แผนการจัดเก็บทั่วไป แผนการผูกยึดเรือ แผนการจัดวางตู้สินค้าเย็น ระบบความปลอดภัย
+          และตารางพื้นที่ระวางตู้คอนเทนเนอร์) ให้แก่ สหไทย เทอร์มินอล ล่วงหน้าอย่างน้อย 1 สัปดาห์ ก่อนเข้าเทียบท่า
+        </p>
 
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
-        <span className='text-sm text-gray-700'>
+        <p className='text-gray-600 text-sm mb-3'>
+          สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งข้อมูลตารางการเข้าเทียบท่าระยะยาวล่วงหน้าอย่างน้อย 1 เดือน ให้กับสหไทย เทอร์มินอล เพื่อให้สหไทย เทอร์มินอลวางแผนจองตู้คอนเทนเนอร์ให้กับเรือขนส่งสินค้าล่วงหน้าอย่างน้อย 7, 3 และ 1 วัน ก่อนเข้าเทียบท่า สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งข้อมูลประมาณการของวันที่เรือจะเข้าเทียบท่า (ETA) และปริมาณสินค้าที่จะทำการโหลดขึ้นหรือลงโดยประมาณ เพื่อให้ สหไทย เทอร์มินอล ยืนยันแผนการเข้าเทียบท่า (POB) และประมาณการของวันที่ที่เรือจะออกจากท่าเรือต้นทาง (ETD)
+        </p>
+
+        <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
+        <span className='text-sm text-gray-600'>
           ส่งอีเมล์ถึงสำนักงานปฏิบัติการของ สหไทย เทอร์มินอล ได้ที่
         </span>
 
-        <span className='text-primary-1'>planner.stt@sahathai.com</span>
-      </div>
-    </>
+          <span className='text-primary-1'>planner.stt@sahathai.com</span>
+        </div>
+      </>
   )
 }
 
 export const DockingInfoEN = () => {
   return (
-    <>
-      <p className='text-gray-800 text-sm mb-3'>
-        Shipping lines or shipping agents must send an email with the details of
-        the cargo ship, services, and cargo ship characteristics (general
-        stowage plan, lashing plan, refrigerated container arrangement plan,
-        safety system, and container slot allocation plan) to Sahathai Terminal
-        at least one week in advance. Shipping lines or shipping agents must
-        provide long-term berthing schedules at least one month in advance for
-        planning and pre-booking of container slots 7, 3, and 1 day before
-        berthing. The shipping lines or agents must also provide an estimated
-        time of arrival (ETA) and estimated cargo volumes for loading or
-        unloading. Sahathai Terminal will confirm the berthing plan (POB) and
-        the estimated departure time (ETD) from the terminal.
-      </p>
+      <>
+        <>
+          <p className='text-gray-600 text-sm mb-3'>
+            สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งอีเมล์รายละเอียดของเรือบรรทุกสินค้า บริการ
+            และลักษณะของเรือบรรทุกสินค้า (แผนการจัดเก็บทั่วไป แผนการผูกยึดเรือ แผนการจัดวางตู้สินค้าเย็น ระบบความปลอดภัย
+            และตารางพื้นที่ระวางตู้คอนเทนเนอร์) ให้แก่ สหไทย เทอร์มินอล ล่วงหน้าอย่างน้อย 1 สัปดาห์ ก่อนเข้าเทียบท่า
+          </p>
 
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
-        <span className='text-sm text-gray-700'>
-          Please email the operations office of Sahathai Terminal at
-        </span>
+          <p className='text-gray-600 text-sm mb-3'>
+            สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งข้อมูลตารางการเข้าเทียบท่าระยะยาวล่วงหน้าอย่างน้อย 1 เดือน ให้กับสหไทย เทอร์มินอล เพื่อให้สหไทย เทอร์มินอลวางแผนจองตู้คอนเทนเนอร์ให้กับเรือขนส่งสินค้าล่วงหน้าอย่างน้อย 7, 3 และ 1 วัน ก่อนเข้าเทียบท่า สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งข้อมูลประมาณการของวันที่เรือจะเข้าเทียบท่า (ETA) และปริมาณสินค้าที่จะทำการโหลดขึ้นหรือลงโดยประมาณ เพื่อให้ สหไทย เทอร์มินอล ยืนยันแผนการเข้าเทียบท่า (POB) และประมาณการของวันที่ที่เรือจะออกจากท่าเรือต้นทาง (ETD)
+          </p>
 
-        <span className='text-primary-1'>planner.stt@sahathai.com</span>
-      </div>
+          <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
+            <span className='text-sm text-gray-600'>
+              ส่งอีเมล์ถึงสำนักงานปฏิบัติการของ สหไทย เทอร์มินอล ได้ที่
+            </span>
+            <span className='text-primary-1'>planner.stt@sahathai.com</span>
+          </div>
+        </>
     </>
   )
 }
