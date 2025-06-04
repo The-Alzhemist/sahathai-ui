@@ -14,6 +14,14 @@ import CfsGoods from '@/features/infrastructureContainers/components/OperationGu
 import RegulationsCargoShips from '@/features/infrastructureContainers/components/OperationGuidelines/components/RegulationsCargoShips'
 import SafetyRegulations from '@/features/infrastructureContainers/components/OperationGuidelines/components/SafetyRegulations'
 import HazardousGoods from '@/features/infrastructureContainers/components/OperationGuidelines/components/HazardousGoods'
+import ResponsibilityScope
+  from "@/features/infrastructureContainers/components/OperationGuidelines/components/ResponsibilityScope";
+import DocumentProcess
+  from "@/features/infrastructureContainers/components/OperationGuidelines/components/DocumentProcess";
+import ServiceProcess
+  from "@/features/infrastructureContainers/components/OperationGuidelines/components/ServiceProcess";
+import BookingProcess
+  from "@/features/infrastructureContainers/components/OperationGuidelines/components/BookingProcess";
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
@@ -65,16 +73,16 @@ export function OperationGuidelines() {
           )}
           {activeTab === 'operatingHours' && <OperatingHours />}
           {activeTab === 'cfsLcl' && <CfsGoods />}
-          {activeTab === 'responsibilityScope' && <div>No data</div>}
+          {activeTab === 'responsibilityScope' && <ResponsibilityScope/>}
           {activeTab === 'regulationsCargoShips' && <RegulationsCargoShips />}
           {activeTab === 'safetyRegulations' && <SafetyRegulations />}
           {activeTab === 'hazardousGoods' && <HazardousGoods />}
           {activeTab === 'requestPermissionContact' && (
             <RequestPermissionContact />
           )}
-          {activeTab === 'documentSubmissionProcess' && <div>No data</div>}
-          {activeTab === 'bookingProcess' && <div>No data</div>}
-          {activeTab === 'serviceCharge' && <div>No data</div>}
+          {activeTab === 'documentSubmissionProcess' && <DocumentProcess/>}
+          {activeTab === 'bookingProcess' && <BookingProcess/>}
+          {activeTab === 'serviceCharge' && <ServiceProcess/>}
         </section>
       </Animation>
     </section>
