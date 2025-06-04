@@ -9,7 +9,7 @@ export default function DocumentProcess() {
 
             <Image
                 className='mb-5 rounded-md'
-                src='/infrastructure-containers/bookingProcess.jpg'
+                src='/infrastructure-containers/documentProcess.jpg'
                 alt=''
                 width={666}
                 height={328}
@@ -37,7 +37,7 @@ const DocumentProcessTH = () => {
             <h3 className='text-sm text-gray-800 mb-2 underline'>ขั้นตอนการยื่นเอกสาร สำหรับเรือขาออก
             </h3>
             <ul className='flex flex-col gap-y-5 list-disc'>
-                <li className='text-gray-600 text-sm'>วสายการเดินเรือหรือตัวแทนสายการเดินเรือ จำเป็นต้องยื่น Document
+                <li className='text-gray-600 text-sm'>สายการเดินเรือหรือตัวแทนสายการเดินเรือ จำเป็นต้องยื่น Document
                     Forecast, Pre-loading Plan และ Special Stowage Instructions ให้กับทางสหไทย เทอร์มินอล
                     ก่อนเวลาเข้าเทียบท่าโดยประมาณ (ETA) ล่วงหน้า 12 ชั่วโมง
                 </li>
@@ -53,7 +53,7 @@ const DocumentProcessTH = () => {
                     เพื่อป้องกันความล่าช้า
                 </li>
 
-                <li className='text-gray-600 text-sm'>นกรณีที่ท่าเทียบเรือมีการจองเต็มแล้ว
+                <li className='text-gray-600 text-sm'>กรณีที่ท่าเทียบเรือมีการจองเต็มแล้ว
                     สายการเดินเรือหรือตัวแทนสายการเดินเรือ
                     จำเป็นต้องส่งเอกสารของตู้คอนเทนเนอร์ที่รอการขนถ่ายให้กับทางสหไทย เทอร์มินอล เพื่อป้องกันความล่าช้า
                 </li>
