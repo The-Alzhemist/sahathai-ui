@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="890dd85d-4650-4500-9bc8-9530453127ab" name="Changes" comment="feat(structurePage): update image">
-      <change beforePath="$PROJECT_DIR$/src/features/infrastructureContainers/components/OperationGuidelines/components/DocumentProcess.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/infrastructureContainers/components/OperationGuidelines/components/DocumentProcess.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/infrastructureContainers/components/OperationGuidelines/components/RegulationsCargoShips.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/infrastructureContainers/components/OperationGuidelines/components/RegulationsCargoShips.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/infrastructureContainers/components/OperationGuidelines/components/SafetyRegulations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/infrastructureContainers/components/OperationGuidelines/components/SafetyRegulations.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/joinUs/components/Policy/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/joinUs/components/Policy/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,28 +16,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2y2QRakOSWIWyEFmU2YACO0a2IU" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/nuengcodework/Documents/GitHub/sahathai-ui/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nuengcodework/Documents/GitHub/sahathai-ui/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
