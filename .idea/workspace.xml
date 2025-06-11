@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="890dd85d-4650-4500-9bc8-9530453127ab" name="Changes" comment="feat(structurePage): update image">
+      <change afterPath="$PROJECT_DIR$/public/infrastructure-containers/logistic-innovation-th-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleModal/Papatssarin.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/AboutUsPage/cn.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/AboutUsPage/cn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/AboutUsPage/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/AboutUsPage/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messages/AboutUsPage/th.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/AboutUsPage/th.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/PeopleEnum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/PeopleEnum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/Executives/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/Executives/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleModal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/infrastructureContainers/components/LogisticInnovation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/infrastructureContainers/components/LogisticInnovation/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,19 +33,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/about-us-pdf-file&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/nuengcodework/Documents/GitHub/sahathai-ui/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "fix/about-us",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/nuengcodework/Documents/GitHub/sahathai-ui/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/infrastructure-containers" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
