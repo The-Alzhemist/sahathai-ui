@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { PeopleEnum } from '@/enums/PeopleEnum'
 import { PeopleCard } from '../PeopleCard'
 import { ExecutivesProps } from './interface'
-import { Papatssarin } from '@/features/aboutUs/components/PeopleModal/Papatssarin'
+
 
 export function Executives({ onClick }: ExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives.Executives')
@@ -37,7 +37,7 @@ export function Executives({ onClick }: ExecutivesProps) {
             sauwakunKaruchit('position2'),
             sauwakunKaruchit('position3'),
             sauwakunKaruchit('position4'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.SauwakunKaruchit)}
         />
 
@@ -51,7 +51,7 @@ export function Executives({ onClick }: ExecutivesProps) {
             banchaiKaruchit('position3'),
             banchaiKaruchit('position4'),
             banchaiKaruchit('position5'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.BanchaiKaruchit)}
         />
 
@@ -59,7 +59,7 @@ export function Executives({ onClick }: ExecutivesProps) {
           name={kittikhunLochaya('fullName')}
           imageClassName='left-[-80.33px] top-0 w-[323px]'
           imageUrl='/about-us/kittikhun-lochaya.png'
-          jobTitle={kittikhunLochaya('position1')}
+          jobTitle={[kittikhunLochaya('position1')]}
           onClick={() => onClick(PeopleEnum.KittikhunLochaya)}
         />
 
@@ -86,7 +86,7 @@ export function Executives({ onClick }: ExecutivesProps) {
           name={papatssarin('fullName')}
           imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
           imageUrl=''
-          jobTitle={papatssarin('position1')}
+          jobTitle={[papatssarin('position1')]}
           onClick={() => onClick(PeopleEnum.Papatssarin)}
         />
 
@@ -94,7 +94,7 @@ export function Executives({ onClick }: ExecutivesProps) {
           name={SangaSanguansaksri('fullName')}
           imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
           imageUrl='/about-us/Sanga_Sanguansaksri.jpg'
-          jobTitle={SangaSanguansaksri('position1')}
+          jobTitle={[SangaSanguansaksri('position1')]}
           onClick={() => onClick(PeopleEnum.SangaSanguansaksri)}
         />
 

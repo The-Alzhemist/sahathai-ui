@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="890dd85d-4650-4500-9bc8-9530453127ab" name="Changes" comment="feat(structurePage): update image">
-      <change afterPath="$PROJECT_DIR$/public/infrastructure-containers/logistic-innovation-th-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleModal/Papatssarin.tsx" afterDir="false" />
+    <list default="true" id="890dd85d-4650-4500-9bc8-9530453127ab" name="Changes" comment="feat(structurePage): Board update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages/AboutUsPage/cn.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/AboutUsPage/cn.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages/AboutUsPage/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/AboutUsPage/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messages/AboutUsPage/th.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/AboutUsPage/th.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/PeopleEnum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/PeopleEnum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/Board/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/Board/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/Executives/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/Executives/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleModal/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/infrastructureContainers/components/LogisticInnovation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/infrastructureContainers/components/LogisticInnovation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleCard/interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/aboutUs/components/PeopleCard/interface.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -61,5 +59,10 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(structurePage):update text image" />
+    <MESSAGE value="feat(structurePage): Board update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(structurePage): Board update" />
   </component>
 </project>
