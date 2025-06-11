@@ -40,7 +40,7 @@ export function PeopleCard({
       <div className='py-[8px] px-[5px] space-y-[18px] min-h-[165px] mt-[15px] w-full text-white'>
         <h3 className='subtitle-1'>{name}</h3>
         <Line />
-        <p className='whitespace-pre-wrap caption-mini'>{jobTitle}</p>
+        <p className='whitespace-pre-wrap caption-mini leading-5'>{jobTitle}</p>
       </div>
     </Animation>
   )
