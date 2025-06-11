@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { PeopleEnum } from '@/enums/PeopleEnum'
 import { PeopleCard } from '../PeopleCard'
 import { ExecutivesProps } from './interface'
+import { Papatssarin } from '@/features/aboutUs/components/PeopleModal/Papatssarin'
 
 export function Executives({ onClick }: ExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives.Executives')
@@ -17,6 +18,10 @@ export function Executives({ onClick }: ExecutivesProps) {
   )
   const SangaSanguansaksri = useTranslations(
     'AboutUsPage.SangaSanguansaksri'
+  )
+
+  const papatssarin = useTranslations(
+    'AboutUsPage.Papatssarin'
   )
 
   return (
@@ -66,12 +71,23 @@ export function Executives({ onClick }: ExecutivesProps) {
         {/*  onClick={() => onClick(PeopleEnum.MinrawiPhodee)}*/}
         {/*/>*/}
 
+
+
+        {/*<PeopleCard*/}
+        {/*  name={bunditRungsimanon('fullName')}*/}
+        {/*  imageClassName='left-[-53px] top-[-7.14px] w-[297px]'*/}
+        {/*  imageUrl='/about-us/bundit-rungsimanon.png'*/}
+        {/*  jobTitle={bunditRungsimanon('position1')}*/}
+        {/*  onClick={() => onClick(PeopleEnum.BunditRungsimanon)}*/}
+        {/*/>*/}
+
+        {/* Papatssarin */}
         <PeopleCard
-          name={bunditRungsimanon('fullName')}
+          name={papatssarin('fullName')}
           imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
-          imageUrl='/about-us/bundit-rungsimanon.png'
-          jobTitle={bunditRungsimanon('position1')}
-          onClick={() => onClick(PeopleEnum.BunditRungsimanon)}
+          imageUrl=''
+          jobTitle={papatssarin('position1')}
+          onClick={() => onClick(PeopleEnum.Papatssarin)}
         />
 
         <PeopleCard
@@ -82,11 +98,11 @@ export function Executives({ onClick }: ExecutivesProps) {
           onClick={() => onClick(PeopleEnum.SangaSanguansaksri)}
         />
 
-        <PeopleCard
-          name={roongrojWhangteeranon('fullName')}
-          jobTitle={roongrojWhangteeranon('position1')}
-          onClick={() => onClick(PeopleEnum.RoongrojWhangteeranon)}
-        />
+        {/*<PeopleCard*/}
+        {/*  name={roongrojWhangteeranon('fullName')}*/}
+        {/*  jobTitle={roongrojWhangteeranon('position1')}*/}
+        {/*  onClick={() => onClick(PeopleEnum.RoongrojWhangteeranon)}*/}
+        {/*/>*/}
       </section>
     </section>
   )
