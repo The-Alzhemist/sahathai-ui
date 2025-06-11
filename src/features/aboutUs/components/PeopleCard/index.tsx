@@ -15,15 +15,15 @@ export function PeopleCard({
 }: PeopleCardProps) {
   return (
     <Animation
-      className='max-w-[202px] w-full cursor-pointer'
+      className='max-w-[250px] w-full cursor-pointer '
       onClick={onClick}
     >
-      <div className='relative w-full overflow-hidden rounded-[15px] shadow-8 bg-white'>
-        <div className='relative pt-[108.91%] w-full'>
-          <div className={cn('absolute', imageClassName)}>
+      <div className='relative w-full overflow-hidden rounded-[15px] shadow-8  '>
+        <div className='relative aspect-square w-full'>
+          <div className={cn('', imageClassName)}>
             {imageUrl ? (
-              <div className='relative pt-[100%] w-full'>
-                <Image src={imageUrl} fill alt='' />
+              <div className='relative '>
+                <Image src={imageUrl} width={250} height={250} alt=''  />
               </div>
             ) : null}
           </div>
@@ -40,7 +40,13 @@ export function PeopleCard({
       <div className='py-[8px] px-[5px] space-y-[18px] min-h-[165px] mt-[15px] w-full text-white'>
         <h3 className='subtitle-1'>{name}</h3>
         <Line />
-        <p className='whitespace-pre-wrap caption-mini'>{jobTitle}</p>
+        <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5'>
+          {jobTitle?.map((title:string, index:number) => (
+            <li key={index} className=''>
+             {title}
+            </li>
+          ))}
+        </ul>
       </div>
     </Animation>
   )
