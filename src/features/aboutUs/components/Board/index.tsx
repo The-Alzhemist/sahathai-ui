@@ -37,7 +37,7 @@ export function Board({ onClick }: BoardProps) {
             yuthVorachattarn('position2'),
             yuthVorachattarn('position3'),
             yuthVorachattarn('position4'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.YuthVorachattarn)}
         />
         <PeopleCard
@@ -48,7 +48,7 @@ export function Board({ onClick }: BoardProps) {
             vithitLeenutaphong('position1'),
             vithitLeenutaphong('position2'),
             vithitLeenutaphong('position3'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.VithitLeenutaphong)}
         />
         <PeopleCard
@@ -60,7 +60,7 @@ export function Board({ onClick }: BoardProps) {
             vilaiChattanrassamee('position2'),
             vilaiChattanrassamee('position3'),
             vilaiChattanrassamee('position4'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.VilaiChattanrassamee)}
         />
         <PeopleCard
@@ -71,7 +71,7 @@ export function Board({ onClick }: BoardProps) {
             wichitRattanasirivilai('position1'),
             wichitRattanasirivilai('position2'),
             wichitRattanasirivilai('position3'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.WichitRattanasirivilai)}
         />
         <PeopleCard
@@ -81,7 +81,7 @@ export function Board({ onClick }: BoardProps) {
           jobTitle={[
             suchinRattanasirivilai('position1'),
             suchinRattanasirivilai('position2'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.SuchinRattanasirivilai)}
         />
         <PeopleCard
@@ -91,7 +91,7 @@ export function Board({ onClick }: BoardProps) {
           jobTitle={[
             anggoonSrisunthorn('position1'),
             anggoonSrisunthorn('position2'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.AnggoonSrisunthorn)}
         />
         <PeopleCard
@@ -101,7 +101,7 @@ export function Board({ onClick }: BoardProps) {
           jobTitle={[
             chairatChongyangyuenvong('position1'),
             chairatChongyangyuenvong('position2'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.ChairatChongyangyuenvong)}
         />
         <PeopleCard
@@ -113,7 +113,7 @@ export function Board({ onClick }: BoardProps) {
             sauwakunKaruchit('position2'),
             sauwakunKaruchit('position3'),
             sauwakunKaruchit('position4'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.SauwakunKaruchit)}
         />
         <PeopleCard
@@ -126,7 +126,7 @@ export function Board({ onClick }: BoardProps) {
             banchaiKaruchit('position3'),
             banchaiKaruchit('position4'),
             banchaiKaruchit('position5'),
-          ].join('\n')}
+          ]}
           onClick={() => onClick(PeopleEnum.BanchaiKaruchit)}
         />
       </section>

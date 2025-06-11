@@ -13,4 +13,5 @@ export enum PeopleEnum {
   BunditRungsimanon = 'bunditRungsimanon',
   RoongrojWhangteeranon = 'roongrojWhangteeranon',
   SangaSanguansaksri = 'SangaSanguansaksri',
+  Papatssarin = 'Papatssarin'
 }
