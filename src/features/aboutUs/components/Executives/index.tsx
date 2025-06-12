@@ -85,7 +85,7 @@ export function Executives({ onClick }: ExecutivesProps) {
         <PeopleCard
           name={papatssarin('fullName')}
           imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
-          imageUrl=''
+          imageUrl='/about-us/papatsarin-1.png'
           jobTitle={[papatssarin('position1')]}
           onClick={() => onClick(PeopleEnum.Papatssarin)}
         />

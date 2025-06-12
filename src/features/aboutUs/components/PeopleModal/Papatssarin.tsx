@@ -12,7 +12,7 @@ export function Papatssarin() {
   return (
     <Fragment>
       <Position
-        imageUrl=''
+        imageUrl='/about-us/papatsarin-1.png'
         fullName={t('fullName')}
         positions={[t('position1')]}
       />
