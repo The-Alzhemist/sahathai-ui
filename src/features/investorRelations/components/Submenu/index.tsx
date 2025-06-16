@@ -4,7 +4,7 @@ import { SubmenuItemProps, SubmenuProps } from './interface'
 
 export function Submenu({ children }: SubmenuProps) {
   return (
-    <section className='flex justify-start md:justify-center  gap-5 overflow-scroll mx-auto px-5'>
+    <section className='flex justify-start md:justify-center  gap-5 overflow-x-scroll lg:overscroll-none mx-auto px-5'>
       {children}
     </section>
   )

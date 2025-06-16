@@ -9,7 +9,7 @@ export function Menu() {
 
   return (
     <div className='fixed top-[60px] bg-background text-white  md:rounded-b-[30px] w-full z-10 '>
-      <ul className=' flex justify-start md:justify-center overflow-y-scroll'>
+      <ul className=' flex justify-start md:justify-center overflow-x-scroll lg:overscroll-none '>
         {menus.map(menu => {
           const isActive = pathname === menu.pathname
 
