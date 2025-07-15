@@ -8,12 +8,19 @@ import { Tabs } from '../../components/Tabs'
 import { RiskCard } from '../../components/RiskCard'
 import { Animation } from '@/components/Animation'
 import { Menu } from '@/components/Menu'
+import { Banner } from '@/components/Banner'
 
 export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
   return (
-    <main className='pt-[100px] pb-[184px]  bg-white'>
+    <main className='bg-white'>
       <Menu />
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={t('investorRelations')}
+        caption={t('title')}
+        className='mb-[40px]'
+      />
       <Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />
       <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
         {t('title')}

@@ -9,7 +9,7 @@ export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')
 
   return (
-    <Animation className='pt-[130px] max-w-[1100px] w-full mx-auto px-5'>
+    <Animation className='max-w-[1100px] w-full mx-auto px-5'>
       <h2 className='text-navy text-[40px] font-[500] leading-[60.48px] text-center'>
         {t('title')}
       </h2>
