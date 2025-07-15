@@ -11,6 +11,7 @@
       "order": "ลำดับ",
       "numberShares": "จำนวนหุ้น (หุ้น)",
       "shares": "% หุ้น",
+      "shareholderFreeFloatOverview": "ผู้ถือหุ้นรายย่อย ณ วันที่ {date} ประเภท : {type}",
       "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date} ประเภท : {type}",
       "minorityShareholders": "จำนวนผู้ถือหุ้นรายย่อย (Free float)",
       "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
