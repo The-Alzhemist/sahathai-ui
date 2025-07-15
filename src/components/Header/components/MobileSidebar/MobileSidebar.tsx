@@ -4,7 +4,6 @@ import { Link } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
 import { UserIcon } from '@/components/icons/UserIcon'
 import { HeadsetIcon } from '@/components/icons/HeadsetIcon'
-import { useMobileSidebarAnimation } from '@/hooks/useMobileSidebarAnimation'
 import { MobileSidebarProps } from '@/components/Header/components/MobileSidebar/interface'
 import withMobileSidebar from './withMobileSidebar'
 import { ShippingIcon } from '@/components/icons/ShippingIcon'
@@ -55,16 +54,13 @@ const SidebarLink = ({
 
 const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   const t = useTranslations('Header')
-  const { ref, animationClassName } = useMobileSidebarAnimation(isVisible)
-
-  const handleClose = () => handleOnToggle(false)
 
   return (
     <nav
-      ref={ref}
       className={cn(
-        animationClassName,
-        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5'
+        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5',
+        'transition-all duration-500',
+        isVisible ? 'opacity-100 ' : ' opacity-0'
       )}
     >
       <div className='h-full max-w-7xl mx-auto flex flex-col'>
@@ -72,7 +68,7 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
           <Link href='/' className='shrink-0 p-[10px]'>
             <Image src='/logo.png' width={101} height={24} alt='' priority />
           </Link>
-          <div className='text-xl cursor-pointer' onClick={handleClose}>
+          <div className='text-xl cursor-pointer' onClick={handleOnToggle}>
             X
           </div>
         </section>
@@ -80,41 +76,41 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
         <section className='flex flex-col justify-between h-full'>
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
             <SidebarLink
-              href='/contact-us'
+              href='/about-us'
               icon={<UserIcon width='20' height='20' />}
               label={t('aboutUs')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
             <SidebarLink
               href='/services'
               icon={<HeadsetIcon width='20' height='20' />}
               label={t('service')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
             <SidebarLink
               href='/infrastructure-containers'
               icon={<ShippingIcon width='20' height='20' />}
               label={t('infra')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
             <SidebarLink
               href='/news'
               icon={<NewspaperIcon width='20' height='20' />}
               label={t('news')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
             <SidebarLink
               href='https://sahathaiterminal.com/th/tracking/'
               icon={<DeviceMobileIcon width='20' height='20' />}
               label={t('eService')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
               isExternalLink={true}
             />
             <SidebarLink
               href='/investor-information'
               icon={<ChartIcon width='20' height='20' />}
               label={t('invester')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
           </div>
 
@@ -123,13 +119,13 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
               href='/contact-us'
               icon={<PhoneIcon width='20' height='20' />}
               label={t('contactUs')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
             <SidebarLink
               href='/john-us'
               icon={<ReadCVIcon width='20' height='20' />}
               label={t('joinUs')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
           </div>
         </section>

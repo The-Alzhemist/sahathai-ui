@@ -9,55 +9,54 @@ import { ListIcon } from '@/components/icons/ListIcon'
 import { useState } from 'react'
 import MobileSidebar from '@/components/Header/components/MobileSidebar/MobileSidebar'
 import { useHideOnScroll } from '@/hooks/useHideOnScroll'
+import { twMerge } from 'tailwind-merge'
 
 export function Header() {
   const t = useTranslations('Header')
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
   const isVisible = useHideOnScroll()
 
-  const handleOnToggleMobileSidebar = (isOpen: boolean) => {
-    setIsMobileSidebarOpen(isOpen)
+  const handleOnToggleMobileSidebar = () => {
+    setIsMobileSidebarOpen(prev => !prev)
   }
 
   return (
     <div
-      className={`shadow-1 sticky top-0 bg-white z-20 transition-transform duration-300  ${isVisible ? 'translate-y-0' : 'translate-y-[-150%] pointer-events-none'}`}>
-      <div className="px-[10px] py-[8px] flex justify-between items-center container">
-        <Link href="/" className="shrink-0 p-[10px]">
-          <Image src="/logo.png" width={101} height={24} alt="" priority />
+      className={twMerge(
+        'shadow-1 sticky top-0 bg-white z-20 ',
+        !isMobileSidebarOpen && 'transition-transform duration-300',
+        !isMobileSidebarOpen && isVisible && 'translate-y-0',
+        !isMobileSidebarOpen &&
+          !isVisible &&
+          'translate-y-[-150%] pointer-events-none'
+      )}
+    >
+      <div className='px-[10px] py-[8px] flex justify-between items-center container'>
+        <Link href='/' className='shrink-0 p-[10px]'>
+          <Image src='/logo.png' width={101} height={24} alt='' priority />
         </Link>
 
-        <section className="flex gap-x-5">
-          <div className="sm:hidden">
-            <LocaleButton />
-          </div>
-
-          <ul className="flex justify-end items-center w-full medium text-background gap-[42px] mobile:hidden mr-10">
-            <li>
-              <Link href="/contact-us" className="flex items-center">
+        <section className='flex gap-x-5'>
+          <ul className='flex justify-end items-center w-full medium text-background gap-[42px] md:mr-10'>
+            <li className='hidden md:block'>
+              <Link href='/contact-us' className='flex items-center'>
                 {t('contactUs')}
               </Link>
             </li>
-            <li>
-              <Link className="flex items-center" href="/join-us">
+            <li className='hidden md:block'>
+              <Link className='flex items-center' href='/join-us'>
                 {t('joinUs')}
               </Link>
             </li>
             <li>
               <LocaleButton />
             </li>
-            {/* <li>
-            <SearchInput className='max-w-[200px]' />
-          </li> */}
-            {/* <button onClick={() => handleOnToggleMobileSidebar(true)}>
-            <ListIcon width='25' height='25' />
-          </button> */}
           </ul>
           <button
-            className="block sm:hidden"
-            onClick={() => handleOnToggleMobileSidebar(true)}
+            className='block md:hidden'
+            onClick={() => handleOnToggleMobileSidebar()}
           >
-            <ListIcon width="25" height="25" />
+            <ListIcon width='25' height='25' />
           </button>
         </section>
       </div>
