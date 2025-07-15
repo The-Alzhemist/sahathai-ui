@@ -11,11 +11,16 @@ export function ServicesPage() {
   return (
     <main>
       <Menu />
-      <Banner imagePath="/about-us/banner.png" alt={t('service')} caption={t('service')} />
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={t('service.title')}
+        caption={t('service.title')}
+        className='mb-[40px]'
+      />
       <ComprehensiveCommercialPortServices />
       <ContainerStorageWarehouseServices />
       <InventoryManagementServices />
-      <ContactUs className="pt-[80px] pb-[114px]" />
+      <ContactUs className='pt-[80px] pb-[114px]' />
       {/* <CookieConsentFloatingBar /> */}
     </main>
   )

@@ -1,10 +1,28 @@
 {
   "Menu": {
-    "aboutUs": "เกี่ยวกับเรา",
+    "aboutUs": {
+      "title": "เกี่ยวกับเรา",
+      "visionMission": "วิสัยทัศน์และพันธกิจ",
+      "ourCommitmentSuccess": "ความมุ่งมั่นและความสำเร็จของเรา",
+      "boardDirectorsExecutiveCommittee": "คณะกรรมการ & คณะผู้บริหาร",
+      "corporateGroupStructureOrganizationalStructure": "โครงสร้างกลุ่มบริษัทและโครงสร้างองค์กร"
+    },
     "infrastructureContainers": "โครงสร้างพื้นฐานและคอนเทนเนอร์",
-    "service": "บริการ",
+    "service": {
+      "title": "บริการ",
+      "commercialDock": "ท่าเทียบเรือเชิงพาณิชย์",
+      "bargeServices": "บริการเรือบาร์จ",
+      "containerHandling": "ขนถ่าย Container  |  CFS LCL",
+      "containerMaintenance": "ซ่อมบำรุงตู้คอนเทนเนอร์",
+      "groundContainerTransportationServices": "บริการขนส่งตู้คอนเทนเนอร์ทางบก"
+    },
     "news": "ข่าวประชาสัมพันธ์",
     "eService": "e-service",
-    "investorRelations": "นักลงทุนสัมพันธ์"
+    "investorRelations": {
+      "title": "นักลงทุนสัมพันธ์",
+      "investorInformation": "ข้อมูลสำหรับนักลงทุน",
+      "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
+      "codeConduct": "Code of Conduct"
+    }
   }
 }

@@ -6,7 +6,7 @@ import { Link } from '@/libs/intl/navigation'
 import { LocaleButton } from '@/components/LocaleButton'
 import { SearchInput } from './SearchInput'
 import { ListIcon } from '@/components/icons/ListIcon'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MobileSidebar from '@/components/Header/components/MobileSidebar/MobileSidebar'
 import { useHideOnScroll } from '@/hooks/useHideOnScroll'
 import { twMerge } from 'tailwind-merge'
@@ -20,6 +20,19 @@ export function Header() {
     setIsMobileSidebarOpen(prev => !prev)
   }
 
+  // Disable body scrollable
+  useEffect(() => {
+    if (isMobileSidebarOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMobileSidebarOpen])
+  
   return (
     <div
       className={twMerge(

@@ -6,33 +6,41 @@ import { VisionMissionValues } from '../../components/VisionMissionValues'
 import { BoardAndExecutives } from '../../components/BoardAndExecutives'
 import { CommitmentSuccess } from '../../components/CommitmentSuccess'
 import { CorporateGroupOrganizationalStructure } from '../../components/CorporateGroupOrganizationalStructure'
-import { AboutPageProps } from './interface'
+import { AboutPageProps, AboutUsTabEnum } from './interface'
 
-export function AboutUsPage({ tabs, active, setActive }: AboutPageProps) {
+export function AboutUsPage({
+  tabs,
+  active,
+  handleOnActiveTabChange,
+}: AboutPageProps) {
   const t = useTranslations('AboutUsPage.Tabs')
   const tMenu = useTranslations('Menu')
 
   return (
     <main>
       <Menu />
-      <Banner imagePath="/about-us/banner.png" alt={tMenu('aboutUs')} caption={tMenu('aboutUs')} />
-      <div className="flex justify-center px-2">
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={tMenu('aboutUs.title')}
+        caption={tMenu('aboutUs.title')}
+      />
+      <div className='flex justify-center px-2'>
         <Tabs
-          className="mt-[40px]"
+          className='mt-[40px]'
           tabs={tabs}
-          style="normal"
+          style='normal'
           active={active}
-          onChange={setActive}
+          onChange={v => handleOnActiveTabChange(v as AboutUsTabEnum)}
         />
       </div>
 
-      {active === t('visionMission') ? (
+      {active === AboutUsTabEnum.VISION_MISSION ? (
         <VisionMissionValues />
-      ) : active === t('ourCommitmentSuccess') ? (
+      ) : active === AboutUsTabEnum.OUT_COMMITMENT_SUCCESS ? (
         <CommitmentSuccess />
-      ) : active === t('boardDirectorsExecutiveCommittee') ? (
+      ) : active === AboutUsTabEnum.BOARD_DIRECTORS_EXE ? (
         <BoardAndExecutives />
-      ) : active === t('corporateGroupStructureOrganizationalStructure') ? (
+      ) : active === AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE ? (
         <CorporateGroupOrganizationalStructure />
       ) : null}
     </main>
