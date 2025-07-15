@@ -93,14 +93,29 @@ export function ShareHolderPage() {
             </table>
           </section>
 
-          <p className="mt-[32px] body-2">{t('note')}</p>
+          <p className="mt-[32px] body-2 mb-10">{t('note')}</p>
+
+          <section className='border rounded-md p-5'>
+            <h2
+              id={InvestorInformationEnum.Shareholder}
+              className="headline-2 text-black-80 mb-5"
+            >
+              {t('profit.title')}
+            </h2>
+            <h3 className='headline-4 text-blue-400 mb-2'>{t('profit.heading1')}</h3>
+            <p className='body-2 mb-7 whitespace-pre-line break-words break-keep' >
+              {t('profit.detail1')}</p>
+            <h3 className='headline-4 text-blue-400 mb-2'>{t('profit.heading2')}</h3>
+            <p className='body-2 whitespace-pre-line break-words break-keep'> {t('profit.detail2')}</p>
+          </section>
 
         </Animation>
       </section>
 
+
     </main>
 
-)
+  )
 }
 
 
