@@ -1,22 +1,38 @@
 export const oneReportInformationList = [
   {
     year: 2023,
-    linkUrl:
+    annualReportUrl:
+      '',
+    report56Url:
+      '',
+    oneReportUrl:
       'https://storage.googleapis.com/nueng-image-storage-demo/dummyPhoto/dummy.pdf',
   },
   {
     year: 2022,
-    linkUrl:
+    annualReportUrl:
+      '',
+    report56Url:
+      '',
+    oneReportUrl:
       'https://storage.googleapis.com/nueng-image-storage-demo/dummyPhoto/dummy.pdf',
   },
   {
     year: 2021,
-    linkUrl:
+    annualReportUrl:
+      '',
+    report56Url:
+      '',
+    oneReportUrl:
       'https://storage.googleapis.com/nueng-image-storage-demo/dummyPhoto/dummy.pdf',
   },
   {
     year: 2020,
-    linkUrl:
+    annualReportUrl:
+      '',
+    report56Url:
+      '',
+    oneReportUrl:
       'https://storage.googleapis.com/nueng-image-storage-demo/dummyPhoto/dummy.pdf',
   },
 ]
