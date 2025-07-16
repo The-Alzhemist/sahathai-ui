@@ -32,9 +32,9 @@ export async function InvestorInformationPage() {
         <section className='w-full space-y-[112px]'>
           <StockMarketInformation />
           <FinancialReports />
-          <Shareholder />
-          <DividendPayment className=' w-full' />
-          <ShareholdersMeeting />
+          {/*<Shareholder />*/}
+          {/*<DividendPayment className=' w-full' />*/}
+          {/*<ShareholdersMeeting />*/}
           <CompanyIntroductionVideo />
         </section>
       </section>

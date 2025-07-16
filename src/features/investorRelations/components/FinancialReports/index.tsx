@@ -30,16 +30,16 @@ export function FinancialReports() {
           isActive={active === FinancialReportsEnum.OneReport}
           onClick={() => setActive(FinancialReportsEnum.OneReport)}
         >
-          {t('oneReport')}
+          รายงานประจำปี
         </Tab>
-        <Tab
-          isActive={active === FinancialReportsEnum.OtherFinancialStatements}
-          onClick={() =>
-            setActive(FinancialReportsEnum.OtherFinancialStatements)
-          }
-        >
-          {t('otherFinancialStatements')}
-        </Tab>
+        {/*<Tab*/}
+        {/*  isActive={active === FinancialReportsEnum.OtherFinancialStatements}*/}
+        {/*  onClick={() =>*/}
+        {/*    setActive(FinancialReportsEnum.OtherFinancialStatements)*/}
+        {/*  }*/}
+        {/*>*/}
+        {/*  {t('otherFinancialStatements')}*/}
+        {/*</Tab>*/}
       </FinancialReportsTabs>
       {active === FinancialReportsEnum.OneReport && <OneReportTable />}
       {active === FinancialReportsEnum.OtherFinancialStatements && (
