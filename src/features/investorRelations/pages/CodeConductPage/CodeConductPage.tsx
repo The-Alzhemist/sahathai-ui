@@ -5,6 +5,7 @@ import { Animation } from '@/components/Animation'
 import { Tabs } from '../../components/Tabs'
 import { CodeConductCard } from '../../components/CodeConductCard'
 import { Menu } from '@/components/Menu'
+import { Banner } from '@/components/Banner'
 
 export function CodeConductPage() {
   const t = useTranslations('CodeConductPage')
@@ -12,7 +13,13 @@ export function CodeConductPage() {
   return (
     <main className='bg-white'>
       <Menu />
-      <section className='pt-[100px] pb-[176px] max-w-[896px] w-full mx-auto px-5'>
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={t('investorRelations')}
+        caption={t('title')}
+        className='mb-[40px]'
+      />
+      <section className='pb-[176px] max-w-[896px] w-full mx-auto px-5'>
         <Tabs activeMenu={InvestorRelationEnum.CodeConduct} />
         <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
           {t('title')}

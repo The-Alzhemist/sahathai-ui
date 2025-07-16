@@ -1,8 +1,8 @@
 export interface MobileSidebarAcceptProps {
-  handleOnToggleMobileSidebar: (isOpen: boolean) => void
+  handleOnToggleMobileSidebar: () => void
 }
 
 export interface MobileSidebarProps {
-  handleOnToggle: (isOpen: boolean) => void
+  handleOnToggle: () => void
   isVisible: boolean
 }

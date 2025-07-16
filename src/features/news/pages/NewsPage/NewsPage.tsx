@@ -4,14 +4,21 @@ import { Animation } from '@/components/Animation'
 import { Menu } from '@/components/Menu'
 import { LastestNews } from '@/components/LastestNews/LastestNews'
 import NewsBlogList from '@/features/news/components/NewsBlogList/NewsBlogList'
-import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
+import { Banner } from '@/components/Banner'
 
 export function NewsPage() {
   const t = useTranslations('NewsPage')
+  const tMenu = useTranslations('Menu')
+
   return (
-    <main className='mt-[80px]'>
+    <main>
       <Menu />
-      <section className=' mx-auto'>
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={tMenu('news')}
+        caption={tMenu('news')}
+      />
+      <section className='mx-auto'>
         <section className='flex justify-center mb-10 md:mb-5'>
           <Animation className='flex flex-col justify-center items-center max-w-[897px] min-h-[500px]  px-5'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>

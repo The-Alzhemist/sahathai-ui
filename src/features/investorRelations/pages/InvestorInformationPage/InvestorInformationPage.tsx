@@ -9,11 +9,20 @@ import { CompanyIntroductionVideo } from '../../components/CompanyIntroductionVi
 import { Tabs } from '../../components/Tabs'
 import { Menu } from '@/components/Menu'
 import StockMarketInformation from '@/features/investorRelations/components/StockMarketInformation/StockMarketInformation'
+import { Banner } from '@/components/Banner'
+import { getTranslations } from 'next-intl/server'
 
 export async function InvestorInformationPage() {
+  const t = await getTranslations('Menu')
   return (
-    <main className='pt-[100px] pb-[176px] bg-white '>
+    <main className='bg-white'>
       <Menu />
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={t('investorRelations.title')}
+        caption={t('investorRelations.title')}
+        className='mb-[40px]'
+      />
       <Tabs activeMenu={InvestorRelationEnum.InvestorInformation} />
       <section className='max-w-[1140px] w-full px-5 mx-auto  mt-[80px] flex gap-[21px]'>
         <div className='hidden md:flex'>
