@@ -22,7 +22,9 @@
       "title": "Investor Relations",
       "investorInformation": "ข้อมูลสำหรับนักลงทุน",
       "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
-      "codeConduct": "Code of Conduct"
+      "codeConduct": "Code of Conduct",
+      "shareHolder": "ผู้ถือหุ้น",
+      "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้นประจำปี"
     }
   }
 }
