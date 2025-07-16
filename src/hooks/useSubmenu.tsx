@@ -118,6 +118,16 @@ export function useSubmenu() {
             isExternalLink: false,
             pathname: `/code-of-conduct`,
           },
+          {
+            title: t('investorRelations.shareHolder'),
+            isExternalLink: false,
+            pathname: `/investor-information/share-holder`,
+          },
+          {
+            title: t('investorRelations.shareHolderMeeting'),
+            isExternalLink: false,
+            pathname: `/investor-information/share-holder-meeting`,
+          },
         ],
       },
     ]

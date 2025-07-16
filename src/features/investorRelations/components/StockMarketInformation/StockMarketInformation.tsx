@@ -45,7 +45,7 @@ const StockMarketInformation = async () => {
       <table className='w-full report shadow-6 rounded-[10px] overflow-hidden mt-[37px]'>
         <thead>
           <tr>
-            <th className='subtitle-1 text-left'>ชื่อย่อหุ้น(mock)</th>
+            <th className='subtitle-1 text-left'>ชื่อย่อหุ้น</th>
             <th className='subtitle-1 text-right'>PORT</th>
           </tr>
         </thead>
