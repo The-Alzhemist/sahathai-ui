@@ -108,11 +108,8 @@ export function ShareHolderPage() {
             <h3 className='headline-4 text-blue-400 mb-2'>{t('profit.heading2')}</h3>
             <p className='body-2 whitespace-pre-line break-words break-keep'> {t('profit.detail2')}</p>
           </section>
-
         </Animation>
       </section>
-
-
     </main>
 
   )
