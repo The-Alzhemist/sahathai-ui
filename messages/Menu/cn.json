@@ -1,10 +1,28 @@
 {
   "Menu": {
-    "aboutUs": "关于我们",
+    "aboutUs": {
+      "title": "关于我们",
+      "visionMission": "愿景与使命",
+      "ourCommitmentSuccess": "我们的承诺与成功",
+      "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
+      "corporateGroupStructureOrganizationalStructure": "公司集团结构与组织结构"
+    },
     "infrastructureContainers": "基础设施和集装箱",
-    "service": "服务",
+    "service": {
+      "title": "服务",
+      "commercialDock": "商业码头",
+      "bargeServices": "驳船服务",
+      "containerHandling": "集装箱处理 | CFS LCL",
+      "containerMaintenance": "集装箱维护",
+      "groundContainerTransportationServices": "陆路集装箱运输服务"
+    },
     "news": "新闻",
     "eService": "电子服务",
-    "investorRelations": "投资者关系"
+    "investorRelations": {
+      "title": "投资者关系",
+      "investorInformation": "ข้อมูลสำหรับนักลงทุน",
+      "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
+      "codeConduct": "Code of Conduct"
+    }
   }
 }

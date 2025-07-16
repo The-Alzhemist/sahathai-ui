@@ -1,10 +1,9 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { Link } from '@/libs/intl/navigation'
+import { Link, usePathname } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
 import { UserIcon } from '@/components/icons/UserIcon'
 import { HeadsetIcon } from '@/components/icons/HeadsetIcon'
-import { useMobileSidebarAnimation } from '@/hooks/useMobileSidebarAnimation'
 import { MobileSidebarProps } from '@/components/Header/components/MobileSidebar/interface'
 import withMobileSidebar from './withMobileSidebar'
 import { ShippingIcon } from '@/components/icons/ShippingIcon'
@@ -13,13 +12,22 @@ import { DeviceMobileIcon } from '@/components/icons/DeviceMobileIcon'
 import { ChartIcon } from '@/components/icons/ChartIcon'
 import { PhoneIcon } from '@/components/icons/PhoneIcon'
 import { ReadCVIcon } from '@/components/icons/ReadCvIcon'
+import { useSubmenu } from '@/hooks/useSubmenu'
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+} from '@/components/Menu/components/DropdownMenu/DropdownMenu'
+import { twMerge } from 'tailwind-merge'
+import React from 'react'
+import MenuCollapse from '@/components/Header/components/MenuCollapse/MenuCollapse'
 
 interface SidebarLinkProps {
   href: string
-  icon: JSX.Element
+  icon?: JSX.Element
   label: string
   onClick: () => void
   isExternalLink?: boolean
+  isSubMenu?: boolean
 }
 
 const SidebarLink = ({
@@ -28,25 +36,18 @@ const SidebarLink = ({
   label,
   onClick,
   isExternalLink = false,
+  isSubMenu = false,
 }: SidebarLinkProps) => {
-  if (isExternalLink) {
-    return (
-      <a
-        href={href}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='flex items-center gap-x-2 text-black-6'
-      >
-        {icon}
-        <span>{label}</span>
-      </a>
-    )
-  }
-
   return (
     <div onClick={onClick}>
-      <Link className='flex items-center gap-x-2' href={href}>
-        {icon}
+      <Link
+        className='flex items-center gap-x-2'
+        href={href}
+        target={isExternalLink ? '_blank' : undefined}
+        rel={isExternalLink ? 'noopener noreferrer' : undefined}
+      >
+        {icon && icon}
+        {isSubMenu && <span className='px-2'>-</span>}
         <span className='text-black-6'>{label}</span>
       </Link>
     </div>
@@ -55,16 +56,15 @@ const SidebarLink = ({
 
 const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   const t = useTranslations('Header')
-  const { ref, animationClassName } = useMobileSidebarAnimation(isVisible)
-
-  const handleClose = () => handleOnToggle(false)
+  const { menus } = useSubmenu()
+  const pathname = usePathname()
 
   return (
     <nav
-      ref={ref}
       className={cn(
-        animationClassName,
-        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5'
+        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5',
+        'transition-all duration-500',
+        isVisible ? 'opacity-100 ' : ' opacity-0'
       )}
     >
       <div className='h-full max-w-7xl mx-auto flex flex-col'>
@@ -72,50 +72,50 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
           <Link href='/' className='shrink-0 p-[10px]'>
             <Image src='/logo.png' width={101} height={24} alt='' priority />
           </Link>
-          <div className='text-xl cursor-pointer' onClick={handleClose}>
+          <div className='text-xl cursor-pointer' onClick={handleOnToggle}>
             X
           </div>
         </section>
 
         <section className='flex flex-col justify-between h-full'>
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
-            <SidebarLink
-              href='/contact-us'
-              icon={<UserIcon width='20' height='20' />}
-              label={t('aboutUs')}
-              onClick={handleClose}
-            />
-            <SidebarLink
-              href='/services'
-              icon={<HeadsetIcon width='20' height='20' />}
-              label={t('service')}
-              onClick={handleClose}
-            />
-            <SidebarLink
-              href='/infrastructure-containers'
-              icon={<ShippingIcon width='20' height='20' />}
-              label={t('infra')}
-              onClick={handleClose}
-            />
-            <SidebarLink
-              href='/news'
-              icon={<NewspaperIcon width='20' height='20' />}
-              label={t('news')}
-              onClick={handleClose}
-            />
-            <SidebarLink
-              href='https://sahathaiterminal.com/th/tracking/'
-              icon={<DeviceMobileIcon width='20' height='20' />}
-              label={t('eService')}
-              onClick={handleClose}
-              isExternalLink={true}
-            />
-            <SidebarLink
-              href='/investor-information'
-              icon={<ChartIcon width='20' height='20' />}
-              label={t('invester')}
-              onClick={handleClose}
-            />
+            {menus.map(menu => {
+              const isActive = menu.pathname === pathname
+              if (menu.children && menu.children.length) {
+                return (
+                  <MenuCollapse
+                    key={menu.title}
+                    title={menu.title}
+                    icon={menu.icon}
+                  >
+                    {menu.children.map(subMenu => {
+                      return (
+                        <SidebarLink
+                          key={subMenu.title}
+                          href={subMenu.pathname}
+                          label={subMenu.title}
+                          onClick={handleOnToggle}
+                          isSubMenu
+                        />
+                      )
+                    })}
+                  </MenuCollapse>
+                )
+              }
+              return (
+                <div
+                  className='min-h-[40px] flex items-center'
+                  key={menu.title}
+                >
+                  <SidebarLink
+                    href={menu.pathname}
+                    icon={menu.icon}
+                    label={menu.title}
+                    onClick={handleOnToggle}
+                  />
+                </div>
+              )
+            })}
           </div>
 
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
@@ -123,13 +123,13 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
               href='/contact-us'
               icon={<PhoneIcon width='20' height='20' />}
               label={t('contactUs')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
             <SidebarLink
-              href='/john-us'
+              href='/join-us'
               icon={<ReadCVIcon width='20' height='20' />}
               label={t('joinUs')}
-              onClick={handleClose}
+              onClick={handleOnToggle}
             />
           </div>
         </section>

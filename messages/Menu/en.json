@@ -1,10 +1,28 @@
 {
   "Menu": {
-    "aboutUs": "About Us",
+    "aboutUs": {
+      "title": "About Us",
+      "visionMission": "Vision and Mission",
+      "ourCommitmentSuccess": "Our Commitment and Success",
+      "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
+      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
+    },
     "infrastructureContainers": "Infrastructure and Containers",
-    "service": "Services",
+    "service": {
+      "title": "Services",
+      "commercialDock": "Commercial Dock",
+      "bargeServices": "Barge Services",
+      "containerHandling": "Container Handling | CFS LCL",
+      "containerMaintenance": "Container Maintenance",
+      "groundContainerTransportationServices": "Ground Container Transportation Services"
+    },
     "news": "News",
     "eService": "e-Service",
-    "investorRelations": "Investor Relations"
+    "investorRelations": {
+      "title": "Investor Relations",
+      "investorInformation": "ข้อมูลสำหรับนักลงทุน",
+      "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
+      "codeConduct": "Code of Conduct"
+    }
   }
 }
