@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { DownloadButton } from '@/components/DownloadButton'
 
 export interface FileItem {
   title: string;
@@ -13,11 +14,10 @@ export interface AccordionItem {
   files: FileItem[];
 }
 
-interface Props {
-  documents: AccordionItem[];
-}
 
-export default function AccordionList({ documents }: Props) {
+export default function AccordionList({ documents }: {
+  documents: AccordionItem[];
+}) {
   const [openIndexes, setOpenIndexes] = useState<number[]>([]);
 
   const toggleIndex = (index: number) => {
@@ -53,14 +53,8 @@ export default function AccordionList({ documents }: Props) {
 
                     {/* ถ้าไม่ใช่ youtube, แสดงปุ่มดาวน์โหลด */}
                     {file.type !== 'youtube' && (
-                      <a
-                        href={`/downloads/${file.name}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-blue-400 hover:bg-blue-500 text-white px-4 py-1 rounded text-sm shadow"
-                      >
-                        ดาวน์โหลด
-                      </a>
+
+                      <DownloadButton className='mt-[16px]' href={file.name} />
                     )}
                   </div>
 
