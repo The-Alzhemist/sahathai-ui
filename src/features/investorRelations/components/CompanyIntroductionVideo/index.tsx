@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import {useLocale, useTranslations} from 'next-intl'
 
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
@@ -6,11 +6,14 @@ import { LocaleButton } from '../LocaleButton'
 
 export function CompanyIntroductionVideo() {
   const t = useTranslations('InvestorInformationPage.CompanyIntroductionVideo')
-  const videoId = 'dAqJn2fXyHI'
+    const locale = useLocale()
+
+    // Change videoId based on locale
+    const videoId = locale === 'en' ? 'N7I7cp5Erdg' : 'OTesRI1fvWI'
 
   return (
     <Animation>
-      <div className='flex items-center justify-between'>
+      <div className='flex items-center justify-between mb-5'>
         <h2
           className='headline-2 text-blue-400'
           id={InvestorInformationEnum.CompanyIntroductionVideo}
@@ -20,7 +23,7 @@ export function CompanyIntroductionVideo() {
         <LocaleButton />
       </div>
 
-      <div className='mt-[32px] w-full flex justify-center'>
+      <div className='mt-[32px] w-full flex justify-center mb-5'>
         <iframe
           src={`https://www.youtube.com/embed/${videoId}`}
           title='YouTube video player'

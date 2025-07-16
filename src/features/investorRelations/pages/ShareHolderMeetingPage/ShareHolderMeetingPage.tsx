@@ -8,16 +8,23 @@ import {
 import {
   shareholderMeeting2567
 } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2567'
+import { Banner } from '@/components/Banner'
 
 
 export function ShareHolderMeetingPage() {
   const t = useTranslations('InvestorInformationPage.ShareHolderMeeting')
+  const tMenu = useTranslations('Menu')
   const documents2568 = shareholderMeeting2568(t);
   const documents2567 = shareholderMeeting2567(t);
 
   return (
-    <main className="pt-[100px] pb-[176px] bg-white ">
+    <main className=" pb-[176px] bg-white ">
       <Menu/>
+      <Banner
+        imagePath='/about-us/banner.png'
+        alt={tMenu('investorRelations.shareHolderMeeting')}
+        caption={tMenu('investorRelations.shareHolderMeeting')}
+      />
       <section className="p-5 max-w-4xl mx-auto">
 
         {/* Mobile View */}

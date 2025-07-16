@@ -8,6 +8,8 @@
     "eService": "e-Service",
     "invester": "Investor Relations",
     "aboutUs": "About Us",
-    "service": "Services"
+    "service": "Services",
+    "shareHolder": "ผู้ถือหุ้น",
+    "shareHolderMeeting": "การประชุมผู้ถือหุ้น"
   }
 }

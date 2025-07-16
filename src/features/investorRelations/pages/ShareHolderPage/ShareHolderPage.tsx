@@ -7,14 +7,21 @@ import { investmentStakeholderList } from '@/features/investorRelations/componen
 import { ShareholderCard } from '@/features/investorRelations/components/ShareholderCard'
 import { Link } from '@/libs/intl/navigation'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
+import {Banner} from "@/components/Banner";
 
 
 export function ShareHolderPage() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
+  const tMenu = useTranslations('Menu')
 
   return (
-    <main className="pt-[100px] pb-[176px] bg-white ">
+    <main className=" pb-[176px] bg-white ">
       <Menu />
+      <Banner
+          imagePath='/about-us/banner.png'
+          alt={tMenu('investorRelations.shareHolder')}
+          caption={tMenu('investorRelations.shareHolder')}
+      />
       <section className="max-w-[1140px] w-full px-5 mx-auto  mt-[80px] ">
         <Animation>
           <h2

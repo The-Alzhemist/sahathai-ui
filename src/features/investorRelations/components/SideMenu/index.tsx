@@ -37,24 +37,29 @@ export function SideMenu() {
         >
           {t('FinancialReports.title')}
         </SideMenu.Item>
-        <SideMenu.Item
-          href={`#${InvestorInformationEnum.Shareholder}`}
-          isActive={InvestorInformationEnum.Shareholder === hash}
-        >
-          {t('Shareholder.title')}
-        </SideMenu.Item>
-        <SideMenu.Item
-          href={`#${InvestorInformationEnum.DividendPayment}`}
-          isActive={InvestorInformationEnum.DividendPayment === hash}
-        >
-          {t('DividendPayment.title')}
-        </SideMenu.Item>
-        <SideMenu.Item
-          href={`#${InvestorInformationEnum.ShareholdersMeeting}`}
-          isActive={InvestorInformationEnum.ShareholdersMeeting === hash}
-        >
-          {t('ShareholdersMeeting.title')}
-        </SideMenu.Item>
+
+        {/*<SideMenu.Item*/}
+        {/*  href={`#${InvestorInformationEnum.Shareholder}`}*/}
+        {/*  isActive={InvestorInformationEnum.Shareholder === hash}*/}
+        {/*>*/}
+        {/*  {t('Shareholder.title')}*/}
+        {/*</SideMenu.Item>*/}
+
+
+        {/*<SideMenu.Item*/}
+        {/*  href={`#${InvestorInformationEnum.DividendPayment}`}*/}
+        {/*  isActive={InvestorInformationEnum.DividendPayment === hash}*/}
+        {/*>*/}
+        {/*  {t('DividendPayment.title')}*/}
+        {/*</SideMenu.Item>*/}
+
+        {/*<SideMenu.Item*/}
+        {/*  href={`#${InvestorInformationEnum.ShareholdersMeeting}`}*/}
+        {/*  isActive={InvestorInformationEnum.ShareholdersMeeting === hash}*/}
+        {/*>*/}
+        {/*  {t('ShareholdersMeeting.title')}*/}
+        {/*</SideMenu.Item>*/}
+
         <SideMenu.Item
           href={`#${InvestorInformationEnum.CompanyIntroductionVideo}`}
           isActive={InvestorInformationEnum.CompanyIntroductionVideo === hash}
