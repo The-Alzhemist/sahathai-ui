@@ -11,6 +11,8 @@ import { Menu } from '@/components/Menu'
 import StockMarketInformation from '@/features/investorRelations/components/StockMarketInformation/StockMarketInformation'
 import { Banner } from '@/components/Banner'
 import { getTranslations } from 'next-intl/server'
+import { CompanyAdvertiseVideo } from '@/features/investorRelations/components/CompanyAdvertiseVideo'
+import { CompanyFactSheet } from '@/features/investorRelations/components/CompanyFactSheet'
 
 export async function InvestorInformationPage() {
   const t = await getTranslations('Menu')
@@ -36,6 +38,8 @@ export async function InvestorInformationPage() {
           {/*<DividendPayment className=' w-full' />*/}
           {/*<ShareholdersMeeting />*/}
           <CompanyIntroductionVideo />
+          <CompanyAdvertiseVideo/>
+          <CompanyFactSheet/>
         </section>
       </section>
     </main>

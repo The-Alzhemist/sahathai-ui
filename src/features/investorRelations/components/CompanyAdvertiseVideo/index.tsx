@@ -4,19 +4,19 @@ import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInfor
 import { Animation } from '@/components/Animation'
 import { LocaleButton } from '../LocaleButton'
 
-export function CompanyIntroductionVideo() {
-  const t = useTranslations('InvestorInformationPage.CompanyIntroductionVideo')
+export function CompanyAdvertiseVideo() {
+  const t = useTranslations('InvestorInformationPage.CompanyAdvertiseVideo')
     const locale = useLocale()
 
     // Change videoId based on locale
-    const videoId =  'N7I7cp5Erdg'
+    const videoId =  'OTesRI1fvWI'
 
   return (
     <Animation>
       <div className='flex items-center justify-between mb-5'>
         <h2
           className='headline-2 text-blue-400'
-          id={InvestorInformationEnum.CompanyIntroductionVideo}
+          id={InvestorInformationEnum.CompanyAdvertiseVideo}
         >
           {t('title')}
         </h2>
