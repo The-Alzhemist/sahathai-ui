@@ -66,6 +66,13 @@ export function SideMenu() {
         >
           {t('CompanyIntroductionVideo.title')}
         </SideMenu.Item>
+
+        <SideMenu.Item
+          href={`#${InvestorInformationEnum.CompanyIntroductionVideo}`}
+          isActive={InvestorInformationEnum.CompanyIntroductionVideo === hash}
+        >
+          {t('CompanyIntroductionVideo.title')} ประชาสัมพันธ์
+        </SideMenu.Item>
       </ul>
     </Animation>
   )
