@@ -96,6 +96,30 @@
         "three": "ไตรมาส 3",
         "four": "ประจำปัี"
       }
+    },
+    "GoodCorporate": {
+      "title": "เอกสารการกำกับดูแลกิจการที่ดี",
+      "document": {
+        "governanceManual": "คู่มือการกำกับดูแลกิจการที่ดี",
+        "codeOfConduct": "จรรยาบรรณธุรกิจ",
+        "boardCharter": "กฎบัตรคณะกรรมการ",
+        "chairmanDuties": "บทบาทหน้าที่ประธานกรรมการ",
+        "auditCommitteeCharter": "กฎบัตรคณะกรรมการตรวจสอบ",
+        "nominationAndRemunerationCharter": "กฎบัตรคณะกรรมการสรรหาและกำหนดค่าตอบแทน",
+        "riskGovernanceSustainabilityCommittee": "คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
+        "executiveCommitteeCharter": "กฎบัตรคณะกรรมการบริหาร",
+        "ceoAuthorityAndResponsibilities": "ขอบเขตอำนาจ หน้าที่ และความรับผิดชอบของประธานเจ้าหน้าที่บริหาร",
+        "sustainabilityPolicy": "นโยบายบริหารจัดการด้านความยั่งยืน",
+        "riskManagementPolicy": "นโยบายบริหารความเสี่ยง",
+        "insiderInformationPolicy": "นโยบายการใช้ข้อมูลภายใน",
+        "intellectualPropertyPolicy": "นโยบายที่การไม่ละเมิดทรัพย์สินทางปัญญา",
+        "csrPolicy": "นโยบายความรับผิดชอบต่อสังคม",
+        "antiCorruptionPolicy": "นโยบายการต่อต้านการทุจริต",
+        "personalDataProtectionPolicy": "นโยบายคุ้มครองข้อมูลส่วนบุคคล",
+        "companyRegulation": "ข้อบังคับบริษัท",
+        "memorandumOfAssociation": "บริคณห์สนธิ",
+        "companySecretaryContact": "ช่องทางติดต่อเลขานุการบริษัท"
+      }
     }
   }
 }
