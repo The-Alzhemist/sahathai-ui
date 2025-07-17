@@ -26,7 +26,8 @@
       "shareHolder": "ผู้ถือหุ้น",
       "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้น",
       "FinancialInformation": "ข้อมูลทางการเงิน",
-      "PerformanceReport": "รายงานผลการดำเนินงาน"
+      "PerformanceReport": "รายงานผลการดำเนินงาน",
+      "DocumentAnnouncement": "เอกสารเผยแพร่"
     }
   }
 }
