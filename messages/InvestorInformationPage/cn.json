@@ -120,6 +120,16 @@
         "memorandumOfAssociation": "บริคณห์สนธิ",
         "companySecretaryContact": "ช่องทางติดต่อเลขานุการบริษัท"
       }
+    },
+
+    "Activity": {
+      "title": "กิจกรรมปี {year}",
+      "quarter": {
+        "one": "ไตรมาส 1",
+        "two": "ไตรมาส 2",
+        "three": "ไตรมาส 3",
+        "four": "ประจำปี"
+      }
     }
   }
 }
