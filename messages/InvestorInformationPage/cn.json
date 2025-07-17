@@ -36,6 +36,10 @@
     },
     "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
     "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
+    "CompanyAdvertiseVideo": { "title": "วิดิโอประชาสัมพันธ์บริษัท" },
+    "FactSheet": { "title": "FactSheet",
+      "detail": "Download ข้อมูล FactSheet "
+    },
     "OneReportTable": {
       "56-1OneReport": "56-1 One\nReport"
     },
