@@ -69,6 +69,15 @@
     "minutes": {
       "document": "รายงานการประชุมสามัญผู้ถือหุ้น ประจำปี {year}"
     }
-  }
+  },
+    "FinancialInformation": {
+      "title": "งบการเงิน ปี {year}",
+      "quarter": {
+        "one": "ไตรมาส 1",
+        "two": "ไตรมาส 2",
+        "three": "ไตรมาส 3",
+        "four": "ไตรมาส 4"
+      }
+    }
   }
 }
