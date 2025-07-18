@@ -32,7 +32,7 @@ export function ShareHolderMeetingPage() {
           <h2 className="text-xl md:text-3xl font-bold mb-6">
             {t('heading', { year: 2568 })}
           </h2>
-          <AccordionList documents={documents2568} />
+          <AccordionList documents={documents2568} defaultOpenIndexes={[0]}  />
         </div>
 
         <div className="border px-5 pt-5 rounded-md mb-7">
