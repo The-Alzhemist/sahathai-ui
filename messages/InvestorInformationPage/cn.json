@@ -36,6 +36,10 @@
     },
     "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
     "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
+    "CompanyAdvertiseVideo": { "title": "วิดิโอประชาสัมพันธ์บริษัท" },
+    "FactSheet": { "title": "FactSheet",
+      "detail": "Download ข้อมูล FactSheet "
+    },
     "OneReportTable": {
       "56-1OneReport": "56-1 One\nReport"
     },
@@ -64,6 +68,85 @@
       },
       "minutes": {
         "document": "รายงานการประชุมสามัญผู้ถือหุ้น ประจำปี {{year}}"
+      }
+    },
+    "FinancialInformation": {
+      "title": "งบการเงิน ปี {year}",
+      "quarter": {
+        "one": "ไตรมาส 1",
+        "two": "ไตรมาส 2",
+        "three": "ไตรมาส 3",
+        "four": "ประจำปัี"
+      }
+    },
+    "PerformanceReport": {
+      "title": "รายงานผลการดำเนินงานปี {year}",
+      "quarter": {
+        "one": "ไตรมาส 1",
+        "two": "ไตรมาส 2",
+        "three": "ไตรมาส 3",
+        "four": "ประจำปัี"
+      }
+    },
+    "DocumentAnnouncement": {
+      "title": "เอกสารเผยแพร่ปี {year}",
+      "quarter": {
+        "one": "ไตรมาส 1",
+        "two": "ไตรมาส 2",
+        "three": "ไตรมาส 3",
+        "four": "ประจำปัี"
+      }
+    },
+    "GoodCorporate": {
+      "title": "เอกสารการกำกับดูแลกิจการที่ดี",
+      "document": {
+        "governanceManual": "คู่มือการกำกับดูแลกิจการที่ดี",
+        "codeOfConduct": "จรรยาบรรณธุรกิจ",
+        "boardCharter": "กฎบัตรคณะกรรมการ",
+        "chairmanDuties": "บทบาทหน้าที่ประธานกรรมการ",
+        "auditCommitteeCharter": "กฎบัตรคณะกรรมการตรวจสอบ",
+        "nominationAndRemunerationCharter": "กฎบัตรคณะกรรมการสรรหาและกำหนดค่าตอบแทน",
+        "riskGovernanceSustainabilityCommittee": "คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
+        "executiveCommitteeCharter": "กฎบัตรคณะกรรมการบริหาร",
+        "ceoAuthorityAndResponsibilities": "ขอบเขตอำนาจ หน้าที่ และความรับผิดชอบของประธานเจ้าหน้าที่บริหาร",
+        "sustainabilityPolicy": "นโยบายบริหารจัดการด้านความยั่งยืน",
+        "riskManagementPolicy": "นโยบายบริหารความเสี่ยง",
+        "insiderInformationPolicy": "นโยบายการใช้ข้อมูลภายใน",
+        "intellectualPropertyPolicy": "นโยบายที่การไม่ละเมิดทรัพย์สินทางปัญญา",
+        "csrPolicy": "นโยบายความรับผิดชอบต่อสังคม",
+        "antiCorruptionPolicy": "นโยบายการต่อต้านการทุจริต",
+        "personalDataProtectionPolicy": "นโยบายคุ้มครองข้อมูลส่วนบุคคล",
+        "companyRegulation": "ข้อบังคับบริษัท",
+        "memorandumOfAssociation": "บริคณห์สนธิ",
+        "companySecretaryContact": "ช่องทางติดต่อเลขานุการบริษัท"
+      }
+    },
+
+    "Activity": {
+      "title": "กิจกรรมปี {year}",
+      "quarter": {
+        "one": "ไตรมาส 1",
+        "two": "ไตรมาส 2",
+        "three": "ไตรมาส 3",
+        "four": "ประจำปี"
+      }
+    },
+    "warrant": {
+      "heading": "ใบสำคัญแสดงสิทธิ ครั้งที่ {number} ({code})",
+      "tabs": {
+        "condition": "ข้อกำหนดสิทธิ",
+        "round1": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งแรก",
+        "round2": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 2",
+        "round3": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 3",
+        "round4": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 4",
+        "round5": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 5",
+        "roundFinal": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งสุดท้าย"
+      },
+      "content": {
+        "condition": "ข้อกำหนดสิทธิและหน้าที่ของผู้ออกใบสำคัญแสดงสิทธิ",
+        "round1Notice": "แจ้งกำหนดการใช้สิทธิ PORT -W3 ครั้งแรก",
+        "conditionNote": "ข้อกำหนดสิทธิว่าด้วยสิทธิและหน้าที่ของผู้ออกใบสำคัญแสดงสิทธิและผู้ถือใบสำคัญแสดงสิทธิที่จะซื้อหุ้นสามัญของบริษัท",
+        "formNote": "แบบฟอร์มแสดงความจำนงการใช้สิทธิที่จะซื้อหุ้นสามัญของบริษัท สหไทย เทอร์มินอล จำกัด (มหาชน)"
       }
     }
   }

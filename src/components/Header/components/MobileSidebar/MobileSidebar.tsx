@@ -62,7 +62,7 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   return (
     <nav
       className={cn(
-        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5',
+        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5 overflow-y-scroll',
         'transition-all duration-500',
         isVisible ? 'opacity-100 ' : ' opacity-0'
       )}

@@ -9,7 +9,7 @@ export function CompanyIntroductionVideo() {
     const locale = useLocale()
 
     // Change videoId based on locale
-    const videoId = locale === 'en' ? 'N7I7cp5Erdg' : 'OTesRI1fvWI'
+    const videoId =  'N7I7cp5Erdg'
 
   return (
     <Animation>
@@ -20,7 +20,7 @@ export function CompanyIntroductionVideo() {
         >
           {t('title')}
         </h2>
-        <LocaleButton />
+        {/*<LocaleButton />*/}
       </div>
 
       <div className='mt-[32px] w-full flex justify-center mb-5'>

@@ -68,10 +68,17 @@ export function SideMenu() {
         </SideMenu.Item>
 
         <SideMenu.Item
-          href={`#${InvestorInformationEnum.CompanyIntroductionVideo}`}
-          isActive={InvestorInformationEnum.CompanyIntroductionVideo === hash}
+          href={`#${InvestorInformationEnum.CompanyAdvertiseVideo}`}
+          isActive={InvestorInformationEnum.CompanyAdvertiseVideo === hash}
         >
-          {t('CompanyIntroductionVideo.title')} ประชาสัมพันธ์
+          {t('CompanyAdvertiseVideo.title')}
+        </SideMenu.Item>
+
+        <SideMenu.Item
+          href={`#${InvestorInformationEnum.Factsheet}`}
+          isActive={InvestorInformationEnum.Factsheet === hash}
+        >
+          {t('FactSheet.title')}
         </SideMenu.Item>
       </ul>
     </Animation>
