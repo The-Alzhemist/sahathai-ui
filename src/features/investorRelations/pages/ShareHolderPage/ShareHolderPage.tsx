@@ -57,7 +57,7 @@ export function ShareHolderPage() {
           </ShareholderCard>
 
           <section className="overflow-scroll">
-            <table className="report shadow-6 rounded-[10px] mt-[37px] overflow-hidden w-full">
+            <table className="report shadow-6 rounded-[10px] mt-[37px] overflow-hidden w-full no-scrollbar">
               <thead>
               <tr>
                 <th className="subtitle-1">{t('order')}</th>
