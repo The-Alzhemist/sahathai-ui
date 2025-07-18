@@ -24,7 +24,13 @@
       "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
       "codeConduct": "Code of Conduct",
       "shareHolder": "ผู้ถือหุ้น",
-      "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้นประจำปี"
+      "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้นประจำปี",
+      "FinancialInformation": "ข้อมูลทางการเงิน",
+      "PerformanceReport": "รายงานผลการดำเนินงาน",
+      "DocumentAnnouncement": "เอกสารเผยแพร่",
+      "GoodCorporate": "การกำกับดูแลกิจการที่ดี",
+      "SustainableDevelopment": "การบริหารจัดการด้านความยั่งยืน",
+      "Activity": "กิจกรรม"
     }
   }
 }
