@@ -77,7 +77,10 @@ export default function ActivityAccordionList({
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-gray-800">{file.title}</span>
                       {file.type !== 'youtube' && (
-                        <DownloadButton className="mt-[16px]" href={file.name} />
+                        <DownloadButton
+                          className={`mt-[16px] ${!file.name ? 'opacity-30 pointer-events-none' : ''}`}
+                          href={file.name || '#'}
+                        />
                       )}
                     </div>
                     {file.type === 'youtube' && (

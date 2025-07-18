@@ -42,8 +42,6 @@ export function GoodCorporatePage() {
           <GoodCorporateAccordionList documents={documents} />
         </div>
 
-
-
       </section>
     </main>
 
