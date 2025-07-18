@@ -4,6 +4,7 @@
     "FinancialReports": {
       "title": "รายงานและข้อมูลทางการเงิน",
       "oneReport": "One Report",
+      "yearlyReport": "รายงานประจำปี",
       "otherFinancialStatements": "งบการเงินอื่นๆ"
     },
     "Shareholder": {
