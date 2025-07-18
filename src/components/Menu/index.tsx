@@ -39,7 +39,7 @@ export function Menu() {
                     <DropdownMenuItem key={subMenu.title}>
                       <Link
                         key={subMenu.title}
-                        className={`headline-6 !font-[300] block px-[24px] w-full py-[18px] hover:bg-primary-1 whitespace-nowrap hover:text-white`}
+                        className={`!text-xs headline-6 !font-[300] block px-4 w-full py-3 hover:bg-primary-1 whitespace-nowrap hover:text-white`}
                         target={menu.isExternalLink ? '_blank' : undefined}
                         rel={
                           subMenu.isExternalLink

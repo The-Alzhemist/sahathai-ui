@@ -128,6 +128,41 @@ export function useSubmenu() {
             isExternalLink: false,
             pathname: `/investor-information/share-holder-meeting`,
           },
+          {
+            title: t('investorRelations.FinancialInformation'),
+            isExternalLink: false,
+            pathname: `/investor-information/financial-information`,
+          },
+          {
+            title: t('investorRelations.PerformanceReport'),
+            isExternalLink: false,
+            pathname: `/investor-information/performance-report`,
+          },
+          {
+            title: t('investorRelations.DocumentAnnouncement'),
+            isExternalLink: false,
+            pathname: `/investor-information/document-announcement`,
+          },
+          {
+            title: t('investorRelations.GoodCorporate'),
+            isExternalLink: false,
+            pathname: `/investor-information/good-corporate`,
+          },
+          {
+            title: t('investorRelations.SustainableDevelopment'),
+            isExternalLink: false,
+            pathname: `/investor-information/sustainable-development`,
+          },
+          {
+            title: t('investorRelations.Activity'),
+            isExternalLink: false,
+            pathname: `/investor-information/activity`,
+          },
+          {
+            title: t('investorRelations.Warrant'),
+            isExternalLink: false,
+            pathname: `/investor-information/warrant`,
+          },
         ],
       },
     ]
@@ -137,3 +172,5 @@ export function useSubmenu() {
     menus,
   }
 }
+
+
