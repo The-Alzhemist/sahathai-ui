@@ -148,11 +148,7 @@ export function useSubmenu() {
             isExternalLink: false,
             pathname: `/investor-information/good-corporate`,
           },
-          {
-            title: t('investorRelations.SustainableDevelopment'),
-            isExternalLink: false,
-            pathname: `/investor-information/sustainable-development`,
-          },
+
           {
             title: t('investorRelations.Activity'),
             isExternalLink: false,
