@@ -11,7 +11,7 @@ export function SustainabilityCard({
       </h2>
       {descriptions.map((description, index) => (
         <div
-          className='grid grid-cols-[10px_1fr] body-1 text-black-60'
+          className='grid grid-cols-[10px_1fr] body-1  text-black-60 whitespace-pre-line'
           key={index}
         >
           <span>&bull;</span>
