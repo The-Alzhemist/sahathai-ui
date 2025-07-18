@@ -10,6 +10,19 @@ import { Animation } from '@/components/Animation'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 
+import { DownloadButton } from '@/components/DownloadButton'
+
+export const sustainabilityDocuments = [
+  {
+    title: 'นโยบายการบริหารจัดการด้านความยั่งยืน',
+    href: 'https://sahathaiterminal.com/wp-content/uploads/2022/02/Company-Snapshot-9M-2021.pdf',
+  },
+  {
+    title: 'ผลการดำเนินงานด้านความยั่งยืน ปี 2567',
+    href: 'https://sahathaiterminal.com/wp-content/uploads/2022/02/Company-Snapshot-9M-2021.pdf',
+  },
+];
+
 export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
   return (
@@ -73,35 +86,52 @@ export function SustainabilityManagementPage() {
         />
       </RiskCard>
       <SustainabilityManagementPolicy className='mt-[46px]' />
-      <section className='space-y-[40px] mt-[88px]'>
-        <Animation className='max-w-[960px] w-full mx-auto'>
-          <div className='relative pt-[86.88%] w-full'>
-            <Image
-              src='/investor-relations/sustainability-management-1.png'
-              alt=''
-              fill
-            />
+
+      <section className="p-5 max-w-4xl mx-auto">
+        {sustainabilityDocuments.map((doc:any, index:number) => (
+          <div
+            key={index}
+            className="mt-[32px] w-full flex justify-between items-center mb-5 border border-gray-200 bg-gray-50 rounded-md p-5"
+          >
+            <div>{doc.title}</div>
+            <div>
+              <DownloadButton className="mx-auto" href={doc.href} />
+            </div>
           </div>
-        </Animation>
-        <Animation className='max-w-[969px] w-full mx-auto'>
-          <div className='relative pt-[49.85%] w-full'>
-            <Image
-              src='/investor-relations/sustainability-management-2.png'
-              alt=''
-              fill
-            />
-          </div>
-        </Animation>
-        <Animation className='max-w-[965px] w-full mx-auto'>
-          <div className='relative pt-[95.03%] w-full'>
-            <Image
-              src='/investor-relations/sustainability-management-3.png'
-              alt=''
-              fill
-            />
-          </div>
-        </Animation>
+        ))}
+
       </section>
+
+
+        <section className='space-y-[40px] mt-[88px]'>
+          <Animation className='max-w-[960px] w-full mx-auto'>
+            <div className='relative pt-[86.88%] w-full'>
+              <Image
+                src='/investor-relations/sustainable-1.png'
+                alt=''
+                fill
+              />
+            </div>
+          </Animation>
+          <Animation className='max-w-[969px] w-full mx-auto'>
+            <div className='relative pt-[49.85%] w-full'>
+              <Image
+                src='/investor-relations/sustainable-2.jpeg'
+                alt=''
+                fill
+              />
+            </div>
+          </Animation>
+          <Animation className='max-w-[965px] w-full mx-auto'>
+            <div className='relative pt-[95.03%] w-full'>
+              <Image
+                src='/investor-relations/sustainable-3.png'
+                alt=''
+                fill
+              />
+            </div>
+          </Animation>
+        </section>
     </main>
-  )
+)
 }

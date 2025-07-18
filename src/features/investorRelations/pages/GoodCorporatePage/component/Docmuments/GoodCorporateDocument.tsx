@@ -10,7 +10,7 @@ export const goodCorporateDocument = (
       files: [
         {
           title: t('document.governanceManual'),
-          name: 'governance-manual.pdf',
+          name: '',
           type: 'pdf',
         },
         {

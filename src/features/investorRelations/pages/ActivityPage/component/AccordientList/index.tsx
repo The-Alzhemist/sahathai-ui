@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight, FaVideoSlash } from 'react-icons/fa';
 import { DownloadButton } from '@/components/DownloadButton';
 
 export interface FileItem {
@@ -15,15 +15,12 @@ export interface AccordionItem {
   files: FileItem[];
 }
 
-
-
 export default function ActivityAccordionList({
-                                                   documents,
-                                                   defaultOpenIndexes = [],
-                                                 }: {
+                                                documents,
+                                                defaultOpenIndexes = [],
+                                              }: {
   documents: AccordionItem[];
   defaultOpenIndexes?: number[];
-
 }) {
   const [openIndexes, setOpenIndexes] = useState<number[]>(defaultOpenIndexes);
 
@@ -33,16 +30,13 @@ export default function ActivityAccordionList({
     );
   };
 
-
   const getYouTubeEmbedUrl = (url: string) => {
     let videoId = '';
-
     if (url.includes('youtube.com')) {
       videoId = url.split('v=')[1]?.split('&')[0] ?? '';
     } else if (url.includes('youtu.be')) {
       videoId = url.split('/').pop()?.split('?')[0] ?? '';
     }
-
     return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
   };
 
@@ -71,7 +65,7 @@ export default function ActivityAccordionList({
             <div
               className={`transition-all duration-500 ease-in-out overflow-hidden bg-white px-4`}
               style={{
-                maxHeight: isOpen ? '1000px' : '0px',
+                maxHeight: isOpen ? '1200px' : '0px',
                 paddingTop: isOpen ? '0.5rem' : '0',
                 paddingBottom: isOpen ? '1rem' : '0',
                 opacity: isOpen ? 1 : 0,
@@ -83,18 +77,29 @@ export default function ActivityAccordionList({
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-gray-800">{file.title}</span>
                       {file.type !== 'youtube' && (
-                        <DownloadButton className="mt-[16px]" href={file.name} />
+                        <DownloadButton
+                          className={`mt-[16px] ${!file.name ? 'opacity-30 pointer-events-none' : ''}`}
+                          href={file.name || '#'}
+                        />
                       )}
                     </div>
                     {file.type === 'youtube' && (
-                      <div className="aspect-w-16 aspect-h-9">
-
-                        <iframe
-                          src={getYouTubeEmbedUrl(file.name)}
-                          title={file.title}
-                          allowFullScreen
-                          className="w-full h-64 rounded"
-                        />
+                      <div className="aspect-w-16">
+                        {file.name && file.name.trim() !== '' ? (
+                          <iframe
+                            src={getYouTubeEmbedUrl(file.name)}
+                            title={file.title}
+                            allowFullScreen
+                            className="w-full h-64 rounded"
+                          />
+                        ) : (
+                          <div className="flex flex-col items-center justify-center h-64 border border-gray-300 rounded bg-gray-50">
+                            <FaVideoSlash className="text-gray-400 text-3xl mb-2" />
+                            <span className="text-sm text-gray-500">
+                              No video available
+                            </span>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
