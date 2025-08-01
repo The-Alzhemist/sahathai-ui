@@ -12,7 +12,7 @@ export default async function ShareHolderMeeting({
   const { locale } = params
 
   const res = await fetch(
-    `https://api.storyblok.com/v2/cdn/stories/invrester-relartion/aaaaaa?version=draft&token=H1wfrTArHm3VE441H8WQ5wtt&language=${locale}`,
+    `https://api.storyblok.com/v2/cdn/stories/invrester-relartion/shareholdermeetingpage?version=draft&token=H1wfrTArHm3VE441H8WQ5wtt&cv=1754034366&language=${locale}`,
     {
       next: { revalidate },
     }
