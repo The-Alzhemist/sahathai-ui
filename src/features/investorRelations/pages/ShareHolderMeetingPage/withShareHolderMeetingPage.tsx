@@ -1,11 +1,11 @@
-import { FunctionComponentType } from '@/models/FunctionComponentType'
+import { ShareHolderMeetingPageProps } from './interface'
 
 export function withShareHolderMeetingPage(
-  Component: React.FC<FunctionComponentType>
+  Component: React.FC<ShareHolderMeetingPageProps>
 ) {
-  function withShareHolder() {
-    return <Component />
+  function WithShareHolderMeeting(props: ShareHolderMeetingPageProps) {
+    return <Component {...props} />
   }
 
-  return withShareHolder
+  return WithShareHolderMeeting
 }
