@@ -19,7 +19,7 @@ export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMe
     return <div>No data</div>
   }
 
-  const groups = shareHolderMeetingData.story.content.body[0].group || []
+  const group = shareHolderMeetingData.story.content.body[0].group || []
 
   const toggleTab = (groupIndex: number, tabIndex: number) => {
     setOpenTabs(prev => {
@@ -41,15 +41,15 @@ export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMe
       />
 
       <section className="p-5 max-w-4xl mx-auto space-y-6">
-        {groups.map((group: any, groupIndex: number) => (
+        {group.map((groupItem: any, groupIndex: number) => (
           <div key={groupIndex} className="border border-gray-200 rounded-md p-4">
             {/* --- Group Header (always visible) --- */}
             <h2 className="font-bold text-lg mb-3 text-gray-800">
-              {group.heading}
+              {groupItem.heading}
             </h2>
 
             <div className="space-y-4">
-              {group.tab?.map((tabItem: any, tabIndex: number) => {
+              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
                   <div
@@ -98,7 +98,7 @@ export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMe
                               <div className="aspect-video w-full">
                                 <iframe
                                   className="w-full h-full rounded-md"
-                                  src={`https://www.youtube.com/embed/L051YSpEEYU`}
+                                  src={`${rowItem.youtubeUrl}`}
                                   title={rowItem.heading}
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                   allowFullScreen
