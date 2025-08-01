@@ -1,51 +1,23 @@
+
 import { useTranslations } from 'next-intl'
-import { Menu } from '@/components/Menu'
+import { ShareHolderMeetingPageProps } from '@/features/investorRelations/pages/ShareHolderMeetingPage/interface'
+import QuarterAccordionList
+  from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/QuarterAccordientList' // หรือ path ที่ถูกต้อง
 
-import AccordionList, { AccordionItem } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
-import {
-  shareholderMeeting2568
-} from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2568'
-import {
-  shareholderMeeting2567
-} from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2567'
-import { Banner } from '@/components/Banner'
-
-
-export function ShareHolderMeetingPage() {
+export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMeetingPageProps) {
   const t = useTranslations('InvestorInformationPage.ShareHolderMeeting')
-  const tMenu = useTranslations('Menu')
-  const documents2568 = shareholderMeeting2568(t);
-  const documents2567 = shareholderMeeting2567(t);
+
+  if (!shareHolderMeetingData) {
+    return <div>No data</div>
+  }
+
+  const performanceData = shareHolderMeetingData.story.content.body[0]
+    .performanceBoxYearContainer
 
   return (
-    <main className=" pb-[176px] bg-white ">
-      <Menu/>
-      <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('investorRelations.shareHolderMeeting')}
-        caption={tMenu('investorRelations.shareHolderMeeting')}
-      />
-      <section className="p-5 max-w-4xl mx-auto">
-
-        {/* Mobile View */}
-        <div className="border px-5 pt-5 rounded-md mb-7">
-          <h2 className="text-xl md:text-3xl font-bold mb-6">
-            {t('heading', { year: 2568 })}
-          </h2>
-          <AccordionList documents={documents2568} defaultOpenIndexes={[0]}  />
-        </div>
-
-        <div className="border px-5 pt-5 rounded-md mb-7">
-          <h2 className="text-xl md:text-3xl font-bold mb-6">
-            {t('heading', { year: 2567 })}
-          </h2>
-          <AccordionList documents={documents2567} />
-        </div>
-
-      </section>
+    <main className="p-6">
+      <h1 className="text-2xl font-bold mb-4">{t('title')}</h1>
+      <QuarterAccordionList data={performanceData} />
     </main>
-
   )
 }
-
-
