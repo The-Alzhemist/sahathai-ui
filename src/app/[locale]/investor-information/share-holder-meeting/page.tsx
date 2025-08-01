@@ -1,6 +1,7 @@
 import {
   ShareHolderMeetingPage,
 } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
+import { fetchStoryblokStory } from '@/utils/storyblok'
 
 export const revalidate = 300
 
@@ -11,14 +12,12 @@ export default async function ShareHolderMeeting({
 }) {
   const { locale } = params
 
-  const res = await fetch(
-    `https://api.storyblok.com/v2/cdn/stories/invrester-relartion/shareholdermeetingpage?version=draft&token=H1wfrTArHm3VE441H8WQ5wtt&cv=1754034366&language=${locale}`,
-    {
-      next: { revalidate },
-    }
+  const response = await fetchStoryblokStory(
+    'invrester-relartion/shareholdermeetingpage',
+    locale,
+    'draft'
   )
 
-  const data = await res.json()
 
-  return <ShareHolderMeetingPage shareHolderMeetingData={data} />
+  return <ShareHolderMeetingPage shareHolderMeetingData={response} />
 }
