@@ -84,7 +84,7 @@ export async function generateMetadata({
           },
         ],
       },
-      type: 'website',
+
     }
   }
 
@@ -116,6 +116,6 @@ export async function generateMetadata({
         },
       ],
     },
-    type: 'website',
+
   }
 }

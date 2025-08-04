@@ -1,51 +1,121 @@
+'use client'
+
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { ShareHolderMeetingPageProps } from '@/features/investorRelations/pages/ShareHolderMeetingPage/interface'
 import { Menu } from '@/components/Menu'
-
-import AccordionList, { AccordionItem } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
-import {
-  shareholderMeeting2568
-} from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2568'
-import {
-  shareholderMeeting2567
-} from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2567'
 import { Banner } from '@/components/Banner'
+import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
+import { DownloadButton } from '@/components/DownloadButton'
 
-
-export function ShareHolderMeetingPage() {
+export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMeetingPageProps) {
   const t = useTranslations('InvestorInformationPage.ShareHolderMeeting')
   const tMenu = useTranslations('Menu')
-  const documents2568 = shareholderMeeting2568(t);
-  const documents2567 = shareholderMeeting2567(t);
+
+  // State to track open tabs per group
+  const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
+
+  if (!shareHolderMeetingData) {
+    return <div>No data</div>
+  }
+
+  const group = shareHolderMeetingData.story.content.body[0].group || []
+
+  const toggleTab = (groupIndex: number, tabIndex: number) => {
+    setOpenTabs(prev => {
+      const groupOpenTabs = prev[groupIndex] || []
+      const newOpenTabs = groupOpenTabs.includes(tabIndex)
+        ? groupOpenTabs.filter(i => i !== tabIndex)
+        : [...groupOpenTabs, tabIndex]
+      return { ...prev, [groupIndex]: newOpenTabs }
+    })
+  }
 
   return (
-    <main className=" pb-[176px] bg-white ">
-      <Menu/>
+    <main className="pb-[176px] bg-white">
+      <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
+        imagePath="/about-us/banner.png"
         alt={tMenu('investorRelations.shareHolderMeeting')}
         caption={tMenu('investorRelations.shareHolderMeeting')}
       />
-      <section className="p-5 max-w-4xl mx-auto">
 
-        {/* Mobile View */}
-        <div className="border px-5 pt-5 rounded-md mb-7">
-          <h2 className="text-xl md:text-3xl font-bold mb-6">
-            {t('heading', { year: 2568 })}
-          </h2>
-          <AccordionList documents={documents2568} defaultOpenIndexes={[0]}  />
-        </div>
+      <section className="p-5 max-w-4xl mx-auto space-y-6">
+        {group.map((groupItem: any, groupIndex: number) => (
+          <div key={groupIndex} className="border border-gray-200 rounded-md p-4">
+            {/* --- Group Header (always visible) --- */}
+            <h2 className="font-bold text-lg mb-3 text-gray-800">
+              {groupItem.heading}
+            </h2>
 
-        <div className="border px-5 pt-5 rounded-md mb-7">
-          <h2 className="text-xl md:text-3xl font-bold mb-6">
-            {t('heading', { year: 2567 })}
-          </h2>
-          <AccordionList documents={documents2567} />
-        </div>
+            <div className="space-y-4">
+              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
+                const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
+                return (
+                  <div
+                    key={tabIndex}
+                    className="border border-gray-200 rounded-md overflow-hidden"
+                  >
+                    {/* --- Tab Toggle Button --- */}
+                    <button
+                      onClick={() => toggleTab(groupIndex, tabIndex)}
+                      className="w-full flex justify-between items-center text-left px-4 py-3 font-semibold bg-gray-50 hover:bg-gray-100 transition"
+                    >
+                      <span>{tabItem.heading}</span>
+                      {isOpen ? <FaChevronDown /> : <FaChevronRight />}
+                    </button>
 
+                    {/* --- Tab Content with Animation --- */}
+                    <div
+                      className="transition-all duration-500 ease-in-out overflow-hidden bg-white"
+                      style={{
+                        maxHeight: isOpen ? '1000px' : '0px',
+                        opacity: isOpen ? 1 : 0,
+                      }}
+                    >
+                      <div className="p-4 space-y-2">
+                        {tabItem.row?.map((rowItem: any, rowIndex: number) => (
+                          <div
+                            key={rowIndex}
+                            className="flex justify-between items-center border-b border-gray-100 last:border-0 pb-2 "
+                          >
+                            {rowItem.heading && (
+                              <h3 className="text-sm text-gray-700">
+                                {rowItem.heading}
+                              </h3>
+                            )}
+
+
+                            {rowItem.file?.filename && (
+                              <DownloadButton
+                                className={` ${!rowItem.file.filename ? 'opacity-30 pointer-events-none' : ''}`}
+                                href={rowItem.file.filename}
+                              />
+                            )}
+
+                            {/* --- YouTube iframe --- */}
+                            {rowItem.youtubeUrl && (
+                              <div className="aspect-video w-full">
+                                <iframe
+                                  className="w-full h-full rounded-md"
+                                  src={`${rowItem.youtubeUrl}`}
+                                  title={rowItem.heading}
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                ></iframe>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        ))}
       </section>
     </main>
-
   )
 }
-
-
