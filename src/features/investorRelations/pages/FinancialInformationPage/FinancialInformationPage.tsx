@@ -22,7 +22,6 @@ export function FinancialInformationPage({financialInformationData}:FinancialInf
     return <div>No data</div>
   }
 
-  console.log("financialInformationData::",JSON.stringify(financialInformationData))
 
   const group = financialInformationData.story.content.body[0].group || []
 
@@ -78,14 +77,14 @@ export function FinancialInformationPage({financialInformationData}:FinancialInf
                         opacity: isOpen ? 1 : 0,
                       }}
                     >
-                      <div className="p-4 space-y-2">
+                      <div className="p-4  grid md:grid-cols-4">
                         {tabItem.row?.map((rowItem: any, rowIndex: number) => (
                           <div
                             key={rowIndex}
-                            className="flex justify-between items-center border-b border-gray-100 last:border-0 pb-2 "
+                            className="flex flex-col  items-center border-b border-gray-100  py-3 "
                           >
                             {rowItem.heading && (
-                              <h3 className="text-sm text-gray-700">
+                              <h3 className="text-sm text-gray-700 mb-5">
                                 {rowItem.heading}
                               </h3>
                             )}
