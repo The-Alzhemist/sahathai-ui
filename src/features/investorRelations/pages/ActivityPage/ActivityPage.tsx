@@ -1,29 +1,9 @@
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
-import AccordionList, { AccordionItem } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
-import {
-  shareholderMeeting2568
-} from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2568'
-import {
-  shareholderMeeting2567
-} from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/Docmuments/ShareHolderMeeting2567'
+
 import { Banner } from '@/components/Banner'
-import FinancialAccordionList
-  from '@/features/investorRelations/pages/PerformanceReportPage/component/AccordientList'
-import {
-  financial2568
-} from '@/features/investorRelations/pages/FinancialInformationPage/component/Docmuments/Financial2568'
-import {
-  financial2567
-} from '@/features/investorRelations/pages/FinancialInformationPage/component/Docmuments/Financial2567'
-import PerformanceAccordionList from '@/features/investorRelations/pages/PerformanceReportPage/component/AccordientList'
-import {
-  performanceReport2567
-} from '@/features/investorRelations/pages/PerformanceReportPage/component/Docmuments/PerformanceReport2567'
-import {
-  performanceReport2568
-} from '@/features/investorRelations/pages/PerformanceReportPage/component/Docmuments/PerformanceReport2568'
+
 import ActivityAccordionList from '@/features/investorRelations/pages/ActivityPage/component/AccordientList'
 import { activity2567 } from '@/features/investorRelations/pages/ActivityPage/component/Docmuments/Activity2567'
 import { activity2568 } from '@/features/investorRelations/pages/ActivityPage/component/Docmuments/Activity2568'
