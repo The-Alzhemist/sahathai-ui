@@ -9,7 +9,7 @@ export function Menu() {
   const t = useTranslations('Menu')
 
   return (
-    <div className='absolute left-1/2 -translate-x-1/2 bottom-0 max-w-[1200px] w-full px-[40px] bg-white rounded-[7px] shadow-2'>
+    <div className='absolute left-1/2 -translate-x-1/2 bottom-10 max-w-[1200px] w-full px-[40px] bg-white rounded-full shadow-2 z-10'>
       <ul className='group flex justify-start md:justify-center items-center gap-[21px] medium text-navy overflow-x-auto'>
         <Menu.Item href='/about-us'>{t('aboutUs.title')}</Menu.Item>
         <Menu.Item href='/services'>{t('service.title')}</Menu.Item>

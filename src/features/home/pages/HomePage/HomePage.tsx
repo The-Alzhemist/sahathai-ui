@@ -14,6 +14,8 @@ import { REVALIDATE_TIME } from '@/config/environtment'
 
 export const revalidate = REVALIDATE_TIME
 
+
+
 export function HomePage() {
   return (
     <main>
