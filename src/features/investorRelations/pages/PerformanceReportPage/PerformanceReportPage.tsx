@@ -1,45 +1,70 @@
+"use client"
+
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
 
 import { Banner } from '@/components/Banner'
+import { useState } from 'react'
 
-import PerformanceAccordionList from '@/features/investorRelations/pages/PerformanceReportPage/component/AccordientList'
-import {
-  performanceReport2567
-} from '@/features/investorRelations/pages/PerformanceReportPage/component/Docmuments/PerformanceReport2567'
-import {
-  performanceReport2568
-} from '@/features/investorRelations/pages/PerformanceReportPage/component/Docmuments/PerformanceReport2568'
+import { FinancialInformationPageProps } from '@/features/investorRelations/pages/FinancialInformationPage/interface'
+import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { PerformanceReportPageProps } from '@/features/investorRelations/pages/PerformanceReportPage/interface'
 
 
-export function PerformanceReportPage() {
-  const t = useTranslations('InvestorInformationPage.PerformanceReport')
+
+export function PerformanceReportPage({performanceReportData}:PerformanceReportPageProps) {
+  // State to track open tabs per group
+  const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
   const tMenu = useTranslations('Menu')
-  const documents2568 = performanceReport2568(t);
-  const documents2567 = performanceReport2567(t);
+
+  if (!performanceReportData) {
+    return <div>No data</div>
+  }
+
+
+  const group = performanceReportData.story.content.body[0].group || []
+
+  const toggleTab = (groupIndex: number, tabIndex: number) => {
+    setOpenTabs(prev => {
+      const groupOpenTabs = prev[groupIndex] || []
+      const newOpenTabs = groupOpenTabs.includes(tabIndex)
+        ? groupOpenTabs.filter(i => i !== tabIndex)
+        : [...groupOpenTabs, tabIndex]
+      return { ...prev, [groupIndex]: newOpenTabs }
+    })
+  }
 
   return (
-    <main className=" pb-[176px] bg-white ">
-      <Menu/>
+    <main className="pb-[176px] bg-white">
+      <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('investorRelations.PerformanceReport')}
-        caption={tMenu('investorRelations.PerformanceReport')}
+        imagePath="/about-us/banner.png"
+        alt={tMenu('investorRelations.shareHolderMeeting')}
+        caption={tMenu('investorRelations.shareHolderMeeting')}
       />
-      <section className=" p-5 max-w-4xl mx-auto">
 
-        <div className="px-5 pt-5 rounded-md mb-7">
-          <PerformanceAccordionList documents={documents2568}   defaultOpenIndexes={[0]} />
-        </div>
+      <section className="p-5 max-w-4xl mx-auto space-y-6">
+        {group.map((groupItem: any, groupIndex: number) => (
+          <div key={groupIndex} className=" rounded-md p-4">
+            {/* --- Group Header (always visible) --- */}
+            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+              {groupItem.heading}
+            </h2>
 
-        <div className="px-5 pt-5 rounded-md mb-7">
-          <PerformanceAccordionList documents={documents2567} />
-        </div>
-
+            <div className="space-y-4">
+              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
+                const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
+                return (
+                  <AccordionTabs tabIndex={tabIndex} key={'performance-report-' + tabIndex} groupIndex={groupIndex} toggleTab={toggleTab}
+                                 tabItem={tabItem} isOpen={isOpen} />
+                )
+              })}
+            </div>
+          </div>
+        ))}
       </section>
     </main>
-
   )
 }
 
