@@ -1,8 +1,7 @@
-import { AccordionItem } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
 
 export const documentAnnouncement2568 = (
   t: (key: string, values?: Record<string, any>) => string,
-): AccordionItem[] => {
+): any => {
   const year = 2568
   return [
     {
