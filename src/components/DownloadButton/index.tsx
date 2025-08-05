@@ -10,15 +10,15 @@ export function DownloadButton({ className, href }: DownloadButtonProps) {
   return (
     <a
       className={cn(
-        'w-fit block px-[19px] py-[4px] border border-dark-80 rounded-[50px] bg-white',
+        'w-fit block px-[19px] py-[4px] border border-blue-300 rounded-[10px] bg-blue-50 hover:scale-105 transition-all',
         className
       )}
       href={href}
       target='_blank'
       rel='noopener noreferrer'
     >
-      <button className='medium flex items-center gap-[4px] text-dark'>
-        <DownloadIcon width='24' height='24' />
+      <button className='medium flex items-center gap-[4px] text-blue-300 !text-sm '>
+        <DownloadIcon width='24' height='24' className='text-blue-300' />
         {common('download')}
       </button>
     </a>
