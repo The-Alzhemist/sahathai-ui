@@ -32,6 +32,7 @@ const nextConfig = {
         hostname: 'placehold.co', // Your image's domain
         pathname: '/**', // Matches all paths under the domain
       },
+
       {
         protocol: 'https',
         hostname: 'a.storyblok.com', // Your image's domain

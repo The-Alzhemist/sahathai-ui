@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion'
 
 import { AboutCardProps } from './interface'
 import { cn } from '@/libs/util'
+import { BuildingIcon } from '@/components/icons/AboutUsBuildingIcon'
 
 export function AboutCard({ title, content, imageUrl }: AboutCardProps) {
   const ref = useRef(null)
@@ -14,20 +15,28 @@ export function AboutCard({ title, content, imageUrl }: AboutCardProps) {
     <div
       ref={ref}
       className={cn(
-        'max-w-[330px] w-full transition-all opacity-0 duration-1000 rounded-[8px] shadow-3 overflow-hidden',
+        'max-w-[310px] w-full transition-all opacity-0 duration-1000 rounded-[25px] shadow-3 overflow-hidden bg-white',
         {
           'opacity-100': isInView,
         }
       )}
     >
-      <div className='w-full'>
-        <div className='relative pt-[72.73%] w-full'>
+      <div className='w-full relative'>
+        <div className='relative pt-[70%] w-full '>
           <Image src={imageUrl} fill alt='' />
+
         </div>
       </div>
-      <div className='p-[22px_30px_32px]'>
-        <h2 className='headline-4 text-navy'>{title}</h2>
-        <p className='mt-[14px] body-1 text-black-6 whitespace-pre-line'>{content}</p>
+      <div className='relative'>
+        <div
+          className="w-[60px] h-[60px]  bg-gradient-to-b from-blue-300 to-red-500 rounded-full flex justify-center items-center absolute -top-7 left-4 border-4 border-white"><BuildingIcon/>
+        </div>
+      </div>
+
+
+      <div className="p-[40px_30px_32px]">
+        <h2 className="headline-4 text-navy">{title}</h2>
+        <p className='mt-[14px] text-black-6 whitespace-pre-line font-light'>{content}</p>
       </div>
     </div>
   )
