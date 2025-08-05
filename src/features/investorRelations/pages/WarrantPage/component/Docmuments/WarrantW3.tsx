@@ -1,8 +1,7 @@
-import { AccordionItem } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
 
 export const WarrantW3 = (
   t: (key: string, values?: Record<string, any>) => string
-): AccordionItem[] => {
+): any => {
   const code = 'PORT-W3'
 
 
