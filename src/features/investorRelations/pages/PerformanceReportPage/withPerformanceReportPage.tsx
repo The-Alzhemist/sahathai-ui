@@ -1,11 +1,13 @@
 import { FunctionComponentType } from '@/models/FunctionComponentType'
+import { ShareHolderMeetingPageProps } from '@/features/investorRelations/pages/ShareHolderMeetingPage/interface'
+import { PerformanceReportPageProps } from '@/features/investorRelations/pages/PerformanceReportPage/interface'
 
 export function withPerformanceReportPage(
-  Component: React.FC<FunctionComponentType>
+  Component: React.FC<PerformanceReportPageProps>
 ) {
-  function withShareHolder() {
-    return <Component />
+  function WithPerformanceReport(props: PerformanceReportPageProps) {
+    return <Component {...props} />
   }
 
-  return withShareHolder
+  return WithPerformanceReport
 }
