@@ -42,9 +42,9 @@ export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMe
 
       <section className="p-5 max-w-4xl mx-auto space-y-6">
         {group.map((groupItem: any, groupIndex: number) => (
-          <div key={groupIndex} className="border border-gray-200 rounded-md p-4">
+          <div key={groupIndex} className=" rounded-md p-4">
             {/* --- Group Header (always visible) --- */}
-            <h2 className="font-bold text-lg mb-3 text-gray-800">
+            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
               {groupItem.heading}
             </h2>
 
@@ -54,57 +54,66 @@ export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMe
                 return (
                   <div
                     key={tabIndex}
-                    className="border border-gray-200 rounded-md overflow-hidden"
+                    className="  overflow-hidden"
                   >
                     {/* --- Tab Toggle Button --- */}
                     <button
                       onClick={() => toggleTab(groupIndex, tabIndex)}
-                      className="w-full flex justify-between items-center text-left px-4 py-3 font-semibold bg-gray-50 hover:bg-gray-100 transition"
+                      className="w-full flex justify-between items-center text-left px-4 py-3 h-[70px] text-darkGray border-l-[4px] border-l-blue-300 bg-gray-50 hover:bg-gray-100 transition"
                     >
                       <span>{tabItem.heading}</span>
-                      {isOpen ? <FaChevronDown /> : <FaChevronRight />}
+                      {isOpen ? <FaChevronDown className='text-blue-300' /> : <FaChevronRight className='text-blue-300' />}
                     </button>
 
                     {/* --- Tab Content with Animation --- */}
                     <div
-                      className="transition-all duration-500 ease-in-out overflow-hidden bg-white"
+                      className="transition-all duration-500 ease-in-out overflow-hidden bg-white text-darkGray"
                       style={{
                         maxHeight: isOpen ? '1000px' : '0px',
                         opacity: isOpen ? 1 : 0,
                       }}
                     >
-                      <div className="p-4 space-y-2">
+                      <div className="p-4 ">
                         {tabItem.row?.map((rowItem: any, rowIndex: number) => (
                           <div
                             key={rowIndex}
-                            className="flex justify-between items-center border-b border-gray-100 last:border-0 pb-2 "
+                            className="relative w-full flex  justify-between  border-left border-l-[2px] last:border-l-[2px] border-blue-300 last:border-white  pl-5"
                           >
-                            {rowItem.heading && (
-                              <h3 className="text-sm text-gray-700">
-                                {rowItem.heading}
-                              </h3>
-                            )}
+                            <div className='w-[15px] h-[15px] border-[2px] border-blue-300 rounded-full absolute -left-[1px] bg-white top-0 -translate-x-1/2  '>
+                            </div>
+
+                            <div className='mb-10 w-full'>
+                              {rowItem.heading && (
+                                <h3 className="text-sm text-gray-700 mb-5">
+                                  {rowItem.heading}
+                                </h3>
+                              )}
+
+                              {/* --- YouTube iframe --- */}
+                              {rowItem.youtubeUrl && (
+                                <div className="w-full h-[300px]">
+                                  <iframe
+                                    className="w-full h-full rounded-[30px]"
+                                    src={rowItem.youtubeUrl.replace('watch?v=', 'embed/')}
+                                    title={rowItem.heading}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                  ></iframe>
+                                </div>
+                              )}
+
+                            </div>
 
 
                             {rowItem.file?.filename && (
-                              <DownloadButton
-                                className={` ${!rowItem.file.filename ? 'opacity-30 pointer-events-none' : ''}`}
-                                href={rowItem.file.filename}
-                              />
-                            )}
-
-                            {/* --- YouTube iframe --- */}
-                            {rowItem.youtubeUrl && (
-                              <div className="aspect-video w-full">
-                                <iframe
-                                  className="w-full h-full rounded-md"
-                                  src={`${rowItem.youtubeUrl}`}
-                                  title={rowItem.heading}
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                ></iframe>
+                              <div>
+                                <DownloadButton
+                                  className={` ${!rowItem.file.filename ? 'opacity-30 pointer-events-none ' : ''}`}
+                                  href={rowItem.file.filename}
+                                />
                               </div>
                             )}
+
                           </div>
                         ))}
                       </div>
