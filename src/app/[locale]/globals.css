@@ -330,3 +330,9 @@ tbody {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background-color: #ef4444;
+  opacity: 1;
+}
