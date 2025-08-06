@@ -15,7 +15,7 @@ export function About() {
 
     >
       {/* Optional overlay เพื่อให้อ่านการ์ดง่ายขึ้น */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-white to-transparent"></div>
 
       <div className="relative"  >
         <WhyChooseSahathai />
