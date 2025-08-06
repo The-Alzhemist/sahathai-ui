@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay } from "swiper/modules"
+import { Navigation, Autoplay, Pagination } from "swiper/modules"
 import type { SwiperProps } from "swiper/react"
 
 import "swiper/css"
@@ -17,7 +17,7 @@ export default function SwiperVertical() {
   ]
 
   const swiperConfig: SwiperProps = {
-    modules: [Navigation, Autoplay],
+    modules: [Navigation, Autoplay, Pagination],
     direction: "vertical",
     slidesPerView: 1,
     loop: true,
@@ -27,6 +27,10 @@ export default function SwiperVertical() {
     navigation: {
       prevEl: ".custom-prev",
       nextEl: ".custom-next",
+    },
+    pagination: {
+      el: ".custom-pagination",
+      clickable: true,
     },
   }
 
@@ -50,22 +54,28 @@ export default function SwiperVertical() {
         ))}
       </Swiper>
 
-      {/* ✅ ปุ่ม custom ใช้ className */}
+      {/* Custom Navigation Buttons */}
+      {/*<div*/}
+      {/*  className="absolute*/}
+      {/*       right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-y-5*/}
+      {/*       md:right-10 md:top-auto md:bottom-4 md:-translate-y-0 md:gap-y-2 z-50">*/}
+      {/*  <button*/}
+      {/*    className="custom-prev border-2 border-red-400 text-red-400 bg-red-100*/}
+      {/*         rounded-full h-[30px] w-[30px] flex items-center justify-center">*/}
+      {/*    ↑*/}
+      {/*  </button>*/}
+      {/*  <button*/}
+      {/*    className="custom-next border-2 border-red-400 text-red-400 bg-red-100*/}
+      {/*         rounded-full h-[30px] w-[30px] flex items-center justify-center">*/}
+      {/*    ↓*/}
+      {/*  </button>*/}
+      {/*</div>*/}
+
+      {/* 🔹 Custom Pagination Center Right */}
       <div
-        className="absolute
-             right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-y-5
-             md:right-10 md:top-auto md:bottom-4 md:-translate-y-0 md:gap-y-2 z-50">
-        <button
-          className="custom-prev border-2 border-red-400 text-red-400 bg-red-100
-               rounded-full h-[30px] w-[30px] flex items-center justify-center">
-          ↑
-        </button>
-        <button
-          className="custom-next border-2 border-red-400 text-red-400 bg-red-100
-               rounded-full h-[30px] w-[30px] flex items-center justify-center">
-          ↓
-        </button>
-      </div>
+        className="custom-pagination absolute right-2 top-1/2 -translate-y-1/2
+                   flex flex-col items-center gap-0.5 !w-auto z-50"
+      />
     </section>
   )
 }
