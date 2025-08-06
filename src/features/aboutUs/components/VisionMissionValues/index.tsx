@@ -11,7 +11,7 @@ export function VisionMissionValues() {
       <Slogan />
       <OurMission />
       <CoreValues />
-      <div className='absolute -z-10 bottom-0 left-0 min-h-[704px] w-full'>
+      <div className='absolute -z-10 bottom-0 left-0 h-[704px] w-full'>
         <Image
           src='/about-us/bg.png'
           alt='About us background'
