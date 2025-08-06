@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-
+import Image from 'next/image'
 import { Animation } from '@/components/Animation'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 import { HighlightCard } from '../HighlightCard'
@@ -8,7 +8,17 @@ export function Highlight() {
   const t = useTranslations('HomePage.Highlight')
 
   return (
-    <section className='container mt-[132px]'>
+    <section className='relative container mt-[132px] min-h-[670px] '>
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/home/home-hilight-bg.png"
+          alt="lisense background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       <div className='max-w-[951px] mx-auto grid grid-cols-[36px_1fr] gap-x-[16px] gap-y-[8px]'>
         <DoubleQuoteIcon
           className='text-secondary self-center'
