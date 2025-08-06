@@ -18,13 +18,13 @@ export function Menu() {
 
   return (
     <div
-      className={`hidden md:block md:sticky top-[60px] bg-background text-white md:rounded-b-[30px] w-full z-10 transition-all duration-300 ${
+      className={`hidden md:block md:sticky top-[50px] bg-background text-white md:rounded-b-[30px] w-full z-10 transition-all duration-300 ${
         isVisible
           ? 'translate-y-0 opacity-100'
           : '-translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <ul className=' flex justify-start md:justify-center overflow-x-scroll  no-scrollbar  '>
+      <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 '>
         {menus.map(menu => {
           const isActive = menu.pathname === pathname
           if (menu.children && menu.children.length) {

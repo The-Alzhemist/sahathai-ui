@@ -9,7 +9,7 @@ export function HighlightCard({
   imageSize,
 }: HighlightCardProps) {
   return (
-    <div className='max-w-[266px] w-full p-[24px] rounded-[8px] shadow-5'>
+    <div className='max-w-[266px] w-full p-[24px] rounded-[8px] shadow-5 bg-white'>
       <Image
         className='mx-auto'
         src={imageUrl}
