@@ -24,7 +24,7 @@ export function NewsCard({
   return (
     <div
       className={cn(
-        'w-full md:w-[290px]  overflow-hidden border border-gray-150 rounded-[5px] p-2'
+        'w-full md:w-[290px]  overflow-hidden  rounded-[5px] p-2'
       )}
     >
       <Image

@@ -96,28 +96,32 @@ body {
 }
 
 .medium {
-  font-family: 'Inter', 'Noto Sans Thai';
+  /*font-family: 'Inter', 'Noto Sans Thai';*/
+  font-family: 'Prompt', sans-serif;
   font-size: 16px;
   font-weight: 300;
   /* line-height: 24px; */
 }
 
 .small-medium {
-  font-family: 'Inter', 'Noto Sans Thai';
+  /*font-family: 'Inter', 'Noto Sans Thai';*/
+  font-family: 'Prompt', sans-serif;
   font-size: 14px;
   font-weight: 500;
   /* line-height: 22px; */
 }
 
 .small-reg {
-  font-family: 'Inter', 'Noto Sans Thai';
+  /*font-family: 'Inter', 'Noto Sans Thai';*/
+  font-family: 'Prompt', sans-serif;
   font-size: 14px;
   font-weight: 300;
   /* line-height: 22px; */
 }
 
 .body-1 {
-  font-family: 'K2D', sans-serif;
+  /*font-family: 'K2D', sans-serif;*/
+  font-family: 'Prompt', sans-serif;
   font-size: 16px;
   font-weight: 300;
   /* line-height: 20.8px; */
@@ -125,7 +129,8 @@ body {
 }
 
 .body-2 {
-  font-family: 'K2D', sans-serif;
+  /*font-family: 'K2D', sans-serif;*/
+  font-family: 'Prompt', sans-serif;
   font-size: 14px;
   font-weight: 300;
   /* line-height: 18.2px; */
@@ -133,7 +138,8 @@ body {
 }
 
 .body-s {
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Prompt', sans-serif;
   font-size: 14px;
   font-weight: 300;
   /* line-height: 20px; */
@@ -155,7 +161,8 @@ body {
 }
 
 .caption {
-  font-family: 'K2D', sans-serif;
+  /*font-family: 'K2D', sans-serif;*/
+  font-family: 'Prompt', sans-serif;
   font-size: 12px;
   font-weight: 300;
   /* line-height: 15.6px; */
@@ -170,7 +177,8 @@ body {
 }
 
 .caption-mini {
-  font-family: 'K2D', sans-serif;
+  /*font-family: 'K2D', sans-serif;*/
+  font-family: 'Prompt', sans-serif;
   font-size: 12px;
   font-weight: 100;
   /* line-height: 16px; */

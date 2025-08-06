@@ -13,7 +13,7 @@ export function ServiceCard({
   return (
     <div
       className={cn(
-        'relative p-[40px_24px_24px] w-[330px] border-[2px] border-white',
+        'relative p-[40px_24px_24px] w-[330px] border-[2px] rounded-[21px] border-white',
         className
       )}
     >
@@ -21,7 +21,7 @@ export function ServiceCard({
         <Image src={imageUrl} width={imageSize} height={imageSize} alt='' />
       </div>
       <h3 className='headline-4 text-white whitespace-pre-line'>{title}</h3>
-      <p className='mt-[15px] body-2 text-border whitespace-pre-line'>{content}</p>
+      <p className='mt-[15px] text-sm text-border font-light whitespace-pre-line'>{content}</p>
     </div>
   )
 }

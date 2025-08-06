@@ -10,7 +10,7 @@ export function Service() {
   const common = useTranslations('common')
 
   return (
-    <section className='mt-[122px] py-[62px] bg-modellBgDark'>
+    <section className=' py-[62px] bg-modellBgDark'>
       <h2 className='headline-2 text-white text-center container-mini'>
         {t('title')}
       </h2>
@@ -30,17 +30,18 @@ export function Service() {
             imageSize={62}
           />
           <ServiceCard
-            title={t('automatedContainerReadingTechnology.title')}
-            content={t('automatedContainerReadingTechnology.content')}
-            imageUrl='/home/phone.png'
-            imageSize={64}
-          />
-          <ServiceCard
             title={t('freeTradeZone.title')}
             content={t('freeTradeZone.content')}
             imageUrl='/home/taxes.png'
             imageSize={68}
           />
+          <ServiceCard
+            title={t('automatedContainerReadingTechnology.title')}
+            content={t('automatedContainerReadingTechnology.content')}
+            imageUrl='/home/phone.png'
+            imageSize={64}
+          />
+
           <ServiceCard
             title={t('coastalShippingServices.title')}
             content={t('coastalShippingServices.content')}
@@ -57,11 +58,14 @@ export function Service() {
         </div>
 
         <Link
-          className='mt-[40px] flex gap-[20px] subtitle-1 text-white items-center block w-fit mx-auto transition-all hover:scale-125'
+          className='mt-[40px] flex gap-[20px] subtitle-1 text-white items-center  w-fit mx-auto transition-all hover:scale-125'
           href='/services'
         >
           {common('seeMore')}
-          <ArrowRightCircleIcon width='40' height='40' />
+          <div className='bg-blue-300 rounded-full'>
+            <ArrowRightCircleIcon  width='40' height='40' />
+          </div>
+
         </Link>
       </Animation>
     </section>
