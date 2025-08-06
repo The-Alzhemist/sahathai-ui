@@ -8,16 +8,26 @@ import { LicenseCard } from '../LicenseCard'
 export function License() {
   const t = useTranslations('HomePage.License')
   return (
-    <section className='container'>
-      <DoubleQuoteIcon
-        className='text-secondary mx-auto mb-[59px]'
-        width='36'
-        height='17'
-      />
+    <section className='relative container min-h-[550px] flex flex-col justify-center items-center py-10 md:py-0'>
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/home/license-bg.webp"
+          alt="lisense background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      {/*<DoubleQuoteIcon*/}
+      {/*  className='text-secondary mx-auto mb-[59px]'*/}
+      {/*  width='36'*/}
+      {/*  height='17'*/}
+      {/*/>*/}
+
       <h2 className='headline-2 text-navy text-center mb-[10px]'>
         {t('title')}
       </h2>
-      <p className='body-2 text-black-6 text-center mb-[45px] max-w-[896px] mx-auto'>
+      <p className='text-black-6 font-light text-sm text-center mb-[45px] max-w-[896px] mx-auto'>
         {t('content')}
       </p>
       <Animation className='flex flex-wrap justify-center gap-[15px]'>
