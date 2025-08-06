@@ -14,7 +14,7 @@ export function Banner() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section className='relative h-[550px]'>
+    <section className='relative h-[550px] bg-white'>
       {/*<Image*/}
       {/*  className='hidden md:flex absolute top-0 left-0 w-full object-cover h-[490px]'*/}
       {/*  src='/home/banner.png'*/}
