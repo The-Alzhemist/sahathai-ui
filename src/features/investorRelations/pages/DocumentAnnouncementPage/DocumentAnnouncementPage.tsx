@@ -1,3 +1,5 @@
+"use client"
+
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
@@ -12,35 +14,64 @@ import {
 } from '@/features/investorRelations/pages/DocumentAnnouncementPage/component/Docmuments/DocumentAnnouncement2568'
 import DocumentAnnouncementAccordionList
   from '@/features/investorRelations/pages/DocumentAnnouncementPage/component/AccordientList'
+import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
+import { useState } from 'react'
+import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
 
 
-export function DocumentAnnouncementPage() {
+export function DocumentAnnouncementPage({data}: DocumentAnnouncementPageProps) {
   const t = useTranslations('InvestorInformationPage.DocumentAnnouncement')
+
+  const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
   const tMenu = useTranslations('Menu')
-  const documents2568 = documentAnnouncement2568(t);
-  const documents2567 = documentAnnouncement2567(t);
+
+  if (!data) {
+    return <div>No data</div>
+  }
+
+
+  const group = data.story.content.body[0].group || []
+
+  const toggleTab = (groupIndex: number, tabIndex: number) => {
+    setOpenTabs(prev => {
+      const groupOpenTabs = prev[groupIndex] || []
+      const newOpenTabs = groupOpenTabs.includes(tabIndex)
+        ? groupOpenTabs.filter(i => i !== tabIndex)
+        : [...groupOpenTabs, tabIndex]
+      return { ...prev, [groupIndex]: newOpenTabs }
+    })
+  }
 
   return (
-    <main className=" pb-[176px] bg-white ">
-      <Menu/>
+    <main className="pb-[176px] bg-white">
+      <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('investorRelations.DocumentAnnouncement')}
-        caption={tMenu('investorRelations.DocumentAnnouncement')}
+        imagePath="/about-us/banner.png"
+        alt={tMenu('investorRelations.shareHolderMeeting')}
+        caption={tMenu('investorRelations.shareHolderMeeting')}
       />
-      <section className=" p-5 max-w-4xl mx-auto">
 
-        <div className="px-5 pt-5 rounded-md mb-7">
-          <DocumentAnnouncementAccordionList documents={documents2568}   defaultOpenIndexes={[0]} />
-        </div>
+      <section className="p-5 max-w-4xl mx-auto space-y-6">
+        {group.map((groupItem: any, groupIndex: number) => (
+          <div key={groupIndex} className=" rounded-md p-4">
+            {/* --- Group Header (always visible) --- */}
+            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+              {groupItem.heading}
+            </h2>
 
-        <div className="px-5 pt-5 rounded-md mb-7">
-          <DocumentAnnouncementAccordionList documents={documents2567} />
-        </div>
-
+            <div className="space-y-4">
+              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
+                const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
+                return (
+                  <AccordionTabs tabIndex={tabIndex} key={'document-announcement-' + tabIndex} groupIndex={groupIndex} toggleTab={toggleTab}
+                                 tabItem={tabItem} isOpen={isOpen} />
+                )
+              })}
+            </div>
+          </div>
+        ))}
       </section>
     </main>
-
   )
 }
 
