@@ -14,10 +14,10 @@ export function Menu() {
         <Menu.Item href='/about-us'>{t('aboutUs.title')}</Menu.Item>
         <Menu.Item href='/services'>{t('service.title')}</Menu.Item>
         <Menu.Item href='/infrastructure-containers'>
-          {t('infrastructureContainers')}
+          {t('infrastructureContainers.title')}
         </Menu.Item>
         <Menu.Item className='min-w-[140px]' href='/news'>
-          {t('news')}
+          {t('news.tile')}
         </Menu.Item>
         <Menu.Item
           className='min-w-[140px]'
