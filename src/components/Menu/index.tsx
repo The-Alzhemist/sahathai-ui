@@ -2,13 +2,11 @@
 
 import { useSubmenu } from '@/hooks/useSubmenu'
 import { Link, usePathname, useRouter } from '@/libs/intl/navigation'
-import {
-  DropdownMenu,
-  DropdownMenuItem,
-} from '@/components/Menu/components/DropdownMenu/DropdownMenu'
+import { DropdownMenu } from '@/components/Menu/components/DropdownMenu/DropdownMenu'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useScrollVisible } from '@/context/ScrollVisibleContext'
+import { DropdownMenuItem } from './components/DropdownMenuItem/DropdownMenuItem'
 
 export function Menu() {
   const { menus } = useSubmenu()
