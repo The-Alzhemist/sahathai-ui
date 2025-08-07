@@ -13,14 +13,16 @@ export function Vision() {
       <Image
         className='shrink-0'
         src='/about-us/vision.png'
-        width={419}
-        height={510}
+        width={487}
+        height={489}
         alt=''
       />
       <section className='py-[20px] pr-[30px]'>
         <div className='max-w-[400px] w-full'>
           <SahathaiText h='h3' />
-          <p className='mt-[15px] body-1 text-black-6 whitespace-pre-line'>{t('content')}</p>
+          <p className='mt-[15px] body-1 text-black-6 whitespace-pre-line'>
+            {t('content')}
+          </p>
         </div>
 
         <div className='w-full mt-[70px]'>

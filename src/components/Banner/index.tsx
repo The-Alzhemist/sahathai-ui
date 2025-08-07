@@ -13,7 +13,7 @@ export function Banner({ imagePath, alt, caption, className }: BannerProps) {
       <Image
         src={imagePath}
         alt={alt}
-        className='object-center object-cover'
+        className='object-center object-cover md:rounded-b-[60px]'
         fill
       />
       {/*{caption && (*/}
