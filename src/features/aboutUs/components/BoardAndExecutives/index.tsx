@@ -7,6 +7,7 @@ import { Board } from '../Board'
 import { Executives } from '../Executives'
 import { Subcommittee } from '../Subcommittee'
 import { PeopleModal } from '../PeopleModal'
+import Image from 'next/image'
 
 export function BoardAndExecutives() {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
@@ -21,7 +22,7 @@ export function BoardAndExecutives() {
   }
 
   return (
-    <section className='mt-[80px]'>
+    <section className='mt-[80px] relative'>
       <SahathaiText
         className='max-w-[1040px] w-full mx-auto px-5 headline-3 md:headline-1'
         h='h1'
@@ -36,6 +37,14 @@ export function BoardAndExecutives() {
         </section>
       </section>
       <Subcommittee />
+      <div className='absolute -z-10 bottom-0 left-0 h-[704px] w-full'>
+        <Image
+          src='/about-us/bg-committee.png'
+          alt='About us background'
+          fill
+          className='object-bottom'
+        />
+      </div>
 
       {people && <PeopleModal people={people} onClose={closeModal} />}
     </section>

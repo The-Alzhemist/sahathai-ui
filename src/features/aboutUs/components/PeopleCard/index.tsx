@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-import { cn } from '@/libs/util'
 import { Animation } from '@/components/Animation'
 import { Line } from '@/components/Line'
 import { PeopleCardProps } from './interface'
@@ -14,19 +13,18 @@ export function PeopleCard({
   onClick,
 }: PeopleCardProps) {
   return (
-    <Animation
-      className='max-w-[250px] w-full cursor-pointer '
-      onClick={onClick}
-    >
+    <Animation className='w-[202px] cursor-pointer  ' onClick={onClick}>
       <div className='relative w-full overflow-hidden rounded-[15px] shadow-8  '>
         <div className='relative aspect-square w-full'>
-          <div className={cn('', imageClassName)}>
-            {imageUrl ? (
-              <div className='relative '>
-                <Image src={imageUrl} width={250} height={250} alt=''  />
-              </div>
-            ) : null}
-          </div>
+          {imageUrl ? (
+            <Image
+              src={imageUrl}
+              width={220}
+              height={220}
+              alt=''
+              className={imageClassName}
+            />
+          ) : null}
         </div>
         {!imageUrl ? (
           <NoPhotoIcon
@@ -41,9 +39,9 @@ export function PeopleCard({
         <h3 className='subtitle-1'>{name}</h3>
         <Line />
         <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5'>
-          {jobTitle?.map((title:string, index:number) => (
+          {jobTitle?.map((title: string, index: number) => (
             <li key={index} className=''>
-             {title}
+              {title}
             </li>
           ))}
         </ul>
