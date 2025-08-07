@@ -36,8 +36,8 @@ export function Header() {
     }
   }, [isMobileSidebarOpen])
 
-  // Check if current URL is home page with locale
-  const isLocaleHome =
+
+  const isHomePage =
     pathname === '/th' || pathname === '/en' || pathname === '/cn'
 
   return (
@@ -54,16 +54,16 @@ export function Header() {
       <div
         className={twMerge(
           `px-[10px] py-[8px] flex items-center container h-[50px] ${
-            isLocaleHome ? 'justify-end' : 'justify-between'
+            isHomePage ? 'justify-end' : 'justify-between'
           }`,
           // Change gradient and text color if home page
-          isLocaleHome
+          isHomePage
             ? 'bg-gradient-to-r from-blue-300 to-red-300 text-white'
             : 'bg-white text-blue-300'
         )}
       >
 
-        {!isLocaleHome && <Link href='/' className='shrink-0 p-[10px]'>
+        {!isHomePage && <Link href='/' className='shrink-0 p-[10px]'>
           <Image src='/logo.png' width={101} height={24} alt='' priority />
         </Link>}
 
@@ -82,11 +82,11 @@ export function Header() {
             </li>
             <li>
               <LocaleButton
-                className={twMerge(isLocaleHome ? 'text-white' : 'text-blue-300')}
+                className={twMerge(isHomePage ? 'text-white' : 'text-blue-300')}
               />            </li>
           </ul>
 
-          <div className={twMerge(`flex gap-x-[16px] ${isLocaleHome ? 'text-white' : 'text-blue-300'}`)}>
+          <div className={twMerge(`flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`)}>
             <YoutubeIcon width="24" height="24" />
             <FacebookIcon width="24" height="24" />
             <InstagramIcon width="24" height="24" />
@@ -96,13 +96,13 @@ export function Header() {
             className="block md:hidden"
             onClick={handleOnToggleMobileSidebar}
           >
-            <ListIcon width="25" height="25" className="text-white" />
+            <ListIcon width="25" height="25"  className={twMerge(` ${isHomePage ? 'text-white' : 'text-blue-300'}`)} />
           </button>
         </section>
       </div>
 
       {/* header secondary */}
-      {isLocaleHome && (
+      {isHomePage && (
         <section className="px-5 py-[8px] flex justify-between  items-center h-[60px]">
           <Link href="/" className="shrink-0 ">
             <Image
