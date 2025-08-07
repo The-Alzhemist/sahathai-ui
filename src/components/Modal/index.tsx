@@ -11,12 +11,12 @@ export function Modal({ children, className, onClose }: ModalProps) {
       ref={ref}
       className={cn(
         animationClassName,
-        'fixed bg-black/60 top-0 left-0 w-full h-full z-10 overflow-auto duration-500'
+        'fixed bg-black/60 top-0 left-0 w-full h-screen z-20 overflow-auto duration-500 modal-open'
       )}
     >
       <div
         className={cn(
-          'relative bg-white rounded-[15px] mx-auto my-[50px] overflow-hidden',
+          'absolute top-1/2 left-1/2 -translate-y-1/2  -translate-x-1/2 bg-white rounded-[15px] mx-auto overflow-auto h-[90vh]',
           className
         )}
       >

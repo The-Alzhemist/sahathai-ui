@@ -5,7 +5,6 @@ import { PeopleEnum } from '@/enums/PeopleEnum'
 import { PeopleCard } from '../PeopleCard'
 import { ExecutivesProps } from './interface'
 
-
 export function Executives({ onClick }: ExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives.Executives')
   const sauwakunKaruchit = useTranslations('AboutUsPage.SauwakunKaruchit')
@@ -16,21 +15,16 @@ export function Executives({ onClick }: ExecutivesProps) {
   const roongrojWhangteeranon = useTranslations(
     'AboutUsPage.RoongrojWhangteeranon'
   )
-  const SangaSanguansaksri = useTranslations(
-    'AboutUsPage.SangaSanguansaksri'
-  )
+  const SangaSanguansaksri = useTranslations('AboutUsPage.SangaSanguansaksri')
 
-  const papatssarin = useTranslations(
-    'AboutUsPage.Papatssarin'
-  )
+  const papatssarin = useTranslations('AboutUsPage.Papatssarin')
 
   return (
     <section className='mt-[120px] max-w-[1040px] mx-auto w-full'>
       <h2 className='headline-2 text-center text-white'>{t('title')}</h2>
-      <section className='max-w-[734px] w-full mx-auto mt-[40px] flex flex-wrap justify-center gap-x-5 md:gap-x-[60px] gap-y-[20px] px-5 '>
+      <section className='max-w-[734px] w-full mx-auto mt-[40px] grid grid-cols-3 justify-center gap-x-5 md:gap-x-[60px] gap-y-[20px] px-5 '>
         <PeopleCard
           name={sauwakunKaruchit('fullName')}
-          imageClassName='left-[-34px] top-0 w-[276px]'
           imageUrl='/about-us/sauwakun-karuchit.png'
           jobTitle={[
             sauwakunKaruchit('position1'),
@@ -43,7 +37,6 @@ export function Executives({ onClick }: ExecutivesProps) {
 
         <PeopleCard
           name={banchaiKaruchit('fullName')}
-          imageClassName='left-[-34px] top-0 w-[258px]'
           imageUrl='/about-us/banchai-karuchit.png'
           jobTitle={[
             banchaiKaruchit('position1'),
@@ -57,7 +50,6 @@ export function Executives({ onClick }: ExecutivesProps) {
 
         <PeopleCard
           name={kittikhunLochaya('fullName')}
-          imageClassName='left-[-80.33px] top-0 w-[323px]'
           imageUrl='/about-us/kittikhun-lochaya.png'
           jobTitle={[kittikhunLochaya('position1')]}
           onClick={() => onClick(PeopleEnum.KittikhunLochaya)}
@@ -71,8 +63,6 @@ export function Executives({ onClick }: ExecutivesProps) {
         {/*  onClick={() => onClick(PeopleEnum.MinrawiPhodee)}*/}
         {/*/>*/}
 
-
-
         {/*<PeopleCard*/}
         {/*  name={bunditRungsimanon('fullName')}*/}
         {/*  imageClassName='left-[-53px] top-[-7.14px] w-[297px]'*/}
@@ -84,7 +74,6 @@ export function Executives({ onClick }: ExecutivesProps) {
         {/* Papatssarin */}
         <PeopleCard
           name={papatssarin('fullName')}
-          imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
           imageUrl='/about-us/papatsarin-1.png'
           jobTitle={[papatssarin('position1')]}
           onClick={() => onClick(PeopleEnum.Papatssarin)}
@@ -92,7 +81,6 @@ export function Executives({ onClick }: ExecutivesProps) {
 
         <PeopleCard
           name={SangaSanguansaksri('fullName')}
-          imageClassName='left-[-53px] top-[-7.14px] w-[297px]'
           imageUrl='/about-us/Sanga_Sanguansaksri.jpg'
           jobTitle={[SangaSanguansaksri('position1')]}
           onClick={() => onClick(PeopleEnum.SangaSanguansaksri)}

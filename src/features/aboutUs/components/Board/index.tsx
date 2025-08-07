@@ -27,10 +27,9 @@ export function Board({ onClick }: BoardProps) {
   return (
     <section className='max-w-[1040px] mx-auto w-full'>
       <h2 className='headline-2 text-center text-white'>{t('title')}</h2>
-      <section className='max-w-[734px] w-full mx-auto mt-[40px] flex flex-wrap  justify-center gap-x-5 md:gap-x-[60px] gap-y-[20px]'>
+      <section className='max-w-[734px] w-full mx-auto mt-[40px] grid grid-cols-3 gap-x-5 md:gap-x-[60px] gap-y-[20px]'>
         <PeopleCard
           name={yuthVorachattarn('fullName')}
-          imageClassName='left-[-21.52px] top-0 w-[258.86px]'
           imageUrl='/about-us/yuth-vorachattarn.png'
           jobTitle={[
             yuthVorachattarn('position1'),
@@ -42,7 +41,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={vithitLeenutaphong('fullName')}
-          imageClassName='left-[-46px] top-[-9px] w-[281.91px]'
           imageUrl='/about-us/vithit-leenutaphong.png'
           jobTitle={[
             vithitLeenutaphong('position1'),
@@ -53,7 +51,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={vilaiChattanrassamee('fullName')}
-          imageClassName='left-[-43px] top-0 w-[276.79px]'
           imageUrl='/about-us/vilai-chattanrassamee.png'
           jobTitle={[
             vilaiChattanrassamee('position1'),
@@ -65,7 +62,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={wichitRattanasirivilai('fullName')}
-          imageClassName='left-[-46px] top-0 w-[297.89px]'
           imageUrl='/about-us/wichit-rattanasirivilai.png'
           jobTitle={[
             wichitRattanasirivilai('position1'),
@@ -76,7 +72,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={suchinRattanasirivilai('fullName')}
-          imageClassName='left-[-42.94px] top-0 w-[261.45px]'
           imageUrl='/about-us/suchin-rattanasirivilai.png'
           jobTitle={[
             suchinRattanasirivilai('position1'),
@@ -86,7 +81,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={anggoonSrisunthorn('fullName')}
-          imageClassName='left-[-34px] top-0 w-[255.7px]'
           imageUrl='/about-us/anggoon-srisunthorn.png'
           jobTitle={[
             anggoonSrisunthorn('position1'),
@@ -96,7 +90,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={chairatChongyangyuenvong('fullName')}
-          imageClassName='left-[-34px] top-0 w-[265px]'
           imageUrl='/about-us/chairat-chongyangyuenvong.png'
           jobTitle={[
             chairatChongyangyuenvong('position1'),
@@ -106,7 +99,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={sauwakunKaruchit('fullName')}
-          imageClassName='left-[-34px] top-0 w-[276px]'
           imageUrl='/about-us/sauwakun-karuchit.png'
           jobTitle={[
             sauwakunKaruchit('position1'),
@@ -118,7 +110,6 @@ export function Board({ onClick }: BoardProps) {
         />
         <PeopleCard
           name={banchaiKaruchit('fullName')}
-          imageClassName='left-[-34px] top-0 w-[258px]'
           imageUrl='/about-us/banchai-karuchit.png'
           jobTitle={[
             banchaiKaruchit('position1'),
