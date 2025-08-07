@@ -1,20 +1,20 @@
 'use client'
 
 import { useSubmenu } from '@/hooks/useSubmenu'
-import { Link, usePathname } from '@/libs/intl/navigation'
-import { useHideOnScroll } from '@/hooks/useHideOnScroll'
-import { Dropdown } from '@/components/Dropdown'
+import { Link, usePathname, useRouter } from '@/libs/intl/navigation'
 import {
   DropdownMenu,
   DropdownMenuItem,
 } from '@/components/Menu/components/DropdownMenu/DropdownMenu'
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
+import { useScrollVisible } from '@/context/ScrollVisibleContext'
 
 export function Menu() {
   const { menus } = useSubmenu()
   const pathname = usePathname()
-  const isVisible = useHideOnScroll()
+  const { isVisible } = useScrollVisible()
+  const router = useRouter()
 
   return (
     <div
@@ -33,11 +33,13 @@ export function Menu() {
                 key={menu.title}
                 label={menu.title}
                 className={twMerge(isActive ? 'bg-primary-1' : '')}
+                onClick={() => router.push(menu.pathname)}
               >
                 {menu.children.map(subMenu => {
                   return (
                     <DropdownMenuItem key={subMenu.title}>
                       <Link
+                        scroll={subMenu.isScroll}
                         key={subMenu.title}
                         className={`!text-xs headline-6 !font-[300] block px-4 w-full py-3 hover:bg-primary-1 whitespace-nowrap hover:text-white`}
                         target={menu.isExternalLink ? '_blank' : undefined}

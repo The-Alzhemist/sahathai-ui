@@ -19,7 +19,7 @@ export function NewsPage() {
         caption={tMenu('news')}
       />
       <section className='mx-auto'>
-        <section className='flex justify-center mb-10 md:mb-5'>
+        <section className='flex justify-center mb-10 md:mb-5' id='latest-news'>
           <Animation className='flex flex-col justify-center items-center max-w-[897px] min-h-[500px]  px-5'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('latestNews')}
@@ -29,7 +29,10 @@ export function NewsPage() {
           </Animation>
         </section>
 
-        <section className='bg-white flex justify-center items-center'>
+        <section
+          className='bg-white flex justify-center items-center'
+          id='press-release'
+        >
           <Animation className='max-w-90% md:max-w-[1100px] py-9'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('pressRelease')}

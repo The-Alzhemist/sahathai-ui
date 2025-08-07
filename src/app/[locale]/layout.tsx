@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import StoryblokProvider from '@/components/StoryBokProvider'
 
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
+import { ScrollVisibleProvider } from '@/context/ScrollVisibleContext'
 
 export const metadata: Metadata = {
   title: 'เทคโนโลยี - Sahathai Terminal',
@@ -41,11 +42,13 @@ export default async function LocaleLayout({
         </head>
         <body>
           <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <Footer />
-            <ToastContainer />
-            <CookieConsentFloatingBar />
+            <ScrollVisibleProvider>
+              <Header />
+              {children}
+              <Footer />
+              <ToastContainer />
+              <CookieConsentFloatingBar />
+            </ScrollVisibleProvider>
           </NextIntlClientProvider>
         </body>
       </html>
