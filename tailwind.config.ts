@@ -107,10 +107,11 @@ const config: Config = {
         // 6: '0px 1px 4px 0px #0C0C0D1A',
         // 7: ' 0px 4px 24px 0px #00000024',
       },
+      backgroundImage: {
+        mainGradient: 'linear-gradient(to bottom, #0194D3, #E54C3C)',
+      },
     },
-    backgroundImage: {
-      mainGradient: 'linear-gradient(to bottom, #0194D3, #E54C3C)',
-    },
+
   },
   plugins: [],
 }
