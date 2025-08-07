@@ -7,7 +7,15 @@
       "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
       "corporateGroupStructureOrganizationalStructure": "公司集团结构与组织结构"
     },
-    "infrastructureContainers": "基础设施和集装箱",
+
+    "infrastructureContainers": {
+      "title": "基础设施和集装箱",
+      "machineryEquipment": "港口关键机械设备" ,
+      "logisticInnovation": "Logistic Innovation",
+      "opticalCharacterRecognition": "自动货柜读取技术 (OCR)",
+      "operationGuidelines": "操作指南",
+      "contactUs": "联系我们"
+    },
     "service": {
       "title": "服务",
       "commercialDock": "商业码头",
@@ -16,7 +24,11 @@
       "containerMaintenance": "集装箱维护",
       "groundContainerTransportationServices": "陆路集装箱运输服务"
     },
-    "news": "新闻",
+    "news": {
+      "title": "新闻",
+      "latestNews": "最新新闻",
+      "pressRelease": "新闻发布"
+    },
     "eService": "电子服务",
     "investorRelations": {
       "title": "投资者关系",

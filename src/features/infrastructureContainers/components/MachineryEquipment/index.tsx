@@ -6,7 +6,7 @@ export function MachineryEquipment() {
   const t = useTranslations('InfrastructureContainersPage.MachineryEquipment')
 
   return (
-    <section>
+    <section id='machinery-equipment'>
       <h2 className='prompt text-[40px] font-[500] text-center text-navy'>
         {t('title')}
       </h2>

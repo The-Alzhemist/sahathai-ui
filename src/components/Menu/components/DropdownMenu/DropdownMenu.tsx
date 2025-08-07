@@ -10,7 +10,6 @@ import {
   offset,
   safePolygon,
   shift,
-  useClick,
   useDismiss,
   useFloating,
   useFloatingNodeId,
@@ -63,7 +62,7 @@ export const DropdownMenuComponent = React.forwardRef<
   const labelsRef = React.useRef<Array<string | null>>([])
   const parent = React.useContext(DropdownMenuContext)
 
-  const tree = useFloatingTree()
+  // const tree = useFloatingTree()
   const nodeId = useFloatingNodeId()
   const parentId = useFloatingParentNodeId()
   const item = useListItem()
@@ -84,15 +83,11 @@ export const DropdownMenuComponent = React.forwardRef<
   })
 
   const hover = useHover(context, {
-    enabled: isNested,
+    enabled: true,
     delay: { open: 75 },
     handleClose: safePolygon({ blockPointerEvents: true }),
   })
-  const click = useClick(context, {
-    event: 'mousedown',
-    toggle: !isNested,
-    ignoreMouse: isNested,
-  })
+
   const role = useRole(context, { role: 'menu' })
   const dismiss = useDismiss(context, { bubbles: true })
   const listNavigation = useListNavigation(context, {
@@ -108,35 +103,10 @@ export const DropdownMenuComponent = React.forwardRef<
   })
 
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
-    [hover, click, role, dismiss, listNavigation, typeahead]
+    [hover, role, dismiss, listNavigation, typeahead]
   )
 
-  // Event emitter allows you to communicate across tree components.
-  // This effect closes all menus when an item gets clicked anywhere
-  // in the tree.
-  React.useEffect(() => {
-    if (!tree) return
-
-    function handleTreeClick() {
-      setIsOpen(false)
-    }
-
-    function onSubMenuOpen(event: { nodeId: string; parentId: string }) {
-      if (event.nodeId !== nodeId && event.parentId === parentId) {
-        setIsOpen(false)
-      }
-    }
-
-    tree.events.on('click', handleTreeClick)
-    tree.events.on('menuopen', onSubMenuOpen)
-
-    return () => {
-      tree.events.off('click', handleTreeClick)
-      tree.events.off('menuopen', onSubMenuOpen)
-    }
-  }, [tree, nodeId, parentId])
-
-  React.useEffect(() => {
+  useEffect(() => {
     let lastScrollY = window.scrollY
     const controlNavbar = () => {
       const currentScrollY = window.scrollY
@@ -148,12 +118,6 @@ export const DropdownMenuComponent = React.forwardRef<
     window.addEventListener('scroll', controlNavbar, { passive: true })
     return () => window.removeEventListener('scroll', controlNavbar)
   }, [])
-
-  React.useEffect(() => {
-    if (isOpen && tree) {
-      tree.events.emit('menuopen', { parentId, nodeId })
-    }
-  }, [tree, isOpen, nodeId, parentId])
 
   return (
     <FloatingNode id={nodeId}>
@@ -177,6 +141,9 @@ export const DropdownMenuComponent = React.forwardRef<
             },
           })
         )}
+        onClick={event => {
+          props.onClick?.(event)
+        }}
       >
         {label}
         {isNested && (
@@ -251,7 +218,6 @@ export const DropdownMenuItem = React.forwardRef<
       {...menu.getItemProps({
         onClick(event: React.MouseEvent<HTMLButtonElement>) {
           props.onClick?.(event)
-          tree?.events.emit('click')
         },
         onFocus(event: React.FocusEvent<HTMLButtonElement>) {
           props.onFocus?.(event)
