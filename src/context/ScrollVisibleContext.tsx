@@ -1,10 +1,20 @@
-import { useEffect, useState } from 'react'
+'use client'
 
+import { createContext, useContext, useEffect, useState } from 'react'
 
-export const useHideOnScroll = (): boolean => {
+const ScrollVisibleContext = createContext({
+  isVisible: true,
+})
+
+export const ScrollVisibleProvider = ({
+  children,
+}: {
+  children: React.ReactNode
+}) => {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
+    if (!window) return
     let lastScrollY = window.scrollY
     const controlNavbar = () => {
       const currentScrollY = window.scrollY
@@ -20,5 +30,14 @@ export const useHideOnScroll = (): boolean => {
     return () => window.removeEventListener('scroll', controlNavbar)
   }, [])
 
-  return isVisible
+  return (
+    <ScrollVisibleContext.Provider
+      value={{
+        isVisible,
+      }}
+    >
+      {children}
+    </ScrollVisibleContext.Provider>
+  )
 }
+export const useScrollVisible = () => useContext(ScrollVisibleContext)

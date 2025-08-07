@@ -7,7 +7,14 @@
       "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
       "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
     },
-    "infrastructureContainers": "Infrastructure and Containers",
+    "infrastructureContainers": {
+      "title": "Infrastructure and Containers",
+      "machineryEquipment": "Key Machinery and Equipment in the Port" ,
+      "logisticInnovation": "Logistic Innovation",
+      "opticalCharacterRecognition": "Automatic Cargo Container Reading Technology (OCR)",
+      "operationGuidelines": "Operational Guidelines",
+      "contactUs": "Contact Us"
+    },
     "service": {
       "title": "Services",
       "commercialDock": "Commercial Dock",
@@ -16,7 +23,11 @@
       "containerMaintenance": "Container Maintenance",
       "groundContainerTransportationServices": "Ground Container Transportation Services"
     },
-    "news": "News",
+    "news": {
+      "title": "News",
+      "latestNews": "Latest News",
+      "pressRelease": "Press Release"
+    },
     "eService": "e-Service",
     "investorRelations": {
       "title": "Investor Relations",

@@ -22,9 +22,9 @@ export function InfrastructureContainersPage() {
       <MachineryEquipment />
       <LogisticInnovation />
       <OpticalCharacterRecognition />
-      <FreeTradeZone />
+      {/*<FreeTradeZone />*/}
       <OperationGuidelines />
-      <ContactUs className='mt-[80px]' />
+      <ContactUs className='my-[80px]' />
     </main>
   )
 }
