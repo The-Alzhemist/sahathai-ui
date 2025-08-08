@@ -1,20 +1,15 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
 import { NewsPage } from '@/features/news/pages/NewsPage'
 import { getTranslations } from 'next-intl/server'
+import { BlogPage } from '@/features/blog/pages/NewsPage/BlogPage'
 
 export const revalidate = 300 // 5 min
 
-export default function News() {
-  return <NewsPage />
+export default function blog() {
+  return <BlogPage />
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: {
-    locale: string
-  }
-}) {
+export async function generateMetadata() {
   const t = await getTranslations('MetaData')
 
   return {
