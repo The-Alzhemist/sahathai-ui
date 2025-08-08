@@ -6,17 +6,18 @@ import { LocaleButton } from '@/components/LocaleButton'
 import { ListIcon } from '@/components/icons/ListIcon'
 import { useEffect, useState } from 'react'
 import MobileSidebar from '@/components/Header/components/MobileSidebar/MobileSidebar'
-import { useHideOnScroll } from '@/hooks/useHideOnScroll'
+
 import { twMerge } from 'tailwind-merge'
 import { YoutubeIcon } from '@/components/icons/YoutubeIcon'
 import { FacebookIcon } from '@/components/icons/FacebookIcon'
 import { InstagramIcon } from '@/components/icons/InstagramIcon'
 import { usePathname } from 'next/navigation'
+import { useScrollVisible } from '@/context/ScrollVisibleContext'
 
 export function Header() {
   const t = useTranslations('Header')
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
-  const isVisible = useHideOnScroll()
+  const { isVisible } = useScrollVisible()
   const pathname = usePathname()
 
   const handleOnToggleMobileSidebar = () => {
@@ -36,7 +37,6 @@ export function Header() {
     }
   }, [isMobileSidebarOpen])
 
-
   const isHomePage =
     pathname === '/th' || pathname === '/en' || pathname === '/cn'
 
@@ -47,8 +47,8 @@ export function Header() {
         !isMobileSidebarOpen && 'transition-transform duration-300',
         !isMobileSidebarOpen && isVisible && 'translate-y-0',
         !isMobileSidebarOpen &&
-        !isVisible &&
-        'translate-y-[-150%] pointer-events-none'
+          !isVisible &&
+          'translate-y-[-150%] pointer-events-none'
       )}
     >
       <div
@@ -62,68 +62,80 @@ export function Header() {
             : 'bg-white text-blue-300'
         )}
       >
+        {!isHomePage && (
+          <Link href='/' className='shrink-0 p-[10px]'>
+            <Image src='/logo.png' width={101} height={24} alt='' priority />
+          </Link>
+        )}
 
-        {!isHomePage && <Link href='/' className='shrink-0 p-[10px]'>
-          <Image src='/logo.png' width={101} height={24} alt='' priority />
-        </Link>}
-
-
-        <section className="flex gap-x-5">
-          <ul className="flex justify-end items-center w-full medium gap-[42px] md:mr-10">
-            <li className="hidden md:block ">
-              <Link href="/contact-us" className="flex items-center">
+        <section className='flex gap-x-5'>
+          <ul className='flex justify-end items-center w-full medium gap-[42px] md:mr-10'>
+            <li className='hidden md:block '>
+              <Link href='/contact-us' className='flex items-center'>
                 {t('contactUs')}
               </Link>
             </li>
-            <li className="hidden md:block ">
-              <Link className="flex items-center" href="/join-us">
+            <li className='hidden md:block '>
+              <Link className='flex items-center' href='/join-us'>
                 {t('joinUs')}
               </Link>
             </li>
             <li>
               <LocaleButton
                 className={twMerge(isHomePage ? 'text-white' : 'text-blue-300')}
-              />            </li>
+              />{' '}
+            </li>
           </ul>
 
-          <div className={twMerge(`flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`)}>
-            <YoutubeIcon width="24" height="24" />
-            <FacebookIcon width="24" height="24" />
-            <InstagramIcon width="24" height="24" />
+          <div
+            className={twMerge(
+              `flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`
+            )}
+          >
+            <YoutubeIcon width='24' height='24' />
+            <FacebookIcon width='24' height='24' />
+            <InstagramIcon width='24' height='24' />
           </div>
 
           <button
-            className="block md:hidden"
+            className='block md:hidden'
             onClick={handleOnToggleMobileSidebar}
           >
-            <ListIcon width="25" height="25"  className={twMerge(` ${isHomePage ? 'text-white' : 'text-blue-300'}`)} />
+            <ListIcon
+              width='25'
+              height='25'
+              className={twMerge(
+                ` ${isHomePage ? 'text-white' : 'text-blue-300'}`
+              )}
+            />
           </button>
         </section>
       </div>
 
       {/* header secondary */}
       {isHomePage && (
-        <section className="px-5 py-[8px] flex justify-between  items-center h-[60px]">
-          <Link href="/" className="shrink-0 ">
+        <section className='px-5 py-[8px] flex justify-between  items-center h-[60px]'>
+          <Link href='/' className='shrink-0 '>
             <Image
-              src="/logo.png"
-              className="p-2"
+              src='/logo.png'
+              className='p-2'
               width={101}
               height={24}
-              alt=""
+              alt=''
               priority
             />
           </Link>
 
-          <div className="flex gap-x-2">
-            <span className="text-blue-300 font-light text-[20px]">สหไทย</span>
-            <span className="text-red-300 font-light text-[20px]">เทอร์มินอล</span>
+          <div className='flex gap-x-2'>
+            <span className='text-blue-300 font-light text-[20px]'>สหไทย</span>
+            <span className='text-red-300 font-light text-[20px]'>
+              เทอร์มินอล
+            </span>
           </div>
 
           <div></div>
         </section>
       )}
-
 
       {isMobileSidebarOpen && (
         <MobileSidebar

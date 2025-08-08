@@ -30,7 +30,10 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
 
   return (
     <Animation className={cn('container-mini space-y-[52px]', className)}>
-      <h2 className='w-full text-center text-[32px] leading-[48.38px] font-[500] text-navy'>
+      <h2
+        className='w-full text-center text-[32px] leading-[48.38px] font-[500] text-navy'
+        id='contact-us'
+      >
         {t('title')}
       </h2>
       <Formik
