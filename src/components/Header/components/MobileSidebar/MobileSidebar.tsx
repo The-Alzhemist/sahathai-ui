@@ -2,22 +2,15 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Link, usePathname } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
-import { UserIcon } from '@/components/icons/UserIcon'
-import { HeadsetIcon } from '@/components/icons/HeadsetIcon'
+
 import { MobileSidebarProps } from '@/components/Header/components/MobileSidebar/interface'
 import withMobileSidebar from './withMobileSidebar'
-import { ShippingIcon } from '@/components/icons/ShippingIcon'
-import { NewspaperIcon } from '@/components/icons/NewsIcon'
-import { DeviceMobileIcon } from '@/components/icons/DeviceMobileIcon'
-import { ChartIcon } from '@/components/icons/ChartIcon'
+
 import { PhoneIcon } from '@/components/icons/PhoneIcon'
 import { ReadCVIcon } from '@/components/icons/ReadCvIcon'
 import { useSubmenu } from '@/hooks/useSubmenu'
-import {
-  DropdownMenu,
-  DropdownMenuItem,
-} from '@/components/Menu/components/DropdownMenu/DropdownMenu'
-import { twMerge } from 'tailwind-merge'
+
+
 import React from 'react'
 import MenuCollapse from '@/components/Header/components/MenuCollapse/MenuCollapse'
 
