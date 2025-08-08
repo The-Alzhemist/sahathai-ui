@@ -7,7 +7,14 @@
       "boardDirectorsExecutiveCommittee": "คณะกรรมการ & คณะผู้บริหาร",
       "corporateGroupStructureOrganizationalStructure": "โครงสร้างกลุ่มบริษัทและโครงสร้างองค์กร"
     },
-    "infrastructureContainers": "โครงสร้างพื้นฐานและคอนเทนเนอร์",
+    "infrastructureContainers": {
+      "title": "โครงสร้างพื้นฐานและคอนเทนเนอร์",
+      "machineryEquipment": "เครื่องจักรและอุปกรณ์สำคัญภายในท่าเรือ" ,
+      "logisticInnovation": "Logistic Innovation",
+      "opticalCharacterRecognition": "เทคโนโลยีการอ่านตู้สินค้าอัตโนมัติ (OCR)",
+      "operationGuidelines": "คำแนะนำเกี่ยวกับขั้นตอนการปฏิบัติการ",
+      "contactUs": "ติดต่อเรา"
+    },
     "service": {
       "title": "บริการ",
       "commercialDock": "ท่าเทียบเรือเชิงพาณิชย์",
@@ -16,7 +23,11 @@
       "containerMaintenance": "ซ่อมบำรุงตู้คอนเทนเนอร์",
       "groundContainerTransportationServices": "บริการขนส่งตู้คอนเทนเนอร์ทางบก"
     },
-    "news": "ข่าวประชาสัมพันธ์",
+    "news": {
+      "title": "ข่าวประชาสัมพันธ์",
+      "latestNews": "ข่าวล่าสุด",
+      "pressRelease": "ข่าวประชาสัมพันธ์"
+    },
     "eService": "e-service",
     "investorRelations": {
       "title": "นักลงทุนสัมพันธ์",

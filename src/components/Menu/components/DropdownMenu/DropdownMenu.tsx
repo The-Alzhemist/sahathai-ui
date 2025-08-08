@@ -10,46 +10,18 @@ import {
   offset,
   safePolygon,
   shift,
-  useClick,
-  useDismiss,
   useFloating,
   useFloatingNodeId,
   useFloatingParentNodeId,
-  useFloatingTree,
   useHover,
   useInteractions,
   useListItem,
-  useListNavigation,
   useMergeRefs,
-  useRole,
-  useTypeahead,
 } from '@floating-ui/react'
 import * as React from 'react'
-import { twMerge } from 'tailwind-merge'
 import { useEffect } from 'react'
-
-const DropdownMenuContext = React.createContext<{
-  getItemProps: (
-    userProps?: React.HTMLProps<HTMLElement>
-  ) => Record<string, unknown>
-  activeIndex: number | null
-  setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>
-  setHasFocusInside: React.Dispatch<React.SetStateAction<boolean>>
-  isOpen: boolean
-}>({
-  getItemProps: () => ({}),
-  activeIndex: null,
-  setActiveIndex: () => {},
-  setHasFocusInside: () => {},
-  isOpen: false,
-})
-
-interface DropdownMenuProps {
-  label: string
-  nested?: boolean
-  children?: React.ReactNode
-  className?: string
-}
+import { DropdownMenuProps } from '@/components/Menu/components/DropdownMenu/interface'
+import { DropdownMenuContext } from '@/components/Menu/components/DropdownMenuContext/DropdownMenuContext'
 
 export const DropdownMenuComponent = React.forwardRef<
   HTMLButtonElement,
@@ -63,80 +35,29 @@ export const DropdownMenuComponent = React.forwardRef<
   const labelsRef = React.useRef<Array<string | null>>([])
   const parent = React.useContext(DropdownMenuContext)
 
-  const tree = useFloatingTree()
   const nodeId = useFloatingNodeId()
-  const parentId = useFloatingParentNodeId()
   const item = useListItem()
-
-  const isNested = parentId != null
 
   const { floatingStyles, refs, context } = useFloating<HTMLButtonElement>({
     nodeId,
     open: isOpen,
     onOpenChange: setIsOpen,
-    placement: isNested ? 'right-start' : 'bottom-start',
-    middleware: [
-      offset({ mainAxis: isNested ? 0 : 0, alignmentAxis: isNested ? -4 : 0 }),
-      flip(),
-      shift(),
-    ],
+    placement: 'bottom-start',
+    middleware: [offset({ mainAxis: 0, alignmentAxis: 0 }), flip(), shift()],
     whileElementsMounted: autoUpdate,
   })
 
   const hover = useHover(context, {
-    enabled: isNested,
+    enabled: true,
     delay: { open: 75 },
     handleClose: safePolygon({ blockPointerEvents: true }),
   })
-  const click = useClick(context, {
-    event: 'mousedown',
-    toggle: !isNested,
-    ignoreMouse: isNested,
-  })
-  const role = useRole(context, { role: 'menu' })
-  const dismiss = useDismiss(context, { bubbles: true })
-  const listNavigation = useListNavigation(context, {
-    listRef: elementsRef,
-    activeIndex,
-    nested: isNested,
-    onNavigate: setActiveIndex,
-  })
-  const typeahead = useTypeahead(context, {
-    listRef: labelsRef,
-    onMatch: isOpen ? setActiveIndex : undefined,
-    activeIndex,
-  })
 
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
-    [hover, click, role, dismiss, listNavigation, typeahead]
+    [hover]
   )
 
-  // Event emitter allows you to communicate across tree components.
-  // This effect closes all menus when an item gets clicked anywhere
-  // in the tree.
-  React.useEffect(() => {
-    if (!tree) return
-
-    function handleTreeClick() {
-      setIsOpen(false)
-    }
-
-    function onSubMenuOpen(event: { nodeId: string; parentId: string }) {
-      if (event.nodeId !== nodeId && event.parentId === parentId) {
-        setIsOpen(false)
-      }
-    }
-
-    tree.events.on('click', handleTreeClick)
-    tree.events.on('menuopen', onSubMenuOpen)
-
-    return () => {
-      tree.events.off('click', handleTreeClick)
-      tree.events.off('menuopen', onSubMenuOpen)
-    }
-  }, [tree, nodeId, parentId])
-
-  React.useEffect(() => {
+  useEffect(() => {
     let lastScrollY = window.scrollY
     const controlNavbar = () => {
       const currentScrollY = window.scrollY
@@ -149,22 +70,13 @@ export const DropdownMenuComponent = React.forwardRef<
     return () => window.removeEventListener('scroll', controlNavbar)
   }, [])
 
-  React.useEffect(() => {
-    if (isOpen && tree) {
-      tree.events.emit('menuopen', { parentId, nodeId })
-    }
-  }, [tree, isOpen, nodeId, parentId])
-
   return (
     <FloatingNode id={nodeId}>
       <button
         ref={useMergeRefs([refs.setReference, item.ref, forwardedRef])}
-        tabIndex={
-          !isNested ? undefined : parent.activeIndex === item.index ? 0 : -1
-        }
-        role={isNested ? 'menuitem' : undefined}
+        tabIndex={parent.activeIndex === item.index ? 0 : -1}
         data-open={isOpen ? '' : undefined}
-        data-nested={isNested ? '' : undefined}
+        data-nested={undefined}
         data-focus-inside={hasFocusInside ? '' : undefined}
         className={`headline-6 !font-[300] block px-[24px] py-[18px] hover:bg-primary-1 whitespace-nowrap ${className}`}
         {...getReferenceProps(
@@ -177,13 +89,11 @@ export const DropdownMenuComponent = React.forwardRef<
             },
           })
         )}
+        onClick={event => {
+          props.onClick?.(event)
+        }}
       >
         {label}
-        {isNested && (
-          <span aria-hidden style={{ marginLeft: 10, fontSize: 10 }}>
-            ▶
-          </span>
-        )}
       </button>
       <DropdownMenuContext.Provider
         value={{
@@ -197,12 +107,7 @@ export const DropdownMenuComponent = React.forwardRef<
         <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
           {isOpen && (
             <FloatingPortal>
-              <FloatingFocusManager
-                context={context}
-                modal={false}
-                initialFocus={isNested ? -1 : 0}
-                returnFocus={!isNested}
-              >
+              <FloatingFocusManager context={context} modal={false}>
                 <div
                   ref={refs.setFloating}
                   className='bg-background p-[4px] rounded-b-[6px] outline-0 text-white'
@@ -220,50 +125,6 @@ export const DropdownMenuComponent = React.forwardRef<
   )
 })
 DropdownMenuComponent.displayName = 'DropdownMenuComponent'
-
-interface DropdownMenuItemProps {
-  children: React.ReactNode
-  disabled?: boolean
-  className?: string
-}
-
-export const DropdownMenuItem = React.forwardRef<
-  HTMLButtonElement,
-  DropdownMenuItemProps & React.ButtonHTMLAttributes<HTMLButtonElement>
->(({ children, disabled, className, ...props }, forwardedRef) => {
-  const menu = React.useContext(DropdownMenuContext)
-  const item = useListItem({ label: disabled ? null : children?.toString() })
-  const tree = useFloatingTree()
-  const isActive = item.index === menu.activeIndex
-
-  return (
-    <button
-      {...props}
-      ref={useMergeRefs([item.ref, forwardedRef])}
-      type='button'
-      role='menuitem'
-      className={twMerge(
-        'flex justify-between items-center  w-full border-none rounded text-base text-left leading-[1.8] min-w-[110px] m-0 outline-none',
-        className
-      )}
-      tabIndex={isActive ? 0 : -1}
-      disabled={disabled}
-      {...menu.getItemProps({
-        onClick(event: React.MouseEvent<HTMLButtonElement>) {
-          props.onClick?.(event)
-          tree?.events.emit('click')
-        },
-        onFocus(event: React.FocusEvent<HTMLButtonElement>) {
-          props.onFocus?.(event)
-          menu.setHasFocusInside(true)
-        },
-      })}
-    >
-      {children}
-    </button>
-  )
-})
-DropdownMenuItem.displayName = 'DropdownMenuItem'
 
 export const DropdownMenu = React.forwardRef<
   HTMLButtonElement,

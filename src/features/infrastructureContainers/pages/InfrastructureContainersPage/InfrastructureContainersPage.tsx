@@ -15,16 +15,16 @@ export function InfrastructureContainersPage() {
       <Menu />
       <Banner
         imagePath='/about-us/banner.png'
-        alt={t('infrastructureContainers')}
-        caption={t('infrastructureContainers')}
+        alt={t('infrastructureContainers.title')}
+        caption={t('infrastructureContainers.title')}
         className='mb-[40px]'
       />
       <MachineryEquipment />
       <LogisticInnovation />
       <OpticalCharacterRecognition />
-      <FreeTradeZone />
+      {/*<FreeTradeZone />*/}
       <OperationGuidelines />
-      <ContactUs className='mt-[80px]' />
+      <ContactUs className='my-[80px]' />
     </main>
   )
 }
