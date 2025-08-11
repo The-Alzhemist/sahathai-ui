@@ -1,4 +1,4 @@
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
@@ -8,22 +8,21 @@ import { fetchNewsBlogListData } from '@/libs/storyblok'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import Image from 'next/image'
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { NewsCardProps } from '@/components/NewsCard/interface'
 
-export const revalidate = REVALIDATE_TIME
 
-export async function LastestNews() {
-  const locale = useLocale()
+
+export async function HorizontalBlogCard({content,slug,direction,createdAt,title}:NewsCardProps) {
+
   const common = useTranslations('common')
-  const { data } = await fetchNewsBlogListData(1, 10, locale)
-  const dataBlog = data
 
-  const latestNews = dataBlog.stories.filter(
-    (d: any, index: number) => index === 0
-  )[0]
 
-  const image = latestNews.content.body[0].newsImageCover.filename
 
-  const newsDate = latestNews.content.body[0].newsDate
+  // const firstBlog = content?.body?.[0]
+  // const newsDate: string | undefined = firstBlog?.newsDate
+  // const imageSrc = firstBlog?.newsImageCover?.filename ?? '/background.jpeg'
+  // const imageFileUrl = imageSrc.content.body[0].newsImageCover.filename
+
 
   return (
     <section
@@ -32,9 +31,9 @@ export async function LastestNews() {
       )}
     >
       <div className='w-full md:w-[48%]'>
-        {image ? (
+        {imageFileUrl ? (
           <Image
-            src={image}
+            src={imageFileUrl}
             alt='Dynamic image'
             width={600}
             height={500}
@@ -51,17 +50,17 @@ export async function LastestNews() {
 
       <div className='w-full md:w-[52%] p-5'>
         <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>
-          {latestNews.content.body[0].newsTitle}
+          {firstBlog.content.body[0].newsTitle}
         </h2>
         <p className='mt-[10px] body-2 line-clamp-2 text-black-6'>
           {extractTextFieldsStoryblok(
-            latestNews.content.body[0].newsDescription
+            firstBlog.content.body[0].newsDescription
           )}
         </p>
         <div className='mt-[10px] caption text-black-3'>{newsDate}</div>
 
         <Link
-          href={`/news/${latestNews.slug}`}
+          href={`/news/${firstBlog.slug}`}
           className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center'
         >
           <button
@@ -77,5 +76,4 @@ export async function LastestNews() {
   )
 }
 
-{
-}
+
