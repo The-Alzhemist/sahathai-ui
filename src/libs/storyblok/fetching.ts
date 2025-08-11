@@ -1,0 +1,111 @@
+// lib/storyblok/fetch.ts
+type StoryblokStory = {
+  id: number
+  name: string
+  slug: string
+  content: any
+  first_published_at?: string
+  created_at?: string
+}
+
+type StoryblokListResponse = {
+  stories: StoryblokStory[]
+}
+
+type StoryblokSingleResponse = {
+  story: StoryblokStory
+}
+
+const BASE_URL = 'https://api.storyblok.com/v2/cdn'
+
+const TOKEN = 'H1wfrTArHm3VE441H8WQ5wtt'// server-only
+
+function buildUrl(path: string, params: Record<string, string | number | boolean | undefined>) {
+  const url = new URL(`${BASE_URL}/${path}`)
+  Object.entries(params).forEach(([k, v]) => {
+    if (v !== undefined && v !== null) url.searchParams.set(k, String(v))
+  })
+  url.searchParams.set('token', TOKEN as string)
+  return url.toString()
+}
+
+/**
+ * Fetch JSON with ISR
+ */
+async function fetchJSON<T>(url: string, revalidateSeconds = 300): Promise<{ data: T; headers: Headers }> {
+  const res = await fetch(url, { next: { revalidate: revalidateSeconds } })
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Storyblok fetch failed ${res.status}: ${text}`)
+  }
+  const data = (await res.json()) as T
+  return { data, headers: res.headers }
+}
+
+/**
+ * ดึงรายการข่าว (รองรับ paginate + search + locale)
+ */
+export async function fetchAllBlog({
+                                      page = 1,
+                                      perPage = 10,
+                                      lang = 'th',
+                                      version = 'published',
+                                      search,            // optional: ค้นหาชื่อ/เนื้อหา
+                                      startsWith = 'news/',
+                                      revalidate = 300,
+                                    }: {
+  page?: number
+  perPage?: number
+  lang?: string
+  version?: 'draft' | 'published'
+  search?: string
+  startsWith?: string
+  revalidate?: number
+}) {
+  const url = buildUrl('stories', {
+    version,
+    starts_with: startsWith,
+    is_startpage: false,
+    page,
+    per_page: perPage,
+    language: lang,
+    ...(search ? { search_term: search } : {}),
+  })
+
+
+  const { data, headers } = await fetchJSON<StoryblokListResponse>(url, revalidate)
+  const total = Number(headers.get('total') || data.stories?.length || 0)
+  return { stories: data.stories, total }
+}
+
+
+
+/**
+ * ดึงข่าวรายรายการด้วย slug
+ */
+export async function fetchNewsBySlug({
+                                        slug,
+                                        lang = 'th',
+                                        version = 'draft',
+                                        revalidate = 300,
+                                        basePath = 'news',
+                                      }: {
+  slug: string
+  lang?: string
+  version?: 'draft' | 'published'
+  revalidate?: number
+  basePath?: string // เผื่อคุณอยากเปลี่ยนจาก news เป็นอย่างอื่น
+}) {
+  const url = buildUrl(`stories/${basePath}/${slug}`, {
+    version,
+    language: lang,
+  })
+  const { data } = await fetchJSON<StoryblokSingleResponse>(url, revalidate)
+  return data.story
+}
+
+
+export async function fetchFirstBlog(opts?: Partial<Parameters<typeof fetchAllBlog>[0]>) {
+  const { stories } = await fetchAllBlog({ ...opts, page: 1, perPage: 1 })
+  return stories[0] ?? null
+}
