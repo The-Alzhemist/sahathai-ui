@@ -7,8 +7,9 @@ import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { Link } from '@/libs/intl/navigation'
 import { getTranslations } from 'next-intl/server'
 
-export async function LatestBlogCard({ blog, locale }: LatestBlogCardProps) {
+export async function LatestBlogCard({ blog, locale, page }: LatestBlogCardProps) {
   const common = await getTranslations('common')
+
 
   if (!blog) {
     return (
@@ -53,7 +54,7 @@ export async function LatestBlogCard({ blog, locale }: LatestBlogCardProps) {
         <div className="mt-[10px] caption text-black-3">{content.newsDate}</div>
 
         <Link
-          href={`/news/${blog.slug}`}
+          href={`/${page}/${blog.slug}`}
           className="mt-[23px] button-small text-navy w-fit flex gap-[10px] items-center"
         >
           <button

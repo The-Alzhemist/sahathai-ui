@@ -1,6 +1,8 @@
 'use client'
 
-import { NewsCard } from '@/components/NewsCard'
+import { BlogCard } from '@/components/BlogCard'
+
+
 import { Pagination } from '@/components/Pagination'
 import { REVALIDATE_TIME } from '@/config/environtment'
 
@@ -34,12 +36,13 @@ export default function NewsBlogList() {
       <section className='max-w-[1100px] flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
         {newsBlog &&
           newsBlog.stories.map((newsBlog: any) => (
-            <NewsCard
+            <BlogCard
               key={newsBlog._uid}
               title={newsBlog.content.body[0].newsTitle}
               content={newsBlog.content}
               createdAt={newsBlog.createdAt}
               slug={newsBlog.slug}
+              page='news'
             />
           ))}
       </section>
