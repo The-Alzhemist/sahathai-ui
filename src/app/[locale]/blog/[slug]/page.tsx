@@ -9,22 +9,22 @@ import { fetchBlogBySlug } from '@/libs/storyblok/blogQuery'
 export const revalidate = 300 // 5 min
 export const dynamicParams = true // or false, to 404 on unknown paths
 
-export async function generateStaticParams() {
-  const locales = ['th', 'en', 'cn']
-
-  // Fetch slugs for each locale
-  const slugs = await Promise.all(
-    locales.map(async locale => {
-      const { data } = await fetchNewsBlogListData(1, 99, locale) // Pass locale as lang
-      return data.stories.map((d: any) => ({
-        slug: d.slug,
-        locale: locale,
-      }))
-    })
-  )
-
-  return slugs.flat()
-}
+// export async function generateStaticParams() {
+//   const locales = ['th', 'en', 'cn']
+//
+//   // Fetch slugs for each locale
+//   const slugs = await Promise.all(
+//     locales.map(async locale => {
+//       const { data } = await fetchNewsBlogListData(1, 99, locale) // Pass locale as lang
+//       return data.stories.map((d: any) => ({
+//         slug: d.slug,
+//         locale: locale,
+//       }))
+//     })
+//   )
+//
+//   return slugs.flat()
+// }
 
 export default async function Page({ params }: { params: any }) {
   const { slug, locale } = params
@@ -33,8 +33,9 @@ export default async function Page({ params }: { params: any }) {
     lang: locale,
     revalidate,
     version: 'published',
-    basePath: 'news'
+    basePath: 'blog'
   })
+
   const t = await getTranslations('NewsPage')
 
   return (
@@ -54,8 +55,8 @@ export default async function Page({ params }: { params: any }) {
     </section>
   )
 }
-
-// dynamic meta SEO
+//
+// // dynamic meta SEO
 export async function generateMetadata({
   params: { slug, locale },
 }: {
@@ -69,7 +70,7 @@ export async function generateMetadata({
     lang: locale,
     revalidate,
     version: 'published',
-    basePath: 'news'
+    basePath: 'blog'
   })
 
   const body = response.content.body
