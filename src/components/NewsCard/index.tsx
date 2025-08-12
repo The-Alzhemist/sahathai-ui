@@ -1,60 +1,62 @@
-import { DateTime } from 'luxon'
-import { useLocale, useTranslations } from 'next-intl'
-
+import Image from 'next/image'
 import { Link } from '@/libs/intl/navigation'
-import { NewsCardProps } from './interface'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/libs/util'
 import { ArrowRightIcon } from '../icons/ArrowRightIcon'
-
-import Image from 'next/image'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
+import type { NewsCardProps } from './interface'
 
 export function NewsCard({
-  title,
-  content,
-  createdAt,
-  slug,
-  direction = 'vertical',
-}: NewsCardProps) {
+                           title,
+                           content,
+                           createdAt,
+                           slug,
+                           direction = 'vertical',
+                         }: NewsCardProps) {
   const common = useTranslations('common')
-  const newsDate = content.body[0].newsDate
-  const image = content.body[0].newsImageCover?.filename
-  const imageDefault = '/background.jpeg'
+
+  const body0 = content?.body?.[0]
+  const newsDate: string | undefined = body0?.newsDate
+  const imageSrc = body0?.newsImageCover?.filename ?? '/background.jpeg'
 
   return (
-    <div
+    <Link
+      href={`/news/${slug}`}
       className={cn(
-        'w-full md:w-[290px]  overflow-hidden  rounded-[5px] p-2'
+        'block w-full md:w-[290px] overflow-hidden rounded-[8px] p-2  hover:scale-[1.02] hover:shadow-1 transition-all  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
       )}
     >
-      <Image
-        src={image ? image : imageDefault}
-        alt='Picture of the author'
-        width={500}
-        height={500}
-        className='w-full h-[250px] md:h-[180px] object-cover rounded-[8px]'
-      />
+      <article className="w-full">
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={500}
+          height={500}
+          className="w-full h-[250px] md:h-[180px] object-cover rounded-[8px]"
+        />
 
-      <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>{title}</h2>
-      <p className='mt-[10px] body-2 line-clamp-2 text-black-6'>
-        {extractTextFieldsStoryblok(content)}
-      </p>
-      <div className='mt-[10px] caption text-black-3'>
-        {/* {DateTime.fromISO(createdAt).toFormat('dd LLLL yyyy')} */}
-        {newsDate}
-      </div>
-      <Link
-        href={`/news/${slug}`}
-        className='mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center transition-all  hover:scale-110 '
-      >
-        <button
-          className='p-[10px] bg-navy rounded-full text-white '
-          type='button'
-        >
-          <ArrowRightIcon width='10' height='10' />
-        </button>
-        {common('readMore')}
-      </Link>
-    </div>
+        <h2 className="mt-[16px] headline-4 line-clamp-2 text-black">
+          {title}
+        </h2>
+
+        <p className="mt-[8px] body-2 line-clamp-2 text-black-6">
+          {extractTextFieldsStoryblok(content)}
+        </p>
+
+        <div className="mt-[8px] caption text-black-3">
+          {newsDate /* or format createdAt if you prefer */}
+        </div>
+
+        <div className="mt-[16px] button-small text-navy w-fit flex gap-[10px] items-center">
+          <span
+            aria-hidden
+            className="p-[10px] bg-navy rounded-full text-white inline-flex items-center justify-center"
+          >
+            <ArrowRightIcon width="10" height="10" />
+          </span>
+          {common('readMore')}
+        </div>
+      </article>
+    </Link>
   )
 }

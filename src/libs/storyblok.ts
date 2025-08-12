@@ -21,7 +21,6 @@ export const getStoryblokApi = storyblokInit({
   components: {
     page: Page, // default
     eventNewsDetailCard: EventNewsDetailCard,
-
     showOneImage: ShowOneImage,
     showTwoImage: ShowTwoImage,
     showThreeImage: ShowThreeImage,
