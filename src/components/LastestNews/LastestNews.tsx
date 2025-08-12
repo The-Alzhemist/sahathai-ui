@@ -28,7 +28,7 @@ export async function LastestNews() {
   return (
     <section
       className={cn(
-        'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden'
+        'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1'
       )}
     >
       <div className='w-full md:w-[48%]'>
@@ -36,8 +36,8 @@ export async function LastestNews() {
           <Image
             src={image}
             alt='Dynamic image'
-            width={600} // Replace with your desired width
-            height={500} // Replace with your desired height
+            width={600}
+            height={500}
             className='w-full h-full'
           />
         ) : (

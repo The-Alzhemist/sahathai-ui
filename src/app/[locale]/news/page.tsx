@@ -2,7 +2,7 @@ import { REVALIDATE_TIME } from '@/config/environtment'
 import { NewsPage } from '@/features/news/pages/NewsPage'
 import { getTranslations } from 'next-intl/server'
 
-export const revalidate = REVALIDATE_TIME
+export const revalidate = 300 // 5 min
 
 export default function News() {
   return <NewsPage />

@@ -14,7 +14,6 @@ export const revalidate = REVALIDATE_TIME
 
 import React, { useEffect, useState } from 'react'
 
-
 export default function NewsBlogList() {
   const [newsBlog, setNewsBlog] = useState<any>()
   const [newsBlogLength, setNewsBLogLength] = useState<number>(1)

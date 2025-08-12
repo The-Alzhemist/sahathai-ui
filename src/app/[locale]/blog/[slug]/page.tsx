@@ -1,11 +1,12 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { Link } from '@/libs/intl/navigation'
-import { fetchDataBySlug, fetchNewsBlogListData } from '@/libs/storyblok'
-import { StoryblokStory } from '@storyblok/react/rsc'
-import { useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
 
-export const revalidate = 300
+import { Link } from '@/libs/intl/navigation'
+import { fetchNewsBlogListData } from '@/libs/storyblok'
+import { StoryblokStory } from '@storyblok/react/rsc'
+import { getTranslations } from 'next-intl/server'
+import { fetchBlogBySlug } from '@/libs/storyblok/blogQuery'
+
+
+export const revalidate = 300 // 5 min
 export const dynamicParams = true // or false, to 404 on unknown paths
 
 export async function generateStaticParams() {
@@ -22,15 +23,18 @@ export async function generateStaticParams() {
     })
   )
 
-  // console.log('slugs noflat()::', slugs)
-  // console.log('slugs.flat()::', slugs.flat())
-
   return slugs.flat()
 }
 
 export default async function Page({ params }: { params: any }) {
   const { slug, locale } = params
-  const { data } = await fetchDataBySlug(slug, locale)
+  const response = await fetchBlogBySlug({
+    slug,
+    lang: locale,
+    revalidate,
+    version: 'published',
+    basePath: 'news'
+  })
   const t = await getTranslations('NewsPage')
 
   return (
@@ -41,16 +45,17 @@ export default async function Page({ params }: { params: any }) {
             {t('PageContent.Title')}
           </h1>
           <button className='text-sm text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl'>
-            <Link href='/news'> {t('PageContent.Back')}</Link>
+            <Link href='/blog'> {t('PageContent.Back')}</Link>
           </button>
         </div>
 
-        <StoryblokStory story={data?.story} />
+        <StoryblokStory story={response} />
       </section>
     </section>
   )
 }
 
+// dynamic meta SEO
 export async function generateMetadata({
   params: { slug, locale },
 }: {
@@ -59,9 +64,15 @@ export async function generateMetadata({
     slug: string
   }
 }) {
-  const { data } = await fetchDataBySlug(slug, locale)
+  const response = await fetchBlogBySlug({
+    slug,
+    lang: locale,
+    revalidate,
+    version: 'published',
+    basePath: 'news'
+  })
 
-  const body = data.story.content.body
+  const body = response.content.body
   if (!body || body.length === 0) {
     return {
       title: 'Sahathai | blog',
