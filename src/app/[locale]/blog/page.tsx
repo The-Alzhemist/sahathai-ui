@@ -1,19 +1,18 @@
 
 import { getTranslations } from 'next-intl/server'
-import { useTranslations } from 'next-intl'
-import { fetchAllBlog, fetchFirstBlog } from '@/libs/storyblok/fetching'
-import Link from 'next/link'
+
+import { fetchAllBlog, fetchLatestBlog } from '@/libs/storyblok/fetching'
+import { Link } from '@/libs/intl/navigation'
 import { NewsCard } from '@/components/NewsCard'
 import React from 'react'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
-import { Animation } from '@/components/Animation'
-import { LastestNews } from '@/components/LastestNews/LastestNews'
-import { HorizontalBlogCard } from '@/components/HorizontalBlogCard/HorizontalBlogCard'
+
 import { cn } from '@/libs/util'
 import Image from 'next/image'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
+import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 
 
 export const revalidate = 300 // 5 min
@@ -25,13 +24,18 @@ export default async function blog({
   params: { locale: string }
   searchParams: { page?: string; search?: string }
 }) {
+  // translation
   const t = await getTranslations('NewsPage')
   const tMenu = await  getTranslations('Menu')
+
+
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
   const perPage = 2
   const search = searchParams.search?.trim() || undefined
 
+
+  //  fetching data
   const { stories, total } = await fetchAllBlog({
     page,
     perPage,
@@ -41,18 +45,16 @@ export default async function blog({
     startsWith: 'news/',
     revalidate: 300,
   })
-  const firstStories = await fetchFirstBlog({
-    page,
-    perPage,
+
+  const latestBlog = await fetchLatestBlog({
     lang: locale,
     version: 'published',
-    search,
     startsWith: 'news/',
     revalidate: 300,
   })
-  console.log("firstStories::",firstStories)
 
   const totalPages = Math.ceil(total / perPage)
+
 
   return (
     <main>
@@ -63,61 +65,13 @@ export default async function blog({
         caption={tMenu('news')}
       />
 
-      <section className="flex justify-center mb-10 md:mb-5">
+      <section className="flex flex-col items-center justify-center py-14 px-6">
         <h2 className="headline-2 text-blue-400 text-center mb-7">
           {t('latestNews')}
         </h2>
 
-        <section
-          className={cn(
-            'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1'
-          )}
-        >
-          <div className="w-full md:w-[48%]">
-            {firstStories ? (
-              <Image
-                src={firstStories.content.body[0].newsImageCover.filename}
-                alt="Dynamic image"
-                width={600}
-                height={500}
-                className="w-full h-full"
-              />
-            ) : (
-              <img
-                src="https://placehold.co/600x400"
-                alt="Placeholder image"
-                className="w-full"
-              />
-            )}
-          </div>
+       <LatestBlogCard blog={latestBlog} locale={locale}  />
 
-          <div className="w-full md:w-[52%] p-5">
-            <h2 className="mt-[23px] headline-4 line-clamp-2 text-black">
-             xxx
-            </h2>
-            <p className="mt-[10px] body-2 line-clamp-2 text-black-6">
-              {extractTextFieldsStoryblok(
-                firstStories.content.body[0].newsDescription
-              )}
-            </p>
-            <div className="mt-[10px] caption text-black-3">xx</div>
-
-            <Link
-              href={`/news/${ firstStories.content.slug}`}
-              className="mt-[23px] button-small text-navy  w-fit flex gap-[10px] items-center"
-            >
-              <button
-                className="p-[10px] bg-navy rounded-full text-white"
-                type="button"
-              >
-                <ArrowRightIcon width="20" height="20" />
-              </button>
-              {/*{common('readMore')}*/}
-            </Link>
-          </div>
-        </section>
-        ss
-        ssssssxxxxxxx
 
       </section>
 
