@@ -17,10 +17,12 @@ type StoryblokSingleResponse = {
 }
 
 const BASE_URL = 'https://api.storyblok.com/v2/cdn'
+const TOKEN = 'H1wfrTArHm3VE441H8WQ5wtt' // server-only
 
-const TOKEN = 'H1wfrTArHm3VE441H8WQ5wtt'// server-only
-
-function buildUrl(path: string, params: Record<string, string | number | boolean | undefined>) {
+function buildUrl(
+  path: string,
+  params: Record<string, string | number | boolean | undefined>
+) {
   const url = new URL(`${BASE_URL}/${path}`)
   Object.entries(params).forEach(([k, v]) => {
     if (v !== undefined && v !== null) url.searchParams.set(k, String(v))
@@ -29,10 +31,10 @@ function buildUrl(path: string, params: Record<string, string | number | boolean
   return url.toString()
 }
 
-/**
- * Fetch JSON with ISR
- */
-async function fetchJSON<T>(url: string, revalidateSeconds = 300): Promise<{ data: T; headers: Headers }> {
+async function fetchJSON<T>(
+  url: string,
+  revalidateSeconds = 300
+): Promise<{ data: T; headers: Headers }> {
   const res = await fetch(url, { next: { revalidate: revalidateSeconds } })
   if (!res.ok) {
     const text = await res.text()
@@ -42,18 +44,17 @@ async function fetchJSON<T>(url: string, revalidateSeconds = 300): Promise<{ dat
   return { data, headers: res.headers }
 }
 
-/**
- * ดึงรายการข่าว (รองรับ paginate + search + locale)
- */
+// ---------------- existing list + bySlug ----------------
+
 export async function fetchAllBlog({
-                                      page = 1,
-                                      perPage = 10,
-                                      lang = 'th',
-                                      version = 'published',
-                                      search,            // optional: ค้นหาชื่อ/เนื้อหา
-                                      startsWith = 'news/',
-                                      revalidate = 300,
-                                    }: {
+                                     page = 1,
+                                     perPage = 10,
+                                     lang = 'th',
+                                     version = 'published',
+                                     search,
+                                     startsWith = 'news/',
+                                     revalidate = 300,
+                                   }: {
   page?: number
   perPage?: number
   lang?: string
@@ -72,17 +73,14 @@ export async function fetchAllBlog({
     ...(search ? { search_term: search } : {}),
   })
 
-
-  const { data, headers } = await fetchJSON<StoryblokListResponse>(url, revalidate)
+  const { data, headers } = await fetchJSON<StoryblokListResponse>(
+    url,
+    revalidate
+  )
   const total = Number(headers.get('total') || data.stories?.length || 0)
   return { stories: data.stories, total }
 }
 
-
-
-/**
- * ดึงข่าวรายรายการด้วย slug
- */
 export async function fetchNewsBySlug({
                                         slug,
                                         lang = 'th',
@@ -94,7 +92,7 @@ export async function fetchNewsBySlug({
   lang?: string
   version?: 'draft' | 'published'
   revalidate?: number
-  basePath?: string // เผื่อคุณอยากเปลี่ยนจาก news เป็นอย่างอื่น
+  basePath?: string
 }) {
   const url = buildUrl(`stories/${basePath}/${slug}`, {
     version,
@@ -104,8 +102,37 @@ export async function fetchNewsBySlug({
   return data.story
 }
 
+// ---------------- NEW: latest blog (independent from search) ----------------
 
-export async function fetchFirstBlog(opts?: Partial<Parameters<typeof fetchAllBlog>[0]>) {
-  const { stories } = await fetchAllBlog({ ...opts, page: 1, perPage: 1 })
-  return stories[0] ?? null
+/**
+ * ดึงข่าวล่าสุด 1 รายการ โดย "ไม่" รับ/ไม่ใช้ search
+ * เลือก sort ตามที่ต้องการ:
+ * - ใช้ first_published_at ถ้าอยากอิงวันเผยแพร่จริง
+ * - หรือใช้ฟิลด์วันที่ใน content เอง เช่น content.newsDate ถ้าคุณเก็บวันที่เอง
+ */
+export async function fetchLatestBlog({
+                                        lang = 'th',
+                                        version = 'published',
+                                        startsWith = 'news/',
+                                        revalidate = 300,
+                                        sortBy = 'first_published_at:desc', // เปลี่ยนเป็น 'content.newsDate:desc' ถ้าใช้ฟิลด์ใน content
+                                      }: {
+  lang?: string
+  version?: 'draft' | 'published'
+  startsWith?: string
+  revalidate?: number
+  sortBy?: string
+}) {
+  const url = buildUrl('stories', {
+    version,
+    starts_with: startsWith,
+    is_startpage: false,
+    page: 1,
+    per_page: 1,
+    language: lang,
+    sort_by: sortBy,
+  })
+
+  const { data } = await fetchJSON<StoryblokListResponse>(url, revalidate)
+  return data.stories?.[0] ?? null
 }
