@@ -37,25 +37,34 @@ export async function fetchAllBlog({
   return { stories: data.stories, total }
 }
 
+
 export async function fetchBlogBySlug({
                                         slug,
                                         lang = 'th',
-                                        version = 'draft',
                                         revalidate = 300,
-                                        basePath = 'news',
+                                        version = 'published',
+                                        basePath = 'blog',
                                       }: {
   slug: string
   lang?: string
-  version?: 'draft' | 'published'
   revalidate?: number
+  version?: 'draft' | 'published'
   basePath?: string
 }) {
-  const url = buildUrl(`stories/${basePath}/${slug}`, {
-    version,
-    language: lang,
+  const url = new URL('https://api.storyblok.com/v2/cdn/stories/' + `${basePath}/${slug}`)
+  url.searchParams.set('version', version)
+  url.searchParams.set('token', 'H1wfrTArHm3VE441H8WQ5wtt')
+  url.searchParams.set('language', lang)
+  // ถ้าต้องการ resolve relations/links ก็เพิ่มได้ตามต้องการ
+
+  const res = await fetch(url.toString(), {
+    // ผูกแท็กต่อ locale+slug เพื่อให้แคชแยกกันชัดเจน
+    next: { revalidate, tags: [`story:${basePath}:${slug}:${lang}`] },
   })
-  const { data } = await fetchJSON<StoryblokSingleResponse>(url, revalidate)
-  return data.story
+
+  if (!res.ok) throw new Error(`Storyblok fetch failed ${res.status}`)
+  const data = await res.json()
+  return data.story // หรือ shape ที่คุณใช้ต่อ
 }
 
 export async function fetchLatestBlog({
