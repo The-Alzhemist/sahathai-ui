@@ -6,12 +6,13 @@ import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import type { NewsCardProps } from './interface'
 
-export function NewsCard({
+export function BlogCard({
                            title,
                            content,
                            createdAt,
                            slug,
                            direction = 'vertical',
+  page = 'news'
                          }: NewsCardProps) {
   const common = useTranslations('common')
 
@@ -21,7 +22,7 @@ export function NewsCard({
 
   return (
     <Link
-      href={`/news/${slug}`}
+      href={`/${page}/${slug}`}
       className={cn(
         'block w-full md:w-[290px] overflow-hidden rounded-[8px] p-2  hover:scale-[1.02] hover:shadow-1 transition-all  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
       )}

@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 
 
 import { Link } from '@/libs/intl/navigation'
-import { NewsCard } from '@/components/NewsCard'
+import { BlogCard } from '../../../components/BlogCard'
 import React from 'react'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
@@ -39,14 +39,14 @@ export default async function blog({
     lang: locale,
     version: 'published',
     search,
-    startsWith: 'news/',
+    startsWith: 'blog/',
     revalidate: 300,
   })
 
   const latestBlog = await fetchLatestBlog({
     lang: locale,
     version: 'published',
-    startsWith: 'news/',
+    startsWith: 'blog/',
     revalidate: 300,
   })
 
@@ -67,7 +67,7 @@ export default async function blog({
           {t('latestNews')}
         </h2>
 
-       <LatestBlogCard blog={latestBlog} locale={locale}  />
+       <LatestBlogCard blog={latestBlog} locale={locale} page={'blog'}  />
       </section>
 
 
@@ -94,12 +94,13 @@ export default async function blog({
               className=" flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center">
               {stories.length ? (
                 stories.map((s:any) => (
-                  <NewsCard
+                  <BlogCard
                     key={s.content.body[0]._uid}
                     title={s.content.body[0].newsTitle}
                     content={s.content}
                     createdAt={s.created_at ?? ''}
                     slug={s.slug}
+                    page={'blog'}
                   />
                 ))
               ) : (
