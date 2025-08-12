@@ -4,4 +4,5 @@ export interface NewsCardProps {
   createdAt: string
   slug: string
   direction?: 'horizontal' | 'vertical'
+  page: string
 }

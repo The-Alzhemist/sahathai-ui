@@ -1,4 +1,4 @@
-import { NewsCard } from '@/components/NewsCard'
+import { BlogCard } from '../../../../../../../components/BlogCard'
 import { REVALIDATE_TIME } from '@/config/environtment'
 
 import { fetchNewsBlogListData } from '@/libs/storyblok'
@@ -19,12 +19,13 @@ export default async function LatestNewsHomePageList() {
   return (
     <section className='max-w-[1200px] flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
       {latestNews.map((newsBlog: any) => (
-        <NewsCard
+        <BlogCard
           key={newsBlog._uid}
           title={newsBlog.content.body[0].newsTitle}
           content={newsBlog.content}
           createdAt={newsBlog.createdAt}
           slug={newsBlog.slug}
+          page={'news'}
         />
       ))}
     </section>
