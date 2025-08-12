@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-export const revalidate = REVALIDATE_TIME
+export const revalidate = 300
 
 export default function Home() {
   return <HomePage />

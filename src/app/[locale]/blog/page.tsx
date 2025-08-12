@@ -1,18 +1,15 @@
 
 import { getTranslations } from 'next-intl/server'
 
-import { fetchAllBlog, fetchLatestBlog } from '@/libs/storyblok/fetching'
+
 import { Link } from '@/libs/intl/navigation'
 import { NewsCard } from '@/components/NewsCard'
 import React from 'react'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 
-import { cn } from '@/libs/util'
-import Image from 'next/image'
-import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
-import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
+import { fetchAllBlog, fetchLatestBlog } from '@/libs/storyblok/blogQuery'
 
 
 export const revalidate = 300 // 5 min
@@ -71,8 +68,6 @@ export default async function blog({
         </h2>
 
        <LatestBlogCard blog={latestBlog} locale={locale}  />
-
-
       </section>
 
 
@@ -84,21 +79,21 @@ export default async function blog({
           </h2>
 
           {/* Search box แบบง่าย (Server + link) */}
-          <form action="" className="mb-4 flex gap-2">
-            <input
-              name="search"
-              defaultValue={search ?? ''}
-              placeholder="Search news..."
-              className="border px-3 py-1 rounded w-full"
-            />
-            <button className="px-4 py-1 bg-blue-600 text-white rounded">Search</button>
-          </form>
+          {/*<form action="" className="mb-4 flex gap-2">*/}
+          {/*  <input*/}
+          {/*    name="search"*/}
+          {/*    defaultValue={search ?? ''}*/}
+          {/*    placeholder="Search news..."*/}
+          {/*    className="border px-3 py-1 rounded w-full"*/}
+          {/*  />*/}
+          {/*  <button className="px-4 py-1 bg-blue-600 text-white rounded">Search</button>*/}
+          {/*</form>*/}
 
           <section className="flex flex-col justify-center items-center">
             <div
               className=" flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center">
               {stories.length ? (
-                stories.map((s) => (
+                stories.map((s:any) => (
                   <NewsCard
                     key={s.content.body[0]._uid}
                     title={s.content.body[0].newsTitle}
