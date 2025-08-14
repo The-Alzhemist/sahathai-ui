@@ -35,9 +35,9 @@ export function BannerTextCard({ imageUrl, title, content, position = 'left' }: 
               'h-full',
               position === 'right'
                 ? // ด้านขวา: ตัดให้ขอบซ้ายเอียง
-                'bg-modellBgDark opacity-80 md:[clip-path:polygon(0%_0%,100%_0%,100%_100%,15%_100%)]'
+                'bg-gradient-to-t from-black to-modellBgDark  md:bg-modellBgDark opacity-80   md:opacity-80 md:[clip-path:polygon(0%_0%,100%_0%,100%_100%,15%_100%)]'
                 : // ด้านซ้าย: ตัดให้ขอบขวาเอียง
-                'bg-modellBgDark opacity-80 md:[clip-path:polygon(0%_0%,100%_0%,85%_100%,0%_100%)]'
+                'bg-gradient-to-t from-black to-modellBgDark   md:bg-modellBgDark opacity-80 md:opacity-80 md:[clip-path:polygon(0%_0%,100%_0%,85%_100%,0%_100%)]'
             )}
           />
         </div>
