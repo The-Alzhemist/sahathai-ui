@@ -22,6 +22,10 @@
       "groundContainerTransportationServices": {
         "title": "Ground Container Transportation Services",
         "content": "Door-to-Door services to facilitate customer operations and offer an option for seamless container transportation from Laem Chabang Port."
+      },
+      "containerService": {
+        "title": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า",
+        "content": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า เพื่ออำนวยความสะดวกให้แก่ลูกค้า ที่มีทั้งลานพื้นที่จัดเก็บตู้สินค้าในเขตปลอดอากร คลังสินค้าทัณฑ์บนขนาดพื้นที่ 6,301"
       }
     },
     "ContainerStorageWarehouseServices": {
