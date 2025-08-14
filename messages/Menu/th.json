@@ -8,7 +8,7 @@
       "corporateGroupStructureOrganizationalStructure": "โครงสร้างกลุ่มบริษัทและโครงสร้างองค์กร"
     },
     "infrastructureContainers": {
-      "title": "โครงสร้างพื้นฐานและคอนเทนเนอร์",
+      "title": "ท่าเทียบเรือ",
       "machineryEquipment": "เครื่องจักรและอุปกรณ์สำคัญภายในท่าเรือ" ,
       "logisticInnovation": "Logistic Innovation",
       "opticalCharacterRecognition": "เทคโนโลยีการอ่านตู้สินค้าอัตโนมัติ (OCR)",
@@ -21,7 +21,8 @@
       "bargeServices": "บริการเรือบาร์จ",
       "containerHandling": "ขนถ่าย Container  |  CFS LCL",
       "containerMaintenance": "ซ่อมบำรุงตู้คอนเทนเนอร์",
-      "groundContainerTransportationServices": "บริการขนส่งตู้คอนเทนเนอร์ทางบก"
+      "groundContainerTransportationServices": "บริการขนส่งตู้คอนเทนเนอร์ทางบก",
+      "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า"
     },
     "news": {
       "title": "ข่าวประชาสัมพันธ์",

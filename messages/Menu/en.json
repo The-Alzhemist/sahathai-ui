@@ -8,7 +8,7 @@
       "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
     },
     "infrastructureContainers": {
-      "title": "Infrastructure and Containers",
+      "title": "Terminal",
       "machineryEquipment": "Key Machinery and Equipment in the Port" ,
       "logisticInnovation": "Logistic Innovation",
       "opticalCharacterRecognition": "Automatic Cargo Container Reading Technology (OCR)",
@@ -21,7 +21,8 @@
       "bargeServices": "Barge Services",
       "containerHandling": "Container Handling | CFS LCL",
       "containerMaintenance": "Container Maintenance",
-      "groundContainerTransportationServices": "Ground Container Transportation Services"
+      "groundContainerTransportationServices": "Ground Container Transportation Services",
+      "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า"
     },
     "news": {
       "title": "News",
