@@ -89,6 +89,12 @@ export function useSubmenu() {
             isScroll: false,
             pathname: `/services/ground-container-transportation-services`,
           },
+          {
+            title: t('service.containerServices'),
+            isExternalLink: false,
+            isScroll: false,
+            pathname: `/services/container-services`,
+          },
         ],
       },
       {

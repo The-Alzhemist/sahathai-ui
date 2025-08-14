@@ -9,7 +9,7 @@
     },
 
     "infrastructureContainers": {
-      "title": "基础设施和集装箱",
+      "title": "Terminal",
       "machineryEquipment": "港口关键机械设备" ,
       "logisticInnovation": "Logistic Innovation",
       "opticalCharacterRecognition": "自动货柜读取技术 (OCR)",
@@ -22,7 +22,8 @@
       "bargeServices": "驳船服务",
       "containerHandling": "集装箱处理 | CFS LCL",
       "containerMaintenance": "集装箱维护",
-      "groundContainerTransportationServices": "陆路集装箱运输服务"
+      "groundContainerTransportationServices": "陆路集装箱运输服务",
+      "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า"
     },
     "news": {
       "title": "新闻",
