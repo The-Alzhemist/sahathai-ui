@@ -11,7 +11,7 @@ export function Highlight() {
     <section className='relative container mt-[132px] min-h-[670px] '>
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/home/home-hilight-bg.png"
+          src="/home/home-highlight-bg.webp"
           alt="lisense background"
           fill
           className="object-cover"

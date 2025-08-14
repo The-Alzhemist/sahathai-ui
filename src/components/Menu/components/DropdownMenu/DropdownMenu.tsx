@@ -78,7 +78,7 @@ export const DropdownMenuComponent = React.forwardRef<
         data-open={isOpen ? '' : undefined}
         data-nested={undefined}
         data-focus-inside={hasFocusInside ? '' : undefined}
-        className={`headline-6 !font-[300] block px-[24px] py-[18px] hover:bg-primary-1 whitespace-nowrap ${className}`}
+        className={`headline-6 !font-[300] block px-[24px] py-[18px] hover:bg-blue-300 whitespace-nowrap ${className}`}
         {...getReferenceProps(
           parent.getItemProps({
             ...props,
