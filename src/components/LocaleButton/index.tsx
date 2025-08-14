@@ -18,8 +18,9 @@ import { usePathname, useRouter } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
 import { GlobeIcon } from '../icons/GlobeIcon'
 import { LocaleButtonProps } from './interface'
+import { twMerge } from 'tailwind-merge'
 
-export function LocaleButton({ className }: LocaleButtonProps) {
+export function LocaleButton({ className, isHomePage }: LocaleButtonProps) {
   const [isOpen, setIsOpen] = useState(false)
   const locale = useLocale()
 
@@ -69,8 +70,9 @@ export function LocaleButton({ className }: LocaleButtonProps) {
 
   return (
     <Fragment>
+
       <button
-        className={cn('flex items-center uppercase gap-[10px]', className)}
+        className={cn(`flex items-center uppercase gap-[10px] `, className)}
         type='button'
         {...getReferenceProps()}
         ref={refs.setReference}
@@ -80,13 +82,19 @@ export function LocaleButton({ className }: LocaleButtonProps) {
       </button>
       {isOpen && (
         <ul
-          className='relative p-[4px] rounded-[6px] z-[10] shadow-3 bg-white w-full text-black-80 uppercase'
+          className={twMerge(
+            'relative p-[4px] rounded-[6px] z-[10] shadow-3 bg-white w-full text-black-80 uppercase',
+
+          )}
           ref={refs.setFloating}
           style={floatingStyles}
           {...getFloatingProps()}
         >
           <li
-            className='py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
+            className={twMerge(
+              'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
+              isHomePage && 'text-gray-800'
+            )}
             {...getItemProps({
               onClick() {
                 handleLocaleChange(LocaleEnum.TH)
@@ -96,7 +104,10 @@ export function LocaleButton({ className }: LocaleButtonProps) {
             {LocaleEnum.TH}
           </li>
           <li
-            className='py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
+            className={twMerge(
+              'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
+              isHomePage && 'text-gray-800'
+            )}
             {...getItemProps({
               onClick() {
                 handleLocaleChange(LocaleEnum.EN)
@@ -106,7 +117,10 @@ export function LocaleButton({ className }: LocaleButtonProps) {
             {LocaleEnum.EN}
           </li>
           <li
-            className='py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px]'
+            className={twMerge(
+              'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
+              isHomePage && 'text-gray-800'
+            )}
             {...getItemProps({
               onClick() {
                 handleLocaleChange(LocaleEnum.CN)

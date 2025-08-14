@@ -88,6 +88,7 @@ export function Header() {
             <li>
               <LocaleButton
                 className={twMerge(isHomePage ? 'text-white' : 'text-blue-300')}
+                isHomePage={isHomePage}
               />{' '}
             </li>
           </ul>
