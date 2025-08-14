@@ -336,3 +336,8 @@ tbody {
   background-color: #ef4444;
   opacity: 1;
 }
+
+body:has(.modal-open) {
+  overflow: hidden;
+
+}
