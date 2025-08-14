@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
 import { ComprehensiveCommercialPortCard } from '../ComprehensiveCommercialPortCard'
+import ContainerServices from '@/app/[locale]/services/container-services/page'
 
 export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')
@@ -90,7 +91,7 @@ export function ComprehensiveCommercialPortServices() {
             }
             content={t('containerService.content')}
             imageUrl='/services/container-service.png'
-            link='/services/barge-services'
+            link='/services/container-services'
           />
         </section>
       </Animation>

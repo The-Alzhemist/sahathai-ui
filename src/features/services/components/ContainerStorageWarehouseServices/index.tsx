@@ -4,17 +4,18 @@ import { Background } from '@/components/Background'
 import { Animation } from '@/components/Animation'
 import { MiniCard } from '../MiniCard'
 import { Card } from '../Card'
+import { BannerTextCard } from '@/features/services/components/BannerTextCard'
 
 export function ContainerStorageWarehouseServices() {
   const t = useTranslations('ServicesPage.ContainerStorageWarehouseServices')
 
   return (
     <section>
-      <Background>
-        <section className='bg-modellBgDark/60 text-white pt-[71px] pb-[83px]'>
+
+        <section className='pt-[71px] pb-[83px]'>
           <Animation>
-            <h2 className='headline-2 text-center'>{t('title')}</h2>
-            <section className='mt-[60px] flex  flex-col md:flex-row justify-center items-center gap-[73px]'>
+            <h2 className='headline-2 text-center mb-10 text-navy'>{t('title')}</h2>
+            <section className='flex  flex-col md:flex-row justify-center items-center gap-[73px]'>
               <MiniCard
                 imageUrl='/services/container.png'
                 content={t('content1')}
@@ -31,39 +32,72 @@ export function ContainerStorageWarehouseServices() {
             </section>
           </Animation>
         </section>
-      </Background>
-      <section className='max-w-[1040px] w-full mx-auto space-y-10 md:space-y-[100px] py-10 md:py-[170px] px-5'>
-        <Card
-          imageUrl='/services/free-trade-zone-container-yard.png'
-          title={t('freeTradeZoneContainerYard.title')}
-          content={t('freeTradeZoneContainerYard.content')}
-          position='left'
-        />
-        <Card
-          imageUrl='/services/general-warehouseand-bonded-warehouse.png'
-          title={t('generalWarehouseandBondedWarehouse.title')}
-          content={t('generalWarehouseandBondedWarehouse.content')}
-          position='right'
-        />
-        <Card
-          imageUrl='/services/cold-storage-warehouse.png'
-          title={t('coldStorageWarehouse.title')}
-          content={t('coldStorageWarehouse.content')}
-          position='left'
-        />
-        <Card
-          imageUrl='/services/free-trade-zone-warehouse.png'
-          title={t('freeTradeZoneWarehouse.title')}
-          content={t('freeTradeZoneWarehouse.content')}
-          position='right'
-        />
-        <Card
-          imageUrl='/services/service-provider-import-export.png'
-          title={t('serviceProviderImportExport.title')}
-          content={t('serviceProviderImportExport.content')}
-          position='left'
-        />
-      </section>
+
+      {/*<section className='max-w-[1040px] w-full mx-auto space-y-10 md:space-y-[100px] py-10 md:py-[170px] px-5'>*/}
+      {/*  <Card*/}
+      {/*    imageUrl='/services/free-trade-zone-container-yard.png'*/}
+      {/*    title={t('freeTradeZoneContainerYard.title')}*/}
+      {/*    content={t('freeTradeZoneContainerYard.content')}*/}
+      {/*    position='left'*/}
+      {/*  />*/}
+      {/*  <Card*/}
+      {/*    imageUrl='/services/general-warehouseand-bonded-warehouse.png'*/}
+      {/*    title={t('generalWarehouseandBondedWarehouse.title')}*/}
+      {/*    content={t('generalWarehouseandBondedWarehouse.content')}*/}
+      {/*    position='right'*/}
+      {/*  />*/}
+      {/*  <Card*/}
+      {/*    imageUrl='/services/cold-storage-warehouse.png'*/}
+      {/*    title={t('coldStorageWarehouse.title')}*/}
+      {/*    content={t('coldStorageWarehouse.content')}*/}
+      {/*    position='left'*/}
+      {/*  />*/}
+      {/*  <Card*/}
+      {/*    imageUrl='/services/free-trade-zone-warehouse.png'*/}
+      {/*    title={t('freeTradeZoneWarehouse.title')}*/}
+      {/*    content={t('freeTradeZoneWarehouse.content')}*/}
+      {/*    position='right'*/}
+      {/*  />*/}
+      {/*  <Card*/}
+      {/*    imageUrl='/services/service-provider-import-export.png'*/}
+      {/*    title={t('serviceProviderImportExport.title')}*/}
+      {/*    content={t('serviceProviderImportExport.content')}*/}
+      {/*    position='left'*/}
+      {/*  />*/}
+
+      {/*</section>*/}
+
+
+      <BannerTextCard   imageUrl='/services/free-trade-zone-container-yard-2x.png'
+                        title={t('freeTradeZoneContainerYard.title')}
+                        content={t('freeTradeZoneContainerYard.content')}
+                        position='left' />
+
+
+      <BannerTextCard     imageUrl='/services/general-warehouseand-bonded-warehouse-2x.png'
+                          title={t('generalWarehouseandBondedWarehouse.title')}
+                          content={t('generalWarehouseandBondedWarehouse.content')}
+                          position='right' />
+
+      <BannerTextCard     imageUrl='/services/cold-storage-warehouse-2x.png'
+                          title={t('coldStorageWarehouse.title')}
+                          content={t('coldStorageWarehouse.content')}
+                          position='left' />
+
+
+      <BannerTextCard     imageUrl='/services/free-trade-zone-warehouse-2x.png'
+                          title={t('freeTradeZoneWarehouse.title')}
+                          content={t('freeTradeZoneWarehouse.content')}
+                          position='right' />
+
+      <BannerTextCard     imageUrl='/services/service-provider-import-export-2x.png'
+                          title={t('serviceProviderImportExport.title')}
+                          content={t('serviceProviderImportExport.content')}
+                          position='left' />
+
+
+
+
     </section>
   )
 }
