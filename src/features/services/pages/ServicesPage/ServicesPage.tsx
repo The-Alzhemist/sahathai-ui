@@ -18,7 +18,7 @@ export function ServicesPage() {
         className='mb-[40px]'
       />
       <ComprehensiveCommercialPortServices />
-      <ContainerStorageWarehouseServices />
+      {/*<ContainerStorageWarehouseServices />*/}
       <InventoryManagementServices />
       <ContactUs className='pt-[80px] pb-[114px]' />
       {/* <CookieConsentFloatingBar /> */}

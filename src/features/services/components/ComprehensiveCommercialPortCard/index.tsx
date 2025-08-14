@@ -21,10 +21,10 @@ export function ComprehensiveCommercialPortCard({
         </div>
       </div>
       <div className='py-[22px] px-[30px] h-[240px] relative'>
-        <h3 className='text-navy headline-6 !leading-[20px] flex items-center whitespace-nowrap'>
+        <h3 className='text-navy headline-6 !leading-[20px] flex items-center whitespace-nowrap !text-sm'>
           {title}
         </h3>
-        <p className='mt-[16px] line-clamp-4 body-2 text-black-6'>{content}</p>
+        <p className='mt-[16px] line-clamp-4 body-2 text-black-6 !text-sm'>{content}</p>
         <Link
           className='absolute bottom-[22px] mt-auto flex gap-[10px] items-center text-primary w-fit transition-all hover:scale-125'
           href={link}
