@@ -13,7 +13,7 @@ export default async function ShareHolderMeeting({
   const { locale } = params
 
   const response = await fetchStoryblokStory(
-    'invrester-relartion/shareholdermeetingpage',
+    'invrester-relartion/90ee2b39-0565-41ce-bdb4-dad2425245a4',
     locale,
     'draft'
   )
