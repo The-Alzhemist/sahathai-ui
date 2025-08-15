@@ -53,8 +53,8 @@ export function Header() {
     >
       <div
         className={twMerge(
-          `px-[10px] py-[8px] flex items-center container h-[50px] ${
-            isHomePage ? 'justify-end' : 'justify-between'
+          `px-[10px] py-[8px] flex items-center container text-sm h-[50px] ${
+            isHomePage ? 'justify-end ' : 'justify-between'
           }`,
           // Change gradient and text color if home page
           isHomePage
@@ -120,8 +120,8 @@ export function Header() {
 
       {/* header secondary */}
       {isHomePage && (
-        <section className='px-5 py-[8px] flex justify-between  items-center h-[60px]'>
-          <Link href='/' className='shrink-0 '>
+        <section className='px-5 py-[8px] flex justify-between items-center h-[60px]'>
+          <Link href='/' className='shrink-0'>
             <Image
               src='/logo.png'
               className='p-2'
@@ -133,8 +133,8 @@ export function Header() {
           </Link>
 
           <div className='flex gap-x-2'>
-            <span className='text-blue-300 font-light text-[20px]'>สหไทย</span>
-            <span className='text-red-300 font-light text-[20px]'>
+            <span className='text-blue-300 font-light text-[16px]'>สหไทย</span>
+            <span className='text-red-300 font-light text-[16px]'>
               เทอร์มินอล
             </span>
           </div>
