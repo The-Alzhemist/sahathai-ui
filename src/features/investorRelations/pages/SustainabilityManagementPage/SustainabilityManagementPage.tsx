@@ -34,7 +34,7 @@ export function SustainabilityManagementPage() {
         caption={t('title')}
         className='mb-[40px]'
       />
-      <Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />
+      {/*<Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />*/}
       <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
         {t('title')}
       </h2>

@@ -25,7 +25,7 @@ export async function InvestorInformationPage() {
         caption={t('investorRelations.title')}
         className='mb-[40px]'
       />
-      <Tabs activeMenu={InvestorRelationEnum.InvestorInformation} />
+      {/*<Tabs activeMenu={InvestorRelationEnum.InvestorInformation} />*/}
       <section className='max-w-[1140px] w-full px-5 mx-auto  mt-[80px] flex gap-[21px]'>
         <div className='hidden md:flex'>
           <SideMenu />
