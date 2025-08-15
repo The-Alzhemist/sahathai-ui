@@ -25,13 +25,13 @@ export function AboutUsPage({
         caption={tMenu('aboutUs.title')}
       />
       <div className='flex justify-center px-2'>
-        <Tabs
-          className='mt-[40px]'
-          tabs={tabs}
-          style='normal'
-          active={active}
-          onChange={v => handleOnActiveTabChange(v as AboutUsTabEnum)}
-        />
+        {/*<Tabs*/}
+        {/*  className='mt-[40px]'*/}
+        {/*  tabs={tabs}*/}
+        {/*  style='normal'*/}
+        {/*  active={active}*/}
+        {/*  onChange={v => handleOnActiveTabChange(v as AboutUsTabEnum)}*/}
+        {/*/>*/}
       </div>
 
       {active === AboutUsTabEnum.VISION_MISSION ? (
