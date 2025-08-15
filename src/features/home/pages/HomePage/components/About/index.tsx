@@ -13,6 +13,7 @@ import { ContainerIcon } from '@/components/icons/ContainerIcon'
 import { WorldIcon } from '@/components/icons/WorldIcon'
 export function About() {
   const t = useTranslations('HomePage.About')
+  const tBanner = useTranslations('HomePage.Banner')
 
   return (
     <section
@@ -22,7 +23,11 @@ export function About() {
       {/* Optional overlay เพื่อให้อ่านการ์ดง่ายขึ้น */}
       <div className="absolute inset-0 bg-white to-transparent"></div>
 
-      <div className="relative"  >
+      <div className="relative">
+        <section className="max-w-[1040px] mx-auto flex  flex-col md:flex-row items-center gap-x-2 mb-10">
+          <div className='text-[48px] font-medium'><span className='text-blue-300'>{tBanner('title')}</span></div>
+          <div className='text-[32px] font-light text-red-400'>{tBanner('subTitle')}</div>
+        </section>
         <WhyChooseSahathai />
         <div className=" flex   justify-center mt-[72px] w-full relative z-10 py-[90px] bg-no-repeat bg-cover"  style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.3)), url('/home/container-image.png')`,
