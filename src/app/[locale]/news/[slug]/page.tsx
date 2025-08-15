@@ -22,8 +22,7 @@ export async function generateStaticParams() {
     })
   )
 
-  // console.log('slugs noflat()::', slugs)
-  // console.log('slugs.flat()::', slugs.flat())
+
 
   return slugs.flat()
 }
