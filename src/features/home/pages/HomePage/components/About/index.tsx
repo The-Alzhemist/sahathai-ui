@@ -33,31 +33,31 @@ export function About() {
               title={t('comprehensiveService.title')}
               content={t('comprehensiveService.content')}
               imageUrl="/home/comprehensive-service.png"
-              icon={<BuildingIcon/>}
+              icon={<BuildingIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('globalTransportationNetwork.title')}
               content={t('globalTransportationNetwork.content')}
               imageUrl="/home/global-transportation-network.png"
-              icon={<ScaleIcon/>}
+              icon={<ScaleIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('worldClassStandards.title')}
               content={t('worldClassStandards.content')}
               imageUrl="/home/world-class-standards.png"
-              icon={<RoadIcon/>}
+              icon={<RoadIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('convenientLocation.title')}
               content={t('convenientLocation.content')}
               imageUrl="/home/convenient-location.png"
-              icon={<ContainerIcon/>}
+              icon={<ContainerIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('coversAllNeeds.title')}
               content={t('coversAllNeeds.content')}
               imageUrl="/home/covers-all-needs.png"
-              icon={<WorldIcon className='w-[20px] h-[20px]'/>}
+              icon={<WorldIcon width={'34'} height={'34'} />}
             />
           </div>
 

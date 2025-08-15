@@ -31,10 +31,7 @@ export function AboutCard({ title, content, imageUrl,icon
       <div className='relative'>
         <div
           className="w-[60px] h-[60px]  bg-gradient-to-b from-blue-300 to-red-500 rounded-full flex justify-center items-center absolute -top-7 left-4 border-4 border-white">
-
-          <div>
             {icon}
-          </div>
         </div>
       </div>
 
