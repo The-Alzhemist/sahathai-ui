@@ -20,7 +20,7 @@ export function CodeConductPage() {
         className='mb-[40px]'
       />
       <section className='pb-[176px] max-w-[896px] w-full mx-auto px-5'>
-        <Tabs activeMenu={InvestorRelationEnum.CodeConduct} />
+        {/*<Tabs activeMenu={InvestorRelationEnum.CodeConduct} />*/}
         <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
           {t('title')}
         </h2>
