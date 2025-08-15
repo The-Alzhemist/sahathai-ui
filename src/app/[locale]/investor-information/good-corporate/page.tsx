@@ -16,7 +16,7 @@ export default async function GoodCorporate({
   params: { locale: string }
 }) {
   const { locale } = params
-  const data = await getData()
+  // const data = await getData()
 
   const response = await fetchStoryblokStory(
     'invrester-relartion/b2c20980-2a9d-4536-b06d-5f299c26314e',
