@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useFloatingTree, useListItem, useMergeRefs } from '@floating-ui/react'
+import {  useListItem, useMergeRefs } from '@floating-ui/react'
 import { twMerge } from 'tailwind-merge'
 import { DropdownMenuItemProps } from '@/components/Menu/components/DropdownMenuItem/interface'
 import { DropdownMenuContext } from '@/components/Menu/components/DropdownMenuContext/DropdownMenuContext'
