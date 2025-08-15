@@ -4,11 +4,20 @@ import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorpor
 import { fetchStoryblokStory } from '@/utils/storyblok'
 
 
+
+async function getData() {
+  // จำลองการโหลดช้าๆ 1 ชั่วโมง
+  await new Promise((resolve) => setTimeout(resolve, 60 * 60 * 1000))
+  return { message: 'Data loaded!' }
+}
+
 export default async function GoodCorporate({
                                               params,
                                             }: {
   params: { locale: string }
 }) {
+
+  const data = await getData()
 
   const { locale } = params
 
