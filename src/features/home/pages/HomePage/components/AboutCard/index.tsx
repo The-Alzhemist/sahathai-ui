@@ -7,7 +7,8 @@ import { AboutCardProps } from './interface'
 import { cn } from '@/libs/util'
 import { BuildingIcon } from '@/components/icons/AboutUsBuildingIcon'
 
-export function AboutCard({ title, content, imageUrl }: AboutCardProps) {
+export function AboutCard({ title, content, imageUrl,icon
+                            }: AboutCardProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
@@ -29,7 +30,11 @@ export function AboutCard({ title, content, imageUrl }: AboutCardProps) {
       </div>
       <div className='relative'>
         <div
-          className="w-[60px] h-[60px]  bg-gradient-to-b from-blue-300 to-red-500 rounded-full flex justify-center items-center absolute -top-7 left-4 border-4 border-white"><BuildingIcon/>
+          className="w-[60px] h-[60px]  bg-gradient-to-b from-blue-300 to-red-500 rounded-full flex justify-center items-center absolute -top-7 left-4 border-4 border-white">
+
+          <div>
+            {icon}
+          </div>
         </div>
       </div>
 
