@@ -1,9 +1,9 @@
 import { buildUrl, fetchJSON } from './client'
 import {
   StoryblokListResponse,
-  StoryblokSingleResponse,
-  StoryblokStory,
 } from './types'
+import { getStoryblokApi } from '@/libs/storyblok'
+import { ISbStoriesParams } from '@storyblok/react/rsc'
 
 export async function fetchAllBlog({
                                      page = 1,
@@ -11,7 +11,8 @@ export async function fetchAllBlog({
                                      lang = 'th',
                                      version = 'published',
                                      search,
-                                     startsWith = 'news/',
+                                     startsWith = 'blog' +
+                                     '/',
                                      revalidate = 300,
                                    }: {
   page?: number
@@ -38,39 +39,27 @@ export async function fetchAllBlog({
 }
 
 
-export async function fetchBlogBySlug({
-                                        slug,
-                                        lang = 'th',
-                                        revalidate = 300,
-                                        version = 'published',
-                                        basePath = 'blog',
-                                      }: {
-  slug: string
-  lang?: string
-  revalidate?: number
-  version?: 'draft' | 'published'
-  basePath?: string
-}) {
-  const url = new URL('https://api.storyblok.com/v2/cdn/stories/' + `${basePath}/${slug}`)
-  url.searchParams.set('version', version)
-  url.searchParams.set('token', 'H1wfrTArHm3VE441H8WQ5wtt')
-  url.searchParams.set('language', lang)
-  // ถ้าต้องการ resolve relations/links ก็เพิ่มได้ตามต้องการ
 
-  const res = await fetch(url.toString(), {
-    // ผูกแท็กต่อ locale+slug เพื่อให้แคชแยกกันชัดเจน
-    next: { revalidate, tags: [`story:${basePath}:${slug}:${lang}`] },
-  })
+// --------------
 
-  if (!res.ok) throw new Error(`Storyblok fetch failed ${res.status}`)
-  const data = await res.json()
-  return data.story // หรือ shape ที่คุณใช้ต่อ
+
+export async function fetchBlogBySlug(slug: string, lang: string) {
+  const sbParams: ISbStoriesParams = {
+    version: 'draft', // or 'draft' based on your needs
+    language: lang,
+  }
+
+  const storyblokApi = getStoryblokApi()
+  const storyBookData = storyblokApi.get(`cdn/stories/blog/${slug}`, sbParams)
+  return storyBookData
 }
 
+
+// ---------------------------------------
 export async function fetchLatestBlog({
                                         lang = 'th',
                                         version = 'published',
-                                        startsWith = 'news/',
+                                        startsWith = 'blog/',
                                         revalidate = 300,
                                         sortBy = 'first_published_at:desc',
                                       }: {
