@@ -248,17 +248,17 @@ tbody {
   }
 }
 
-.report {
-  tbody {
-    tr:nth-child(even) {
-      background: #efefef;
-    }
+/*.report {*/
+/*  tbody {*/
+/*    tr:nth-child(even) {*/
+/*      background: #efefef;*/
+/*    }*/
 
-    tr:nth-child(odd) {
-      background: #fff;
-    }
-  }
-}
+/*    tr:nth-child(odd) {*/
+/*      background: #fff;*/
+/*    }*/
+/*  }*/
+/*}*/
 
 /* pagination */
 .investor-relations {
