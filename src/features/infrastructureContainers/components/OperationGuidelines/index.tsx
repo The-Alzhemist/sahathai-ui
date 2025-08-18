@@ -18,6 +18,7 @@ import ResponsibilityScope from '@/features/infrastructureContainers/components/
 import DocumentProcess from '@/features/infrastructureContainers/components/OperationGuidelines/components/DocumentProcess'
 import ServiceProcess from '@/features/infrastructureContainers/components/OperationGuidelines/components/ServiceProcess'
 import BookingProcess from '@/features/infrastructureContainers/components/OperationGuidelines/components/BookingProcess'
+import Image from 'next/image'
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
@@ -45,13 +46,20 @@ export function OperationGuidelines() {
 
   return (
     <section
-      className='bg-[url("/background.jpeg")] bg-center bg-cover py-10'
-      id='operation-guidelines'
+      className="relative py-10 min-h-[1200px]"
+      id="operation-guidelines"
     >
-      <Animation className='my-10  max-w-[930px] w-full mx-auto px-5'>
-        <h1 className='headline-2 text-center  text-white'>{t('title')}</h1>
-        <section className='w-full flex flex-col md:flex-row gap-[24px] p-[16px] mt-[20px] shadow-2 rounded-[5px] bg-white'>
-          <Tabs className='flex  overflow-x-scroll md:block w-full md:w-[206px] shrink-0'>
+      {/* background */}
+      <div
+        className="absolute opacity-80 inset-0 bottom-0 z-0 bg-[url('/home/container-image.png')] bg-center bg-no-repeat bg-cover"
+      />
+
+      {/* content */}
+      <Animation className="relative z-10 max-w-[930px] w-full mx-auto px-5">
+        <h1 className="headline-2 text-center text-white">{t('title')}</h1>
+        <section
+          className="w-full flex flex-col md:flex-row gap-[24px]  p-[16px] mt-[20px] shadow-2 rounded-[20px] bg-[#eeeeee]">
+          <Tabs className="flex overflow-x-scroll md:block w-full md:w-[200px] shrink-0">
             {tabs.map(({ key, title }) => (
               <Tab
                 key={key}
@@ -63,27 +71,23 @@ export function OperationGuidelines() {
             ))}
           </Tabs>
 
-          {activeTab === 'docking' && (
-            // <Docking
-            //   imageUrl='/infrastructure-containers/docking.png'
-            //   description={t('docking.description')}
-            // />
-            <DockingInfo />
-          )}
-          {activeTab === 'operatingHours' && <OperatingHours />}
-          {activeTab === 'cfsLcl' && <CfsGoods />}
-          {activeTab === 'responsibilityScope' && <ResponsibilityScope />}
-          {activeTab === 'regulationsCargoShips' && <RegulationsCargoShips />}
-          {activeTab === 'safetyRegulations' && <SafetyRegulations />}
-          {activeTab === 'hazardousGoods' && <HazardousGoods />}
-          {activeTab === 'requestPermissionContact' && (
-            <RequestPermissionContact />
-          )}
-          {activeTab === 'documentSubmissionProcess' && <DocumentProcess />}
-          {activeTab === 'bookingProcess' && <BookingProcess />}
-          {activeTab === 'serviceCharge' && <ServiceProcess />}
+          <div className=' p-5 bg-white rounded-[10px]'>
+            {activeTab === "docking" && <DockingInfo />}
+            {activeTab === "operatingHours" && <OperatingHours />}
+            {activeTab === "cfsLcl" && <CfsGoods />}
+            {activeTab === "responsibilityScope" && <ResponsibilityScope />}
+            {activeTab === "regulationsCargoShips" && <RegulationsCargoShips />}
+            {activeTab === "safetyRegulations" && <SafetyRegulations />}
+            {activeTab === "hazardousGoods" && <HazardousGoods />}
+            {activeTab === "requestPermissionContact" && <RequestPermissionContact />}
+            {activeTab === "documentSubmissionProcess" && <DocumentProcess />}
+            {activeTab === "bookingProcess" && <BookingProcess />}
+            {activeTab === "serviceCharge" && <ServiceProcess />}
+          </div>
+
         </section>
       </Animation>
     </section>
+
   )
 }

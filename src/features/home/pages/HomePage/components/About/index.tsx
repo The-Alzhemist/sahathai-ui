@@ -29,7 +29,7 @@ export function About() {
           <div className='text-[32px] font-light text-red-400'>{tBanner('subTitle')}</div>
         </section>
         <WhyChooseSahathai />
-        <div className=" flex   justify-center mt-[72px] w-full relative z-10 py-[90px] bg-no-repeat bg-cover"  style={{
+        <div className=" flex justify-center mt-[72px] w-full relative z-10 py-[90px] bg-no-repeat bg-cover"  style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.3)), url('/home/container-image.png')`,
         }}>
 

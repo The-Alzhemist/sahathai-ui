@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl'
 export default function BookingProcess() {
     const locale = useLocale()
     return (
-        <section>
+        <section className='max-h-[1000px] overflow-y-scroll'>
 
             <Image
                 className='mb-5 rounded-md'
