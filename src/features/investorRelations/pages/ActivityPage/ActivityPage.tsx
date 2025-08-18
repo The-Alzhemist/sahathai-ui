@@ -1,42 +1,68 @@
+"use client"
+
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
 
 import { Banner } from '@/components/Banner'
 
-import ActivityAccordionList from '@/features/investorRelations/pages/ActivityPage/component/AccordientList'
-import { activity2567 } from '@/features/investorRelations/pages/ActivityPage/component/Docmuments/Activity2567'
-import { activity2568 } from '@/features/investorRelations/pages/ActivityPage/component/Docmuments/Activity2568'
+
+import { useState } from 'react'
+import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { ActivityPageProps } from '@/features/investorRelations/pages/ActivityPage/interface'
 
 
-export function ActivityPage() {
-  const t = useTranslations('InvestorInformationPage.Activity')
+export function ActivityPage({data}:ActivityPageProps) {
+  const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
   const tMenu = useTranslations('Menu')
-  const documents2567 = activity2567(t);
-  const documents2568 = activity2568(t);
+
+  if (!data) {
+    return <div>No data</div>
+  }
 
 
+  const group = data.story.content.body[0].group || []
+
+  const toggleTab = (groupIndex: number, tabIndex: number) => {
+    setOpenTabs(prev => {
+      const groupOpenTabs = prev[groupIndex] || []
+      const newOpenTabs = groupOpenTabs.includes(tabIndex)
+        ? groupOpenTabs.filter(i => i !== tabIndex)
+        : [...groupOpenTabs, tabIndex]
+      return { ...prev, [groupIndex]: newOpenTabs }
+    })
+  }
 
   return (
-    <main className=" pb-[176px] bg-white ">
-      <Menu/>
+    <main className="pb-[176px] bg-white">
+      <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('investorRelations.Activity')}
-        caption={tMenu('investorRelations.Activity')}
+        imagePath="/about-us/banner.png"
+        alt={tMenu('investorRelations.shareHolderMeeting')}
+        caption={tMenu('investorRelations.shareHolderMeeting')}
       />
-      <section className=" p-5 max-w-4xl mx-auto">
 
-        <div className="px-5 pt-5 rounded-md mb-7">
-          <ActivityAccordionList documents={documents2568} defaultOpenIndexes={[0]} />
-        </div>
+      <section className="p-5 max-w-4xl mx-auto space-y-6">
+        {group.map((groupItem: any, groupIndex: number) => (
+          <div key={groupIndex} className=" rounded-md p-4">
+            {/* --- Group Header (always visible) --- */}
+            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+              {groupItem.heading}
+            </h2>
 
-        <div className="px-5 pt-5 rounded-md mb-7">
-          <ActivityAccordionList documents={documents2567}  />
-        </div>
+            <div className="space-y-4">
+              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
+                const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
+                return (
+                  <AccordionTabs tabIndex={tabIndex} key={'activity-' + tabIndex} groupIndex={groupIndex} toggleTab={toggleTab}
+                                 tabItem={tabItem} isOpen={isOpen} />
+                )
+              })}
+            </div>
+          </div>
+        ))}
       </section>
     </main>
-
   )
 }
 
