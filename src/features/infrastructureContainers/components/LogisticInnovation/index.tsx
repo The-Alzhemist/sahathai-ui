@@ -9,7 +9,7 @@ export function LogisticInnovation() {
         id='logistic-innovation'
       >
         <Image
-          src='/infrastructure-containers/logistic-innovation-th-4.png'
+          src='/infrastructure-containers/logistic-innovation-th-prompt.png'
           fill
           alt=''
         />
