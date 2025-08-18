@@ -22,7 +22,7 @@ export function Menu() {
           : '-translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 '>
+      <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 rounded-b-[30px]'>
         {menus.map(menu => {
           const isActive = menu.pathname === pathname
           if (menu.children && menu.children.length) {
