@@ -28,7 +28,7 @@ export async function InvestorInformationPage() {
       {/*<Tabs activeMenu={InvestorRelationEnum.InvestorInformation} />*/}
       <section className='max-w-[1140px] w-full px-5 mx-auto  mt-[80px] flex gap-[21px]'>
         <div className='hidden md:flex'>
-          <SideMenu />
+          {/*<SideMenu />*/}
         </div>
 
         <section className='w-full space-y-[112px]'>
