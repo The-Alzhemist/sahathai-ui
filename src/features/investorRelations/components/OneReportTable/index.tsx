@@ -1,8 +1,5 @@
 import { useTranslations } from 'next-intl'
-
 import { DownloadButton } from '@/components/DownloadButton'
-import { Fragment } from 'react'
-import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { oneReportInformationList } from '@/features/investorRelations/components/OneReportTable/oneReportInformationList'
 
 export function OneReportTable() {
@@ -10,45 +7,62 @@ export function OneReportTable() {
   const t = useTranslations('InvestorInformationPage.OneReportTable')
 
   return (
-    <div>
-      <table className='w-full report shadow-6 rounded-[10px] overflow-hidden'>
-        <thead>
-        <tr>
-          <th className="subtitle-1">{common('year')}</th>
-          <th className="subtitle-1">Annual Report/รายงานประจำปี</th>
-          <th className="subtitle-1">Report 56-1/รายงาน 56-1</th>
-          <th className="subtitle-1">{t('56-1OneReport')}</th>
-        </tr>
-        </thead>
-        <tbody>
-        {oneReportInformationList.map((item, index) => (
-            <tr key={index}>
-              <td>
-                <div className="small-medium text-black-2">
-                  {item.year + 543}
+    <div
+      role="region"
+      aria-label="One Report Table"
+      className="w-full overflow-x-auto -mx-4 px-4 md:mx-auto py-5  z-10"
+      style={{ WebkitOverflowScrolling: 'touch' }} // iOS momentum scroll
+    >
+
+
+      <div className="min-w-[720px] md:min-w-0 max-w-[860px] mx-auto shadow-6 rounded-[20px] bg-white p-5 md:p-6">
+        {/* Header */}
+        <div className="p-4 grid grid-cols-[120px,1fr,1fr,1fr] md:grid-cols-[160px,1fr,1fr,1fr] gap-x-4 mb-3">
+          <div className="subtitle-1 text-darkGray !font-normal">{common('year')}</div>
+          <div className="subtitle-1 text-darkGray !font-normal text-center">
+            Annual Report<br/>รายงานประจำปี
+          </div>
+          <div className="subtitle-1 text-darkGray !font-normal text-center">
+            Report 56-1<br/>รายงาน 56-1
+          </div>
+          <div className="subtitle-1 text-darkGray !font-normal text-right">{t('56-1OneReport')}</div>
+        </div>
+
+        {/* Body */}
+        <div className="rounded-[20px] border border-[#CFE6FF] p-4 md:p-5">
+          <div className="divide-y divide-[#E6F2FF]">
+            {oneReportInformationList.map((item, idx) => (
+              <div
+                key={idx}
+                className="grid grid-cols-[120px,1fr,1fr,1fr] md:grid-cols-[160px,1fr,1fr,1fr] gap-x-4 py-5 items-center"
+              >
+                <div>
+                  <div className="small-medium text-black-2">{item.year + 543}</div>
+                  <div className="small-reg text-dark-40">{item.year}</div>
                 </div>
-                <div className="small-reg text-dark-40">{item.year}</div>
-              </td>
-              <td>
-                {item.annualReportUrl ? <DownloadButton className="mx-auto" href={item.annualReportUrl} /> : '-' }
-              </td>
-              <td>
-                {item.report56Url ? <DownloadButton className="mx-auto" href={item.report56Url} /> : '-' }
-              </td>
-              <td>
-                {item.oneReportUrl ? <DownloadButton className="mx-auto" href={item.oneReportUrl} /> : '-' }
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      {/*<button*/}
-      {/*  type="button"*/}
-      {/*  className='mt-[20px] subtitle-1 text-blue-400 flex items-center gap-[9px] mx-auto'*/}
-      {/*>*/}
-      {/*  <ArrowRightIcon className='rotate-90' width='16' height='16' />*/}
-      {/*  {common('seeMore')}*/}
-      {/*</button>*/}
+
+                <div className="flex justify-start md:justify-center">
+                  {item.annualReportUrl ? (
+                    <DownloadButton className="md:mx-auto" href={item.annualReportUrl} />
+                  ) : <span>-</span>}
+                </div>
+
+                <div className="flex justify-start md:justify-center">
+                  {item.report56Url ? (
+                    <DownloadButton className="md:mx-auto" href={item.report56Url} />
+                  ) : <span>-</span>}
+                </div>
+
+                <div className="flex justify-end">
+                  {item.oneReportUrl ? (
+                    <DownloadButton href={item.oneReportUrl} />
+                  ) : <span>-</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
