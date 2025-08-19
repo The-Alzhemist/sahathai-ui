@@ -26,7 +26,7 @@ export async function InvestorInformationPage() {
         className='mb-[40px]'
       />
       {/*<Tabs activeMenu={InvestorRelationEnum.InvestorInformation} />*/}
-      <section className='max-w-[1140px] w-full px-5 mx-auto  mt-[80px] flex gap-[21px]'>
+      <section className=' w-full  mx-auto  mt-[80px] '>
         <div className='hidden md:flex'>
           {/*<SideMenu />*/}
         </div>
@@ -37,6 +37,7 @@ export async function InvestorInformationPage() {
           {/*<Shareholder />*/}
           {/*<DividendPayment className=' w-full' />*/}
           {/*<ShareholdersMeeting />*/}
+
           <CompanyIntroductionVideo />
           <CompanyAdvertiseVideo/>
           <CompanyFactSheet/>
