@@ -23,7 +23,7 @@ export const revalidate = 3000
 const StockMarketInformation = async () => {
   // free stock api  update t - 3 day, get only 20 times/day
   const response = await fetch(
-    `https://eodhd.com/api/eod/PORT.BK?api_token=${EODHD_STOCK_TOKEN}&fmt=json`
+    `https://eodhd.com/api/eod/PORT.BK?api_token=677622d53db520.53886203&fmt=json`
   )
   const stockData: StockData[] = await response.json()
 
