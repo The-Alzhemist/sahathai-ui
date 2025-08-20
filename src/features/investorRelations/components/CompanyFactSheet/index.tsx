@@ -4,6 +4,9 @@ import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInfor
 import { Animation } from '@/components/Animation'
 import { LocaleButton } from '../LocaleButton'
 import { DownloadButton } from '@/components/DownloadButton'
+import Image from 'next/image'
+import { DocumentIcon } from '@/components/icons/DocumentIcon'
+import { PlusIcon } from '@/components/icons/PlusIcon'
 
 export function CompanyFactSheet() {
   const t = useTranslations('InvestorInformationPage.FactSheet')
@@ -11,25 +14,29 @@ export function CompanyFactSheet() {
 
   return (
     <Animation>
-      <div className='flex items-center justify-between mb-5'>
+      <div className='w-full'>
+      <section
+        className='relative flex-1 w-full bg-white mx-auto  rounded-[10px] p-5 border border-blue-200 '>
         <h2
-          className='headline-2 text-blue-400'
+          className="headline-2 text-blue-400 mb-5 !text-2xl flex items-center gap-5"
           id={InvestorInformationEnum.Factsheet}
         >
-          {t('title')}
+          <DocumentIcon className='text-navy  text-[0px]' width='34' height='38' />      {t('title')}
         </h2>
-        {/*<LocaleButton />*/}
-      </div>
 
-      <div className='mt-[32px] w-full flex justify-between items-center mb-5 border border-gray-200 bg-gray-50 rounded-md  p-5'>
-          <div>
-            {t('detail')}
+        <div
+          className="  flex justify-between items-center font-light">
+          <div >
+         {t('detail')}
           </div>
 
-        <div>
-          <DownloadButton  className='mx-auto' href='https://sahathaiterminal.com/wp-content/uploads/2022/02/Company-Snapshot-9M-2021.pdf' />
-        </div>
+          <div>
+            <DownloadButton className="mx-auto"
+                            href='https://sahathaiterminal.com/wp-content/uploads/2022/02/Company-Snapshot-9M-2021.pdf' />
+          </div>
 
+        </div>
+      </section>
       </div>
     </Animation>
   )
