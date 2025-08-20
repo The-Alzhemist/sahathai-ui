@@ -29,7 +29,7 @@ export function OneReportTable() {
         </div>
 
         {/* Body */}
-        <div className="rounded-[20px] border border-[#CFE6FF] p-4 md:p-5">
+        <div className="rounded-[20px] border border-[#CFE6FF] bg-[#FBFBFB] p-4 md:p-5">
           <div className="divide-y divide-[#E6F2FF]">
             {oneReportInformationList.map((item, idx) => (
               <div
