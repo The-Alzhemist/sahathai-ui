@@ -30,7 +30,6 @@ export function CompanyFactSheet() {
          {t('detail')}
           </div>
 
-\
           <div>
             <DownloadButton className="mx-auto"
                             href='https://sahathaiterminal.com/wp-content/uploads/2022/02/Company-Snapshot-9M-2021.pdf' />
