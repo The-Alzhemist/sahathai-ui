@@ -10,7 +10,7 @@ export function OneReportTable() {
     <div
       role="region"
       aria-label="One Report Table"
-      className="w-full overflow-x-auto -mx-4 px-4 md:mx-auto py-5  z-10"
+      className="w-full overflow-x-auto  px-4 md:mx-auto py-5  z-10"
       style={{ WebkitOverflowScrolling: 'touch' }} // iOS momentum scroll
     >
 

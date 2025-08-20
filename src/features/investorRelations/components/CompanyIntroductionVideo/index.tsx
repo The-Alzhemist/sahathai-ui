@@ -6,16 +6,14 @@ import { LocaleButton } from '../LocaleButton'
 
 export function CompanyIntroductionVideo() {
   const t = useTranslations('InvestorInformationPage.CompanyIntroductionVideo')
-    const locale = useLocale()
-
-    // Change videoId based on locale
     const videoId =  'N7I7cp5Erdg'
 
   return (
     <Animation>
-      <div className='flex items-center justify-between mb-5'>
+
+      <div className='max-w-[980px] mx-auto flex items-center justify-center mb-5 '>
         <h2
-          className='headline-2 text-blue-400'
+          className='headline-2 text-white text-center'
           id={InvestorInformationEnum.CompanyIntroductionVideo}
         >
           {t('title')}
@@ -23,16 +21,16 @@ export function CompanyIntroductionVideo() {
         {/*<LocaleButton />*/}
       </div>
 
-      <div className='mt-[32px] w-full flex justify-center mb-5'>
-        <iframe
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title='YouTube video player'
-          frameBorder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-          className='w-[90%] md:w-full aspect-video'
-        ></iframe>
-      </div>
+        <div className=' mt-[32px] w-full max-w-[980px] mx-auto flex justify-center mb-5 border-8 md:border-[20px] rounded-[20px] border-white overflow-hidden bg-white'>
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title='YouTube video player'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture '
+            allowFullScreen
+            className='max-w-[980px] rounded-[20px] aspect-video'
+          ></iframe>
+        </div>
+
     </Animation>
   )
 }
