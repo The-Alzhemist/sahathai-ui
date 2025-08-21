@@ -10,6 +10,8 @@ import { Banner } from '@/components/Banner'
 
 import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { fetchAllBlog, fetchLatestBlog } from '@/libs/storyblok/blogQuery'
+import { Pagination } from '@/features/blog/components/Paginate/Pagination'
+
 
 
 export const revalidate = 86400 // 5 min
@@ -28,7 +30,7 @@ export default async function blog({
 
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
-  const perPage = 2
+  const perPage = 1
   const search = searchParams.search?.trim() || undefined
 
 
@@ -93,7 +95,7 @@ export default async function blog({
             <div
               className=" flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center">
               {stories.length ? (
-                stories.map((s:any) => (
+                stories.map((s: any) => (
                   <BlogCard
                     key={s.content.body[0]._uid}
                     title={s.content.body[0].newsTitle}
@@ -110,30 +112,11 @@ export default async function blog({
           </section>
 
 
+          {/**/}
           <section className="flex justify-center">
-            {/* Pagination (ใช้ลิงก์ให้ server-render + ISR) */}
-            {totalPages > 1 && (
-              <div className="flex gap-2 mt-6">
-                {Array.from({ length: totalPages }).map((_, i) => {
-                  const p = i + 1
-                  const qs = new URLSearchParams()
-                  if (p !== 1) qs.set('page', String(p))
-                  if (search) qs.set('search', search)
-                  const href = `?${qs.toString()}`
-                  const isActive = p === page
-                  return (
-                    <Link
-                      key={p}
-                      href={href}
-                      className={`px-3 py-1 rounded border ${isActive ? 'bg-blue-300 text-white' : 'bg-white'}`}
-                    >
-                      {p}
-                    </Link>
-                  )
-                })}
-              </div>
-            )}
+            <Pagination page={page} totalPages={totalPages} search={search} />
           </section>
+          {/*  */}
 
         </div>
       </section>
