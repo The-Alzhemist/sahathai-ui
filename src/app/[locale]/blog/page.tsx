@@ -12,7 +12,7 @@ import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { fetchAllBlog, fetchLatestBlog } from '@/libs/storyblok/blogQuery'
 
 
-export const revalidate = 300 // 5 min
+export const revalidate = 86400 // 5 min
 
 export default async function blog({
                                      params,
