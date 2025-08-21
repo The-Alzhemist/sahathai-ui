@@ -18,7 +18,7 @@ interface StockData {
   volume: number
 }
 
-export const revalidate = 3000
+export const revalidate = 86400 // 1 วัน
 
 const StockMarketInformation = async () => {
   // free stock api  update t - 3 day, get only 20 times/day
