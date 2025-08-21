@@ -1,4 +1,3 @@
-// app/[locale]/blog/[slug]/page.tsx
 import { getTranslations } from 'next-intl/server'
 import { StoryblokStory } from '@storyblok/react/rsc'
 import Link from 'next/link'
@@ -10,7 +9,6 @@ export default async function Page({ params }: { params: { locale: string; slug:
 
   // Fetch blog using ISR-aware fetch
   const data = await fetchBlogBySlug(slug, locale)
-console.log("data::::",data)
 
   const t = await getTranslations('NewsPage')
 
