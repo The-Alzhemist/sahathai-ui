@@ -10,9 +10,8 @@ export async function fetchAllBlog({
                                      lang = 'th',
                                      version = 'published',
                                      search,
-                                     startsWith = 'blog' +
-                                     '/',
-                                     revalidate = 300,
+                                     startsWith = 'blog/',
+                                     revalidate = 86400,
                                    }: {
   page?: number
   perPage?: number
@@ -32,11 +31,17 @@ export async function fetchAllBlog({
     ...(search ? { search_term: search } : {}),
   })
 
-  const { data, headers } = await fetchJSON<StoryblokListResponse>(url, revalidate)
-  const total = Number(headers.get('total') || data.stories?.length || 0)
+  const res = await fetch(url, {
+    next: {
+      revalidate,
+      tags: ['story:blog-list', `story:blog-list:${lang}`], // ← สำคัญ
+    },
+  })
+  if (!res.ok) throw new Error('Failed to fetch list')
+  const data = await res.json()
+  const total = Number(res.headers.get('total') || data.stories?.length || 0)
   return { stories: data.stories, total }
 }
-
 
 
 // --------------
