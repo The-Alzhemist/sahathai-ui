@@ -25,10 +25,10 @@ export async function POST(req: NextRequest) {
   // (ออปชัน) ถ้าอยากชัวร์มากๆ เคลียร์ path ด้วย
   if (fullSlug) {
     // สมมติมี 2 locale
-    for (const locale of ['th', 'en']) {
+    for (const locale of ['th', 'en','cn']) {
       revalidatePath(`/${locale}/${fullSlug}`, 'page')
     }
-    for (const locale of ['th', 'en']) {
+    for (const locale of ['th', 'en','cn']) {
       revalidatePath(`/${locale}/blog`, 'page')
     }
   }

@@ -86,7 +86,7 @@ export async function fetchBlogBySlug(slug: string, lang: string) {
 
   const res = await fetch(url, {
     next: {
-      revalidate: 3600,          // ค่าพื้นฐานยาวๆ ไปก่อน
+      revalidate: 86400,          // cache 1 วัน
       tags: [`story:${slug}`, 'story:blog-list'], // <- สำคัญ
     },
   })
