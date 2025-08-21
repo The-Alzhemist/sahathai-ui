@@ -4,7 +4,6 @@ import { StoryblokStory } from '@storyblok/react/rsc'
 import Link from 'next/link'
 import { fetchBlogBySlug } from '@/libs/storyblok/blogQuery'
 
-export const revalidate = 0 // ✅ Next.js ISR works
 
 export default async function Page({ params }: { params: { locale: string; slug: string } }) {
   const { slug, locale } = params
