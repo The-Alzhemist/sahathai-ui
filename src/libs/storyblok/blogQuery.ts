@@ -2,7 +2,6 @@ import { buildUrl, fetchJSON } from './client'
 import {
   StoryblokListResponse,
 } from './types'
-import { getStoryblokApi } from '@/libs/storyblok'
 import { ISbStoriesParams } from '@storyblok/react/rsc'
 
 export async function fetchAllBlog({
@@ -43,15 +42,34 @@ export async function fetchAllBlog({
 // --------------
 
 
-export async function fetchBlogBySlug(slug: string, lang: string) {
-  const sbParams: ISbStoriesParams = {
-    version: 'draft', // or 'draft' based on your needs
-    language: lang,
-  }
+// export async function fetchBlogBySlug(slug: string, lang: string) {
+//   const sbParams: ISbStoriesParams = {
+//     version: 'draft', // or 'draft' based on your needs
+//     language: lang,
+//   }
+//
+//   const storyblokApi = getStoryblokApi()
+//   const storyBookData = storyblokApi.get(`cdn/stories/blog/${slug}`, sbParams)
+//   return storyBookData
+// }
 
-  const storyblokApi = getStoryblokApi()
-  const storyBookData = storyblokApi.get(`cdn/stories/blog/${slug}`, sbParams)
-  return storyBookData
+
+
+export async function fetchBlogBySlug(slug: string, lang: string) {
+  const url =
+    `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
+    new URLSearchParams({
+      token: process.env.STORYBLOK_TOKEN as string,
+      version: 'published', // ✅ ใช้ published สำหรับ ISR
+      language: lang,
+    })
+
+  const res = await fetch(url, {
+    next: { revalidate: 300 }, // ✅ revalidate ทุก 300 วินาที
+  })
+
+  if (!res.ok) throw new Error('Failed to fetch story')
+  return res.json()
 }
 
 
