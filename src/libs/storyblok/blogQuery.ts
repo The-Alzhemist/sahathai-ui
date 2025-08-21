@@ -55,19 +55,41 @@ export async function fetchAllBlog({
 
 
 
+// export async function fetchBlogBySlug(slug: string, lang: string) {
+//   const url =
+//     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
+//     new URLSearchParams({
+//       token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
+//       version: 'published', // ✅ ใช้ published สำหรับ ISR
+//       language: lang,
+//     })
+//
+//   const res = await fetch(url, {
+//     next: { revalidate: 300 }, // ✅ revalidate ทุก 300 วินาที
+//   })
+//
+//   if (!res.ok) throw new Error('Failed to fetch story')
+//   return res.json()
+// }
+
+
+
 export async function fetchBlogBySlug(slug: string, lang: string) {
   const url =
     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
     new URLSearchParams({
       token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
-      version: 'published', // ✅ ใช้ published สำหรับ ISR
+      version: 'published',      // ใช้ published สำหรับเว็บจริง
       language: lang,
+      // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
     })
 
   const res = await fetch(url, {
-    next: { revalidate: 300 }, // ✅ revalidate ทุก 300 วินาที
+    next: {
+      revalidate: 3600,          // ค่าพื้นฐานยาวๆ ไปก่อน
+      tags: [`story:${slug}`, 'story:blog-list'], // <- สำคัญ
+    },
   })
-
   if (!res.ok) throw new Error('Failed to fetch story')
   return res.json()
 }
