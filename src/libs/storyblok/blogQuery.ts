@@ -59,7 +59,7 @@ export async function fetchBlogBySlug(slug: string, lang: string) {
   const url =
     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
     new URLSearchParams({
-      token: process.env.STORYBLOK_TOKEN as string,
+      token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
       version: 'published', // ✅ ใช้ published สำหรับ ISR
       language: lang,
     })
