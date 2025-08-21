@@ -24,7 +24,7 @@ export const AccordionTabs = ({
       <div
         className="transition-all duration-500 ease-in-out overflow-hidden bg-white text-darkGray"
         style={{
-          maxHeight: isOpen ? '1000px' : '0px',
+          maxHeight: isOpen ? '2000px' : '0px',
           opacity: isOpen ? 1 : 0,
         }}
       >
