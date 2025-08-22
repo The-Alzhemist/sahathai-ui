@@ -12,6 +12,11 @@ import { Banner } from '@/components/Banner'
 
 import { DownloadButton } from '@/components/DownloadButton'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
+import { SustainCard } from '@/features/investorRelations/pages/SustainabilityManagementPage/SustainCard/Card'
+import { EsgRisk } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/EsgRisk/EsgRisk'
+import {
+  EmergingRisk
+} from '@/features/investorRelations/pages/SustainabilityManagementPage/components/EmergingRisk/EmergingRisk'
 
 export const sustainabilityDocuments = [
   {
@@ -74,6 +79,12 @@ export function SustainabilityManagementPage() {
           />
         </Animation>
       </section>
+
+
+      {/*---------*/}
+      <EsgRisk/>
+      <EmergingRisk/>
+      {/*----------*/}
 
       <RiskCard>
         <RiskCard.Title>{t('esgRisk.title')}</RiskCard.Title>
