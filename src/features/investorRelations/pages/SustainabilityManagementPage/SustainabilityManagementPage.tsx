@@ -11,6 +11,7 @@ import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 
 import { DownloadButton } from '@/components/DownloadButton'
+import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 
 export const sustainabilityDocuments = [
   {
@@ -32,37 +33,48 @@ export function SustainabilityManagementPage() {
         imagePath='/about-us/banner.png'
         alt={t('investorRelations')}
         caption={t('title')}
-        className='mb-[40px]'
+        className=''
       />
       {/*<Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />*/}
-      <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
-        {t('title')}
-      </h2>
-      <h3 className='mt-[8px] headline-4 text-center text-blue-400'>
-        {t('subTitle')}
-      </h3>
-      <Animation className='mt-[29px] max-w-[1140px] mx-auto flex justify-center flex-wrap gap-[48px]'>
-        <SustainabilityCard
-          title={t('economicDimension.title')}
-          descriptions={[t('economicDimension.description')]}
-        />
-        <SustainabilityCard
-          title={t('socialDimension.title')}
-          descriptions={[
-            t('socialDimension.description'),
-            t('socialDimension.description2'),
-            t('socialDimension.description3'),
-          ]}
-        />
-        <SustainabilityCard
-          title={t('environmentalDimension.title')}
-          descriptions={[
-            t('environmentalDimension.description'),
-            t('environmentalDimension.description2'),
-            t('environmentalDimension.description3'),
-          ]}
-        />
-      </Animation>
+      <section className='bg-gradient-to-t from-[#D5E4EF] to-[#F5F5F5] pt-[20px] pb-[30px]'>
+        <div className="max-w-[950px] mx-auto px-5">
+          <h2 className="flex items-center gap-2 mt-[103px] headline-2 text-left text-blue-400">
+            <DoubleQuoteIcon className="text-red-400" /> {t('title')}
+          </h2>
+          <h3 className="mt-[8px] headline-4 text-[16px] font-light text-left text-blue-400">
+            {t('subTitle')}
+          </h3>
+        </div>
+
+        <Animation className="mt-[50px] mb-[100px] max-w-[950px] mx-auto flex gap-y-5 justify-center md:justify-between  flex-wrap ">
+          <SustainabilityCard
+            title={t('economicDimension.title')}
+            descriptions={[t('economicDimension.description')]}
+            imagePath="/investor-relations/hand-red.png"
+            imgClassName="w-[70px] h-[49px]"
+          />
+          <SustainabilityCard
+            title={t('socialDimension.title')}
+            descriptions={[
+              t('socialDimension.description'),
+              t('socialDimension.description2'),
+              t('socialDimension.description3')
+            ]}
+            imagePath="/investor-relations/people-red.png"
+            imgClassName="w-[80px] h-[60px]"
+          />
+          <SustainabilityCard
+            title={t('environmentalDimension.title')}
+            descriptions={[
+              t('environmentalDimension.description'),
+              t('environmentalDimension.description2'),
+              t('environmentalDimension.description3')
+            ]}
+            imagePath="/investor-relations/heart-red.png"
+          />
+        </Animation>
+      </section>
+
       <RiskCard>
         <RiskCard.Title>{t('esgRisk.title')}</RiskCard.Title>
         <RiskCard.Section
@@ -85,10 +97,10 @@ export function SustainabilityManagementPage() {
           description={t('emergingRisk.riskManagement.description')}
         />
       </RiskCard>
-      <SustainabilityManagementPolicy className='mt-[46px]' />
+      <SustainabilityManagementPolicy className="mt-[46px]" />
 
       <section className="p-5 max-w-4xl mx-auto">
-        {sustainabilityDocuments.map((doc:any, index:number) => (
+        {sustainabilityDocuments.map((doc: any, index: number) => (
           <div
             key={index}
             className="mt-[32px] w-full flex justify-between items-center mb-5 border border-gray-200 bg-gray-50 rounded-md p-5"
@@ -103,7 +115,7 @@ export function SustainabilityManagementPage() {
       </section>
 
 
-        <section className='space-y-[40px] mt-[88px]'>
+      <section className="space-y-[40px] mt-[88px]">
           <Animation className='max-w-[960px] w-full mx-auto'>
             <div className='relative pt-[86.88%] w-full'>
               <Image
