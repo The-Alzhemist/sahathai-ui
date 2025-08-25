@@ -10,7 +10,7 @@ export function News() {
   const t = useTranslations('HomePage.News')
 
   return (
-    <section className='container mt-[83px]'>
+    <section className='container !my-0 py-[80px] bg-white'>
       <h2 className='headline-2 text-center text-navy'>{t('title')}</h2>
       <Animation className='mt-[42px] flex flex-wrap justify-center gap-[32px] max-w-[1100px] mx-auto'>
         <LatestNewsHomePageList />
