@@ -8,15 +8,16 @@ export function Highlight() {
   const t = useTranslations('HomePage.Highlight')
 
   return (
-    <section className='relative container mt-[132px] min-h-[670px] '>
+    <section className='relative container min-h-[670px] '>
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/home/home-highlight-bg.webp"
+          src="/home/home-highlight-bg-blue.webp"
           alt="lisense background"
           fill
           className="object-cover"
           priority
         />
+
       </div>
 
       <div className='max-w-[951px] mx-auto grid grid-cols-[36px_1fr] gap-x-[16px] gap-y-[8px]'>
