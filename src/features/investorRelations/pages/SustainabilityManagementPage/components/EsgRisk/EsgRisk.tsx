@@ -19,8 +19,8 @@ export const EsgRisk = () => {
         />
 
         {/* Overlay content */}
-        <div className="absolute inset-0 flex items-center justify-center  max-w-[1000px] mx-auto">
-          <h1 className="text-white text-3xl font-bold">{t('esgRisk.title')}</h1>
+        <div className="absolute inset-0 flex items-center justify-center  max-w-[1000px] mx-auto bg-gradient-to-t from-modellBgDark/80 to-[#F5F5F5]/10">
+          <h1 className="text-white text-3xl font-bold ">{t('esgRisk.title')}</h1>
         </div>
       </div>
 

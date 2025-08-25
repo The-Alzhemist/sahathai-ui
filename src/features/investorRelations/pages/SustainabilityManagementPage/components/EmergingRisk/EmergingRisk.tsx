@@ -15,11 +15,11 @@ export const EmergingRisk = () => {
           alt="emerging-bg"
           fill
           priority
-          className="object-cover"
+          className="object-cover "
         />
 
         {/* Overlay content */}
-        <div className="absolute inset-0 flex items-center  justify-center md:justify-start max-w-[1000px] mx-auto">
+        <div className="absolute inset-0 flex items-center  justify-center md:justify-start max-w-[1000px] mx-auto bg-gradient-to-t from-modellBgDark/80 to-[#F5F5F5]/10">
           <h1 className="text-white text-3xl font-bold">{t('emergingRisk.title')}</h1>
         </div>
       </div>
