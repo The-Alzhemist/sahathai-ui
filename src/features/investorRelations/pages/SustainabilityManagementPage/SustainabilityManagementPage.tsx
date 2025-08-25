@@ -33,9 +33,6 @@ export function SustainabilityManagementPage() {
           <h2 className="flex items-center justify-center md:justify-start gap-2 mt-[103px] headline-2 text-left text-blue-400">
             <DoubleQuoteIcon className="text-red-400" /> {t('title')}
           </h2>
-          <h3 className="mt-[8px] headline-4 text-[16px] font-light text-left text-blue-400">
-            {t('subTitle')}
-          </h3>
         </div>
 
         <Animation className="mt-[50px] mb-[100px] max-w-[950px] mx-auto flex gap-y-5 justify-center md:justify-between  flex-wrap ">
