@@ -72,6 +72,8 @@ export function Shareholder() {
         <ShareholderCard.Item title={t('minorityShareholders')} value='3,473' />
         <ShareholderCard.Item title={t('minorityShareholding')} value='44.36' />
       </ShareholderCard>
+
+
       <ShareholderCard
         className='mt-[48px]'
         title={t('shareholderOverview', { date: '11/03/2567', type: 'XM' })}

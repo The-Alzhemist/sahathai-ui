@@ -20,3 +20,6 @@ export function textBreakAndReturnNewLine(
     .map(line => line.trim())
     .filter(line => line.length > 0)
 }
+
+export const commaNumberFormat = (v: number) =>
+  new Intl.NumberFormat("th-TH", { maximumFractionDigits: 2 }).format(v);
