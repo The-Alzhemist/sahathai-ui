@@ -123,9 +123,9 @@ export function SustainabilityManagementPage() {
       {/*</section>*/}
 
 
-      <section className="space-y-[40px] mt-[88px]">
+      <section className="space-y-[40px] py-[88px] bg-white">
         <Animation className='max-w-[960px] w-full mx-auto'>
-          <div className='relative pt-[86.88%] w-full'>
+          <div className='relative pt-[86.88%] w-full '>
             <Image
               src='/investor-relations/sustainable-1.png'
               alt=''
