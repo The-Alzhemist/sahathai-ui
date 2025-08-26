@@ -8,6 +8,7 @@ import { ShareholderCard } from '@/features/investorRelations/components/Shareho
 import { Link } from '@/libs/intl/navigation'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import {Banner} from "@/components/Banner";
+import ShareHolderFreeFloatTable from '@/features/investorRelations/pages/ShareHolderPage/components/ShareHolderFreeFloatTable'
 
 
 export function ShareHolderPage() {
@@ -26,13 +27,13 @@ export function ShareHolderPage() {
         <Animation>
           <h2
             id={InvestorInformationEnum.Shareholder}
-            className="headline-2 text-black-80"
+            className="headline-2 text-black-80 text-center mb-5 text-navy"
           >
             {t('title')}
           </h2>
 
           <Link
-            className=" w-fit  text-blue-400 subtitle-1 flex items-center justify-items-start  gap-[9px]"
+            className=" w-full text-blue-400 subtitle-1 flex items-center justify-center  gap-[9px]"
             href="https://www.set.or.th/th/market/product/stock/quote/PORT/major-shareholders"
             target="_blank"
             rel="noopener noreferrer"
@@ -40,6 +41,9 @@ export function ShareHolderPage() {
             {t('stockDistribution')}
             <ArrowRightIcon width="16" height="16" />
           </Link>
+
+          <ShareHolderFreeFloatTable
+          />
 
           <ShareholderCard
             className="mt-[60px]"
