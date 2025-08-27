@@ -14,7 +14,7 @@
       "shares": "% หุ้น",
       "shareholderFreeFloatOverview": "ผู้ถือหุ้นรายย่อย ณ วันที่ {date}",
       "type": "ประเภท",
-      "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date} ประเภท : {type}",
+      "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date}",
       "minorityShareholders": "จำนวนผู้ถือหุ้นรายย่อย (Free float)",
       "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
       "numberShareholder": "จำนวนผู้ถือหุ้นทั้งหมด",

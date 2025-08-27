@@ -4,9 +4,6 @@ import { useTranslations } from 'next-intl'
 import { commaNumberFormat } from '@/libs/util'
 
 
-
-
-
 export default function ShareHolderFreeFloatTable() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
   return (
@@ -25,10 +22,10 @@ export default function ShareHolderFreeFloatTable() {
 
       {/* Row 1 */}
       <div className="grid grid-cols-[auto,1fr,auto] items-center gap-4 py-5 border-b border-slate-200">
-        <Image src={'/investor-relations/people.png'} alt={'people-icon'} height={50} width={50} />
+        <Image src={'/investor-relations/people-circle-blue.png'} alt={'people-icon'} height={50} width={50} />
         <div className="text-darkGray">
           <div className="font-normal  ">
-            จำนวนผู้ถือหุ้นรายย่อย (Free float)
+           {t('minorityShareholders')}
           </div>
         </div>
         <div className="text-right font-normal ">
@@ -38,10 +35,10 @@ export default function ShareHolderFreeFloatTable() {
 
       {/* Row 2 */}
       <div className="grid grid-cols-[auto,1fr,auto] items-center gap-4 py-5">
-        <Image src={'/investor-relations/percent.png'} alt={'people-icon'} height={50} width={50} />
+        <Image src={'/investor-relations/percent-circle-blue.png'} alt={'people-icon'} height={50} width={50} />
         <div className="text-darkGray">
           <div className="font-normal">
-            % การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)
+           {t('minorityShareholding')}
           </div>
         </div>
         <div className="text-right  font-normal">
