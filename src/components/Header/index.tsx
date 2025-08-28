@@ -72,7 +72,7 @@ export function Header() {
           <ul className="flex justify-end items-center w-full medium gap-[42px] md:mr-10">
             <li className="hidden md:block ">
               <Link href="/blog" className="flex items-center">
-               Blog
+                {t('blog')}
               </Link>
             </li>
             <li className="hidden md:block ">
