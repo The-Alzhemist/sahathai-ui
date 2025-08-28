@@ -11,6 +11,8 @@ export async function LatestBlogCard({ blog, locale, page }: LatestBlogCardProps
   const common = await getTranslations('common')
 
 
+
+
   if (!blog) {
     return (
       <div className="flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1">
@@ -29,43 +31,44 @@ export async function LatestBlogCard({ blog, locale, page }: LatestBlogCardProps
   const content = blog.content.body[0]
 
   return (
-    <section
-      className={cn(
-        'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1'
-      )}
+    <Link
+      href={`/${page}/${blog.slug}`}
+      className="group block hover:scale-105 transition-all"
     >
-      <div className="w-full md:w-[48%]">
-        <Image
-          src={content.newsImageCover.filename}
-          alt={content.newsTitle || 'News image'}
-          width={600}
-          height={500}
-          className="w-full h-full"
-        />
-      </div>
+      <section
+        className={cn(
+          'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1'
+        )}
+      >
+        <div className="w-full md:w-[48%]">
+          <Image
+            src={content.newsImageCover.filename}
+            alt={content.newsTitle || 'News image'}
+            width={600}
+            height={500}
+            className="w-full h-full"
+          />
+        </div>
 
-      <div className="w-full md:w-[52%] p-5">
-        <h2 className="mt-[23px] headline-4 line-clamp-2 text-black">
-          {content.newsTitle}
-        </h2>
-        <p className="mt-[10px] body-2 line-clamp-2 text-black-6">
-          {extractTextFieldsStoryblok(content.newsDescription)}
-        </p>
-        <div className="mt-[10px] caption text-black-3">{content.newsDate}</div>
+        <div className="w-full md:w-[52%] p-5">
+          <h2 className="mt-[23px] headline-4 line-clamp-2 text-black">
+            {content.newsTitle}
+          </h2>
+          <p className="mt-[10px] body-2 line-clamp-2 text-black-6">
+            {extractTextFieldsStoryblok(content.newsDescription)}
+          </p>
+          <div className="mt-[10px] caption text-black-3">{content.newsDate}</div>
 
-        <Link
-          href={`/${page}/${blog.slug}`}
-          className="mt-[23px] button-small text-navy w-fit flex gap-[10px] items-center"
-        >
-          <button
-            className="p-[10px] bg-navy rounded-full text-white"
-            type="button"
-          >
-            <ArrowRightIcon width="20" height="20" />
-          </button>
-          {common('readMore')}
-        </Link>
-      </div>
-    </section>
+          {/* แค่ทำเป็นปุ่มสวย ๆ แต่ไม่ใช่ลิงก์ซ้อน */}
+          <div className="mt-[23px] button-small text-navy w-fit flex gap-[10px] items-center">
+        <span className="p-[10px] bg-navy rounded-full text-white inline-flex">
+          <ArrowRightIcon width="20" height="20" />
+        </span>
+            {common('readMore')}
+          </div>
+        </div>
+      </section>
+    </Link>
+
   )
 }
