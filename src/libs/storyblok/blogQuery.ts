@@ -47,6 +47,27 @@ export async function fetchAllBlog({
 }
 
 
+export async function fetchNewsBySlug(slug: string, lang: string) {
+  const url =
+    `https://api.storyblok.com/v2/cdn/stories/news/${slug}?` +
+    new URLSearchParams({
+      token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
+      version: 'published',
+      language: lang,
+      // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
+    })
+
+  const res = await fetch(url, {
+    next: {
+      revalidate: 86400,          // cache 1 วัน
+      tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
+    },
+  })
+  if (!res.ok) throw new Error('Failed to fetch story')
+  return res.json()
+}
+
+
 
 export async function fetchBlogBySlug(slug: string, lang: string) {
   const url =
