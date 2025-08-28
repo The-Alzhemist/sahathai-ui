@@ -2,6 +2,8 @@
   "NewsPage": {
     "latestNews": "Latest News",
     "pressRelease": "Press Release",
+    "latestBlog": "บทความล่าสุด",
+    "allBlog": "บทความทั้งหมด",
     "Brochure": {
       "title": "Download Our Brochure Here",
       "description": "Our brochure is a PDF file of 3.3 MB, containing information about the company, the port, and our operations. Click on the image to download or click to view the image in the browser."
