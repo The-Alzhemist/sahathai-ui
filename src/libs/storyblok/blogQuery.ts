@@ -12,6 +12,7 @@ export async function fetchAllBlog({
                                      search,
                                      startsWith = 'blog/',
                                      revalidate = 86400, // 1 day
+                                     sortBy = 'created_at:desc',
                                    }: {
   page?: number
   perPage?: number
@@ -20,6 +21,7 @@ export async function fetchAllBlog({
   search?: string
   startsWith?: string
   revalidate?: number
+  sortBy?: string
 }) {
   const url = buildUrl('stories', {
     version,
@@ -28,6 +30,7 @@ export async function fetchAllBlog({
     page,
     per_page: perPage,
     language: lang,
+    sort_by: sortBy,
     ...(search ? { search_term: search } : {}),
   })
 
@@ -99,7 +102,7 @@ export async function fetchLastBlog({
                                       lang = 'th',
                                       startsWith = 'blog/',
                                       revalidate = 84600, // 1 วัน
-                                      sortBy = 'first_published_at:desc', // หรือ 'published_at:desc'
+                                      sortBy = 'created_at:desc',
                                     }: {
   lang?: string
   startsWith?: string
