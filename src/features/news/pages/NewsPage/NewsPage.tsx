@@ -5,6 +5,8 @@ import { Menu } from '@/components/Menu'
 import { LastestNews } from '@/components/LastestNews/LastestNews'
 import NewsBlogList from '@/features/news/components/NewsBlogList/NewsBlogList'
 import { Banner } from '@/components/Banner'
+import Image from 'next/image'
+
 
 export function NewsPage() {
   const t = useTranslations('NewsPage')
@@ -43,8 +45,16 @@ export function NewsPage() {
           </Animation>
         </section>
 
-        <section className='bg-[#E9F4FF] min-h-[450px] flex justify-center items-center px-5'>
-          <Brochure className='' />
+        <section className='relative  min-h-[450px] flex justify-center items-center px-5'>
+          <Image
+            src="/news/blog-contact-bg.webp"
+            alt="Sustainability Background"
+            fill
+            className="absolute inset-0 object-cover object-center z-0"
+            priority
+          />
+
+          <Brochure className='z-10' />
         </section>
       </section>
     </main>
