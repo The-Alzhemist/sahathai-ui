@@ -1,4 +1,4 @@
-'use client'
+
 
 import { Link } from '@/libs/intl/navigation'
 import { buildPagination } from '@/features/blog/components/Paginate/buildPagination'
@@ -14,7 +14,7 @@ export function Pagination({ page, totalPages, search }: Props) {
 
   const hrefFor = (p: number) => {
     const qs = new URLSearchParams()
-    if (p > 1) qs.set('page', String(p))
+    if (p >= 1) qs.set('page', String(p))
     if (search) qs.set('search', search)
     return `?${qs.toString()}`
   }
@@ -46,7 +46,7 @@ export function Pagination({ page, totalPages, search }: Props) {
   return (
     <nav className="flex items-center gap-2 mt-6" aria-label="Pagination">
       <Btn
-        href={page > 1 ? hrefFor(page - 1) : undefined}
+        href={page > 1 ? hrefFor(page - 1) : hrefFor(1)}
         disabled={page === 1}
         ariaLabel="Previous page"
       >

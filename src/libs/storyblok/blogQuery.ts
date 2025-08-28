@@ -11,12 +11,12 @@ export async function fetchAllBlog({
                                      version = 'published',
                                      search,
                                      startsWith = 'blog/',
-                                     revalidate = 86400,
+                                     revalidate = 86400, // 1 day
                                    }: {
   page?: number
   perPage?: number
   lang?: string
-  version?: 'draft' | 'published'
+  version?: 'published'
   search?: string
   startsWith?: string
   revalidate?: number
@@ -44,47 +44,13 @@ export async function fetchAllBlog({
 }
 
 
-// --------------
-
-
-// export async function fetchBlogBySlug(slug: string, lang: string) {
-//   const sbParams: ISbStoriesParams = {
-//     version: 'draft', // or 'draft' based on your needs
-//     language: lang,
-//   }
-//
-//   const storyblokApi = getStoryblokApi()
-//   const storyBookData = storyblokApi.get(`cdn/stories/blog/${slug}`, sbParams)
-//   return storyBookData
-// }
-
-
-
-// export async function fetchBlogBySlug(slug: string, lang: string) {
-//   const url =
-//     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
-//     new URLSearchParams({
-//       token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
-//       version: 'published', // ✅ ใช้ published สำหรับ ISR
-//       language: lang,
-//     })
-//
-//   const res = await fetch(url, {
-//     next: { revalidate: 300 }, // ✅ revalidate ทุก 300 วินาที
-//   })
-//
-//   if (!res.ok) throw new Error('Failed to fetch story')
-//   return res.json()
-// }
-
-
 
 export async function fetchBlogBySlug(slug: string, lang: string) {
   const url =
     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
     new URLSearchParams({
       token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
-      version: 'published',      // ใช้ published สำหรับเว็บจริง
+      version: 'published',
       language: lang,
       // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
     })
@@ -92,7 +58,7 @@ export async function fetchBlogBySlug(slug: string, lang: string) {
   const res = await fetch(url, {
     next: {
       revalidate: 86400,          // cache 1 วัน
-      tags: [`story:${slug}`, 'story:blog-list'], // <- สำคัญ
+      tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
     },
   })
   if (!res.ok) throw new Error('Failed to fetch story')
@@ -101,21 +67,47 @@ export async function fetchBlogBySlug(slug: string, lang: string) {
 
 
 // ---------------------------------------
-export async function fetchLatestBlog({
-                                        lang = 'th',
-                                        version = 'published',
-                                        startsWith = 'blog/',
-                                        revalidate = 300,
-                                        sortBy = 'first_published_at:desc',
-                                      }: {
+
+// export async function fetchLatestBlog({
+//                                         lang = 'th',
+//                                         version = 'published',
+//                                         startsWith = 'blog/',
+//                                         revalidate = 300,
+//                                         sortBy = 'first_published_at:desc',
+//                                       }: {
+//   lang?: string
+//   version?: 'draft' | 'published'
+//   startsWith?: string
+//   revalidate?: number
+//   sortBy?: string
+// }) {
+//   const url = buildUrl('stories', {
+//     version,
+//     starts_with: startsWith,
+//     is_startpage: false,
+//     page: 1,
+//     per_page: 1,
+//     language: lang,
+//     sort_by: sortBy,
+//   })
+//
+//   const { data } = await fetchJSON<StoryblokListResponse>(url, revalidate)
+//   return data.stories?.[0] ?? null
+// }
+
+export async function fetchLastBlog({
+                                      lang = 'th',
+                                      startsWith = 'blog/',
+                                      revalidate = 84600, // 1 วัน
+                                      sortBy = 'first_published_at:desc', // หรือ 'published_at:desc'
+                                    }: {
   lang?: string
-  version?: 'draft' | 'published'
   startsWith?: string
   revalidate?: number
   sortBy?: string
 }) {
   const url = buildUrl('stories', {
-    version,
+    version: 'published',
     starts_with: startsWith,
     is_startpage: false,
     page: 1,
@@ -124,6 +116,18 @@ export async function fetchLatestBlog({
     sort_by: sortBy,
   })
 
-  const { data } = await fetchJSON<StoryblokListResponse>(url, revalidate)
-  return data.stories?.[0] ?? null
+  const res = await fetch(url, {
+    next: {
+      revalidate,
+      // ใช้ tags เดียวกับ fetchAllBlog
+      tags: ['story:blog-list', `story:blog-list:${lang}`],
+    },
+  })
+
+  if (!res.ok) throw new Error('Failed to fetch latest blog')
+
+  const data = await res.json()
+
+  console.log("data::",data)
+  return data?.stories?.[0] ?? null
 }

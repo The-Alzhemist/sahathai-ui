@@ -2,19 +2,21 @@
 import { getTranslations } from 'next-intl/server'
 
 
-import { Link } from '@/libs/intl/navigation'
 import { BlogCard } from '../../../components/BlogCard'
 import React from 'react'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 
 import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
-import { fetchAllBlog, fetchLatestBlog } from '@/libs/storyblok/blogQuery'
+import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
+import Image from 'next/image'
+import { Brochure } from '@/features/news/components/Brochure'
+import { redirect } from 'next/navigation'
 
 
 
-export const revalidate = 86400 // 5 min
+export const revalidate = 86400 // 1  วัน
 
 export default async function blog({
                                      params,
@@ -25,12 +27,14 @@ export default async function blog({
 }) {
   // translation
   const t = await getTranslations('NewsPage')
-  const tMenu = await  getTranslations('Menu')
 
+  if (!searchParams.page) {
+    redirect(`/${params.locale}/blog?page=1`)
+  }
 
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
-  const perPage = 1
+  const perPage = 8
   const search = searchParams.search?.trim() || undefined
 
 
@@ -45,9 +49,8 @@ export default async function blog({
     revalidate: 86400,
   })
 
-  const latestBlog = await fetchLatestBlog({
+  const latestBlog = await fetchLastBlog({
     lang: locale,
-    version: 'published',
     startsWith: 'blog/',
     revalidate: 86400,
   })
@@ -55,26 +58,24 @@ export default async function blog({
   const totalPages = Math.ceil(total / perPage)
 
 
+
+
+
   return (
     <main>
       <Menu />
-      <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('news')}
-        caption={tMenu('news')}
-      />
 
-      <section className="flex flex-col items-center justify-center py-14 px-6">
+      <section className="flex flex-col items-center justify-center pt-14 pb-[100px] px-6">
         <h2 className="headline-2 text-blue-400 text-center mb-7">
           {t('latestNews')}
         </h2>
 
-       <LatestBlogCard blog={latestBlog} locale={locale} page={'blog'}  />
+        <LatestBlogCard blog={latestBlog} locale={locale} page={'blog'} />
       </section>
 
 
       {/*All blog*/}
-      <section className="bg-white">
+      <section className="bg-white pt-[70px]">
         <div className="max-w-[1100px] mx-auto p-6">
           <h2 className="headline-2 text-blue-400 text-center mb-7">
             {t('pressRelease')}
@@ -91,7 +92,7 @@ export default async function blog({
           {/*  <button className="px-4 py-1 bg-blue-600 text-white rounded">Search</button>*/}
           {/*</form>*/}
 
-          <section className="flex flex-col justify-center items-center">
+          <section className="flex flex-col justify-center items-center ">
             <div
               className=" flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center">
               {stories.length ? (
@@ -113,12 +114,26 @@ export default async function blog({
 
 
           {/**/}
-          <section className="flex justify-center">
+          <section className="flex justify-center mb-[90px]">
             <Pagination page={page} totalPages={totalPages} search={search} />
           </section>
           {/*  */}
 
         </div>
+      </section>
+
+
+      {/* Brochure */}
+      <section className="relative  min-h-[450px] flex justify-center items-center px-5">
+        <Image
+          src="/news/blog-contact-bg.webp"
+          alt="Sustainability Background"
+          fill
+          className="absolute inset-0 object-cover object-center z-0"
+          priority
+        />
+
+        <Brochure className="z-10" />
       </section>
 
     </main>
