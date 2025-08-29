@@ -16,7 +16,7 @@ import DocumentAnnouncementAccordionList
   from '@/features/investorRelations/pages/DocumentAnnouncementPage/component/AccordientList'
 import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
 import { useState } from 'react'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { AccordionTabs } from '../../components/AccordionTabs'
 
 
 export function DocumentAnnouncementPage({data}: DocumentAnnouncementPageProps) {
