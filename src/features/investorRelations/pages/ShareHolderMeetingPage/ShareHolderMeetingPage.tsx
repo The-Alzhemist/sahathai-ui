@@ -5,10 +5,9 @@ import { useTranslations } from 'next-intl'
 import { ShareHolderMeetingPageProps } from '@/features/investorRelations/pages/ShareHolderMeetingPage/interface'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { AccordionTabs } from '../../components/AccordionTabs'
 
 export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMeetingPageProps) {
-  const t = useTranslations('InvestorInformationPage.ShareHolderMeeting')
   const tMenu = useTranslations('Menu')
 
 

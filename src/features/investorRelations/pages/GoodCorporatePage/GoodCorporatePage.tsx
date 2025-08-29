@@ -6,7 +6,7 @@ import { Banner } from '@/components/Banner'
 
 import { GoodCorporatePageProps } from '@/features/investorRelations/pages/GoodCorporatePage/interface'
 import { useState } from 'react'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { AccordionTabs } from '../../components/AccordionTabs'
 
 
 export function GoodCorporatePage({data}:GoodCorporatePageProps) {
@@ -16,7 +16,6 @@ export function GoodCorporatePage({data}:GoodCorporatePageProps) {
   if (!data) {
     return <div>No data</div>
   }
-
 
   const group = data.story.content.body[0].group || []
 

@@ -8,7 +8,7 @@ import { Banner } from '@/components/Banner'
 
 
 import { useState } from 'react'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { AccordionTabs } from '../../components/AccordionTabs'
 import { ActivityPageProps } from '@/features/investorRelations/pages/ActivityPage/interface'
 
 

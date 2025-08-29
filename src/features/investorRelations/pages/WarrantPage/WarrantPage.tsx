@@ -5,7 +5,7 @@ import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 
 import { useState } from 'react'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { AccordionTabs } from '../../components/AccordionTabs'
 import { WarrantPageProps } from '@/features/investorRelations/pages/WarrantPage/interface'
 
 

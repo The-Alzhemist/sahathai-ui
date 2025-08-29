@@ -3,14 +3,11 @@
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
-
 import { Banner } from '@/components/Banner'
 import { useState } from 'react'
-import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
-import { DownloadButton } from '@/components/DownloadButton'
-import { FinancialInformationPageProps } from '@/features/investorRelations/pages/FinancialInformationPage/interface'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
 
+import { FinancialInformationPageProps } from '@/features/investorRelations/pages/FinancialInformationPage/interface'
+import { AccordionTabs } from '../../components/AccordionTabs'
 
 
 export function FinancialInformationPage({financialInformationData}:FinancialInformationPageProps) {
