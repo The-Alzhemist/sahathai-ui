@@ -2,18 +2,9 @@
 
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
-
-
 import { Banner } from '@/components/Banner'
 
-import {
-  documentAnnouncement2567
-} from '@/features/investorRelations/pages/DocumentAnnouncementPage/component/Docmuments/DocumentAnnouncement2567'
-import {
-  documentAnnouncement2568
-} from '@/features/investorRelations/pages/DocumentAnnouncementPage/component/Docmuments/DocumentAnnouncement2568'
-import DocumentAnnouncementAccordionList
-  from '@/features/investorRelations/pages/DocumentAnnouncementPage/component/AccordientList'
+
 import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
