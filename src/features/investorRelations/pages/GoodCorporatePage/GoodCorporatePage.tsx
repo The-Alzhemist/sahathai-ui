@@ -17,7 +17,6 @@ export function GoodCorporatePage({data}:GoodCorporatePageProps) {
     return <div>No data</div>
   }
 
-
   const group = data.story.content.body[0].group || []
 
   const toggleTab = (groupIndex: number, tabIndex: number) => {
