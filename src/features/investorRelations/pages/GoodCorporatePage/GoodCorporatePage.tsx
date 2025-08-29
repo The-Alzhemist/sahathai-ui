@@ -6,7 +6,7 @@ import { Banner } from '@/components/Banner'
 
 import { GoodCorporatePageProps } from '@/features/investorRelations/pages/GoodCorporatePage/interface'
 import { useState } from 'react'
-import { AccordionTabs } from '@/features/investorRelations/pages/ShareHolderMeetingPage/component/AccordientList'
+import { AccordionTabs } from '../../components/AccordionTabs'
 
 
 export function GoodCorporatePage({data}:GoodCorporatePageProps) {

@@ -3,7 +3,6 @@ import {
 } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
 import { fetchStoryblokStory } from '@/utils/storyblok'
 
-export const revalidate = 300
 
 export default async function ShareHolderMeeting({
                                                    params,
@@ -15,7 +14,7 @@ export default async function ShareHolderMeeting({
   const response = await fetchStoryblokStory(
     'invrester-relartion/90ee2b39-0565-41ce-bdb4-dad2425245a4',
     locale,
-    'draft'
+    'published'
   )
 
 
