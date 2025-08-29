@@ -12,6 +12,7 @@ export async function fetchAllBlog({
                                      search,
                                      startsWith = 'blog/',
                                      revalidate = 86400, // 1 day
+                                     sortBy = 'created_at:desc',
                                    }: {
   page?: number
   perPage?: number
@@ -20,6 +21,7 @@ export async function fetchAllBlog({
   search?: string
   startsWith?: string
   revalidate?: number
+  sortBy?: string
 }) {
   const url = buildUrl('stories', {
     version,
@@ -28,6 +30,7 @@ export async function fetchAllBlog({
     page,
     per_page: perPage,
     language: lang,
+    sort_by: sortBy,
     ...(search ? { search_term: search } : {}),
   })
 
@@ -41,6 +44,27 @@ export async function fetchAllBlog({
   const data = await res.json()
   const total = Number(res.headers.get('total') || data.stories?.length || 0)
   return { stories: data.stories, total }
+}
+
+
+export async function fetchNewsBySlug(slug: string, lang: string) {
+  const url =
+    `https://api.storyblok.com/v2/cdn/stories/news/${slug}?` +
+    new URLSearchParams({
+      token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
+      version: 'published',
+      language: lang,
+      // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
+    })
+
+  const res = await fetch(url, {
+    next: {
+      revalidate: 86400,          // cache 1 วัน
+      tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
+    },
+  })
+  if (!res.ok) throw new Error('Failed to fetch story')
+  return res.json()
 }
 
 
@@ -99,7 +123,7 @@ export async function fetchLastBlog({
                                       lang = 'th',
                                       startsWith = 'blog/',
                                       revalidate = 84600, // 1 วัน
-                                      sortBy = 'first_published_at:desc', // หรือ 'published_at:desc'
+                                      sortBy = 'created_at:desc',
                                     }: {
   lang?: string
   startsWith?: string
