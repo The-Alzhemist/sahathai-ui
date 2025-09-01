@@ -3,11 +3,11 @@ import { revalidateTag, revalidatePath } from 'next/cache'
 
 export async function POST(req: NextRequest) {
 
-  const REVALIDATE_SECRET='abc123xyz987'
+  const REVALIDATE_SECRET_BLOG='abc123xyz987'
 
   // ป้องกันด้วย secret ง่ายๆ
   const secret = req.nextUrl.searchParams.get('secret')
-  if (secret !== REVALIDATE_SECRET) {
+  if (secret !== REVALIDATE_SECRET_BLOG) {
     return NextResponse.json({ ok: false, message: 'Invalid secret' }, { status: 401 })
   }
 
@@ -21,6 +21,11 @@ export async function POST(req: NextRequest) {
   // เคลียร์ cache แบบ tag (ทั้งหน้า detail และ list)
   if (slug) revalidateTag(`story:${slug}`)
   revalidateTag('story:blog-list')
+
+
+  console.log('[Storyblok Webhook] slug:::::::::::::::', slug)
+  console.log('[Storyblok Webhook] fullSlug::::::::', fullSlug)
+
 
   // (ออปชัน) ถ้าอยากชัวร์มากๆ เคลียร์ path ด้วย
   if (fullSlug) {
