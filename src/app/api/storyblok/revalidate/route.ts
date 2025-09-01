@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
   //   full_slug: 'blog/test-new-blog-sep-1'
   // }
 
-  const fullSlug = await  body?.full_slug // เช่น "blog/test-first-blog"
+  const fullSlug = body.full_slug // เช่น "blog/test-first-blog"
   // const lang = body?.story?.lang
 
 
