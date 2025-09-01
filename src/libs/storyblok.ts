@@ -7,7 +7,7 @@ import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
 import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 
 import Page from '@/components/Storyblok/Page'
-import { STORYBLOK_TOKEN } from '@/config/environtment'
+
 
 import {
   apiPlugin,
@@ -16,7 +16,7 @@ import {
 } from '@storyblok/react/rsc'
 
 export const getStoryblokApi = storyblokInit({
-  accessToken: STORYBLOK_TOKEN,
+  accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
     page: Page, // default

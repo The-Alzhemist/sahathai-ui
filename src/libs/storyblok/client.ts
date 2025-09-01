@@ -1,7 +1,6 @@
 
 
 const BASE_URL = 'https://api.storyblok.com/v2/cdn'
-const TOKEN = process.env.STORYBLOK_TOKEN || 'H1wfrTArHm3VE441H8WQ5wtt' // ใช้ env ถ้าเป็น production
 
 export function buildUrl(
   path: string,
@@ -11,7 +10,7 @@ export function buildUrl(
   Object.entries(params).forEach(([k, v]) => {
     if (v !== undefined && v !== null) url.searchParams.set(k, String(v))
   })
-  url.searchParams.set('token', TOKEN as string)
+  url.searchParams.set('token', process.env.STORYBLOK_TOKEN as string)
   return url.toString()
 }
 

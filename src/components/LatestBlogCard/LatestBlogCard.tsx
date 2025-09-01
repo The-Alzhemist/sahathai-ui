@@ -10,9 +10,6 @@ import { getTranslations } from 'next-intl/server'
 export async function LatestBlogCard({ blog, locale, page }: LatestBlogCardProps) {
   const common = await getTranslations('common')
 
-
-
-
   if (!blog) {
     return (
       <div className="flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1">
@@ -59,7 +56,6 @@ export async function LatestBlogCard({ blog, locale, page }: LatestBlogCardProps
           </p>
           <div className="mt-[10px] caption text-black-3">{content.newsDate}</div>
 
-          {/* แค่ทำเป็นปุ่มสวย ๆ แต่ไม่ใช่ลิงก์ซ้อน */}
           <div className="mt-[23px] button-small text-navy w-fit flex gap-[10px] items-center">
         <span className="p-[10px] bg-navy rounded-full text-white inline-flex">
           <ArrowRightIcon width="20" height="20" />
