@@ -3,7 +3,7 @@ import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatin
 import React, { useEffect, useState } from 'react'
 import { addDays, format, isAfter, startOfDay } from 'date-fns'
 import TagManager from 'react-gtm-module'
-import { GTM_STAGING } from '@/config/environtment'
+
 
 const withCookieConsentFloatingBar = (
   Component: React.FC<CookieConsentFloatingBarProps>
@@ -14,7 +14,7 @@ const withCookieConsentFloatingBar = (
     useEffect(() => {
       setIsOpen(hasConsentExpired())
       if (!hasConsentExpired()) {
-        TagManager.initialize({ gtmId: GTM_STAGING })
+        TagManager.initialize({ gtmId: process.env.GTM_STAGING! })
       }
     }, [])
 
@@ -31,7 +31,7 @@ const withCookieConsentFloatingBar = (
         })
 
         localStorage.setItem(LOCAL_STORAGE_PDPA_KEY, cookieConsentData)
-        TagManager.initialize({ gtmId: GTM_STAGING })
+        TagManager.initialize({ gtmId: process.env.GTM_STAGING! })
       }
     }
 
