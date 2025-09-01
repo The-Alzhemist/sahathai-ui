@@ -29,18 +29,21 @@ export async function POST(req: NextRequest) {
 
 
 
-  if (fullSlug.includes('/blog') || fullSlug.includes('/news') ) {
+
+  if (fullSlug && fullSlug.includes('/blog') || fullSlug.includes('/news') ) {
     console.log("revalidateTag  blog | new is true")
     revalidateTag('story:blog-list')
-  }
-
-
-  if (fullSlug.includes('/blog') || fullSlug.includes('/news') ) {
+  } else  if (fullSlug && fullSlug.includes('/blog') || fullSlug.includes('/news') ) {
     console.log("revalidateTag  investor-accordion-list  is true")
     revalidateTag('story:investor-accordion-list')
+  }  else {
+    console.log("-------false------")
   }
 
-  
+
+
+
+
   console.log('[Storyblok Webhook] fullSlug::::::::', fullSlug)
 
 
