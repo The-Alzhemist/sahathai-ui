@@ -1,7 +1,8 @@
 import {
   ShareHolderMeetingPage,
 } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+
 
 
 export default async function ShareHolderMeeting({

@@ -1,7 +1,8 @@
 import {
   FinancialInformationPage
 } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+
 
 
 export default async function FinancialInformation({

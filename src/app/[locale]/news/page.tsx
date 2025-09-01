@@ -40,13 +40,13 @@ export default async function news({
     version: 'published',
     search,
     startsWith: 'news/',
-    revalidate: 86400,
+    tag: 'story:news-list'
   })
 
   const latestBlog = await fetchLastBlog({
     lang: locale,
     startsWith: 'news/',
-    revalidate: 86400,
+    tag: 'story:news-list'
   })
 
   const totalPages = Math.ceil(total / perPage)
