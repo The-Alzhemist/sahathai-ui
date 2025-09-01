@@ -88,10 +88,9 @@ export async function fetchNewsBySlug(slug: string, lang: string, revalidate = R
   const url =
     `https://api.storyblok.com/v2/cdn/stories/news/${slug}?` +
     new URLSearchParams({
-      token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
+      token: process.env.STORYBLOK_TOKEN as string,
       version: 'published',
       language: lang,
-      // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
     })
 
   const res = await fetch(url, {
@@ -108,10 +107,9 @@ export async function fetchBlogBySlug(slug: string, lang: string, revalidate = R
   const url =
     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
     new URLSearchParams({
-      token: 'H1wfrTArHm3VE441H8WQ5wtt' as string,
+      token: process.env.STORYBLOK_TOKEN  as string,
       version: 'published',
       language: lang,
-      // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
     })
 
   console.log("fetchBlogBySlug ::::", slug)
