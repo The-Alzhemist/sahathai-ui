@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
 import { getTranslations } from 'next-intl/server'
-import { EODHD_STOCK_TOKEN, REVALIDATE_TIME } from '@/config/environtment'
 import Image from 'next/image'
 
 interface StockData {

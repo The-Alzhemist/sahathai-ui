@@ -8,11 +8,11 @@ import { useForm as useFormSpree } from '@formspree/react'
 import { toast } from 'react-toastify'
 
 import { useEffect } from 'react'
-import { FORM_SPREE_ID } from '@/config/environtment'
+
 
 const withContactUs = (Component: React.FC<ContactUsProps>) => {
   const Hoc = ({ className }: ContactUsAcceptProps) => {
-    const [state, sendDataToFromSpree] = useFormSpree(FORM_SPREE_ID)
+    const [state, sendDataToFromSpree] = useFormSpree(process.env.NEXT_PUBLIC_FORM_SPREE_ID!)
 
     useEffect(() => {
       if (state.submitting) {
