@@ -1,6 +1,7 @@
 'use client'
 import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorporatePage/GoodCorporatePage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+
 
 
 async function getData() {

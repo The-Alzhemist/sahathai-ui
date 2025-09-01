@@ -31,16 +31,16 @@ export const getStoryblokApi = storyblokInit({
   customFallbackComponent: FallbackComponent,
 })
 
-export async function fetchDataBySlug(slug: string, lang: string) {
-  const sbParams: ISbStoriesParams = {
-    version: 'draft', // or 'draft' based on your needs
-    language: lang,
-  }
-
-  const storyblokApi = getStoryblokApi()
-  const storyBookData = storyblokApi.get(`cdn/stories/news/${slug}`, sbParams)
-  return storyBookData
-}
+// export async function fetchDataBySlug(slug: string, lang: string) {
+//   const sbParams: ISbStoriesParams = {
+//     version: 'draft', // or 'draft' based on your needs
+//     language: lang,
+//   }
+//
+//   const storyblokApi = getStoryblokApi()
+//   const storyBookData = storyblokApi.get(`cdn/stories/news/${slug}`, sbParams)
+//   return storyBookData
+// }
 
 export async function fetchNewsBlogListData(
   page: number = 1,
