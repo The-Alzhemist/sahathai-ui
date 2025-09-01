@@ -30,10 +30,10 @@ export async function POST(req: NextRequest) {
 
 
 
-  if (fullSlug && (fullSlug.includes('/blog') || fullSlug.includes('/news')) ) {
+  if (fullSlug && (fullSlug.includes('blog') || fullSlug.includes('news')) ) {
     console.log("revalidateTag  blog | new is true")
     revalidateTag('story:blog-list')
-  } else  if (fullSlug && fullSlug.includes('/invrester-relartion')  ) {
+  } else  if (fullSlug && fullSlug.includes('invrester-relartion')  ) {
     console.log("revalidateTag  investor-accordion-list  is true")
     revalidateTag('story:investor-accordion-list')
   }  else {
