@@ -1,6 +1,7 @@
 
 import { PerformanceReportPage } from '@/features/investorRelations/pages/PerformanceReportPage/PerformanceReportPage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+
 
 export default async function PerformanceReport({
                                                   params,

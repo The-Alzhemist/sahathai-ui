@@ -1,7 +1,8 @@
 
 import { ActivityPage } from '@/features/investorRelations/pages/ActivityPage/ActivityPage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+
 import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorporatePage/GoodCorporatePage'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 
 export default async function Activity({
                                          params,

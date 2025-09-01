@@ -2,7 +2,8 @@
 import {
   DocumentAnnouncementPage
 } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+
 
 export default async function DocumentAnnouncement({
                                                      params,

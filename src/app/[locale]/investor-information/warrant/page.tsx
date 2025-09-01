@@ -1,7 +1,8 @@
 
-import { ShareHolderPage } from '@/features/investorRelations/pages/ShareHolderPage'
+
 import { WarrantPage } from '@/features/investorRelations/pages/WarrantPage/WarrantPage'
-import { fetchStoryblokStory } from '@/utils/storyblok'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+
 
 
 
