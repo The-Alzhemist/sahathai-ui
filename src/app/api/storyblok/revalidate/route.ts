@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { revalidateTag, revalidatePath } from 'next/cache'
+import { revalidateTag } from 'next/cache'
 
 export async function POST(req: NextRequest) {
 
@@ -12,7 +12,6 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json().catch(() => ({} as any))
-  console.log("body:::::::::::", body)
 
   // body ส่งมาหน้าตาประมาณนี้
   // {
@@ -24,37 +23,17 @@ export async function POST(req: NextRequest) {
   //   full_slug: 'blog/test-new-blog-sep-1'
   // }
 
-  const fullSlug = body.full_slug // เช่น "blog/test-first-blog"
-  // const lang = body?.story?.lang
-
-
+  const fullSlug = body.full_slug
 
 
   if (fullSlug && (fullSlug.includes('blog') || fullSlug.includes('news')) ) {
-    console.log("revalidateTag  blog | new is true")
     revalidateTag('story:blog-list')
   } else  if (fullSlug && fullSlug.includes('invrester-relartion')  ) {
-    console.log("revalidateTag  investor-accordion-list  is true")
     revalidateTag('story:investor-accordion-list')
   }  else {
-    console.log("fullSlug::false:::", fullSlug)
-    console.log("-------false------")
+    console.log("cannot revalidate blog-list tag")
   }
 
-
-
-
-
-  console.log('[Storyblok Webhook] fullSlug::::::::', fullSlug)
-
-
-
-  if (fullSlug) {
-    // สมมติมี 2 locale
-    for (const locale of ['th', 'en','cn']) {
-      revalidatePath(`/${locale}/${fullSlug}`, 'page')
-    }
-  }
 
   return NextResponse.json({ ok: true, fullSlug })
 }

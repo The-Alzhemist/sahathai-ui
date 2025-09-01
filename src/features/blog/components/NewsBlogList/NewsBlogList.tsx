@@ -10,7 +10,7 @@ import {
 } from '@/libs/storyblok'
 import { useLocale } from 'next-intl'
 
-export const revalidate = REVALIDATE_TIME
+
 
 import React, { useEffect, useState } from 'react'
 
