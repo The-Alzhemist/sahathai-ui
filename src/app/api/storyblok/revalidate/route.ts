@@ -14,18 +14,33 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({} as any))
   console.log("body:::::::::::", body)
 
-  // Storyblok มักส่ง { story: { slug, full_slug, lang, ... }, action: 'published' | 'unpublished' }
-  const slug = body?.story?.slug || body?.slug
-  const fullSlug = body?.story?.full_slug || body?.full_slug // เช่น "blog/test-first-blog"
+  // body ส่งมาหน้าตาประมาณนี้
+  // {
+  //   text: 'The user aphiwit@codework-tech.com published the Story test-new-blog-sep-1 (blog/test-new-blog-sep-1)\n' +
+  //   'https://app.storyblok.com/#/me/spaces/316761/stories/0/0/86063839668228',
+  //     action: 'published',
+  //   space_id: 316761,
+  //   story_id: 86063839668228,
+  //   full_slug: 'blog/test-new-blog-sep-1'
+  // }
+
+  const fullSlug = body?.full_slug // เช่น "blog/test-first-blog"
   // const lang = body?.story?.lang
 
-  // เคลียร์ cache แบบ tag (ทั้งหน้า detail และ list)
-  if (slug) revalidateTag(`story:${slug}`)
-
-  revalidateTag('story:blog-list')
 
 
-  console.log('[Storyblok Webhook] slug:::::::::::::::', slug)
+  if (fullSlug.includes('/blog') || fullSlug.includes('/news') ) {
+    console.log("revalidateTag  blog | new is true")
+    revalidateTag('story:blog-list')
+  }
+
+
+  if (fullSlug.includes('/blog') || fullSlug.includes('/news') ) {
+    console.log("revalidateTag  investor-accordion-list  is true")
+    revalidateTag('story:investor-accordion-list')
+  }
+
+  
   console.log('[Storyblok Webhook] fullSlug::::::::', fullSlug)
 
 
@@ -37,5 +52,5 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  return NextResponse.json({ ok: true, slug, fullSlug })
+  return NextResponse.json({ ok: true, fullSlug })
 }
