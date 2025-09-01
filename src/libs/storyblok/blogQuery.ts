@@ -79,6 +79,7 @@ export async function fetchBlogBySlug(slug: string, lang: string) {
       // fallback_lang: '1',     // (ถ้าต้องการ fallback ภาษา)
     })
 
+  console.log("fetchBlogBySlug ::::", slug)
   const res = await fetch(url, {
     next: {
       revalidate: 86400,          // cache 1 วัน

@@ -12,6 +12,7 @@ export async function POST(req: NextRequest) {
   }
 
   const body = await req.json().catch(() => ({} as any))
+  console.log("body:::::::::::", body)
 
   // Storyblok มักส่ง { story: { slug, full_slug, lang, ... }, action: 'published' | 'unpublished' }
   const slug = body?.story?.slug || body?.slug
@@ -20,6 +21,7 @@ export async function POST(req: NextRequest) {
 
   // เคลียร์ cache แบบ tag (ทั้งหน้า detail และ list)
   if (slug) revalidateTag(`story:${slug}`)
+
   revalidateTag('story:blog-list')
 
 
@@ -27,14 +29,11 @@ export async function POST(req: NextRequest) {
   console.log('[Storyblok Webhook] fullSlug::::::::', fullSlug)
 
 
-  // (ออปชัน) ถ้าอยากชัวร์มากๆ เคลียร์ path ด้วย
+
   if (fullSlug) {
     // สมมติมี 2 locale
     for (const locale of ['th', 'en','cn']) {
       revalidatePath(`/${locale}/${fullSlug}`, 'page')
-    }
-    for (const locale of ['th', 'en','cn']) {
-      revalidatePath(`/${locale}/blog`, 'page')
     }
   }
 
