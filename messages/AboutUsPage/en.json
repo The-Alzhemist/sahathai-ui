@@ -157,6 +157,82 @@
         "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
       }
     },
+    "ExecutiveProfile": {
+      "labels": {
+        "age": "Age",
+        "positions": "Present Position",
+        "education": "Education",
+        "trainings": "Training Program",
+        "directorType": "Type of Directors",
+        "appointments": "Date of Appointment",
+        "directorYears": "Length of Service",
+        "workExp5y": "Experience (past 5 years)",
+        "listedRoles": "Directorship(s) in Listed Company",
+        "relatedCompanyRoles": "Directorship(s) in Related Companies",
+        "otherCompanyRoles": "Directorship(s) in Other Company",
+        "otherOrgRoles": "Directorship(s) in Other Organization",
+        "pastRoles": "Former (last 5 years)",
+        "shareholding": "Percentage of the Company’s Shareholding",
+        "disciplinary": "Legal record in the last 5 years",
+        "family": "Family Relationship with Other Directors and Executives"
+      },
+      "common": {
+        "none": "-None-"
+      }
+    },
+
+    "Yuth": {
+      "fullName": "Yuth Vorachattarn",
+      "age": "77 years",
+      "positions": [
+        "Chairman of the Board of Directors",
+        "Independent Director",
+        "Audit Committee",
+        "Nomination and Remuneration Committee",
+        "Chairman of the Risk Management, Governance and Sustainability Committee"
+      ],
+      "education": [
+        "Master Degree of Economics, Thammasat University",
+        "Bachelor Degree of Economics, Thammasat University"
+      ],
+      "trainings": [
+        "Director Leadership Certification Program (DLCP), class 0/2021",
+        "Advance Audit Committee Program (AACP), class 30/2020",
+        "Strategic Board Master Class (SBM), class 5/2018",
+        "Ethical Leadership Program (ELP), class 2/2015",
+        "Corporate Governance for Capital Market Intermediaries (CGI), class 0/2014",
+        "Financial Institutions Governance Program (FGP), class 6/2013",
+        "Monitoring of the Quality of Financial Reporting (MFR), class 12/2010",
+        "Audit Committee Program (ACP), class 33/2010",
+        "Chartered Director Class (R-CDC), class 3/2008",
+        "Role of the Chairman Program (RCP), class 8/2003",
+        "Directors Certification Program (DCP), class 0/2000"
+      ],
+      "directorType": "Independent Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 27 July 2020",
+        "On 20 April 2023"
+      ],
+      "workExp5y": [],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "listedRoles": [
+        "2016 – present  Chairman of the Board of Directors, Grand Prix International Public Company Limited",
+        "2015 – present  Chairman of the Board of Directors, Independent Director, Audit Committee, Sahathai Terminal Public Company Limited",
+        "2011 – present  Chairman of the Board of Directors, Audit Committee, Taokaenoi Food & Marketing Public Company Limited"
+      ],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [
+        "2020 – present  Independent Director, Chairman of the Audit Committee, Nutrix Public Company Limited",
+        "2013 – present  Independent Director, Chairman of the Audit Committee, BSY Group Public Company Limited"
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2005 – 2020  Independent Director, Chairman of the Audit Committee, Sahathai Steel Pipe Public Company Limited"
+      ],
+      "shareholding": "270,364 shares, 0.04% (as of December 30, 2024)",
+      "family": []
+    },
     "YuthVorachattarn": {
       "fullName": "Mr.Yuth Vorachattarn",
       "position1": "Chairman of the Board of Directors, Independent Director",

@@ -16,11 +16,12 @@ import { BunditRungsimanon } from './BunditRungsimanon'
 import { RoongrojWhangteeranon } from './RoongrojWhangteeranon'
 import { SangaSanguansaksri } from '@/features/aboutUs/components/PeopleModal/SangaSanguansaksri'
 import { Papatssarin } from '@/features/aboutUs/components/PeopleModal/Papatssarin'
+import { BoardContentModal } from '@/features/aboutUs/components/PeopleModal/BoardContentModal'
 
 export function PeopleModal({ people, onClose }: PeopleModalProps) {
   return (
     <Modal className='max-w-[770px] w-[90%] ' onClose={onClose}>
-      {people === PeopleEnum.YuthVorachattarn && <YuthVorachattarn />}
+      {people === PeopleEnum.YuthVorachattarn && <BoardContentModal boardName={'AboutUsPage.Yuth'} />}
       {people === PeopleEnum.VithitLeenutaphong && <VithitLeenutaphong />}
       {people === PeopleEnum.VilaiChattanrassamee && <VilaiChattanrassamee />}
       {people === PeopleEnum.WichitRattanasirivilai && (
