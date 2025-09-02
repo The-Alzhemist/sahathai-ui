@@ -45,7 +45,7 @@ export function BlogCard({
         </p>
 
         <div className="mt-[8px] caption text-black-3">
-          {newsDate /* or format createdAt if you prefer */}
+          {newsDate}
         </div>
 
         <div className="mt-[16px] button-small text-navy w-fit flex gap-[10px] items-center">
