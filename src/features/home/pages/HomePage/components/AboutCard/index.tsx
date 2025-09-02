@@ -16,7 +16,7 @@ export function AboutCard({ title, content, imageUrl,icon
     <div
       ref={ref}
       className={cn(
-        'max-w-[310px] w-full transition-all opacity-0 duration-1000 rounded-[25px] shadow-3 overflow-hidden bg-white',
+        'max-w-[310px] w-full transition-all opacity-0 duration-1000 rounded-[25px] shadow-3 overflow-hidden bg-white z-10',
         {
           'opacity-100': isInView,
         }
@@ -36,7 +36,7 @@ export function AboutCard({ title, content, imageUrl,icon
       </div>
 
 
-      <div className="p-[40px_30px_32px]">
+      <div className="p-[40px_30px_32px] bg-w">
         <h2 className="headline-4 text-navy">{title}</h2>
         <p className='mt-[14px] text-black-6 whitespace-pre-line font-light'>{content}</p>
       </div>

@@ -6,14 +6,13 @@ import { useLocale } from 'next-intl'
 
 import React from 'react'
 
-export const revalidate = REVALIDATE_TIME
 
 export default async function LatestNewsHomePageList() {
   const locale = useLocale()
   const { data } = await fetchNewsBlogListData(1, 10, locale)
   const newsBlog = data
 
-  //   Note: slice mean get only 3 latest news
+
   const latestNews = newsBlog.stories.slice(0, 3)
 
   return (

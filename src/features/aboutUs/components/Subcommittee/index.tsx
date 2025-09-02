@@ -53,31 +53,73 @@ export function Subcommittee() {
         key={activeTab}
         className='whitespace-pre-wrap body-1 text-black-6 mt-[50px] rounded-[15px] p-5 md:p-9 shadow-8 bg-white'
       >
-        <div className='whitespace-pre-line mb-5'>
-          {t.rich(`${activeTab}.content`, {
-            bold: chunks => <strong className='font-semibold'>{chunks}</strong>,
-            name: chunks => (
-              <div className='inline-flex justify-start items-baseline  w-[240px] pr-5'>
-                <AvatarIcon className='text-base relative top-[5px] mr-[15px]' />
-                {chunks}
-              </div>
-            ),
-            sub: chunks => (
-              <sup className='ml-[4px] text-xs text-gray-600'>{chunks}</sup>
-            ),
-          })}
-          {activeTab === SubcommitteeEnum.Audit ? (
-            <>
-              <Link
-                className='hover:underline text-secondary font-normal'
-                href='https://sahathaiterminal.com/wp-content/uploads/2019/05/20181130_AC_ID.pdf'
-              >
-                {t(`${activeTab}.clickLinkText`)}
-              </Link>
-            </>
-          ) : null}
-        </div>
+
+        <SubcommitteeSection activeTab={activeTab}/>
       </Animation>
+    </section>
+  )
+}
+
+export function SubcommitteeSection({ activeTab }: { activeTab: string }) {
+  const t = useTranslations(`AboutUsPage.BoardAndExecutives.Subcommittee`)
+  const membersRow = t.raw(`${activeTab}.members`) as Array<{name: string; role: string}>
+
+  // for auditCommittee
+  const notesRow = t.raw('auditCommittee.note') as Array<{content: string}>
+
+
+  const members = Array.isArray(membersRow) ? membersRow : []
+
+  return (
+    <section className=" text-black-6">
+      <p className="mb-7">{t(`${activeTab}.intro`)}</p>
+
+      <ul className="mt-4 grid gap-3 mb-7">
+        {members.map((m, i) => (
+          <li key={i} className="flex items-center md:items-end gap-3">
+            <div className=''>
+              <AvatarIcon className='text-base relative  mr-[15px]' />
+            </div>
+
+            <div className='flex flex-wrap items-center gap-x-5'>
+              <div className=" w-[300px]">{m.name}</div>
+              <div className="">{m.role}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      {/* tab 1 only */}
+      {activeTab === SubcommitteeEnum.Audit && (
+        <>
+          <p className="mb-7">{t(`${activeTab}.intro2`)}</p>
+          <div className="">{t(`${activeTab}.noteTitle`)}</div>
+
+          <ul className="grid mb-7">
+            {notesRow.map((note, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className='flex flex-wrap gap-x-5'>
+                  <div className="">{i + 1}. {note.content}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <div className='flex flex-wrap items-center gap-2 '>
+            <p className="">{t(`${activeTab}.pdfTitle`)}</p>
+            <Link
+              className='hover:underline text-secondary font-normal'
+              href='https://sahathaiterminal.com/wp-content/uploads/2019/05/20181130_AC_ID.pdf'
+            >
+              {t(`${activeTab}.clickLinkText`)}
+            </Link>
+          </div>
+
+
+        </>
+      )}
+
+
     </section>
   )
 }
