@@ -43,7 +43,7 @@ export function DividendPayment({ className }: DividendPaymentProps) {
     )
 
     setFilterByYear(option)
-    console.log('setFilterByYear option:', JSON.stringify(option))
+    // console.log('setFilterByYear option:', JSON.stringify(option))
   }, [devidendPaymentInformationList])
 
   return (
