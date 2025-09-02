@@ -7,9 +7,10 @@ import { BulletList, getArray, getString, None, Row } from './components/peopleM
 type Props = {
   /** เนมสเปซข้อมูลจริงของบุคคล (ค่าเริ่มต้นเป็นตัวอย่าง) */
   boardName: string // 'AboutUsPage.YuthVorachattarn'
+  imgUrl: string
 }
 
-export function BoardContentModal({ boardName = 'AboutUsPage.Yuth' }: Props) {
+export function BoardContentModal({ boardName = 'AboutUsPage.Yuth', imgUrl }: Props) {
   // labels/common (ใช้ซ้ำได้ทุกโปรไฟล์)
   const L = useTranslations('AboutUsPage.ExecutiveProfile')
   // ข้อมูลจริงของบุคคล
@@ -17,7 +18,7 @@ export function BoardContentModal({ boardName = 'AboutUsPage.Yuth' }: Props) {
 
   // primitive
   const fullName = getString(t, 'fullName')
-  const imageUrl =  '/about-us/yuth-vorachattarn.png'
+  const imageUrl =   imgUrl
   const age = getString(t, 'age') // ex: "77 ปี"
   const directorType = getString(t, 'directorType')
 

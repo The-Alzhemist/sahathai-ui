@@ -21,8 +21,8 @@ import { BoardContentModal } from '@/features/aboutUs/components/PeopleModal/Boa
 export function PeopleModal({ people, onClose }: PeopleModalProps) {
   return (
     <Modal className='max-w-[770px] w-[90%] ' onClose={onClose}>
-      {people === PeopleEnum.YuthVorachattarn && <BoardContentModal boardName={'AboutUsPage.Yuth'} />}
-      {people === PeopleEnum.VithitLeenutaphong && <VithitLeenutaphong />}
+      {people === PeopleEnum.YuthVorachattarn && <BoardContentModal boardName={'AboutUsPage.Yuth'} imgUrl={'/about-us/yuth-vorachattarn.png'} />}
+      {people === PeopleEnum.VithitLeenutaphong && <BoardContentModal boardName={'AboutUsPage.Vithit'} imgUrl={'/about-us/vithit-leenutaphong.png'}/>}
       {people === PeopleEnum.VilaiChattanrassamee && <VilaiChattanrassamee />}
       {people === PeopleEnum.WichitRattanasirivilai && (
         <WichitRattanasirivilai />
