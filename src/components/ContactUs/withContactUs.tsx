@@ -12,7 +12,8 @@ import { useEffect } from 'react'
 
 const withContactUs = (Component: React.FC<ContactUsProps>) => {
   const Hoc = ({ className }: ContactUsAcceptProps) => {
-    const [state, sendDataToFromSpree] = useFormSpree(process.env.NEXT_PUBLIC_FORM_SPREE_ID!)
+    const FORM_SPREE_ID = 'mbljnjjo'
+    const [state, sendDataToFromSpree] = useFormSpree(FORM_SPREE_ID)
 
     useEffect(() => {
       if (state.submitting) {
