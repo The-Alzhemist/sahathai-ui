@@ -6,23 +6,48 @@ import { PeopleEnum } from '@/enums/PeopleEnum'
 
 export function Board({ onClick }: BoardProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives.Board')
-  const yuthVorachattarn = useTranslations('AboutUsPage.YuthVorachattarn')
-  const vithitLeenutaphong = useTranslations('AboutUsPage.VithitLeenutaphong')
+  const yuthVorachattarn = useTranslations('AboutUsPage.Yuth')
+  const yuthVorachattarnPositions = yuthVorachattarn.raw('positions') as string[]
+
+  const vithitLeenutaphong = useTranslations('AboutUsPage.Vithit')
+  const vithitLeenutaphongPositions = yuthVorachattarn.raw('positions') as string[]
+
   const vilaiChattanrassamee = useTranslations(
-    'AboutUsPage.VilaiChattanrassamee'
+    'AboutUsPage.Vilai'
   )
+  const vilaiChattanrassameePositions = vilaiChattanrassamee.raw('positions') as string[]
+
+
   const wichitRattanasirivilai = useTranslations(
-    'AboutUsPage.WichitRattanasirivilai'
+    'AboutUsPage.Wichit'
   )
+  const wichitRattanasirivilaiPositions = wichitRattanasirivilai.raw('positions') as string[]
+
+
   const suchinRattanasirivilai = useTranslations(
-    'AboutUsPage.SuchinRattanasirivilai'
+    'AboutUsPage.Suchin'
   )
-  const anggoonSrisunthorn = useTranslations('AboutUsPage.AnggoonSrisunthorn')
+  const suchinRattanasirivilaiPositions = suchinRattanasirivilai.raw('positions') as string[]
+
+
+  const anggoonSrisunthorn = useTranslations('AboutUsPage.Auggoon')
+  const anggoonSrisunthorniPositions = anggoonSrisunthorn.raw('positions') as string[]
+
+
+
   const chairatChongyangyuenvong = useTranslations(
-    'AboutUsPage.ChairatChongyangyuenvong'
+    'AboutUsPage.Chairat'
   )
-  const sauwakunKaruchit = useTranslations('AboutUsPage.SauwakunKaruchit')
-  const banchaiKaruchit = useTranslations('AboutUsPage.BanchaiKaruchit')
+  const chairatChongyangyuenvongPositions = chairatChongyangyuenvong.raw('positions') as string[]
+
+
+
+  const banchaiKaruchit = useTranslations('AboutUsPage.Banchai')
+  const banchaiKaruchitPositions = banchaiKaruchit.raw('positions') as string[]
+
+  const sauwakunKaruchit = useTranslations('AboutUsPage.Saowakun')
+  const sauwakunPositions = sauwakunKaruchit.raw('positions') as string[]
+
 
   return (
     <section className='max-w-[1040px] mx-auto w-full'>
@@ -31,95 +56,58 @@ export function Board({ onClick }: BoardProps) {
         <PeopleCard
           name={yuthVorachattarn('fullName')}
           imageUrl='/about-us/yuth-vorachattarn.png'
-          jobTitle={[
-            yuthVorachattarn('position1'),
-            yuthVorachattarn('position2'),
-            yuthVorachattarn('position3'),
-            yuthVorachattarn('position4'),
-          ]}
+          jobTitle={yuthVorachattarnPositions}
           onClick={() => onClick(PeopleEnum.YuthVorachattarn)}
         />
         <PeopleCard
           name={vithitLeenutaphong('fullName')}
           imageUrl='/about-us/vithit-leenutaphong.png'
-          jobTitle={[
-            vithitLeenutaphong('position1'),
-            vithitLeenutaphong('position2'),
-            vithitLeenutaphong('position3'),
-          ]}
+          jobTitle={vithitLeenutaphongPositions}
           onClick={() => onClick(PeopleEnum.VithitLeenutaphong)}
         />
         <PeopleCard
           name={vilaiChattanrassamee('fullName')}
           imageUrl='/about-us/vilai-chattanrassamee.png'
-          jobTitle={[
-            vilaiChattanrassamee('position1'),
-            vilaiChattanrassamee('position2'),
-            vilaiChattanrassamee('position3'),
-            vilaiChattanrassamee('position4'),
-          ]}
+          jobTitle={vilaiChattanrassameePositions}
           onClick={() => onClick(PeopleEnum.VilaiChattanrassamee)}
         />
         <PeopleCard
           name={wichitRattanasirivilai('fullName')}
           imageUrl='/about-us/wichit-rattanasirivilai.png'
-          jobTitle={[
-            wichitRattanasirivilai('position1'),
-            wichitRattanasirivilai('position2'),
-            wichitRattanasirivilai('position3'),
-          ]}
+          jobTitle={wichitRattanasirivilaiPositions}
           onClick={() => onClick(PeopleEnum.WichitRattanasirivilai)}
         />
         <PeopleCard
           name={suchinRattanasirivilai('fullName')}
           imageUrl='/about-us/suchin-rattanasirivilai.png'
-          jobTitle={[
-            suchinRattanasirivilai('position1'),
-            suchinRattanasirivilai('position2'),
-          ]}
+          jobTitle={suchinRattanasirivilaiPositions}
           onClick={() => onClick(PeopleEnum.SuchinRattanasirivilai)}
         />
         <PeopleCard
           name={anggoonSrisunthorn('fullName')}
           imageUrl='/about-us/anggoon-srisunthorn.png'
-          jobTitle={[
-            anggoonSrisunthorn('position1'),
-            anggoonSrisunthorn('position2'),
-          ]}
+          jobTitle={anggoonSrisunthorniPositions}
           onClick={() => onClick(PeopleEnum.AnggoonSrisunthorn)}
         />
         <PeopleCard
           name={chairatChongyangyuenvong('fullName')}
           imageUrl='/about-us/chairat-chongyangyuenvong.png'
-          jobTitle={[
-            chairatChongyangyuenvong('position1'),
-            chairatChongyangyuenvong('position2'),
-          ]}
+          jobTitle={chairatChongyangyuenvongPositions}
           onClick={() => onClick(PeopleEnum.ChairatChongyangyuenvong)}
         />
         <PeopleCard
           name={sauwakunKaruchit('fullName')}
           imageUrl='/about-us/sauwakun-karuchit.png'
-          jobTitle={[
-            sauwakunKaruchit('position1'),
-            sauwakunKaruchit('position2'),
-            sauwakunKaruchit('position3'),
-            sauwakunKaruchit('position4'),
-          ]}
+          jobTitle={sauwakunPositions}
           onClick={() => onClick(PeopleEnum.SauwakunKaruchit)}
         />
         <PeopleCard
           name={banchaiKaruchit('fullName')}
           imageUrl='/about-us/banchai-karuchit.png'
-          jobTitle={[
-            banchaiKaruchit('position1'),
-            banchaiKaruchit('position2'),
-            banchaiKaruchit('position3'),
-            banchaiKaruchit('position4'),
-            banchaiKaruchit('position5'),
-          ]}
+          jobTitle={banchaiKaruchitPositions}
           onClick={() => onClick(PeopleEnum.BanchaiKaruchit)}
         />
+
       </section>
     </section>
   )

@@ -29,18 +29,15 @@ export function Service() {
             imageUrl='/home/container2.png'
             imageSize={62}
           />
+
           <ServiceCard
             title={t('freeTradeZone.title')}
             content={t('freeTradeZone.content')}
             imageUrl='/home/taxes.png'
             imageSize={68}
           />
-          <ServiceCard
-            title={t('automatedContainerReadingTechnology.title')}
-            content={t('automatedContainerReadingTechnology.content')}
-            imageUrl='/home/phone.png'
-            imageSize={64}
-          />
+
+
 
           <ServiceCard
             title={t('coastalShippingServices.title')}
@@ -55,6 +52,12 @@ export function Service() {
             imageSize={70}
           />
 
+          <ServiceCard
+            title={t('automatedContainerReadingTechnology.title')}
+            content={t('automatedContainerReadingTechnology.content')}
+            imageUrl='/home/phone.png'
+            imageSize={64}
+          />
         </div>
 
         <Link

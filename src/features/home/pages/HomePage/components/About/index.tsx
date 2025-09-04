@@ -11,6 +11,8 @@ import { ScaleIcon } from '@/components/icons/ScaleIcon'
 import { RoadIcon } from '@/components/icons/RoadIcon'
 import { ContainerIcon } from '@/components/icons/ContainerIcon'
 import { WorldIcon } from '@/components/icons/WorldIcon'
+import Image from 'next/image'
+import React from 'react'
 export function About() {
   const t = useTranslations('HomePage.About')
   const tBanner = useTranslations('HomePage.Banner')
@@ -20,19 +22,26 @@ export function About() {
       className="relative w-full"
 
     >
-      {/* Optional overlay เพื่อให้อ่านการ์ดง่ายขึ้น */}
+
       <div className="absolute inset-0 bg-white to-transparent"></div>
 
-      <div className="relative">
+      <div className="relative pt-[70px]">
         <section className="max-w-[1040px] mx-auto flex  flex-col md:flex-row items-center gap-x-2 mb-10">
           <div className='text-[48px] font-medium'><span className='text-blue-300'>{tBanner('title')}</span></div>
           <div className='text-[32px] font-light text-red-400'>{tBanner('subTitle')}</div>
         </section>
         <WhyChooseSahathai />
-        <div className=" flex justify-center mt-[72px] w-full relative z-10 py-[90px] bg-no-repeat bg-cover"  style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.3)), url('/home/container-image.png')`,
+        <div className="relative flex justify-center mt-[72px] w-full  z-10 py-[90px] bg-no-repeat bg-cover"  style={{
+
         }}>
 
+          <Image
+            src='/home/container-image.png'
+            alt='Sustainability Background'
+            fill
+            className='absolute inset-0 z-0 object-cover object-center opacity-80'
+            priority
+          />
           <div className='max-w-[1040px] flex flex-wrap gap-x-[25px] gap-y-[45px] justify-center'>
             <AboutCard
               title={t('comprehensiveService.title')}
