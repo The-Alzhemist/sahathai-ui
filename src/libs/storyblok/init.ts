@@ -8,7 +8,7 @@ import DownloadLink from '@/components/Storyblok/news/DownloadLink'
 import FallbackComponent from '@/components/Storyblok/FallbackComponent'
 
 storyblokInit({
-  accessToken: process.env.STORYBLOK_API_KEY, //TODO
+  accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
     page: Page,

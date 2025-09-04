@@ -181,7 +181,6 @@
         "none": "-None-"
       }
     },
-
     "Yuth": {
       "fullName": "Yuth Vorachattarn",
       "age": "77 years",
@@ -232,7 +231,8 @@
         "2005 – 2020  Independent Director, Chairman of the Audit Committee, Sahathai Steel Pipe Public Company Limited"
       ],
       "shareholding": "270,364 shares, 0.04% (as of December 30, 2024)",
-      "family": []
+      "family": [],
+      "note": ""
     },
     "Vithit": {
       "fullName": "Dr. Vithit Leenutaphong",
@@ -283,7 +283,8 @@
       ],
       "shareholding": "264,000 shares, 0.04% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": []
+      "family": [],
+      "note": ""
     },
     "YuthVorachattarn": {
       "fullName": "Mr.Yuth Vorachattarn",
@@ -373,59 +374,10 @@
       ],
       "shareholding": "270,364 shares, 0.04% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": []
+      "family": [],
+      "note": ""
     },
-    "VilaiChattanrassamee": {
-      "fullName": "Ms.Vilai Chattanrassamee",
-      "position1": " Director, Independent Director",
-      "position2": "Chairman of the Audit Committee",
-      "position3": "Nomination and Remuneration Committee",
-      "position4": "Risk Management, Governance and Sustainability Committee",
-      "education1": "Master Degree of Accounting, Thammasart University",
-      "education2": "Bachelor Degree of Accounting, Chulalongkorn University",
-      "education3": "Certified Auditor",
-      "education4": "Fellow Member) (FIOD)",
-      "trainingHistory1": "Independent Observer Program (IOP) class 4/2016",
-      "trainingHistory2": "Independent Observer Program (IOP) class 4/2016",
-      "trainingHistory3": "Directors Certification Program (DCP) class 13/2001",
-      "dateAppointment1": "On 3 May 2017 (registered as a public company limited)",
-      "dateAppointment2": "On 23 April 2019",
-      "dateAppointment3": "On 21 April 2022",
-      "positionHeldInListCompany1": "2023 – present Independent Director, Audit Committee of Bangchak Corporation Public Company Limited",
-      "positionHeldInListCompany2": "2016 – present Independent Director, Chairman of the Audit Committee of Sahathai Terminal Public Company Limited",
-      "positionHeldInListCompany3": "2012 – present Independent Director, Audit Committee of MK Restaurant Group Public Company Limited",
-      "positionHeldInOtherCompany1": "Independent Director, Chairman of the Audit Committee of Northland Experience Co., Ltd",
-      "positionHeldInOtherCompany2": "Director, ERA Plus Co., Ltd",
-      "positionHeldInOtherCompany3": "Director, Horton International Co., Ltd",
-      "positionHeldInOtherCompany4": " Director, Executive Search Services Co., Ltd",
-      "positionHeldInOtherOrganization1": "Regular Management Audit Committee of Mahidol University",
-      "positionHeldInOtherOrganization2": "Independent observers according to the moral agreement, Anti-Corruption Organization of Thailand",
-      "positionHeldInOtherOrganization3": "Sub-Committee on Procurement and Procurement of Government Sector, The Comptroller General’s Department",
-      "pastPositionHeld1": "2015 – 2023 Independent Director, Chairman of the Audit Committee of BCPG Public Company Limited",
-      "pastPositionHeld2": "2021 – 2022 Member of Audit Sub-Committee of National Village and Urban Community Fund Office",
-      "pastPositionHeld3": "2016 – 2020 Independent Director, Audit Committee of Sahathai Steel Pipe Public Company Limited",
-      "pastPositionHeld4": "2016 – 2020 Audit Committee of King Mongkut’s Institute of Technology Ladkrabang",
-      "pastPositionHeld5": "2014 – 2020 Financial accounting professional and Audit Committee of Metropolitan Waterworks Authority"
-    },
-    "WichitRattanasirivilai": {
-      "fullName": "Mr.Wichit Rattanasirivilai",
-      "position1": "Director",
-      "position2": "Nomination and Remuneration Committee and ",
-      "position3": "Chairman of the Executive Committee",
-      "education1": "Associate’s Degree",
-      "trainingHistory1": "Director Accreditation Program (DCP) class139/2017",
-      "dateAppointment1": "On 3 May 2017 (registered as a public company limited)",
-      "dateAppointment2": "On 27 July 2020",
-      "dateAppointment3": "On 20 April 2023",
-      "positionHeldInListCompany1": "2015 – present   Director and Chairman of the Executive Committee of Sahathai Terminal Public Company Limited.",
-      "positionHeldInOtherCompany1": "2019 – present  Director of Inter Solar Roof Co., Ltd",
-      "positionHeldInOtherCompany2": "2019 – present  Director of SWCK Co., Ltd.",
-      "positionHeldInOtherCompany3": "2016 – present  Director of K2 Laem Chabang Prooperty Co., Ltd.้",
-      "positionHeldInOtherCompany4": "2014 – present  Director of Rattana Holding Co., Ltd.",
-      "positionHeldInOtherCompany5": "2013 – present  Director of Sahathai Property and Development Co., Ltd.",
-      "positionHeldInOtherCompany6": "2004 – present  Director of Q.A. Logistic Co., Ltd.",
-      "pastPositionHeld1": "2011– 2021 Director of Sahathai Steel Pipe Public Company Limited"
-    },
+
     "Wichit": {
       "fullName": "Mr. Wichit Rattanasirivilai",
       "age": "63 years",
@@ -479,32 +431,7 @@
       ],
       "note": "Mr. Wichit Rattanasirivilai is a Non-Executive Director who has work experience related to the company’s business, including transportation and warehouse management businesses."
     },
-    "VithitLeenutaphong": {
-      "fullName": "Dr.Vithit Leenutaphong์",
-      "position1": "Independent Director",
-      "position2": "Audit Committee,",
-      "position3": "Chairman of the Nomination and Remuneration Committee",
-      "education1": "Doctor of Philosophy Program in Innovation and Industrial Management, College of Innovation and Industrial Management, King Mongkut’s Institute of Technology Ladkrabang",
-      "education2": "Master Degree of Business Administration (International Monetary Fund), University of Southern California, USA.",
-      "education3": "Bachelor Degree of Marketing and Management, Jacksonville University, USA.",
-      "trainingHistory1": "High Performance Board 2015 by IMD",
-      "trainingHistory2": "Role of the Chairman Program (RCP) class 34/2014",
-      "trainingHistory3": "Successful Formulation & Execution of Strategy (SFE) class 3/2009",
-      "trainingHistory4": "Role of the Compensation Committee (RCC) class 7/2008",
-      "trainingHistory5": "Audit Committee Program (ACP) class 5/2005",
-      "trainingHistory6": "Director Certification Program (DCP) class 16/2002",
-      "dateAppointment1": "On 3 May 2017 (registered as a public company limited)",
-      "dateAppointment2": "On 21 April 2018",
-      "dateAppointment3": "On 22 April 2021",
-      "positionHeldInListCompany1": "2015 – present Independent Director, Audit Committee of Sahathai Terminal Public Company Limited",
-      "positionHeldInOtherCompany1": "2014 – present Director and Chairman of the Executive Committee of Thaiyarnyon Intersales Co., Ltd.",
-      "positionHeldInOtherCompany2": "2005 – present Director and Chairman of the Executive Committee of Thaiyarnyon Co., Ltd.",
-      "positionHeldInOtherOrganization1": "2005 – present Director of The National Press Council of Thailand",
-      "positionHeldInOtherOrganization2": "2005 – present Director of The Queen’s Gallery",
-      "positionHeldInOtherOrganization3": "2005 – present Director of Bangkok bank foundation",
-      "pastPositionHeld1": "2005 – 2020  Independent Director, Audit Committee of Sahathai Steel Pipe Public Company Limited",
-      "pastPositionHeld2": "2014 – 2017  Director of InTouch Holdings Public Company Limited"
-    },
+
     "Suchin": {
       "fullName": "Mr. Suchin Ratanasirivilai",
       "age": "55 years",
@@ -559,7 +486,8 @@
       "disciplinary": null,
       "family": [
         "Mr. Wichit Rattanasirivilai (Uncle)"
-      ]
+      ],
+      "note": ""
     },
     "Auggoon": {
       "fullName": "Mr. Auggoon Srisunthorn",
@@ -601,7 +529,8 @@
       ],
       "shareholding": "-None- (as of December 30, 2024)",
       "disciplinary": null,
-      "family": []
+      "family": [],
+      "note": ""
     },
 
     "Chairat": {
@@ -704,7 +633,8 @@
       "disciplinary": null,
       "family": [
         "Mr. Banchai Karuchit(Son)"
-      ]
+      ],
+      "note": ""
     },
 
     "Banchai": {
@@ -759,7 +689,8 @@
       "disciplinary": null,
       "family": [
         "Mrs. Sauwakun Karuchit (Mother)"
-      ]
+      ],
+      "note": ""
     },
 
     "Kittikhun": {
@@ -802,7 +733,7 @@
       "pastPositionHeld1": ""
     },
 
-    "Roongroj": {
+    "Rungroj": {
       "fullName": "Mr. Roongroj Whangteeranon",
       "age": "45 years",
       "positions": [
@@ -832,20 +763,10 @@
       "pastRoles": [],
       "shareholding": "-None- (as of December 30, 2024)",
       "disciplinary": null,
-      "family": []
+      "family": [],
+      "note": ""
     },
-    "RoongrojWhangteeranon": {
-      "fullName": "Mr.Roongroj Whangteeranon",
-      "position1": "Accounting Manager (Possesses qualifications of Chief Accountant specified by announcements of the Department of Business Development of Business Development, Ministry of Commerce)",
-      "education1": "Master’s Degree of Accountancy (Managerial Accounting) – Chulalongkorn University",
-      "education2": "Bachelor Degree of Business Administration (Accounting), Rajamangala Institute of Technology",
-      "dateAppointment1": "20 May 2024",
-      "workExperiment1": "20/5/2024 – present  Accounting Manager of Sahathai Terminal Public Company Limited",
-      "workExperiment2": "15/8/2023 – 7/5/2024 Finance Manager of E-Tuk Factory (Thailand) Co., Ltd.",
-      "workExperiment3": "20/6/2022 – 15/5/2023 Senior Accounting Manager of JV MRT-TCC",
-      "workExperiment4": "1/4/2021 – 17/6/2022 Finance Manager of Cleanpro Laundry Co., Ltd.",
-      "workExperiment5": "26/6/2017 – 22/10/2020 Accounting Manager of Forth Smart Service Public Company Limited"
-    },
+
     "Sanga": {
       "fullName": "Mr. Sanga Sanguansaksri",
       "age": "59 years",
@@ -872,16 +793,10 @@
       "pastRoles": [],
       "shareholding": "100 shares, 0.00% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": []
+      "family": [],
+      "note": ""
     },
-    "SangaSanguansaksri": {
-      "fullName": "Mr.Sanga Sanguansaksri",
-      "position1": "Chief Commercial Officer",
-      "education1": "Bachelor Degree of Science Marine Navigation, Kasetsart University",
-      "dateAppointment1": "1 September 2024",
-      "workExperiment1": "Chief Commercial Officer of Sahathai Terminal Public Company Limited",
-      "workExperiment2": "Commercial Director of Hutchison Laemchabang Terminal Limited Company Limited"
-    },
+
     "Papatsarin": {
       "fullName": "Miss Papatsarin Vichayasavetrat",
       "age": "48 years",
@@ -911,7 +826,8 @@
       "pastRoles": [],
       "shareholding": "-None- (as of May 31, 2025)",
       "disciplinary": null,
-      "family": []
+      "family": [],
+      "note": ""
     }
   }
 }
