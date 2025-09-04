@@ -7,17 +7,29 @@ import { ExecutivesProps } from './interface'
 
 export function Executives({ onClick }: ExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives.Executives')
-  const sauwakunKaruchit = useTranslations('AboutUsPage.SauwakunKaruchit')
-  const banchaiKaruchit = useTranslations('AboutUsPage.BanchaiKaruchit')
-  const kittikhunLochaya = useTranslations('AboutUsPage.KittikhunLochaya')
-  const minrawiPhodee = useTranslations('AboutUsPage.MinrawiPhodee')
-  const bunditRungsimanon = useTranslations('AboutUsPage.BunditRungsimanon')
-  const roongrojWhangteeranon = useTranslations(
-    'AboutUsPage.RoongrojWhangteeranon'
-  )
-  const SangaSanguansaksri = useTranslations('AboutUsPage.SangaSanguansaksri')
 
-  const papatssarin = useTranslations('AboutUsPage.Papatssarin')
+
+  const papatssarin = useTranslations('AboutUsPage.Papatsarin')
+  const papatssarinPositions = papatssarin.raw('positions') as string[]
+
+
+  const sauwakunKaruchit = useTranslations('AboutUsPage.Saowakun')
+  const sauwakunPositions = sauwakunKaruchit.raw('positions') as string[]
+
+  const banchaiKaruchit = useTranslations('AboutUsPage.Banchai')
+  const banchaiPositions = banchaiKaruchit.raw('positions') as string[]
+
+  const kittikhunLochaya = useTranslations('AboutUsPage.Kittikhun')
+  const kittikhunPositions = kittikhunLochaya.raw('positions') as string[]
+
+
+  const sangaSanguansaksri = useTranslations('AboutUsPage.Sanga')
+  const sangaPositions = sangaSanguansaksri.raw('positions') as string[]
+
+
+  const rungroj = useTranslations('AboutUsPage.Rungroj')
+  const rungRojPositions = rungroj.raw('positions') as string[]
+
 
   return (
     <section className='mt-[120px] max-w-[1040px] mx-auto w-full'>
@@ -26,71 +38,45 @@ export function Executives({ onClick }: ExecutivesProps) {
         <PeopleCard
           name={sauwakunKaruchit('fullName')}
           imageUrl='/about-us/sauwakun-karuchit.png'
-          jobTitle={[
-            sauwakunKaruchit('position1'),
-            sauwakunKaruchit('position2'),
-            sauwakunKaruchit('position3'),
-            sauwakunKaruchit('position4'),
-          ]}
+          jobTitle={sauwakunPositions}
           onClick={() => onClick(PeopleEnum.SauwakunKaruchit)}
         />
 
         <PeopleCard
           name={banchaiKaruchit('fullName')}
           imageUrl='/about-us/banchai-karuchit.png'
-          jobTitle={[
-            banchaiKaruchit('position1'),
-            banchaiKaruchit('position2'),
-            banchaiKaruchit('position3'),
-            banchaiKaruchit('position4'),
-            banchaiKaruchit('position5'),
-          ]}
+          jobTitle={banchaiPositions}
           onClick={() => onClick(PeopleEnum.BanchaiKaruchit)}
         />
 
         <PeopleCard
           name={kittikhunLochaya('fullName')}
           imageUrl='/about-us/kittikhun-lochaya.png'
-          jobTitle={[kittikhunLochaya('position1')]}
+          jobTitle={kittikhunPositions}
           onClick={() => onClick(PeopleEnum.KittikhunLochaya)}
         />
 
-        {/*<PeopleCard*/}
-        {/*  name={minrawiPhodee('fullName')}*/}
-        {/*  imageClassName='left-[-34px] top-0 w-[258px]'*/}
-        {/*  imageUrl='/about-us/minrawi-phodee.png'*/}
-        {/*  jobTitle={minrawiPhodee('position1')}*/}
-        {/*  onClick={() => onClick(PeopleEnum.MinrawiPhodee)}*/}
-        {/*/>*/}
-
-        {/*<PeopleCard*/}
-        {/*  name={bunditRungsimanon('fullName')}*/}
-        {/*  imageClassName='left-[-53px] top-[-7.14px] w-[297px]'*/}
-        {/*  imageUrl='/about-us/bundit-rungsimanon.png'*/}
-        {/*  jobTitle={bunditRungsimanon('position1')}*/}
-        {/*  onClick={() => onClick(PeopleEnum.BunditRungsimanon)}*/}
-        {/*/>*/}
-
-        {/* Papatssarin */}
         <PeopleCard
           name={papatssarin('fullName')}
           imageUrl='/about-us/papatsarin-1.png'
-          jobTitle={[papatssarin('position1')]}
+          jobTitle={papatssarinPositions}
           onClick={() => onClick(PeopleEnum.Papatssarin)}
         />
 
         <PeopleCard
-          name={SangaSanguansaksri('fullName')}
+          name={sangaSanguansaksri('fullName')}
           imageUrl='/about-us/Sanga_Sanguansaksri.jpg'
-          jobTitle={[SangaSanguansaksri('position1')]}
+          jobTitle={sangaPositions}
           onClick={() => onClick(PeopleEnum.SangaSanguansaksri)}
         />
 
-        {/*<PeopleCard*/}
-        {/*  name={roongrojWhangteeranon('fullName')}*/}
-        {/*  jobTitle={roongrojWhangteeranon('position1')}*/}
-        {/*  onClick={() => onClick(PeopleEnum.RoongrojWhangteeranon)}*/}
-        {/*/>*/}
+        <PeopleCard
+          name={rungroj('fullName')}
+          imageUrl='/about-us/rungroj.jpg'
+          jobTitle={rungRojPositions}
+          onClick={() => onClick(PeopleEnum.RoongrojWhangteeranon)}
+        />
+
       </section>
     </section>
   )
