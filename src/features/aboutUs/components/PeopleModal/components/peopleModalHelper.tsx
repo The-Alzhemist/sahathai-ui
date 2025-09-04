@@ -1,7 +1,9 @@
 import { useTranslations } from 'next-intl'
 
 export function getString(t: ReturnType<typeof useTranslations>, key: string): string {
-  try { return t(key as never) } catch { return '' }
+
+  try { return t(key as never) } catch {     console.warn(`Missing translation key: ${key}`);
+    return '' }
 }
 
 export function getArray(t: ReturnType<typeof useTranslations>, key: string): string[] {

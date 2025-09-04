@@ -37,6 +37,7 @@ export function BoardContentModal({ boardName = 'AboutUsPage.Yuth', imgUrl }: Pr
   const directorYears = getString(t, 'directorYears')
   const shareholding =  getString(t, 'shareholding')
   const familyRelatedInCompany = getArray(t, 'family')
+  const note = getString(t, 'note')
 
 
   return (
@@ -124,7 +125,14 @@ export function BoardContentModal({ boardName = 'AboutUsPage.Yuth', imgUrl }: Pr
           value={shareholding ? <div className='text-black-6 body-2'>{shareholding}</div> : <None L={L} />}
         />
 
+
         <Row label={L('labels.family')} value={familyRelatedInCompany.length ? <BulletList items={familyRelatedInCompany} />  : <None L={L} />} />
+
+        {note && (
+          <Row label={L('labels.note')} value={note ?
+            <div className='text-black-6 body-2'>{note}</div> : <None L={L} />} />
+        )}
+
 
       </div>
     </>
