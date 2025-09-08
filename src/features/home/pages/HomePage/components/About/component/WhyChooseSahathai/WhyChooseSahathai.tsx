@@ -6,7 +6,7 @@ export   const WhyChooseSahathai = () => {
 
   return <section className='flex justify-between flex-col lg:flex-row items-center max-w-[1040px] gap-5 mx-auto '>
     <div>
-      <div className='flex gap-4 items-center '><div className='w-[40px] h-[3px] bg-red-400'></div><span className='text-2xl text-blue-400 font-light'>สหไทย เทอร์มินอล</span></div>
+      <div className='flex gap-4 items-center '><div className='w-[40px] h-[3px] bg-red-400'></div><span className='text-2xl text-blue-400 font-light'>{t('title')}</span></div>
       <p
         className='!prompt border-black-6 font-light text-darkGray py-[8.5px] !leading-[29px] max-w-[285px]'>
         {t('content')}
