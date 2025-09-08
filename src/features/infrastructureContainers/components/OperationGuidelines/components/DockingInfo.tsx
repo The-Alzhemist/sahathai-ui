@@ -49,18 +49,15 @@ export const DockingInfoEN = () => {
       <>
         <>
           <p className='text-gray-600 text-sm mb-3'>
-            สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งอีเมล์รายละเอียดของเรือบรรทุกสินค้า บริการ
-            และลักษณะของเรือบรรทุกสินค้า (แผนการจัดเก็บทั่วไป แผนการผูกยึดเรือ แผนการจัดวางตู้สินค้าเย็น ระบบความปลอดภัย
-            และตารางพื้นที่ระวางตู้คอนเทนเนอร์) ให้แก่ สหไทย เทอร์มินอล ล่วงหน้าอย่างน้อย 1 สัปดาห์ ก่อนเข้าเทียบท่า
+            The shipping line or agent must email the vessel’s particulars, service lane, and vessel definition (general stowage plan, lashing arrangement plan, reefer arrangement plan, hatch securing, and container capacity table) to the STT Planner at least 1 week prior to calling.
           </p>
 
           <p className='text-gray-600 text-sm mb-3'>
-            สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งข้อมูลตารางการเข้าเทียบท่าระยะยาวล่วงหน้าอย่างน้อย 1 เดือน ให้กับสหไทย เทอร์มินอล เพื่อให้สหไทย เทอร์มินอลวางแผนจองตู้คอนเทนเนอร์ให้กับเรือขนส่งสินค้าล่วงหน้าอย่างน้อย 7, 3 และ 1 วัน ก่อนเข้าเทียบท่า สายการเดินเรือหรือตัวแทนสายการเดินเรือ ต้องส่งข้อมูลประมาณการของวันที่เรือจะเข้าเทียบท่า (ETA) และปริมาณสินค้าที่จะทำการโหลดขึ้นหรือลงโดยประมาณ เพื่อให้ สหไทย เทอร์มินอล ยืนยันแผนการเข้าเทียบท่า (POB) และประมาณการของวันที่ที่เรือจะออกจากท่าเรือต้นทาง (ETD)
-          </p>
+            The shipping line or agent must submit the long-term calling rotations 1 month prior to calling to the STT Planner in order to make a long-term vessel plan for container booking. 7, 3 and 1 day(s) prior to arrival, the shipping line or agent must update both the ETA (Estimate Time of Arrival) and the estimated volume of discharging/loading in order to allow the STT Planner to confirm the POB and ETD (Estimate Time of Departure)          </p>
 
           <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
             <span className='text-sm text-gray-600'>
-              ส่งอีเมล์ถึงสำนักงานปฏิบัติการของ สหไทย เทอร์มินอล ได้ที่
+            Email STT Operations Office at
             </span>
             <span className='text-primary-1'>planner.stt@sahathai.com</span>
           </div>

@@ -98,54 +98,54 @@
         "title": "Executive Committee"
       },
       "Subcommittee": {
-        "title": "คณะอนุกรรมการ",
+        "title": "Audit Committee",
         "auditCommittee": {
-          "title": "คณะกรรมการตรวจสอบ",
-          "clickLinkText": "คลิกที่นี่",
-          "intro": "คณะกรรมการตรวจสอบของเรา มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน สมาชิกของคณะกรรมการตรวจสอบมีดังนี้",
+          "title": "Audit Committee",
+          "clickLinkText": "Click here",
+          "intro": "An audit committee is an operating committee of a company’s board of directors that is in charge of overseeing financial reporting and disclosure. Sahathai Terminal’s Audit Committee members are:",
           "members": [
-            { "name": "คุณวิไล ฉัททันต์รัศมี", "role": "ตำแหน่งประธานกรรมการตรวจสอบ\n" },
-            { "name": "คุณณยุทธ วรฉัตรธาร", "role": "ตำแหน่งกรรมการตรวจสอบ" },
-            { "name": "คุณวิทิต ลีนุตพงษ์", "role": "ตำแหน่งกรรมการตรวจสอบ" }
+            { "name": "Ms.Vilai Chattanrassamee", "role": "Chairman of the Audit Committee" },
+            { "name": "Mr.Yuth Vorachattarn", "role": "Audit Committee Member" },
+            { "name": "Dr.Vithit Leenutaphong", "role": "Audit Committee Member" }
           ],
-          "intro2": "พร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน",
-          "noteTitle": "หมายเหตุ",
+          "intro2": "The company has internal audit and directly report to Audit committee and also appointment Dharmniti Auditing Co., Ltd to be internal audit.",
+          "noteTitle": "Note",
           "note": [
-            {"content":  "เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี"},
-            {"content":  "บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ"}
+            { "content": "Has knowledge and experience in accounting" },
+            { "content": "The Company has considered the qualifications of the independent directors and the audit committee" }
           ],
-          "pdfTitle": "ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์"
+          "pdfTitle": "According to the definition of the Securities and Exchange Commission"
         },
         "executiveCommittee": {
-          "title": "คณะกรรมการบริหาร",
-          "intro": "มีหน้าที่ผลักดันให้ สหไทย เทอร์มินอล ปฏิบัติงานให้ตรงตามนโยบายและทิศทางที่กำหนด โดยคณะผู้บริหารระดับสูงของเรามีสมาชิกดังนี้",
+          "title": "Executive Committee",
+          "intro": "มThe Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
           "members": [
-            { "name": "คุณวิจิตร รัตนศิริวิไล", "role": "ตำแหน่งประธานกรรมการบริหาร" },
-            { "name": "คุณไชยรัตน์ จงยั่งยืนวงศ์", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณสุชิน รัตนศิริวิไล", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณอังกูร ศรีสุนทร", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณเสาวคุณ ครุจิตร", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณบัญชัย ครุจิตร", "role": "ตำแหน่งกรรมการบริหาร" }
+            { "name": "Mr.Wichit Rattanasirivilai", "role": "Chairman of the Executive Committee" },
+            { "name": "Mr.Chairat Chongyangyuenvong", "role": "Executive Committee Member" },
+            { "name": "Mr.Suchin Ratanasirivilai", "role": "Executive Committee Member" },
+            { "name": "Mr.Anggoon Srisunthorn", "role": "Executive Committee Member" },
+            { "name": "Ms.Sauwakun Karuchit", "role": "Executive Committee Member" },
+            { "name": "Mr.Banchai Karuchit", "role": "Executive Committee Member" }
           ]
         },
         "nominationAndRemunerationCommittee": {
-          "title": "คณะกรรมการสรรหาและกำหนดค่าตอบแทน",
-          "intro": "สหไทย เทอร์มินอล ได้จัดตั้งคณะกรรมการสรรหาและกำหนดค่าตอบแทน โดยมีสมาชิกที่มีความรับผิดชอบและมีความสามารถ ตามกฎระเบียบที่กำหนด โดยคณะกรรมการสรรหาและกำหนดค่าตอบแทนของเราประกอบด้วย",
+          "title": "Nomination and Remuneration Committee",
+          "intro": "Sahathai Terminal has established a nomination and remuneration committee with formally delegated duties and responsibilities and with written terms of reference. The committee members are",
           "members": [
-            { "name": "คุณวิทิต ลีนุตพงษ์", "role": "ตำแหน่งประธานกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณยุทธ วรฉัตรธาร", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณวิไล ฉัททันต์รัศมี", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณวิจิตร รัตนศิริวิไล", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณเสาวคุณ ครุจิตร", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" }
+            { "name": "Dr.Vithit Leenutaphong", "role": "Chairman of the Nomination and Remuneration Committee" },
+            { "name": "Mr.Yuth Vorachattarn", "role": "Nomination and Remuneration Committee Member" },
+            { "name": "Ms.Vilai Chattanrassamee", "role": "Nomination and Remuneration Committee Member" },
+            { "name": "Mr.Wichit Rattanasirirvilai", "role": "Nomination and Remuneration Committee Member" },
+            { "name": "Ms.Sauwakun Karuchit", "role": "Nomination and Remuneration Committee Member" }
           ]
         },
         "enterpriseRiskManagementCommittee": {
-          "title": "คณะกรรมการบริหารความเสี่ยงองค์กร",
-          "intro": "บริษัทฯมีการแต่งตั้งคณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ ขึ้นเพื่อดูแลและบริหารความเสี่ยงในองค์กร เพื่อให้อยู่ในระดับที่เหมาะสม โดยมีคณะกรรมการ 3 ท่าน ดังนี้",
+          "title": "Risk Management Committee",
+          "intro": "The Company has appointed Risk Management Governance and Sustainability Committee with the duty to oversee that the overall risk management process is at appropriate level. There are 3 committees",
           "members": [
-            { "name": "คุณยุทธ วรฉัตรธาร", "role": "ตำแหน่งประธานคณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ" },
-            { "name": "คุณวิไล ฉัททันต์รัศมี", "role": "ตำแหน่งกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ" },
-            { "name": "คุณบัญชัย ครุจิตร", "role": "ตำแหน่งกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ" }
+            { "name": "Mr.Yuth Vorachattarn", "role": "Chairman of the Risk Management Governance and Sustainability Committee" },
+            { "name": "Ms.Vilai Chattanrassamee", "role": "Risk Management Governance and Sustainability Committee" },
+            { "name": "Mr.Banchai Karuchit", "role": "Risk Management Governance and Sustainability Committee" }
           ]
         }
       }
