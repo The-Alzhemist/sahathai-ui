@@ -23,7 +23,7 @@ export default function CfsGoods() {
 const CfsGoodsInfoTH = () => {
   return (
       <>
-        <div className='text-sm text-gray-600'>
+        <div className='text-sm text-gray-600 px-5'>
           <h3 className='text-sm text-gray-800 mb-5 underline'>สหไทย เทอร์มินอล รับจัดการสินค้า CFS/LCL ดังต่อไปนี้</h3>
 
           <ul className='flex flex-col gap-y-5 list-disc mb-7'>
@@ -75,30 +75,122 @@ const CfsGoodsInfoTH = () => {
 
 const CfsGoodsInfoEN = () => {
   return (
-      <>
-        <p className='text-gray-800 text-sm mb-3'>
-          This service is for receiving goods from exporters to load into
-          containers at Sahathai port for shipment, for exporters who do not have
-          their own packing facilities. Typically, it is a service for full
-          container loading of a single exporter’s goods. Charges will apply to
-          exporters or their representatives. Additionally, services are available
-          for importers for opening containers at Sahathai Terminal to unload
-          goods and prepare them for pickup. This includes opening containers with
-          goods from multiple importers in a shared container (less-than-container
-          load). Goods will be stored in a warehouse until each importer picks
-          them up, or it may be a full container load where the importer picks up
-          goods directly from the container.
-        </p>
-      </>
+    <>
+      <div className="text-sm text-gray-600 px-5">
+        {/* --- Handles cargo --- */}
+        <h3 className="text-sm text-gray-800 mb-5 underline">
+          STT handles the following CFS/LCL cargo:
+        </h3>
+        <ul className="flex flex-col gap-y-5 list-disc mb-7">
+          <li>
+            Cargo packed in cases or on pallets weighing NOT more than 2 tonnes
+            which can be moved by forklift.
+          </li>
+          <li>
+            For cargo packed in cases or on pallets weighing MORE THAN 2 tonnes,
+            please contact our customer service team to make an enquiry.
+          </li>
+          <li>
+            In any cases where special equipment is required, a service charge will
+            be levied according to the nature of the operation.
+          </li>
+        </ul>
+
+        {/* --- Does not handle cargo --- */}
+        <h3 className="text-sm text-gray-800 mb-5 underline">
+          STT does not handle the following CFS/LCL cargo:
+        </h3>
+        <ul className="flex flex-col gap-y-5 list-disc mb-7">
+          <li>
+            Cargo that can cause pollution in terminal and warehouse areas such as
+            loose powder, smelted chemicals, etc.
+          </li>
+          <li>
+            Cargo that is prohibited by authorities such as certain types of
+            dangerous goods (DG).
+          </li>
+          <li>
+            Heavy equipment, cargo of unbalanced weight, and any other special cargo
+            that cannot be moved by forklift, and/or requires special equipment.
+          </li>
+          <li>
+            STT reserves the right to refuse the provision of equipment and labor
+            for any specific cargo. In such cases, the cargo owner will supply
+            their own equipment and labor.
+          </li>
+        </ul>
+
+        {/* --- Regulations --- */}
+        <h3 className="text-sm text-gray-800 mb-5 underline">
+          Regulation of Wood Packaging Material at Final Destination Countries:
+        </h3>
+        <ul className="flex flex-col gap-y-5 list-disc">
+          <li>
+            If fumigated wood is required by wood packaging materials regulation,
+            customers must inform STT at the time of booking.
+          </li>
+        </ul>
+      </div>
+    </>
   )
 }
 
 const CfsGoodsInfoCN = () => {
   return (
-      <>
-        <p className='text-gray-800 text-sm mb-3'>
-          此服务是为了接收出口商的货物并在Sahathai港口装入集装箱以备运输，适用于没有自己集装箱装载设施的出口商。通常，这是一项针对单一出口商的满集装箱装载服务。公司会向出口商或其代理收取费用。此外，还为进口商提供服务，开箱集装箱并将货物准备好以供取货。这包括多家进口商的货物放在同一个集装箱中的服务（拼箱），货物会存放在仓库，直到每个进口商来取货，或者是单一进口商的满箱服务，进口商可以直接从集装箱取货。
-      </p>
-    </>
+    <div className="text-sm text-gray-600 px-5">
+      {/* --- Handles cargo --- */}
+      <h3 className="text-sm text-gray-800 mb-5 underline">
+        STT handles the following CFS/LCL cargo:
+      </h3>
+      <ul className="flex flex-col gap-y-5 list-disc mb-7">
+        <li>
+          Cargo packed in cases or on pallets weighing NOT more than 2 tonnes
+          which can be moved by forklift.
+        </li>
+        <li>
+          For cargo packed in cases or on pallets weighing MORE THAN 2 tonnes,
+          please contact our customer service team to make an enquiry.
+        </li>
+        <li>
+          In any cases where special equipment is required, a service charge will
+          be levied according to the nature of the operation.
+        </li>
+      </ul>
+
+      {/* --- Does not handle cargo --- */}
+      <h3 className="text-sm text-gray-800 mb-5 underline">
+        STT does not handle the following CFS/LCL cargo:
+      </h3>
+      <ul className="flex flex-col gap-y-5 list-disc mb-7">
+        <li>
+          Cargo that can cause pollution in terminal and warehouse areas such as
+          loose powder, smelted chemicals, etc.
+        </li>
+        <li>
+          Cargo that is prohibited by authorities such as certain types of
+          dangerous goods (DG).
+        </li>
+        <li>
+          Heavy equipment, cargo of unbalanced weight, and any other special cargo
+          that cannot be moved by forklift, and/or requires special equipment.
+        </li>
+        <li>
+          STT reserves the right to refuse the provision of equipment and labor
+          for any specific cargo. In such cases, the cargo owner will supply
+          their own equipment and labor.
+        </li>
+      </ul>
+
+      {/* --- Regulations --- */}
+      <h3 className="text-sm text-gray-800 mb-5 underline">
+        Regulation of Wood Packaging Material at Final Destination Countries:
+      </h3>
+      <ul className="flex flex-col gap-y-5 list-disc">
+        <li>
+          If fumigated wood is required by wood packaging materials regulation,
+          customers must inform STT at the time of booking.
+        </li>
+      </ul>
+    </div>
   )
 }

@@ -23,7 +23,7 @@ export default function OperatingHours() {
 const OperatingHoursInfoTH = () => {
   return (
     <>
-        <ul className='flex flex-col gap-y-5 list-disc'>
+        <ul className='flex flex-col gap-y-5 list-disc px-5'>
             <li className='text-gray-600 text-sm'>วันทำการ: จันทร์-เสาร์ เวลาทำการ: 08:00-17:00 น.
             </li>
 
@@ -52,18 +52,52 @@ const OperatingHoursInfoTH = () => {
             <li className='text-red-600 text-sm'>เวลาปิดรับสินค้าประเภท CFS: 6 ชั่วโมง ก่อนเวลาปิดรับสินค้าของ CY
             </li>
         </ul>
+
+
     </>
   )
 }
 
 const OperatingHoursInfoEN = () => {
     return (
-        <>
-            <p className='text-gray-800 text-sm mb-3'>
-        The operations department works 7 days a week, 24 hours a day.
-      </p>
-    </>
-  )
+      <>
+        <ul className="flex flex-col gap-y-5 list-disc px-5">
+          <li className="text-gray-600 text-sm">
+            Working days: Monday to Saturday | Working hours: 08:00–17:00 HR
+          </li>
+
+          <li className="text-gray-600 text-sm">
+            General containers by truck: 24 hrs before ATB (Actual Time of Berth)
+          </li>
+
+          <li className="text-gray-600 text-sm">
+            Reefers (fruit): 1 hr before ATB
+          </li>
+
+          <li className="text-gray-600 text-sm">
+            Reefers (other): 12 hrs before ATB
+          </li>
+
+          <li className="text-gray-600 text-sm">
+            DG GROUP2: Direct from ship/chassis onto chassis/ship
+          </li>
+
+          <li className="text-gray-600 text-sm">
+            DG GROUP3: Can be stored inside port area up to maximum of 48 hours
+            after discharging from vessel (or) 48 hours before loading Hours of
+            Operation for CFS (Container Freight Station)
+          </li>
+
+          <li className="text-red-600 text-sm">
+            ** Requests for overtime operation must be made before 16:00 on a working day
+          </li>
+
+          <li className="text-red-600 text-sm">
+            ** Closing time for CFS cargo: 6 hours before CY cutoff time
+          </li>
+        </ul>
+      </>
+    )
 }
 
 const OperatingHoursInfoCN = () => {
