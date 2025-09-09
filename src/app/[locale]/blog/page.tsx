@@ -29,7 +29,7 @@ export default async function blog({
 
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
-  const perPage = 8
+  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
   //  fetching data

@@ -1,16 +1,18 @@
 {
   "Header": {
-    "contactUs": "联系我们",
+    "contactUs": "Contact Us",
     "blog": "Blog",
-    "joinUs": "加入我们",
-    "search": "搜索",
-    "infra": "基础设施和容器",
-    "news": "新闻",
-    "eService": "电子服务",
-    "invester": "投资者关系",
-    "aboutUs": "关于我们",
-    "service": "服务",
+    "joinUs": "Join Us",
+    "search": "Search",
+    "infra": "Infrastructure and Containers",
+    "news": "News",
+    "eService": "e-Service",
+    "invester": "Investor Relations",
+    "aboutUs": "About Us",
+    "service": "Services",
     "shareHolder": "ผู้ถือหุ้น",
-    "shareHolderMeeting": "การประชุมผู้ถือหุ้น"
+    "shareHolderMeeting": "การประชุมผู้ถือหุ้น",
+    "sahathai": "Sahathai",
+    "terminal": "Terminal"
   }
 }

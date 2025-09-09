@@ -112,8 +112,6 @@ export async function fetchBlogBySlug(slug: string, lang: string, revalidate = R
       language: lang,
     })
 
-  console.log("fetchBlogBySlug ::::", slug)
-
   const res = await fetch(url, {
     next: {
       revalidate: revalidate,          // cache 1 วัน

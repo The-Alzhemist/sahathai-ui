@@ -10,7 +10,9 @@
     "invester": "Investor Relations",
     "aboutUs": "About Us",
     "service": "Services",
-    "shareHolder": "ผู้ถือหุ้น",
-    "shareHolderMeeting": "การประชุมผู้ถือหุ้น"
+    "shareHolder": "Shareholder",
+    "shareHolderMeeting": "Shareholder meeting",
+    "sahathai": "Sahathai",
+    "terminal": "Terminal"
   }
 }
