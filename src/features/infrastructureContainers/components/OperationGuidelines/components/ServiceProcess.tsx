@@ -43,13 +43,13 @@ export const ServiceProcessEN = () => {
     return (
         <>
             <p className='text-gray-600 text-sm mb-3'>
-                เรากำลังพัฒนาและปรับเปลี่ยนขั้นตอนการเรียกเก็บค่าใช้บริการที่สะดวกและรวดเร็วมากขึ้น
+              We are currently working on billing procedures that would help streamline invoicing and receipts. Should you have any inquiries regarding billing procedures
             </p>
 
 
             <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
             <span className='text-sm text-gray-600'>
-        หากคุณมีข้อสงสัยหรือต้องการทราบข้อมูลเพิ่มเติม สามารถติดต่อเราได้ที่
+ please feel free to contact us at
             </span>
                 <span className='text-primary-1'>+66 (0) 2386 8000.</span>
             </div>
@@ -60,19 +60,20 @@ export const ServiceProcessEN = () => {
 
 export const ServiceProcessCN = () => {
     return (
-        <>
-            <p className='text-gray-600 text-sm mb-3'>
-                เรากำลังพัฒนาและปรับเปลี่ยนขั้นตอนการเรียกเก็บค่าใช้บริการที่สะดวกและรวดเร็วมากขึ้น
-            </p>
+      <>
+        <p className='text-gray-600 text-sm mb-3'>
+          We are currently working on billing procedures that would help streamline invoicing and receipts. Should you
+          have any inquiries regarding billing procedures
+        </p>
 
 
-            <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
+        <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
             <span className='text-sm text-gray-600'>
-        หากคุณมีข้อสงสัยหรือต้องการทราบข้อมูลเพิ่มเติม สามารถติดต่อเราได้ที่
+ please feel free to contact us at
             </span>
-                <span className='text-primary-1'>+66 (0) 2386 8000.</span>
-            </div>
+          <span className='text-primary-1'>+66 (0) 2386 8000.</span>
+        </div>
 
-        </>
+      </>
     )
 }
