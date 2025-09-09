@@ -43,6 +43,8 @@
       "detail": "Download ข้อมูล FactSheet ได้ที่นี่"
     },
     "OneReportTable": {
+      "AnnualReport": "รายงานประจำปี",
+      "56-1oneReport": "รายงาน 56-1",
       "56-1OneReport": "56-1 One\nReport"
     },
     "OtherFinancialStatementsTable": {

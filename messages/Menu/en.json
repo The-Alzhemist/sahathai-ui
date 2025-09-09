@@ -32,18 +32,18 @@
     "eService": "e-Service",
     "investorRelations": {
       "title": "Investor Relations",
-      "investorInformation": "ข้อมูลสำหรับนักลงทุน",
-      "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
+      "investorInformation": "Investor Information",
+      "sustainabilityManagement": "Sustainability Management (ESG)",
       "codeConduct": "Code of Conduct",
-      "shareHolder": "ผู้ถือหุ้น",
-      "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้นประจำปี",
-      "FinancialInformation": "ข้อมูลทางการเงิน",
-      "PerformanceReport": "รายงานผลการดำเนินงาน",
-      "DocumentAnnouncement": "เอกสารเผยแพร่",
-      "GoodCorporate": "การกำกับดูแลกิจการที่ดี",
-      "SustainableDevelopment": "การบริหารจัดการด้านความยั่งยืน",
-      "Activity": "กิจกรรม",
-      "Warrant": "ใบสำคัญแสดงสิทธิ"
+      "shareHolder": "Shareholders",
+      "shareHolderMeeting": "Annual General Meeting of Shareholders",
+      "FinancialInformation": "Financial Information",
+      "PerformanceReport": "Performance Report",
+      "DocumentAnnouncement": "Publications",
+      "GoodCorporate": "Good Corporate Governance",
+      "SustainableDevelopment": "Sustainable Development",
+      "Activity": "Activities",
+      "Warrant": "Warrants"
     }
   }
 }

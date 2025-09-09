@@ -5,6 +5,7 @@ import { oneReportInformationList } from '@/features/investorRelations/component
 export function OneReportTable() {
   const common = useTranslations('common')
   const t = useTranslations('InvestorInformationPage.OneReportTable')
+  const investorTranslate = useTranslations('InvestorInformationPage.OneReportTable')
 
   return (
     <div
@@ -20,10 +21,10 @@ export function OneReportTable() {
         <div className="p-4 grid grid-cols-[120px,1fr,1fr,1fr] md:grid-cols-[160px,1fr,1fr,1fr] gap-x-4 mb-3">
           <div className="subtitle-1 text-darkGray !font-normal">{common('year')}</div>
           <div className="subtitle-1 text-darkGray !font-normal text-center">
-            Annual Report<br/>รายงานประจำปี
+            {t('AnnualReport')}
           </div>
           <div className="subtitle-1 text-darkGray !font-normal text-center">
-            Report 56-1<br/>รายงาน 56-1
+            {t('56-1oneReport')}
           </div>
           <div className="subtitle-1 text-darkGray !font-normal text-right">{t('56-1OneReport')}</div>
         </div>

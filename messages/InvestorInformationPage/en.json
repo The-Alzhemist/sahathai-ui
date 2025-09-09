@@ -2,31 +2,31 @@
   "InvestorInformationPage": {
     "StockMarketInformation": { "title": "ข้อมูลตลาดหุ้น" },
     "FinancialReports": {
-      "title": "รายงานและข้อมูลทางการเงิน",
+      "title": "Financial reports and information",
       "oneReport": "One Report",
-      "yearlyReport": "รายงานประจำปี",
+      "yearlyReport": "Annual report",
       "otherFinancialStatements": "งบการเงินอื่นๆ"
     },
     "Shareholder": {
-      "title": "ผู้ถือหุ้น",
-      "order": "ลำดับ",
-      "numberShares": "จำนวนหุ้น (หุ้น)",
-      "shares": "% หุ้น",
-      "shareholderFreeFloatOverview": "ผู้ถือหุ้นรายย่อย ณ วันที่ {date}",
-      "type": "ประเภท",
-      "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date}",
-      "minorityShareholders": "จำนวนผู้ถือหุ้นรายย่อย (Free float)",
-      "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
-      "numberShareholder": "จำนวนผู้ถือหุ้นทั้งหมด",
-      "scriptlessShares": "% การถือหุ้นแบบไร้ใบหุ้น",
-      "stockDistribution": "รายชื่อผู้ถือหุ้นใหญ่ และ ดูข้อมูลการกระจายหุ้น",
+      "title": "Shareholder Information",
+      "order": "Rank",
+      "numberShares": " Shares",
+      "shares": "% Shares",
+      "shareholderFreeFloatOverview": "Free Float As of {date}",
+      "type": "Type",
+      "shareholderOverview": "Overview As of {date}",
+      "minorityShareholders": "Minor Shareholders (Free float)",
+      "minorityShareholding": "% Shares in Minor Shareholders (% Free float)",
+      "numberShareholder": "Total Shareholders",
+      "scriptlessShares": " % Shares in Scripless Holding",
+      "stockDistribution": "List of major shareholders and share distribution",
       "note": "หมายเหตุ: * อื่นๆ ประกอบด้วยผู้ถือหุ้นรายบุคคลในกลุ่มครอบครัวรัตนศิริวิไล โดยผู้ถือหุ้นแต่ละรายถือหุ้นน้อยกว่าร้อยละ 3.00",
       "profit": {
-        "title": "การจ่ายเงินปันผล",
-        "heading1": "นโยบายการจ่ายเงินปันผลของบริษัทฯ",
-        "detail1": "บริษัทฯ มีนโยบายจ่ายเงินปันผลขั้นต่ำไม่น้อยกว่าร้อยละ 40.00 ของกำไรสุทธิตามงบการเงินเฉพาะกิจการของบริษัทหลังหักภาษีเงินได้สำรองตามที่กฏหมายกำหนด และภาระผูกพันตามเงื่อนไขของสัญญาเงินกู้\n\nทั้งนี้ การจ่ายเงินปันผลดังกล่าวจะขึ้นอยู่กับแผนการลงทุน ความจำเป็นของการใช้เงินลงทุน และความเหมาะสมอื่นๆ ในอนาคตโดยเมื่อคณะกรรมการบริษัทฯ มีมติเห็นชอบให้จ่ายเงินปันผลประจำปีแล้วจะต้องนำเสนอเพื่อขออนุมัติต่อที่ประชุมผู้ถือหุ้น เว้นแต่เป็นการจ่ายเงินปันผลระหว่างกาล ซึ่งคณะกรรมการบริษัทฯ มีอำนาจอนุมัติให้จ่ายเงินปันผลได้\nและให้รายงานฯต่อที่ประชุมผู้ถือหุ้นทราบในการประชุมคราวต่อไป",
-        "heading2": "นโยบายการจ่ายเงินปันผลของบริษัทย่อย",
-        "detail2": "ในการพิจารณาจ่ายเงินปันผลของบริษัทย่อยนั้นจะอยู่ภายใต้อำนาจการพิจารณาอนุมัติของคณะกรรมการบริษัทฯ และที่ประชุมผู้ถือหุ้นของบริษัทย่อยแต่ละบริษัท โดยคณะกรรมการบริษัทฯ ผ่านกรรมการที่เป็นตัวแทนของบริษัทฯ จะดูแลให้บริษัทย่อยของบริษัทฯ ดำเนินการจ่ายเงินปันผลไม่น้อยกว่าร้อยละ 40.00 ของกำไรสุทธิตามงบการเงินเฉพาะกิจการของบริษัทย่อยของบริษัทฯ หลังหักภาษีเงินได้สำรองตามที่กฎหมายกำหนด และภาระผูกพันตามเงื่อนไขของสัญญาเงินกู้\n\nทั้งนี้ การจ่ายเงินปันผลดังกล่าวจะขึ้นอยู่กับแผนการลงทุน ความจำเป็นต้องการใช้เงินลงทุน และความเหมาะสมอื่นๆ\n\nทั้งนี้ เพื่อให้การจ่ายเงินปันผลของบริษัทย่อยเป็นไปตามหลักบรรษัทภิบาล มีความโปร่งใส และตรวจสอบได้ เมื่อบริษัทย่อยมีการจ่ายเงินปันผล คณะกรรมการบริษัทย่อยแต่ละบริษัทจะทำการรายงานให้ที่ประชุมคณะกรรมการบริษัทฯ ทราบในการประชุมคราวถัดไป"
+        "title": "Dividend Distribution",
+        "heading1": "Company Dividend Policy",
+        "detail1": "The Company has a policy to pay dividends of not less than 40.00% of the net profit shown in the Company’s separate financial statements after deduction of corporate income tax, legal reserves as required by law, and obligations under loan agreements.\n\nHowever, such dividend payments are subject to the Company’s investment plans, funding requirements, and other future appropriateness. Once the Board of Directors has resolved to approve the annual dividend payment, it must be proposed for approval at the Shareholders’ Meeting, except in the case of an interim dividend, which the Board of Directors has the authority to approve. The interim dividend payment must then be reported to the Shareholders’ Meeting at the next meeting.",
+        "heading2": "Subsidiaries’ Dividend Policy",
+        "detail2": "Dividend payments of subsidiaries are subject to the consideration and approval of the subsidiaries’ Board of Directors and Shareholders’ Meeting. Through its representatives on the subsidiaries’ boards, the Company oversees that each subsidiary distributes dividends of not less than 40.00% of the net profit shown in its separate financial statements after deduction of corporate income tax, legal reserves as required by law, and obligations under loan agreements.\n\nDividend payments will also depend on investment plans, funding requirements, and other appropriateness.\n\nTo ensure that dividend payments of subsidiaries are in line with good corporate governance principles, transparent, and verifiable, whenever a subsidiary declares a dividend payment, the subsidiary’s Board of Directors must report such payment to the Company’s Board of Directors at the next meeting."
       }
     },
     "DividendPayment": {
@@ -36,13 +36,15 @@
       "unit": "หน่วย",
       "financialPeriod": "รอบผลประกอบการ"
     },
-    "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
-    "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
-    "CompanyAdvertiseVideo": { "title": "วิดิโอประชาสัมพันธ์บริษัท" },
+    "ShareholdersMeeting": { "title": "Shareholder meeting" },
+    "CompanyIntroductionVideo": { "title": "Company introduction video" },
+    "CompanyAdvertiseVideo": { "title": "Company public relations video" },
     "FactSheet": { "title": "FactSheet",
-      "detail": "Download ข้อมูล FactSheet "
+      "detail": "Download data factSheet "
     },
     "OneReportTable": {
+      "AnnualReport": "Annual Report\n",
+      "56-1oneReport": "Report 56-1",
       "56-1OneReport": "56-1 One\nReport"
     },
     "OtherFinancialStatementsTable": {
