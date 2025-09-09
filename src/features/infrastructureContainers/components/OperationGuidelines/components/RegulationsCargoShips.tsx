@@ -23,7 +23,7 @@ export default function RegulationsCargoShips() {
 const RegulationsCargoShipsInfoTH = () => {
   return (
       <>
-          <div className='text-sm text-gray-600'>
+          <div className='text-sm text-gray-600 px-5'>
               <ul className='flex flex-col gap-y-5 list-disc'>
                   <li className='text-gray-600 text-sm'>กัปตันเรือ/หัวหน้าเจ้าหน้าที่มีหน้าที่รับผิดชอบในการตรวจสอบและตรวจสอบทรัพย์สินของสหไทย
                       เทอร์มินอล ร่วมกัน เพื่อรับประกันว่า ไม่มีความเสียหายใดๆ
@@ -80,13 +80,52 @@ const RegulationsCargoShipsInfoEN = () => {
     return (
         <>
             <>
-                <ul className='text-gray-800 text-sm mb-3 flex flex-col gap-2'>
-                    <li>
-                        1.Receive and dispatch cargo containers through the NSW TOS system.
-                    </li>
-                    <li>2.Matching</li>
-                    <li>3.Mobile X-Ray Machinem</li>
-                </ul>
+                <div className="text-sm text-gray-600 px-5">
+                    <ul className="flex flex-col gap-y-5 list-disc">
+                        <li>
+                            The Master/Chief Officer is responsible for checking and co-inspecting STT property
+                            to assure that no damage occurs from collision upon berthing the vessel and
+                            throughout the stay at the port.
+                        </li>
+                        <li>
+                            A gangway with proper handrail and a save-all net is provided immediately upon
+                            arrival of a vessel at the terminal.
+                        </li>
+                        <li>
+                            The Master/Chief Officer is responsible for expediting the crew services of
+                            shifting/positioning the ship derricks whenever necessary to facilitate terminal
+                            operations without obstruction. To avoid any collisions with STT’s quay cranes and
+                            ship derricks, vessels are requested to obtain clearance from STT personnel before
+                            any shifting/positioning is done.
+                        </li>
+                        <li>
+                            The Master/Chief Officer is responsible for providing proper and sufficient lashing
+                            equipment if required by STT personnel, and progressive inspections should be made
+                            by the vessel’s Master/Chief Officer to ensure proper lashing. Any dissatisfaction
+                            with lashing should be brought to the immediate attention of STT supervisors. Any
+                            costs incurred from delay or amendments to the vessel’s sailing time due to
+                            last-minute lashing inspections will be charged to the Agent.
+                        </li>
+                        <li>
+                            The Master/Chief Officer is responsible for maintaining the vessel’s stability,
+                            including the tightening of mooring ropes when necessary throughout the port stay.
+                        </li>
+                        <li>
+                            Ship crews and companions are requested to contact STT security before entering the
+                            terminal.
+                        </li>
+                        <li>
+                            No excessive smoke is to be emitted from the ship’s funnel.
+                        </li>
+                        <li>
+                            No oil spillage is permitted into the river or anywhere in the vicinity of the
+                            working area.
+                        </li>
+                        <li>
+                            No painting is permitted in the wharf area.
+                        </li>
+                    </ul>
+                </div>
             </>
         </>
     )
@@ -94,14 +133,55 @@ const RegulationsCargoShipsInfoEN = () => {
 
 const RegulationsCargoShipsInfoCN = () => {
     return (
-        <>
-            <>
-                <ul className='text-gray-800 text-sm mb-3 flex flex-col gap-2'>
-                    <li>1.通过NSW TOS系统接收和发运货物集装箱。</li>
-                    <li>2.匹配。</li>
-                    <li>3.移动X射线机器。</li>
-                </ul>
-            </>
-        </>
+      <>
+          <>
+              <div className="text-sm text-gray-600 px-5">
+                  <ul className="flex flex-col gap-y-5 list-disc">
+                      <li>
+                          The Master/Chief Officer is responsible for checking and co-inspecting STT property
+                          to assure that no damage occurs from collision upon berthing the vessel and
+                          throughout the stay at the port.
+                      </li>
+                      <li>
+                          A gangway with proper handrail and a save-all net is provided immediately upon
+                          arrival of a vessel at the terminal.
+                      </li>
+                      <li>
+                          The Master/Chief Officer is responsible for expediting the crew services of
+                          shifting/positioning the ship derricks whenever necessary to facilitate terminal
+                          operations without obstruction. To avoid any collisions with STT’s quay cranes and
+                          ship derricks, vessels are requested to obtain clearance from STT personnel before
+                          any shifting/positioning is done.
+                      </li>
+                      <li>
+                          The Master/Chief Officer is responsible for providing proper and sufficient lashing
+                          equipment if required by STT personnel, and progressive inspections should be made
+                          by the vessel’s Master/Chief Officer to ensure proper lashing. Any dissatisfaction
+                          with lashing should be brought to the immediate attention of STT supervisors. Any
+                          costs incurred from delay or amendments to the vessel’s sailing time due to
+                          last-minute lashing inspections will be charged to the Agent.
+                      </li>
+                      <li>
+                          The Master/Chief Officer is responsible for maintaining the vessel’s stability,
+                          including the tightening of mooring ropes when necessary throughout the port stay.
+                      </li>
+                      <li>
+                          Ship crews and companions are requested to contact STT security before entering the
+                          terminal.
+                      </li>
+                      <li>
+                          No excessive smoke is to be emitted from the ship’s funnel.
+                      </li>
+                      <li>
+                          No oil spillage is permitted into the river or anywhere in the vicinity of the
+                          working area.
+                      </li>
+                      <li>
+                          No painting is permitted in the wharf area.
+                      </li>
+                  </ul>
+              </div>
+          </>
+      </>
     )
 }
