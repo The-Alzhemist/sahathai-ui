@@ -57,7 +57,7 @@ export default async function news({
 
       <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6'>
         <h2 className='headline-2 text-blue-400 text-center mb-7'>
-          {t('latestBlog')}
+          {t('latestNews')}
         </h2>
 
         <LatestBlogCard blog={latestBlog} locale={locale} page={'news'} />
@@ -67,7 +67,7 @@ export default async function news({
       <section className='bg-white pt-[70px]'>
         <div className='max-w-[1100px] mx-auto p-6'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
-            {t('allBlog')}
+            {t('pressRelease')}
           </h2>
 
           {/* Search box แบบง่าย (Server + link) */}

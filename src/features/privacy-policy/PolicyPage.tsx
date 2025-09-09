@@ -3,15 +3,17 @@ import withPolicyPage from './withPolicyPage'
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
+import { Banner } from '@/components/Banner'
 
 const PolicyPage = () => {
   const t = useTranslations('PrivacyPolicyPage')
   return (
-    <main className='mt-[100px] mx-auto '>
+    <main className='mx-auto '>
+
       <Menu />
 
       <section className='px-5'>
-        <h1 className='text-xl md:text-4xl text-navy text-center mb-10'>
+        <h1 className='text-xl md:text-4xl text-navy text-center my-10'>
           Cookie Policy
         </h1>
 

@@ -134,9 +134,9 @@ export function Header() {
           </Link>
 
           <div className='flex gap-x-2'>
-            <span className='text-blue-300 font-light text-[16px]'>สหไทย</span>
+            <span className='text-blue-300 font-light text-[16px]'>{t('sahathai')}</span>
             <span className='text-red-300 font-light text-[16px]'>
-              เทอร์มินอล
+            {t('terminal')}
             </span>
           </div>
 
