@@ -1,50 +1,49 @@
 {
   "Menu": {
     "aboutUs": {
-      "title": "关于我们",
-      "visionMission": "愿景与使命",
-      "ourCommitmentSuccess": "我们的承诺与成功",
-      "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
-      "corporateGroupStructureOrganizationalStructure": "公司集团结构与组织结构"
+      "title": "About Us",
+      "visionMission": "Vision and Mission",
+      "ourCommitmentSuccess": "Our Commitment and Success",
+      "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
+      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
     },
-
     "infrastructureContainers": {
       "title": "Terminal",
-      "machineryEquipment": "港口关键机械设备" ,
+      "machineryEquipment": "Key Machinery and Equipment in the Port" ,
       "logisticInnovation": "Logistic Innovation",
-      "opticalCharacterRecognition": "自动货柜读取技术 (OCR)",
-      "operationGuidelines": "操作指南",
-      "contactUs": "联系我们"
+      "opticalCharacterRecognition": "Automatic Cargo Container Reading Technology (OCR)",
+      "operationGuidelines": "Operational Guidelines",
+      "contactUs": "Contact Us"
     },
     "service": {
-      "title": "服务",
-      "commercialDock": "商业码头",
-      "bargeServices": "驳船服务",
-      "containerHandling": "集装箱处理 | CFS LCL",
-      "containerMaintenance": "集装箱维护",
-      "groundContainerTransportationServices": "陆路集装箱运输服务",
-      "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า"
+      "title": "Services",
+      "commercialDock": "Commercial Dock",
+      "bargeServices": "Barge Services",
+      "containerHandling": "Container Handling | CFS LCL",
+      "containerMaintenance": "Container Maintenance",
+      "groundContainerTransportationServices": "Ground Container Transportation Services",
+      "containerServices": "Container Yard and Warehouse Services"
     },
     "news": {
-      "title": "新闻",
-      "latestNews": "最新新闻",
-      "pressRelease": "新闻发布"
+      "title": "News",
+      "latestNews": "Latest News",
+      "pressRelease": "Press Release"
     },
-    "eService": "电子服务",
+    "eService": "e-Service",
     "investorRelations": {
-      "title": "投资者关系",
-      "investorInformation": "ข้อมูลสำหรับนักลงทุน",
-      "sustainabilityManagement": "การบริหารจัดการด้านความยั่งยืน (ESG)",
+      "title": "Investor Relations",
+      "investorInformation": "Investor Information",
+      "sustainabilityManagement": "Sustainability Management (ESG)",
       "codeConduct": "Code of Conduct",
-      "shareHolder": "ผู้ถือหุ้น",
-      "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้นประจำปี",
-      "FinancialInformation": "ข้อมูลทางการเงิน",
-      "PerformanceReport": "รายงานผลการดำเนินงาน",
-      "DocumentAnnouncement": "เอกสารเผยแพร่",
-      "GoodCorporate": "การกำกับดูแลกิจการที่ดี",
-      "SustainableDevelopment": "การบริหารจัดการด้านความยั่งยืน",
-      "Activity": "กิจกรรม",
-      "Warrant": "ใบสำคัญแสดงสิทธิ"
+      "shareHolder": "Shareholders",
+      "shareHolderMeeting": "Annual General Meeting of Shareholders",
+      "FinancialInformation": "Financial Information",
+      "PerformanceReport": "Performance Report",
+      "DocumentAnnouncement": "Publications",
+      "GoodCorporate": "Good Corporate Governance",
+      "SustainableDevelopment": "Sustainable Development",
+      "Activity": "Activities",
+      "Warrant": "Warrants"
     }
   }
 }

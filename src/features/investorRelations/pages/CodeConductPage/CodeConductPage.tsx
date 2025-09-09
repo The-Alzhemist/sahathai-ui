@@ -24,9 +24,7 @@ export function CodeConductPage() {
         <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
           {t('title')}
         </h2>
-        <h3 className='mt-[8px] headline-4 text-center text-blue-400'>
-          {t('subTitle')}
-        </h3>
+
         <Animation className='mt-[105px] space-y-[32px]'>
           <CodeConductCard title={t('antiCorruptionPolicyTh')} fileUrl='' />
           <CodeConductCard title={t('antiCorruptionPolicyEn')} fileUrl='' />
