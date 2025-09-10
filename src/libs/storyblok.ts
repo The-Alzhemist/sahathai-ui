@@ -42,42 +42,42 @@ export const getStoryblokApi = storyblokInit({
 //   return storyBookData
 // }
 
-export async function fetchNewsBlogListData(
-  page: number = 1,
-  perPage: number = 10,
-  lang: string = 'en' // default language
-) {
-  const storyblokApi = getStoryblokApi()
+// export async function fetchNewsBlogListData(
+//   page: number = 1,
+//   perPage: number = 10,
+//   lang: string = 'en' // default language
+// ) {
+//   const storyblokApi = getStoryblokApi()
+//
+//   const sbParams: ISbStoriesParams = {
+//     version: 'published',
+//     starts_with: 'news/',
+//     is_startpage: false,
+//     page: page,
+//     per_page: perPage,
+//     language: lang,
+//   }
+//
+//   const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
+//   return storyBookData
+// }
 
-  const sbParams: ISbStoriesParams = {
-    version: 'published',
-    starts_with: 'news/',
-    is_startpage: false,
-    page: page,
-    per_page: perPage,
-    language: lang,
-  }
-
-  const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
-  return storyBookData
-}
-
-export async function fetchNewsBlogListLengthData(
-  page: number = 1,
-  perPage: number = 99,
-  lang: string = 'en' // default language
-) {
-  const storyblokApi = getStoryblokApi()
-
-  const sbParams: ISbStoriesParams = {
-    version: 'published', // or 'published' based on your needs
-    starts_with: 'news/',
-    is_startpage: false,
-    page: page,
-    per_page: perPage,
-    language: lang,
-  }
-
-  const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
-  return storyBookData
-}
+// export async function fetchNewsBlogListLengthData(
+//   page: number = 1,
+//   perPage: number = 99,
+//   lang: string = 'en' // default language
+// ) {
+//   const storyblokApi = getStoryblokApi()
+//
+//   const sbParams: ISbStoriesParams = {
+//     version: 'published', // or 'published' based on your needs
+//     starts_with: 'news/',
+//     is_startpage: false,
+//     page: page,
+//     per_page: perPage,
+//     language: lang,
+//   }
+//
+//   const storyBookData = await storyblokApi.get(`cdn/stories`, sbParams)
+//   return storyBookData
+// }
