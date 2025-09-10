@@ -1,17 +1,12 @@
-import { useTranslations } from 'next-intl'
 
-import { Animation } from '@/components/Animation'
-import LatestNewsHomePageList from '@/features/home/pages/HomePage/components/News/LatestNewsHomePageList/LatestNewsHomePageList'
-import { REVALIDATE_TIME } from '@/config/environtment'
+
+
 import { getTranslations } from 'next-intl/server'
-import { redirect } from 'next/navigation'
+
 import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
-import { Menu } from '@/components/Menu'
-import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
+
 import { BlogCard } from '@/components/BlogCard'
-import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import Image from 'next/image'
-import { Brochure } from '@/features/news/components/Brochure'
+
 import React from 'react'
 
 
