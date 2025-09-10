@@ -8,6 +8,7 @@ import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
 import { BlogCard } from '@/components/BlogCard'
 
 import React from 'react'
+import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 
 
 
@@ -24,30 +25,22 @@ import React from 'react'
 //   )
 // }
 
-export default async function News() {
+export default async function HomePageNews({params}: HomePageProps) {
   // translation
   const t = await getTranslations('NewsPage')
 
-
-
-  const locale = 'th'
-  const page = Number( 1)
+  const locale = params.locale
+  const page = 1
   const perPage = 3
   const search =  undefined
 
   //  fetching data
-  const { stories, total } = await fetchAllBlog({
+  const { stories } = await fetchAllBlog({
     page,
     perPage,
     lang: locale,
     version: 'published',
     search,
-    startsWith: 'news/',
-    tag: 'story:news-list'
-  })
-
-  const latestBlog = await fetchLastBlog({
-    lang: locale,
     startsWith: 'news/',
     tag: 'story:news-list'
   })
