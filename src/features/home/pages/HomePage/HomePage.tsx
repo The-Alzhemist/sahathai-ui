@@ -2,7 +2,7 @@ import { Banner } from './components/Banner'
 import { About } from './components/About'
 import { License } from './components/License'
 import { Service } from './components/Service'
-import { News } from './components/News'
+
 import { Highlight } from './components/Highlight'
 import { OurSubsidiaries } from './components/OurSubsidiaries'
 import { HamburgerMenu } from './components/HamburgerMenu'
@@ -11,9 +11,7 @@ import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/Cook
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
 import { REVALIDATE_TIME } from '@/config/environtment'
-
-export const revalidate = REVALIDATE_TIME
-
+import News from '@/features/home/pages/HomePage/components/News'
 
 
 export function HomePage() {
@@ -23,7 +21,7 @@ export function HomePage() {
       <About />
       <License />
       <Service />
-      <News />
+      <News  />
       <Highlight />
       <OurSubsidiaries />
       <ContactUs className='mt-[94px] mb-[111px]' />
