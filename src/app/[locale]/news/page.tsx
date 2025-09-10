@@ -29,7 +29,7 @@ export default async function news({
 
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
-  const perPage = 2
+  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
   //  fetching data
