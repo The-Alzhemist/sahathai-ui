@@ -6,8 +6,14 @@ import { getTranslations } from 'next-intl/server'
 
 export const revalidate = 300
 
-export default function Home() {
-  return <HomePage />
+export default function Home({
+                               params,
+                             }: {
+  params: { locale: string }
+}) {
+
+
+  return <HomePage  />
 }
 
 export async function generateMetadata({
