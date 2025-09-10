@@ -13,7 +13,7 @@ export default function Home({
 }) {
 
 
-  return <HomePage  />
+  return <HomePage params={params}  />
 }
 
 export async function generateMetadata({
