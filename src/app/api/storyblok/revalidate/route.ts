@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
   const fullSlug = body.full_slug
 
 
-  if (fullSlug && (fullSlug.includes('blog') || fullSlug.includes('news')) ) {
+  if (fullSlug && (fullSlug.includes('blog') ) ) {
     console.log("fullSlug === blog", fullSlug)
     revalidateTag('story:blog-list')
   }  else if (fullSlug.includes('news')) {
