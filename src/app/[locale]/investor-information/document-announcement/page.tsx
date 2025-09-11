@@ -3,6 +3,7 @@ import {
   DocumentAnnouncementPage
 } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { getTranslations } from 'next-intl/server'
 
 
 export default async function DocumentAnnouncement({
@@ -20,4 +21,18 @@ export default async function DocumentAnnouncement({
   )
 
   return <DocumentAnnouncementPage  data={response} />
+}
+
+
+export async function generateMetadata() {
+  const t = await getTranslations('MetaData')
+
+  return {
+    title: t('DocumentAnnouncement.Title'),
+    description: t('DocumentAnnouncement.Description'),
+    openGraph: {
+      title: t('DocumentAnnouncement.Title'),
+      description: t('DocumentAnnouncement.Description'),
+    },
+  }
 }
