@@ -1,6 +1,7 @@
 
 import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorporatePage/GoodCorporatePage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { getTranslations } from 'next-intl/server'
 
 export default async function GoodCorporate({
   params,
@@ -16,4 +17,18 @@ export default async function GoodCorporate({
     'published'
   )
   return <GoodCorporatePage data={response} />
+}
+
+
+export async function generateMetadata() {
+  const t = await getTranslations('MetaData')
+
+  return {
+    title: t('GoodCorporate.Title'),
+    description: t('GoodCorporate.Description'),
+    openGraph: {
+      title: t('GoodCorporate.Title'),
+      description: t('GoodCorporate.Description'),
+    },
+  }
 }

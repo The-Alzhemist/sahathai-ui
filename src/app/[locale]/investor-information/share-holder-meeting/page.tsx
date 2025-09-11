@@ -2,6 +2,7 @@ import {
   ShareHolderMeetingPage,
 } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { getTranslations } from 'next-intl/server'
 
 
 
@@ -20,4 +21,18 @@ export default async function ShareHolderMeeting({
 
 
   return <ShareHolderMeetingPage shareHolderMeetingData={response} />
+}
+
+
+export async function generateMetadata() {
+  const t = await getTranslations('MetaData')
+
+  return {
+    title: t('shareHolderMeeting.Title'),
+    description: t('shareHolderMeeting.Description'),
+    openGraph: {
+      title: t('shareHolderMeeting.Title'),
+      description: t('shareHolderMeeting.Description'),
+    },
+  }
 }

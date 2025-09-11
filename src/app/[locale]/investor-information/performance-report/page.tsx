@@ -1,6 +1,7 @@
 
 import { PerformanceReportPage } from '@/features/investorRelations/pages/PerformanceReportPage/PerformanceReportPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { getTranslations } from 'next-intl/server'
 
 
 export default async function PerformanceReport({
@@ -19,4 +20,17 @@ export default async function PerformanceReport({
 
 
   return <PerformanceReportPage performanceReportData={response} />
+}
+
+export async function generateMetadata() {
+  const t = await getTranslations('MetaData')
+
+  return {
+    title: t('PerformanceReport.Title'),
+    description: t('PerformanceReport.Description'),
+    openGraph: {
+      title: t('PerformanceReport.Title'),
+      description: t('PerformanceReport.Description'),
+    },
+  }
 }
