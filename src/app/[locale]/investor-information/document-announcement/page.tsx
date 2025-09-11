@@ -16,7 +16,7 @@ export default async function DocumentAnnouncement({
   const response = await fetchStoryblokStory(
     'invrester-relartion/ed6b6179-86fc-473f-8188-81827cb9b1e8',
     locale,
-    'draft'
+    'published'
   )
 
   return <DocumentAnnouncementPage  data={response} />

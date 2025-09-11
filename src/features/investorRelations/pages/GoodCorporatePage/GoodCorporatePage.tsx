@@ -1,3 +1,5 @@
+"use client"
+
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 

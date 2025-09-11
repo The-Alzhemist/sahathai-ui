@@ -16,7 +16,7 @@ export default async function FinancialInformation({
   const response = await fetchStoryblokStory(
     'invrester-relartion/financialinformationpage',
     locale,
-    'draft'
+    'published'
   )
 
 
