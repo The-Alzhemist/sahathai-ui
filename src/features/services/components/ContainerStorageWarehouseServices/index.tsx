@@ -5,6 +5,7 @@ import { Animation } from '@/components/Animation'
 import { MiniCard } from '../MiniCard'
 import { Card } from '../Card'
 import { BannerTextCard } from '@/features/services/components/BannerTextCard'
+import { Line } from '@/components/Line'
 
 export function ContainerStorageWarehouseServices() {
   const t = useTranslations('ServicesPage.ContainerStorageWarehouseServices')
@@ -14,7 +15,11 @@ export function ContainerStorageWarehouseServices() {
 
         <section className='pt-[71px] pb-[83px]'>
           <Animation>
-            <h2 className='headline-2 text-center mb-10 text-navy'>{t('title')}</h2>
+            <h2 className='headline-2 text-center mb-5 text-navy'>{t('title')}</h2>
+            <div className='flex justify-center mb-10'>
+              <Line/>
+            </div>
+
             <section className='flex  flex-col md:flex-row justify-center items-center gap-[73px]'>
               <MiniCard
                 imageUrl='/services/container.png'
