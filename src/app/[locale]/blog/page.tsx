@@ -126,25 +126,11 @@ export async function generateMetadata() {
   const t = await getTranslations('MetaData')
 
   return {
-    title: t('News.Title'),
-    description: t('News.Description'),
+    title: t('Blog.Title'),
+    description: t('Blog.Description'),
     openGraph: {
-      title: t('News.Title'),
-      description: t('News.Description'),
-      images: [
-        {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-news.jpg',
-          width: 800,
-          height: 600,
-          alt: 'sahathai-news-meta-image',
-        },
-        {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-news.jpg',
-          width: 1800,
-          height: 1600,
-          alt: 'sahathai-news-meta-image',
-        },
-      ],
+      title: t('Blog.Title'),
+      description: t('Blog.Description'),
     },
   }
 }

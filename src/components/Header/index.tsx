@@ -99,9 +99,17 @@ export function Header() {
               `flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`
             )}
           >
-            <YoutubeIcon width='24' height='24' />
-            <FacebookIcon width='24' height='24' />
-            <InstagramIcon width='24' height='24' />
+
+            <Link href="https://www.youtube.com/channel/UCp2XYZiyDSN6Xt5DSQv_foA/videos?view=0&sort=dd&shelf_id=0" target="_blank" rel="noopener noreferrer">
+              <YoutubeIcon width='24' height='24' />
+            </Link>
+            <Link href="https://www.facebook.com/sahathaiterminal/?locale=th_TH" target="_blank" rel="noopener noreferrer">
+              <FacebookIcon width='24' height='24' />
+            </Link>
+            <Link href="https://www.instagram.com/sahathaiterminal/?hl=en" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon width='24' height='24' />
+            </Link>
+
           </div>
 
           <button
