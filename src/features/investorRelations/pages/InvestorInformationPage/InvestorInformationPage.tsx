@@ -1,10 +1,6 @@
-import { InvestorRelationEnum } from '@/enums/investorRelations/InvestorRelationEnum'
-import { SideMenu } from '../../components/SideMenu'
 
 import { FinancialReports } from '../../components/FinancialReports'
-import { Shareholder } from '../../components/Shareholder'
-import { DividendPayment } from '../../components/DividendPayment'
-import { ShareholdersMeeting } from '../../components/ShareholdersMeeting'
+
 import { CompanyIntroductionVideo } from '../../components/CompanyIntroductionVideo'
 import { Tabs } from '../../components/Tabs'
 import { Menu } from '@/components/Menu'
@@ -15,7 +11,8 @@ import { CompanyAdvertiseVideo } from '@/features/investorRelations/components/C
 import { CompanyFactSheet } from '@/features/investorRelations/components/CompanyFactSheet'
 import { Background } from '@/components/Background'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
-import Image from 'next/image'
+
+
 
 export async function InvestorInformationPage() {
   const t = await getTranslations('Menu')
@@ -36,7 +33,7 @@ export async function InvestorInformationPage() {
 
         <section className='w-full space-y-[112px] '>
 
-          {/*<StockMarketInformation />*/}
+          <StockMarketInformation />
           <FinancialReports />
           {/*<Shareholder />*/}
           {/*<DividendPayment className=' w-full' />*/}

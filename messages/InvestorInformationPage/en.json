@@ -1,6 +1,14 @@
 {
   "InvestorInformationPage": {
-    "StockMarketInformation": { "title": "ข้อมูลตลาดหุ้น" },
+    "StockMarketInformation": {
+      "title": "Stock Market Information",
+      "stockName": "Stock Symbol",
+      "maxPrice": "Highest Price",
+      "minPrice": "Lowest Price",
+      "quantity": "Trading Volume (Shares)",
+      "change": "Change",
+      "updateDate": "Update at"
+    },
     "FinancialReports": {
       "title": "Financial reports and information",
       "oneReport": "One Report",
