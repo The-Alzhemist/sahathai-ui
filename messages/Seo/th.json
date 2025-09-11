@@ -1,72 +1,72 @@
 {
   "MetaData": {
     "Home": {
-      "Title": "Sahathai | Home",
-      "Description": "Discover world-class services at Sahathai Terminal. Comprehensive, convenient, and complete solutions for all your needs."
+      "Title": "สหไทย | หน้าหลัก",
+      "Description": "ค้นพบบริการระดับโลกที่ท่าเรือสหไทย บริการครบวงจร สะดวกสบาย ครบ จบทุกความต้องการ"
     },
     "AboutUs": {
-      "Title": "Sahathai | About Us",
-      "Description": "Sahathai Terminal provides reliable logistics and cargo handling services with a team of experts and modern facilities."
+      "Title": "สหไทย | เกี่ยวกับเรา",
+      "Description": "สหไทย เทอร์มินอล ให้บริการโลจิสติกส์และขนส่งสินค้าที่เชื่อถือได้ พร้อมทีมงานผู้เชี่ยวชาญและสิ่งอำนวยความสะดวกที่ทันสมัย"
     },
     "Service": {
-      "Title": "Sahathai | Services",
-      "Description": "Offering efficient logistics services, secure cargo handling, and storage solutions tailored to your needs."
+      "Title": "สหไทย | บริการ",
+      "Description": "ให้บริการโลจิสติกส์ที่มีประสิทธิภาพ การจัดการสินค้าที่ปลอดภัย และโซลูชันการจัดเก็บที่ตอบโจทย์ความต้องการของคุณ"
     },
     "Infrastructure": {
-      "Title": "Sahathai | Infrastructure",
-      "Description": "Sahathai Terminal delivers premium facilities and quality services to fully meet all customer requirements."
+      "Title": "สหไทย | โครงสร้างพื้นฐาน",
+      "Description": "สหไทย เทอร์มินอลอำนวยความสะดวกและบริการคุณภาพ ระดับพรีเมียม เพื่อรองรับทุกความต้องการของลูกค้าอย่างครบครัน"
     },
     "News": {
-      "Title": "Sahathai | News",
-      "Description": "Stay updated with the latest movements and important information from Sahathai Terminal so you never miss what matters."
+      "Title": "สหไทย | ข่าวสารของเรา",
+      "Description": "อัพเดตทุกความเคลื่อนไหวและข้อมูลสำคัญจากสหไทย เทอร์มินอล เพื่อให้คุณไม่พลาดข่าวสารที่สำคัญของเรา"
     },
     "johnUs": {
-      "Title": "Sahathai | Careers",
-      "Description": "Explore exciting career opportunities at Sahathai Terminal and be part of our success and growth."
+      "Title": "สหไทย | ร่วมงานกับเรา",
+      "Description": "ค้นหาโอกาสงานที่น่าสนใจที่บริษัท สหไทย เทอร์มินอล และเป็นส่วนหนึ่งของความสำเร็จและการเติบโตของเรา"
     },
     "ContactUs": {
-      "Title": "Sahathai | Contact Us",
-      "Description": "Get in touch with Sahathai Terminal for inquiries, information, or services. We are here to assist you."
+      "Title": "สหไทย | ติดต่อเรา",
+      "Description": "ติดต่อบริษัท สหไทย เทอร์มินอล สำหรับการสอบถาม ข้อมูล หรือบริการต่างๆ เรายินดีให้บริการคุณ"
     },
     "PrivacyPolicy": {
-      "Title": "Sahathai | Privacy Policy",
-      "Description": "Learn how we protect your data and ensure transparency in our privacy practices."
+      "Title": "สหไทย | หน้าหลัก",
+      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
     },
     "shareHolder": {
-      "Title": "Sahathai | Shareholders",
-      "Description": "Information on the list of shareholders and the company’s shareholding structure."
+      "Title": "สหไทย | รายชื่อผู้ถือหุ้น",
+      "Description": "ข้อมูลเกี่ยวกับรายชื่อผู้ถือหุ้นและโครงสร้างการถือหุ้นของบริษัท"
     },
     "shareHolderMeeting": {
-      "Title": "Sahathai | Shareholders Meeting",
-      "Description": "Details of the annual shareholders meeting, including related documents."
+      "Title": "สหไทย | การประชุมผู้ถือหุ้น",
+      "Description": "รายละเอียดการประชุมผู้ถือหุ้นประจำปี รวมถึงเอกสารที่เกี่ยวข้อง"
     },
     "FinancialInformation": {
-      "Title": "Sahathai | Financial Information",
-      "Description": "Annual and quarterly financial statements, including other key financial information."
+      "Title": "สหไทย | รายงานงบการเงินประจำปี",
+      "Description": "รายงานงบการเงินประจำปี ไตรมาส และข้อมูลด้านการเงินอื่น ๆ"
     },
     "PerformanceReport": {
-      "Title": "Sahathai | Performance Reports",
-      "Description": "Summaries of the company’s performance across different periods."
+      "Title": "สหไทย | ผลการดำเนินงาน",
+      "Description": "สรุปผลการดำเนินงานของบริษัทในแต่ละช่วงเวลา"
     },
     "DocumentAnnouncement": {
-      "Title": "Sahathai | Announcements & Publications",
-      "Description": "Corporate publications, news, and important announcements from the company."
+      "Title": "สหไทย | เอกสารเผยแพร่",
+      "Description": "เอกสารเผยแพร่ ข่าวสาร และประกาศสำคัญจากบริษัท"
     },
     "GoodCorporate": {
-      "Title": "Sahathai | Corporate Governance",
-      "Description": "Principles and policies on good corporate governance within the company."
+      "Title": "สหไทย | นโยบายในการกำกับดูแลกิจการที่ดี",
+      "Description": "แนวทางและนโยบายในการกำกับดูแลกิจการที่ดีของบริษัท"
     },
     "SustainableDevelopment": {
-      "Title": "Sahathai | Sustainability",
-      "Description": "Plans and initiatives on sustainability and environmental responsibility."
+      "Title": "สหไทย | แผนงานและการดำเนินกา",
+      "Description": "แผนงานและการดำเนินการด้านความยั่งยืนและสิ่งแวดล้อม"
     },
     "Activity": {
-      "Title": "Sahathai | Activities",
-      "Description": "Overview of various corporate activities organized or presented by the company."
+      "Title": "สหไทย | กิจกรรม",
+      "Description": "ภาพรวมกิจกรรมต่าง ๆ ที่บริษัทจัดขึ้นหรือนำเสนอ"
     },
     "Warrant": {
-      "Title": "Sahathai | Warrants",
-      "Description": "Information on warrants and rights to purchase shares."
+      "Title": "สหไทย | บสำคัญแสดงสิทธิ",
+      "Description": "ข้อมูลเกี่ยวกับใบสำคัญแสดงสิทธิและสิทธิในการซื้อหุ้น"
     }
   }
 }
