@@ -1,11 +1,10 @@
-// app/InvestorInformation/StockMarketInformation/page.tsx
-
-import { useTranslations } from 'next-intl'
-
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
+import { headers } from 'next/headers'
+
+
 
 interface StockData {
   date: string
@@ -17,18 +16,35 @@ interface StockData {
   volume: number
 }
 
-export const revalidate = 86400 // 1 วัน
-
 const StockMarketInformation = async () => {
-
-  const response = await fetch(
-    `https://eodhd.com/api/eod/PORT.BK?api_token=677622d53db520.53886203&fmt=json`
-  )
-  const stockData: StockData[] = await response.json()
-
   const t = await getTranslations(
     'InvestorInformationPage.StockMarketInformation'
   )
+
+  const host = headers().get('host')
+  let stockData: StockData[] = []
+
+  if (host?.includes('localhost')) {
+    // mock data เวลา dev
+    stockData = [
+      {
+        date: '2025-09-11',
+        open: 12,
+        high: 13,
+        low: 11.5,
+        close: 12.8,
+        adjusted_close: 12.8,
+        volume: 123456
+      }
+    ];
+  } else {
+    // free api called for 20 times/day
+    const response = await fetch(
+      `https://eodhd.com/api/eod/PORT.BK?api_token=677622d53db520.53886203&fmt=json`
+      ,  { next: { revalidate: 60 * 60 * 12 } }) // every 12 hr/call api again
+    stockData = await response.json();
+  }
+
 
   const lastPriceData = stockData[stockData.length - 1]
   const changedPrice = lastPriceData.high - lastPriceData.low
@@ -46,7 +62,7 @@ const StockMarketInformation = async () => {
         <table className='mx-auto max-w-[860px] w-full report shadow-7 rounded-[10px] overflow-hidden mt-[37px]  '>
           <thead>
           <tr className='bg-white text-darkGray border-b px-5'>
-            <th className='subtitle-1 text-left !font-semibold '>ชื่อย่อหุ้น</th>
+            <th className='subtitle-1 text-left !font-semibold '>{t('stockName')}</th>
             <th className='subtitle-1 text-right !font-semibold'>PORT</th>
           </tr>
           </thead>
@@ -56,9 +72,9 @@ const StockMarketInformation = async () => {
               <Image src={'/investor-relations/stock-up-2x.png'} alt={'stock up'} width={50} height={50}/>
               <div className="flex flex-col">
               <span>
-                ราคาสูงสุด</span>
+                {t('maxPrice')}</span>
                 <span className="text-xs text-gray-500">
-                  (อัพเดทล่าสุดวันที่: {lastPriceData.date})
+                  (  {t('updateDate')}: {lastPriceData.date})
                 </span>
               </div>
             </td>
@@ -72,7 +88,7 @@ const StockMarketInformation = async () => {
               <div className="flex flex-col">
                 <span>ราคาต่ำสุด</span>
                 <span className="text-xs text-gray-500">
-                  (อัพเดทล่าสุดวันที่: {lastPriceData.date})
+                  ({t('updateDate')}: {lastPriceData.date})
                 </span>
               </div>
             </td>
@@ -83,7 +99,7 @@ const StockMarketInformation = async () => {
 
           <tr className="border-b">
 
-            <td className="flex gap-5 items-center px-6 py-4 text-left text-sm">         <Image src={'/investor-relations/stock-reverse-2x.png'} alt={'stock up'} width={50} height={50}/> เปลี่ยนแปลง</td>
+            <td className="flex gap-5 items-center px-6 py-4 text-left text-sm"> <Image src={'/investor-relations/stock-reverse-2x.png'} alt={'stock up'} width={50} height={50}/> เปลี่ยนแปลง</td>
             <td className="px-6 py-4 text-darkGray text-right">
               {`${changedPrice.toFixed(2)}`}
             </td>
@@ -91,7 +107,7 @@ const StockMarketInformation = async () => {
 
           <tr className="border-b">
             <td className="px-6 py-4 text-left text-sm flex items-center gap-5">
-              <Image src={'/investor-relations/stock-graph-2x.png'} alt={'stock up'} width={50} height={50}/>  ปริมาณซื้อขาย (หุ้น)
+              <Image src={'/investor-relations/stock-graph-2x.png'} alt={'stock up'} width={50} height={50}/> {t('quantity')}
             </td>
             <td className="px-6 py-4 text-darkGray text-right">
               {lastPriceData.volume}
