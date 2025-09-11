@@ -18,15 +18,9 @@ import Image from 'next/image'
 import DividendPolicy from '@/features/investorRelations/pages/ShareHolderPage/components/DividendPolicy/DividendPolicy'
 
 
-function DividendPolicyPage() {
-  return null
-}
-
 export function ShareHolderPage() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
   const tMenu = useTranslations('Menu')
-
-
 
 
   return (
