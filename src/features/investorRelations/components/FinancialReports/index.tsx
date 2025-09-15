@@ -22,7 +22,7 @@ export function FinancialReports() {
       className="
         relative isolate space-y-[32px]
         after:content-[''] after:absolute after:inset-0
-        after:bg-[url('/investor-relations/one-report-bg.webp')] after:bg-center after:bg-no-repeat after:bg-cover
+        after:bg-[url('/about-us/about-us-bg.webp')] after:bg-center after:bg-no-repeat after:bg-cover
         after:opacity-80 after:-z-10 py-20
       "
     >

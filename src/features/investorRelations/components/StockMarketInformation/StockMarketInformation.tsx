@@ -50,7 +50,7 @@ const StockMarketInformation = async () => {
   const changedPrice = lastPriceData.high - lastPriceData.low
 
   return (
-    <section className='px-5 md:px-0'>
+    <section className='px-5 md:px- pt-[50px] '>
       <Animation>
         <h2
           id={InvestorInformationEnum.StockMarketInformation}
@@ -59,9 +59,9 @@ const StockMarketInformation = async () => {
           {t('title')}
         </h2>
 
-        <table className='mx-auto max-w-[860px] w-full report shadow-7 rounded-[10px] overflow-hidden mt-[37px]  '>
+        <table className='mx-auto max-w-[860px] w-full report shadow-7 rounded-[10px] overflow-hidden mt-[37px] bg-[#f5f5f5] '>
           <thead>
-          <tr className='bg-white text-darkGray border-b px-5'>
+          <tr className='bg-[#f5f5f5] text-darkGray border-b px-5'>
             <th className='subtitle-1 text-left !font-semibold '>{t('stockName')}</th>
             <th className='subtitle-1 text-right !font-semibold'>PORT</th>
           </tr>

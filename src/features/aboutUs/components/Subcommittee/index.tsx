@@ -67,7 +67,6 @@ export function SubcommitteeSection({ activeTab }: { activeTab: string }) {
   // for auditCommittee
   const notesRow = t.raw('auditCommittee.note') as Array<{content: string}>
 
-
   const members = Array.isArray(membersRow) ? membersRow : []
 
   return (
