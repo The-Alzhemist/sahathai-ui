@@ -15,11 +15,11 @@ export async function generateMetadata({
   const t = await getTranslations('MetaData')
 
   return {
-    title: t('JohnUs.Title'),
-    description: t('JohnUs.Description'),
+    title: t('JoinUs.Title'),
+    description: t('JoinUs.Description'),
     openGraph: {
-      title: t('JohnUs.Title'),
-      description: t('JohnUs.Description'),
+      title: t('JoinUs.Title'),
+      description: t('JoinUs.Description'),
       images: [
         {
           url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-join-us.jpg',
