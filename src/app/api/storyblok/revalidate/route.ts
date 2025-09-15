@@ -3,6 +3,7 @@ import { revalidateTag } from 'next/cache'
 
 export async function POST(req: NextRequest) {
 
+  // for trigger webhook in storyblok click published on web
   const REVALIDATE_SECRET_BLOG='abc123xyz987'
 
   // ป้องกันด้วย secret ง่ายๆ
@@ -23,21 +24,16 @@ export async function POST(req: NextRequest) {
   //   full_slug: 'blog/test-new-blog-sep-1'
   // }
 
-  console.log("body:::::",body)
   const fullSlug = body.full_slug
 
 
   if (fullSlug && (fullSlug.includes('blog') ) ) {
-    console.log("fullSlug === blog", fullSlug)
     revalidateTag('story:blog-list')
   }  else if (fullSlug.includes('news')) {
-    console.log("fullSlug === news", fullSlug)
     revalidateTag('story:news-list')
   } else  if (fullSlug && fullSlug.includes('invrester-relartion')  ) {
-    console.log("fullSlug === invrester-relartion",fullSlug)
     revalidateTag('story:investor-accordion-list')
   }  else {
-    console.log("fullSlug else::::", fullSlug)
     console.log("cannot revalidate blog-list tag")
   }
 
