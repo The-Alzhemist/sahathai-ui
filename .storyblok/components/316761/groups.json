@@ -1,0 +1,23 @@
+[
+  {
+    "name": "InvestorRelation",
+    "id": 74379867764785,
+    "uuid": "1efaf12a-4747-44ee-b6b4-e766f0178809",
+    "parent_id": null,
+    "parent_uuid": null
+  },
+  {
+    "name": "news",
+    "id": 458281,
+    "uuid": "445b523c-2a0f-4612-af77-cfa43823c0f6",
+    "parent_id": null,
+    "parent_uuid": null
+  },
+  {
+    "name": "TogglePage",
+    "id": 75137305905970,
+    "uuid": "a9172d02-acf1-4f94-aa2d-630a429d9649",
+    "parent_id": 74379867764785,
+    "parent_uuid": "1efaf12a-4747-44ee-b6b4-e766f0178809"
+  }
+]
