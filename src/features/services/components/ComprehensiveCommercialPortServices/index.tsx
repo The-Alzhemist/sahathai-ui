@@ -10,7 +10,7 @@ export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')
 
   return (
-    <section className='relative py-[120px]'>
+    <section className='relative py-[50px]'>
       {/* bottom-anchored background */}
       <div className="absolute inset-x-0 bottom-0 h-[420px] md:h-[500px] -z-10 pointer-events-none overflow-hidden">
         <Image
