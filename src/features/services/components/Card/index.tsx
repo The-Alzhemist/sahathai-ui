@@ -10,7 +10,7 @@ export function Card({ imageUrl, title, content, position }: CardProps) {
   return (
     <>
       {/* Desktop */}
-      <Animation className="hidden md:flex gap-x-[16px] p-[20px] rounded-[20px] shadow-8">
+      <Animation className="hidden md:flex gap-x-[16px] p-[20px] rounded-[20px] shadow-8 bg-white">
         <div
           className={cn(
             'max-w-[488px] h-[260px] w-full shrink-0 rounded-[15px] overflow-hidden order-1',

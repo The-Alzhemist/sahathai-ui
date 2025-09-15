@@ -37,10 +37,10 @@ export function BoardAndExecutives() {
         </section>
       </section>
       <Subcommittee />
-      <div className='absolute -z-10 bottom-0 left-0 h-[704px] w-full'>
+      <div className='absolute -z-10 bottom-0 left-0 h-[860px] w-full'>
         <Image
-          src='/about-us/bg-committee.png'
-          alt='About us background'
+          src='/about-us/about-us-container-bg.webp'
+          alt='About us  container background'
           fill
           className='object-bottom'
         />
