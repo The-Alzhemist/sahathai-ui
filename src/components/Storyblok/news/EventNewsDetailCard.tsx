@@ -6,12 +6,15 @@ import {
   NODE_LI,
 } from 'storyblok-rich-text-react-renderer'
 
-import { EventNewsDetailCardStoryblok } from '../../../../component-types-sb'
+
 import Image from 'next/image'
 import ShowOneImage from '@/components/Storyblok/news/ShowOneImage'
 import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 import ShowThreeImage from '@/components/Storyblok/news/ShowThreeImage'
 import DownloadLink from '@/components/Storyblok/news/DownloadLink'
+
+import {EventNewsDetailCard as EventNewsDetailCardStoryblok} from '.storyblok/types/316761/storyblok-components'
+import { SbBlokData } from '@storyblok/react'
 
 interface EventNewsDetailCardProps {
   blok: EventNewsDetailCardStoryblok
@@ -31,7 +34,7 @@ const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
   }
 
   return (
-    <main {...storyblokEditable(blok)} className='mb-10'>
+    <main {...storyblokEditable(blok as SbBlokData)} className='mb-10'>
       <section className='bg-white flex flex-col p-3 md:p-10 rounded-[5px]'>
         <Image
           src={blok.newsImageCover?.filename || '/background.jpeg'}
