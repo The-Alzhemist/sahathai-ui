@@ -2,16 +2,17 @@ import {
   storyblokEditable,
   StoryblokServerComponent,
 } from '@storyblok/react/rsc'
-import {
-  DownloadLinkStoryblok,
-  ShowOneImageStoryblok,
-} from '../../../../component-types-sb'
-import Image from 'next/image'
+
+
+
+import { DownloadLink as DownloadLinkStoryblok } from '.storyblok/types/316761/storyblok-components'
+
+import { SbBlokData } from '@storyblok/react'
 
 const DownloadLink: React.FC<DownloadLinkStoryblok> = props => {
   return (
     <main
-      {...storyblokEditable(props)}
+      {...storyblokEditable(props as SbBlokData)}
       className='flex w-fit justify-start gap-3 items-center my-5 flex-wrap border rounded-2xl p-3'
     >
       {props.linkURL ? (
