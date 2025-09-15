@@ -1,14 +1,13 @@
 import { storyblokEditable } from '@storyblok/react/rsc'
-import {
-  ShowOneImageStoryblok,
-  ShowTwoImageStoryblok,
-} from '../../../../component-types-sb'
-import Image from 'next/image'
 
-const ShowThreeImage: React.FC<ShowTwoImageStoryblok> = props => {
+import Image from 'next/image'
+import {ShowThreeImage as ShowThreeImageStoryblok} from '.storyblok/types/316761/storyblok-components'
+import { SbBlokData } from '@storyblok/react'
+
+const ShowThreeImage: React.FC<ShowThreeImageStoryblok> = props => {
   return (
     <main
-      {...storyblokEditable(props)}
+      {...storyblokEditable(props as SbBlokData)}
       className='p-5 flex justify-center items-center flex-col md:flex-row gap-10 '
     >
       {props.ImageA?.filename ? (
