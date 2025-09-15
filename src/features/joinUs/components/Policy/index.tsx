@@ -8,19 +8,19 @@ export function Policy() {
 
   return (
     <Animation className='max-w-[896px] mx-auto space-y-[32px] shadow-2 rounded-[8px] p-[24px]'>
-      <PolicyCard title={t('workplaceSafetyHygienePolicy')} downloadLink='https://storage.googleapis.com/sahathai-prod/about-us-page/ข้อ8.1นโยบายและแนวปฏิบัติเกี่ยวกับความปลอดภัย-และสุขอนามัยในสถานที่ทำงาน.pdf' />
-      <PolicyCard title={t('employeeCompensationPolicy')} downloadLink='https://storage.googleapis.com/sahathai-prod/about-us-page/ข้อ8.2นโยบายอัตราค่าตอบแทนพนักงาน-04032019.pdf' />
+      <PolicyCard title={t('workplaceSafetyHygienePolicy')} downloadLink='https://a.storyblok.com/f/316761/x/75ef1ec657/security-policy-2561.pdf?cv=1757652967941' />
+      <PolicyCard title={t('employeeCompensationPolicy')} downloadLink='https://a.storyblok.com/f/316761/x/d03e288856/salary-policy.pdf' />
       <PolicyCard
         title={t('companyPersonnelDevelopmentPolicy')}
-        downloadLink='https://storage.googleapis.com/sahathai-prod/about-us-page/ข้อ8.3-นโยบายการพัฒนาบุคลากรของบริษัท.pdf'
+        downloadLink='https://a.storyblok.com/f/316761/x/61a1c17f0d/human-development-policy.pdf'
       />
       <PolicyCard
         title={t('humanResourcesLaborRelationsPolicy')}
-        downloadLink='https://storage.googleapis.com/sahathai-prod/about-us-page/ข้อ8.4-นโยบายการบริหารทรัพยากรบุคคล-และแรงงานสัมพันธ์.pdf'
+        downloadLink='https://a.storyblok.com/f/316761/x/39f1ade70d/human-resource-policy.pdf'
       />
       <PolicyCard
         title={t('measuresPreventSpreadCovid19Virus')}
-        downloadLink='https://storage.googleapis.com/sahathai-prod/about-us-page/Covid-19-1.pdf'
+        downloadLink='https://a.storyblok.com/f/316761/x/d6cd3c801e/covid-19-policy.pdf'
       />
     </Animation>
   )

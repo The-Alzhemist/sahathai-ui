@@ -21,7 +21,8 @@ export function Brochure({ className }: BrochureProps) {
       </div>
       <p className='body-1'>{t('description')}</p>
       <a
-        href=''
+        href='https://a.storyblok.com/f/316761/x/7dace1b597/sahathai-brochure.pdf'
+        target='_blank'
         className='button bg-blue-400 rounded-[6px] py-[10px] px-[25px] text-white block w-fit'
       >
         {common('download')}
