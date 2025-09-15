@@ -1,13 +1,14 @@
 import {
   storyblokEditable,
-  StoryblokServerComponent,
 } from '@storyblok/react/rsc'
-import { ShowOneImageStoryblok } from '../../../../component-types-sb'
+
+import {ShowOneImage as ShowOneImageStoryblok} from '.storyblok/types/316761/storyblok-components'
 import Image from 'next/image'
+import { SbBlokData } from '@storyblok/react'
 
 const ShowOneImage: React.FC<ShowOneImageStoryblok> = props => {
   return (
-    <main {...storyblokEditable(props)} className='p-5 flex justify-center'>
+    <main {...storyblokEditable(props as SbBlokData)} className='p-5 flex justify-center'>
       {props.ImageA?.filename ? (
         <Image
           src={props.ImageA.filename}
