@@ -2,7 +2,6 @@ import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
 import { getTranslations } from 'next-intl/server'
 
 
-export const revalidate = 86400 // 1 day
 
 export default function AboutUs() {
   return <AboutUsPage />
