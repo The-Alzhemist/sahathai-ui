@@ -25,19 +25,13 @@ export async function InvestorInformationPage() {
         caption={t('investorRelations.title')}
         className='mb-[40px]'
       />
-      {/*<Tabs activeMenu={InvestorRelationEnum.InvestorInformation} />*/}
       <section className=' w-full  mx-auto   '>
-        <div className='hidden md:flex'>
-          {/*<SideMenu />*/}
-        </div>
+
 
         <section className='w-full space-y-[112px] '>
 
           <StockMarketInformation />
           <FinancialReports />
-          {/*<Shareholder />*/}
-          {/*<DividendPayment className=' w-full' />*/}
-          {/*<ShareholdersMeeting />*/}
 
 
           <Background className='!my-0'>

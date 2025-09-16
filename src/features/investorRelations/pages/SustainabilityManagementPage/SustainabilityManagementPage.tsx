@@ -76,52 +76,9 @@ export function SustainabilityManagementPage() {
         </Animation>
       </section>
 
-
-      {/*---------*/}
       <EsgRisk />
       <EmergingRisk />
-      {/*----------*/}
-
-      {/*<RiskCard>*/}
-      {/*  <RiskCard.Title>{t('esgRisk.title')}</RiskCard.Title>*/}
-      {/*  <RiskCard.Section*/}
-      {/*    title={t('esgRisk.businessContinuityManagement.title')}*/}
-      {/*    description={t('esgRisk.businessContinuityManagement.description')}*/}
-      {/*  />*/}
-      {/*  <RiskCard.Section*/}
-      {/*    title={t('esgRisk.riskManagement.title')}*/}
-      {/*    description={t('esgRisk.riskManagement.description')}*/}
-      {/*  />*/}
-      {/*</RiskCard>*/}
-      {/*<RiskCard>*/}
-      {/*  <RiskCard.Title>{t('emergingRisk.title')}</RiskCard.Title>*/}
-      {/*  <RiskCard.Section*/}
-      {/*    title={t('emergingRisk.cyber.title')}*/}
-      {/*    description={t('emergingRisk.cyber.description')}*/}
-      {/*  />*/}
-      {/*  <RiskCard.Section*/}
-      {/*    title={t('emergingRisk.riskManagement.title')}*/}
-      {/*    description={t('emergingRisk.riskManagement.description')}*/}
-      {/*  />*/}
-      {/*</RiskCard>*/}
-      {/*<SustainabilityManagementPolicy className="mt-[46px]" />*/}
       <ESGPolicy />
-
-      {/*<section className="p-5 max-w-4xl mx-auto">*/}
-      {/*  {sustainabilityDocuments.map((doc: any, index: number) => (*/}
-      {/*    <div*/}
-      {/*      key={index}*/}
-      {/*      className="mt-[32px] w-full flex justify-between items-center mb-5 border border-gray-200 bg-gray-50 rounded-md p-5"*/}
-      {/*    >*/}
-      {/*      <div>{doc.title}</div>*/}
-      {/*      <div>*/}
-      {/*        <DownloadButton className="mx-auto" href={doc.href} />*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*  ))}*/}
-
-      {/*</section>*/}
-
 
       <section className="space-y-[40px] py-[88px] bg-white">
         <Animation className='max-w-[960px] w-full mx-auto'>
@@ -137,7 +94,7 @@ export function SustainabilityManagementPage() {
           <div className='relative pt-[49.85%] w-full'>
             <Image
               src='/investor-relations/sustainable-2.jpeg'
-              alt=''
+              alt='sustainable image 2'
               fill
             />
           </div>
@@ -146,7 +103,7 @@ export function SustainabilityManagementPage() {
           <div className='relative pt-[95.03%] w-full'>
             <Image
               src='/investor-relations/sustainable-3.png'
-              alt=''
+              alt='sustainable image 3'
               fill
             />
           </div>
