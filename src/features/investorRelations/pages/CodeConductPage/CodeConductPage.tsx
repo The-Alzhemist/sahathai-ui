@@ -26,8 +26,8 @@ export function CodeConductPage() {
         </h2>
 
         <Animation className='mt-[105px] space-y-[32px]'>
-          <CodeConductCard title={t('antiCorruptionPolicyTh')} fileUrl='' />
-          <CodeConductCard title={t('antiCorruptionPolicyEn')} fileUrl='' />
+          <CodeConductCard title={t('antiCorruptionPolicyTh')} fileUrl='https://a.storyblok.com/f/316761/x/2b67784dd9/anti-coruption.pdf' />
+          <CodeConductCard title={t('antiCorruptionPolicyEn')} fileUrl='https://a.storyblok.com/f/316761/x/2b67784dd9/anti-coruption.pdf' />
         </Animation>
       </section>
     </main>
