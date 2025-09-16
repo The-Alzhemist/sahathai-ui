@@ -11,7 +11,6 @@ import Image from 'next/image'
 import { Brochure } from '@/features/news/components/Brochure'
 import { redirect } from 'next/navigation'
 
-export const revalidate = 86400 // 1  วัน
 
 export default async function blog({
   params,

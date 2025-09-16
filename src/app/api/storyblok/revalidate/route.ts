@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
+import { RevalidateTag, SlugType } from '@/enums/CacheEnum'
 
 export async function POST(req: NextRequest) {
 
@@ -27,14 +28,18 @@ export async function POST(req: NextRequest) {
   const fullSlug = body.full_slug
 
 
-  if (fullSlug && (fullSlug.includes('blog') ) ) {
-    revalidateTag('story:blog-list')
-  }  else if (fullSlug.includes('news')) {
-    revalidateTag('story:news-list')
-  } else  if (fullSlug && fullSlug.includes('invrester-relartion')  ) {
-    revalidateTag('story:investor-accordion-list')
-  }  else {
-    console.log("cannot revalidate blog-list tag")
+  if (fullSlug?.includes(SlugType.BLOG)) {
+    console.log("---------Revalidate secret BLOG---------")
+    revalidateTag(RevalidateTag.BLOG)
+  } else if (fullSlug?.includes(SlugType.NEWS)) {
+    console.log("------ Revalidate secret NEWS--------")
+    revalidateTag(RevalidateTag.NEWS)
+  } else if (fullSlug?.includes(SlugType.INVESTOR)) {
+    console.log("------ Revalidate secret INVESTOR--------")
+    revalidateTag(RevalidateTag.INVESTOR)
+  } else {
+    console.log("------ cannot revalidate any known tag --------")
+    console.log("cannot revalidate any known tag")
   }
 
 
