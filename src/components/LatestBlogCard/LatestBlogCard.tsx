@@ -12,7 +12,7 @@ export async function LatestBlogCard({ blog, locale, page }: LatestBlogCardProps
 
   if (!blog) {
     return (
-      <div className="flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1">
+      <div className="flex flex-col md:min-w-[600px] md:flex-row  max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1">
         <img
           src="https://placehold.co/600x400"
           alt="Placeholder image"
