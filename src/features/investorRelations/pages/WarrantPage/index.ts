@@ -6,4 +6,4 @@ import { WarrantPage } from '@/features/investorRelations/pages/WarrantPage/Warr
 
 const Connected = withWarrantPage(WarrantPage)
 
-export { Connected as ShareHolderPage }
+export { Connected as WarrantPage }
