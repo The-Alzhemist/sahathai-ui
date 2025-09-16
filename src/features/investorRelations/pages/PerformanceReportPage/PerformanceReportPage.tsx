@@ -7,7 +7,6 @@ import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 import { useState } from 'react'
 
-import { FinancialInformationPageProps } from '@/features/investorRelations/pages/FinancialInformationPage/interface'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import { PerformanceReportPageProps } from '@/features/investorRelations/pages/PerformanceReportPage/interface'
 
