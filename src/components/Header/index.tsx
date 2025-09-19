@@ -54,7 +54,7 @@ export function Header() {
 
       <div
         className={twMerge(
-          `px-[10px] py-[8px] flex items-center container text-sm h-[50px] ${
+          `px-[10px] py-[8px] flex items-center container text-sm h-[50px] !max-w-full ${
             isHomePage ? 'justify-end ' : 'justify-between'
           }`,
           // Change gradient and text color if home page

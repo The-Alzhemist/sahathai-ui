@@ -39,7 +39,7 @@ export  const InvestorInformationTable = () => {
             </div>
 
             <div className="flex justify-start md:justify-center  font-light">
-              {item.stockAmount.toLocaleString()}x
+              {item.stockAmount.toLocaleString()}
             </div>
 
             <div className="flex justify-start md:justify-center  font-light">

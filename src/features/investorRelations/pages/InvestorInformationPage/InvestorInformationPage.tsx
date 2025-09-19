@@ -17,7 +17,7 @@ import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 export async function InvestorInformationPage() {
   const t = await getTranslations('Menu')
   return (
-    <main className='bg-white'>
+    <main className='bg-[#F5f5f5]'>
       <Menu />
       <Banner
         imagePath='/about-us/banner.png'
