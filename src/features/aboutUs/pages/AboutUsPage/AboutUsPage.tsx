@@ -20,7 +20,7 @@ export function AboutUsPage({
     <main>
       <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
+        imagePath='/home/new/sahathai-building-banner.webp'
         alt={tMenu('aboutUs.title')}
         caption={tMenu('aboutUs.title')}
       />

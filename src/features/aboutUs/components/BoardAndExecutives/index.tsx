@@ -39,7 +39,7 @@ export function BoardAndExecutives() {
       <Subcommittee />
       <div className='absolute -z-10 bottom-0 left-0 h-[860px] w-full'>
         <Image
-          src='/about-us/about-us-container-bg.webp'
+          src='/about-us/new/about-us-container.webp'
           alt='About us  container background'
           fill
           className='object-bottom'

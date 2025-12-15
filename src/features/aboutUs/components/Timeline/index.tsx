@@ -9,11 +9,11 @@ export function Timeline() {
   const t = useTranslations('AboutUsPage.CommitmentSuccess')
 
   return (
-    <section className='relative max-w-[794px] mx-auto mt-[80px] flex flex-col gap-y-[25px]'>
+    <section className='relative max-w-[794px] mx-auto mt-[80px] flex flex-col gap-y-[25px] mb-[100px]'>
       <TimelineCard
         contentPosition='right'
         year={t('2551.year')}
-        imageUrl='/about-us/2551.png'
+        imageUrl='/about-us/new/commitment-success-1.webp'
       >
         <Image
           className='mb-[10px]'
@@ -27,7 +27,7 @@ export function Timeline() {
       <TimelineCard
         contentPosition='left'
         year={t('2556.year')}
-        imageUrl='/about-us/2556.png'
+        imageUrl='/about-us/new/commitment-success-2.webp'
       >
         <Image
           className='mb-[30px]'
@@ -41,7 +41,7 @@ export function Timeline() {
       <TimelineCard
         contentPosition='right'
         year={t('2558.year')}
-        imageUrl='/about-us/2558.png'
+        imageUrl='/about-us/new/commitment-success-3.webp'
       >
         <Image
           className='mb-[20px]'
@@ -57,7 +57,7 @@ export function Timeline() {
       <TimelineCard
         contentPosition='left'
         year={t('2559_2560.year')}
-        imageUrl='/about-us/2559_2560.png'
+        imageUrl='/about-us/new/commitment-success-4.webp'
       >
         <Image
           className='mb-[20px]'
@@ -75,7 +75,7 @@ export function Timeline() {
       <TimelineCard
         contentPosition='right'
         year={t('2560_2562.year')}
-        imageUrl='/about-us/2560_2562.png'
+        imageUrl='/about-us/new/commitment-success-5.webp'
       >
         <Image
           className='mb-[20px]'
@@ -105,7 +105,7 @@ export function Timeline() {
       <TimelineCard
         contentPosition='left'
         year={t('2568.year')}
-        imageUrl='/about-us/2568.png'
+        imageUrl='/about-us/new/commitment-success-6.webp'
       >
         <Image
           className='mb-[30px]'
@@ -114,7 +114,9 @@ export function Timeline() {
           height={76}
           alt=''
         />
-        <p className='body-2 text-black-6 whitespace-pre-line'>{t('2568.content')}</p>
+        <p className='body-2 text-black-6 whitespace-pre-line'>
+          {t('2568.content')}
+        </p>
       </TimelineCard>
     </section>
   )
