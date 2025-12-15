@@ -16,8 +16,7 @@ import homePageNews from '@/features/home/pages/HomePage/components/News'
 import HomePageNews from '@/features/home/pages/HomePage/components/News'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 
-
-export function HomePage({params}:HomePageProps) {
+export function HomePage({ params }: HomePageProps) {
   return (
     <main>
       <Banner />
