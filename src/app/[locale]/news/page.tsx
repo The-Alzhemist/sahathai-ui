@@ -11,11 +11,10 @@ import Image from 'next/image'
 import { Brochure } from '@/features/news/components/Brochure'
 import { redirect } from 'next/navigation'
 
-
 export default async function news({
-                                     params,
-                                     searchParams,
-                                   }: {
+  params,
+  searchParams,
+}: {
   params: { locale: string }
   searchParams: { page?: string; search?: string }
 }) {
@@ -39,13 +38,13 @@ export default async function news({
     version: 'published',
     search,
     startsWith: 'news/',
-    tag: 'story:news-list'
+    tag: 'story:news-list',
   })
 
   const latestBlog = await fetchLastBlog({
     lang: locale,
     startsWith: 'news/',
-    tag: 'story:news-list'
+    tag: 'story:news-list',
   })
 
   const totalPages = Math.ceil(total / perPage)
@@ -108,16 +107,16 @@ export default async function news({
       </section>
 
       {/* Brochure */}
-      <section className='relative  min-h-[450px] flex justify-center items-center px-5'>
+      <section className='relative  min-h-[700px] flex justify-center items-center  px-5'>
         <Image
-          src='/news/blog-contact-bg.webp'
+          src='/news/new/news-bg.webp'
           alt='Sustainability Background'
           fill
           className='absolute inset-0 object-cover object-center z-0'
           priority
         />
 
-        <Brochure className='z-10' />
+        <Brochure className='z-10 mt-[300px]' />
       </section>
     </main>
   )
