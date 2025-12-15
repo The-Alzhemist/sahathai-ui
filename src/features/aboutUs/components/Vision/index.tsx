@@ -12,7 +12,7 @@ export function Vision() {
     <Animation className='mt-[90px] flex flex-col-reverse  lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
       <Image
         className='shrink-0'
-        src='/about-us/vision.png'
+        src='/about-us/new/about-us-team.webp'
         width={487}
         height={489}
         alt=''

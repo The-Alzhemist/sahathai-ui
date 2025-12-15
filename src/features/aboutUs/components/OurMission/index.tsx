@@ -12,22 +12,22 @@ export function OurMission() {
       </h2>
       <div className='mt-[50px] flex flex-col  md:flex-row  items-center  justify-center flex-wrap  gap-x-5 gap-y-7 md:gap-x-6 md:gap-y-6 px-5 md:px-2'>
         <MissionCard
-          imageUrl='/about-us/mission-to-customers.png'
+          imageUrl='/about-us/new/mission-to-customers.webp'
           title={t('missionToCustomers.title')}
           content={t('missionToCustomers.content')}
         />
         <MissionCard
-          imageUrl='/about-us/mission-to-shareholders.png'
+          imageUrl='/about-us/new/mission-to-customers-2.webp'
           title={t('missionToShareholders.title')}
           content={t('missionToShareholders.content')}
         />
         <MissionCard
-          imageUrl='/about-us/mission-to-employees.png'
+          imageUrl='/about-us/new/mission-to-customers-3.webp'
           title={t('missionToEmployees.title')}
           content={t('missionToEmployees.content')}
         />
         <MissionCard
-          imageUrl='/about-us/mission-to-society.png'
+          imageUrl='/about-us/new/mission-to-customers-4.webp'
           title={t('missionToSociety.title')}
           content={t('missionToSociety.content')}
         />
