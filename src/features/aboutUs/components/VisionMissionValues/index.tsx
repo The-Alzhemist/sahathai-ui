@@ -13,8 +13,8 @@ export function VisionMissionValues() {
       <CoreValues />
       <div className='absolute -z-10 bottom-0 left-0 h-[704px] w-full'>
         <Image
-          src='/about-us/about-us-bg.png'
-          alt='About us background'
+          src='/about-us/new/our-mission-bg.webp'
+          alt='our-mission-bg'
           fill
           className='object-bottom'
         />
