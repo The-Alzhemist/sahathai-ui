@@ -12,7 +12,7 @@ export function ServicesPage() {
     <main>
       <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
+        imagePath='/home/new/sahathai-building-banner.webp'
         alt={t('service.title')}
         caption={t('service.title')}
         className='mb-[40px]'
