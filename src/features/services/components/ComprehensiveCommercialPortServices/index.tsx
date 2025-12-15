@@ -12,17 +12,15 @@ export function ComprehensiveCommercialPortServices() {
   return (
     <section className='relative py-[50px]'>
       {/* bottom-anchored background */}
-      <div className="absolute inset-x-0 bottom-0 h-[420px] md:h-[500px] -z-10 pointer-events-none overflow-hidden">
+      <div className='absolute inset-x-0 bottom-0 h-[420px] md:h-[500px] -z-10 pointer-events-none overflow-hidden'>
         <Image
-          src="/services/ComprehensiveCommercialPort-bg.webp"
-          alt="license background"
+          src='/services/ComprehensiveCommercialPort-bg.webp'
+          alt='license background'
           fill
-          className="object-cover object-bottom"  // <— stick to bottom
+          className='object-cover object-bottom' // <— stick to bottom
           priority
         />
       </div>
-
-
 
       <Animation className='max-w-[1100px] w-full mx-auto px-5'>
         <h2 className='text-navy text-[40px] font-[500] leading-[60.48px] text-center'>
@@ -84,11 +82,7 @@ export function ComprehensiveCommercialPortServices() {
             link='/services/ground-container-transportation-services'
           />
           <ComprehensiveCommercialPortCard
-            title={
-              <Fragment>
-                {t('containerService.title')}
-              </Fragment>
-            }
+            title={<Fragment>{t('containerService.title')}</Fragment>}
             content={t('containerService.content')}
             imageUrl='/services/container-service.png'
             link='/services/container-services'
@@ -96,6 +90,5 @@ export function ComprehensiveCommercialPortServices() {
         </section>
       </Animation>
     </section>
-
   )
 }
