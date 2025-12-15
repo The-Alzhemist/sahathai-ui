@@ -22,18 +22,18 @@ export function FinancialReports() {
       className="
         relative isolate space-y-[32px]
         after:content-[''] after:absolute after:inset-0
-        after:bg-[url('/about-us/about-us-bg.webp')] after:bg-center after:bg-no-repeat after:bg-cover
-        after:opacity-80 after:-z-10 py-20
+        after:bg-[url('/investor-relations/new/investor-relation-bg.webp')] after:bg-center after:bg-no-repeat after:bg-cover
+        after:opacity-100 after:-z-10 py-20
       "
     >
       {/* Title */}
       <h2
         id={InvestorInformationEnum.FinancialReports}
-        className="headline-2 text-blue-400 text-center"
+        className='headline-2 text-blue-400 text-center'
       >
         {t('title')}
       </h2>
-      <h3 className="text-center text-navy text-xl !mt-1 font-light">
+      <h3 className='text-center text-navy text-xl !mt-1 font-light'>
         ({t('yearlyReport')})
       </h3>
 
