@@ -10,14 +10,13 @@ export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')
 
   return (
-    <section className='relative py-[50px]'>
-      {/* bottom-anchored background */}
-      <div className='absolute inset-x-0 bottom-0 h-[420px] md:h-[500px] -z-10 pointer-events-none overflow-hidden'>
+    <section className='relative py-[50px] mt-[-40px]'>
+      <div className='absolute inset-x-0 bottom-0 h-[420px] md:h-full -z-10 pointer-events-none overflow-hidden'>
         <Image
-          src='/services/ComprehensiveCommercialPort-bg.webp'
+          src='/services/new/services-bg.webp'
           alt='license background'
           fill
-          className='object-cover object-bottom' // <— stick to bottom
+          className='object-cover '
           priority
         />
       </div>
@@ -30,7 +29,7 @@ export function ComprehensiveCommercialPortServices() {
           {t('content')}
         </p>
 
-        <section className='flex justify-center flex-wrap mt-[80px]  gap-6'>
+        <section className='flex justify-center flex-wrap mt-[80px]  gap-6 mb-[200px]'>
           <ComprehensiveCommercialPortCard
             title={
               <Fragment>
@@ -39,7 +38,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('commercialDock.content')}
-            imageUrl='/services/commercial-dock.png'
+            imageUrl='/services/new/service-1.webp'
             link='/services/commercial-dock'
           />
           <ComprehensiveCommercialPortCard
@@ -50,13 +49,13 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('bargeServices.content')}
-            imageUrl='/services/barge-services.png'
+            imageUrl='/services/new/service-2.webp'
             link='/services/barge-services'
           />
           <ComprehensiveCommercialPortCard
             title={t('containerHandling.title')}
             content={t('containerHandling.content')}
-            imageUrl='/services/container-handling.png'
+            imageUrl='/services/new/service-3.webp'
             link='/services/container-handling'
           />
           <ComprehensiveCommercialPortCard
@@ -67,7 +66,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('containerMaintenance.content')}
-            imageUrl='/services/container-maintenance.png'
+            imageUrl='/services/new/service-4.webp'
             link='/services/container-maintenance'
           />
           <ComprehensiveCommercialPortCard
@@ -78,13 +77,13 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('groundContainerTransportationServices.content')}
-            imageUrl='/services/ground-container-transportation-services.png'
+            imageUrl='/services/new/service-5.webp'
             link='/services/ground-container-transportation-services'
           />
           <ComprehensiveCommercialPortCard
             title={<Fragment>{t('containerService.title')}</Fragment>}
             content={t('containerService.content')}
-            imageUrl='/services/container-service.png'
+            imageUrl='/services/new/service-6.webp'
             link='/services/container-services'
           />
         </section>
