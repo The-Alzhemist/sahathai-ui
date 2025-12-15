@@ -14,7 +14,7 @@ export function InfrastructureContainersPage() {
     <main>
       <Menu />
       <Banner
-        imagePath='/about-us/banner.png'
+        imagePath='/home/new/sahathai-building-banner.webp'
         alt={t('infrastructureContainers.title')}
         caption={t('infrastructureContainers.title')}
         className='mb-[40px]'
