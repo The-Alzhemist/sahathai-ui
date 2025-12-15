@@ -4,7 +4,6 @@ import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 import { ContainerStorageWarehouseServices } from '@/features/services/components/ContainerStorageWarehouseServices'
 
-
 export function ContainerServicesPage() {
   const t = useTranslations(
     'ServicesPage.ComprehensiveCommercialPortServices.bargeServices'
@@ -13,8 +12,6 @@ export function ContainerServicesPage() {
   return (
     <main>
       <Menu />
-
-
       <ContainerStorageWarehouseServices />
     </main>
   )

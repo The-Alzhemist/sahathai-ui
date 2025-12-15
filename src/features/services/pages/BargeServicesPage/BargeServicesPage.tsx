@@ -17,7 +17,7 @@ export function BargeServicesPage() {
           <Image src='/bbs.png' width={65} height={30} alt='' />
         </Fragment>
       }
-      imageUrl='/services/barge-services.png'
+      imageUrl='/services/new/service-2.webp'
       content={t('content')}
     />
   )
