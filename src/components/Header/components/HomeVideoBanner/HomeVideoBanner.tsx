@@ -9,7 +9,7 @@ export default function HomeVideoBanner() {
         {/* Mobile */}
         <div className='block md:hidden w-full h-full'>
           <HLSVideo
-            src='/video/m4s/index.m3u8'
+            src='/video/720p/index.m3u8'
             className='w-full h-full object-cover'
           />
         </div>
@@ -17,7 +17,7 @@ export default function HomeVideoBanner() {
         {/* Desktop */}
         <div className='hidden md:block w-full h-full'>
           <HLSVideo
-            src='/video/m4s/index.m3u8'
+            src='/video/720p/index.m3u8'
             className='w-full h-full object-cover md:rounded-b-[60px]'
           />
         </div>
