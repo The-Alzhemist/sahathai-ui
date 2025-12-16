@@ -19,10 +19,17 @@ export default function SwiperVertical() {
       type: 'video',
       src: '/home/new/movie.mp4',
     },
-    { type: 'image', src: '/home/new/sahathai-building-banner.webp' },
-
-    { type: 'image', src: '/home/new/sahathai-building-banner-2.webp' },
   ]
+
+  //  const slides: Slide[] = [
+  //   {
+  //     type: 'video',
+  //     src: '/home/new/movie.mp4',
+  //   },
+  //   { type: 'image', src: '/home/new/sahathai-building-banner.webp' },
+
+  //   { type: 'image', src: '/home/new/sahathai-building-banner-2.webp' },
+  // ]
 
   const swiperConfig: SwiperProps = {
     modules: [Navigation, Autoplay, Pagination],
@@ -64,6 +71,7 @@ export default function SwiperVertical() {
                   <video
                     className='w-full h-full object-cover md:rounded-b-[60px]'
                     autoPlay
+                    preload='metadata'
                     loop
                     muted
                   >
@@ -72,10 +80,9 @@ export default function SwiperVertical() {
                       type='video/mp4'
                     /> */}
                     <source
-                      src='/home/new/sahathai-video-480p.mp4'
+                      src='https://sahathai-ui.vercel.app/home/new/sahathai-full-hd.mp4'
                       type='video/mp4'
                     />
-                    Your browser does not support HTML video.
                   </video>
                 </>
               )}
