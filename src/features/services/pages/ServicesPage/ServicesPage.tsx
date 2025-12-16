@@ -5,18 +5,20 @@ import { InventoryManagementServices } from '../../components/InventoryManagemen
 import ContactUs from '@/components/ContactUs/ContactUs'
 import { Banner } from '@/components/Banner'
 import { useTranslations } from 'next-intl'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
 export function ServicesPage() {
   const t = useTranslations('Menu')
   return (
     <main>
       <Menu />
-      <Banner
+      {/* <Banner
         imagePath='/home/new/sahathai-building-banner.webp'
         alt={t('service.title')}
         caption={t('service.title')}
         className='mb-[40px]'
-      />
+      /> */}
+      <SwiperVertical />
       <ComprehensiveCommercialPortServices />
       {/*<ContainerStorageWarehouseServices />*/}
       <InventoryManagementServices />

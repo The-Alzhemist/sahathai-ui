@@ -15,30 +15,20 @@ type Slide =
 
 export default function SwiperVertical() {
   const slides: Slide[] = [
-    {
-      type: 'video',
-      src: '/home/new/movie.mp4',
-    },
+    { type: 'image', src: '/home/new/sahathai-building-banner.webp' },
+    { type: 'image', src: '/home/new/sahathai-building-banner-2.webp' },
+
+    { type: 'image', src: '/home/new/sahathai-building-banner-3.webp' },
   ]
-
-  //  const slides: Slide[] = [
-  //   {
-  //     type: 'video',
-  //     src: '/home/new/movie.mp4',
-  //   },
-  //   { type: 'image', src: '/home/new/sahathai-building-banner.webp' },
-
-  //   { type: 'image', src: '/home/new/sahathai-building-banner-2.webp' },
-  // ]
 
   const swiperConfig: SwiperProps = {
     modules: [Navigation, Autoplay, Pagination],
     direction: 'vertical',
     slidesPerView: 1,
     loop: true,
-    autoplay: { delay: 1000099 },
+    autoplay: { delay: 10000 },
     watchSlidesProgress: true,
-    className: 'mySwiper w-full h-[825px]',
+    className: 'mySwiper w-full h-[605px]',
     navigation: {
       prevEl: '.custom-prev',
       nextEl: '.custom-next',
@@ -50,11 +40,11 @@ export default function SwiperVertical() {
   }
 
   return (
-    <section className='relative w-full h-[825px]'>
+    <section className='relative w-full h-[605px]'>
       <Swiper {...swiperConfig}>
         {slides.map((slide, index) => (
           <SwiperSlide key={`banner-slide-${index}`}>
-            <div className='relative w-full h-[825px]'>
+            <div className='relative w-full h-[605px]'>
               {slide.type === 'image' && (
                 <Image
                   src={slide.src}
@@ -75,10 +65,6 @@ export default function SwiperVertical() {
                     loop
                     muted
                   >
-                    {/* <source
-                      src='/home/new/sahathai-video-480p.mp4'
-                      type='video/mp4'
-                    /> */}
                     <source
                       src='https://sahathai-ui.vercel.app/home/new/sahathai-full-hd.mp4'
                       type='video/mp4'
@@ -98,13 +84,3 @@ export default function SwiperVertical() {
     </section>
   )
 }
-
-// <video
-//                 className='w-full h-full object-cover md:rounded-b-[60px]'
-//                 muted
-//                 playsInline
-//                 preload='metadata'
-//                 poster={slide.poster}
-//               >
-//                 <source src={slide.src} type='video/mp4' />
-//               </video>

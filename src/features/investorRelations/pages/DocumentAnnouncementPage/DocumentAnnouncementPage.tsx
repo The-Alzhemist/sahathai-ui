@@ -1,16 +1,17 @@
-"use client"
+'use client'
 
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 
-
 import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
-
-export function DocumentAnnouncementPage({data}: DocumentAnnouncementPageProps) {
+export function DocumentAnnouncementPage({
+  data,
+}: DocumentAnnouncementPageProps) {
   const t = useTranslations('InvestorInformationPage.DocumentAnnouncement')
 
   const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
@@ -19,7 +20,6 @@ export function DocumentAnnouncementPage({data}: DocumentAnnouncementPageProps) 
   if (!data) {
     return <div>No data</div>
   }
-
 
   const group = data.story.content.body[0].group || []
 
@@ -34,28 +34,35 @@ export function DocumentAnnouncementPage({data}: DocumentAnnouncementPageProps) 
   }
 
   return (
-    <main className="pb-[176px] bg-white">
+    <main className='pb-[176px] bg-white'>
       <Menu />
-      <Banner
-        imagePath="/about-us/banner.png"
+      {/* <Banner
+        imagePath='/about-us/banner.png'
         alt={tMenu('investorRelations.shareHolderMeeting')}
         caption={tMenu('investorRelations.shareHolderMeeting')}
-      />
+      /> */}
+      <SwiperVertical />
 
-      <section className="p-5 max-w-4xl mx-auto space-y-6">
+      <section className='p-5 max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
-          <div key={groupIndex} className=" rounded-md p-4">
+          <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}
-            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+            <h2 className=' text-lg md:text-3xl mb-7 text-blue-400 text-center '>
               {groupItem.heading}
             </h2>
 
-            <div className="space-y-4">
+            <div className='space-y-4'>
               {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
-                  <AccordionTabs tabIndex={tabIndex} key={'document-announcement-' + tabIndex} groupIndex={groupIndex} toggleTab={toggleTab}
-                                 tabItem={tabItem} isOpen={isOpen} />
+                  <AccordionTabs
+                    tabIndex={tabIndex}
+                    key={'document-announcement-' + tabIndex}
+                    groupIndex={groupIndex}
+                    toggleTab={toggleTab}
+                    tabItem={tabItem}
+                    isOpen={isOpen}
+                  />
                 )
               })}
             </div>
@@ -65,5 +72,3 @@ export function DocumentAnnouncementPage({data}: DocumentAnnouncementPageProps) 
     </main>
   )
 }
-
-

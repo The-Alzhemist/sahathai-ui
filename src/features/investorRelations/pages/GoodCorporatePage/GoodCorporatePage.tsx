@@ -1,17 +1,16 @@
-"use client"
+'use client'
 
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
-
 
 import { Banner } from '@/components/Banner'
 
 import { GoodCorporatePageProps } from '@/features/investorRelations/pages/GoodCorporatePage/interface'
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
-
-export function GoodCorporatePage({data}:GoodCorporatePageProps) {
+export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
   const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
   const tMenu = useTranslations('Menu')
 
@@ -32,28 +31,31 @@ export function GoodCorporatePage({data}:GoodCorporatePageProps) {
   }
 
   return (
-    <main className="pb-[176px] bg-white">
+    <main className='pb-[176px] bg-white'>
       <Menu />
-      <Banner
-        imagePath="/about-us/banner.png"
-        alt={tMenu('investorRelations.shareHolderMeeting')}
-        caption={tMenu('investorRelations.shareHolderMeeting')}
-      />
 
-      <section className="p-5 max-w-4xl mx-auto space-y-6">
+      <SwiperVertical />
+
+      <section className='p-5 max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
-          <div key={groupIndex} className=" rounded-md p-4">
+          <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}
-            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+            <h2 className=' text-lg md:text-3xl mb-7 text-blue-400 text-center '>
               {groupItem.heading}
             </h2>
 
-            <div className="space-y-4">
+            <div className='space-y-4'>
               {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
-                  <AccordionTabs tabIndex={tabIndex} key={'good-corporate-' + tabIndex} groupIndex={groupIndex} toggleTab={toggleTab}
-                                 tabItem={tabItem} isOpen={isOpen} />
+                  <AccordionTabs
+                    tabIndex={tabIndex}
+                    key={'good-corporate-' + tabIndex}
+                    groupIndex={groupIndex}
+                    toggleTab={toggleTab}
+                    tabItem={tabItem}
+                    isOpen={isOpen}
+                  />
                 )
               })}
             </div>
@@ -63,5 +65,3 @@ export function GoodCorporatePage({data}:GoodCorporatePageProps) {
     </main>
   )
 }
-
-

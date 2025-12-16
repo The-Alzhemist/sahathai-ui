@@ -7,6 +7,7 @@ import { BoardAndExecutives } from '../../components/BoardAndExecutives'
 import { CommitmentSuccess } from '../../components/CommitmentSuccess'
 import { CorporateGroupOrganizationalStructure } from '../../components/CorporateGroupOrganizationalStructure'
 import { AboutPageProps, AboutUsTabEnum } from './interface'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
 export function AboutUsPage({
   tabs,
@@ -19,11 +20,12 @@ export function AboutUsPage({
   return (
     <main>
       <Menu />
-      <Banner
+      {/* <Banner
         imagePath='/home/new/sahathai-building-banner.webp'
         alt={tMenu('aboutUs.title')}
         caption={tMenu('aboutUs.title')}
-      />
+      /> */}
+      <SwiperVertical />
       <div className='flex justify-center px-2'>
         {/*<Tabs*/}
         {/*  className='mt-[40px]'*/}

@@ -15,7 +15,7 @@ export function Banner() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section className='relative h-[850px] bg-white'>
+    <section className='relative  bg-white'>
       {/* <SwiperVertical /> */}
       <HomeVideoBanner />
       <Menu />
