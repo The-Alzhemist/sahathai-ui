@@ -14,7 +14,7 @@ export function Banner() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section className='relative h-[550px] bg-white'>
+    <section className='relative h-[850px] bg-white'>
       {/*<Image*/}
       {/*  className='hidden md:flex absolute top-0 left-0 w-full object-cover h-[490px]'*/}
       {/*  src='/home/banner.png'*/}
@@ -33,10 +33,8 @@ export function Banner() {
       {/*  alt='เชื่อมโยง คุณสู่โลจิสติกส์ไทย'*/}
       {/*/>*/}
 
-
       <SwiperComponent />
       <Menu />
-
     </section>
   )
 }
