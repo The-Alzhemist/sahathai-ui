@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
@@ -7,16 +7,15 @@ import { Banner } from '@/components/Banner'
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import { WarrantPageProps } from '@/features/investorRelations/pages/WarrantPage/interface'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
-
-export function WarrantPage({data}:WarrantPageProps) {
+export function WarrantPage({ data }: WarrantPageProps) {
   const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
   const tMenu = useTranslations('Menu')
 
   if (!data) {
     return <div>No data</div>
   }
-
 
   const group = data.story.content.body[0].group || []
 
@@ -31,28 +30,31 @@ export function WarrantPage({data}:WarrantPageProps) {
   }
 
   return (
-    <main className="pb-[176px] bg-white">
+    <main className='pb-[176px] bg-white'>
       <Menu />
-      <Banner
-        imagePath="/about-us/banner.png"
-        alt={tMenu('investorRelations.shareHolderMeeting')}
-        caption={tMenu('investorRelations.shareHolderMeeting')}
-      />
 
-      <section className="p-5 max-w-4xl mx-auto space-y-6">
+      <SwiperVertical />
+
+      <section className='p-5 max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
-          <div key={groupIndex} className=" rounded-md p-4">
+          <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}
-            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+            <h2 className=' text-lg md:text-3xl mb-7 text-blue-400 text-center '>
               {groupItem.heading}
             </h2>
 
-            <div className="space-y-4">
+            <div className='space-y-4'>
               {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
-                  <AccordionTabs tabIndex={tabIndex} key={'warrant-' + tabIndex} groupIndex={groupIndex} toggleTab={toggleTab}
-                                 tabItem={tabItem} isOpen={isOpen} />
+                  <AccordionTabs
+                    tabIndex={tabIndex}
+                    key={'warrant-' + tabIndex}
+                    groupIndex={groupIndex}
+                    toggleTab={toggleTab}
+                    tabItem={tabItem}
+                    isOpen={isOpen}
+                  />
                 )
               })}
             </div>
@@ -62,5 +64,3 @@ export function WarrantPage({data}:WarrantPageProps) {
     </main>
   )
 }
-
-

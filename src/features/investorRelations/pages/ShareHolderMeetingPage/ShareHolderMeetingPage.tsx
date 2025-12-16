@@ -6,10 +6,12 @@ import { ShareHolderMeetingPageProps } from '@/features/investorRelations/pages/
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 import { AccordionTabs } from '../../components/AccordionTabs'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
-export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMeetingPageProps) {
+export function ShareHolderMeetingPage({
+  shareHolderMeetingData,
+}: ShareHolderMeetingPageProps) {
   const tMenu = useTranslations('Menu')
-
 
   const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
 
@@ -30,27 +32,35 @@ export function ShareHolderMeetingPage({ shareHolderMeetingData }: ShareHolderMe
   }
 
   return (
-    <main className="pb-[176px] bg-white">
+    <main className='pb-[176px] bg-white'>
       <Menu />
-      <Banner
-        imagePath="/about-us/banner.png"
+      {/* <Banner
+        imagePath='/about-us/banner.png'
         alt={tMenu('investorRelations.shareHolderMeeting')}
         caption={tMenu('investorRelations.shareHolderMeeting')}
-      />
+      /> */}
+      <SwiperVertical />
 
-      <section className="p-5 max-w-4xl mx-auto space-y-6">
+      <section className='p-5 max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
-          <div key={groupIndex} className=" rounded-md p-4">
+          <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}
-            <h2 className=" text-lg md:text-3xl mb-7 text-blue-400 text-center ">
+            <h2 className=' text-lg md:text-3xl mb-7 text-blue-400 text-center '>
               {groupItem.heading}
             </h2>
 
-            <div className="space-y-4">
+            <div className='space-y-4'>
               {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
-                <AccordionTabs tabIndex={tabIndex} key={tabIndex} groupIndex={groupIndex} toggleTab={toggleTab} tabItem={tabItem} isOpen={isOpen}/>
+                  <AccordionTabs
+                    tabIndex={tabIndex}
+                    key={tabIndex}
+                    groupIndex={groupIndex}
+                    toggleTab={toggleTab}
+                    tabItem={tabItem}
+                    isOpen={isOpen}
+                  />
                 )
               })}
             </div>

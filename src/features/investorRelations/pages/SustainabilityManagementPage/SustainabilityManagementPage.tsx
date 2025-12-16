@@ -11,18 +11,15 @@ import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 import { EsgRisk } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/EsgRisk/EsgRisk'
 import { EmergingRisk } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/EmergingRisk/EmergingRisk'
 import ESGPolicy from '@/features/investorRelations/pages/SustainabilityManagementPage/components/ESGPolicy/ESGPolicy'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
 export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
   return (
     <main className=''>
       <Menu />
-      <Banner
-        imagePath='/home/new/sahathai-building-banner.webp'
-        alt={t('investorRelations')}
-        caption={t('title')}
-        className=''
-      />
+
+      <SwiperVertical />
       {/*<Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />*/}
       <section className='relative pt-[-20px] pb-[30px] overflow-hidden'>
         {/* background image */}

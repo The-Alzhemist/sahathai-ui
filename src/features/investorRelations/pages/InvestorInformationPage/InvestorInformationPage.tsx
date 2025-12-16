@@ -10,18 +10,15 @@ import { CompanyAdvertiseVideo } from '@/features/investorRelations/components/C
 import { CompanyFactSheet } from '@/features/investorRelations/components/CompanyFactSheet'
 import { Background } from '@/components/Background'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
+import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 
 export async function InvestorInformationPage() {
   const t = await getTranslations('Menu')
   return (
     <main className='bg-[#F5f5f5]'>
       <Menu />
-      <Banner
-        imagePath='/home/new/sahathai-building-banner.webp'
-        alt={t('investorRelations.title')}
-        caption={t('investorRelations.title')}
-        className='mb-[40px]'
-      />
+
+      <SwiperVertical />
       <section className=' w-full  mx-auto   '>
         <section className='w-full space-y-[112px] '>
           <StockMarketInformation />
