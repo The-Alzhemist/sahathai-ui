@@ -9,7 +9,7 @@ export default function HomeVideoBanner() {
         {/* Mobile */}
         <div className='block md:hidden w-full h-full'>
           <HLSVideo
-            src='https://res.cloudinary.com/dyv2lnq0u/video/upload/sp_auto,w_854/v1765854012/sahathai-full-hd_qivsgg.m3u8'
+            src='/video/m4s/index.m3u8'
             className='w-full h-full object-cover'
           />
         </div>
@@ -17,7 +17,7 @@ export default function HomeVideoBanner() {
         {/* Desktop */}
         <div className='hidden md:block w-full h-full'>
           <HLSVideo
-            src='https://res.cloudinary.com/dyv2lnq0u/video/upload/sp_auto/v1765854012/sahathai-full-hd_qivsgg.m3u8'
+            src='/video/m4s/index.m3u8'
             className='w-full h-full object-cover md:rounded-b-[60px]'
           />
         </div>
