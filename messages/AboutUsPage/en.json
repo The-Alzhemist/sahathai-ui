@@ -20,31 +20,31 @@
       "OurMission": {
         "title": "Mission",
         "missionToCustomers": {
-          "title": "Mission to Customers",
-          "content": "“Create value for customers with modern solutions and efficient services.”"
+          "title": "Our Mission to Customers",
+          "content": "“Creating value for customers with smart solutions and efficient services.”"
         },
         "missionToShareholders": {
-          "title": "Mission to Shareholders",
-          "content": "“Create value for shareholders with sustainable growth and standardized management.”"
+          "title": "Our Mission to Shareholders",
+          "content": "“Creating value for our shareholders through sustainable growth and high-standard management.”"
         },
         "missionToEmployees": {
-          "title": "Mission to Employees",
-          "content": "“Create a good work environment, promote skill development, and encourage career advancement.”"
+          "title": "Our Mission to Employees",
+          "content": "“Creating a positive work environment while promoting learning, skill development, and career advancement.”"
         },
         "missionToSociety": {
-          "title": "Mission to Society",
-          "content": "“Help, support, and demonstrate responsibility toward society and the environment.”"
+          "title": "Our Mission to the Society",
+          "content": "“Supporting, contributing to, and taking responsibility for society and the environment.”"
         }
       },
       "CoreValues": {
         "title": "Core Values",
         "serviceMind": {
           "title": "SERVICE MIND",
-          "content": "Serve with heart."
+          "content": "Serving with heart."
         },
         "openness": {
           "title": "OPENNESS",
-          "content": "Open to new ideas and change."
+          "content": "Open to new ideas and positive change."
         },
         "integrity": {
           "title": "INTEGRITY",
@@ -52,41 +52,41 @@
         },
         "innovation": {
           "title": "INNOVATION",
-          "content": "Create new and useful things."
+          "content": "Creating new and meaningful innovations."
         }
       }
     },
     "CommitmentSuccess": {
-      "startingBusiness": "Started operations in 2007",
-      "content": "Sahathai Terminal is a private company that began operations in 2007. The company has a total operational area of 315,200 square meters, including a container maintenance area, a customs office within the port area, and full-service port handling equipment, along with skilled and expert personnel. Sahathai Terminal is located along the Chao Phraya River, offering comprehensive services to customers. You can trust that we have complete solutions and supplementary services to meet every need. All of our services are certified by global standards, while we are also able to offer flexible services, which only independent port operators can provide.",
+      "startingBusiness": "Established in 2007",
+      "content": "Sahathai Terminal is a privately owned company that began operations in 2007. The company operates on a total area of 315,200 square meters, which includes a container maintenance and repair area, an on-site customs office, and fully equipped port facilities for full-scale cargo handling.With skilled and experienced personnel, Sahathai Terminal is located along the Chao Phraya River and offers comprehensive, end-to-end services. You can rely on us for complete solutions and a wide range of value-added services tailored to your needs. All our services are certified to global standards, while maintaining the flexibility that only an independent terminal operator can provide.",
       "2551": {
         "year": "2008",
         "title": "Established Sahathai River Terminal"
       },
       "2556": {
         "year": "2013",
-        "title": "Renamed to 'Sahathai Terminal'"
+        "title": "Rebranded to 'Sahathai Terminal"
       },
       "2558": {
         "year": "2015",
-        "title": "Expanded the new dock",
-        "content": "Expanded the new dock with MOL under the name 'Bangkok Barge Terminal' or BBT."
+        "title": "Expanded the new port Terminal",
+        "content": "Expanded a new terminal in collaboration with MOL, operating under the name ‘Bangkok Barge Terminal’ (BBT)"
       },
       "2559_2560": {
         "year": "2016-2017",
-        "title": "Launched container shipping services by water",
-        "content": "Launched container shipping services by water using coastal cargo vessels through Bangkok Barge Service."
+        "title": "Launched waterborne container transport services.",
+        "content": "Commenced waterborne container transportation via barge services operated by Bangkok Barge Services"
       },
       "2560_2562": {
         "year": "2017-2019",
         "content": "Built a new depot",
-        "content2": "Container yard",
+        "content2": "Container storage yard",
         "content3": "Bonded warehouse",
         "content4": "Formed a joint venture company to invest in two projects (international cargo port / distribution center)."
       },
       "2568": {
         "year": "2025",
-        "content": "We will be the leader in providing integrated and sustainable logistics services, focusing on port services, maritime and road transportation, warehousing, distribution centers, and other value-added services for our customers."
+        "content": "We aim to be a leader in providing comprehensive and sustainable logistics services, focusing on terminal operations, sea and land transportation, warehousing and distribution centers, as well as value-added services that enhance benefits for our customers."
       }
     },
     "BoardAndExecutives": {
@@ -104,48 +104,101 @@
           "clickLinkText": "Click here",
           "intro": "An audit committee is an operating committee of a company’s board of directors that is in charge of overseeing financial reporting and disclosure. Sahathai Terminal’s Audit Committee members are:",
           "members": [
-            { "name": "Ms.Vilai Chattanrassamee", "role": "Chairman of the Audit Committee" },
-            { "name": "Mr.Yuth Vorachattarn", "role": "Audit Committee Member" },
-            { "name": "Dr.Vithit Leenutaphong", "role": "Audit Committee Member" }
+            {
+              "name": "Ms.Vilai Chattanrassamee",
+              "role": "Chairman of the Audit Committee"
+            },
+            {
+              "name": "Mr.Yuth Vorachattarn",
+              "role": "Audit Committee Member"
+            },
+            {
+              "name": "Dr.Vithit Leenutaphong",
+              "role": "Audit Committee Member"
+            }
           ],
           "intro2": "The company has internal audit and directly report to Audit committee and also appointment Dharmniti Auditing Co., Ltd to be internal audit.",
           "noteTitle": "Note",
           "note": [
             { "content": "Has knowledge and experience in accounting" },
-            { "content": "The Company has considered the qualifications of the independent directors and the audit committee" }
+            {
+              "content": "The Company has considered the qualifications of the independent directors and the audit committee"
+            }
           ],
           "pdfTitle": "According to the definition of the Securities and Exchange Commission"
         },
         "executiveCommittee": {
           "title": "Executive Committee",
-          "intro": "มThe Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
+          "intro": "The Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
           "members": [
-            { "name": "Mr.Wichit Rattanasirivilai", "role": "Chairman of the Executive Committee" },
-            { "name": "Mr.Chairat Chongyangyuenvong", "role": "Executive Committee Member" },
-            { "name": "Mr.Suchin Ratanasirivilai", "role": "Executive Committee Member" },
-            { "name": "Mr.Anggoon Srisunthorn", "role": "Executive Committee Member" },
-            { "name": "Ms.Sauwakun Karuchit", "role": "Executive Committee Member" },
-            { "name": "Mr.Banchai Karuchit", "role": "Executive Committee Member" }
+            {
+              "name": "Mr.Wichit Rattanasirivilai",
+              "role": "Chairman of the Executive Committee"
+            },
+            {
+              "name": "Mr.Chairat Chongyangyuenvong",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Mr.Suchin Ratanasirivilai",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Mr.Anggoon Srisunthorn",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Ms.Sauwakun Karuchit",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Mr.Banchai Karuchit",
+              "role": "Executive Committee Member"
+            }
           ]
         },
         "nominationAndRemunerationCommittee": {
           "title": "Nomination and Remuneration Committee",
           "intro": "Sahathai Terminal has established a nomination and remuneration committee with formally delegated duties and responsibilities and with written terms of reference. The committee members are",
           "members": [
-            { "name": "Dr.Vithit Leenutaphong", "role": "Chairman of the Nomination and Remuneration Committee" },
-            { "name": "Mr.Yuth Vorachattarn", "role": "Nomination and Remuneration Committee Member" },
-            { "name": "Ms.Vilai Chattanrassamee", "role": "Nomination and Remuneration Committee Member" },
-            { "name": "Mr.Wichit Rattanasirirvilai", "role": "Nomination and Remuneration Committee Member" },
-            { "name": "Ms.Sauwakun Karuchit", "role": "Nomination and Remuneration Committee Member" }
+            {
+              "name": "Dr.Vithit Leenutaphong",
+              "role": "Chairman of the Nomination and Remuneration Committee"
+            },
+            {
+              "name": "Mr.Yuth Vorachattarn",
+              "role": "Nomination and Remuneration Committee Member"
+            },
+            {
+              "name": "Ms.Vilai Chattanrassamee",
+              "role": "Nomination and Remuneration Committee Member"
+            },
+            {
+              "name": "Mr.Wichit Rattanasirirvilai",
+              "role": "Nomination and Remuneration Committee Member"
+            },
+            {
+              "name": "Ms.Sauwakun Karuchit",
+              "role": "Nomination and Remuneration Committee Member"
+            }
           ]
         },
         "enterpriseRiskManagementCommittee": {
           "title": "Risk Management Committee",
           "intro": "The Company has appointed Risk Management Governance and Sustainability Committee with the duty to oversee that the overall risk management process is at appropriate level. There are 3 committees",
           "members": [
-            { "name": "Mr.Yuth Vorachattarn", "role": "Chairman of the Risk Management Governance and Sustainability Committee" },
-            { "name": "Ms.Vilai Chattanrassamee", "role": "Risk Management Governance and Sustainability Committee" },
-            { "name": "Mr.Banchai Karuchit", "role": "Risk Management Governance and Sustainability Committee" }
+            {
+              "name": "Mr.Yuth Vorachattarn",
+              "role": "Chairman of the Risk Management Governance and Sustainability Committee"
+            },
+            {
+              "name": "Ms.Vilai Chattanrassamee",
+              "role": "Risk Management Governance and Sustainability Committee"
+            },
+            {
+              "name": "Mr.Banchai Karuchit",
+              "role": "Risk Management Governance and Sustainability Committee"
+            }
           ]
         }
       }
@@ -386,12 +439,8 @@
         "Nomination and Remuneration Committee",
         "Chairman of the Executive Committee"
       ],
-      "education": [
-        "Associate’s Degree"
-      ],
-      "trainings": [
-        "Director Accreditation Program (DCP) class 139/2017"
-      ],
+      "education": ["Associate’s Degree"],
+      "trainings": ["Director Accreditation Program (DCP) class 139/2017"],
       "directorType": "Non–Executive Director",
       "appointments": [
         "On 3 May 2017 (registered as a public company limited)",
@@ -426,19 +475,14 @@
       ],
       "shareholding": "823,020 shares, 0.14% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": [
-        "Mr. Suchin Rattanasirivilai (Nephew)"
-      ],
+      "family": ["Mr. Suchin Rattanasirivilai (Nephew)"],
       "note": "Mr. Wichit Rattanasirivilai is a Non-Executive Director who has work experience related to the company’s business, including transportation and warehouse management businesses."
     },
 
     "Suchin": {
       "fullName": "Mr. Suchin Ratanasirivilai",
       "age": "55 years",
-      "positions": [
-        "Director",
-        "Executive Committee"
-      ],
+      "positions": ["Director", "Executive Committee"],
       "education": [
         "Master of Business Administration, Sasin Graduate Institute of Business Administration",
         "BSc in Materials Engineering Rensselaer Polytechnic Institute (RPI), USA"
@@ -484,25 +528,18 @@
       ],
       "shareholding": "264,000 shares, 0.04% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": [
-        "Mr. Wichit Rattanasirivilai (Uncle)"
-      ],
+      "family": ["Mr. Wichit Rattanasirivilai (Uncle)"],
       "note": ""
     },
     "Auggoon": {
       "fullName": "Mr. Auggoon Srisunthorn",
       "age": "56 years",
-      "positions": [
-        "Director",
-        "Executive Committee"
-      ],
+      "positions": ["Director", "Executive Committee"],
       "education": [
         "Ex-MBA, Sripatum University",
         "Bachelor’s Degree in Accounting, Ramkhamhaeng University"
       ],
-      "trainings": [
-        "Directors Certification Program (DCP) class 139/2017"
-      ],
+      "trainings": ["Directors Certification Program (DCP) class 139/2017"],
       "directorType": "Non–Executive Director",
       "appointments": [
         "On 3 May 2017 (registered as a public company limited)",
@@ -536,16 +573,11 @@
     "Chairat": {
       "fullName": "Mr. Chairat Chongyangyuenvong",
       "age": "58 years",
-      "positions": [
-        "Director",
-        "Executive Committee"
-      ],
+      "positions": ["Director", "Executive Committee"],
       "education": [
         "Bachelor’s Degree in Business Administration, Assumption University"
       ],
-      "trainings": [
-        "Director Accreditation Program (DAP) class 39/2005"
-      ],
+      "trainings": ["Director Accreditation Program (DAP) class 39/2005"],
       "directorType": "Non–Executive Director",
       "appointments": [
         "On 3 May 2017 (registered as a public company limited)",
@@ -570,9 +602,7 @@
         "1990 – present  Managing Partner of Karnyang Yeen Yong Industry Limited Partnership."
       ],
       "otherOrgRoles": [],
-      "pastRoles": [
-        "2007 – 2021  Director of Udomsukrungruang Co., Ltd."
-      ],
+      "pastRoles": ["2007 – 2021  Director of Udomsukrungruang Co., Ltd."],
       "shareholding": "7,517,136 shares, 1.24% (as of December 30, 2024)",
       "disciplinary": null,
       "family": [],
@@ -588,9 +618,7 @@
         "Executive Committee",
         "Chief Executive Officer"
       ],
-      "education": [
-        "Nanzan University, Japan"
-      ],
+      "education": ["Nanzan University, Japan"],
       "trainings": [
         "Thai-Chinese Leadership Student class 4",
         "Directors Certification Program (DCP) class 139/2017",
@@ -631,9 +659,7 @@
       ],
       "shareholding": "10,728,580 shares, 1.77% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": [
-        "Mr. Banchai Karuchit(Son)"
-      ],
+      "family": ["Mr. Banchai Karuchit(Son)"],
       "note": ""
     },
 
@@ -687,26 +713,20 @@
       ],
       "shareholding": "18,686,402 shares, 3.08% (as of December 30, 2024)",
       "disciplinary": null,
-      "family": [
-        "Mrs. Sauwakun Karuchit (Mother)"
-      ],
+      "family": ["Mrs. Sauwakun Karuchit (Mother)"],
       "note": ""
     },
 
     "Kittikhun": {
       "fullName": "Mr. Kittikhun Lochaya",
       "age": "53 years",
-      "positions": [
-        "Chief Operating Officer – Terminal"
-      ],
+      "positions": ["Chief Operating Officer – Terminal"],
       "education": [
         "Bachelor Degree of Engineering in Operation & Management, Merchant Marine Training Center"
       ],
       "trainings": [],
       "directorType": null,
-      "appointments": [
-        "On 1 June 2011"
-      ],
+      "appointments": ["On 1 June 2011"],
       "directorYears": null,
       "workExp5y": [],
       "listedRoles": [],
@@ -745,9 +765,7 @@
       ],
       "trainings": [],
       "directorType": null,
-      "appointments": [
-        "On 20 May 2024"
-      ],
+      "appointments": ["On 20 May 2024"],
       "directorYears": null,
       "workExp5y": [
         "20/5/2024 – present  Accounting Manager of Sahathai Terminal Public Company Limited",
@@ -770,17 +788,13 @@
     "Sanga": {
       "fullName": "Mr. Sanga Sanguansaksri",
       "age": "59 years",
-      "positions": [
-        "Chief Commercial Officer"
-      ],
+      "positions": ["Chief Commercial Officer"],
       "education": [
         "Bachelor Degree of Science in Marine Navigation, Kasetsart University"
       ],
       "trainings": [],
       "directorType": null,
-      "appointments": [
-        "On 1 September 2024"
-      ],
+      "appointments": ["On 1 September 2024"],
       "directorYears": null,
       "workExp5y": [
         "1/9/2024 – present  Chief Commercial Officer of Sahathai Terminal Public Company Limited",
@@ -800,18 +814,14 @@
     "Papatsarin": {
       "fullName": "Miss Papatsarin Vichayasavetrat",
       "age": "48 years",
-      "positions": [
-        "Chief Financial Officer"
-      ],
+      "positions": ["Chief Financial Officer"],
       "education": [
         "Master Degree of Business Administration, Finance, Thammasat University",
         "Bachelor Degree of Business Administration, Accounting, Assumption University"
       ],
       "trainings": [],
       "directorType": null,
-      "appointments": [
-        "On 19 May 2025"
-      ],
+      "appointments": ["On 19 May 2025"],
       "directorYears": null,
       "workExp5y": [
         "19/5/2025 – present  Chief Financial Officer of Sahathai Terminal Public Company Limited",
