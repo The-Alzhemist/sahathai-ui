@@ -20,31 +20,31 @@
       "OurMission": {
         "title": "Mission",
         "missionToCustomers": {
-          "title": "Mission to Customers",
-          "content": "“Create value for customers with modern solutions and efficient services.”"
+          "title": "Our Mission to Customers",
+          "content": "“Creating value for customers with smart solutions and efficient services.”"
         },
         "missionToShareholders": {
-          "title": "Mission to Shareholders",
-          "content": "“Create value for shareholders with sustainable growth and standardized management.”"
+          "title": "Our Mission to Shareholders",
+          "content": "“Creating value for our shareholders through sustainable growth and high-standard management.”"
         },
         "missionToEmployees": {
-          "title": "Mission to Employees",
-          "content": "“Create a good work environment, promote skill development, and encourage career advancement.”"
+          "title": "Our Mission to Employees",
+          "content": "“Creating a positive work environment while promoting learning, skill development, and career advancement.”"
         },
         "missionToSociety": {
-          "title": "Mission to Society",
-          "content": "“Help, support, and demonstrate responsibility toward society and the environment.”"
+          "title": "Our Mission to the Society",
+          "content": "“Supporting, contributing to, and taking responsibility for society and the environment.”"
         }
       },
       "CoreValues": {
         "title": "Core Values",
         "serviceMind": {
           "title": "SERVICE MIND",
-          "content": "Serve with heart."
+          "content": "Serving with heart."
         },
         "openness": {
           "title": "OPENNESS",
-          "content": "Open to new ideas and change."
+          "content": "Open to new ideas and positive change."
         },
         "integrity": {
           "title": "INTEGRITY",
@@ -52,41 +52,43 @@
         },
         "innovation": {
           "title": "INNOVATION",
-          "content": "Create new and useful things."
+          "content": "Creating new and meaningful innovations."
         }
       }
     },
     "CommitmentSuccess": {
-      "startingBusiness": "Started operations in 2007",
-      "content": "Sahathai Terminal is a private company that began operations in 2007. The company has a total operational area of 315,200 square meters, including a container maintenance area, a customs office within the port area, and full-service port handling equipment, along with skilled and expert personnel. Sahathai Terminal is located along the Chao Phraya River, offering comprehensive services to customers. You can trust that we have complete solutions and supplementary services to meet every need. All of our services are certified by global standards, while we are also able to offer flexible services, which only independent port operators can provide.",
+      "startingBusiness": "Established in 2007",
+      "content": "Sahathai Terminal is a privately owned company that began operations in 2007. The company operates on a total area of 315,200 square meters, which includes a container maintenance and repair area, an on-site customs office, and fully equipped port facilities for full-scale cargo handling.
+
+With skilled and experienced personnel, Sahathai Terminal is located along the Chao Phraya River and offers comprehensive, end-to-end services. You can rely on us for complete solutions and a wide range of value-added services tailored to your needs. All our services are certified to global standards, while maintaining the flexibility that only an independent terminal operator can provide.",
       "2551": {
         "year": "2008",
         "title": "Established Sahathai River Terminal"
       },
       "2556": {
         "year": "2013",
-        "title": "Renamed to 'Sahathai Terminal'"
+        "title": "Rebranded to 'Sahathai Terminal"
       },
       "2558": {
         "year": "2015",
-        "title": "Expanded the new dock",
-        "content": "Expanded the new dock with MOL under the name 'Bangkok Barge Terminal' or BBT."
+        "title": "Expanded the new port Terminal",
+        "content": "Expanded a new terminal in collaboration with MOL, operating under the name ‘Bangkok Barge Terminal’ (BBT)"
       },
       "2559_2560": {
         "year": "2016-2017",
-        "title": "Launched container shipping services by water",
-        "content": "Launched container shipping services by water using coastal cargo vessels through Bangkok Barge Service."
+        "title": "Launched waterborne container transport services.",
+        "content": "Commenced waterborne container transportation via barge services operated by Bangkok Barge Services"
       },
       "2560_2562": {
         "year": "2017-2019",
         "content": "Built a new depot",
-        "content2": "Container yard",
+        "content2": "Container storage yard",
         "content3": "Bonded warehouse",
         "content4": "Formed a joint venture company to invest in two projects (international cargo port / distribution center)."
       },
       "2568": {
         "year": "2025",
-        "content": "We will be the leader in providing integrated and sustainable logistics services, focusing on port services, maritime and road transportation, warehousing, distribution centers, and other value-added services for our customers."
+        "content": "We aim to be a leader in providing comprehensive and sustainable logistics services, focusing on terminal operations, sea and land transportation, warehousing and distribution centers, as well as value-added services that enhance benefits for our customers."
       }
     },
     "BoardAndExecutives": {
@@ -118,7 +120,7 @@
         },
         "executiveCommittee": {
           "title": "Executive Committee",
-          "intro": "มThe Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
+          "intro": "The Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
           "members": [
             { "name": "Mr.Wichit Rattanasirivilai", "role": "Chairman of the Executive Committee" },
             { "name": "Mr.Chairat Chongyangyuenvong", "role": "Executive Committee Member" },

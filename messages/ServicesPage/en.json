@@ -4,12 +4,12 @@
       "title": "Comprehensive Commercial Port Services",
       "content": "Two private river ports capable of handling up to 740,000 TEUs/year. Empty container maintenance yard with a capacity of up to 350,000 TEUs/year.",
       "commercialDock": {
-        "title": "Commercial Dock",
+        "title": "Commercial Port",
         "content": "Barge terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
       },
       "bargeServices": {
         "title": "Barge Services",
-        "content": "Supports berthing for international cargo ships or feeder ships (approximately 1,000 TEUs) and barges (approximately 40–240 TEUs). Sahathai Terminal has two ports: Sahathai Terminal with a berth width of 170 meters and BBT Barge Terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
+        "content": "Our terminals can accommodate international cargo vessels or feeder vessels of approximately 1,000 TEUs, as well as barges ranging from 40 to 240 TEUs. Sahathai Terminal operates two port berths: the main Sahathai berth with a 170-meter frontage and a barge berth with a 65-meter frontage. Additionally, the BBT barge terminal features a 96-meter berth frontage and can accommodate two barges simultaneously."
       },
       "containerHandling": {
         "title": "Container Handling | CFS LCL",
@@ -30,12 +30,12 @@
     },
     "ContainerStorageWarehouseServices": {
       "title": "Container Storage and Warehouse Services",
-      "content1": "Container storage yards in the Free Trade Zone",
+      "content1": "Container storage yards in the Free Zone",
       "content2": "Bonded warehouse with an area of 6,301 square meters",
-      "content3": "Free Trade Zone warehouse with an area of 10,686 square meters",
+      "content3": "Free Zone warehouse with an area of 10,686 square meters",
       "content4": "General warehouse with an area of 15,606 square meters",
       "freeTradeZoneContainerYard": {
-        "title": "Free Trade Zone Container Yard",
+        "title": "Free Zone Container Yard",
         "content": "The company provides container storage services in the Free Trade Zone, primarily serving a major automobile manufacturer. This manufacturer uses the space to store imported auto parts for car assembly in Thailand. The parts are stored in the Free Trade Zone to manage import duties and customs clearance, which are paid only when the parts are withdrawn for use in production."
       },
       "generalWarehouseandBondedWarehouse": {
@@ -47,7 +47,7 @@
         "content": "Enhancing warehouse efficiency with automated systems using robots to replace human operations within the cold storage facility."
       },
       "freeTradeZoneWarehouse": {
-        "title": "Free Trade Zone Warehouse",
+        "title": "Free Zone Warehouse",
         "content": "To ensure timely inventory management for production and assist in import tax planning, the Free Trade Zone warehouse offers:\n \u2022 Customs offices\n \u2022 Food and Drug Administration officers\n \u2022 Agricultural officers\n \u2022 Fisheries officers\nAll customs procedures and product inspections can be conveniently carried out at the port."
       },
       "serviceProviderImportExport": {
