@@ -7,31 +7,31 @@
     },
     "About": {
       "title": "Sahathai Terminal",
-      "content": "Enhance your operational efficiency, reduce costs, and increase productivity with our comprehensive world-class services. We provide consultancy and design tailored solutions to suit your business needs.",
+      "content": "Enhance your operational efficiency, reduce costs, and increase productivity with our comprehensive world-class services. We provide consultancy and develop the optimal solutions for your business.",
       "comprehensiveService": {
         "title": "Comprehensive Services",
         "content": "Logistics and supply chain solutions tailored for your business."
       },
       "globalTransportationNetwork": {
-        "title": "Global Transportation Network",
-        "content": "Worldwide transportation network for fast and efficient delivery to every destination."
+        "title": "Global Logistics Network",
+        "content": "A global logistics network that ensures fast and efficient delivery to every destination."
       },
       "convenientLocation": {
         "title": "Convenient Location",
-        "content": "Located near the Outer Ring Road and Bhumibol Bridge for seamless land and water transport."
+        "content": "Located near the Outer Ring Road (Kanchanaphisek) and Bhumibol Bridge for seamless land and water transport."
       },
       "worldClassStandards": {
         "title": "World-Class Standards",
         "content": "Certified ISO 9001, 14001, and GSV (C-TPAT tier 2) for safety and reliability."
       },
       "coversAllNeeds": {
-        "title": "Covers All Needs",
+        "title": "Meeting All Your Needs",
         "content": "Comprehensive cargo handling services by professional teams for the highest quality."
       }
     },
     "License": {
-      "title": "Quality Guaranteed Success",
-      "content": "Our awards and certifications are not only symbols of success but also a testament to the high standards of service we provide to every client. With continuous development, we are proud to present achievements recognized by leading organizations both domestically and internationally.",
+      "title": "Success Guaranteed by Quality",
+      "content": "Our awards and certifications not only reflect our achievements but also affirm the high service standards we deliver to every customer. With a strong commitment to continuous improvement, we take pride in presenting accomplishments recognized by leading organizations both locally and internationally.",
       "iso": "ISO 9001 and ISO 14001"
     },
     "Service": {
@@ -45,8 +45,8 @@
         "content": "Inspection, cleaning, and maintenance services with a storage area of 59,200 sq.m., supporting 350,000 containers per year. Quality and safety guaranteed."
       },
       "freeTradeZone": {
-        "title": "Free Trade Zone",
-        "content": "Our Free Trade Zone, located 200 meters from Sahathai Terminal, spans 6,400 sq.m., reducing logistics time and costs."
+        "title": "Free Zone",
+        "content": "Our Free Zone, located 200 meters from Sahathai Terminal, spans 6,400 sq.m., reducing logistics time and costs."
       },
       "coastalShippingServices": {
         "title": "Coastal Shipping Services",
@@ -69,7 +69,7 @@
       "description": "Our clients trust and rely on our logistics and supply chain services.",
       "location": {
         "title": "Strategic Location",
-        "description": "Sahathai Terminal's strategic location boosts the economy of the industry around the Chao Phraya River, Bangkok, and Samut Prakan."
+        "description": "Sahathai Terminal is strategically located to support the economic growth of industries around the Chao Phraya River estuary, Bangkok, and Samut Prakan."
       },
       "flexibility": {
         "title": "Flexible Services",
