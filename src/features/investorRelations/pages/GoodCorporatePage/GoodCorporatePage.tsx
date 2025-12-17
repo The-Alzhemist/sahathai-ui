@@ -36,7 +36,7 @@ export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
 
       <SwiperVertical />
 
-      <section className='p-5 max-w-4xl mx-auto space-y-6'>
+      <section className='px-5 pb-5  pt-[100px] max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
           <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}

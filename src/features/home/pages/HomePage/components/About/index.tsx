@@ -44,31 +44,31 @@ export function About() {
             <AboutCard
               title={t('comprehensiveService.title')}
               content={t('comprehensiveService.content')}
-              imageUrl='/home/new/sustain-1.webp'
+              imageUrl='/home/new/sustain-1-2x.webp'
               icon={<BuildingIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('globalTransportationNetwork.title')}
               content={t('globalTransportationNetwork.content')}
-              imageUrl='/home/new/sustain-2.webp'
+              imageUrl='/home/new/sustain-2-2x.webp'
               icon={<ScaleIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('worldClassStandards.title')}
               content={t('worldClassStandards.content')}
-              imageUrl='/home/new/sustain-3.webp'
+              imageUrl='/home/new/sustain-3-2x.webp'
               icon={<RoadIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('convenientLocation.title')}
               content={t('convenientLocation.content')}
-              imageUrl='/home/new/sustain-4.webp'
+              imageUrl='/home/new/sustain-4-2x.webp'
               icon={<ContainerIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('coversAllNeeds.title')}
               content={t('coversAllNeeds.content')}
-              imageUrl='/home/new/sustain-5.webp'
+              imageUrl='/home/new/sustain-5-2x.webp'
               icon={<WorldIcon width={'34'} height={'34'} />}
             />
           </div>

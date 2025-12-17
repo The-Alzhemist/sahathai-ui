@@ -17,7 +17,7 @@ export function CommercialDockPage() {
           <Image src='/bbt.png' width={70} height={31.5} alt='' />
         </Fragment>
       }
-      imageUrl='/services/new/service-1.webp'
+      imageUrl='/services/new/service-inside-1.webp'
       content={t('content')}
     />
   )

@@ -17,7 +17,7 @@ export function ContainerMaintenancePage() {
           <Image src='/bcds.png' width={85} height={29.35} alt='' />
         </Fragment>
       }
-      imageUrl='/services/new/service-4.webp'
+      imageUrl='/services/new/service-inside-4.webp'
       content={t('content')}
     />
   )
