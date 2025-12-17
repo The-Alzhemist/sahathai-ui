@@ -41,7 +41,7 @@ export function Timeline() {
       <TimelineCard
         contentPosition='right'
         year={t('2558.year')}
-        imageUrl='/about-us/new/commitment-success-3.webp'
+        imageUrl='/about-us/new/commitment-success-3-2x.webp'
       >
         <Image
           className='mb-[20px]'

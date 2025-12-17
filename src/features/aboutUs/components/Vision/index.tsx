@@ -10,13 +10,14 @@ export function Vision() {
 
   return (
     <Animation className='mt-[90px] flex flex-col-reverse  lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
-      <Image
-        className='shrink-0'
-        src='/about-us/new/about-us-team.webp'
-        width={487}
-        height={489}
-        alt=''
-      />
+      <div className='relative w-[450px] h-auto shrink-0'>
+        <Image
+          src='/about-us/new/about-us-team.webp'
+          alt='About us team'
+          fill
+          className='object-contain'
+        />
+      </div>
       <section className='py-[20px] pr-[30px]'>
         <div className='max-w-[400px] w-full'>
           <SahathaiText h='h3' />
@@ -28,7 +29,7 @@ export function Vision() {
         <div className='w-full mt-[70px]'>
           <h2 className='headline-1 text-background'>{t('vision.title')}</h2>
           <Line className='my-[22px]' />
-          <p className='mt-[10px] text-xl md:text-[26px] leading-7 md:leading-[48.38px] text-black-6 font-[300] whitespace-pre-line'>
+          <p className='mt-[10px] text-xl md:text-[20px] leading-7 md:leading-[48.38px] text-black-6 font-[300] whitespace-pre-line'>
             {t('vision.content')}
           </p>
         </div>
