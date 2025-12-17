@@ -37,7 +37,7 @@ export const WhyChooseSahathai = () => {
         />
         <Image
           className='self-start rounded-[30px]'
-          src='/home/new/home-portrait-3.webp'
+          src='/home/new/home-portrait-3-2x.webp'
           width={153}
           height={290}
           alt='home-portrait-3'

@@ -40,7 +40,7 @@ export default function SwiperVertical() {
   }
 
   return (
-    <section className='relative w-full h-[605px]'>
+    <section className='relative w-full h-[605px] z-0 -mt-[50px]'>
       <Swiper {...swiperConfig}>
         {slides.map((slide, index) => (
           <SwiperSlide key={`banner-slide-${index}`}>
