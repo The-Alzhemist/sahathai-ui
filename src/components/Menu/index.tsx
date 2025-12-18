@@ -60,7 +60,7 @@ export function Menu() {
           return (
             <li key={menu.title}>
               <Link
-                className={`headline-6 !font-[300] block px-[24px] py-[18px] hover:bg-blue-300 whitespace-nowrap ${
+                className={`headline-6 !font-[300] block px-[24px] py-[18px]   hover:bg-white/15 data-[open]:bg-white/15 whitespace-nowrap ${
                   isActive && 'bg-blue-300'
                 }`}
                 target={menu.isExternalLink ? '_blank' : undefined}
