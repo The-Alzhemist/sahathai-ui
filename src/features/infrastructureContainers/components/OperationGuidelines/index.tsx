@@ -50,10 +50,10 @@ export function OperationGuidelines() {
       id='operation-guidelines'
     >
       {/* background */}
-      <div className="absolute opacity-80 inset-0 bottom-0 z-0 bg-[url('/infrastructure-containers/new/sahathai-building.webp')] bg-center bg-no-repeat bg-cover" />
+      <div className="absolute opacity-100 inset-0 bottom-0 z-0 bg-[url('/infrastructure-containers/new/structure-bg-bottom-3x.webp')] bg-center bg-no-repeat bg-cover" />
 
       {/* content */}
-      <Animation className='relative z-10 max-w-[930px] w-full mx-auto px-5'>
+      <Animation className='relative z-10 max-w-[930px] my-[90px] w-full mx-auto px-5'>
         <h1 className='headline-2 text-center text-navy'>{t('title')}</h1>
         <section className='w-full flex flex-col md:flex-row gap-[24px]  p-[16px] mt-[20px] shadow-2 rounded-[20px] bg-[#eeeeee]'>
           <Tabs className='flex overflow-x-scroll md:block w-full md:w-[200px] shrink-0'>
@@ -68,7 +68,7 @@ export function OperationGuidelines() {
             ))}
           </Tabs>
 
-          <div className=' p-5 bg-white rounded-[10px]'>
+          <div className=' p-5 bg-white rounded-[10px] h-[800px] overflow-y-scroll'>
             {activeTab === 'docking' && <DockingInfo />}
             {activeTab === 'operatingHours' && <OperatingHours />}
             {activeTab === 'cfsLcl' && <CfsGoods />}

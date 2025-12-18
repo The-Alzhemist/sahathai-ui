@@ -6,10 +6,8 @@ import { useState } from 'react'
 import { FinancialReportsEnum } from '@/enums/investorRelations/FinancialReportsEnum'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
-import { FinancialReportsTabs } from '../FinancialReportsTabs'
-import { Tab } from '../FinancialReportsTabs/Tab'
+
 import { OneReportTable } from '../OneReportTable'
-import { OtherFinancialStatementsTable } from '../OtherFinancialStatementsTable'
 
 export function FinancialReports() {
   const t = useTranslations('InvestorInformationPage.FinancialReports')
