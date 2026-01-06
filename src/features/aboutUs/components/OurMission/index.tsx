@@ -17,17 +17,17 @@ export function OurMission() {
           content={t('missionToCustomers.content')}
         />
         <MissionCard
-          imageUrl='/about-us/new/mission-to-customers-2.webp'
+          imageUrl='/about-us/new/mission-to-customers-2-2.webp'
           title={t('missionToShareholders.title')}
           content={t('missionToShareholders.content')}
         />
         <MissionCard
-          imageUrl='/about-us/new/mission-to-customers-3.webp'
+          imageUrl='/about-us/new/mission-to-customers-3-2.webp'
           title={t('missionToEmployees.title')}
           content={t('missionToEmployees.content')}
         />
         <MissionCard
-          imageUrl='/about-us/new/mission-to-customers-4.webp'
+          imageUrl='/about-us/new/mission-to-customers-4-2.webp'
           title={t('missionToSociety.title')}
           content={t('missionToSociety.content')}
         />

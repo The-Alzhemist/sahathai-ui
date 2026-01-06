@@ -19,7 +19,7 @@ export function About() {
     <section className='relative w-full'>
       <div className='absolute inset-0 bg-white to-transparent'></div>
 
-      <div className='relative pt-[70px]'>
+      <div className='relative pt-[100px]'>
         <section className='max-w-[1040px] mx-auto flex  flex-col md:flex-row items-center gap-x-2 mb-10'>
           <div className='text-[48px] font-medium'>
             <span className='text-blue-300'>{tBanner('title')}</span>
