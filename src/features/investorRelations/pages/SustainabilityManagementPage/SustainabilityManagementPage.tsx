@@ -12,6 +12,7 @@ import { EsgRisk } from '@/features/investorRelations/pages/SustainabilityManage
 import { EmergingRisk } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/EmergingRisk/EmergingRisk'
 import ESGPolicy from '@/features/investorRelations/pages/SustainabilityManagementPage/components/ESGPolicy/ESGPolicy'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
@@ -19,7 +20,10 @@ export function SustainabilityManagementPage() {
     <main className=''>
       <Menu />
 
-      <SwiperVertical />
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-2.webp'
+        alt='investor-banner-2'
+      />
       {/*<Tabs activeMenu={InvestorRelationEnum.SustainabilityManagement} />*/}
       <section className='relative pt-[-20px] pb-[30px] overflow-hidden'>
         {/* background image */}

@@ -9,6 +9,7 @@ import { GoodCorporatePageProps } from '@/features/investorRelations/pages/GoodC
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
   const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
@@ -34,7 +35,10 @@ export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
     <main className='pb-[176px] bg-white'>
       <Menu />
 
-      <SwiperVertical />
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-9.webp'
+        alt='investor-banner-9'
+      />
 
       <section className='px-5 pb-5  pt-[100px] max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (

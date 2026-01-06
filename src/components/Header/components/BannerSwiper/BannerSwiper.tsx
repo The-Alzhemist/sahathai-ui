@@ -15,10 +15,9 @@ type Slide =
 
 export default function SwiperVertical() {
   const slides: Slide[] = [
-    { type: 'image', src: '/home/new/sahathai-building-banner.webp' },
-    { type: 'image', src: '/home/new/sahathai-building-banner-2.webp' },
-
-    { type: 'image', src: '/home/new/sahathai-building-banner-3.webp' },
+    { type: 'image', src: '/home/new/new-banner-1.webp' },
+    { type: 'image', src: '/home/new/new-banner-2.webp' },
+    { type: 'image', src: '/home/new/new-banner-3.webp' },
   ]
 
   const swiperConfig: SwiperProps = {

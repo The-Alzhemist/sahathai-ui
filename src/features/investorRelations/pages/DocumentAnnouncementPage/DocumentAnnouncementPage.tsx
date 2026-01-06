@@ -8,6 +8,7 @@ import { DocumentAnnouncementPageProps } from '@/features/investorRelations/page
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function DocumentAnnouncementPage({
   data,
@@ -36,12 +37,11 @@ export function DocumentAnnouncementPage({
   return (
     <main className='pb-[176px] bg-white'>
       <Menu />
-      {/* <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('investorRelations.shareHolderMeeting')}
-        caption={tMenu('investorRelations.shareHolderMeeting')}
-      /> */}
-      <SwiperVertical />
+
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-8.webp'
+        alt='investor-banner-8'
+      />
 
       <section className='px-5 pb-5  pt-[100px] max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
