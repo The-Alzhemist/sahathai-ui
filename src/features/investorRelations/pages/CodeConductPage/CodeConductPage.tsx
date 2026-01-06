@@ -7,6 +7,7 @@ import { CodeConductCard } from '../../components/CodeConductCard'
 import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function CodeConductPage() {
   const t = useTranslations('CodeConductPage')
@@ -14,13 +15,10 @@ export function CodeConductPage() {
   return (
     <main className='bg-white'>
       <Menu />
-      {/* <Banner
-        imagePath='/about-us/banner.png'
-        alt={t('investorRelations')}
-        caption={t('title')}
-        className='mb-[40px]'
-      /> */}
-      <SwiperVertical />
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-4.webp'
+        alt='investor-banner-4'
+      />
       <section className='pb-[176px] max-w-[896px] w-full mx-auto px-5'>
         {/*<Tabs activeMenu={InvestorRelationEnum.CodeConduct} />*/}
         <h2 className='mt-[103px] headline-2 text-center text-blue-400'>

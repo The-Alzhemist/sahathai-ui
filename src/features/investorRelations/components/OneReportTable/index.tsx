@@ -13,7 +13,7 @@ export function OneReportTable() {
     <div
       role='region'
       aria-label='One Report Table'
-      className='w-full overflow-x-auto  px-4 md:mx-auto pb-[350px]  z-10'
+      className='w-full overflow-x-auto  px-4 md:mx-auto pb-[200px]  z-10'
       style={{ WebkitOverflowScrolling: 'touch' }} // iOS momentum scroll
     >
       <div className='min-w-[720px] md:min-w-0 max-w-[860px] mx-auto shadow-6 rounded-[20px] bg-white p-5 md:p-6'>

@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import { WarrantPageProps } from '@/features/investorRelations/pages/WarrantPage/interface'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function WarrantPage({ data }: WarrantPageProps) {
   const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
@@ -33,8 +34,10 @@ export function WarrantPage({ data }: WarrantPageProps) {
     <main className='pb-[176px] bg-white'>
       <Menu />
 
-      <SwiperVertical />
-
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-11.webp'
+        alt='investor-banner-11'
+      />
       <section className='px-5 pb-5  pt-[100px] max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
           <div key={groupIndex} className=' rounded-md p-4'>

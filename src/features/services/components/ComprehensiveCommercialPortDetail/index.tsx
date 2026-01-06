@@ -21,7 +21,7 @@ export function ComprehensiveCommercialPortDetail({
             {title}
           </h1>
           <Link
-            className='px-[20px] py-[10px] rounded-full button-small text-lightGray border border-black-8'
+            className='px-[20px] py-[10px] rounded-full button-small text-lightGray border border-black-8 hover:text-blue-300 hover:border-blue-300 transition-all'
             href='/services'
           >
             {common('back')}

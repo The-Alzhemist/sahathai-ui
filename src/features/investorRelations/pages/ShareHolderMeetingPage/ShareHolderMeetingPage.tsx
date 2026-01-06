@@ -7,6 +7,7 @@ import { Menu } from '@/components/Menu'
 import { Banner } from '@/components/Banner'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function ShareHolderMeetingPage({
   shareHolderMeetingData,
@@ -34,12 +35,10 @@ export function ShareHolderMeetingPage({
   return (
     <main className='pb-[176px] bg-white'>
       <Menu />
-      {/* <Banner
-        imagePath='/about-us/banner.png'
-        alt={tMenu('investorRelations.shareHolderMeeting')}
-        caption={tMenu('investorRelations.shareHolderMeeting')}
-      /> */}
-      <SwiperVertical />
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-5.webp'
+        alt='investor-banner-5'
+      />
 
       <section className='px-5 pb-5  pt-[100px] max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
