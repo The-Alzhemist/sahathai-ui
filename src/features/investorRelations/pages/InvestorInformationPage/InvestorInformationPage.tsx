@@ -11,6 +11,7 @@ import { CompanyFactSheet } from '@/features/investorRelations/components/Compan
 import { Background } from '@/components/Background'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export async function InvestorInformationPage() {
   const t = await getTranslations('Menu')
@@ -18,7 +19,11 @@ export async function InvestorInformationPage() {
     <main className='bg-[#F5f5f5]'>
       <Menu />
 
-      <SwiperVertical />
+      {/* <SwiperVertical /> */}
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-1.webp'
+        alt='investor-banner-1'
+      />
       <section className=' w-full  mx-auto   '>
         <section className='w-full space-y-[112px] '>
           <StockMarketInformation />

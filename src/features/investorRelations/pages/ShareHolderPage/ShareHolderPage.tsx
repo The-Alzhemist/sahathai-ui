@@ -14,6 +14,7 @@ import { InvestorInformationTable } from '@/features/investorRelations/pages/Sha
 import Image from 'next/image'
 import DividendPolicy from '@/features/investorRelations/pages/ShareHolderPage/components/DividendPolicy/DividendPolicy'
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function ShareHolderPage() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
@@ -23,7 +24,10 @@ export function ShareHolderPage() {
     <main className=' pb-[176px] bg-white '>
       <Menu />
 
-      <SwiperVertical />
+      <BannerImage
+        imageSrc='/investor-relations/new/investor-banner-3.webp'
+        alt='investor-banner-3'
+      />
       <section className='relative w-full mx-auto'>
         <section>
           <Animation>
