@@ -51,7 +51,7 @@ export function Subcommittee() {
 
       <Animation
         key={activeTab}
-        className='whitespace-pre-wrap body-1 text-black-6 mt-[50px] rounded-[15px] p-5  md:py-[44px] md:px-[65px] shadow-8 bg-white'
+        className='whitespace-pre-wrap body-1 text-black-6 mt-[50px] rounded-[15px] p-5  md:py-[44px] md:px-[65px] shadow-8 bg-white min-h-[490px]'
       >
         <SubcommitteeSection activeTab={activeTab} />
       </Animation>
