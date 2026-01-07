@@ -8,8 +8,8 @@ export default function HazardousGoods() {
     <section>
       <Image
         className='mb-5'
-        src='/infrastructure-containers/dangerProduct.jpg'
-        alt=''
+        src='/infrastructure-containers/new/instrution-regarding-5.webp'
+        alt='instrution-regarding-5'
         width={666}
         height={328}
       />
