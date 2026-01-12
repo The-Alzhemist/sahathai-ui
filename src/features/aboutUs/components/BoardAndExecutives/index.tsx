@@ -30,7 +30,7 @@ export function BoardAndExecutives() {
       <p className='max-w-[1040px] w-full mx-auto mt-[24px] body-1 text-black-6 px-5'>
         {t('content')}
       </p>
-      <section className='mt-[110px] bg-[url("/about-us/board-executive.jpeg")] bg-center bg-cover'>
+      <section className='mt-[110px] bg-[url("/about-us/board-executive.jpeg")] bg-center bg-cover bg-yellow-50'>
         <section className='py-[94px] bg-modellBgDark/50'>
           <Board onClick={clickPeople} />
           <Executives onClick={clickPeople} />
