@@ -21,6 +21,7 @@ export function SustainabilityManagementPage() {
       <Menu />
 
       <BannerImage
+        mobileImageSrc='/investor-relations/new/investor-banner-mobile-2.webp'
         imageSrc='/investor-relations/new/investor-banner-2.webp'
         alt='investor-banner-2'
       />
@@ -37,7 +38,7 @@ export function SustainabilityManagementPage() {
 
         {/* content */}
         <div className='relative z-10 max-w-[950px] mx-auto px-5'>
-          <h2 className='flex items-center justify-center md:justify-start gap-2 mt-[70px] headline-2 text-left text-blue-400'>
+          <h2 className='flex items-center justify-center md:justify-start gap-2 mt-[30px] md:mt-[70px] headline-2 text-left text-blue-400'>
             <DoubleQuoteIcon className='text-red-400' /> {t('title')}
           </h2>
         </div>

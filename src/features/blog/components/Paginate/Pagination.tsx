@@ -1,5 +1,3 @@
-
-
 import { Link } from '@/libs/intl/navigation'
 import { buildPagination } from '@/features/blog/components/Paginate/buildPagination'
 
@@ -9,7 +7,7 @@ type Props = {
   search?: string
 }
 
-export function Pagination({ page, totalPages, search }: Props) {
+export function Pagination({ page = 1, totalPages, search }: Props) {
   if (totalPages <= 1) return null
 
   const hrefFor = (p: number) => {
@@ -41,21 +39,28 @@ export function Pagination({ page, totalPages, search }: Props) {
     </Link>
   )
 
-  const items = buildPagination({ page, totalPages, siblings: 1, boundaries: 1 })
+  const items = buildPagination({
+    page,
+    totalPages,
+    siblings: 1,
+    boundaries: 1,
+  })
 
   return (
-    <nav className="flex items-center gap-2 mt-6" aria-label="Pagination">
+    <nav className='flex items-center gap-2 mt-6' aria-label='Pagination'>
       <Btn
         href={page > 1 ? hrefFor(page - 1) : hrefFor(1)}
         disabled={page === 1}
-        ariaLabel="Previous page"
+        ariaLabel='Previous page'
       >
         Prev
       </Btn>
 
       {items.map((it, i) =>
         it === '…' ? (
-          <span key={`dots-${i}`} className="px-2 text-gray-500 select-none">…</span>
+          <span key={`dots-${i}`} className='px-2 text-gray-500 select-none'>
+            …
+          </span>
         ) : (
           <Btn
             key={it}
@@ -71,7 +76,7 @@ export function Pagination({ page, totalPages, search }: Props) {
       <Btn
         href={page < totalPages ? hrefFor(page + 1) : undefined}
         disabled={page === totalPages}
-        ariaLabel="Next page"
+        ariaLabel='Next page'
       >
         Next
       </Btn>
