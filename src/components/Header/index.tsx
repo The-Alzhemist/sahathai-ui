@@ -51,7 +51,6 @@ export function Header() {
           'translate-y-[-150%] pointer-events-none'
       )}
     >
-
       <div
         className={twMerge(
           `px-[10px] py-[8px] flex items-center container text-sm h-[50px] !max-w-full ${
@@ -70,19 +69,19 @@ export function Header() {
         )}
 
         <section className='flex gap-x-5'>
-          <ul className="flex justify-end items-center w-full medium gap-[42px] md:mr-10">
-            <li className="hidden md:block ">
-              <Link href="/blog" className="flex items-center">
+          <ul className='flex justify-end items-center w-full medium gap-[42px] md:mr-10'>
+            <li className='hidden md:block '>
+              <Link href='/blog' className='flex items-center'>
                 {t('blog')}
               </Link>
             </li>
-            <li className="hidden md:block ">
-              <Link href="/contact-us" className="flex items-center">
+            <li className='hidden md:block '>
+              <Link href='/contact-us' className='flex items-center'>
                 {t('contactUs')}
               </Link>
             </li>
-            <li className="hidden md:block ">
-              <Link className="flex items-center" href="/join-us">
+            <li className='hidden md:block '>
+              <Link className='flex items-center' href='/join-us'>
                 {t('joinUs')}
               </Link>
             </li>
@@ -99,17 +98,27 @@ export function Header() {
               `flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`
             )}
           >
-
-            <Link href="https://www.youtube.com/channel/UCp2XYZiyDSN6Xt5DSQv_foA/videos?view=0&sort=dd&shelf_id=0" target="_blank" rel="noopener noreferrer">
+            <Link
+              href='https://www.youtube.com/channel/UCp2XYZiyDSN6Xt5DSQv_foA/videos?view=0&sort=dd&shelf_id=0'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <YoutubeIcon width='24' height='24' />
             </Link>
-            <Link href="https://www.facebook.com/sahathaiterminal/?locale=th_TH" target="_blank" rel="noopener noreferrer">
+            <Link
+              href='https://www.facebook.com/sahathaiterminal/?locale=th_TH'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FacebookIcon width='24' height='24' />
             </Link>
-            <Link href="https://www.instagram.com/sahathaiterminal/?hl=en" target="_blank" rel="noopener noreferrer">
+            <Link
+              href='https://www.instagram.com/sahathaiterminal/?hl=en'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <InstagramIcon width='24' height='24' />
             </Link>
-
           </div>
 
           <button
@@ -129,8 +138,8 @@ export function Header() {
 
       {/* header secondary */}
       {isHomePage && (
-        <section className='px-5 py-[8px] flex justify-between items-center h-[60px]'>
-          <Link href='/' className='shrink-0'>
+        <section className=' relative px-5 py-[8px] flex justify-between items-center h-[60px]'>
+          <Link href='/' className='shrink-0 absolute'>
             <Image
               src='/logo.png'
               className='p-2'
@@ -141,10 +150,12 @@ export function Header() {
             />
           </Link>
 
-          <div className='flex gap-x-2'>
-            <span className='text-blue-300 font-light text-[16px]'>{t('sahathai')}</span>
+          <div className='w-full flex justify-center gap-x-2'>
+            <span className='text-blue-300 font-light text-[16px]'>
+              {t('sahathai')}
+            </span>
             <span className='text-red-300 font-light text-[16px]'>
-            {t('terminal')}
+              {t('terminal')}
             </span>
           </div>
 

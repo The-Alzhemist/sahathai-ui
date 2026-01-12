@@ -53,7 +53,6 @@ const StockMarketInformation = async () => {
         className="
         relative isolate space-y-[32px]
         after:content-[''] after:absolute after:inset-0
-        after:bg-[url('/investor-relations/new/bg-blue-gray.webp')] after:bg-center after:bg-no-repeat after:bg-cover
         after:opacity-100 after:-z-10 py-20"
       >
         <h2

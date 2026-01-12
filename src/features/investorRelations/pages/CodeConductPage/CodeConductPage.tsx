@@ -16,12 +16,13 @@ export function CodeConductPage() {
     <main className='bg-white'>
       <Menu />
       <BannerImage
+        mobileImageSrc='/investor-relations/new/investor-banner-mobile-4.webp'
         imageSrc='/investor-relations/new/investor-banner-4.webp'
         alt='investor-banner-4'
       />
       <section className='pb-[176px] max-w-[896px] w-full mx-auto px-5'>
         {/*<Tabs activeMenu={InvestorRelationEnum.CodeConduct} />*/}
-        <h2 className='mt-[103px] headline-2 text-center text-blue-400'>
+        <h2 className='mt-[50px] md:mt-[103px] headline-2 text-center text-blue-400'>
           {t('title')}
         </h2>
 
