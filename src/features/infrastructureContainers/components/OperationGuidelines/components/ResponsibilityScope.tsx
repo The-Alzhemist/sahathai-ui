@@ -8,7 +8,7 @@ export default function ResponsibilityScope() {
     <section>
       <Image
         className='mb-5 rounded-md'
-        src='/infrastructure-containers/new/instrution-regarding-4.webp'
+        src='/infrastructure-containers/new/instrution-regarding-1-4.webp'
         alt='instrution-regarding-4'
         width={666}
         height={328}

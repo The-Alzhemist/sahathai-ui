@@ -36,11 +36,12 @@ export function ShareHolderMeetingPage({
     <main className='pb-[176px] bg-white'>
       <Menu />
       <BannerImage
+        mobileImageSrc='/investor-relations/new/investor-banner-mobile-5.webp'
         imageSrc='/investor-relations/new/investor-banner-5.webp'
         alt='investor-banner-5'
       />
 
-      <section className='px-5 pb-5  pt-[100px] max-w-4xl mx-auto space-y-6'>
+      <section className='px-5 pb-5  pt-[50px] md:pt-[100px] max-w-4xl mx-auto space-y-6'>
         {group.map((groupItem: any, groupIndex: number) => (
           <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}

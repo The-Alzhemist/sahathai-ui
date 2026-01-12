@@ -25,6 +25,7 @@ export function ShareHolderPage() {
       <Menu />
 
       <BannerImage
+        mobileImageSrc='/investor-relations/new/investor-banner-mobile-3.webp'
         imageSrc='/investor-relations/new/investor-banner-3.webp'
         alt='investor-banner-3'
       />
