@@ -6,12 +6,13 @@ export function InputField({
   label,
   className,
   meta,
+  type,
   ...props
 }: InputFieldProps) {
   return (
     <div className={cn('space-y-[10px]', className)}>
       {label && <div className='subtitle-1 text-darkGray'>{label}</div>}
-      <Input {...props} />
+      <Input type={type} {...props} />
       {meta.touched && meta.error && (
         <div className='text-red-500'>{meta.error}</div>
       )}

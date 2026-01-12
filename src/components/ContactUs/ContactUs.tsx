@@ -72,6 +72,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 />
                 <InputField
                   name='phone'
+                  type='number'
                   label={t('phoneNumberField.label')}
                   placeholder={t('phoneNumberField.placeholder')}
                 />
