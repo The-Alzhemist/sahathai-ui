@@ -21,9 +21,9 @@ export default async function news({
   // translation
   const t = await getTranslations('NewsPage')
 
-  if (!searchParams.page) {
-    redirect(`/${params.locale}/news?page=1`)
-  }
+  // if (!searchParams.page) {
+  //   redirect(`/${params.locale}/news?page=1`)
+  // }
 
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
@@ -53,7 +53,10 @@ export default async function news({
     <main>
       <Menu />
 
-      <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6'>
+      <section
+        id='latestNews'
+        className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6'
+      >
         <h2 className='headline-2 text-blue-400 text-center mb-7'>
           {t('latestNews')}
         </h2>
@@ -62,7 +65,7 @@ export default async function news({
       </section>
 
       {/*All blog*/}
-      <section className='bg-white pt-[70px]'>
+      <section className='bg-white pt-[70px]' id='press-release'>
         <div className='max-w-[1100px] mx-auto p-6'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
             {t('pressRelease')}
