@@ -8,6 +8,7 @@ export function withInputField(Component: React.FC<InputFieldProps>) {
     className,
     placeholder,
     disabled = false,
+    type = 'text',
   }: InputFieldAcceptProps) {
     const [field, meta] = useField(name)
 
@@ -17,6 +18,7 @@ export function withInputField(Component: React.FC<InputFieldProps>) {
       className,
       disabled,
       meta,
+      type,
       ...field,
     }
 
