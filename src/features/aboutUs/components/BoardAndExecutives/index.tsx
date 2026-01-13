@@ -36,14 +36,16 @@ export function BoardAndExecutives() {
           <Executives onClick={clickPeople} />
         </section>
       </section>
-      <Subcommittee />
-      <div className='absolute -z-10 bottom-0 left-0 h-[860px] w-full'>
-        <Image
-          src='/about-us/new/about-us-container.webp'
-          alt='About us  container background'
-          fill
-          className='object-bottom'
-        />
+      <div className='relative  min-h-[1190px] md:min-h-[990px]'>
+        <Subcommittee />
+        <div className='absolute -z-10 top-0 left-0  w-full h-full'>
+          <Image
+            src='/about-us/new/about-us-container.webp'
+            alt='About us container background'
+            fill
+            className='object-cover object-bottom'
+          />
+        </div>
       </div>
 
       {people && <PeopleModal people={people} onClose={closeModal} />}
