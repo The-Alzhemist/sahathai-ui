@@ -36,9 +36,8 @@ export function Subcommittee() {
   const [activeTab, setActiveTab] = useState<string>(SubcommitteeEnum.Audit)
 
   return (
-    <section className='mt-[90px] pb-[85px] max-w-[1040px] min-h-[760px] w-full mx-auto px-5'>
+    <section className='relative pt-[90px] pb-[85px] max-w-[1040px] w-full mx-auto px-5'>
       <h2 className='headline-2 text-center text-navy'>{t('title')}</h2>
-
       <div className='flex'>
         <Tabs
           className='mt-[40px] w-fit mx-auto bg-white'
