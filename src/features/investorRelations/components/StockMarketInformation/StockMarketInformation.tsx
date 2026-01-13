@@ -100,7 +100,7 @@ const StockMarketInformation = async () => {
                   height={50}
                 />
                 <div className='flex flex-col'>
-                  <span>ราคาต่ำสุด</span>
+                  <span>{t('minPrice')}</span>
                   <span className='text-xs text-gray-500'>
                     ({t('updateDate')}: {lastPriceData.date})
                   </span>
@@ -120,7 +120,7 @@ const StockMarketInformation = async () => {
                   width={50}
                   height={50}
                 />{' '}
-                เปลี่ยนแปลง
+                <span>{t('change')}</span>
               </td>
               <td className='px-6 py-4 text-darkGray text-right'>
                 {`${changedPrice.toFixed(2)}`}
