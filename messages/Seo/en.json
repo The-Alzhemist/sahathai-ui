@@ -2,43 +2,75 @@
   "MetaData": {
     "Home": {
       "Title": "Sahathai | Home",
-      "Description": "Discover world-class services at Sahathai Terminal. Comprehensive, convenient, and tailored to meet all your needs."
+      "Description": "Discover world-class services at Sahathai Terminal. Comprehensive, convenient, and complete solutions for all your needs."
     },
     "AboutUs": {
       "Title": "Sahathai | About Us",
-      "Description": "Sahathai Terminal provides reliable logistics and transportation services with expert teams and modern facilities."
+      "Description": "Sahathai Terminal provides reliable logistics and cargo handling services with a team of experts and modern facilities."
     },
     "Service": {
       "Title": "Sahathai | Services",
-      "Description": "Offering efficient logistics services, secure cargo management, and storage solutions tailored to your needs."
+      "Description": "Offering efficient logistics services, secure cargo handling, and storage solutions tailored to your needs."
     },
     "Infrastructure": {
       "Title": "Sahathai | Infrastructure",
-      "Description": "Sahathai Terminal delivers premium facilities and high-quality services to meet all customer requirements."
+      "Description": "Sahathai Terminal delivers premium facilities and quality services to fully meet all customer requirements."
     },
     "News": {
       "Title": "Sahathai | News",
-      "Description": "Stay updated with the latest news and key information from Sahathai Terminal so you never miss out."
+      "Description": "Stay updated with the latest movements and important information from Sahathai Terminal so you never miss what matters."
     },
     "Blog": {
-      "Title": "สหไทย | ข่าวสารของเรา",
+      "Title": "Sahathai | Blog",
       "Description": "อัพเดตทุกความเคลื่อนไหวและข้อมูลสำคัญจากสหไทย เทอร์มินอล เพื่อให้คุณไม่พลาดบทความที่สำคัญของเรา"
     },
-    "JoinUs": {
+    "johnUs": {
       "Title": "Sahathai | Careers",
       "Description": "Explore exciting career opportunities at Sahathai Terminal and be part of our success and growth."
     },
     "ContactUs": {
       "Title": "Sahathai | Contact Us",
-      "Description": "Reach out to Sahathai Terminal for inquiries, information, or services. We’re happy to assist you."
+      "Description": "Get in touch with Sahathai Terminal for inquiries, information, or services. We are here to assist you."
     },
     "PrivacyPolicy": {
       "Title": "Sahathai | Privacy Policy",
-      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
+      "Description": "Learn how we protect your data and ensure transparency in our privacy practices."
     },
-    "JohnUs": {
-      "Title": "Sahathai | John us",
-      "Description": ""
+    "shareHolder": {
+      "Title": "Sahathai | Shareholders",
+      "Description": "Information on the list of shareholders and the company’s shareholding structure."
+    },
+    "shareHolderMeeting": {
+      "Title": "Sahathai | Shareholders Meeting",
+      "Description": "Details of the annual shareholders meeting, including related documents."
+    },
+    "FinancialInformation": {
+      "Title": "Sahathai | Financial Information",
+      "Description": "Annual and quarterly financial statements, including other key financial information."
+    },
+    "PerformanceReport": {
+      "Title": "Sahathai | Performance Reports",
+      "Description": "Summaries of the company’s performance across different periods."
+    },
+    "DocumentAnnouncement": {
+      "Title": "Sahathai | Announcements & Publications",
+      "Description": "Corporate publications, news, and important announcements from the company."
+    },
+    "GoodCorporate": {
+      "Title": "Sahathai | Corporate Governance",
+      "Description": "Principles and policies on good corporate governance within the company."
+    },
+    "SustainableDevelopment": {
+      "Title": "Sahathai | Sustainability",
+      "Description": "Plans and initiatives on sustainability and environmental responsibility."
+    },
+    "Activity": {
+      "Title": "Sahathai | Activities",
+      "Description": "Overview of various corporate activities organized or presented by the company."
+    },
+    "Warrant": {
+      "Title": "Sahathai | Warrants",
+      "Description": "Information on warrants and rights to purchase shares."
     }
   }
 }

@@ -1,4 +1,3 @@
-
 export interface AccordionTabsProps {
   groupIndex: number
   tabIndex: number
@@ -7,18 +6,21 @@ export interface AccordionTabsProps {
   toggleTab: (groupIndex: number, tabIndex: number) => void
 }
 
-
- interface AccordionTabItem {
+interface AccordionTabItem {
   heading?: string
   row?: AccordionRowItem[]
 }
 
-
- interface AccordionRowItem {
+interface AccordionRowItem {
   heading?: string
   youtubeUrl?: string
+  englishFile?: {
+    filename?: string
+  }
+  chineseFile?: {
+    filename?: string
+  }
   file?: {
     filename?: string
   }
 }
-
