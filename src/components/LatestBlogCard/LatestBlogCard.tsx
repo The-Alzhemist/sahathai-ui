@@ -16,14 +16,18 @@ export async function LatestBlogCard({
 
   if (!blog) {
     return (
-      <div className='flex flex-col md:min-w-[600px] md:flex-row  max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1'>
-        <img
-          src='https://placehold.co/600x400'
-          alt='Placeholder image'
-          className='w-full'
-        />
-        <div className='p-5 w-full'>
-          <h2 className='headline-4 text-gray-500'>No latest news available</h2>
+      <div className='flex max-w-[862px] flex-col overflow-hidden rounded-[10px] bg-white shadow-1 md:flex-row'>
+        <div className='relative w-full aspect-[16/9] bg-gray-100'>
+          <Image
+            src='https://placehold.co/600x400'
+            alt='Placeholder image'
+            fill
+            className='object-cover'
+          />
+        </div>
+
+        <div className='p-5'>
+          <h2 className='headline-4 text-gray-400'>No latest news available</h2>
         </div>
       </div>
     )
@@ -34,36 +38,44 @@ export async function LatestBlogCard({
   return (
     <Link
       href={`/${page}/${blog.slug}`}
-      className='group block hover:scale-105 transition-all'
+      className='group block transition-transform duration-300 hover:scale-[1.02]'
     >
       <section
         className={cn(
-          'flex flex-col md:flex-row max-w-[862px] bg-white rounded-[10px] overflow-hidden shadow-1'
+          'flex max-w-[862px] flex-col overflow-hidden rounded-[10px] bg-white shadow-1 md:flex-row'
         )}
       >
         <div className='w-full md:w-[48%] md:min-w-[400px]'>
-          <Image
-            src={content.newsImageCover.filename}
-            alt={content.newsTitle || 'News image'}
-            width={600}
-            height={500}
-            className='w-full h-full'
-          />
+          <div className='relative w-full aspect-[16/9] md:aspect-[4/3] overflow-hidden'>
+            <Image
+              src={
+                content.newsImageCover?.filename ||
+                'https://placehold.co/600x400'
+              }
+              alt={content.newsTitle || 'News image'}
+              fill
+              priority
+              className='object-cover transition-transform duration-300 group-hover:scale-105'
+              sizes='(min-width: 768px) 400px, 100vw'
+            />
+          </div>
         </div>
 
         <div className='w-full md:w-[52%] md:min-w-[400px] p-5'>
-          <h2 className='mt-[23px] headline-4 line-clamp-2 text-black'>
+          <h2 className='mt-[23px] line-clamp-2 text-black headline-4'>
             {content.newsTitle}
           </h2>
-          <p className='mt-[10px] body-2 line-clamp-2 text-black-6'>
+
+          <p className='mt-[10px] line-clamp-2 text-black-6 body-2'>
             {extractTextFieldsStoryblok(content.newsDescription)}
           </p>
+
           <div className='mt-[10px] caption text-black-3'>
             {content.newsDate}
           </div>
 
-          <div className='mt-[23px] button-small text-navy w-fit flex gap-[10px] items-center'>
-            <span className='p-[10px] bg-navy rounded-full text-white inline-flex'>
+          <div className='mt-[23px] flex w-fit items-center gap-[10px] text-navy button-small'>
+            <span className='inline-flex rounded-full bg-navy p-[10px] text-white'>
               <ArrowRightIcon width='20' height='20' />
             </span>
             {common('readMore')}
