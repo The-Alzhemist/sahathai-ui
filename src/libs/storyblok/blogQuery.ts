@@ -3,16 +3,16 @@ import { buildUrl } from './client'
 import { REVALIDATE_TIME } from '@/config/environtment'
 
 export async function fetchAllBlog({
-                                     page = 1,
-                                     perPage = 10,
-                                     lang = 'th',
-                                     version = 'published',
-                                     search,
-                                     startsWith = 'blog/',
-                                     revalidate = REVALIDATE_TIME,
-                                     sortBy = 'created_at:desc',
-                                     tag = 'story:blog-list'
-                                   }: {
+  page = 1,
+  perPage = 10,
+  lang = 'th',
+  version = 'published',
+  search,
+  startsWith = 'blog/',
+  revalidate = REVALIDATE_TIME,
+  sortBy = 'created_at:desc',
+  tag = 'story:blog-list',
+}: {
   page?: number
   perPage?: number
   lang?: string
@@ -36,7 +36,7 @@ export async function fetchAllBlog({
 
   const res = await fetch(url, {
     next: {
-      revalidate:revalidate,
+      revalidate: revalidate,
       tags: [tag],
     },
   })
@@ -47,12 +47,12 @@ export async function fetchAllBlog({
 }
 
 export async function fetchLastBlog({
-                                      lang = 'th',
-                                      startsWith = 'blog/',
-                                      revalidate = REVALIDATE_TIME, // 1 วัน
-                                      sortBy = 'created_at:desc',
-                                      tag = 'story:blog-list'
-                                    }: {
+  lang = 'th',
+  startsWith = 'blog/',
+  revalidate = REVALIDATE_TIME, // 1 วัน
+  sortBy = 'created_at:desc',
+  tag = 'story:blog-list',
+}: {
   lang?: string
   startsWith?: string
   revalidate?: number
@@ -83,8 +83,11 @@ export async function fetchLastBlog({
   return data?.stories?.[0] ?? null
 }
 
-
-export async function fetchNewsBySlug(slug: string, lang: string, revalidate = REVALIDATE_TIME) {
+export async function fetchNewsBySlug(
+  slug: string,
+  lang: string,
+  revalidate = REVALIDATE_TIME
+) {
   const url =
     `https://api.storyblok.com/v2/cdn/stories/news/${slug}?` +
     new URLSearchParams({
@@ -103,22 +106,25 @@ export async function fetchNewsBySlug(slug: string, lang: string, revalidate = R
   return res.json()
 }
 
-export async function fetchBlogBySlug(slug: string, lang: string, revalidate = REVALIDATE_TIME) {
+export async function fetchBlogBySlug(
+  slug: string,
+  lang: string,
+  revalidate = REVALIDATE_TIME
+) {
   const url =
     `https://api.storyblok.com/v2/cdn/stories/blog/${slug}?` +
     new URLSearchParams({
-      token: process.env.STORYBLOK_TOKEN  as string,
+      token: process.env.STORYBLOK_TOKEN as string,
       version: 'published',
       language: lang,
     })
 
   const res = await fetch(url, {
     next: {
-      revalidate: revalidate,          // cache 1 วัน
+      revalidate: revalidate,
       tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
     },
   })
   if (!res.ok) throw new Error('Failed to fetch story')
   return res.json()
 }
-
