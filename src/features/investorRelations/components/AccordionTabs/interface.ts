@@ -23,4 +23,5 @@ interface AccordionRowItem {
   file?: {
     filename?: string
   }
+  externalLink?: string
 }

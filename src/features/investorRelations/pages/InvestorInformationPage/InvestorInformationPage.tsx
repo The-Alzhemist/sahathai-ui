@@ -21,7 +21,7 @@ export async function InvestorInformationPage() {
 
       {/* <SwiperVertical /> */}
       <BannerImage
-        mobileImageSrc='/investor-relations/new/invesy'
+        mobileImageSrc='/investor-relations/new/investor-banner-mobile-1.webp'
         imageSrc='/investor-relations/new/investor-banner-1.webp'
         alt='investor-banner-1'
       />
