@@ -52,7 +52,7 @@ const StockMarketInformation = async () => {
       <Animation
         className="
         relative isolate space-y-[32px]
-        after:content-[''] after:absolute after:inset-0
+        after:content-['']  after:bg-[url('/investor-relations/new/bg-blue-gray.webp')]  after:absolute after:inset-0
         after:opacity-100 after:-z-10 py-20"
       >
         <h2
