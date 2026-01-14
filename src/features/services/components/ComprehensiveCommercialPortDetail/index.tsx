@@ -15,9 +15,9 @@ export function ComprehensiveCommercialPortDetail({
   return (
     <main>
       <Menu />
-      <section className='max-w-[1040px] w-full mx-auto pt-[130px] pb-[74px]'>
-        <div className='flex gap-[16px] justify-between items-center'>
-          <h1 className='text-[32px] font-[500] text-navy flex items-center'>
+      <section className='max-w-[1040px] w-full mx-auto pt-[130px] pb-[74px] px-3'>
+        <div className='flex flex-col md:flex-row  gap-[16px] justify-between items-center '>
+          <h1 className='text-xl md:text-[32px] font-[500] text-navy flex items-center'>
             {title}
           </h1>
           <Link
