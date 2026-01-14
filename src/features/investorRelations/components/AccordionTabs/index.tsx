@@ -2,7 +2,8 @@ import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
 import { DownloadButton } from '@/components/DownloadButton'
 import { AccordionTabsProps } from './interface'
 import { useLocale } from 'next-intl'
-
+import Link from 'next/link'
+import Image from 'next/image'
 export const AccordionTabs = ({
   groupIndex,
   tabIndex,
@@ -97,6 +98,22 @@ export const AccordionTabs = ({
                     href={rowItem.englishFile.filename}
                   />
                 </div>
+              )}
+
+              {/* Link */}
+              {rowItem.externalLink && (
+                <Link
+                  href={rowItem.externalLink}
+                  target='_blank'
+                  className='mt-2 mx-3'
+                >
+                  <Image
+                    src='/investor-relations/new/link-icon-3x.png'
+                    width={20}
+                    height={20}
+                    alt='link-icon'
+                  />
+                </Link>
               )}
             </div>
           ))}
