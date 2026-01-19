@@ -56,7 +56,7 @@ export function OperationGuidelines() {
       <Animation className='relative  max-w-[930px] my-[90px] w-full mx-auto px-5'>
         <h1 className='headline-2 text-center text-navy'>{t('title')}</h1>
         <section className='w-full flex flex-col md:flex-row gap-[24px]  p-[16px] mt-[20px] shadow-2 rounded-[20px] bg-[#eeeeee]'>
-          <Tabs className='flex overflow-x-scroll md:block w-full md:w-[200px] shrink-0'>
+          <Tabs className='flex overflow-auto md:block w-full md:w-[200px] shrink-0'>
             {tabs.map(({ key, title }) => (
               <Tab
                 key={key}
@@ -68,7 +68,7 @@ export function OperationGuidelines() {
             ))}
           </Tabs>
 
-          <div className=' p-5 bg-white rounded-[10px] h-[800px] overflow-y-scroll'>
+          <div className=' p-5 bg-white rounded-[10px] h-[800px] overflow-y-auto'>
             {activeTab === 'docking' && <DockingInfo />}
             {activeTab === 'operatingHours' && <OperatingHours />}
             {activeTab === 'cfsLcl' && <CfsGoods />}
