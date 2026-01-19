@@ -26,7 +26,6 @@ export function Menu() {
         {menus.map(menu => {
           const isActive = menu.pathname === pathname
           if (menu.children && menu.children.length) {
-            console.log('menu.children', menu.children)
             return (
               <DropdownMenu
                 key={menu.title}
