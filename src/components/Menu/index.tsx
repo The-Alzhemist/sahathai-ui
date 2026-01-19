@@ -40,7 +40,7 @@ export function Menu() {
                         scroll={subMenu.isScroll}
                         key={subMenu.title}
                         className={`!text-xs headline-6 !font-[300] block px-4 w-full py-3 hover:bg-blue-300 whitespace-nowrap hover:text-white rounded-sm transition-all`}
-                        target={menu.isExternalLink ? '_blank' : undefined}
+                        target={subMenu.isExternalLink ? '_blank' : undefined}
                         rel={
                           subMenu.isExternalLink
                             ? 'noopener noreferrer'

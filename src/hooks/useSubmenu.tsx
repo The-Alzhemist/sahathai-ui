@@ -157,12 +157,74 @@ export function useSubmenu() {
           },
         ],
       },
+
       {
-        title: t('eService'),
-        pathname: 'https://sahathaiterminal.com/th/tracking/',
-        isExternalLink: true,
+        title: t('eService.title'),
+        pathname: '/e-service',
+        isExternalLink: false,
         isScroll: true,
-        icon: <DeviceMobileIcon width='20' height='20' />,
+        icon: <ChartIcon width='20' height='20' />,
+        children: [
+          {
+            title: t('eService.TrackByContainer'),
+            isExternalLink: true,
+            pathname:
+              'https://stt.sahathaiterminal.com/containerinquery/Default.aspx?type=Container%20ID',
+            isScroll: true,
+          },
+          {
+            title: t('eService.TrackByBookingNumber'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname:
+              'https://stt.sahathaiterminal.com/containerinquery/Default.aspx?type=Booking%20No.',
+          },
+          {
+            title: t('eService.TrackByBLNumber'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname:
+              'https://stt.sahathaiterminal.com/containerinquery/Default.aspx?type=B/L%20No.',
+          },
+          {
+            title: t('eService.ContainerDepotBooking'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname: 'https://www.bangkokdepot.com/bookingcheck/',
+          },
+          {
+            title: t('eService.FreeZone'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname: 'https://stt.sahathaiterminal.com/FreeZone/Login.aspx',
+          },
+          {
+            title: t('eService.BTSTracking'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname: 'https://stt.sahathaiterminal.com/BtsTracking/login.aspx',
+          },
+          {
+            title: t('eService.DGChecking'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname:
+              'https://stt.sahathaiterminal.com/containerinquery/Default.aspx?type=DG',
+          },
+          {
+            title: t('eService.BCDSBookingQueue'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname: 'http://147.50.67.228/',
+          },
+          {
+            title: t('eService.EReceipt'),
+            isExternalLink: true,
+            isScroll: true,
+            pathname:
+              'https://stt.sahathaiterminal.com/EPayment/login2?redirectPage=~/booking.aspx',
+          },
+        ],
       },
       {
         title: t('investorRelations.title'),
