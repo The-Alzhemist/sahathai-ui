@@ -19,12 +19,8 @@ export function Menu() {
         <Menu.Item className='min-w-[140px]' href='/news'>
           {t('news.title')}
         </Menu.Item>
-        <Menu.Item
-          className='min-w-[140px]'
-          href='https://sahathaiterminal.com/th/tracking/'
-          isExternalLink={true}
-        >
-          {t('eService')}
+        <Menu.Item className='min-w-[140px]' href='/e-service'>
+          {t('eService.title')}
         </Menu.Item>
         <Menu.Item className='min-w-[140px]' href='/investor-information'>
           {t('investorRelations.title')}
