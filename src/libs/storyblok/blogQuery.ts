@@ -99,7 +99,7 @@ export async function fetchNewsBySlug(
   const res = await fetch(url, {
     next: {
       revalidate: revalidate,
-      tags: [`story:${slug}`, 'story:news-list'], // <- for invalidate cache
+      tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
     },
   })
   if (!res.ok) throw new Error('Failed to fetch story')
