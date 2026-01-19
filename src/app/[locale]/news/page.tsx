@@ -55,7 +55,7 @@ export default async function news({
 
       <section
         id='latestNews'
-        className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6'
+        className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[400px]'
       >
         <h2 className='headline-2 text-blue-400 text-center mb-7'>
           {t('latestNews')}
@@ -65,7 +65,7 @@ export default async function news({
       </section>
 
       {/*All blog*/}
-      <section className='bg-white pt-[70px]' id='press-release'>
+      <section className='bg-white pt-[70px] min-h-[400px]' id='press-release'>
         <div className='max-w-[1100px] mx-auto p-6'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
             {t('pressRelease')}

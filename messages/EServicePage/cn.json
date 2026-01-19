@@ -1,17 +1,17 @@
 {
   "EServicePage": {
-    "Title": "Tracking",
-    "Description": "We can help you locate and track your containers at our terminal. Just select whether you’d like to track via container number, booking number, B/L number, or whether you’d like to book space at our container depot.",
+    "Title": "货物追踪",
+    "Description": "我们可协助您在码头查询并追踪集装箱。只需选择通过集装箱号码、订舱号码、B/L 号码进行追踪，或在我们的集装箱堆场进行订舱。",
     "TrackingService": {
-      "TrackByContainer": "Track by Container",
-      "TrackByBookingNumber": "TrackByBookingNumber",
-      "TrackByBLNumber": "Track by B/L Number",
-      "ContainerDepotBooking": "Container Depot Booking",
-      "FreeZone": "Free Zone",
-      "BTSTracking": "BTS Tracking",
-      "DGChecking": "DG Checking",
-      "BCDSBookingQueue": "BCDS Booking Queue",
-      "EReceipt": "E-Receipt"
+      "TrackByContainer": "按集装箱号码追踪",
+      "TrackByBookingNumber": "按订舱号码追踪",
+      "TrackByBLNumber": "按 B/L 号码追踪",
+      "ContainerDepotBooking": "集装箱堆场订舱",
+      "FreeZone": "自由区",
+      "BTSTracking": "BTS 追踪",
+      "DGChecking": "危险品（DG）检查",
+      "BCDSBookingQueue": "BCDS 订舱排队",
+      "EReceipt": "电子收据（E-Receipt）"
     }
   }
 }

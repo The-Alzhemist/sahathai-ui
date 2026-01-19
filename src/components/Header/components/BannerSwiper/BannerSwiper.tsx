@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay, Pagination } from 'swiper/modules'
 import type { SwiperProps } from 'swiper/react'
 import { useEffect, useState } from 'react'
+import { Animation } from '@/components/Animation'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -62,27 +63,29 @@ export default function SwiperVertical() {
   }
 
   return (
-    <section className='relative w-full h-[230px] md:h-[630px] z-0 -mt-[50px] top-[50px] md:top-0'>
-      <Swiper {...swiperConfig}>
-        {activeSlides.map((slide, index) => (
-          <SwiperSlide key={`banner-slide-${index}`}>
-            <div className='relative w-full h-[230px] md:h-[630px]'>
-              {slide.type === 'image' && (
-                <Image
-                  src={slide.src}
-                  alt={`Slide ${index + 1}`}
-                  fill
-                  sizes='(max-width: 768px) 100vw, 100vw'
-                  className='object-cover md:rounded-b-[60px]'
-                  priority={index === 0}
-                />
-              )}
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Animation>
+      <section className='relative w-full h-[230px] md:h-[630px] z-0 -mt-[50px] top-[50px] md:top-0'>
+        <Swiper {...swiperConfig}>
+          {activeSlides.map((slide, index) => (
+            <SwiperSlide key={`banner-slide-${index}`}>
+              <div className='relative w-full h-[230px] md:h-[630px]'>
+                {slide.type === 'image' && (
+                  <Image
+                    src={slide.src}
+                    alt={`Slide ${index + 1}`}
+                    fill
+                    sizes='(max-width: 768px) 100vw, 100vw'
+                    className='object-cover md:rounded-b-[60px]'
+                    priority={index === 0}
+                  />
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-      <div className='custom-pagination absolute right-2 top-1/2 -translate-y-1/2 flex flex-col z-50' />
-    </section>
+        <div className='custom-pagination absolute right-2 top-1/2 -translate-y-1/2 flex flex-col z-50' />
+      </section>
+    </Animation>
   )
 }
