@@ -62,13 +62,13 @@ export function About() {
             <AboutCard
               title={t('convenientLocation.title')}
               content={t('convenientLocation.content')}
-              imageUrl='/home/new/sustain-4-2x.webp'
+              imageUrl='/home/new/sustain-4-2x-new.webp'
               icon={<ContainerIcon width={'30'} height={'30'} />}
             />
             <AboutCard
               title={t('coversAllNeeds.title')}
               content={t('coversAllNeeds.content')}
-              imageUrl='/home/new/sustain-5-2x.webp'
+              imageUrl='/home/new/sustain-5-2x-new.webp'
               icon={<WorldIcon width={'34'} height={'34'} />}
             />
           </div>

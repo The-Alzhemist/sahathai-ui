@@ -85,7 +85,6 @@ export const DropdownMenuComponent = React.forwardRef<
         {...getReferenceProps(
           parent.getItemProps({
             ...props,
-
             onFocus(event: React.FocusEvent<HTMLButtonElement>) {
               props.onFocus?.(event)
               setHasFocusInside(false)

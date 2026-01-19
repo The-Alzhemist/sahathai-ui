@@ -11,7 +11,6 @@ import Image from 'next/image'
 import { Brochure } from '@/features/news/components/Brochure'
 import { redirect } from 'next/navigation'
 
-
 export default async function blog({
   params,
   searchParams,
@@ -43,7 +42,7 @@ export default async function blog({
 
   const latestBlog = await fetchLastBlog({
     lang: locale,
-    startsWith: 'blog/'
+    startsWith: 'blog/',
   })
 
   const totalPages = Math.ceil(total / perPage)
@@ -52,7 +51,7 @@ export default async function blog({
     <main>
       <Menu />
 
-      <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6'>
+      <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[400px]'>
         <h2 className='headline-2 text-blue-400 text-center mb-7'>
           {t('latestBlog')}
         </h2>
@@ -61,7 +60,7 @@ export default async function blog({
       </section>
 
       {/*All blog*/}
-      <section className='bg-white pt-[70px]'>
+      <section className='bg-white pt-[70px] min-h-[400px]'>
         <div className='max-w-[1100px] mx-auto p-6'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
             {t('allBlog')}
