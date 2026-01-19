@@ -1,319 +1,747 @@
 {
   "AboutUsPage": {
     "Tabs": {
-      "visionMission": "愿景与使命",
-      "ourCommitmentSuccess": "我们的承诺与成功",
-      "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
-      "corporateGroupStructureOrganizationalStructure": "公司集团结构与组织结构"
+      "visionMission": "Vision and Mission",
+      "ourCommitmentSuccess": "Our Commitment and Success",
+      "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
+      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
     },
     "VisionMissionValues": {
       "Slogan": {
-        "title": "作为领先的港口运营商，这是我们所信仰的，Sahathai Terminal 的运营方式，以及我们对客户和合作伙伴的承诺。"
+        "title": "This is what we believe in as a leading port operator, the operational approach of Sahathai Terminal, and our commitment to our customers and partners."
       },
       "Vision": {
-        "content": "作为领先的港口运营商，这是我们所信仰的，Sahathai Terminal 的运营方式，以及我们对客户和合作伙伴的承诺。",
+        "content": "This is what we believe in as a leading port operator, the operational approach of Sahathai Terminal, and our commitment to our customers and partners.",
         "vision": {
-          "title": "愿景",
-          "content": "成为提供集成物流服务的领导者，提供真正满足客户需求的创新解决方案。"
+          "title": "Vision",
+          "content": "To be a leader in providing integrated logistics services with innovative solutions that truly meet customer needs."
         }
       },
       "OurMission": {
-        "title": "使命",
+        "title": "Mission",
         "missionToCustomers": {
-          "title": "客户使命",
-          "content": "“通过现代化的解决方案和高效的服务为客户创造价值。”"
+          "title": "Our Mission to Customers",
+          "content": "“Creating value for customers with smart solutions and efficient services.”"
         },
         "missionToShareholders": {
-          "title": "股东使命",
-          "content": "“通过可持续增长和标准化管理为股东创造价值。”"
+          "title": "Our Mission to Shareholders",
+          "content": "“Creating value for our shareholders through sustainable growth and high-standard management.”"
         },
         "missionToEmployees": {
-          "title": "员工使命",
-          "content": "“创造良好的工作环境，促进技能发展，鼓励职业晋升。”"
+          "title": "Our Mission to Employees",
+          "content": "“Creating a positive work environment while promoting learning, skill development, and career advancement.”"
         },
         "missionToSociety": {
-          "title": "社会使命",
-          "content": "“帮助、支持并展现对社会和环境的责任。”"
+          "title": "Our Mission to the Society",
+          "content": "“Supporting, contributing to, and taking responsibility for society and the environment.”"
         }
       },
       "CoreValues": {
-        "title": "核心价值观",
+        "title": "Core Values",
         "serviceMind": {
-          "title": "服务心态",
-          "content": "用心服务。"
+          "title": "SERVICE MIND",
+          "content": "Serving with heart."
         },
         "openness": {
-          "title": "开放性",
-          "content": "开放新思路和变革。"
+          "title": "OPENNESS",
+          "content": "Open to new ideas and positive change."
         },
         "integrity": {
-          "title": "诚信",
-          "content": "诚实和透明。"
+          "title": "INTEGRITY",
+          "content": "Honest and transparent."
         },
         "innovation": {
-          "title": "创新",
-          "content": "创造新颖而有用的事物。"
+          "title": "INNOVATION",
+          "content": "Creating new and meaningful innovations."
         }
       }
     },
     "CommitmentSuccess": {
-      "startingBusiness": "自2007年开始运营",
-      "content": "Sahathai Terminal 是一家私人公司，始于2007年运营。公司总运营面积为315,200平方米，包括集装箱维修区、港区内的海关办公室以及全方位的港口处理设备，并配有熟练且专业的人员。Sahathai Terminal 位于昭披耶河畔，提供全面的服务给客户。您可以放心，我们有完整的解决方案和附加服务以满足每一个需求。我们的所有服务均通过全球认证，同时我们还能提供灵活的服务，这是只有独立港口运营商才可提供的。",
+      "startingBusiness": "Established in 2007",
+      "content": "Sahathai Terminal is a privately owned company that began operations in 2007. The company operates on a total area of 315,200 square meters, which includes a container maintenance and repair area, an on-site customs office, and fully equipped port facilities for full-scale cargo handling.With skilled and experienced personnel, Sahathai Terminal is located along the Chao Phraya River and offers comprehensive, end-to-end services. You can rely on us for complete solutions and a wide range of value-added services tailored to your needs. All our services are certified to global standards, while maintaining the flexibility that only an independent terminal operator can provide.",
       "2551": {
         "year": "2008",
-        "title": "成立Sahathai河港"
+        "title": "Established Sahathai River Terminal"
       },
       "2556": {
         "year": "2013",
-        "title": "更名为 'Sahathai Terminal'"
+        "title": "Rebranded to 'Sahathai Terminal"
       },
       "2558": {
         "year": "2015",
-        "title": "扩展新码头",
-        "content": "与MOL合作扩展新码头，命名为'Bangkok Barge Terminal' 或BBT。"
+        "title": "Expanded the new port Terminal",
+        "content": "Expanded a new terminal in collaboration with MOL, operating under the name ‘Bangkok Barge Terminal’ (BBT)"
       },
       "2559_2560": {
         "year": "2016-2017",
-        "title": "启动水上集装箱运输服务",
-        "content": "通过Bangkok Barge Service，使用沿海货船启动水上集装箱运输服务。"
+        "title": "Launched waterborne container transport services.",
+        "content": "Commenced waterborne container transportation via barge services operated by Bangkok Barge Services"
       },
       "2560_2562": {
         "year": "2017-2019",
-        "content": "建设新仓库",
-        "content2": "集装箱堆场",
-        "content3": "保税仓库",
-        "content4": "成立合资公司投资两个项目（国际货物港/分销中心）。"
+        "content": "Built a new depot",
+        "content2": "Container storage yard",
+        "content3": "Bonded warehouse",
+        "content4": "Formed a joint venture company to invest in two projects (international cargo port / distribution center)."
       },
       "2568": {
         "year": "2025",
-        "content": "我们将成为提供集成和可持续物流服务的领导者，专注于港口服务、海上和陆路运输、仓储、分销中心及其他为客户创造附加值的服务。"
+        "content": "We aim to be a leader in providing comprehensive and sustainable logistics services, focusing on terminal operations, sea and land transportation, warehousing and distribution centers, as well as value-added services that enhance benefits for our customers."
       }
     },
     "BoardAndExecutives": {
-      "content": "Sahathai Terminal 非常重视公司内部的沟通。我们重视各级员工，并促进各方的顺畅合作。主管与他们下属的员工紧密合作，从销售到技能发展。我们高度重视公司内的平等，以确保我们的每位员工都理解并认识到自己对公司的价值。这确保每个人有一个共同的目标，那就是执行并提供最符合客户需求的服务。",
+      "content": "Sahathai Terminal places great importance on internal communication within the organization. We value personnel at all levels and promote smooth collaboration across all parties. Supervisors work closely with the personnel under their care, from sales to skill development. We highly emphasize equality within the organization to ensure that all our employees understand and recognize their value to the organization. This ensures that everyone shares a common goal, which is to perform and deliver services that best meet our customers' needs.",
       "Board": {
-        "title": "董事会"
+        "title": "Board of Directors"
       },
       "Executives": {
-        "title": "执行委员会"
+        "title": "Executive Committee"
       },
       "Subcommittee": {
-        "title": "คณะอนุกรรมการ",
+        "title": "Audit Committee",
         "auditCommittee": {
-          "title": "คณะกรรมการตรวจสอบ",
-          "clickLinkText": "คลิกที่นี่",
-          "intro": "คณะกรรมการตรวจสอบของเรา มีความรับผิดชอบและดูแลการปฏิบัติงานของคณะกรรมการบริหารภายในบริษัทเรา ซึ่งดูแลภาคส่วนด้านรายงานและข้อมูลทางการเงิน สมาชิกของคณะกรรมการตรวจสอบมีดังนี้",
+          "title": "Audit Committee",
+          "clickLinkText": "Click here",
+          "intro": "An audit committee is an operating committee of a company’s board of directors that is in charge of overseeing financial reporting and disclosure. Sahathai Terminal’s Audit Committee members are:",
           "members": [
-            { "name": "คุณวิไล ฉัททันต์รัศมี", "role": "ตำแหน่งประธานกรรมการตรวจสอบ\n" },
-            { "name": "คุณณยุทธ วรฉัตรธาร", "role": "ตำแหน่งกรรมการตรวจสอบ" },
-            { "name": "คุณวิทิต ลีนุตพงษ์", "role": "ตำแหน่งกรรมการตรวจสอบ" }
+            {
+              "name": "Ms.Vilai Chattanrassamee",
+              "role": "Chairman of the Audit Committee"
+            },
+            {
+              "name": "Mr.Yuth Vorachattarn",
+              "role": "Audit Committee Member"
+            },
+            {
+              "name": "Dr.Vithit Leenutaphong",
+              "role": "Audit Committee Member"
+            }
           ],
-          "intro2": "พร้อมกันนี้บริษัทฯ ได้จัดตั้งสำนักงานตรวจสอบภายในเพื่อขึ้นตรงกับคณะกรรมการตรวจสอบ และมีการว่าจ้างหน่วยงานภายนอก ได้แก่ บริษัท ตรวจสอบภายในธรรมนิติ จำกัด เป็นผู้ตรวจสอบภายใน",
-          "noteTitle": "หมายเหตุ",
+          "intro2": "The company has internal audit and directly report to Audit committee and also appointment Dharmniti Auditing Co., Ltd to be internal audit.",
+          "noteTitle": "Note",
           "note": [
-            {"content":  "เป็นกรรมการผู้มีความรู้และประสบการณ์ด้านบัญชี"},
-            {"content":  "บริษัทฯได้มีการพิจารณาคุณสมบัติกรรมการอิสระและกรรมการตรวจสอบ"}
+            { "content": "Has knowledge and experience in accounting" },
+            {
+              "content": "The Company has considered the qualifications of the independent directors and the audit committee"
+            }
           ],
-          "pdfTitle": "ตามนิยามของคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์"
+          "pdfTitle": "According to the definition of the Securities and Exchange Commission"
         },
         "executiveCommittee": {
-          "title": "คณะกรรมการบริหาร",
-          "intro": "มีหน้าที่ผลักดันให้ สหไทย เทอร์มินอล ปฏิบัติงานให้ตรงตามนโยบายและทิศทางที่กำหนด โดยคณะผู้บริหารระดับสูงของเรามีสมาชิกดังนี้",
+          "title": "Executive Committee",
+          "intro": "The Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
           "members": [
-            { "name": "คุณวิจิตร รัตนศิริวิไล", "role": "ตำแหน่งประธานกรรมการบริหาร" },
-            { "name": "คุณไชยรัตน์ จงยั่งยืนวงศ์", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณสุชิน รัตนศิริวิไล", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณอังกูร ศรีสุนทร", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณเสาวคุณ ครุจิตร", "role": "ตำแหน่งกรรมการบริหาร" },
-            { "name": "คุณบัญชัย ครุจิตร", "role": "ตำแหน่งกรรมการบริหาร" }
+            {
+              "name": "Mr.Wichit Rattanasirivilai",
+              "role": "Chairman of the Executive Committee"
+            },
+            {
+              "name": "Mr.Chairat Chongyangyuenvong",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Mr.Suchin Ratanasirivilai",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Mr.Anggoon Srisunthorn",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Ms.Sauwakun Karuchit",
+              "role": "Executive Committee Member"
+            },
+            {
+              "name": "Mr.Banchai Karuchit",
+              "role": "Executive Committee Member"
+            }
           ]
         },
         "nominationAndRemunerationCommittee": {
-          "title": "คณะกรรมการสรรหาและกำหนดค่าตอบแทน",
-          "intro": "สหไทย เทอร์มินอล ได้จัดตั้งคณะกรรมการสรรหาและกำหนดค่าตอบแทน โดยมีสมาชิกที่มีความรับผิดชอบและมีความสามารถ ตามกฎระเบียบที่กำหนด โดยคณะกรรมการสรรหาและกำหนดค่าตอบแทนของเราประกอบด้วย",
+          "title": "Nomination and Remuneration Committee",
+          "intro": "Sahathai Terminal has established a nomination and remuneration committee with formally delegated duties and responsibilities and with written terms of reference. The committee members are",
           "members": [
-            { "name": "คุณวิทิต ลีนุตพงษ์", "role": "ตำแหน่งประธานกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณยุทธ วรฉัตรธาร", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณวิไล ฉัททันต์รัศมี", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณวิจิตร รัตนศิริวิไล", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" },
-            { "name": "คุณเสาวคุณ ครุจิตร", "role": "ตำแหน่งกรรมการสรรหาและกำหนดค่าตอบแทน" }
+            {
+              "name": "Dr.Vithit Leenutaphong",
+              "role": "Chairman of the Nomination and Remuneration Committee"
+            },
+            {
+              "name": "Mr.Yuth Vorachattarn",
+              "role": "Nomination and Remuneration Committee Member"
+            },
+            {
+              "name": "Ms.Vilai Chattanrassamee",
+              "role": "Nomination and Remuneration Committee Member"
+            },
+            {
+              "name": "Mr.Wichit Rattanasirirvilai",
+              "role": "Nomination and Remuneration Committee Member"
+            },
+            {
+              "name": "Ms.Sauwakun Karuchit",
+              "role": "Nomination and Remuneration Committee Member"
+            }
           ]
         },
         "enterpriseRiskManagementCommittee": {
-          "title": "คณะกรรมการบริหารความเสี่ยงองค์กร",
-          "intro": "บริษัทฯมีการแต่งตั้งคณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ ขึ้นเพื่อดูแลและบริหารความเสี่ยงในองค์กร เพื่อให้อยู่ในระดับที่เหมาะสม โดยมีคณะกรรมการ 3 ท่าน ดังนี้",
+          "title": "Risk Management Committee",
+          "intro": "The Company has appointed Risk Management Governance and Sustainability Committee with the duty to oversee that the overall risk management process is at appropriate level. There are 3 committees",
           "members": [
-            { "name": "คุณยุทธ วรฉัตรธาร", "role": "ตำแหน่งประธานคณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ" },
-            { "name": "คุณวิไล ฉัททันต์รัศมี", "role": "ตำแหน่งกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ" },
-            { "name": "คุณบัญชัย ครุจิตร", "role": "ตำแหน่งกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ" }
+            {
+              "name": "Mr.Yuth Vorachattarn",
+              "role": "Chairman of the Risk Management Governance and Sustainability Committee"
+            },
+            {
+              "name": "Ms.Vilai Chattanrassamee",
+              "role": "Risk Management Governance and Sustainability Committee"
+            },
+            {
+              "name": "Mr.Banchai Karuchit",
+              "role": "Risk Management Governance and Sustainability Committee"
+            }
           ]
         }
       }
     },
-
     "CorporateGroupOrganizationalStructure": {
-      "corporateGroup": "公司集团结构",
+      "corporateGroup": "Corporate Group Structure",
       "organizationalStructure": {
-        "title": "组织结构",
-        "content": "下图展示了我们截至2023年11月10日的组织结构。Sahathai Terminal Public Company Limited的董事会由风险管理、公司治理与可持续发展委员会、审计委员会、执行委员会以及提名与薪酬委员会组成。"
+        "title": "Organizational Structure",
+        "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
       }
     },
+    "ExecutiveProfile": {
+      "labels": {
+        "age": "Age",
+        "positions": "Present Position",
+        "education": "Education",
+        "trainings": "Training Program",
+        "directorType": "Type of Directors",
+        "appointments": "Date of Appointment",
+        "directorYears": "Length of Service",
+        "workExp5y": "Experience (past 5 years)",
+        "listedRoles": "Directorship(s) in Listed Company",
+        "relatedCompanyRoles": "Directorship(s) in Related Companies",
+        "otherCompanyRoles": "Directorship(s) in Other Company",
+        "otherOrgRoles": "Directorship(s) in Other Organization",
+        "pastRoles": "Former (last 5 years)",
+        "shareholding": "Percentage of the Company’s Shareholding",
+        "disciplinary": "Legal record in the last 5 years",
+        "family": "Family Relationship with Other Directors and Executives",
+        "note": "หมายเหตุ"
+      },
+      "common": {
+        "none": "-None-"
+      }
+    },
+    "Yuth": {
+      "fullName": "Yuth Vorachattarn",
+      "age": "77 years",
+      "positions": [
+        "Chairman of the Board of Directors",
+        "Independent Director",
+        "Audit Committee",
+        "Nomination and Remuneration Committee",
+        "Chairman of the Risk Management, Governance and Sustainability Committee"
+      ],
+      "education": [
+        "Master Degree of Economics, Thammasat University",
+        "Bachelor Degree of Economics, Thammasat University"
+      ],
+      "trainings": [
+        "Director Leadership Certification Program (DLCP), class 0/2021",
+        "Advance Audit Committee Program (AACP), class 30/2020",
+        "Strategic Board Master Class (SBM), class 5/2018",
+        "Ethical Leadership Program (ELP), class 2/2015",
+        "Corporate Governance for Capital Market Intermediaries (CGI), class 0/2014",
+        "Financial Institutions Governance Program (FGP), class 6/2013",
+        "Monitoring of the Quality of Financial Reporting (MFR), class 12/2010",
+        "Audit Committee Program (ACP), class 33/2010",
+        "Chartered Director Class (R-CDC), class 3/2008",
+        "Role of the Chairman Program (RCP), class 8/2003",
+        "Directors Certification Program (DCP), class 0/2000"
+      ],
+      "directorType": "Independent Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 27 July 2020",
+        "On 20 April 2023"
+      ],
+      "workExp5y": [],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "listedRoles": [
+        "2016 – present  Chairman of the Board of Directors, Grand Prix International Public Company Limited",
+        "2015 – present  Chairman of the Board of Directors, Independent Director, Audit Committee, Sahathai Terminal Public Company Limited",
+        "2011 – present  Chairman of the Board of Directors, Audit Committee, Taokaenoi Food & Marketing Public Company Limited"
+      ],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [
+        "2020 – present  Independent Director, Chairman of the Audit Committee, Nutrix Public Company Limited",
+        "2013 – present  Independent Director, Chairman of the Audit Committee, BSY Group Public Company Limited"
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2005 – 2020  Independent Director, Chairman of the Audit Committee, Sahathai Steel Pipe Public Company Limited"
+      ],
+      "shareholding": "270,364 shares, 0.04% (as of December 30, 2024)",
+      "family": [],
+      "note": ""
+    },
+    "Vithit": {
+      "fullName": "Dr. Vithit Leenutaphong",
+      "age": "69 years",
+      "positions": [
+        "Director",
+        "Independent Director",
+        "Audit Committee",
+        "Chairman of the Nomination and Remuneration Committee"
+      ],
+      "education": [
+        "Doctor of Philosophy Program in Innovation and Industrial Management, College of Innovation and Industrial Management, King Mongkut’s Institute of Technology Ladkrabang.",
+        "Master Degree of Business Administration (International Monetary Fund), University of Southern California, USA.",
+        "Bachelor Degree of Marketing and Management, Jacksonville University, USA."
+      ],
+      "trainings": [
+        "High Performance Board 2015 by IMD",
+        "Role of the Chairman Program (RCP) class 34/2014",
+        "Successful Formulation & Execution of Strategy (SFE) class 3/2009",
+        "Role of the Compensation Committee (RCC) class 7/2008",
+        "Audit Committee Program (ACP) class 5/2005",
+        "Director Certification Program (DCP) class 16/2002"
+      ],
+      "directorType": "Independent Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 21 April 2018",
+        "On 22 April 2021",
+        "On 24 April 2024"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2015 – present  Independent Director, Audit Committee of Sahathai Terminal Public Company Limited"
+      ],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [
+        "2014 – present  Director and Chairman of the Executive Committee of Thaiyarnyon Intersales Co., Ltd.",
+        "2005 – present  Director and Chairman of the Executive Committee of Thaiyarnyon Co., Ltd."
+      ],
+      "otherOrgRoles": [
+        "2005 – present  Director of The National Press Council of Thailand",
+        "2005 – present  Director of The Queen’s Gallery",
+        "2005 – present  Director of Bangkok Bank Foundation"
+      ],
+      "pastRoles": [
+        "2005 – 2020  Independent Director, Audit Committee of Sahathai Steel Pipe Public Company Limited"
+      ],
+      "shareholding": "264,000 shares, 0.04% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": [],
+      "note": ""
+    },
     "YuthVorachattarn": {
-      "fullName": "คุณยุทธ วรฉัตรธาร",
-      "position1": "ประธานกรรมการ กรรมการอิสระ",
-      "position2": "กรรมการตรวจสอบ",
-      "position3": "กรรมการสรรหาและกำหนดค่าตอบแทน",
-      "position4": "ประธานกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
-      "education1": "เศรษฐศาสตร์มหาบัณฑิต (เกียรตินิยมดี) มหาวิทยาลัยธรรมศาสตร์",
-      "education2": "เศรษฐศาสตร์บัณฑิต มหาวิทยาลัยธรรมศาสตร์",
-      "trainingHistory1": "Director Leadership Certification Program (DLCP) รุ่น 0 ปี 2564",
-      "trainingHistory2": "Advance Audit Committee Program (AACP) รุ่น 36 ปี 2563",
-      "trainingHistory3": "Strategic Board Master Class (SBM) รุ่น 5 ปี 2561",
-      "trainingHistory4": "Ethical Leadership Program (ELP) รุ่น 2 ปี 2558",
-      "trainingHistory5": "Corporate Governance for Capital Market Intermediaries (CGI) รุ่น 0 ปี 2557",
-      "trainingHistory6": "Financial Institutions Governance Program (FGP) รุ่น 6 ปี 2556",
-      "trainingHistory7": "Monitoring of the Quality of Financial Reporting (MFR) รุ่น 12 ปี 2553",
-      "trainingHistory8": "Audit Committee Program (ACP) รุ่น 33 ปี 2553",
-      "trainingHistory9": "Chartered Director Class (R-CDC) รุ่น 3 ปี 2551",
-      "trainingHistory10": "Role of the Chairman Program (RCP) รุ่น 8 ปี 2546",
-      "trainingHistory11": "Directors Certification Program (DCP) รุ่น 0 ปี 2543",
-      "dateAppointment1": "วาระที่ 1 : 3 พฤษภาคม 2560 (ณ วันแปรสภาพเป็นบริษัทมหาชน)",
-      "dateAppointment2": "วาระที่ 2 : 27 กรกฎาคม 2563 (ต่อวาระ)",
-      "dateAppointment3": "วาระที่ 3 : 20 เมษายน 2566 (ต่อวาระ)",
-      "dateAppointment4": "จำนวนปีที่เป็นกรรมการ 6 ปี 11 เดือน (นับถึงวันที่ 23 เมษายน 2567)",
-      "dateAppointment5": "ประสบการณ์ทำงานในระยะเวลา 5 ปี",
-      "positionHeldInListCompany1": "2559 - ปัจจุบัน ประธานกรรมการ บมจ. กรังค์ปรีซ์ อินเตอร์เนชั่นแนล",
-      "positionHeldInListCompany2": "2558 - ปัจจุบัน ประธานกรรมการและกรรมการตรวจสอบ บมจ. สหไทย เทอร์มินอล",
-      "positionHeldInListCompany3": "2554 - ปัจจุบัน ประธานกรรมการและกรรมการตรวจสอบ บมจ. เถ้าแก่น้อย ฟู๊ดแอนด์ มาร์เก็ตติ้ง",
-      "positionHeldInListCompany4": "การดำรงตำแหน่งในบริษัทที่เกี่ยวข้อง -ไม่มี-",
-      "positionHeldInOtherCompany1": "2560 - ปัจจุบัน กรรมการอิสระและประธานกรรมการตรวจสอบ บมจ. นูทริกซ์",
-      "positionHeldInOtherCompany2": "2558 - ปัจจุบัน กรรมการอิสระและประธานกรรมการตรวจสอบ บมจ. บี เอส วาย กรุ๊ป",
-      "positionHeldInOtherCompany3": "การดำรงตำแหน่งในองค์กรอื่น -ไม่มี-",
-      "pastPositionHeld1": "2560 - ปัจจุบัน กรรมการอิสระและประธานกรรมการตรวจสอบ บมจ. นูทริกซ์",
-      "pastPositionHeld2": "2558 - ปัจจุบัน กรรมการอิสระและประธานกรรมการตรวจสอบ บมจ. บี เอส วาย กรุ๊ป",
-      "pastPositionHeld3": "การดำรงตำแหน่งในองค์กรอื่น -ไม่มี-"
+      "fullName": "Mr.Yuth Vorachattarn",
+      "position1": "Chairman of the Board of Directors, Independent Director",
+      "position2": "Audit Committee",
+      "position3": ", Nomination and Remuneration Committee",
+      "position4": "Chairman of the Risk Management, Governance and Sustainability Committee",
+      "education1": "Master Degree of Economics, Thammasat University",
+      "education2": "Bachelor Degree of Economics, Thammasat University",
+      "trainingHistory1": "Director Leadership Certification Program (DLCP) class 0/2021",
+      "trainingHistory2": "Advance Audit Committee Program (AACP) class 30/2020",
+      "trainingHistory3": "Strategic Board Master Class (SBM) class 5/2018",
+      "trainingHistory4": "Ethical Leadership Program (ELP) class 2/2015",
+      "trainingHistory5": "Corporate Governance for Capital Market Intermediaries (CGI) class 0/2014",
+      "trainingHistory6": "Financial Institutions Governance Program (FGP) class 6/2013",
+      "trainingHistory7": "Monitoring of the Quality of Financial Reporting (MFR) class 12/2010",
+      "trainingHistory8": "Audit Committee Program (ACP) class 33/2010",
+      "trainingHistory9": "Chartered Director Class (R-CDC) class 3/2008",
+      "trainingHistory10": "Role of the Chairman Program (RCP) class 8/2003",
+      "trainingHistory11": "Directors Certification Program (DCP) class 0/2000",
+      "dateAppointment1": "On 3 May 2017 (registered as a public company limited)",
+      "dateAppointment2": "On 27 July 2020",
+      "dateAppointment3": "On 20 April 2023",
+      "positionHeldInListCompany1": "2016 – present Chairman of the Board of Directors of Grand Prix International Public Company Limited",
+      "positionHeldInListCompany2": "2015 – present Chairman of the Board of Directors, Independent Director, Audit Committee of Sahathai Terminal Public Company Limited",
+      "positionHeldInListCompany3": "2011 – present Chairman of the Board of Directors, Audit Committee of Taokaenoi Food & Marketing Public Company Limited",
+      "positionHeldInOtherCompany1": "2020 – present  Independent Director, Chairman of the Audit Committee of Nutrix Public Company Limited",
+      "positionHeldInOtherCompany2": "2013 – present  Independent Director, Chairman of the Audit Committee of BSY Group Public Company Limited",
+      "pastPositionHeld1": "2005 – 2020   Independent Director, Chairman of the Audit Committee of Sahathai Steel Pipe Public Company Limited",
+      "pastPositionHeld2": "2002 – 2019   Chairman of the Board of Directors, Audit Committee of Maybank Kim Eng Securities (Thailand) Public Company Limited  ",
+      "pastPositionHeld3": "2018 – 2019   Chairman of the Board of Directors of Siam Commercial Protect Co., Ltd.-"
     },
-    "VithitLeenutaphong": {
-      "fullName": "คุณวิทิต ลีนุตพงษ์",
-      "position1": "กรรมการอิสระ",
-      "position2": "กรรมการตรวจสอบ",
-      "position3": "ประธานกรรมการสรรหาและกำหนดค่าตอบแทน",
-      "education1": "ปริญญาเอก การจัดการนวัตกรรมและอุตสาหกรรม วิทยาลัยการจัดการนวัตกรรมและอุตสาหกรรม สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง\n",
-      "education2": "ปริญญาโท บริหารธุรกิจ มหาวิทยาลัยเซาธ์เทิร์นแคลลิฟอร์เนีย สหรัฐอเมริกา",
-      "education3": "ปริญญาตรี การตลาดและการจัดการ มหาวิทยาลัยแจ็คสันวิลล์ สหรัฐอเมริกา",
-      "trainingHistory1": "High Performance Board ปี 2558 จัดโดย IMD",
-      "trainingHistory2": "Role of the Chairman Program (RCP) รุ่น 34 ปี 2557",
-      "trainingHistory3": "Successful Formulation & Execution of Strategy (SFE) รุ่น 3 ปี 2552",
-      "trainingHistory4": "Role of the Compensation Committee (RCC) รุ่น 7 ปี 2551",
-      "trainingHistory5": "Audit Committee Program (ACP) รุ่นที่ 5 ปี 2548",
-      "trainingHistory6": "Director Certification Program (DCP) รุ่นที่ 16 ปี 2545",
-      "dateAppointment1": "วาระที่ 1 :  3 พฤษภาคม 2560 ( ณ วันแปรสภาพเป็นบริษัทมหาชน)",
-      "dateAppointment2": "วาระที่ 2 :  21 เมษายน 2561 (ต่อวาระ)",
-      "dateAppointment3": "วาระที่ 3 :  22 เมษายน 2564 (ต่อวาระ)",
-      "positionHeldInListCompany1": "2558 – ปัจจุบัน กรรมการอิสระและกรรมการตรวจสอบ บมจ. สหไทย เทอร์มินอล",
-      "positionHeldInOtherCompany1": "2557 – ปัจจุบัน  กรรมการ และประธานกรรมการบริหาร บจก. ไทยยานยนตร์ อินเตอร์เซลส์",
-      "positionHeldInOtherCompany2": "2548 – ปัจจุบัน  กรรมการ และประธานกรรมการบริหาร บจก. ไทยยานยนตร์",
-      "positionHeldInOtherOrganization1": "2548 – ปัจจุบัน กรรมการ สภาการสื่อมวลชนแห่งชาติ",
-      "positionHeldInOtherOrganization2": "2548 – ปัจจุบัน กรรมการ หอศิลป์สมเด็จพระนางเจ้าสิริกิติ์พระบรมราชินีนาถ",
-      "positionHeldInOtherOrganization3": "2548 – ปัจจุบัน กรรมการ มูลนิธิบัวหลวง (ธนาคารกรุงเทพ จำกัด (มหาชน)",
-      "pastPositionHeld1": "2548 – 2563 กรรมการอิสระและกรรมการตรวจสอบ บมจ. สหไทย สตีลไพพ์",
-      "pastPositionHeld2": "2557 – 2560 กรรมการ บมจ. อินทัช โฮลดิ้งส์"
+    "Vilai": {
+      "fullName": "Ms. Vilai Chattanrassamee",
+      "age": "71 years",
+      "positions": [
+        "Director",
+        "Independent Director",
+        "Chairman of the Audit Committee",
+        "Nomination and Remuneration Committee",
+        "Risk Management, Governance and Sustainability Committee"
+      ],
+      "education": [
+        "Master Degree of Accounting, Thammasart University",
+        "Bachelor Degree of Accounting, Chulalongkorn University",
+        "Certified Auditor",
+        "Fellow Member (FIOD)"
+      ],
+      "trainings": [
+        "Board Nomination and Compensation Program (BNCP) class 19/2024",
+        "Independent Observer Program (IOP) class 4/2016",
+        "DCP Refresher Course (DCP-Refresher) class 2/2006",
+        "Directors Certification Program (DCP) class 13/2001"
+      ],
+      "directorType": "Independent Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 23 April 2019",
+        "On 21 April 2022"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2023 – present  Independent Director, Audit Committee of Bangchak Corporation Public Company Limited",
+        "2016 – present  Independent Director, Chairman of the Audit Committee of Sahathai Terminal Public Company Limited",
+        "2012 – present  Independent Director, Audit Committee of MK Restaurant Group Public Company Limited"
+      ],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [
+        "2021 – present  Independent Director, Chairman of the Audit Committee of Northland Experience Co., Ltd",
+        "2020 – present  Director, ERA Plus Co., Ltd",
+        "1998 – present  Director, Horton International Co., Ltd",
+        "1993 – present  Director, Executive Search Services Co., Ltd"
+      ],
+      "otherOrgRoles": [
+        "2022 – present  Regular Management Audit Committee of Mahidol University",
+        "2017 – present  Independent observers according to the moral agreement, Anti-Corruption Organization of Thailand",
+        "2017 – present  Sub-Committee on Procurement and Procurement of Government Sector, The Comptroller General’s Department"
+      ],
+      "pastRoles": [
+        "2023 – 2024  Independent Director, Audit Committee of Bangchak Corporation Public Company Limited",
+        "2015 – 2023  Independent Director, Chairman of the Audit Committee of BCPG Public Company Limited",
+        "2021 – 2022  Member of Audit Sub-Committee of National Village and Urban Community Fund Office",
+        "2016 – 2020  Independent Director, Audit Committee of Sahathai Steel Pipe Public Company Limited",
+        "2016 – 2020  Audit Committee of King Mongkut’s Institute of Technology Ladkrabang",
+        "2014 – 2020  Financial accounting professional and Audit Committee of Metropolitan Waterworks Authority"
+      ],
+      "shareholding": "270,364 shares, 0.04% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": [],
+      "note": ""
     },
-    "VilaiChattanrassamee": {
-      "fullName": "คุณวิไล ฉัททันต์รัศมี",
-      "position1": "กรรมการอิสระ",
-      "position2": "ประธานกรรมการตรวจสอบ",
-      "position3": "กรรมการสรรหาและกำหนดค่าตอบแทน",
-      "position4": "กรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Wichit": {
+      "fullName": "Mr. Wichit Rattanasirivilai",
+      "age": "63 years",
+      "positions": [
+        "Director",
+        "Nomination and Remuneration Committee",
+        "Chairman of the Executive Committee"
+      ],
+      "education": ["Associate’s Degree"],
+      "trainings": ["Director Accreditation Program (DCP) class 139/2017"],
+      "directorType": "Non–Executive Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 27 July 2020",
+        "On 20 April 2023"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2015 – present  Director and Chairman of the Executive Committee of Sahathai Terminal Public Company Limited."
+      ],
+      "relatedCompanyRoles": [
+        "2017 – present  Director of Bangkok Trucking Service Co., Ltd.",
+        "2017 – present  Director of Bangkok Container Depot Service Co., Ltd.",
+        "2016 – present  Director of Bangkok Barge Service Co., Ltd."
+      ],
+      "otherCompanyRoles": [
+        "2019 – present  Director of Inter Solar Roof Co., Ltd.",
+        "2019 – present  Director of SWCK Co., Ltd.",
+        "2016 – present  Director of K2 Laem Chabang Prooperty Co., Ltd.",
+        "2014 – present  Director of Rattana Holding Co., Ltd.",
+        "2013 – present  Director of Sahathai Property and Development Co., Ltd.",
+        "2004 – present  Director of Q.A. Logistic Co., Ltd."
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2005 – 2022  Director of MIC Overseas Trading Co., Ltd.",
+        "2005 – 2022  Director of Metallic Section Steel Corporation Co., Ltd.",
+        "1999 – 2022  Director of Metallic Steel Center Co., Ltd.",
+        "1986 – 2022  Director of Chulavej Polyclinic Co., Ltd.",
+        "2011 – 2021  Director of Sahathai Steel Pipe Public Company Limited"
+      ],
+      "shareholding": "823,020 shares, 0.14% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": ["Mr. Suchin Rattanasirivilai (Nephew)"],
+      "note": "Mr. Wichit Rattanasirivilai is a Non-Executive Director who has work experience related to the company’s business, including transportation and warehouse management businesses."
     },
-    "WichitRattanasirivilai": {
-      "fullName": "คุณวิจิตร รัตนศิริวิไล",
-      "position1": "กรรมการ",
-      "position2": "กรรมการสรรหาและกำหนดค่าตอบแทน",
-      "position3": "ประธานกรรมการบริหาร",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Suchin": {
+      "fullName": "Mr. Suchin Ratanasirivilai",
+      "age": "55 years",
+      "positions": ["Director", "Executive Committee"],
+      "education": [
+        "Master of Business Administration, Sasin Graduate Institute of Business Administration",
+        "BSc in Materials Engineering Rensselaer Polytechnic Institute (RPI), USA"
+      ],
+      "trainings": [
+        "Directors Certification Program (DCP) class 139/2017",
+        "Capital Market Academy Programs class 19",
+        "หลักสูตรผู้บริหารกระบวนการยุติธรรมระดับสูง (บยส.) รุ่นที่ 20",
+        "The Executive Program in Energy Literacy for a Sustainable Future class 9, Thailand Energy Academy",
+        "หลักสูตรประกาศนียบัตรธรรมภิบาลทางการแพทย์สำหรับผู้บริหารระดับสูง (ปธพ.) รุ่นที่ 7",
+        "หลักสูตรการป้องกันราชอาณาจักร (วปอ.) รุ่นที่ 63"
+      ],
+      "directorType": "Non–Executive Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 21 April 2018",
+        "On 22 April 2021",
+        "On 24 April 2024"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2015 – present  Director of Sahathai Terminal Public Company Limited."
+      ],
+      "relatedCompanyRoles": [
+        "2024 – present  Director of Bangkok Barge Terminal Co., Ltd.",
+        "2017 – present  Director of Bangkok Trucking Service Co., Ltd.",
+        "2017 – present  Director of Bangkok Container Depot Service Co., Ltd."
+      ],
+      "otherCompanyRoles": [
+        "2020 – present  Director of Advance Material Service Co., Ltd.",
+        "2020 – present  Director of Tac-M Group Co., Ltd.",
+        "2020 – present  Director of Rattana Esan Co., Ltd.",
+        "2020 – present  Director of EPC Group Co., Ltd.",
+        "2019 – present  Director of Wichai Blessing Co., Ltd.",
+        "2012 – present  Director of Sahathai Steel Pipe Public Company Limited."
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2017 – 2024  Director of Sanki Pre Engineering Building Co., Ltd.",
+        "2009 – 2024  Director of Firex (Thailand) Co., Ltd.",
+        "2002 – 2024  Director of Sylergroup Co., Ltd."
+      ],
+      "shareholding": "264,000 shares, 0.04% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": ["Mr. Wichit Rattanasirivilai (Uncle)"],
+      "note": ""
     },
-    "SuchinRattanasirivilai": {
-      "fullName": "คุณสุชิน รัตนศิริวิไล",
-      "position1": "กรรมการ",
-      "position2": "กรรมการบริหาร",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+    "Auggoon": {
+      "fullName": "Mr. Auggoon Srisunthorn",
+      "age": "56 years",
+      "positions": ["Director", "Executive Committee"],
+      "education": [
+        "Ex-MBA, Sripatum University",
+        "Bachelor’s Degree in Accounting, Ramkhamhaeng University"
+      ],
+      "trainings": ["Directors Certification Program (DCP) class 139/2017"],
+      "directorType": "Non–Executive Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 23 April 2019",
+        "On 21 April 2022"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2015 – present  Director of Sahathai Terminal Public Company Limited."
+      ],
+      "relatedCompanyRoles": [
+        "2024 – present  Director of Bangkok Barge Terminal Co., Ltd.",
+        "2017 – present  Director of Bangkok Trucking Service Co., Ltd.",
+        "2017 – present  Director of Bangkok Container Depot Service Co., Ltd."
+      ],
+      "otherCompanyRoles": [
+        "2017 – present  Director of Sahathai Steel Pipe Public Company Limited",
+        "2014 – present  Director of G.O.O.N Co., Ltd."
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2018 – 2024  Director of Bangkok River Terminal Co., Ltd."
+      ],
+      "shareholding": "-None- (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": [],
+      "note": ""
     },
-    "AnggoonSrisunthorn": {
-      "fullName": "คุณอังกูร ศรีสุนทร",
-      "position1": "กรรมการ",
-      "position2": "กรรมการบริหาร",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Chairat": {
+      "fullName": "Mr. Chairat Chongyangyuenvong",
+      "age": "58 years",
+      "positions": ["Director", "Executive Committee"],
+      "education": [
+        "Bachelor’s Degree in Business Administration, Assumption University"
+      ],
+      "trainings": ["Director Accreditation Program (DAP) class 39/2005"],
+      "directorType": "Non–Executive Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 23 April 2019",
+        "On 21 April 2022"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2008 – present  Director of Sahathai Terminal Public Company Limited."
+      ],
+      "relatedCompanyRoles": [
+        "2017 – present  Director of Bangkok Trucking Service Co., Ltd.",
+        "2017 – present  Director of Bangkok Container Depot Service Co., Ltd.",
+        "2015 – present  Director of Bangkok Barge Terminal Co., Ltd."
+      ],
+      "otherCompanyRoles": [
+        "2019 – present  Director of SWCK Co., Ltd.",
+        "2013 – present  Director of Sahathai Property & Development Co., Ltd.",
+        "2001 – present  Director of Sahathai Steel Pipe Public Company Limited.",
+        "1997 – present  Director of Yuenyong Foam Industry Co., Ltd.",
+        "1990 – present  Managing Partner of Karnyang Yeen Yong Industry Limited Partnership."
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": ["2007 – 2021  Director of Udomsukrungruang Co., Ltd."],
+      "shareholding": "7,517,136 shares, 1.24% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": [],
+      "note": "Mr. Chairat Chongyangyuenvong is a Non-Executive Director who has work experience related to the company’s business, including warehouse management business."
     },
-    "ChairatChongyangyuenvong": {
-      "fullName": "คุณไชยรัตน์ จงยั่งยืนวงศ์",
-      "position1": "กรรมการ",
-      "position2": "กรรมการบริหาร",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Saowakun": {
+      "fullName": "Mrs. Sauwakun Karuchit",
+      "age": "67 years",
+      "positions": [
+        "Director",
+        "Nomination and Remuneration Committee",
+        "Executive Committee",
+        "Chief Executive Officer"
+      ],
+      "education": ["Nanzan University, Japan"],
+      "trainings": [
+        "Thai-Chinese Leadership Student class 4",
+        "Directors Certification Program (DCP) class 139/2017",
+        "Successful Formulation and Execution of Strategy (SFE) class 22/2014"
+      ],
+      "directorType": "Executive Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 21 April 2018",
+        "On 22 April 2021",
+        "On 24 April 2024"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2008 – present  Director of Sahathai Terminal Public Company Limited."
+      ],
+      "relatedCompanyRoles": [
+        "2019 – present  Director of Bangkok Logistic Park Co., Ltd.",
+        "2018 – present  Director of Bangkok River Terminal Co., Ltd.",
+        "2017 – present  Director of Bangkok Trucking Service Co., Ltd.",
+        "2017 – present  Director of Bangkok Container Depot Service Co., Ltd.",
+        "2016 – present  Director of Bangkok Barge Service Co., Ltd.",
+        "2015 – present  Director of Bangkok Barge Terminal Co., Ltd."
+      ],
+      "otherCompanyRoles": [
+        "2019 – present  Director of SWCK Co., Ltd.",
+        "2016 – present  Director of TSK ASSETS Co., Ltd.",
+        "2016 – present  Director of TSK Capital Holding Co., Ltd.",
+        "2013 – present  Director of Sahathai Property & Development Co., Ltd."
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2016 – 2022  Director of TSK Trading Center Co., Ltd.",
+        "2016 – 2022  Director of KRC Property Co., Ltd.",
+        "2018 – 2019  Director of KRCL Holding Co., Ltd.",
+        "2007 – 2018  Director of KRC Logistics Co., Ltd."
+      ],
+      "shareholding": "10,728,580 shares, 1.77% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": ["Mr. Banchai Karuchit(Son)"],
+      "note": ""
     },
-    "SauwakunKaruchit": {
-      "fullName": "คุณเสาวคุณ ครุจิตร",
-      "position1": "กรรมการ",
-      "position2": "กรรมการสรรหาและกำหนดค่าตอบแทน",
-      "position3": "กรรมการบริหาร",
-      "position4": "ประธานเจ้าหน้าที่บริหาร",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Banchai": {
+      "fullName": "Mr. Banchai Karuchit",
+      "age": "38 years",
+      "positions": [
+        "Director",
+        "Executive Committee",
+        "Risk Management, Governance and Sustainability Committee",
+        "Deputy Chief Executive Officer",
+        "Company Secretary"
+      ],
+      "education": [
+        "MSc in Supply Chain & Logistics Management, University of Warwick",
+        "BBA in International Business, International College, Mahidol University"
+      ],
+      "trainings": [
+        "Successful Formulation and Execution of Strategy (SFE) class 22/2014",
+        "How to Develop a Risk Management Plan (HRP) class 5/2014",
+        "Board Reporting Program (BRP) class 13/2014",
+        "Director Certification Program (DCP) class 155/2012",
+        "Director Accreditation Program (DAP) class 94/2012",
+        "Financial Statements for Directors (FSD) class 15/2012",
+        "Company Secretary Program (CSP) class 44/2012"
+      ],
+      "directorType": "Executive Director",
+      "appointments": [
+        "On 3 May 2017 (registered as a public company limited)",
+        "On 27 July 2020",
+        "On 20 April 2023"
+      ],
+      "directorYears": "7 years 11 months (accumulated until April 22, 2025)",
+      "workExp5y": [],
+      "listedRoles": [
+        "2015 – present  Director of Sahathai Terminal Public Company Limited."
+      ],
+      "relatedCompanyRoles": [
+        "2024 – present  Director of Bangkok Barge Terminal Co., Ltd.",
+        "2017 – present  Director of Bangkok Trucking Service Co., Ltd.",
+        "2017 – present  Director of Bangkok Container Depot Service Co., Ltd."
+      ],
+      "otherCompanyRoles": [
+        "2015 – present  Director of TSK Asset Co., Ltd.",
+        "2016 – present  Director of TSK Capital Holding Co., Ltd."
+      ],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "2016 – 2022  Director of TSK Trading Center Co., Ltd.",
+        "2016 – 2022  Director of K.R.C. Property Co., Ltd."
+      ],
+      "shareholding": "18,686,402 shares, 3.08% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": ["Mrs. Sauwakun Karuchit (Mother)"],
+      "note": ""
     },
-    "BanchaiKaruchit": {
-      "fullName": "คุณบัญชัย ครุจิตร",
-      "position1": "กรรมการ",
-      "position2": "กรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
-      "position3": "กรรมการบริหาร",
-      "position4": "รองประธานเจ้าหน้าที่บริหาร",
-      "position5": "เลขานุการบริษัท",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Kittikhun": {
+      "fullName": "Mr. Kittikhun Lochaya",
+      "age": "53 years",
+      "positions": ["Chief Operating Officer – Terminal"],
+      "education": [
+        "Bachelor Degree of Engineering in Operation & Management, Merchant Marine Training Center"
+      ],
+      "trainings": [],
+      "directorType": null,
+      "appointments": ["On 1 June 2011"],
+      "directorYears": null,
+      "workExp5y": [],
+      "listedRoles": [],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [],
+      "otherOrgRoles": [],
+      "pastRoles": [
+        "1/2/2023 – present  Chief Operating Officer – Terminal of Sahathai Terminal Public Company Limited",
+        "2011 – 31/1/2023  Deputy Chief Operating Officer of Sahathai Terminal Public Company Limited"
+      ],
+      "shareholding": "132,000 shares, 0.02% (as of 30 December 2024)",
+      "disciplinary": null,
+      "family": []
     },
-    "KittikhunLochaya": {
-      "fullName": "คุณกิตติคุณ โลจายะ",
-      "position1": "ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการ กลุ่มงานบริการท่าเทียบเรือ",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
-    },
+
     "MinrawiPhodee": {
       "fullName": "คุณมินทร์รวี โพธิ์ดี",
       "position1": "ประธานเจ้าหน้าที่ฝ่ายพาณิชย์",
@@ -324,47 +752,92 @@
       "positionHeldInOtherCompany1": "",
       "pastPositionHeld1": ""
     },
-    "BunditRungsimanon": {
-      "fullName": "คุณบัณฑิต รุ่งสิมานนท์",
-      "position1": "ประธานเจ้าหน้าที่ฝ่ายการเงิน",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Rungroj": {
+      "fullName": "Mr. Roongroj Whangteeranon",
+      "age": "45 years",
+      "positions": [
+        "Accounting Manager (Possesses qualifications of Chief Accountant specified by announcements of the Department of Business Development, Ministry of Commerce)"
+      ],
+      "education": [
+        "Master’s Degree of Accountancy (Managerial Accounting) – Chulalongkorn University",
+        "Bachelor Degree of Business Administration (Accounting), Rajamangala Institute of Technology"
+      ],
+      "trainings": [],
+      "directorType": null,
+      "appointments": ["On 20 May 2024"],
+      "directorYears": null,
+      "workExp5y": [
+        "20/5/2024 – present  Accounting Manager of Sahathai Terminal Public Company Limited",
+        "15/8/2023 – 7/5/2024  Finance Manager of E-Tuk Factory (Thailand) Co., Ltd.",
+        "20/6/2022 – 15/5/2023  Senior Accounting Manager of JV MRT-TCC",
+        "1/4/2021 – 17/6/2022  Finance Manager of Cleanpro Laundry Co., Ltd.",
+        "26/6/2017 – 22/10/2020  Accounting Manager of Forth Smart Service Public Company Limited"
+      ],
+      "listedRoles": [],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [],
+      "otherOrgRoles": [],
+      "pastRoles": [],
+      "shareholding": "-None- (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": [],
+      "note": ""
     },
-    "RoongrojWhangteeranon": {
-      "fullName": "คุณรุ่งโรจน์  หวังธีระนนท์",
-      "position1": "ผู้จัดการฝ่ายบัญชี",
-      "education1": "",
-      "trainingHistory1": "",
-      "dateAppointment1": "",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+
+    "Sanga": {
+      "fullName": "Mr. Sanga Sanguansaksri",
+      "age": "59 years",
+      "positions": ["Chief Commercial Officer"],
+      "education": [
+        "Bachelor Degree of Science in Marine Navigation, Kasetsart University"
+      ],
+      "trainings": [],
+      "directorType": null,
+      "appointments": ["On 1 September 2024"],
+      "directorYears": null,
+      "workExp5y": [
+        "1/9/2024 – present  Chief Commercial Officer of Sahathai Terminal Public Company Limited",
+        "1999 – 31/8/2024  Commercial Director of Hutchison Laemchabang Terminal Limited Company Limited"
+      ],
+      "listedRoles": [],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [],
+      "otherOrgRoles": [],
+      "pastRoles": [],
+      "shareholding": "100 shares, 0.00% (as of December 30, 2024)",
+      "disciplinary": null,
+      "family": [],
+      "note": ""
     },
-    "SangaSanguansaksri": {
-      "fullName": "คุณสง่า สงวนศักดิ์ศรี",
-      "position1": "ประธานเจ้าหน้าที่ฝ่ายพาณิชย์",
-      "education1": "ปริญญาตรี วิทยาศาสตร์บัณฑิต สาขาวิชาวิทยาการเดินเรือ, มหาวิทยาลัยเกษตรศาสตร์",
-      "dateAppointment1": "1 กันยายน 2567",
-      "workExperiment1": "ประธานเจ้าหน้าที่ฝ่ายพาณิชย์ บมจ. สหไทย เทอร์มินอล",
-      "workExperiment2": " Commercial Director, บจ. ฮัทชิสัน แหลมฉบัง เทอร์มินัล"
-    },
-    "Papatssarin": {
+
+    "Papatsarin": {
       "fullName": "Miss Papatsarin Vichayasavetrat",
-      "position1": "Chief Financial Officer",
-      "education1": "Master Degree of Business Administration, Finance, Thammasat University",
-      "education2": "Bachelor Degree of Business Administration, Accounting, Assumption University",
-      "trainingHistory1": "19/5/2025 – present Chief Finance Officer of Sahathai Terminal Public Company Limited",
-      "trainingHistory2": "1/3/2567 – 18/5/2568 Chief Finance Officer of Mee Capital Company Limited",
-      "trainingHistory3": "1/5/2564 – 30/11/2566 Vice President of Finance and Accounting Division of Thai Orix Leasing Company Limited",
-      "trainingHistory4": "1/4/2561 – 30/9/2563 Finance Director of Mon Logistics group Company Limitedป",
-      "dateAppointment1": "19 May 2025",
-      "positionHeldInListCompany1": "",
-      "positionHeldInOtherCompany1": "",
-      "pastPositionHeld1": ""
+      "age": "48 years",
+      "positions": ["Chief Financial Officer"],
+      "education": [
+        "Master Degree of Business Administration, Finance, Thammasat University",
+        "Bachelor Degree of Business Administration, Accounting, Assumption University"
+      ],
+      "trainings": [],
+      "directorType": null,
+      "appointments": ["On 19 May 2025"],
+      "directorYears": null,
+      "workExp5y": [
+        "19/5/2025 – present  Chief Financial Officer of Sahathai Terminal Public Company Limited",
+        "1/3/2024 – 18/5/2025  Chief Financial Officer of Mee Capital Company Limited",
+        "1/5/2021 – 30/11/2023  Vice President of Finance and Accounting Division of Thai Orix Leasing Company Limited",
+        "1/4/2018 – 30/9/2020  Finance Director of Mon Logistics Group Company Limited"
+      ],
+      "listedRoles": [],
+      "relatedCompanyRoles": [],
+      "otherCompanyRoles": [],
+      "otherOrgRoles": [],
+      "pastRoles": [],
+      "shareholding": "-None- (as of May 31, 2025)",
+      "disciplinary": null,
+      "family": [],
+      "note": ""
     }
   }
 }
