@@ -26,6 +26,7 @@ export function Menu() {
         {menus.map(menu => {
           const isActive = menu.pathname === pathname
           if (menu.children && menu.children.length) {
+            console.log('menu.children', menu.children)
             return (
               <DropdownMenu
                 key={menu.title}
@@ -39,7 +40,7 @@ export function Menu() {
                       <Link
                         scroll={subMenu.isScroll}
                         key={subMenu.title}
-                        className={`!text-xs headline-6 !font-[300] block px-4 w-full py-3 hover:bg-blue-300 whitespace-nowrap hover:text-white rounded-sm transition-all`}
+                        className={`!text-xs headline-6 !font-[300] block px-4 w-full py-3 hover:bg-blue-300 whitespace-nowrap hover:text-white rounded-sm transition-all outline-none`}
                         target={subMenu.isExternalLink ? '_blank' : undefined}
                         rel={
                           subMenu.isExternalLink
