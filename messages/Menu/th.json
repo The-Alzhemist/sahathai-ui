@@ -9,7 +9,7 @@
     },
     "infrastructureContainers": {
       "title": "ท่าเทียบเรือ",
-      "machineryEquipment": "เครื่องจักรและอุปกรณ์สำคัญภายในท่าเรือ" ,
+      "machineryEquipment": "เครื่องจักรและอุปกรณ์สำคัญภายในท่าเรือ",
       "logisticInnovation": "Logistic Innovation",
       "opticalCharacterRecognition": "เทคโนโลยีการอ่านตู้สินค้าอัตโนมัติ (OCR)",
       "operationGuidelines": "คำแนะนำเกี่ยวกับขั้นตอนการปฏิบัติการ",
@@ -29,7 +29,18 @@
       "latestNews": "ข่าวล่าสุด",
       "pressRelease": "ข่าวประชาสัมพันธ์"
     },
-    "eService": "e-service",
+    "eService": {
+      "title": "e-service",
+      "TrackByContainer": "ตรวจสอบสถานะจากหมายเลขตู้คอนเทนเนอร์",
+      "TrackByBookingNumber": "ตรวจสอบสถานะจากหมายเลขการจอง",
+      "TrackByBLNumber": "ตรวจสอบสถานะจากหมายเลข B/L",
+      "ContainerDepotBooking": "Container Depot Booking",
+      "FreeZone": "จองพื้นที่วางตู้สินค้า",
+      "BTSTracking": "BTS Tracking",
+      "DGChecking": "DG Checking",
+      "BCDSBookingQueue": "จอง Q BCDS",
+      "EReceipt": "E-Receipt"
+    },
     "investorRelations": {
       "title": "นักลงทุนสัมพันธ์",
       "investorInformation": "ข้อมูลสำหรับนักลงทุน",

@@ -9,7 +9,7 @@
     },
     "infrastructureContainers": {
       "title": "Terminal",
-      "machineryEquipment": "Key Machinery and Equipment in the Port" ,
+      "machineryEquipment": "Key Machinery and Equipment in the Port",
       "logisticInnovation": "Logistic Innovation",
       "opticalCharacterRecognition": "Automatic Cargo Container Reading Technology (OCR)",
       "operationGuidelines": "Operational Guidelines",
@@ -29,7 +29,18 @@
       "latestNews": "Latest News",
       "pressRelease": "Press Release"
     },
-    "eService": "e-Service",
+    "eService": {
+      "title": "e-service",
+      "TrackByContainer": "Track by Container",
+      "TrackByBookingNumber": "TrackByBookingNumber",
+      "TrackByBLNumber": "Track by B/L Number",
+      "ContainerDepotBooking": "Container Depot Booking",
+      "FreeZone": "Free Zone",
+      "BTSTracking": "BTS Tracking",
+      "DGChecking": "DG Checking",
+      "BCDSBookingQueue": "BCDS Booking Queue",
+      "EReceipt": "E-Receipt"
+    },
     "investorRelations": {
       "title": "Investor Relations",
       "investorInformation": "Investor Information",
