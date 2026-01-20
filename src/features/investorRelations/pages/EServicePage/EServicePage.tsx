@@ -15,7 +15,7 @@ export function EServicePage() {
       <Menu />
       <SwiperVertical />
       <section className=' max-w-[1120px] w-full mx-auto px-5'>
-        <h2 className='mt-[100px] md:mt-[50px]  headline-2 text-center text-blue-400'>
+        <h2 className='mt-[100px] headline-2 text-center text-blue-400'>
           {t('Title')}
         </h2>
         <p className='mt-[15px] body-1 text-center text-black-6'>

@@ -7,7 +7,7 @@ export function Docking({ imageUrl, description }: DockProps) {
 
   return (
     <div>
-      <Image className='mb-5' src={imageUrl} alt='' width={666} height={328} />
+      <Image className='mb-5' src={imageUrl} alt='' width={720} height={328} />
 
       {lines.map((line, index) => (
         <p key={index} className='text-gray-800 text-sm mb-2'>

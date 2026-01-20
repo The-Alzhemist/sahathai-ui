@@ -10,7 +10,7 @@ export default function DocumentProcess() {
         className='mb-5 rounded-md'
         src='/infrastructure-containers/new/instrution-regarding-7.webp'
         alt='instrution-regarding-7'
-        width={666}
+        width={720}
         height={328}
       />
       {locale === 'th' && <DocumentProcessTH />}

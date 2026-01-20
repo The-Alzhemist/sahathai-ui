@@ -68,7 +68,7 @@ export function TrackingService() {
           />
           <TrackingCard
             title={<Fragment>{t('EReceipt')}</Fragment>}
-            imageUrl='/e-service/tracking-9.png'
+            imageUrl='/e-service/e-receipt.webp'
             link='https://stt.sahathaiterminal.com/EPayment/login2?redirectPage=~/booking.aspx'
           />
         </section>

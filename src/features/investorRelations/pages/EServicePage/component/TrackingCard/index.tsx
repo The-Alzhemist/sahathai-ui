@@ -30,7 +30,7 @@ export function TrackingCard({
           />
         </div>
 
-        <div className='py-[22px] px-[30px] h-[80px] relative'>
+        <div className='py-[22px] px-[30px]  relative'>
           <h3 className='text-navy headline-6 !leading-[20px] flex flex-wrap items-center whitespace-nowrap !text-sm'>
             {title}
           </h3>
