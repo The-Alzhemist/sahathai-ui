@@ -38,7 +38,7 @@ export const EmergingRisk = () => {
         <SustainCard
           title={t('emergingRisk.riskManagement.title')}
           content={t('emergingRisk.riskManagement.description')}
-          imageUrl={'/investor-relations/new/engineer-2.webp'}
+          imageUrl={'/investor-relations/engineer.webp'}
           position={'right'}
           key={'emergingRisk.riskManagement'}
         />

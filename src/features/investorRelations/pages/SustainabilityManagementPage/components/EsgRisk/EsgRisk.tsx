@@ -38,7 +38,7 @@ export const EsgRisk = () => {
         <SustainCard
           title={t('esgRisk.riskManagement.title')}
           content={t('esgRisk.riskManagement.description')}
-          imageUrl={'/investor-relations/new/ir-card-2.webp'}
+          imageUrl={'/investor-relations/new/engineer-2.webp'}
           position={'right'}
           key={'esgRisk.riskManagement'}
         />

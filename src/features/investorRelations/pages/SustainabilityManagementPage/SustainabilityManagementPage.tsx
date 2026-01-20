@@ -48,7 +48,7 @@ export function SustainabilityManagementPage() {
             title={t('economicDimension.title')}
             descriptions={[t('economicDimension.description')]}
             imagePath='/investor-relations/hand-red.png'
-            imgClassName='w-[70px] h-[49px]'
+            imgClassName='w-[70px] h-[49px] !mt-[20px]'
           />
           <SustainabilityCard
             title={t('socialDimension.title')}
@@ -58,7 +58,7 @@ export function SustainabilityManagementPage() {
               t('socialDimension.description3'),
             ]}
             imagePath='/investor-relations/people-red.png'
-            imgClassName='w-[80px] h-[60px]'
+            imgClassName='w-[80px] h-[55px] mt-[15px] '
           />
           <SustainabilityCard
             title={t('environmentalDimension.title')}
@@ -68,6 +68,7 @@ export function SustainabilityManagementPage() {
               t('environmentalDimension.description3'),
             ]}
             imagePath='/investor-relations/heart-red.png'
+            imgClassName='mt-[15px] w-fit h-[60px]'
           />
         </Animation>
       </section>
