@@ -51,7 +51,7 @@ export function DocumentAnnouncementPage({
         {group.map((groupItem: any, groupIndex: number) => (
           <div key={groupIndex} className=' rounded-md p-4'>
             {/* --- Group Header (always visible) --- */}
-            <h2 className=' text-lg md:text-3xl mb-7 text-blue-400 text-center '>
+            <h2 className='   text-left text-lg mb-7 text-blue-400 '>
               {groupItem.heading}
             </h2>
 

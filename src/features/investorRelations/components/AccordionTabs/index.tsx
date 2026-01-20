@@ -105,7 +105,7 @@ export const AccordionTabs = ({
                 <Link
                   href={rowItem.externalLink}
                   target='_blank'
-                  className='mt-2 mx-3'
+                  className='mt-0.5 mx-3   min-w-[60px] h-fit block px-[19px] py-[4px] border border-blue-300 rounded-[10px] bg-blue-50 hover:scale-105 transition-all'
                 >
                   <Image
                     src='/investor-relations/new/link-icon-3x.png'
