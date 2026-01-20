@@ -53,9 +53,9 @@ export function OperationGuidelines() {
       <div className="absolute opacity-100 inset-0 bottom-0 z-0 bg-[url('/infrastructure-containers/new/structure-bg-bottom-3x.webp')] bg-center bg-no-repeat bg-cover" />
 
       {/* content */}
-      <Animation className='relative  max-w-[930px] my-[90px] w-full mx-auto px-5'>
+      <Animation className='relative  max-w-[1040px] my-[90px] w-full mx-auto px-5'>
         <h1 className='headline-2 text-center text-navy'>{t('title')}</h1>
-        <section className='w-full flex flex-col md:flex-row gap-[24px]  p-[16px] mt-[20px] shadow-2 rounded-[20px] bg-[#eeeeee]'>
+        <section className='w-full flex flex-col md:flex-row gap-5  p-5 mt-[20px] shadow-2 rounded-[20px] bg-[#eeeeee]'>
           <Tabs className='flex overflow-auto md:block w-full md:w-[200px] shrink-0'>
             {tabs.map(({ key, title }) => (
               <Tab

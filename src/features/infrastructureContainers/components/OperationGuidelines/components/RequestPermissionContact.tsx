@@ -10,7 +10,7 @@ export default function RequestPermissionContact() {
         className='mb-5 rounded-md'
         src='/infrastructure-containers/new/instrution-regarding-6.webp'
         alt='instrution-regarding-6'
-        width={666}
+        width={720}
         height={328}
       />
       {locale === 'th' && <RequestPermissionContactInfoTH />}

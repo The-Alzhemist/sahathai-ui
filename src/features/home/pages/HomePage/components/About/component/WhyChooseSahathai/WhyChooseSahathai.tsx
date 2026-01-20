@@ -13,7 +13,7 @@ export const WhyChooseSahathai = () => {
             {t('title')}
           </span>
         </div>
-        <p className='!prompt border-black-6 font-light text-darkGray py-[8.5px] !leading-[29px] max-w-[285px]'>
+        <p className='!prompt border-black-6 font-light text-darkGray py-[8.5px] !leading-[29px] max-w-[247px]'>
           {t('content')}
         </p>
       </div>

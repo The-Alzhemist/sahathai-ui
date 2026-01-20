@@ -87,15 +87,15 @@ export const AccordionTabs = ({
                 </div>
               )}
 
-              {lang === 'en' && rowItem.englishFile?.filename && (
+              {lang === 'cn ' && rowItem.chineseFile?.filename && (
                 <div>
                   <DownloadButton
                     className={` ${
-                      !rowItem.englishFile.filename
+                      !rowItem.chineseFile.filename
                         ? 'opacity-30 pointer-events-none '
                         : ''
                     }`}
-                    href={rowItem.englishFile.filename}
+                    href={rowItem.chineseFile.filename}
                   />
                 </div>
               )}

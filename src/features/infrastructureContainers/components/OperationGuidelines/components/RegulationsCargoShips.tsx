@@ -10,7 +10,7 @@ export default function RegulationsCargoShips() {
         className='mb-5 border rounded-md'
         src='/infrastructure-containers/new/instrution-regarding-4-2x.webp'
         alt='instrution-regarding-4'
-        width={666}
+        width={720}
         height={328}
       />
       {locale === 'th' && <RegulationsCargoShipsInfoTH />}
