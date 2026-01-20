@@ -11,7 +11,7 @@ export default function OperatingHours() {
           className='mb-5'
           src='/infrastructure-containers/new/instrution-regarding-2-2x.webp'
           alt='instrution-regarding-2'
-          width={666}
+          width={720}
           height={328}
         />
       }

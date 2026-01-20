@@ -10,7 +10,7 @@ export default function SafetyRegulations() {
         className='mb-5 rounded-md'
         src='/infrastructure-containers/new/instrution-regarding-1-6-2x.webp'
         alt='instrution-regarding-4'
-        width={666}
+        width={720}
         height={328}
       />
       {locale === 'th' && <SafetyRegulationsInfoTH />}
