@@ -10,7 +10,7 @@ export default function HazardousGoods() {
         className='mb-5'
         src='/infrastructure-containers/new/instrution-regarding-5.webp'
         alt='instrution-regarding-5'
-        width={666}
+        width={720}
         height={328}
       />
       {locale === 'th' && <HazardousGoodsInfoTH />}

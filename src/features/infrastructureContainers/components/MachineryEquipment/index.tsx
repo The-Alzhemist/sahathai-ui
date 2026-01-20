@@ -9,10 +9,10 @@ export function MachineryEquipment() {
 
   return (
     <section className='relative pt-[100px]' id='machinery-equipment'>
-      <h2 className='prompt text-3xl md:text-[40px] font-[500] text-center text-navy'>
+      <h2 className='prompt text-xl md:text-[40px] font-[500] text-center text-navy'>
         {t('title')}
       </h2>
-      <div className='mt-[50px] space-y-[20px] max-w-[1042px] w-full mx-auto px-5'>
+      <div className='mt-[50px] space-y-[20px] max-w-[1082px] w-full mx-auto px-5'>
         <Card
           imageUrl={'/infrastructure-containers/new/infrastructure-1.webp'}
           title={t('gantryCrane.title')}

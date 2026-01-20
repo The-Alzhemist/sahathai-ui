@@ -10,7 +10,7 @@ export default function ServiceProcess() {
         className='mb-5 rounded-md'
         src='/infrastructure-containers/new/instrution-regarding-1-11.webp'
         alt='instrution-regarding-1-11'
-        width={666}
+        width={720}
         height={328}
       />
       {locale === 'th' && <ServiceProcessTH />}
