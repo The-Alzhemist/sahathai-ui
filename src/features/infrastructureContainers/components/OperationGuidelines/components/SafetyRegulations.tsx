@@ -8,7 +8,7 @@ export default function SafetyRegulations() {
     <section>
       <Image
         className='mb-5 rounded-md'
-        src='/infrastructure-containers/new/instrution-regarding-1-6.webp'
+        src='/infrastructure-containers/new/instrution-regarding-1-6-2x.webp'
         alt='instrution-regarding-4'
         width={666}
         height={328}

@@ -8,7 +8,7 @@ export default function RegulationsCargoShips() {
     <section>
       <Image
         className='mb-5 border rounded-md'
-        src='/infrastructure-containers/new/instrution-regarding-4.webp'
+        src='/infrastructure-containers/new/instrution-regarding-4-2x.webp'
         alt='instrution-regarding-4'
         width={666}
         height={328}

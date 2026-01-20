@@ -9,7 +9,7 @@ export default function OperatingHours() {
       {
         <Image
           className='mb-5'
-          src='/infrastructure-containers/new/instrution-regarding-2.webp'
+          src='/infrastructure-containers/new/instrution-regarding-2-2x.webp'
           alt='instrution-regarding-2'
           width={666}
           height={328}

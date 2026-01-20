@@ -1,36 +1,35 @@
 import { getTranslations } from 'next-intl/server'
-
-import { BlogCard } from '../../../components/BlogCard'
 import React from 'react'
-import { Menu } from '@/components/Menu'
-
-import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
-import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import Image from 'next/image'
-import { Brochure } from '@/features/news/components/Brochure'
-import { redirect } from 'next/navigation'
 
-export default async function blog({
+import { Menu } from '@/components/Menu'
+import { BlogCard } from '../../../components/BlogCard'
+import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
+import { Pagination } from '@/features/blog/components/Paginate/Pagination'
+import { Brochure } from '@/features/news/components/Brochure'
+
+import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
+
+export default async function Blog({
   params,
   searchParams,
 }: {
   params: { locale: string }
   searchParams: { page?: string; search?: string }
 }) {
-  // translation
+  /* ---------------- translations ---------------- */
   const t = await getTranslations('NewsPage')
 
-  if (!searchParams.page) {
-    redirect(`/${params.locale}/blog?page=1`)
-  }
-
+  /* ---------------- normalize params ---------------- */
   const locale = params.locale
-  const page = Number(searchParams.page ?? 1)
+
+  const pageParam = Number(searchParams.page)
+  const page = Number.isInteger(pageParam) && pageParam > 0 ? pageParam : 1
+
   const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  //  fetching data
+  /* ---------------- fetch data ---------------- */
   const { stories, total } = await fetchAllBlog({
     page,
     perPage,
@@ -47,68 +46,59 @@ export default async function blog({
 
   const totalPages = Math.ceil(total / perPage)
 
+  /* ---------------- render ---------------- */
   return (
-    <main>
+    <main className='min-h-screen'>
       <Menu />
 
-      <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[400px]'>
+      {/* Latest Blog */}
+      <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'>
         <h2 className='headline-2 text-blue-400 text-center mb-7'>
           {t('latestBlog')}
         </h2>
 
-        <LatestBlogCard blog={latestBlog} locale={locale} page={'blog'} />
+        <LatestBlogCard blog={latestBlog} locale={locale} page='blog' />
       </section>
 
-      {/*All blog*/}
-      <section className='bg-white pt-[70px] min-h-[400px]'>
-        <div className='max-w-[1100px] mx-auto p-6'>
+      {/* All Blog */}
+      <section className='bg-white pt-[70px] min-h-[600px]'>
+        <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[600px]'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
             {t('allBlog')}
           </h2>
 
-          {/* Search box แบบง่าย (Server + link) */}
-          {/*<form action="" className="mb-4 flex gap-2">*/}
-          {/*  <input*/}
-          {/*    name="search"*/}
-          {/*    defaultValue={search ?? ''}*/}
-          {/*    placeholder="Search news..."*/}
-          {/*    className="border px-3 py-1 rounded w-full"*/}
-          {/*  />*/}
-          {/*  <button className="px-4 py-1 bg-blue-600 text-white rounded">Search</button>*/}
-          {/*</form>*/}
-
-          <section className='flex flex-col justify-center items-center '>
-            <div className=' flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
-              {stories.length ? (
-                stories.map((s: any) => (
+          {/* Blog list */}
+          <div className='flex-1 flex justify-center items-center'>
+            {stories.length ? (
+              <div className='flex flex-wrap gap-5 justify-center'>
+                {stories.map((s: any) => (
                   <BlogCard
                     key={s.content.body[0]._uid}
                     title={s.content.body[0].newsTitle}
                     content={s.content}
                     createdAt={s.created_at ?? ''}
                     slug={s.slug}
-                    page={'blog'}
+                    page='blog'
                   />
-                ))
-              ) : (
-                <p className='text-gray-500'>No results found.</p>
-              )}
-            </div>
-          </section>
+                ))}
+              </div>
+            ) : (
+              <p className='text-gray-500'>No results found.</p>
+            )}
+          </div>
 
-          {/**/}
-          <section className='flex justify-center mb-[90px]'>
+          {/* Pagination */}
+          <div className='mt-auto flex justify-center mb-[90px]'>
             <Pagination page={page} totalPages={totalPages} search={search} />
-          </section>
-          {/*  */}
+          </div>
         </div>
       </section>
 
       {/* Brochure */}
-      <section className='relative  min-h-[450px] flex justify-center items-center px-5'>
+      <section className='relative min-h-[450px] flex justify-center items-center px-5'>
         <Image
           src='/news/blog-contact-bg.webp'
-          alt='Sustainability Background'
+          alt='Blog Background'
           fill
           className='absolute inset-0 object-cover object-center z-0'
           priority
