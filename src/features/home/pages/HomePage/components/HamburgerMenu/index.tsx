@@ -60,7 +60,7 @@ export function HamburgerMenu({ className }: HamburgerMenuProps) {
     <Fragment>
       <button
         className={cn(
-          'fixed bottom-[20px] right-[20px] flex justify-center items-center w-[50px] h-[50px] bg-primary rounded-full text-white',
+          'z-10 fixed bottom-[20px] right-[20px] flex justify-center items-center w-[50px] h-[50px] bg-primary rounded-full text-white',
           className
         )}
         type='button'
