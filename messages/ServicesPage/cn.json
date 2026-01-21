@@ -1,63 +1,63 @@
 {
   "ServicesPage": {
     "ComprehensiveCommercialPortServices": {
-      "title": "Comprehensive Commercial Port Services",
-      "content": "Two private river ports capable of handling up to 740,000 TEUs/year. Empty container maintenance yard with a capacity of up to 350,000 TEUs/year.",
+      "title": "综合商业港口服务",
+      "content": "拥有两座可处理年吞吐量达 740,000 标准箱（TEUs）的私营内河港口，并设有空箱维修堆场，年处理能力最高可达 350,000 标准箱（TEUs）。",
       "commercialDock": {
-        "title": "Commercial Dock",
-        "content": "Barge terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
+        "title": "商业码头",
+        "content": "驳船码头泊位宽度为 96 米，可同时停靠 2 艘船舶。"
       },
       "bargeServices": {
-        "title": "Barge Services",
-        "content": "Supports berthing for international cargo ships or feeder ships (approximately 1,000 TEUs) and barges (approximately 40–240 TEUs). Sahathai Terminal has two ports: Sahathai Terminal with a berth width of 170 meters and BBT Barge Terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
+        "title": "驳船服务",
+        "content": "可停靠国际货轮或支线船（约 1,000 标准箱）以及驳船（约 40–240 标准箱）。沙泰码头设有两个港区：沙泰码头泊位宽度为 170 米，以及 BBT 驳船码头泊位宽度为 96 米，均可同时停靠 2 艘船舶。"
       },
       "containerHandling": {
-        "title": "Container Handling | CFS LCL",
-        "content": "At Sahathai Terminal, we handle all types of containers such as 20, 40, 45 TEUs, high cube containers, and flat rack containers. This includes both full container load (FCL) and less than container load (LCL). With an 80,000 square meter area for CFS and CY and modern equipment such as gantry cranes and forklifts, we emphasize safety in every step, from lifting and packing to unloading and maintenance. The CFS location within the terminal ensures seamless transfers, with efficient and safe packing to guarantee secure delivery of goods."
+        "title": "集装箱装卸 | CFS 拼箱服务",
+        "content": "沙泰码头可处理各类集装箱，包括 20、40、45 标准箱、高箱（High Cube）及框架箱（Flat Rack），涵盖整箱（FCL）与拼箱（LCL）业务。码头配备 80,000 平方米的 CFS 与 CY 场地，以及龙门吊、叉车等现代化设备，严格执行从吊装、装箱、卸货到维修的各个安全环节。CFS 位于码头内部，确保货物转运顺畅、高效且安全，为客户提供可靠的交付保障。"
       },
       "containerMaintenance": {
-        "title": "Container Maintenance",
-        "content": "This service includes cleaning and repairing containers to prepare them for export use. Empty containers can originate from importers returning them or shipping lines bringing them in."
+        "title": "集装箱维修服务",
+        "content": "提供集装箱清洗与维修服务，确保集装箱符合出口使用标准。空箱来源包括进口客户归还的集装箱或船公司调入的集装箱。"
       },
       "groundContainerTransportationServices": {
-        "title": "Ground Container Transportation Services",
-        "content": "Door-to-Door services to facilitate customer operations and offer an option for seamless container transportation from Laem Chabang Port."
+        "title": "陆路集装箱运输服务",
+        "content": "提供门到门（Door-to-Door）运输服务，协助客户顺利开展业务，并可实现从林查班港（Laem Chabang Port）无缝衔接的集装箱运输方案。"
       },
       "containerService": {
-        "title": "Container Yard and Warehouse Services",
-        "content": "We provide container yard and warehouse facilities to support our customers, including a bonded container yard in the free zone and a bonded warehouse with an area of 6,301 square meters."
+        "title": "集装箱堆场与仓储服务",
+        "content": "提供完善的集装箱堆场及仓储设施，包括自由区内的保税集装箱堆场，以及面积达 6,301 平方米的保税仓库，以全面支持客户需求。"
       }
     },
     "ContainerStorageWarehouseServices": {
-      "title": "Container Storage and Warehouse Services",
-      "content1": "Container storage yards in the Free Trade Zone",
-      "content2": "Bonded warehouse with an area of 6,301 square meters",
-      "content3": "Free Trade Zone warehouse with an area of 10,686 square meters",
-      "content4": "General warehouse with an area of 15,606 square meters",
+      "title": "集装箱堆存与仓储服务",
+      "content1": "自由贸易区集装箱堆场",
+      "content2": "保税仓库，面积 6,301 平方米",
+      "content3": "自由贸易区仓库，面积 10,686 平方米",
+      "content4": "普通仓库，面积 15,606 平方米",
       "freeTradeZoneContainerYard": {
-        "title": "Free Trade Zone Container Yard",
-        "content": "The company provides container storage services in the Free Trade Zone, primarily serving a major automobile manufacturer. This manufacturer uses the space to store imported auto parts for car assembly in Thailand. The parts are stored in the Free Trade Zone to manage import duties and customs clearance, which are paid only when the parts are withdrawn for use in production."
+        "title": "自由贸易区集装箱堆场",
+        "content": "公司在自由贸易区内提供集装箱堆存服务，主要服务于一家大型汽车制造商。该制造商利用该区域存放进口汽车零部件，用于在泰国进行车辆组装。零部件存放于自由贸易区内，可有效管理进口关税及海关清关流程，仅在提取零部件用于生产时才需缴纳相关税费。"
       },
       "generalWarehouseandBondedWarehouse": {
-        "title": "General and Bonded Warehouse",
-        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n \u2022 Storing\n \u2022 Exhibiting\n \u2022 Selling\n \u2022 Packing or assembling stored items\nThis reduces production or import costs for goods from abroad."
+        "title": "普通仓库与保税仓库",
+        "content": "配备温控系统的仓库，总可出租面积约 6,301 平方米，并获准依据海关法规用于以下用途：\n • 存储\n • 展示\n • 销售\n • 对存储货物进行包装或组装\n有助于降低进口货物的生产成本或进口成本。"
       },
       "coldStorageWarehouse": {
-        "title": "Cold Storage Warehouse",
-        "content": "Enhancing warehouse efficiency with automated systems using robots to replace human operations within the cold storage facility."
+        "title": "冷藏仓库",
+        "content": "通过在冷藏仓库中引入自动化系统，采用机器人替代人工操作，以提升仓储运营效率。"
       },
       "freeTradeZoneWarehouse": {
-        "title": "Free Trade Zone Warehouse",
-        "content": "To ensure timely inventory management for production and assist in import tax planning, the Free Trade Zone warehouse offers:\n \u2022 Customs offices\n \u2022 Food and Drug Administration officers\n \u2022 Agricultural officers\n \u2022 Fisheries officers\nAll customs procedures and product inspections can be conveniently carried out at the port."
+        "title": "自由贸易区仓库",
+        "content": "为确保生产所需库存的及时管理并协助进口税务规划，自由贸易区仓库配备：\n • 海关办公室\n • 食品药品监督管理人员\n • 农业部门人员\n • 渔业部门人员\n所有海关手续及产品检验均可在码头内便捷完成。"
       },
       "serviceProviderImportExport": {
-        "title": "Import and Export Representation Services",
-        "content": "The company acts as a freight forwarder for exporters, including slot arrangement for cargo ships and subcontracting representatives for the company’s shipping operations."
+        "title": "进出口代理服务",
+        "content": "公司作为出口商的货运代理，提供船舶舱位安排服务，并作为公司航运业务的分包代理，全面支持进出口运营。"
       }
     },
     "InventoryManagementServices": {
-      "title": "Inventory Management Services",
-      "content": "The company provides inventory management services for clients' warehouses, ensuring smooth and convenient operations."
+      "title": "库存管理服务",
+      "content": "公司为客户的仓库提供库存管理服务，确保运营流程顺畅、高效且便捷。"
     }
   }
 }

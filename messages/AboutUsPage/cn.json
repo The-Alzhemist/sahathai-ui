@@ -1,237 +1,238 @@
 {
   "AboutUsPage": {
     "Tabs": {
-      "visionMission": "Vision and Mission",
-      "ourCommitmentSuccess": "Our Commitment and Success",
-      "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
-      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
+      "visionMission": "愿景与使命",
+      "ourCommitmentSuccess": "我们的承诺与成就",
+      "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
+      "corporateGroupStructureOrganizationalStructure": "集团架构与组织结构"
     },
+
     "VisionMissionValues": {
       "Slogan": {
-        "title": "This is what we believe in as a leading port operator, the operational approach of Sahathai Terminal, and our commitment to our customers and partners."
+        "title": "这是我们作为领先港口运营商所秉持的信念，体现了沙泰码头的运营理念，以及我们对客户与合作伙伴的承诺。"
       },
       "Vision": {
-        "content": "This is what we believe in as a leading port operator, the operational approach of Sahathai Terminal, and our commitment to our customers and partners.",
+        "content": "这是我们作为领先港口运营商所秉持的信念，体现了沙泰码头的运营理念，以及我们对客户与合作伙伴的承诺。",
         "vision": {
-          "title": "Vision",
-          "content": "To be a leader in providing integrated logistics services with innovative solutions that truly meet customer needs."
+          "title": "愿景",
+          "content": "成为提供一体化物流服务的领导者，以创新解决方案真正满足客户需求。"
         }
       },
       "OurMission": {
-        "title": "Mission",
+        "title": "使命",
         "missionToCustomers": {
-          "title": "Our Mission to Customers",
-          "content": "“Creating value for customers with smart solutions and efficient services.”"
+          "title": "我们对客户的使命",
+          "content": "“通过智能解决方案和高效服务，为客户创造价值。”"
         },
         "missionToShareholders": {
-          "title": "Our Mission to Shareholders",
-          "content": "“Creating value for our shareholders through sustainable growth and high-standard management.”"
+          "title": "我们对股东的使命",
+          "content": "“通过可持续增长和高标准管理，为股东创造价值。”"
         },
         "missionToEmployees": {
-          "title": "Our Mission to Employees",
-          "content": "“Creating a positive work environment while promoting learning, skill development, and career advancement.”"
+          "title": "我们对员工的使命",
+          "content": "“营造积极的工作环境，促进学习、技能提升与职业发展。”"
         },
         "missionToSociety": {
-          "title": "Our Mission to the Society",
-          "content": "“Supporting, contributing to, and taking responsibility for society and the environment.”"
+          "title": "我们对社会的使命",
+          "content": "“支持社会发展，积极贡献，并对社会与环境承担责任。”"
         }
       },
       "CoreValues": {
-        "title": "Core Values",
+        "title": "核心价值观",
         "serviceMind": {
-          "title": "SERVICE MIND",
-          "content": "Serving with heart."
+          "title": "服务精神",
+          "content": "以真诚之心提供服务。"
         },
         "openness": {
-          "title": "OPENNESS",
-          "content": "Open to new ideas and positive change."
+          "title": "开放",
+          "content": "乐于接受新理念与积极改变。"
         },
         "integrity": {
-          "title": "INTEGRITY",
-          "content": "Honest and transparent."
+          "title": "诚信",
+          "content": "诚实守信，透明运营。"
         },
         "innovation": {
-          "title": "INNOVATION",
-          "content": "Creating new and meaningful innovations."
+          "title": "创新",
+          "content": "创造有价值且有意义的创新。"
         }
       }
     },
     "CommitmentSuccess": {
-      "startingBusiness": "Established in 2007",
-      "content": "Sahathai Terminal is a privately owned company that began operations in 2007. The company operates on a total area of 315,200 square meters, which includes a container maintenance and repair area, an on-site customs office, and fully equipped port facilities for full-scale cargo handling.With skilled and experienced personnel, Sahathai Terminal is located along the Chao Phraya River and offers comprehensive, end-to-end services. You can rely on us for complete solutions and a wide range of value-added services tailored to your needs. All our services are certified to global standards, while maintaining the flexibility that only an independent terminal operator can provide.",
+      "startingBusiness": "成立于 2007 年",
+      "content": "沙泰码头是一家私营企业，成立并开始运营于 2007 年。公司占地总面积为 315,200 平方米，涵盖集装箱维修与保养区、现场海关办公室，以及配备齐全、可进行全面货物装卸作业的港口设施。凭借专业且经验丰富的团队，沙泰码头坐落于昭披耶河沿岸，提供全面的一站式综合服务。我们为客户量身定制完整解决方案及多样化的增值服务。所有服务均通过国际标准认证，同时保持独立码头运营商所特有的灵活性。",
       "2551": {
         "year": "2008",
-        "title": "Established Sahathai River Terminal"
+        "title": "成立沙泰河港码头（Sahathai River Terminal）"
       },
       "2556": {
         "year": "2013",
-        "title": "Rebranded to 'Sahathai Terminal"
+        "title": "品牌重塑为“沙泰码头（Sahathai Terminal）”"
       },
       "2558": {
         "year": "2015",
-        "title": "Expanded the new port Terminal",
-        "content": "Expanded a new terminal in collaboration with MOL, operating under the name ‘Bangkok Barge Terminal’ (BBT)"
+        "title": "扩建新港口码头",
+        "content": "与日本邮船株式会社（MOL）合作扩建新码头，并以“曼谷驳船码头（Bangkok Barge Terminal：BBT）”名义运营"
       },
       "2559_2560": {
         "year": "2016-2017",
-        "title": "Launched waterborne container transport services.",
-        "content": "Commenced waterborne container transportation via barge services operated by Bangkok Barge Services"
+        "title": "推出水路集装箱运输服务",
+        "content": "通过曼谷驳船服务公司（Bangkok Barge Services）正式开展驳船水路集装箱运输业务"
       },
       "2560_2562": {
         "year": "2017-2019",
-        "content": "Built a new depot",
-        "content2": "Container storage yard",
-        "content3": "Bonded warehouse",
-        "content4": "Formed a joint venture company to invest in two projects (international cargo port / distribution center)."
+        "content": "建设新堆场",
+        "content2": "集装箱存储场地",
+        "content3": "保税仓库",
+        "content4": "成立合资公司，投资两个项目（国际货运港口 / 配送中心）。"
       },
       "2568": {
         "year": "2025",
-        "content": "We aim to be a leader in providing comprehensive and sustainable logistics services, focusing on terminal operations, sea and land transportation, warehousing and distribution centers, as well as value-added services that enhance benefits for our customers."
+        "content": "我们的目标是成为提供全面且可持续物流服务的行业领导者，业务重点涵盖码头运营、海陆运输、仓储与配送中心，以及为客户创造更高价值的多元化增值服务。"
       }
     },
     "BoardAndExecutives": {
-      "content": "Sahathai Terminal places great importance on internal communication within the organization. We value personnel at all levels and promote smooth collaboration across all parties. Supervisors work closely with the personnel under their care, from sales to skill development. We highly emphasize equality within the organization to ensure that all our employees understand and recognize their value to the organization. This ensures that everyone shares a common goal, which is to perform and deliver services that best meet our customers' needs.",
+      "content": "沙泰码头高度重视组织内部的沟通与协作，重视各层级员工的价值，并促进各方之间的顺畅合作。管理层与员工保持紧密联系，从业务销售到技能发展给予持续支持。公司强调组织内部的平等性，确保每一位员工都能理解并认可自身对组织的重要价值，从而形成共同目标，即提供最符合客户需求的高质量服务。",
       "Board": {
-        "title": "Board of Directors"
+        "title": "董事会"
       },
       "Executives": {
-        "title": "Executive Committee"
+        "title": "执行委员会"
       },
       "Subcommittee": {
-        "title": "Audit Committee",
+        "title": "审计委员会",
         "auditCommittee": {
-          "title": "Audit Committee",
-          "clickLinkText": "Click here",
-          "intro": "An audit committee is an operating committee of a company’s board of directors that is in charge of overseeing financial reporting and disclosure. Sahathai Terminal’s Audit Committee members are:",
+          "title": "审计委员会",
+          "clickLinkText": "点击此处",
+          "intro": "审计委员会是董事会下设的专门委员会，负责监督公司的财务报告与信息披露工作。沙泰码头审计委员会成员包括：",
           "members": [
             {
-              "name": "Ms.Vilai Chattanrassamee",
-              "role": "Chairman of the Audit Committee"
+              "name": "Ms. Vilai Chattanrassamee",
+              "role": "审计委员会主席"
             },
             {
-              "name": "Mr.Yuth Vorachattarn",
-              "role": "Audit Committee Member"
+              "name": "Mr. Yuth Vorachattarn",
+              "role": "审计委员会委员"
             },
             {
-              "name": "Dr.Vithit Leenutaphong",
-              "role": "Audit Committee Member"
+              "name": "Dr. Vithit Leenutaphong",
+              "role": "审计委员会委员"
             }
           ],
-          "intro2": "The company has internal audit and directly report to Audit committee and also appointment Dharmniti Auditing Co., Ltd to be internal audit.",
-          "noteTitle": "Note",
+          "intro2": "公司设有内部审计部门，并直接向审计委员会汇报工作，同时委任 Dharmniti Auditing Co., Ltd 作为内部审计机构。",
+          "noteTitle": "备注",
           "note": [
-            { "content": "Has knowledge and experience in accounting" },
+            { "content": "具备会计相关知识与经验" },
             {
-              "content": "The Company has considered the qualifications of the independent directors and the audit committee"
+              "content": "公司已充分审议独立董事及审计委员会成员的资格"
             }
           ],
-          "pdfTitle": "According to the definition of the Securities and Exchange Commission"
+          "pdfTitle": "依据证券交易委员会的相关定义"
         },
         "executiveCommittee": {
-          "title": "Executive Committee",
-          "intro": "The Executive Committee meets regularly and sets organizational policy and direction. Sahathai Terminal’s Executive Committee members are:",
+          "title": "执行委员会",
+          "intro": "执行委员会定期召开会议，负责制定公司的经营政策与发展方向。沙泰码头执行委员会成员包括：",
           "members": [
             {
-              "name": "Mr.Wichit Rattanasirivilai",
-              "role": "Chairman of the Executive Committee"
+              "name": "Mr. Wichit Rattanasirivilai",
+              "role": "执行委员会主席"
             },
             {
-              "name": "Mr.Chairat Chongyangyuenvong",
-              "role": "Executive Committee Member"
+              "name": "Mr. Chairat Chongyangyuenvong",
+              "role": "执行委员会委员"
             },
             {
-              "name": "Mr.Suchin Ratanasirivilai",
-              "role": "Executive Committee Member"
+              "name": "Mr. Suchin Ratanasirivilai",
+              "role": "执行委员会委员"
             },
             {
-              "name": "Mr.Anggoon Srisunthorn",
-              "role": "Executive Committee Member"
+              "name": "Mr. Anggoon Srisunthorn",
+              "role": "执行委员会委员"
             },
             {
-              "name": "Ms.Sauwakun Karuchit",
-              "role": "Executive Committee Member"
+              "name": "Ms. Sauwakun Karuchit",
+              "role": "执行委员会委员"
             },
             {
-              "name": "Mr.Banchai Karuchit",
-              "role": "Executive Committee Member"
+              "name": "Mr. Banchai Karuchit",
+              "role": "执行委员会委员"
             }
           ]
         },
         "nominationAndRemunerationCommittee": {
-          "title": "Nomination and Remuneration Committee",
-          "intro": "Sahathai Terminal has established a nomination and remuneration committee with formally delegated duties and responsibilities and with written terms of reference. The committee members are",
+          "title": "提名与薪酬委员会",
+          "intro": "沙泰码头已设立提名与薪酬委员会，并以书面形式明确其职责与权限。委员会成员包括：",
           "members": [
             {
-              "name": "Dr.Vithit Leenutaphong",
-              "role": "Chairman of the Nomination and Remuneration Committee"
+              "name": "Dr. Vithit Leenutaphong",
+              "role": "提名与薪酬委员会主席"
             },
             {
-              "name": "Mr.Yuth Vorachattarn",
-              "role": "Nomination and Remuneration Committee Member"
+              "name": "Mr. Yuth Vorachattarn",
+              "role": "提名与薪酬委员会委员"
             },
             {
-              "name": "Ms.Vilai Chattanrassamee",
-              "role": "Nomination and Remuneration Committee Member"
+              "name": "Ms. Vilai Chattanrassamee",
+              "role": "提名与薪酬委员会委员"
             },
             {
-              "name": "Mr.Wichit Rattanasirirvilai",
-              "role": "Nomination and Remuneration Committee Member"
+              "name": "Mr. Wichit Rattanasirirvilai",
+              "role": "提名与薪酬委员会委员"
             },
             {
-              "name": "Ms.Sauwakun Karuchit",
-              "role": "Nomination and Remuneration Committee Member"
+              "name": "Ms. Sauwakun Karuchit",
+              "role": "提名与薪酬委员会委员"
             }
           ]
         },
         "enterpriseRiskManagementCommittee": {
-          "title": "Risk Management Committee",
-          "intro": "The Company has appointed Risk Management Governance and Sustainability Committee with the duty to oversee that the overall risk management process is at appropriate level. There are 3 committees",
+          "title": "风险管理委员会",
+          "intro": "公司设立风险管理、公司治理与可持续发展委员会，负责监督整体风险管理流程是否处于适当水平。",
           "members": [
             {
-              "name": "Mr.Yuth Vorachattarn",
-              "role": "Chairman of the Risk Management Governance and Sustainability Committee"
+              "name": "Mr. Yuth Vorachattarn",
+              "role": "风险管理、公司治理与可持续发展委员会主席"
             },
             {
-              "name": "Ms.Vilai Chattanrassamee",
-              "role": "Risk Management Governance and Sustainability Committee"
+              "name": "Ms. Vilai Chattanrassamee",
+              "role": "风险管理、公司治理与可持续发展委员会委员"
             },
             {
-              "name": "Mr.Banchai Karuchit",
-              "role": "Risk Management Governance and Sustainability Committee"
+              "name": "Mr. Banchai Karuchit",
+              "role": "风险管理、公司治理与可持续发展委员会委员"
             }
           ]
         }
       }
     },
     "CorporateGroupOrganizationalStructure": {
-      "corporateGroup": "Corporate Group Structure",
+      "corporateGroup": "集团架构",
       "organizationalStructure": {
-        "title": "Organizational Structure",
-        "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
+        "title": "组织结构",
+        "content": "下图展示了截至 2023 年 11 月 10 日公司的组织结构。沙泰码头公众有限公司董事会下设风险管理、公司治理与可持续发展委员会、审计委员会、执行委员会，以及提名与薪酬委员会。"
       }
     },
     "ExecutiveProfile": {
       "labels": {
-        "age": "Age",
-        "positions": "Present Position",
-        "education": "Education",
-        "trainings": "Training Program",
-        "directorType": "Type of Directors",
-        "appointments": "Date of Appointment",
-        "directorYears": "Length of Service",
-        "workExp5y": "Experience (past 5 years)",
-        "listedRoles": "Directorship(s) in Listed Company",
-        "relatedCompanyRoles": "Directorship(s) in Related Companies",
-        "otherCompanyRoles": "Directorship(s) in Other Company",
-        "otherOrgRoles": "Directorship(s) in Other Organization",
-        "pastRoles": "Former (last 5 years)",
-        "shareholding": "Percentage of the Company’s Shareholding",
-        "disciplinary": "Legal record in the last 5 years",
-        "family": "Family Relationship with Other Directors and Executives",
-        "note": "หมายเหตุ"
+        "age": "年龄",
+        "positions": "现任职务",
+        "education": "学历",
+        "trainings": "培训课程",
+        "directorType": "董事类型",
+        "appointments": "任职日期",
+        "directorYears": "任职年限",
+        "workExp5y": "工作经历（过去 5 年）",
+        "listedRoles": "上市公司董事职务",
+        "relatedCompanyRoles": "关联公司董事职务",
+        "otherCompanyRoles": "其他公司董事职务",
+        "otherOrgRoles": "其他机构董事职务",
+        "pastRoles": "曾任职务（过去 5 年）",
+        "shareholding": "持有公司股份比例",
+        "disciplinary": "过去 5 年的法律或纪律记录",
+        "family": "与其他董事及高管的亲属关系",
+        "note": "备注"
       },
       "common": {
-        "none": "-None-"
+        "none": "无"
       }
     },
     "Yuth": {

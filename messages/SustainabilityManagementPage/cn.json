@@ -1,51 +1,51 @@
 {
   "SustainabilityManagementPage": {
-    "title": "Sustainability Management",
-    "subTitle": "(SUSTAINABLE DEVELOPMENT)",
+    "title": "可持续发展管理",
+    "subTitle": "（可持续发展）",
     "economicDimension": {
-      "title": "Economic Dimension",
-      "description": "Committed to developing services and enhancing Thailand’s logistics industry by focusing on customer needs, creating value for clients, and adopting new innovations to improve service efficiency, providing comprehensive and world-class standards."
+      "title": "经济维度",
+      "description": "致力于以客户需求为核心，发展服务并提升泰国物流产业，通过为客户创造价值并引入新创新以提高服务效率，提供全面且符合国际一流标准的服务。"
     },
     "socialDimension": {
-      "title": "Social Dimension",
-      "description": "Responsibility to employees by promoting health and safety, developing employee potential, and supporting equal career growth opportunities.",
-      "description2": "Promote good corporate governance and manage the supply chain responsibly and fairly.",
-      "description3": "Strictly comply with laws and regulations, and combat fraud and corruption."
+      "title": "社会维度",
+      "description": "对员工承担责任，促进职业健康与安全，提升员工潜力，并支持公平的职业发展机会。",
+      "description2": "推动良好的公司治理，并以负责任且公平的方式管理供应链。",
+      "description3": "严格遵守法律法规，坚决打击欺诈与腐败行为。"
     },
     "environmentalDimension": {
-      "title": "Environmental Dimension",
-      "description": "Promote improved living conditions, job creation, and education for nearby communities.",
-      "description2": "Conduct business with consideration of impacts on communities and society.",
-      "description3": "Manage resources efficiently for maximum benefit."
+      "title": "环境维度",
+      "description": "促进周边社区生活条件改善、就业机会创造及教育发展。",
+      "description2": "在经营过程中充分考虑对社区与社会的影响。",
+      "description3": "高效管理资源，实现最大化效益。"
     },
     "esgRisk": {
-      "title": "ESG Risk",
+      "title": "ESG 风险",
       "businessContinuityManagement": {
-        "title": "Business Continuity Management Risk",
-        "description": "With various uncertainties arising today, whether from natural disasters or human causes—such as the COVID-19 pandemic, disruptions in imports and exports, and container shortages—these all impact the company’s business operations. Insufficient preparedness could hinder continuous business operations, posing a significant business risk."
+        "title": "业务连续性管理风险",
+        "description": "当前存在诸多不确定因素，无论是自然灾害还是人为因素，例如新冠疫情、进出口中断以及集装箱短缺等，均可能对公司的业务运营产生影响。若准备不足，可能导致业务无法持续运作，从而构成重大经营风险。"
       },
       "riskManagement": {
-        "title": "Risk Management",
-        "description": "The company has prepared to handle potential crises by developing a Business Continuity Plan (BCP) for different scenarios. This includes processes for crisis response, impact mitigation, and business recovery planning, such as plans for pandemic emergencies, IT system failures and cybersecurity, and disaster incidents. Regular annual drills are conducted to ensure employees and stakeholders have confidence that, in times of crisis, plans can be executed effectively, allowing the company to continue operations seamlessly."
+        "title": "风险管理",
+        "description": "公司已针对潜在危机制定业务连续性计划（BCP），涵盖多种情景的应对措施，包括危机响应流程、影响缓解及业务恢复规划，如疫情应急、信息技术系统故障与网络安全事件，以及各类灾害事故。公司每年定期开展演练，以确保员工及相关方在危机发生时能够有效执行相关计划，保障业务持续稳定运行。"
       }
     },
     "emergingRisk": {
-      "title": "Emerging Risk",
+      "title": "新兴风险",
       "cyber": {
-        "title": "Cybersecurity and Personal Data Protection Risk",
-        "description": "Information technology systems are the company’s core infrastructure for data storage. As business operations increasingly rely on technology—integrating digital systems and connecting data across devices and departments via the internet—along with remote working during the COVID-19 pandemic, the company adopted technologies supporting remote operations to ensure continuity under its Business Continuity Plan (BCP). However, these changes heightened exposure to cyber threats, such as network attacks, unauthorized data destruction, and commercial data leaks, potentially causing financial loss, damaging credibility, or resulting in legal penalties."
+        "title": "网络安全与个人数据保护风险",
+        "description": "信息技术系统是公司数据存储与运营的核心基础设施。随着业务对数字化系统的依赖不断加深，通过互联网实现设备与部门间的数据互联，以及在新冠疫情期间推行远程办公，公司引入多项支持远程运营的技术以符合业务连续性计划（BCP）。然而，这些变化也增加了网络风险暴露，例如网络攻击、未经授权的数据破坏以及商业数据泄露，可能导致财务损失、信誉受损或法律责任。"
       },
       "riskManagement": {
-        "title": "Risk Management",
-        "description": "The company recognizes the growing frequency, variety, and severity of cyber threats. As a result, it has established IT security policies and created contingency plans covering computer virus attacks, data breaches, threat detections, and fire incidents. At least once a year, the company conducts simulated drills (Cyber Crisis Simulation Program). Additionally, strict information security measures are in place, such as installing anti-virus software on company computers, implementing firewalls to prevent external attacks, enforcing time-based access controls, regular data backups, and recovery planning. Training programs are also provided."
+        "title": "风险管理",
+        "description": "公司已认识到网络威胁在频率、类型及严重程度方面的不断提升，因此制定了信息技术安全政策，并建立应急预案，涵盖计算机病毒攻击、数据泄露、威胁侦测及火灾事故等情形。公司每年至少开展一次网络危机模拟演练（Cyber Crisis Simulation Program）。同时，公司实施严格的信息安全措施，包括在办公设备中安装防病毒软件、部署防火墙防范外部攻击、实施基于时间的访问控制、定期进行数据备份与恢复规划，并开展相关培训课程。"
       }
     },
     "SustainabilityManagementPolicy": {
-      "title": "Sustainability Management Policy",
-      "description": "The sustainability management policy is a framework or principle set by the organization to ensure its operations are sustainable, covering economic, social, and environmental dimensions. These policies aim to minimize negative impacts and maximize positive impacts for both the organization and society in the long term."
+      "title": "可持续发展管理政策",
+      "description": "可持续发展管理政策是组织为确保其运营具备可持续性而制定的框架与原则，涵盖经济、社会及环境三个维度。该政策旨在从长期角度减少负面影响，并为组织及社会创造最大的正面价值。"
     },
     "ManagementPolicyYear": {
-      "2024": "Sustainability Performance 2024"
+      "2024": "2024 年可持续发展绩效"
     }
   }
 }
