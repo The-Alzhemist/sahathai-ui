@@ -1,52 +1,61 @@
 {
   "InvestorInformationPage": {
-    "StockMarketInformation": {   "title": "Stock Market Information",
+    "StockMarketInformation": {
+      "title": "股票市场信息",
       "stockName": "Stock Symbol",
       "maxPrice": "Highest Price",
       "minPrice": "Lowest Price",
       "quantity": "Trading Volume (Shares)",
       "change": "Change",
-      "updateDate": "Update at"},
+      "updateDate": "Update at"
+    },
     "FinancialReports": {
-      "title": "รายงานและข้อมูลทางการเงิน",
-      "oneReport": "One Report",
-      "yearlyReport": "รายงานประจำปี",
-      "otherFinancialStatements": "งบการเงินอื่นๆ"
+      "title": "财务报告与财务信息",
+      "oneReport": "综合年度报告（One Report）",
+      "yearlyReport": "年度报告",
+      "otherFinancialStatements": "其他财务报表"
     },
     "Shareholder": {
-      "title": "ผู้ถือหุ้น",
-      "order": "ลำดับ",
-      "numberShares": "จำนวนหุ้น (หุ้น)",
-      "shares": "% หุ้น",
-      "shareholderFreeFloatOverview": "ผู้ถือหุ้นรายย่อย ณ วันที่ {date}",
-      "shareholderOverview": "ภาพรวมข้อมูลผู้ถือหุ้น ณ วันที่ {date}",
-      "type": "ประเภท",
-      "minorityShareholders": "จำนวนผู้ถือหุ้นรายย่อย (Free float)",
-      "minorityShareholding": "% การถือหุ้นของผู้ถือหุ้นรายย่อย (% Free float)",
-      "numberShareholder": "จำนวนผู้ถือหุ้นทั้งหมด",
-      "scriptlessShares": "% การถือหุ้นแบบไร้ใบหุ้น",
-      "stockDistribution": "ดูข้อมูลการกระจายหุ้น",
-      "note": "หมายเหตุ: * อื่นๆ ประกอบด้วยผู้ถือหุ้นรายบุคคลในกลุ่มครอบครัวรัตนศิริวิไล โดยผู้ถือหุ้นแต่ละรายถือหุ้นน้อยกว่าร้อยละ 3.00",
+      "title": "股东",
+      "order": "序号",
+      "numberShares": "持股数量（股）",
+      "shares": "持股比例（%）",
+      "shareholderFreeFloatOverview": "截至 {date} 的公众股东（自由流通股）",
+      "shareholderOverview": "截至 {date} 的股东结构概览",
+      "type": "类型",
+      "minorityShareholders": "公众股东数量（自由流通股）",
+      "minorityShareholding": "公众股东持股比例（% 自由流通股）",
+      "numberShareholder": "股东总人数",
+      "scriptlessShares": "无纸化持股比例（%）",
+      "stockDistribution": "查看股权分布情况",
+      "note": "备注：* “其他”包括拉达那西里威莱家族的个人股东，各股东单独持股比例均低于 3.00%。",
       "profit": {
-        "title": "การจ่ายเงินปันผล",
-        "heading1": "นโยบายการจ่ายเงินปันผลของบริษัทฯ",
-        "detail1": "บริษัทฯ มีนโยบายจ่ายเงินปันผลขั้นต่ำไม่น้อยกว่าร้อยละ 40.00 ของกำไรสุทธิตามงบการเงินเฉพาะกิจการของบริษัทหลังหักภาษีเงินได้สำรองตามที่กฏหมายกำหนด และภาระผูกพันตามเงื่อนไขของสัญญาเงินกู้\n\nทั้งนี้ การจ่ายเงินปันผลดังกล่าวจะขึ้นอยู่กับแผนการลงทุน ความจำเป็นของการใช้เงินลงทุน และความเหมาะสมอื่นๆ ในอนาคตโดยเมื่อคณะกรรมการบริษัทฯ มีมติเห็นชอบให้จ่ายเงินปันผลประจำปีแล้วจะต้องนำเสนอเพื่อขออนุมัติต่อที่ประชุมผู้ถือหุ้น เว้นแต่เป็นการจ่ายเงินปันผลระหว่างกาล ซึ่งคณะกรรมการบริษัทฯ มีอำนาจอนุมัติให้จ่ายเงินปันผลได้\nและให้รายงานฯต่อที่ประชุมผู้ถือหุ้นทราบในการประชุมคราวต่อไป",
-        "heading2": "นโยบายการจ่ายเงินปันผลของบริษัทย่อย",
-        "detail2": "ในการพิจารณาจ่ายเงินปันผลของบริษัทย่อยนั้นจะอยู่ภายใต้อำนาจการพิจารณาอนุมัติของคณะกรรมการบริษัทฯ และที่ประชุมผู้ถือหุ้นของบริษัทย่อยแต่ละบริษัท โดยคณะกรรมการบริษัทฯ ผ่านกรรมการที่เป็นตัวแทนของบริษัทฯ จะดูแลให้บริษัทย่อยของบริษัทฯ ดำเนินการจ่ายเงินปันผลไม่น้อยกว่าร้อยละ 40.00 ของกำไรสุทธิตามงบการเงินเฉพาะกิจการของบริษัทย่อยของบริษัทฯ หลังหักภาษีเงินได้สำรองตามที่กฎหมายกำหนด และภาระผูกพันตามเงื่อนไขของสัญญาเงินกู้\n\nทั้งนี้ การจ่ายเงินปันผลดังกล่าวจะขึ้นอยู่กับแผนการลงทุน ความจำเป็นต้องการใช้เงินลงทุน และความเหมาะสมอื่นๆ\n\nทั้งนี้ เพื่อให้การจ่ายเงินปันผลของบริษัทย่อยเป็นไปตามหลักบรรษัทภิบาล มีความโปร่งใส และตรวจสอบได้ เมื่อบริษัทย่อยมีการจ่ายเงินปันผล คณะกรรมการบริษัทย่อยแต่ละบริษัทจะทำการรายงานให้ที่ประชุมคณะกรรมการบริษัทฯ ทราบในการประชุมคราวถัดไป"
+        "title": "股息分配",
+        "heading1": "公司股息分配政策",
+        "detail1": "公司制定的股息分配政策为：在扣除依法应缴纳的所得税、法定准备金及贷款协议项下的相关义务后，按公司单体财务报表的净利润不少于 40.00% 向股东分配股息。\n\n上述股息分配将视未来投资计划、资金使用需求及其他适当因素而定。在董事会批准年度股息分配后，须提交股东大会审议批准；但中期股息的分配可由董事会批准，并在下一次股东大会上向股东报告。",
+        "heading2": "子公司股息分配政策",
+        "detail2": "子公司的股息分配须经公司董事会及各子公司股东大会审议批准。公司董事会将通过其委派的董事，监督子公司在扣除依法应缴纳的所得税、法定准备金及贷款协议项下义务后，按子公司单体财务报表的净利润不少于 40.00% 向股东分配股息。\n\n子公司的股息分配亦将视其投资计划、资金需求及其他适当因素而定。\n\n为确保子公司股息分配符合公司治理原则，具备透明性与可核查性，当子公司进行股息分配时，其董事会须在下一次公司董事会会议上进行报告。"
       }
     },
     "DividendPayment": {
-      "title": "การจ่ายเงินปันผล",
-      "dividendPaymentDate": "วันจ่ายปันผล",
-      "dividend": "เงินปันผล\n(บาท/หุ้น)",
-      "unit": "หน่วย",
-      "financialPeriod": "รอบผลประกอบการ"
+      "title": "股息支付",
+      "dividendPaymentDate": "股息支付日期",
+      "dividend": "股息\n（泰铢/股）",
+      "unit": "单位",
+      "financialPeriod": "财务期间"
     },
-    "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
-    "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
-    "CompanyAdvertiseVideo": { "title": "วิดิโอประชาสัมพันธ์บริษัท" },
-    "FactSheet": { "title": "FactSheet",
-      "detail": "Download ข้อมูล FactSheet "
+    "ShareholdersMeeting": {
+      "title": "股东大会"
+    },
+    "CompanyIntroductionVideo": {
+      "title": "公司介绍视频"
+    },
+    "CompanyAdvertiseVideo": {
+      "title": "公司宣传视频"
+    },
+    "FactSheet": {
+      "title": "公司概况（Fact Sheet）",
+      "detail": "下载 Fact Sheet 资料"
     },
     "OneReportTable": {
       "AnnualReport": "Annual Report\n",
@@ -54,121 +63,120 @@
       "56-1OneReport": "56-1 One\nReport"
     },
     "OtherFinancialStatementsTable": {
-      "q1": "ไตรมาส 1",
-      "q2": "ไตรมาส 2",
-      "q3": "ไตรมาส 3",
-      "annual": "ประจำปี"
+      "q1": "第一季度",
+      "q2": "第二季度",
+      "q3": "第三季度",
+      "annual": "年度"
     },
     "ShareHolderMeeting": {
-      "heading": "การประชุมสามัญผู้ถือหุ้นประจำปี {year}",
+      "heading": "{year} 年度股东大会",
       "title": {
-        "proposeAgenda": "การเสนอระเบียบวาระการประชุม ปี {{year}}",
-        "invitation": "การเชิญประชุมสามัญผู้ถือหุ้น ปี {{year}}",
-        "minutes": "รายงานการประชุม ปี {{year}}",
-        "video": "วิดีโอการประชุมสามัญผู้ถือหุ้น ปี {{year}}"
+        "proposeAgenda": "{{year}} 年度股东大会议程提案",
+        "invitation": "{{year}} 年度股东大会会议通知",
+        "minutes": "{{year}} 年度股东大会会议纪要",
+        "video": "{{year}} 年度股东大会会议视频"
       },
       "proposeAgenda": {
-        "criteria": "หลักเกณฑ์การให้สิทธิผู้ถือหุ้นเสนอระเบียบวาระการประชุมสามัญผู้ถือหุ้น ประจำปี {{year}}",
-        "nominationForm": "แบบเสนอชื่อบุคคลเพื่อเข้ารับการคัดเลือกเป็นกรรมการ บริษัท สหไทย เทอร์มินอล จำกัด (มหาชน)",
-        "agendaForm": "แบบเสนอระเบียบวาระการประชุมสามัญผู้ถือหุ้น",
-        "questionForm": "แบบส่งคำถามเกี่ยวกับบริษัทล่วงหน้า"
+        "criteria": "{{year}} 年度股东大会议程提案资格与标准",
+        "nominationForm": "董事候选人提名表（沙泰码头公众有限公司）",
+        "agendaForm": "股东大会会议议程提案表",
+        "questionForm": "公司相关问题事前提交表"
       },
       "invitation": {
-        "document": "หนังสือเชิญประชุมสามัญผู้ถือหุ้น ประจำปี {year}",
-          "invitationLetter": "หนังสือเชิญประชุมสามัญผู้ถือหุ้น ประจำปี {year}",
-          "meetingReport2567": "รายงานการประชุมสามัญผู้ถือหุ้น ประจำปี {year}",
-          "annualReport2567": "แบบแสดงการรายงานข้อมูลประจำปี/รายงานประจำปี {year}",
-          "candidateInfo": "ข้อมูลของบุคคลที่ได้รับการเสนอชื่อเข้าดำรงตำแหน่งกรรมการ",
-          "confirmationChannel": "ช่องทางตอบรับการเข้าประชุมผู้ถือหุ้น",
-          "registrationGuide": "คำชี้แจงวิธีการจองบัตร การลงทะเบียน การแสดงหลักฐานและการเข้าร่วมประชุมผ่านสื่ออิเล็กทรอนิกส์ (e-AGM)",
-          "proxyInfo": "ข้อมูลการมาริสระที่บริษัทเสนอให้เป็นผู้รับมอบฉันทะจากผู้ถือหุ้น",
-          "proxyFormA": "แบบหนังสือมอบอำนาจ แบบ ก.",
-          "proxyFormB": "แบบหนังสือมอบอำนาจ แบบ ข.",
-          "proxyFormC": "แบบหนังสือมอบอำนาจ แบบ ค.",
-          "eAgmGuide": "คู่มือการใช้งานระบบการประชุมผู้ถือหุ้นผ่านสื่ออิเล็กทรอนิกส์",
-          "privacyNotice": "คำประกาศเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคล (Privacy Notice) สำหรับ e-AGM"
+        "document": "{year} 年度股东大会会议通知",
+        "invitationLetter": "{year} 年度股东大会会议邀请函",
+        "meetingReport2567": "{year} 年度股东大会会议纪要",
+        "annualReport2567": "{year} 年度年度信息披露表 / 年度报告",
+        "candidateInfo": "董事候选人信息",
+        "confirmationChannel": "股东参会确认渠道",
+        "registrationGuide": "电子股东大会（e-AGM）门票预约、注册、文件出示及参会说明",
+        "proxyInfo": "公司指定的独立代理人信息",
+        "proxyFormA": "授权委托书 表格 A",
+        "proxyFormB": "授权委托书 表格 B",
+        "proxyFormC": "授权委托书 表格 C",
+        "eAgmGuide": "电子股东大会系统使用指南",
+        "privacyNotice": "电子股东大会个人数据保护声明（Privacy Notice）"
       },
       "minutes": {
-        "document": "รายงานการประชุมสามัญผู้ถือหุ้น ประจำปี {{year}}"
+        "document": "{{year}} 年度股东大会会议纪要"
       }
     },
     "FinancialInformation": {
-      "title": "งบการเงิน ปี {year}",
+      "title": "{year} 年度财务报表",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "第一季度",
+        "two": "第二季度",
+        "three": "第三季度",
+        "four": "年度"
       }
     },
     "PerformanceReport": {
-      "title": "รายงานผลการดำเนินงานปี {year}",
+      "title": "{year} 年度经营业绩报告",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "第一季度",
+        "two": "第二季度",
+        "three": "第三季度",
+        "four": "年度"
       }
     },
     "DocumentAnnouncement": {
-      "title": "เอกสารเผยแพร่ปี {year}",
+      "title": "{year} 年度信息披露文件",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "第一季度",
+        "two": "第二季度",
+        "three": "第三季度",
+        "four": "年度"
       }
     },
     "GoodCorporate": {
-      "title": "เอกสารการกำกับดูแลกิจการที่ดี",
+      "title": "良好公司治理文件",
       "document": {
-        "governanceManual": "คู่มือการกำกับดูแลกิจการที่ดี",
-        "codeOfConduct": "จรรยาบรรณธุรกิจ",
-        "boardCharter": "กฎบัตรคณะกรรมการ",
-        "chairmanDuties": "บทบาทหน้าที่ประธานกรรมการ",
-        "auditCommitteeCharter": "กฎบัตรคณะกรรมการตรวจสอบ",
-        "nominationAndRemunerationCharter": "กฎบัตรคณะกรรมการสรรหาและกำหนดค่าตอบแทน",
-        "riskGovernanceSustainabilityCommittee": "คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
-        "executiveCommitteeCharter": "กฎบัตรคณะกรรมการบริหาร",
-        "ceoAuthorityAndResponsibilities": "ขอบเขตอำนาจ หน้าที่ และความรับผิดชอบของประธานเจ้าหน้าที่บริหาร",
-        "sustainabilityPolicy": "นโยบายบริหารจัดการด้านความยั่งยืน",
-        "riskManagementPolicy": "นโยบายบริหารความเสี่ยง",
-        "insiderInformationPolicy": "นโยบายการใช้ข้อมูลภายใน",
-        "intellectualPropertyPolicy": "นโยบายที่การไม่ละเมิดทรัพย์สินทางปัญญา",
-        "csrPolicy": "นโยบายความรับผิดชอบต่อสังคม",
-        "antiCorruptionPolicy": "นโยบายการต่อต้านการทุจริต",
-        "personalDataProtectionPolicy": "นโยบายคุ้มครองข้อมูลส่วนบุคคล",
-        "companyRegulation": "ข้อบังคับบริษัท",
-        "memorandumOfAssociation": "บริคณห์สนธิ",
-        "companySecretaryContact": "ช่องทางติดต่อเลขานุการบริษัท"
+        "governanceManual": "良好公司治理手册",
+        "codeOfConduct": "商业行为准则",
+        "boardCharter": "董事会章程",
+        "chairmanDuties": "董事长职责",
+        "auditCommitteeCharter": "审计委员会章程",
+        "nominationAndRemunerationCharter": "提名与薪酬委员会章程",
+        "riskGovernanceSustainabilityCommittee": "风险管理、公司治理与可持续发展委员会",
+        "executiveCommitteeCharter": "执行委员会章程",
+        "ceoAuthorityAndResponsibilities": "首席执行官的权限、职责与责任",
+        "sustainabilityPolicy": "可持续发展管理政策",
+        "riskManagementPolicy": "风险管理政策",
+        "insiderInformationPolicy": "内幕信息使用政策",
+        "intellectualPropertyPolicy": "知识产权不侵权政策",
+        "csrPolicy": "企业社会责任政策",
+        "antiCorruptionPolicy": "反腐败政策",
+        "personalDataProtectionPolicy": "个人数据保护政策",
+        "companyRegulation": "公司章程细则",
+        "memorandumOfAssociation": "公司章程（设立章程）",
+        "companySecretaryContact": "公司秘书联系方式"
       }
     },
-
     "Activity": {
-      "title": "กิจกรรมปี {year}",
+      "title": "{year} 年度活动",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "第一季度",
+        "two": "第二季度",
+        "three": "第三季度",
+        "four": "年度"
       }
     },
     "warrant": {
-      "heading": "ใบสำคัญแสดงสิทธิ ครั้งที่ {number} ({code})",
+      "heading": "第 {number} 次认股权证（{code}）",
       "tabs": {
-        "condition": "ข้อกำหนดสิทธิ",
-        "round1": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งแรก",
-        "round2": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 2",
-        "round3": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 3",
-        "round4": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 4",
-        "round5": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 5",
-        "roundFinal": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งสุดท้าย"
+        "condition": "权利条款",
+        "round1": "PORT-W3 第一次行权安排",
+        "round2": "PORT-W3 第二次行权安排",
+        "round3": "PORT-W3 第三次行权安排",
+        "round4": "PORT-W3 第四次行权安排",
+        "round5": "PORT-W3 第五次行权安排",
+        "roundFinal": "PORT-W3 最终行权安排"
       },
       "content": {
-        "condition": "ข้อกำหนดสิทธิและหน้าที่ของผู้ออกใบสำคัญแสดงสิทธิ",
-        "round1Notice": "แจ้งกำหนดการใช้สิทธิ PORT -W3 ครั้งแรก",
-        "conditionNote": "ข้อกำหนดสิทธิว่าด้วยสิทธิและหน้าที่ของผู้ออกใบสำคัญแสดงสิทธิและผู้ถือใบสำคัญแสดงสิทธิที่จะซื้อหุ้นสามัญของบริษัท",
-        "formNote": "แบบฟอร์มแสดงความจำนงการใช้สิทธิที่จะซื้อหุ้นสามัญของบริษัท สหไทย เทอร์มินอล จำกัด (มหาชน)"
+        "condition": "认股权证发行人之权利与义务条款",
+        "round1Notice": "PORT-W3 第一次行权通知",
+        "conditionNote": "关于认股权证发行人及认股权证持有人购买公司普通股之权利与义务条款",
+        "formNote": "沙泰码头公众有限公司普通股认购行权申请表"
       }
     }
   }
