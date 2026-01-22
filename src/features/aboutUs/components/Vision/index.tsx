@@ -12,7 +12,7 @@ export function Vision() {
     <Animation className='mt-[90px] flex flex-col-reverse  lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
       <div className='relative w-[450px] h-auto shrink-0'>
         <Image
-          src='/about-us/new/about-us-team-2x.webp'
+          src='/about-us/new/team-3x.webp'
           alt='About us team'
           fill
           className='object-contain'

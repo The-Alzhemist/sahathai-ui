@@ -23,6 +23,7 @@ import { contactUsValidationSchema } from '@/components/ContactUs/ContactUsValid
 import { Card } from '@/components/ContactUs/components/Card/Card'
 import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 import Link from 'next/link'
+import { RedWarningIcon } from '@/components/icons/WarningRedIcon'
 
 const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
   const t = useTranslations('ContactUs')
@@ -60,7 +61,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 text={t('fraudComplaintForm')}
                 value='fraud-complaint-form'
                 checked={values.type === ContactUsTypeEnum.FRAUD_COMPLAINT}
-                Icon={WarningIcon}
+                Icon={RedWarningIcon}
               />
             </div>
             <div className='flex gap-[70px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
