@@ -4,8 +4,6 @@ import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
 
-import ContainerServices from '@/app/[locale]/services/container-services/page'
-import { ComprehensiveCommercialPortCard } from '@/features/services/components/ComprehensiveCommercialPortCard'
 import { TrackingCard } from '@/features/investorRelations/pages/EServicePage/component/TrackingCard'
 
 export function TrackingService() {
