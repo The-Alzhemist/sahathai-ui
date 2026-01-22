@@ -4,8 +4,9 @@ import { Menu } from '@/components/Menu'
 
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
 import { TrackingService } from '@/features/investorRelations/pages/EServicePage/component/TrackingService/TrackingService'
+import { EServicePageProps } from '@/app/[locale]/e-service/interface'
 
-export function EServicePage() {
+export function EServicePage({ data }: EServicePageProps) {
   const t = useTranslations('EServicePage')
 
   return (
@@ -20,7 +21,7 @@ export function EServicePage() {
           {t('Description')}
         </p>
       </section>
-      <TrackingService />
+      <TrackingService data={data} />
     </main>
   )
 }

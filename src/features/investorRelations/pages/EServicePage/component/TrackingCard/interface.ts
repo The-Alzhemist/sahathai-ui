@@ -1,5 +1,8 @@
 export interface TrackingCardProps {
-  title: React.ReactNode
+  title: {
+    textTH: string
+    textEN: string
+  }
   imageUrl: string
   link: string
 }
