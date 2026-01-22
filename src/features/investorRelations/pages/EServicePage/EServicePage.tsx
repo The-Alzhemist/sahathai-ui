@@ -1,7 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { Animation } from '@/components/Animation'
 
-import { CodeConductCard } from '../../components/CodeConductCard'
 import { Menu } from '@/components/Menu'
 
 import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
