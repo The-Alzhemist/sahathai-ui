@@ -17,7 +17,5 @@ export default async function EService({
     'e-service'
   )
 
-  console.log(response)
-
   return <EServicePage data={response} />
 }
