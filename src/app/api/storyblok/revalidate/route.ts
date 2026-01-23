@@ -28,7 +28,6 @@ export async function POST(req: NextRequest) {
   // }
 
   const fullSlug = body.full_slug
-
   console.log('-------------full slug-------', fullSlug)
 
   if (fullSlug?.includes(SlugType.BLOG)) {
