@@ -30,9 +30,7 @@ export function Menu() {
               <DropdownMenu
                 key={menu.title}
                 label={menu.title}
-                className={twMerge(
-                  isActive ? 'hover:bg-blue-300 bg-blue-300' : ''
-                )}
+                className={twMerge(isActive ? ' bg-white/15' : '')}
                 onClick={() => router.push(menu.pathname)}
               >
                 {menu.children.map(subMenu => {
@@ -63,7 +61,7 @@ export function Menu() {
             <li key={menu.title}>
               <Link
                 className={`headline-6 !font-[300] block px-[24px] py-[18px]   hover:bg-white/15 data-[open]:bg-white/15 whitespace-nowrap ${
-                  isActive && 'bg-blue-300'
+                  isActive && ' bg-white/15'
                 }`}
                 target={menu.isExternalLink ? '_blank' : undefined}
                 rel={menu.isExternalLink ? 'noopener noreferrer' : undefined}

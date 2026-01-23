@@ -10,7 +10,7 @@ export function Vision() {
 
   return (
     <Animation className='mt-[90px] flex flex-col-reverse  lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
-      <div className='relative w-[450px] h-auto shrink-0'>
+      <div className='relative w-[220px] md:w-[550px] h-auto shrink-0'>
         <Image
           src='/about-us/new/team-3x.webp'
           alt='About us team'
