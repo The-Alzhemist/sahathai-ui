@@ -71,6 +71,10 @@
     "Warrant": {
       "Title": "Sahathai | Warrants",
       "Description": "Information on warrants and rights to purchase shares."
+    },
+    "EService": {
+      "Title": "Sahathai | e-service",
+      "Description": "Comprehensive port and logistics management services, easily accessible through our modern E-service platform."
     }
   }
 }
