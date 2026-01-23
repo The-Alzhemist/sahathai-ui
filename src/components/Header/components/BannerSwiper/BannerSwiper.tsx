@@ -46,7 +46,6 @@ export default function SwiperVertical() {
     { type: 'image', src: '/home/new/mobile-3.webp' },
   ]
 
-  console.log('isMobile', isMobile)
   const activeSlides = isMobile ? slidesMobile : slidesDesktop
 
   const swiperConfig: SwiperProps = {
