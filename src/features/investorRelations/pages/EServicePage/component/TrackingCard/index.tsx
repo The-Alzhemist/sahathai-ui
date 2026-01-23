@@ -5,14 +5,7 @@ import { Link } from '@/libs/intl/navigation'
 import { TrackingCardProps } from './interface'
 import { useTranslations } from 'next-intl'
 
-export function TrackingCard({
-  title,
-
-  imageUrl,
-  link,
-}: TrackingCardProps) {
-  const t = useTranslations('common')
-
+export function TrackingCard({ title, imageUrl, link }: TrackingCardProps) {
   return (
     <Link target='_blank' className='group' href={link}>
       <div className='w-[330px] rounded-[10px] overflow-hidden shadow-8 bg-white'>
@@ -32,10 +25,14 @@ export function TrackingCard({
 
         <div className='py-[22px] px-[30px]  relative'>
           <h3 className='text-navy headline-6 !leading-[20px] flex flex-wrap items-center whitespace-nowrap !text-sm'>
-            {title}
+            {title.textTH ? title.textTH : title.textEN}
           </h3>
 
-          <div className='rounded-full bg-primary'></div>
+          {title.textEN && (
+            <h4 className='text-navy headline-6 !leading-[20px] flex flex-wrap items-center whitespace-nowrap !text-sm'>
+              ({title.textEN})
+            </h4>
+          )}
         </div>
       </div>
     </Link>

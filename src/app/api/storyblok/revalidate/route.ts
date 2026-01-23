@@ -40,6 +40,9 @@ export async function POST(req: NextRequest) {
   } else if (fullSlug?.includes(SlugType.INVESTOR)) {
     console.log('------ Revalidate secret INVESTOR--------')
     revalidateTag(RevalidateTag.INVESTOR)
+  } else if (fullSlug?.includes(SlugType.ESERVICE)) {
+    console.log('------ Revalidate secret ESERVICE--------')
+    revalidateTag(RevalidateTag.ESERVICE)
   } else {
     console.log('------ cannot revalidate any known tag --------')
     console.log('cannot revalidate any known tag')
