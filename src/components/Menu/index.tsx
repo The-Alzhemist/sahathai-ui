@@ -24,13 +24,15 @@ export function Menu() {
     >
       <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 rounded-b-[30px]'>
         {menus.map(menu => {
-          const isActive = menu.pathname === pathname
+          const isActive = menu.pathname.includes(pathname)
           if (menu.children && menu.children.length) {
             return (
               <DropdownMenu
                 key={menu.title}
                 label={menu.title}
-                className={twMerge(isActive ? 'hover:bg-blue-300' : '')}
+                className={twMerge(
+                  isActive ? 'hover:bg-blue-300 bg-blue-300' : ''
+                )}
                 onClick={() => router.push(menu.pathname)}
               >
                 {menu.children.map(subMenu => {
