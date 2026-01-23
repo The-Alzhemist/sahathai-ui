@@ -2,7 +2,7 @@ export enum SlugType {
   BLOG = 'blog',
   NEWS = 'news',
   INVESTOR = 'invrester-relartion',
-  ESERVICE = 'e-service',
+  ESERVICE = 'e-service/e-service-list',
 }
 
 export enum RevalidateTag {
