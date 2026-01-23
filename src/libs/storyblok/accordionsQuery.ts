@@ -5,36 +5,16 @@ export async function fetchStoryblokStory(
   locale: string,
   version: 'draft' | 'published' = 'draft',
   revalidate = REVALIDATE_TIME,
-  tag: string = 'investor-accordion-list',
-  isRevalidateAllLanguages: boolean = false
+  tag: string = 'investor-accordion-list'
 ) {
-  const languages = ['th', 'en', 'cn']
+  const url = `${process.env.STORYBLOK_BASE_URL}/stories/${slug}?version=${version}&token=${process.env.STORYBLOK_TOKEN}&language=${locale}`
 
-  const localesToFetch = isRevalidateAllLanguages ? languages : [locale]
+  const tags = [`story:${tag}`]
 
-  try {
-    const fetchPromises = localesToFetch.map(async lang => {
-      const url = `${process.env.STORYBLOK_BASE_URL}/stories/${slug}?version=${version}&token=${process.env.STORYBLOK_TOKEN}&language=${lang}`
+  const res = await fetch(url, { next: { revalidate, tags } })
 
-      const tags = [`story:${tag}`]
-      const res = await fetch(url, {
-        next: { revalidate, tags },
-      })
-
-      if (!res.ok) {
-        throw new Error(`Storyblok fetch failed for ${lang}: ${res.status}`)
-      }
-
-      return res.json()
-    })
-
-    const results = await Promise.all(fetchPromises)
-
-    return isRevalidateAllLanguages
-      ? results.find(data => data.story.lang === locale) || results[0]
-      : results[0]
-  } catch (error) {
-    console.error('Fetch Error:', error)
-    throw error
+  if (!res.ok) {
+    throw new Error(`Storyblok fetch failed: ${res.status}`)
   }
+  return res.json()
 }
