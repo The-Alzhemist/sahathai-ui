@@ -42,6 +42,9 @@ export async function POST(req: NextRequest) {
   } else if (fullSlug?.includes(SlugType.ESERVICE)) {
     console.log('------ Revalidate secret ESERVICE--------')
     revalidateTag(RevalidateTag.ESERVICE)
+  } else if (fullSlug?.includes(SlugType.BANNER_POPUP)) {
+    console.log('------ Revalidate secret BANNER_POPUP--------')
+    revalidateTag(RevalidateTag.ESERVICE)
   } else {
     console.log('------ cannot revalidate any known tag --------')
     console.log('cannot revalidate any known tag')

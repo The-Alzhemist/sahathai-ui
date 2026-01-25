@@ -3,6 +3,7 @@ export enum SlugType {
   NEWS = 'news',
   INVESTOR = 'invrester-relartion',
   ESERVICE = 'e-service/e-service-list',
+  BANNER_POPUP = 'banner/bannerpopup',
 }
 
 export enum RevalidateTag {
@@ -10,4 +11,5 @@ export enum RevalidateTag {
   NEWS = 'story:news-list',
   INVESTOR = 'story:investor-accordion-list',
   ESERVICE = 'story:e-service',
+  BANNER_POPUP = 'story:bannerpopup',
 }
