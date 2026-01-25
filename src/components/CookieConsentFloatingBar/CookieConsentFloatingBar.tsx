@@ -16,7 +16,7 @@ const CookieConsentFloatingBar = ({
   return (
     isOpen && (
       <section className={`flex justify-center shadow-2xl`}>
-        <div className='bg-white sm:w-[90%] border-t-2 fixed z-50 bottom-0 md:bottom-10 p-5 sm:rounded-lg  w-full max-w-[800px] flex justify-between gap-x-5 flex-col sm:flex-row'>
+        <div className='bg-white sm:w-[90%] border-t-2 fixed z-40 bottom-0 md:bottom-10 p-5 sm:rounded-lg  w-full max-w-[800px] flex justify-between gap-x-5 flex-col sm:flex-row'>
           <div className='flex flex-col justify-center mb-5 sm:mb-0'>
             <div className='text-xl font-semibold mb-2'>{t('Title')}</div>
             <div className='text-sm font-light flex gap-x-2 flex-col md:flex-row'>

@@ -16,6 +16,7 @@ import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/Cook
 import { ScrollVisibleProvider } from '@/context/ScrollVisibleContext'
 
 import '@/libs/storyblok/init'
+import { BannerPopup } from '@/components/BannerPopup/BannerPopup'
 
 export const revalidate = 604800 //7 days
 
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
               <Header />
               {children}
               <Footer />
+              <BannerPopup />
               <ToastContainer />
               <CookieConsentFloatingBar />
             </ScrollVisibleProvider>
