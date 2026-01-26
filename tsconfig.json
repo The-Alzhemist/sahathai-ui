@@ -23,8 +23,15 @@
       ".storyblok/*": ["./.storyblok/*"]
     },
     "strictPropertyInitialization": false,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts",".storyblok"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".storyblok",
+    "src/utils/gtmCn"
+  ],
   "exclude": ["node_modules"]
 }
