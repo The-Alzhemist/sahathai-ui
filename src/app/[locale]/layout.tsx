@@ -54,7 +54,7 @@ export default async function LocaleLayout({
 
               {children}
               <Footer />
-              <BannerPopup />
+              <BannerPopup locale={locale} />
               <ToastContainer />
               <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
               <CookieConsentFloatingBar />
