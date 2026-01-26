@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import './globals.css'
+
 import { LocaleEnum } from '@/enums/LocaleEnum'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -49,10 +51,12 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <ScrollVisibleProvider>
               <Header />
+
               {children}
               <Footer />
               <BannerPopup />
               <ToastContainer />
+              <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
               <CookieConsentFloatingBar />
             </ScrollVisibleProvider>
           </NextIntlClientProvider>
