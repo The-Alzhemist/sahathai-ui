@@ -3,7 +3,7 @@
 import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
 import withCookieConsentFloatingBar from './withCookieConsentFloatingBar'
 
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/libs/intl/navigation'
 
 const CookieConsentFloatingBar = ({
@@ -11,7 +11,6 @@ const CookieConsentFloatingBar = ({
   isOpen,
 }: CookieConsentFloatingBarProps) => {
   const t = useTranslations('CookieConsentFloatingBar')
-  const locale = useLocale()
 
   return (
     isOpen && (

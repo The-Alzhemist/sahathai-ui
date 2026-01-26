@@ -1,9 +1,10 @@
-import { LOCAL_STORAGE_PDPA_KEY } from '@/components/CookieConsentFloatingBar/config'
-import { CookieConsentFloatingBarProps } from '@/components/CookieConsentFloatingBar/interface'
-import React, { useEffect, useState } from 'react'
-import { addDays, format, isAfter, startOfDay } from 'date-fns'
-import TagManager from 'react-gtm-module'
+'use client'
 
+import { LOCAL_STORAGE_PDPA_KEY } from '@/components/CookieConsentFloatingBar/config'
+import { CookieConsentFloatingBarProps } from './interface'
+import { useEffect, useState } from 'react'
+import { addDays, isAfter, startOfDay } from 'date-fns'
+import { updateGtmConsent } from '@/utils/gtmConsent'
 
 const withCookieConsentFloatingBar = (
   Component: React.FC<CookieConsentFloatingBarProps>
@@ -12,26 +13,30 @@ const withCookieConsentFloatingBar = (
     const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
-      setIsOpen(hasConsentExpired())
-      if (!hasConsentExpired()) {
-        TagManager.initialize({ gtmId: process.env.GTM_STAGING! })
-      }
+      const expired = hasConsentExpired()
+      setIsOpen(expired)
+
+      //if expired = false, means you accept
+      updateGtmConsent(!expired)
     }, [])
 
     const handleOnClickAccept = (isClickAccept: boolean) => {
       setIsOpen(false)
 
       if (isClickAccept) {
-        // Set expiration date to today + 30 days
-        const today = new Date()
-        const expirationDate = addDays(today, 30)
-        const cookieConsentData = JSON.stringify({
-          value: 'true',
-          expires: expirationDate,
-        })
+        const expirationDate = addDays(new Date(), 30)
 
-        localStorage.setItem(LOCAL_STORAGE_PDPA_KEY, cookieConsentData)
-        TagManager.initialize({ gtmId: process.env.GTM_STAGING! })
+        localStorage.setItem(
+          LOCAL_STORAGE_PDPA_KEY,
+          JSON.stringify({
+            value: 'true',
+            expires: expirationDate,
+          })
+        )
+
+        updateGtmConsent(true)
+      } else {
+        updateGtmConsent(false)
       }
     }
 
@@ -40,21 +45,12 @@ const withCookieConsentFloatingBar = (
       if (!consentData) return true
 
       const { expires } = JSON.parse(consentData)
-      const currentDate = startOfDay(new Date())
-      const expirationDate = startOfDay(new Date(expires))
-
-      // console.log('Current Date:', format(currentDate, 'yyyy-MM-dd'))
-      // console.log('Expiration Date:', format(expirationDate, 'yyyy-MM-dd'))
-
-      // Check if the current date is after the expiration date
-      return isAfter(currentDate, expirationDate)
+      return isAfter(startOfDay(new Date()), startOfDay(new Date(expires)))
     }
 
-    const newProps: CookieConsentFloatingBarProps = {
-      handleOnClickAccept,
-      isOpen,
-    }
-    return <Component {...newProps} />
+    return (
+      <Component isOpen={isOpen} handleOnClickAccept={handleOnClickAccept} />
+    )
   }
 
   return Hoc
