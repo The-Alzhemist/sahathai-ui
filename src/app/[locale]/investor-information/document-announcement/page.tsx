@@ -1,28 +1,22 @@
-
-import {
-  DocumentAnnouncementPage
-} from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
+import { DocumentAnnouncementPage } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { getTranslations } from 'next-intl/server'
 
-
 export default async function DocumentAnnouncement({
-                                                     params,
-                                                   }: {
+  params,
+}: {
   params: { locale: string }
 }) {
-
   const { locale } = params
 
   const response = await fetchStoryblokStory(
-    'invrester-relartion/ed6b6179-86fc-473f-8188-81827cb9b1e8',
+    'investor-relations/ed6b6179-86fc-473f-8188-81827cb9b1e8',
     locale,
     'published'
   )
 
-  return <DocumentAnnouncementPage  data={response} />
+  return <DocumentAnnouncementPage data={response} />
 }
-
 
 export async function generateMetadata() {
   const t = await getTranslations('MetaData')

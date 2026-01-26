@@ -1,7 +1,7 @@
 export enum SlugType {
   BLOG = 'blog',
   NEWS = 'news',
-  INVESTOR = 'invrester-relartion',
+  INVESTOR = 'investor-relations',
   ESERVICE = 'e-service/e-service-list',
   BANNER_POPUP = 'banner/bannerpopup',
 }

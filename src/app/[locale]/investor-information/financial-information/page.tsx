@@ -1,25 +1,19 @@
-import {
-  FinancialInformationPage
-} from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
+import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { getTranslations } from 'next-intl/server'
 
-
-
 export default async function FinancialInformation({
-                                                     params,
-                                                   }: {
+  params,
+}: {
   params: { locale: string }
 }) {
-
   const { locale } = params
 
   const response = await fetchStoryblokStory(
-    'invrester-relartion/financialinformationpage',
+    'investor-relations/financialinformationpage',
     locale,
     'published'
   )
-
 
   return <FinancialInformationPage financialInformationData={response} />
 }

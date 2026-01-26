@@ -10,7 +10,7 @@ export default async function Warrant({
   const { locale } = params
 
   const response = await fetchStoryblokStory(
-    'invrester-relartion/f777dd5a-6232-450c-b6c8-7b1850a1d3ec',
+    'investor-relations/f777dd5a-6232-450c-b6c8-7b1850a1d3ec',
     locale,
     'published'
   )
