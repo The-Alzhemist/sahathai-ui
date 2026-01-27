@@ -184,17 +184,18 @@ export function useSubmenu() {
             isScroll: true,
             pathname: `/sustainability-management`,
           },
-          {
-            title: t('investorRelations.codeConduct'),
-            isExternalLink: false,
-            isScroll: true,
-            pathname: `/code-of-conduct`,
-          },
+
           {
             title: t('investorRelations.shareHolder'),
             isExternalLink: false,
             isScroll: true,
             pathname: `/investor-information/share-holder`,
+          },
+          {
+            title: t('investorRelations.codeConduct'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/code-of-conduct`,
           },
           {
             title: t('investorRelations.shareHolderMeeting'),
