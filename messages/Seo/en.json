@@ -48,6 +48,10 @@
       "Title": "Sahathai | Financial Information",
       "Description": "Annual and quarterly financial statements, including other key financial information."
     },
+    "codeOfConduct": {
+      "Title": "Sahathai | Anti-Corruption Policy",
+      "Description": "Anti-Corruption Policy"
+    },
     "PerformanceReport": {
       "Title": "Sahathai | Performance Reports",
       "Description": "Summaries of the company’s performance across different periods."
