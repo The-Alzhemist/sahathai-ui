@@ -48,6 +48,10 @@
       "Title": "Sahathai | Financial Information",
       "Description": "公司年度及季度财务报表，以及其他重要的财务信息。"
     },
+    "codeOfConduct": {
+      "Title": "Sahathai | Anti-Corruption Policy",
+      "Description": "反腐败与反贿赂政策"
+    },
     "PerformanceReport": {
       "Title": "Sahathai | Performance Reports",
       "Description": "公司在不同期间的经营业绩与表现概览。"
