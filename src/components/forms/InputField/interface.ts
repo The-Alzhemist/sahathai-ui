@@ -7,6 +7,7 @@ export interface InputFieldAcceptProps {
   placeholder?: string
   disabled?: boolean
   type?: string
+  inputClassName?: string
 }
 
 export interface InputFieldProps {
@@ -17,4 +18,5 @@ export interface InputFieldProps {
   disabled?: boolean
   type?: string
   meta: FieldMetaProps<any>
+  inputClassName?: string
 }

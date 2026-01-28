@@ -13,6 +13,7 @@ export interface CardProps {
   Icon: React.FC<IconProps>
   title: string
   description: string
+  contactUsType: string
 }
 
 export interface ContactUsForm {
