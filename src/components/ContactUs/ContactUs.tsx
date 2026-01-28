@@ -54,6 +54,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 value='contact-form'
                 checked={values.type === ContactUsTypeEnum.CONTACT}
                 Icon={MailIcon}
+                contactUsType={ContactUsTypeEnum.CONTACT}
               />
               <ContactTypeField
                 className='flex-1'
@@ -62,6 +63,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 value='fraud-complaint-form'
                 checked={values.type === ContactUsTypeEnum.FRAUD_COMPLAINT}
                 Icon={RedWarningIcon}
+                contactUsType={ContactUsTypeEnum.FRAUD_COMPLAINT}
               />
             </div>
             <div className='flex gap-[70px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
@@ -70,28 +72,51 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                   name='name'
                   label={t('nameField.label')}
                   placeholder={t('nameField.placeholder')}
+                  inputClassName={
+                    values.type === ContactUsTypeEnum.CONTACT
+                      ? ''
+                      : 'focus:border-red-400'
+                  }
                 />
                 <InputField
                   name='phone'
                   type='number'
                   label={t('phoneNumberField.label')}
                   placeholder={t('phoneNumberField.placeholder')}
+                  inputClassName={
+                    values.type === ContactUsTypeEnum.CONTACT
+                      ? ''
+                      : 'focus:border-red-400'
+                  }
                 />
                 <InputField
                   name='email'
                   className='capitalize'
                   label={common('email')}
                   placeholder={t('emailField.placeholder')}
+                  inputClassName={
+                    values.type === ContactUsTypeEnum.CONTACT
+                      ? ''
+                      : 'focus:border-red-400'
+                  }
                 />
                 <TextAreaField
-                  textAreaClassName='h-[154px]'
+                  textAreaClassName={`h-[154px] ${
+                    values.type === ContactUsTypeEnum.CONTACT
+                      ? ''
+                      : 'focus:border-red-400'
+                  }`}
                   name='message'
                   label={t('message.label')}
                   placeholder={t('message.placeholder')}
                   maxLength={500}
                 />
                 <button
-                  className='bg-background w-full py-[10px] rounded-full text-white button'
+                  className={`${
+                    values.type === ContactUsTypeEnum.CONTACT
+                      ? 'bg-background'
+                      : 'bg-red-400'
+                  } w-full py-[10px] rounded-full text-white button`}
                   type='submit'
                 >
                   {t('submit')}
@@ -102,21 +127,25 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                   Icon={TelephoneIcon}
                   title={t('contactNumber.title')}
                   description={t('contactNumber.description')}
+                  contactUsType={values.type as ContactUsTypeEnum}
                 />
                 <Card
                   Icon={PrinterIcon}
                   title={t('fax.title')}
                   description={t('fax.description')}
+                  contactUsType={values.type as ContactUsTypeEnum}
                 />
                 <Card
                   Icon={EnvelopeIcon}
                   title={common('email')}
                   description='info@sahathaiterminal.com'
+                  contactUsType={values.type as ContactUsTypeEnum}
                 />
                 <Card
                   Icon={LocationIcon}
                   title={t('address.title')}
                   description={t('address.description')}
+                  contactUsType={values.type as ContactUsTypeEnum}
                 />
               </div>
             </div>

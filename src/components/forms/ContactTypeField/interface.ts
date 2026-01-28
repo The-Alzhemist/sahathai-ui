@@ -1,4 +1,5 @@
 import { IconProps } from '@/components/icons/interface'
+import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 
 export interface ContactTypeFieldProps
   extends React.HTMLProps<HTMLInputElement> {
@@ -6,4 +7,5 @@ export interface ContactTypeFieldProps
   className?: string
   text: React.ReactNode
   Icon: React.FC<IconProps>
+  contactUsType: ContactUsTypeEnum
 }
