@@ -7,6 +7,7 @@ export function withContactTypeField(
   function WithContactTypeField({
     name,
     value,
+    contactUsType,
     ...props
   }: ContactTypeFieldProps) {
     const [field] = useField(name)
@@ -15,6 +16,7 @@ export function withContactTypeField(
       ...props,
       ...field,
       value,
+      contactUsType,
     }
 
     return <Component {...componentProps} />
