@@ -1,5 +1,6 @@
 import { cn } from '@/libs/util'
 import { ContactTypeFieldProps } from './interface'
+import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 
 export function ContactTypeField({
   className,
@@ -7,6 +8,7 @@ export function ContactTypeField({
   checked,
   disabled,
   Icon,
+  contactUsType,
   ...props
 }: ContactTypeFieldProps) {
   return (
@@ -15,7 +17,9 @@ export function ContactTypeField({
         'flex items-center gap-x-[20px] cursor-pointer py-[16.5px] px-[29px] rounded-[10px] border border-white shadow-6 bg-white text-darkGray',
         {
           'pointer-events-none': disabled,
-          'border-primary': checked,
+          [contactUsType === ContactUsTypeEnum.CONTACT
+            ? 'border-primary'
+            : 'border-red-400']: checked,
         },
         className
       )}
