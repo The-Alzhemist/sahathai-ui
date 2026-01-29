@@ -5,12 +5,16 @@ import { EyeIcon } from '@/components/icons/EyeIcon'
 import { CheckCircle2Icon } from '@/components/icons/CheckCircle2Icon'
 import { PeopleIcon } from '@/components/icons/PeopleIcon'
 import { TreeStructureIcon } from '@/components/icons/TreeStructureIcon'
-import { AboutPageProps, AboutUsTabEnum } from './interface'
+import {
+  AboutPageAcceptProps,
+  AboutPageProps,
+  AboutUsTabEnum,
+} from './interface'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from '@/libs/intl/navigation'
 
 export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
-  function WithAboutUsPage() {
+  function WithAboutUsPage({ boardData }: AboutPageAcceptProps) {
     const t = useTranslations('AboutUsPage.Tabs')
     const searchParams = useSearchParams()
     const searchParamTab = searchParams.get('tab')
@@ -55,6 +59,7 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
       tabs,
       active,
       handleOnActiveTabChange,
+      boardData,
     }
 
     return <Component {...componentProps} />

@@ -1,10 +1,20 @@
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
+import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { getTranslations } from 'next-intl/server'
 
+export default async function AboutUs({
+  params,
+}: {
+  params: { locale: string }
+}) {
+  const { locale } = params
+  const response = await fetchStoryblokStory(
+    'board-and-committee/board-and-committee',
+    locale,
+    'published'
+  )
 
-
-export default function AboutUs() {
-  return <AboutUsPage />
+  return <AboutUsPage boardData={response} />
 }
 
 export async function generateMetadata({

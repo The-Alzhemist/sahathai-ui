@@ -8,13 +8,19 @@ import { Executives } from '../Executives'
 import { Subcommittee } from '../Subcommittee'
 import { PeopleModal } from '../PeopleModal'
 import Image from 'next/image'
+import { BoardAndExecutivesProps } from '@/features/aboutUs/components/BoardAndExecutives/interface'
+import { MockPeopleModal } from '@/features/aboutUs/components/PeopleModal/MockPeopleModal'
+import { BoardCard } from '@/features/aboutUs/components/BoardCard'
 
-export function BoardAndExecutives() {
+export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
   const [people, setPeople] = useState<PeopleEnum>()
 
+  const [selectPeople, setSelectPeople] = useState(false)
+
   function closeModal() {
     setPeople(undefined)
+    setSelectPeople(false)
   }
 
   function clickPeople(value: PeopleEnum) {
@@ -32,8 +38,28 @@ export function BoardAndExecutives() {
       </p>
       <section className='mt-[110px] bg-[url("/about-us/board-executive.jpeg")] bg-center bg-cover bg-yellow-50'>
         <section className='py-[94px] bg-modellBgDark/50'>
+          {boardData.story.content.body &&
+            boardData.story.content.body.map((board: any, index: number) => {
+              return (
+                <>
+                  {/* <div
+                    className='text-white border-2 p-5'
+                    onClick={() => setSelectPeople(board)}
+                  >
+                    {board.name}
+                  </div> */}
+                  <BoardCard
+                    name={board.name}
+                    imageUrl={board.peopleImage.filename}
+                    jobTitle={board}
+                    onClick={() => setSelectPeople(board)}
+                  />
+                </>
+              )
+            })}
+
           <Board onClick={clickPeople} />
-          <Executives onClick={clickPeople} />
+          {/* <Executives onClick={clickPeople} /> */}
         </section>
       </section>
       <div className='relative  min-h-[1190px] md:min-h-[990px]'>
@@ -47,8 +73,10 @@ export function BoardAndExecutives() {
           />
         </div>
       </div>
-
-      {people && <PeopleModal people={people} onClose={closeModal} />}
+      {/* {people && <PeopleModal people={people} onClose={closeModal} />} */}
+      {selectPeople && (
+        <MockPeopleModal selectPeople={selectPeople} onClose={closeModal} />
+      )}{' '}
     </section>
   )
 }
