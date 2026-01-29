@@ -81,7 +81,7 @@ export interface EServiceStoryblok {
   text?: string;
   text_en?: string;
   externalLink?: string;
-  image?: AssetStoryblok;
+  image: AssetStoryblok;
   _uid: string;
   component: "e-service";
   [k: string]: any;
