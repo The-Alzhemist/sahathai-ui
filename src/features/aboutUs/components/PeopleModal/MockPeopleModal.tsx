@@ -3,7 +3,7 @@
 import { Modal } from '@/components/Modal'
 import Image from 'next/image'
 
-export function MockPeopleModal({ selectPeople, onClose }: any) {
+export function PeopleInformationModal({ selectPeople, onClose }: any) {
   return (
     <>
       <Modal className='max-w-[770px] w-[90%] ' onClose={onClose}>
