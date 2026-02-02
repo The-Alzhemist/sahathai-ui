@@ -18,7 +18,7 @@ export function AboutUsPage({ active, boardData }: AboutPageProps) {
         <Animation key={active}>
           <Menu />
           <SwiperVertical />
-          {active}
+
           {active === AboutUsTabEnum.VISION_MISSION ? (
             <VisionMissionValues />
           ) : active === AboutUsTabEnum.OUT_COMMITMENT_SUCCESS ? (

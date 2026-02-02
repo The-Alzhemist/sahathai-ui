@@ -31,7 +31,7 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
                 .map((data: any, index: number) => (
                   <div
                     key={data._uid ?? index}
-                    className='mt-[20px] text-black-6 max-w-[389px] w-full px-5 md:px-0 mb-5 md:mb-0'
+                    className='mt-2 text-black-6 body-2 w-full space-y-1'
                   >
                     <ul className='space-y-1'>
                       {data.item?.map((item: any, idx: number) => (
@@ -45,6 +45,36 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
                       ))}
                     </ul>
                   </div>
+                ))}
+          </div>
+        </div>
+
+        <div className='px-5 md:px-9 py-9 bg-white-1 space-y-5 md:space-y-[30px]'>
+          {}
+          <div className=' py-2 grid grid-cols-1 md:grid-cols-1 gap-1'>
+            {selectPeople.setOfData?.length > 0 &&
+              selectPeople.setOfData
+                .filter((_: any, index: number) => index !== 0)
+                .map((data: any, index: number) => (
+                  <section key={data._uid ?? index} className='mb-8'>
+                    <div className='text-md md:text-[20px] leading-[48.38px] text-navy px-5 md:px-0'>
+                      {data.heading}
+                    </div>
+
+                    <div className='mt-2 text-black-6 body-2 w-full space-y-1'>
+                      <ul className='space-y-1'>
+                        {data.item?.map((item: any, idx: number) => (
+                          <li
+                            key={item._uid ?? idx}
+                            className='grid grid-cols-[30px_1fr]'
+                          >
+                            <span className='text-center'>&bull;</span>
+                            <span>{item.detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </section>
                 ))}
           </div>
         </div>
