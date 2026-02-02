@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { getTranslations } from 'next-intl/server'
@@ -11,7 +12,9 @@ export default async function AboutUs({
   const response = await fetchStoryblokStory(
     'board-and-committee/board-and-committee',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'board-and-committee'
   )
 
   return <AboutUsPage boardData={response} />

@@ -4,27 +4,22 @@ import { useState } from 'react'
 import { SahathaiText } from '@/components/SahathaiText'
 import { PeopleEnum } from '@/enums/PeopleEnum'
 import { Board } from '../Board'
-import { Executives } from '../Executives'
+
 import { Subcommittee } from '../Subcommittee'
-import { PeopleModal } from '../PeopleModal'
+
 import Image from 'next/image'
 import { BoardAndExecutivesProps } from '@/features/aboutUs/components/BoardAndExecutives/interface'
-import { MockPeopleModal } from '@/features/aboutUs/components/PeopleModal/MockPeopleModal'
+
 import { BoardCard } from '@/features/aboutUs/components/BoardCard'
+import { PeopleInformationModal } from '@/features/aboutUs/components/PeopleModal/MockPeopleModal'
 
 export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
-  const [people, setPeople] = useState<PeopleEnum>()
 
   const [selectPeople, setSelectPeople] = useState(false)
 
   function closeModal() {
-    setPeople(undefined)
     setSelectPeople(false)
-  }
-
-  function clickPeople(value: PeopleEnum) {
-    setPeople(value)
   }
 
   return (
@@ -38,28 +33,46 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
       </p>
       <section className='mt-[110px] bg-[url("/about-us/board-executive.jpeg")] bg-center bg-cover bg-yellow-50'>
         <section className='py-[94px] bg-modellBgDark/50'>
-          {boardData.story.content.body &&
-            boardData.story.content.body.map((board: any, index: number) => {
-              return (
-                <>
-                  {/* <div
-                    className='text-white border-2 p-5'
-                    onClick={() => setSelectPeople(board)}
-                  >
-                    {board.name}
-                  </div> */}
+          <section className='max-w-[1040px] mx-auto w-full'>
+            <h2 className='headline-2 text-center text-white'>
+              {t('Board.title')}
+            </h2>
+            <section className='max-w-[734px] w-full mx-auto my-[40px] grid grid-cols-1 justify-center md:grid-cols-3 gap-x-5 md:gap-x-[60px] gap-y-[20px]'>
+              {boardData.story.content.body?.map((board: any) =>
+                board.isBoardOfDirector ? (
                   <BoardCard
+                    key={board._uid}
                     name={board.name}
                     imageUrl={board.peopleImage.filename}
                     jobTitle={board}
                     onClick={() => setSelectPeople(board)}
                   />
-                </>
-              )
-            })}
+                ) : null
+              )}
+            </section>
+          </section>
 
-          <Board onClick={clickPeople} />
-          {/* <Executives onClick={clickPeople} /> */}
+          {/* Executive */}
+          <section className='max-w-[1040px] mx-auto w-full pt-10'>
+            <h2 className='headline-2 text-center text-white'>
+              {t('Executives.title')}
+            </h2>
+            <section className='max-w-[734px] w-full mx-auto my-[40px] grid grid-cols-1 justify-center  md:grid-cols-3 gap-x-5 md:gap-x-[60px] gap-y-[20px] md:px-2'>
+              {boardData.story.content.body?.map((board: any) =>
+                board.isCommittee ? (
+                  <BoardCard
+                    key={board._uid}
+                    name={board.name}
+                    imageUrl={board.peopleImage.filename}
+                    jobTitle={board}
+                    onClick={() => setSelectPeople(board)}
+                  />
+                ) : null
+              )}
+            </section>
+          </section>
+          {/* <Board onClick={clickPeople} />
+          <Executives onClick={clickPeople} /> */}
         </section>
       </section>
       <div className='relative  min-h-[1190px] md:min-h-[990px]'>
@@ -75,7 +88,10 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
       </div>
       {/* {people && <PeopleModal people={people} onClose={closeModal} />} */}
       {selectPeople && (
-        <MockPeopleModal selectPeople={selectPeople} onClose={closeModal} />
+        <PeopleInformationModal
+          selectPeople={selectPeople}
+          onClose={closeModal}
+        />
       )}{' '}
     </section>
   )
