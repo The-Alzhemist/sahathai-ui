@@ -4,6 +4,7 @@ export enum SlugType {
   INVESTOR = 'investor-relations',
   ESERVICE = 'e-service/e-service-list',
   BANNER_POPUP = 'banner/bannerpopup',
+  BOARD = 'board-and-committee/board-and-committee',
 }
 
 export enum RevalidateTag {
@@ -12,4 +13,5 @@ export enum RevalidateTag {
   INVESTOR = 'story:investor-accordion-list',
   ESERVICE = 'story:e-service',
   BANNER_POPUP = 'story:bannerpopup',
+  BOARD = 'story:board-and-committee',
 }
