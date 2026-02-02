@@ -2,8 +2,6 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 import { SahathaiText } from '@/components/SahathaiText'
-import { PeopleEnum } from '@/enums/PeopleEnum'
-import { Board } from '../Board'
 
 import { Subcommittee } from '../Subcommittee'
 
@@ -11,7 +9,7 @@ import Image from 'next/image'
 import { BoardAndExecutivesProps } from '@/features/aboutUs/components/BoardAndExecutives/interface'
 
 import { BoardCard } from '@/features/aboutUs/components/BoardCard'
-import { PeopleInformationModal } from '@/features/aboutUs/components/PeopleModal/MockPeopleModal'
+import { PeopleInformationModal } from '@/features/aboutUs/components/PeopleModal/PeopleInformationModal'
 
 export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
@@ -71,8 +69,6 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
               )}
             </section>
           </section>
-          {/* <Board onClick={clickPeople} />
-          <Executives onClick={clickPeople} /> */}
         </section>
       </section>
       <div className='relative  min-h-[1190px] md:min-h-[990px]'>
@@ -86,7 +82,6 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
           />
         </div>
       </div>
-      {/* {people && <PeopleModal people={people} onClose={closeModal} />} */}
       {selectPeople && (
         <PeopleInformationModal
           selectPeople={selectPeople}
