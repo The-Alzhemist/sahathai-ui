@@ -49,7 +49,7 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
           </div>
         </div>
 
-        <div className='px-5 md:px-9 py-9 bg-white-1 space-y-5 md:space-y-[30px]'>
+        <div className='px-5 md:px-9 py-9 bg-white-1 space-y-5 md:space-y-[30px] mt-8 md:mt-0'>
           {}
           <div className=' py-2 grid grid-cols-1 md:grid-cols-1 gap-1'>
             {selectPeople.setOfData?.length > 0 &&
