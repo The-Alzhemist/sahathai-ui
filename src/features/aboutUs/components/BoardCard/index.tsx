@@ -39,7 +39,7 @@ export function BoardCard({
       <div className='py-[8px] px-[5px] space-y-[18px] min-h-[165px] mt-[15px] w-full text-white'>
         <h3 className='subtitle-1'>{name}</h3>
         <Line />
-        <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5'>
+        <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5 body-2'>
           {jobTitle.setOfData.length > 0 &&
             jobTitle.setOfData[0].item.map((item: any, index: number) => (
               <li key={`name-${index}`}>{item.detail ? item.detail : ''}</li>
