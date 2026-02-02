@@ -4,6 +4,11 @@ export interface AboutPageProps {
   tabs: TabType[]
   active: AboutUsTabEnum
   handleOnActiveTabChange: (tab: AboutUsTabEnum) => void
+  boardData: any
+}
+
+export interface AboutPageAcceptProps {
+  boardData: any
 }
 
 export enum AboutUsTabEnum {
