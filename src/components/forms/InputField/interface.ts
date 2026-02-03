@@ -1,4 +1,4 @@
-import { FieldMetaProps } from 'formik/dist/types'
+import { FieldHelperProps, FieldMetaProps } from 'formik'
 
 export interface InputFieldAcceptProps {
   className?: string
@@ -8,6 +8,7 @@ export interface InputFieldAcceptProps {
   disabled?: boolean
   type?: string
   inputClassName?: string
+  onlyNumber?: boolean
 }
 
 export interface InputFieldProps {
@@ -19,4 +20,6 @@ export interface InputFieldProps {
   type?: string
   meta: FieldMetaProps<any>
   inputClassName?: string
+  helpers?: FieldHelperProps<string> //use for phoneNo as string
+  onlyNumber?: boolean
 }

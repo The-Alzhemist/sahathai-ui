@@ -10,8 +10,9 @@ export function withInputField(Component: React.FC<InputFieldProps>) {
     disabled = false,
     inputClassName = '',
     type = 'text',
+    onlyNumber,
   }: InputFieldAcceptProps) {
-    const [field, meta] = useField(name)
+    const [field, meta, helpers] = useField(name)
 
     const componentProps: InputFieldProps = {
       placeholder,
@@ -21,6 +22,8 @@ export function withInputField(Component: React.FC<InputFieldProps>) {
       meta,
       type,
       inputClassName,
+      helpers,
+      onlyNumber,
       ...field,
     }
 

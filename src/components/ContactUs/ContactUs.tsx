@@ -80,7 +80,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                 />
                 <InputField
                   name='phone'
-                  type='number'
+                  type='text'
                   label={t('phoneNumberField.label')}
                   placeholder={t('phoneNumberField.placeholder')}
                   inputClassName={
@@ -88,6 +88,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
                       ? ''
                       : 'focus:border-red-400'
                   }
+                  onlyNumber
                 />
                 <InputField
                   name='email'
