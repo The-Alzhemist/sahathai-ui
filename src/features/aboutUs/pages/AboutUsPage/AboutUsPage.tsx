@@ -15,7 +15,7 @@ export function AboutUsPage({ active, boardData }: AboutPageProps) {
   return (
     <main>
       <AnimatePresence mode='wait'>
-        <Animation key={active}>
+        <Animation key={`about-us-page+${Date.now()}`}>
           <Menu />
           <SwiperVertical />
 
