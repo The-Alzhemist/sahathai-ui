@@ -4,25 +4,15 @@ import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
-
-
-export default function Home({
-                               params,
-                             }: {
-  params: { locale: string }
-}) {
-
-
-  return <HomePage params={params}  />
+export default function Home({ params }: { params: { locale: string } }) {
+  return <HomePage params={params} />
 }
 
 export async function generateMetadata({
   params: { locale },
 }: {
-  params: {
-    locale: string
-  }
-}) {
+  params: { locale: string }
+}): Promise<Metadata> {
   const t = await getTranslations('MetaData')
 
   return {
@@ -33,7 +23,7 @@ export async function generateMetadata({
       description: t('Home.Description'),
       images: [
         {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-home.jpg',
+          url: `https://sahathai-ui.vercel.app/seo/home-meta-img-${locale}.jpg`,
           width: 800,
           height: 600,
           alt: 'sahathai-meta-image',
@@ -48,6 +38,5 @@ export async function generateMetadata({
         },
       ],
     },
-
   }
 }
