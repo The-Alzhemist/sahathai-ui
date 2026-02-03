@@ -1,3 +1,4 @@
+'use client'
 import { InfrastructureContainersPage } from './InfrastructureContainersPage'
 import { withInfrastructureContainersPage } from './withInfrastructureContainersPage'
 

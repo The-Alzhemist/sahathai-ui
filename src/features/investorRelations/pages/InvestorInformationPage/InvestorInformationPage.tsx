@@ -1,25 +1,21 @@
 import { FinancialReports } from '../../components/FinancialReports'
 
 import { CompanyIntroductionVideo } from '../../components/CompanyIntroductionVideo'
-import { Tabs } from '../../components/Tabs'
+
 import { Menu } from '@/components/Menu'
 import StockMarketInformation from '@/features/investorRelations/components/StockMarketInformation/StockMarketInformation'
-import { Banner } from '@/components/Banner'
-import { getTranslations } from 'next-intl/server'
+
 import { CompanyAdvertiseVideo } from '@/features/investorRelations/components/CompanyAdvertiseVideo'
 import { CompanyFactSheet } from '@/features/investorRelations/components/CompanyFactSheet'
 import { Background } from '@/components/Background'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
-import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export async function InvestorInformationPage() {
-  const t = await getTranslations('Menu')
   return (
     <main className='bg-[#F5f5f5]'>
       <Menu />
-
-      {/* <SwiperVertical /> */}
       <BannerImage
         mobileImageSrc='/investor-relations/new/investor-banner-mobile-1.webp'
         imageSrc='/investor-relations/new/investor-banner-1.webp'
