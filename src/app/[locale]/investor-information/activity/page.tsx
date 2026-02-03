@@ -18,7 +18,13 @@ export default async function Activity({
   return <ActivityPage data={response} />
 }
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: string
+  }
+}) {
   const t = await getTranslations('MetaData')
 
   return {
@@ -27,6 +33,14 @@ export async function generateMetadata() {
     openGraph: {
       title: t('Activity.Title'),
       description: t('Activity.Description'),
+      images: [
+        {
+          url: `https://sahathai-ui.vercel.app/seo/investor/investor-meta-img-${locale}.png`,
+          width: 800,
+          height: 600,
+          alt: 'sahathai-investor-meta-image',
+        },
+      ],
     },
   }
 }
