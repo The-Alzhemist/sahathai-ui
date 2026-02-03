@@ -1,3 +1,5 @@
+'use client'
+
 import { ServicesPage } from './ServicesPage'
 import { withServicesPage } from './withServicesPage'
 
