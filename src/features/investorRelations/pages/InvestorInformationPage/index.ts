@@ -1,3 +1,5 @@
+'use client'
+
 import { InvestorInformationPage } from './InvestorInformationPage'
 import { withInvestorInformationPage } from './withInvestorInformationPage'
 
