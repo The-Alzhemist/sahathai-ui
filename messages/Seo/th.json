@@ -36,6 +36,10 @@
       "Title": "สหไทย | หน้าหลัก",
       "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
     },
+    "InvestorInformation": {
+      "Title": "สหไทย | ข้อมูลสำหรับนักลงทุน",
+      "Description": "ข้อมูลเกี่ยวกับข้อมูลสำหรับนักลงทุน"
+    },
     "shareHolder": {
       "Title": "สหไทย | รายชื่อผู้ถือหุ้น",
       "Description": "ข้อมูลเกี่ยวกับรายชื่อผู้ถือหุ้นและโครงสร้างการถือหุ้นของบริษัท"
