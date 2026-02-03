@@ -24,7 +24,24 @@ export function Menu() {
     >
       <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 rounded-b-[30px]'>
         {menus.map(menu => {
-          const isActive = menu.pathname.includes(pathname)
+          console.log('menu.pathname.includes(pathname)', pathname)
+          let isActive = menu.pathname.includes(pathname)
+
+          // investor-information menu
+          if (
+            menu.pathname.includes('investor-information') &&
+            (pathname.includes('sustainability-management') ||
+              pathname.includes('code-of-conduct') ||
+              pathname.includes('share-holder') ||
+              pathname.includes('financial-information') ||
+              pathname.includes('document-announcement') ||
+              pathname.includes('good-corporate') ||
+              pathname.includes('activity') ||
+              pathname.includes('warrant'))
+          ) {
+            isActive = true
+          }
+
           if (menu.children && menu.children.length) {
             return (
               <DropdownMenu
