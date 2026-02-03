@@ -17,7 +17,13 @@ export default async function GoodCorporate({
   return <GoodCorporatePage data={response} />
 }
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: string
+  }
+}) {
   const t = await getTranslations('MetaData')
 
   return {
@@ -26,6 +32,14 @@ export async function generateMetadata() {
     openGraph: {
       title: t('GoodCorporate.Title'),
       description: t('GoodCorporate.Description'),
+      images: [
+        {
+          url: `https://sahathai-ui.vercel.app/seo/investor/investor-meta-img-${locale}.png`,
+          width: 800,
+          height: 600,
+          alt: 'sahathai-investor-meta-image',
+        },
+      ],
     },
   }
 }

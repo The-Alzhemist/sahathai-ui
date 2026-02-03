@@ -1,51 +1,20 @@
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
-import { getTranslations } from 'next-intl/server'
+
 import Image from 'next/image'
-import { headers } from 'next/headers'
 
-interface StockData {
-  date: string
-  open: number
-  high: number
-  low: number
-  close: number
-  adjusted_close: number
-  volume: number
-}
+import { StockMarketInformationProps } from '@/features/investorRelations/components/StockMarketInformation/interface'
+import { useTranslations } from 'next-intl'
 
-const StockMarketInformation = async () => {
-  const t = await getTranslations(
+const StockMarketInformation = async ({
+  stockData,
+}: StockMarketInformationProps) => {
+  const t = await useTranslations(
     'InvestorInformationPage.StockMarketInformation'
   )
 
-  const host = headers().get('host')
-  let stockData: StockData[] = []
-
-  if (host?.includes('localhost')) {
-    // mock data เวลา dev
-    stockData = [
-      {
-        date: '2025-09-11',
-        open: 12,
-        high: 13,
-        low: 11.5,
-        close: 12.8,
-        adjusted_close: 12.8,
-        volume: 123456,
-      },
-    ]
-  } else {
-    // free api called for 20 times/day
-    const response = await fetch(
-      `https://eodhd.com/api/eod/PORT.BK?api_token=677622d53db520.53886203&fmt=json`,
-      { next: { revalidate: 60 * 60 * 12 } }
-    ) // every 12 hr/call api again
-    stockData = await response.json()
-  }
-
-  const lastPriceData = stockData[stockData.length - 1]
-  const changedPrice = lastPriceData.high - lastPriceData.low
+  const lastPriceData = (stockData && stockData[stockData.length - 1]) || 0
+  const changedPrice = lastPriceData.high - lastPriceData.low || 0
 
   return (
     <section className=''>

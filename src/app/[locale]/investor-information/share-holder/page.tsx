@@ -1,15 +1,17 @@
-
 import { ShareHolderPage } from '@/features/investorRelations/pages/ShareHolderPage'
 import { getTranslations } from 'next-intl/server'
-
-
 
 export default async function ShareHolder() {
   return <ShareHolderPage />
 }
 
-
-export async function generateMetadata() {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: string
+  }
+}) {
   const t = await getTranslations('MetaData')
 
   return {
@@ -18,6 +20,14 @@ export async function generateMetadata() {
     openGraph: {
       title: t('PerformanceReport.Title'),
       description: t('PerformanceReport.Description'),
+      images: [
+        {
+          url: `https://sahathai-ui.vercel.app/seo/investor/investor-meta-img-${locale}.png`,
+          width: 800,
+          height: 600,
+          alt: 'sahathai-investor-meta-image',
+        },
+      ],
     },
   }
 }
