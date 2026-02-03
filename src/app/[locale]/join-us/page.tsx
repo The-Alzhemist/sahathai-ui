@@ -22,19 +22,12 @@ export async function generateMetadata({
       description: t('JoinUs.Description'),
       images: [
         {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-join-us.jpg',
+          url: `https://sahathai-ui.vercel.app/seo/join-us/joinus-meta-img-${locale}.png`,
           width: 800,
           height: 600,
           alt: 'sahathai-join-us-meta-image',
         },
-        {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-join-us.jpg',
-          width: 1800,
-          height: 1600,
-          alt: 'sahathai-join-us-meta-image',
-        },
       ],
     },
-
   }
 }

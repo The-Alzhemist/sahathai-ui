@@ -22,17 +22,9 @@ export async function generateMetadata({
       description: t('ContactUs.Description'),
       images: [
         {
-          url:
-            'https://sahathai-ui.vercel.app' + '/seo/meta-image-contact-us.jpg',
+          url: `https://sahathai-ui.vercel.app/seo/contact/contact-meta-img-${locale}.png`,
           width: 800,
           height: 600,
-          alt: 'sahathai-contact-us-meta-image',
-        },
-        {
-          url:
-            'https://sahathai-ui.vercel.app' + '/seo/meta-image-contact-us.jpg',
-          width: 1800,
-          height: 1600,
           alt: 'sahathai-contact-us-meta-image',
         },
       ],

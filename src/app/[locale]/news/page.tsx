@@ -125,7 +125,13 @@ export default async function news({
   )
 }
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: string
+  }
+}) {
   const t = await getTranslations('MetaData')
 
   return {
@@ -136,15 +142,9 @@ export async function generateMetadata() {
       description: t('News.Description'),
       images: [
         {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-news.jpg',
+          url: `https://sahathai-ui.vercel.app/seo/news/news-meta-img-${locale}.png`,
           width: 800,
           height: 600,
-          alt: 'sahathai-news-meta-image',
-        },
-        {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-news.jpg',
-          width: 1800,
-          height: 1600,
           alt: 'sahathai-news-meta-image',
         },
       ],
