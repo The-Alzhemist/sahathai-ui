@@ -2,7 +2,6 @@
 import { Form, Formik } from 'formik'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import * as Yup from 'yup'
 
 import { InputField } from '@/components/forms/InputField'
 import { TextAreaField } from '@/components/forms/TextAreaField'
