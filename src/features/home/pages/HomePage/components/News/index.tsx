@@ -1,6 +1,3 @@
-
-
-
 import { getTranslations } from 'next-intl/server'
 
 import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
@@ -10,29 +7,14 @@ import { BlogCard } from '@/components/BlogCard'
 import React from 'react'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 
-
-
-// export function News() {
-//   const t = useTranslations('HomePage.News')
-//
-//   return (
-//     <section className='container !my-0 py-[80px] bg-white'>
-//       <h2 className='headline-2 text-center text-navy'>{t('title')}</h2>
-//       <Animation className='mt-[42px] flex flex-wrap justify-center gap-[32px] max-w-[1100px] mx-auto'>
-//         <LatestNewsHomePageList />
-//       </Animation>
-//     </section>
-//   )
-// }
-
-export default async function HomePageNews({params}: HomePageProps) {
+export default async function HomePageNews({ params }: HomePageProps) {
   // translation
   const t = await getTranslations('NewsPage')
 
   const locale = params.locale
   const page = 1
   const perPage = 3
-  const search =  undefined
+  const search = undefined
 
   //  fetching data
   const { stories } = await fetchAllBlog({
@@ -42,13 +24,11 @@ export default async function HomePageNews({params}: HomePageProps) {
     version: 'published',
     search,
     startsWith: 'news/',
-    tag: 'story:news-list'
+    tag: 'story:news-list',
   })
-
 
   return (
     <main>
-
       {/*All blog*/}
       <section className='bg-white py-[70px]'>
         <div className='max-w-[1100px] mx-auto p-6'>
@@ -74,12 +54,8 @@ export default async function HomePageNews({params}: HomePageProps) {
               )}
             </div>
           </section>
-
-
         </div>
       </section>
-
-
     </main>
   )
 }
