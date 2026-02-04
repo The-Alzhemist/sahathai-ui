@@ -1,3 +1,5 @@
+'use client'
+
 import { JoinUsPage } from './JoinUsPage'
 import { withJoinUsPage } from './withJoinUsPage'
 

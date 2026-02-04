@@ -8,9 +8,11 @@ import { useForm as useFormSpree } from '@formspree/react'
 import { toast } from 'react-toastify'
 
 import { useEffect } from 'react'
+import { useRouter } from '@/libs/intl/navigation'
 
 const withContactUs = (Component: React.FC<ContactUsProps>) => {
   const Hoc = ({ className }: ContactUsAcceptProps) => {
+    useRouter()
     const FORM_SPREE_ID = process.env.NEXT_PUBLIC_FORM_SPREE_ID
     const [state, sendDataToFromSpree] = useFormSpree(FORM_SPREE_ID!)
 
