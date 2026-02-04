@@ -24,6 +24,111 @@
     "metadata": {}
   },
   {
+    "name": "Banner",
+    "display_name": null,
+    "description": "",
+    "created_at": "2026-01-23T07:23:50.763Z",
+    "updated_at": "2026-01-25T02:23:28.124Z",
+    "id": 137066212414313,
+    "schema": {
+      "bannerImage": {
+        "type": "asset",
+        "pos": 0,
+        "required": true,
+        "id": "4jjnCpn1QE2lxHJKcHOaQg",
+        "display_name": "รูปภาพ Banner (สี่เหลี่ยมจตุรัส)"
+      },
+      "isShowBanner": {
+        "type": "boolean",
+        "pos": 1,
+        "display_name": "ต้องการที่จะแสดง Banner หรือไม่",
+        "id": "jAl9T1loT5WTRyQyDXGcOg"
+      },
+      "bannerAlt": {
+        "type": "text",
+        "pos": 2,
+        "display_name": "Image Alt",
+        "id": "SpjlKDWxQCCacMVuVui92Q"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Banner",
+    "component_group_uuid": "33871fca-67fe-467e-9d70-f9b23021a388",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "BoardAndCommittee",
+    "display_name": null,
+    "description": "",
+    "created_at": "2026-01-28T06:48:15.815Z",
+    "updated_at": "2026-02-01T02:21:23.677Z",
+    "id": 138826939665026,
+    "schema": {
+      "isBoardOfDirector": {
+        "type": "boolean",
+        "pos": 0,
+        "id": "kVCuvpUZSRyjOVxmMMCAjQ",
+        "display_name": "เป็น board of director หรือไม่"
+      },
+      "isCommittee": {
+        "type": "boolean",
+        "pos": 1,
+        "id": "bidFTQMhR1GOicgeJGDCAg",
+        "display_name": "เป็น committee หรือไม่"
+      },
+      "name": {
+        "type": "text",
+        "pos": 2,
+        "id": "zxAiWJKdQ5GbLS_WBxMr3w",
+        "display_name": "ชื่อและนามสกุล",
+        "required": false,
+        "translatable": true
+      },
+      "peopleImage": {
+        "type": "asset",
+        "pos": 3,
+        "id": "SX_qVGA5SSCS9w6-cvlS5w",
+        "display_name": "รูปภาพ(สี่เหลี่ยมจตุรัส พื้นหลังสีขาว)",
+        "filetypes": [
+          "images"
+        ],
+        "asset_folder_id": 138836642659050
+      },
+      "setOfData": {
+        "type": "bloks",
+        "pos": 4,
+        "id": "aSvTDUHOT7KViZ49A0im7A",
+        "display_name": "หัวข้อทั้งหมด"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "BoardAndCommittee",
+    "component_group_uuid": "69b70f7a-1a7b-4728-b50a-f8b838f9d6c3",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
     "name": "downloadLink",
     "display_name": null,
     "description": null,
@@ -61,11 +166,62 @@
     "metadata": {}
   },
   {
+    "name": "e-service",
+    "display_name": null,
+    "description": "",
+    "created_at": "2026-01-21T04:17:51.695Z",
+    "updated_at": "2026-01-29T01:42:16.777Z",
+    "id": 136312716067770,
+    "schema": {
+      "text": {
+        "type": "text",
+        "pos": 0,
+        "id": "VzrguuKsQ_OoeycBXbP3Rg",
+        "translatable": false,
+        "display_name": "หัวข้อภาษาไทย"
+      },
+      "text_en": {
+        "type": "text",
+        "pos": 1,
+        "id": "1tCLqwvsT_OKiHsAzte_Vw",
+        "display_name": "หัวข้อภาษาอังกฤษ"
+      },
+      "externalLink": {
+        "type": "text",
+        "pos": 3,
+        "id": "t6Px6LsnT8SeQQZMK5qh7Q",
+        "display_name": "URL "
+      },
+      "image": {
+        "type": "asset",
+        "pos": 3,
+        "id": "awTnKxDKRV2oRk4O9mgozA",
+        "display_name": "รูปภาพ",
+        "required": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "e-service",
+    "component_group_uuid": "3d8b8f89-3b5a-463a-9a54-3d2c743bff8b",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
     "name": "eventNewsDetailCard",
     "display_name": null,
-    "description": null,
+    "description": "รายละเอียดเนื้อหา",
     "created_at": "2024-12-12T05:43:13.266Z",
-    "updated_at": "2025-01-02T02:47:51.583Z",
+    "updated_at": "2026-01-26T07:30:13.401Z",
     "id": 6679038,
     "schema": {
       "newsImageCover": {
@@ -232,15 +388,49 @@
     "metadata": {}
   },
   {
+    "name": "item",
+    "display_name": null,
+    "description": "",
+    "created_at": "2026-01-28T07:10:00.050Z",
+    "updated_at": "2026-01-28T07:35:48.062Z",
+    "id": 138832281811638,
+    "schema": {
+      "detail": {
+        "type": "text",
+        "pos": 0,
+        "id": "YzPjDGzNQyKNxqelpYClFg",
+        "display_name": "รายละเอียด",
+        "translatable": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "item",
+    "component_group_uuid": "69b70f7a-1a7b-4728-b50a-f8b838f9d6c3",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
     "name": "page",
     "display_name": null,
     "description": null,
     "created_at": "2024-12-10T14:13:06.656Z",
-    "updated_at": "2024-12-10T14:13:06.656Z",
+    "updated_at": "2026-01-26T08:58:15.950Z",
     "id": 6671804,
     "schema": {
       "body": {
-        "type": "bloks"
+        "type": "bloks",
+        "display_name": "รายละเอียดเนื้อหา",
+        "id": "2AaoAMilQx2-p9H6uc0jOg"
       }
     },
     "image": null,
@@ -352,7 +542,7 @@
     "display_name": null,
     "description": "",
     "created_at": "2025-08-01T07:38:09.076Z",
-    "updated_at": "2025-08-18T09:47:46.356Z",
+    "updated_at": "2026-01-14T07:16:20.219Z",
     "id": 75138208065622,
     "schema": {
       "heading": {
@@ -371,7 +561,24 @@
       "file": {
         "type": "asset",
         "pos": 2,
-        "id": "Cx0TrVJ1SlSwy1HM2V5Aew"
+        "id": "Cx0TrVJ1SlSwy1HM2V5Aew",
+        "display_name": "File(ภาษาไทย)"
+      },
+      "englishFile": {
+        "type": "asset",
+        "pos": 3,
+        "id": "RuudvGrMQpKmc0u836SNVg"
+      },
+      "chineseFile": {
+        "type": "asset",
+        "pos": 4,
+        "id": "x8ADs9rGRNOPu823uC8Pcw"
+      },
+      "externalLink": {
+        "type": "text",
+        "pos": 5,
+        "display_name": "External Link",
+        "id": "QESKPjg-QbazUcVenJ4p6Q"
       }
     },
     "image": null,
@@ -432,18 +639,56 @@
     "metadata": {}
   },
   {
+    "name": "setOfData",
+    "display_name": null,
+    "description": "",
+    "created_at": "2026-01-28T07:12:56.822Z",
+    "updated_at": "2026-01-28T07:35:40.336Z",
+    "id": 138833005873848,
+    "schema": {
+      "heading": {
+        "type": "text",
+        "pos": 0,
+        "id": "cSeUJDC2RPKkqFBIoMViHg",
+        "required": false,
+        "translatable": true
+      },
+      "item": {
+        "type": "bloks",
+        "pos": 1,
+        "id": "-vS5mgUMTsO5hZnYvHezYg",
+        "display_name": "รายละเอียดในหัวข้อนั้นๆ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "setOfData",
+    "component_group_uuid": "69b70f7a-1a7b-4728-b50a-f8b838f9d6c3",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
     "name": "showOneImage",
     "display_name": null,
     "description": null,
     "created_at": "2024-12-23T04:54:02.217Z",
-    "updated_at": "2025-01-02T02:48:01.484Z",
+    "updated_at": "2026-01-20T04:06:52.858Z",
     "id": 6720508,
     "schema": {
       "ImageA": {
         "type": "asset",
         "pos": 0,
         "id": "2Nl1GeF9Suqrtv6WvmmT8A",
-        "required": true
+        "required": false
       }
     },
     "image": null,
@@ -467,26 +712,26 @@
     "display_name": null,
     "description": null,
     "created_at": "2024-12-26T05:32:01.757Z",
-    "updated_at": "2025-01-02T02:48:21.669Z",
+    "updated_at": "2026-01-20T04:07:25.162Z",
     "id": 6731580,
     "schema": {
       "ImageA": {
         "type": "asset",
         "pos": 0,
         "id": "BwviNTqtREWX4Z1T1yykvw",
-        "required": true
+        "required": false
       },
       "ImageB": {
         "type": "asset",
         "pos": 1,
         "id": "qWSex-fpTB28NdRUZKPmjQ",
-        "required": true
+        "required": false
       },
       "ImageC": {
         "type": "asset",
         "pos": 2,
         "id": "1mAoJAAFRM2eJS7MaN7jaw",
-        "required": true
+        "required": false
       }
     },
     "image": null,
@@ -510,20 +755,20 @@
     "display_name": null,
     "description": null,
     "created_at": "2024-12-26T05:13:57.620Z",
-    "updated_at": "2025-01-02T02:48:31.396Z",
+    "updated_at": "2026-01-20T04:07:10.477Z",
     "id": 6731544,
     "schema": {
       "ImageA": {
         "type": "asset",
         "pos": 0,
         "id": "lpBX59RQRla_X-UZHyYUYg",
-        "required": true
+        "required": false
       },
       "ImageB": {
         "type": "asset",
         "pos": 1,
         "id": "bX-2gqy9S1eo0OeqbVMFeA",
-        "required": true
+        "required": false
       }
     },
     "image": null,

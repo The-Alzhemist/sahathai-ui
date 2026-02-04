@@ -1,5 +1,26 @@
 [
   {
+    "name": "banner",
+    "id": 137066154513671,
+    "uuid": "33871fca-67fe-467e-9d70-f9b23021a388",
+    "parent_id": null,
+    "parent_uuid": null
+  },
+  {
+    "name": "BoardAndCommittee",
+    "id": 138826785058503,
+    "uuid": "69b70f7a-1a7b-4728-b50a-f8b838f9d6c3",
+    "parent_id": null,
+    "parent_uuid": null
+  },
+  {
+    "name": "e-service",
+    "id": 136634827850511,
+    "uuid": "3d8b8f89-3b5a-463a-9a54-3d2c743bff8b",
+    "parent_id": null,
+    "parent_uuid": null
+  },
+  {
     "name": "InvestorRelation",
     "id": 74379867764785,
     "uuid": "1efaf12a-4747-44ee-b6b4-e766f0178809",
