@@ -111,7 +111,7 @@ export function SubcommitteeSection({ activeTab }: { activeTab: string }) {
             <p className=''>{t(`${activeTab}.pdfTitle`)}</p>
             <Link
               className='hover:underline text-secondary font-normal'
-              href='https://sahathaiterminal.com/wp-content/uploads/2019/05/20181130_AC_ID.pdf'
+              href='https://a.storyblok.com/f/316761/x/0f383ec951/ac-id.pdf'
             >
               {t(`${activeTab}.clickLinkText`)}
             </Link>
