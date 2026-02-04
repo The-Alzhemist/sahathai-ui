@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pull-storyblok-components": "storyblok pull-components --space 316761",
-    "generate-sb-types": "storyblok generate-typescript-typedefs --sourceFilePaths ./components.316761.json --destinationFilePath ./component-types-sb.d.ts"
+    "pull-storyblok-components": "storyblok comp pull -s 316761",
+    "generate-sb-types": "storyblok-generate-ts source=.storyblok/components/316761/components.json target=src/types/storyblok"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.17",

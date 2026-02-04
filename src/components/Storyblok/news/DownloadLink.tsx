@@ -1,9 +1,4 @@
-import {
-  storyblokEditable,
-  StoryblokServerComponent,
-} from '@storyblok/react/rsc'
-
-
+import { storyblokEditable } from '@storyblok/react/rsc'
 
 import { DownloadLink as DownloadLinkStoryblok } from '.storyblok/types/316761/storyblok-components'
 
