@@ -3,7 +3,8 @@ import { useRouter } from '@/libs/intl/navigation'
 import { useSearchParams } from 'next/navigation'
 export function withServicesPage(Component: React.FC<FunctionComponentType>) {
   function WithServicesPage() {
-    const router = useRouter()
+    useRouter() //NOTE:
+    console.log('withServicesPage called')
     return <Component />
   }
 

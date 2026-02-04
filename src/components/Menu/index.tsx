@@ -24,7 +24,6 @@ export function Menu() {
     >
       <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 rounded-b-[30px]'>
         {menus.map(menu => {
-          console.log('menu.pathname.includes(pathname)', pathname)
           let isActive = menu.pathname.includes(pathname)
 
           // investor-information menu
