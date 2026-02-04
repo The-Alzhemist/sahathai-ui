@@ -1,14 +1,8 @@
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
-import Image from 'next/image'
-
-import { Menu } from '@/components/Menu'
-import { BlogCard } from '../../../components/BlogCard'
-import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
-import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Brochure } from '@/features/news/components/Brochure'
 
 import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
+import BlogComponent from '@/components/BlogComponent/BlogComponent'
 
 export default async function Blog({
   params,
@@ -17,10 +11,6 @@ export default async function Blog({
   params: { locale: string }
   searchParams: { page?: string; search?: string }
 }) {
-  /* ---------------- translations ---------------- */
-  const t = await getTranslations('NewsPage')
-
-  /* ---------------- normalize params ---------------- */
   const locale = params.locale
 
   const pageParam = Number(searchParams.page)
@@ -29,7 +19,6 @@ export default async function Blog({
   const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  /* ---------------- fetch data ---------------- */
   const { stories, total } = await fetchAllBlog({
     page,
     perPage,
@@ -46,66 +35,16 @@ export default async function Blog({
 
   const totalPages = Math.ceil(total / perPage)
 
-  /* ---------------- render ---------------- */
   return (
-    <main className='min-h-screen'>
-      <Menu />
-
-      {/* Latest Blog */}
-      <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'>
-        <h2 className='headline-2 text-blue-400 text-center mb-7'>
-          {t('latestBlog')}
-        </h2>
-
-        <LatestBlogCard blog={latestBlog} locale={locale} page='blog' />
-      </section>
-
-      {/* All Blog */}
-      <section className='bg-white pt-[70px] min-h-[600px]'>
-        <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[600px]'>
-          <h2 className='headline-2 text-blue-400 text-center mb-7'>
-            {t('allBlog')}
-          </h2>
-
-          {/* Blog list */}
-          <div className='flex-1 flex justify-center items-center'>
-            {stories.length ? (
-              <div className='flex flex-wrap gap-5 justify-center'>
-                {stories.map((s: any) => (
-                  <BlogCard
-                    key={s.content.body[0]._uid}
-                    title={s.content.body[0].newsTitle}
-                    content={s.content}
-                    createdAt={s.created_at ?? ''}
-                    slug={s.slug}
-                    page='blog'
-                  />
-                ))}
-              </div>
-            ) : (
-              <p className='text-gray-500'>No results found.</p>
-            )}
-          </div>
-
-          {/* Pagination */}
-          <div className='mt-auto flex justify-center mb-[90px]'>
-            <Pagination page={page} totalPages={totalPages} search={search} />
-          </div>
-        </div>
-      </section>
-
-      {/* Brochure */}
-      <section className='relative min-h-[450px] flex justify-center items-center px-5'>
-        <Image
-          src='/news/blog-contact-bg.webp'
-          alt='Blog Background'
-          fill
-          className='absolute inset-0 object-cover object-center z-0'
-          priority
-        />
-
-        <Brochure className='z-10' />
-      </section>
+    <main>
+      <BlogComponent
+        stories={stories}
+        latestBlog={latestBlog}
+        locale={locale}
+        page={page}
+        totalPages={totalPages}
+        search={search}
+      />
     </main>
   )
 }
