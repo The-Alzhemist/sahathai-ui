@@ -5,6 +5,7 @@ import { cn } from '@/libs/util'
 import { ArrowRightIcon } from '../icons/ArrowRightIcon'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import type { NewsCardProps } from './interface'
+import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
 
 export function BlogCard({
   title,
@@ -16,7 +17,7 @@ export function BlogCard({
 }: NewsCardProps) {
   const common = useTranslations('common')
 
-  const body0 = content?.body?.[0]
+  const body0 = content?.body?.[0] as EventNewsDetailCardStoryblok
   const newsDate: string | undefined = body0?.newsDate
   const imageSrc = body0?.newsImageCover?.filename ?? '/background.jpeg'
 

@@ -20,10 +20,9 @@ export default async function Page({
       <section className='max-w-[990px] px-5 mx-auto mt-[80px]'>
         <div className='flex justify-between mb-8'>
           <h1 className='text-xl md:text-3xl text-navy'>
-            {t('PageContent.Title')}
+            {t('PageContent.BlogTitle')}
           </h1>
           <button className='text-sm text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all'>
-            {/* ✅ keep locale in link */}
             <Link href={`/${locale}/blog`}>{t('PageContent.Back')}</Link>
           </button>
         </div>
