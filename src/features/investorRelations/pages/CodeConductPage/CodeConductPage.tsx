@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { CodeOfConductPageProps } from '@/features/investorRelations/pages/CodeConductPage'
+import { GroupStoryblok, TabStoryblok } from '@/types/storyblok'
 
 export function CodeOfConductPage({
   conOdConductData,
@@ -20,7 +21,8 @@ export function CodeOfConductPage({
     return <div>No data</div>
   }
 
-  const group = conOdConductData.story.content.body[0].group || []
+  const group =
+    (conOdConductData.story.content.body[0].group as GroupStoryblok) || []
 
   const toggleTab = (groupIndex: number, tabIndex: number) => {
     setOpenTabs(prev => {
@@ -52,7 +54,7 @@ export function CodeOfConductPage({
             </h2>
 
             <div className='space-y-4'>
-              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
+              {groupItem.tab?.map((tabItem: TabStoryblok, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
                   <AccordionTabs
