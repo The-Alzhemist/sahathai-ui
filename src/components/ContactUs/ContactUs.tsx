@@ -14,7 +14,7 @@ import { PrinterIcon } from '../icons/PrinterIcon'
 import { EnvelopeIcon } from '../icons/EnvelopeIcon'
 import { LocationIcon } from '../icons/LocationIcon'
 import { Animation } from '../Animation'
-import { WarningIcon } from '../icons/WarningIcon'
+
 import { MailIcon } from '../icons/MailIcon'
 import withContactUs from '@/components/ContactUs/withContactUs'
 import { contactUsInitialValue } from '@/components/ContactUs/ContactUsInitialValue'
@@ -29,7 +29,10 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
   const common = useTranslations('common')
 
   return (
-    <Animation className={cn('container-mini space-y-[52px]', className)}>
+    <Animation
+      className={cn('container-mini space-y-[52px]', className)}
+      key={`contact-us-${Date.now()}`}
+    >
       <h2
         className='w-full text-center text-[32px] leading-[48.38px] font-[500] text-navy'
         id='contact-us'
