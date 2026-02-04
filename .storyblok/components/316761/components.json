@@ -72,39 +72,44 @@
     "display_name": null,
     "description": "",
     "created_at": "2026-01-28T06:48:15.815Z",
-    "updated_at": "2026-01-28T07:40:38.838Z",
+    "updated_at": "2026-02-01T02:21:23.677Z",
     "id": 138826939665026,
     "schema": {
       "isBoardOfDirector": {
         "type": "boolean",
-        "pos": 1,
+        "pos": 0,
         "id": "kVCuvpUZSRyjOVxmMMCAjQ",
         "display_name": "เป็น board of director หรือไม่"
       },
       "isCommittee": {
         "type": "boolean",
-        "pos": 2,
+        "pos": 1,
         "id": "bidFTQMhR1GOicgeJGDCAg",
         "display_name": "เป็น committee หรือไม่"
       },
-      "peopleImage": {
-        "type": "asset",
-        "pos": 2,
-        "id": "SX_qVGA5SSCS9w6-cvlS5w"
-      },
-      "setOfData": {
-        "type": "bloks",
-        "pos": 3,
-        "id": "aSvTDUHOT7KViZ49A0im7A",
-        "display_name": "หัวข้อทั้งหมด"
-      },
       "name": {
         "type": "text",
-        "pos": 4,
+        "pos": 2,
         "id": "zxAiWJKdQ5GbLS_WBxMr3w",
         "display_name": "ชื่อและนามสกุล",
         "required": false,
         "translatable": true
+      },
+      "peopleImage": {
+        "type": "asset",
+        "pos": 3,
+        "id": "SX_qVGA5SSCS9w6-cvlS5w",
+        "display_name": "รูปภาพ(สี่เหลี่ยมจตุรัส พื้นหลังสีขาว)",
+        "filetypes": [
+          "images"
+        ],
+        "asset_folder_id": 138836642659050
+      },
+      "setOfData": {
+        "type": "bloks",
+        "pos": 4,
+        "id": "aSvTDUHOT7KViZ49A0im7A",
+        "display_name": "หัวข้อทั้งหมด"
       }
     },
     "image": null,

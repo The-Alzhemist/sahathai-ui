@@ -36,6 +36,7 @@ export interface BannerStoryblok {
 export interface BoardAndCommitteeStoryblok {
   isBoardOfDirector: boolean;
   isCommittee: boolean;
+  name?: string;
   peopleImage?: AssetStoryblok;
   setOfData?: (
     | เอกสารแต่ละไตรมาสStoryblok
@@ -63,7 +64,6 @@ export interface BoardAndCommitteeStoryblok {
     | ToggleContainerPageStoryblok
     | TogglePageStoryblok
   )[];
-  name?: string;
   _uid: string;
   component: "BoardAndCommittee";
   [k: string]: any;

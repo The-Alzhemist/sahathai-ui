@@ -9,7 +9,7 @@ import { BoardCardProps } from '@/features/aboutUs/components/BoardCard/interfac
 export function BoardCard({
   imageUrl,
   name,
-  jobTitle,
+  board,
   imageClassName,
   onClick,
 }: BoardCardProps) {
@@ -40,8 +40,10 @@ export function BoardCard({
         <h3 className='subtitle-1'>{name}</h3>
         <Line />
         <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5 body-2'>
-          {jobTitle.setOfData.length > 0 &&
-            jobTitle.setOfData[0].item.map((item: any, index: number) => (
+          {board &&
+            board.setOfData &&
+            board.setOfData.length > 0 &&
+            board.setOfData[0].item.map((item: any, index: number) => (
               <li key={`name-${index}`}>{item.detail ? item.detail : ''}</li>
             ))}
         </ul>
