@@ -4,6 +4,7 @@ import { AccordionTabsProps } from './interface'
 import { useLocale } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
+import { RowStoryblok } from '@/types/storyblok'
 export const AccordionTabs = ({
   groupIndex,
   tabIndex,
@@ -36,7 +37,7 @@ export const AccordionTabs = ({
         }}
       >
         <div className='p-4'>
-          {tabItem.row?.map((rowItem, rowIndex) => (
+          {tabItem.row?.map((rowItem: RowStoryblok, rowIndex: number) => (
             <div
               key={rowIndex}
               className='relative w-full flex justify-between border-left border-l-[2px] last:border-l-[2px] border-blue-300 last:border-white pl-5'
