@@ -2,13 +2,13 @@
 
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
-import { Banner } from '@/components/Banner'
 
 import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
 import { useState } from 'react'
 import { AccordionTabs } from '../../components/AccordionTabs'
-import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
+import { GroupStoryblok, TabStoryblok } from '@/types/storyblok'
 
 export function DocumentAnnouncementPage({
   data,
@@ -22,7 +22,7 @@ export function DocumentAnnouncementPage({
     return <div>No data</div>
   }
 
-  const group = data.story.content.body[0].group || []
+  const group = (data.story.content.body[0].group as GroupStoryblok[]) || []
 
   const toggleTab = (groupIndex: number, tabIndex: number) => {
     setOpenTabs(prev => {
@@ -48,15 +48,14 @@ export function DocumentAnnouncementPage({
         <h1 className='text-lg md:text-3xl mb-10 text-blue-400 text-center'>
           {tMenu('investorRelations.DocumentAnnouncement')}
         </h1>
-        {group.map((groupItem: any, groupIndex: number) => (
+        {group.map((groupItem: GroupStoryblok, groupIndex: number) => (
           <div key={groupIndex} className=' rounded-md p-4'>
-            {/* --- Group Header (always visible) --- */}
             <h2 className='   text-left text-lg mb-7 text-blue-400 '>
               {groupItem.heading}
             </h2>
 
             <div className='space-y-4'>
-              {groupItem.tab?.map((tabItem: any, tabIndex: number) => {
+              {groupItem.tab?.map((tabItem: TabStoryblok, tabIndex: number) => {
                 const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
                 return (
                   <AccordionTabs

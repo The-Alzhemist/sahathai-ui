@@ -18,7 +18,6 @@ import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 
 export function ShareHolderPage() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
-  const tMenu = useTranslations('Menu')
 
   return (
     <main className=' pb-[176px] bg-white '>

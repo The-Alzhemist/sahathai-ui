@@ -22,7 +22,7 @@ export function CodeOfConductPage({
   }
 
   const group =
-    (conOdConductData.story.content.body[0].group as GroupStoryblok) || []
+    (conOdConductData.story.content.body[0].group as GroupStoryblok[]) || []
 
   const toggleTab = (groupIndex: number, tabIndex: number) => {
     setOpenTabs(prev => {
@@ -47,7 +47,7 @@ export function CodeOfConductPage({
         <h1 className='text-lg md:text-3xl mb-10 text-blue-400 text-center'>
           {t('title')}
         </h1>
-        {group.map((groupItem: any, groupIndex: number) => (
+        {group.map((groupItem: GroupStoryblok, groupIndex: number) => (
           <div key={groupIndex} className=' rounded-md p-4'>
             <h2 className='   text-left text-lg mb-7 text-blue-400 '>
               {groupItem.heading}

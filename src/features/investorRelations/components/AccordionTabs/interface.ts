@@ -8,22 +8,22 @@ export interface AccordionTabsProps {
   toggleTab: (groupIndex: number, tabIndex: number) => void
 }
 
-interface AccordionTabItem {
-  heading?: string
-  row?: AccordionRowItem[]
-}
+// interface AccordionTabItem {
+//   heading?: string
+//   row?: AccordionRowItem[]
+// }
 
-interface AccordionRowItem {
-  heading?: string
-  youtubeUrl?: string
-  englishFile?: {
-    filename?: string
-  }
-  chineseFile?: {
-    filename?: string
-  }
-  file?: {
-    filename?: string
-  }
-  externalLink?: string
-}
+// interface AccordionRowItem {
+//   heading?: string
+//   youtubeUrl?: string
+//   englishFile?: {
+//     filename?: string
+//   }
+//   chineseFile?: {
+//     filename?: string
+//   }
+//   file?: {
+//     filename?: string
+//   }
+//   externalLink?: string
+// }
