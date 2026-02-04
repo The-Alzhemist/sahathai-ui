@@ -23,7 +23,6 @@ export default async function Page({
             {t('PageContent.Title')}
           </h1>
           <button className='text-sm text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all'>
-            {/* ✅ keep locale in link */}
             <Link href={`/${locale}/news`}>{t('PageContent.Back')}</Link>
           </button>
         </div>

@@ -6,13 +6,15 @@ import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { Link } from '@/libs/intl/navigation'
 import { getTranslations } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
+import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
 
 export async function LatestBlogCard({
   blog,
   locale,
   page,
 }: LatestBlogCardProps) {
-  const common = await getTranslations('common')
+  const common = useTranslations('common')
 
   if (!blog) {
     return (
@@ -33,7 +35,7 @@ export async function LatestBlogCard({
     )
   }
 
-  const content = blog.content.body[0]
+  const content = blog.content.body[0] as EventNewsDetailCardStoryblok
 
   return (
     <Link
