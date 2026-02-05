@@ -69,18 +69,18 @@ export function Header() {
         )}
 
         <section className='flex gap-x-5'>
-          <ul className='flex justify-end items-center w-full medium gap-[42px] md:mr-10'>
-            <li className='hidden md:block '>
+          <ul className='flex justify-end items-center w-full medium gap-[42px] lg:mr-10'>
+            <li className='hidden lg:block '>
               <Link href='/blog?page=1' className='flex items-center'>
                 {t('blog')}
               </Link>
             </li>
-            <li className='hidden md:block '>
+            <li className='hidden lg:block '>
               <Link href='/contact-us' className='flex items-center'>
                 {t('contactUs')}
               </Link>
             </li>
-            <li className='hidden md:block '>
+            <li className='hidden lg:block '>
               <Link className='flex items-center' href='/join-us'>
                 {t('joinUs')}
               </Link>
@@ -122,7 +122,7 @@ export function Header() {
           </div>
 
           <button
-            className='block md:hidden'
+            className='block lg:hidden'
             onClick={handleOnToggleMobileSidebar}
           >
             <ListIcon

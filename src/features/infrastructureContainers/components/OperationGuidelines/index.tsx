@@ -56,7 +56,7 @@ export function OperationGuidelines() {
       <Animation className='relative  max-w-[1040px] my-[90px] w-full mx-auto px-5'>
         <h1 className='headline-2 text-center text-navy'>{t('title')}</h1>
         <section className='w-full flex flex-col md:flex-row gap-5  p-5 mt-[20px] shadow-2 rounded-[20px] bg-[#eeeeee]'>
-          <Tabs className='flex overflow-auto md:block w-full md:w-[200px] shrink-0'>
+          <Tabs className='flex overflow-auto md:block w-full md:w-[200px] shrink-0 gap-2'>
             {tabs.map(({ key, title }) => (
               <Tab
                 key={key}

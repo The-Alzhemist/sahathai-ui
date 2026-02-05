@@ -31,7 +31,7 @@ const StockMarketInformation = async ({
           {t('title')}
         </h2>
 
-        <table className='mx-auto max-w-[860px] w-full report shadow-7 rounded-[10px] overflow-hidden mt-[37px] bg-white '>
+        <table className='mx-auto max-w-[860px] w-[95%] report shadow-7 rounded-[10px] overflow-hidden mt-[37px] bg-white '>
           <thead>
             <tr className='bg-white text-darkGray border-b px-5'>
               <th className='subtitle-1 text-left !font-semibold '>

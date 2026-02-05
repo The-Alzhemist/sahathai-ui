@@ -10,7 +10,7 @@ export function InventoryManagementServices() {
     <Background className=''>
       <section className='bg-modellBgDark/60 text-white pt-[100px] pb-[140px] px-5'>
         <Animation className='max-w-[1040px] mx-auto'>
-          <h2 className='font-[500] text-[40px] leading-[60.48px] text-white text-center'>
+          <h2 className='headline-2 font-[500] text-[40px] leading-[60.48px] text-white text-center'>
             {t('title')}
           </h2>
           <p className='mt-[20px] body-1 text-white-1 text-center'>
