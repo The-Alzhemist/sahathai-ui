@@ -33,6 +33,9 @@ export default async function Blog({
     startsWith: 'blog/',
   })
 
+  console.log('stories', stories)
+  console.log('latestBlog', latestBlog)
+
   const totalPages = Math.ceil(total / perPage)
 
   return (
