@@ -36,9 +36,6 @@ export async function POST(req: NextRequest) {
   } else if (fullSlug?.includes(SlugType.NEWS)) {
     console.log('------ Revalidate secret NEWS--------')
     revalidateTag(RevalidateTag.NEWS)
-  } else if (fullSlug?.includes(SlugType.INVESTOR)) {
-    console.log('------ Revalidate secret INVESTOR  (NOTHING)--------')
-    // revalidateTag(RevalidateTag.INVESTOR)
   } else if (fullSlug?.includes(SlugType.ESERVICE)) {
     console.log('------ Revalidate secret ESERVICE--------')
     revalidateTag(RevalidateTag.ESERVICE)
@@ -56,6 +53,7 @@ export async function POST(req: NextRequest) {
   } else {
     console.log('------ cannot revalidate any known tag --------')
     console.log('cannot revalidate any known tag')
+    console.log('------ fullSlug: ', fullSlug, '--------')
   }
 
   return NextResponse.json({ ok: true, fullSlug })
