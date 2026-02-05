@@ -1,5 +1,3 @@
-import { Fragment } from 'react'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'

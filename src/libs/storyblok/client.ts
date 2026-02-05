@@ -1,5 +1,3 @@
-
-
 const BASE_URL = 'https://api.storyblok.com/v2/cdn'
 
 export function buildUrl(
@@ -12,17 +10,4 @@ export function buildUrl(
   })
   url.searchParams.set('token', process.env.STORYBLOK_TOKEN as string)
   return url.toString()
-}
-
-export async function fetchJSON<T>(
-  url: string,
-  revalidateSeconds = 300
-): Promise<{ data: T; headers: Headers }> {
-  const res = await fetch(url, { next: { revalidate: revalidateSeconds } })
-  if (!res.ok) {
-    const text = await res.text()
-    throw new Error(`Storyblok fetch failed ${res.status}: ${text}`)
-  }
-  const data = (await res.json()) as T
-  return { data, headers: res.headers }
 }

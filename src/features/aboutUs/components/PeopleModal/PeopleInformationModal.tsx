@@ -1,9 +1,14 @@
 'use client'
 
 import { Modal } from '@/components/Modal'
+import { PeopleInformationModalProps } from '@/features/aboutUs/components/PeopleModal/interface'
 import Image from 'next/image'
 
-export function PeopleInformationModal({ selectPeople, onClose }: any) {
+export function PeopleInformationModal({
+  selectPeople,
+  onClose,
+}: PeopleInformationModalProps) {
+  if (!selectPeople) return null
   return (
     <>
       <Modal className='max-w-[770px] w-[90%] ' onClose={onClose}>
@@ -12,7 +17,7 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
           <div className='max-w-[90%] md:max-w-[309px] w-full overflow-hidden'>
             <div className='relative aspect-square w-full'>
               <Image
-                src={selectPeople.peopleImage.filename}
+                src={selectPeople.peopleImage?.filename || ''}
                 alt={selectPeople.alt || 'Image'}
                 fill
                 className='object-cover'
@@ -25,7 +30,9 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
               {selectPeople.name}
             </div>
 
-            {selectPeople.setOfData?.length > 0 &&
+            {selectPeople &&
+              selectPeople.setOfData &&
+              selectPeople.setOfData?.length > 0 &&
               selectPeople.setOfData
                 .filter((_: any, index: number) => index === 0)
                 .map((data: any, index: number) => (
@@ -52,7 +59,9 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
         <div className='px-5 md:px-9 py-9 bg-white-1 space-y-5 md:space-y-[30px] mt-8 md:mt-0'>
           {}
           <div className=' py-2 grid grid-cols-1 md:grid-cols-1 gap-1'>
-            {selectPeople.setOfData?.length > 0 &&
+            {selectPeople &&
+              selectPeople.setOfData &&
+              selectPeople.setOfData?.length > 0 &&
               selectPeople.setOfData
                 .filter((_: any, index: number) => index !== 0)
                 .map((data: any, index: number) => (

@@ -1,5 +1,6 @@
 import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorporatePage/GoodCorporatePage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function GoodCorporate({
@@ -9,7 +10,7 @@ export default async function GoodCorporate({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/b2c20980-2a9d-4536-b06d-5f299c26314e',
     locale,
     'published'
