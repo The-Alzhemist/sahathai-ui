@@ -66,7 +66,7 @@ export async function generateMetadata({
       description: t('News.Description'),
       images: [
         {
-          url: `https://sahathai-ui.vercel.app/seo/news/news-meta-img-${locale}.png`,
+          url: `${process.env.DOMAIN_NAME}/seo/news/news-meta-img-${locale}.png`,
           width: 800,
           height: 600,
           alt: 'sahathai-news-meta-image',

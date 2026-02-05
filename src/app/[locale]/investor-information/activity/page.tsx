@@ -35,7 +35,7 @@ export async function generateMetadata({
       description: t('Activity.Description'),
       images: [
         {
-          url: `https://sahathai-ui.vercel.app/seo/investor/investor-meta-img-${locale}.png`,
+          url: `${process.env.DOMAIN_NAME}/seo/investor/investor-meta-img-${locale}.png`,
           width: 800,
           height: 600,
           alt: 'sahathai-investor-meta-image',

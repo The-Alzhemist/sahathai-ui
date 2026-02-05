@@ -38,7 +38,7 @@ export async function generateMetadata({
       description: t('EService.Description'),
       images: [
         {
-          url: `https://sahathai-ui.vercel.app/seo/e-service/e-service-meta-img-${locale}.png`,
+          url: `${process.env.DOMAIN_NAME}/seo/e-service/e-service-meta-img-${locale}.png`,
           width: 800,
           height: 600,
           alt: 'sahathai-contact-us-meta-image',
