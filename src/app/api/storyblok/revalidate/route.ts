@@ -49,6 +49,10 @@ export async function POST(req: NextRequest) {
     console.log('------ Revalidate secret WARRANT--------')
     console.log('------ Warant fullSlug: ', fullSlug, '--------')
     revalidateTag(RevalidateTag.WARRANT)
+  } else if (fullSlug?.includes(SlugType.ACTIVITY)) {
+    console.log('------ Revalidate secret ACTIVITY--------')
+    console.log('------ ACTIVITY fullSlug: ', fullSlug, '--------')
+    revalidateTag(RevalidateTag.ACTIVITY)
   } else {
     console.log('------ cannot revalidate any known tag --------')
     console.log('cannot revalidate any known tag')
