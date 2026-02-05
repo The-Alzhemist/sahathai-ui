@@ -5,6 +5,7 @@ import { Line } from '@/components/Line'
 
 import { NoPhotoIcon } from '@/components/icons/NoPhotoIcon'
 import { BoardCardProps } from '@/features/aboutUs/components/BoardCard/interface'
+import { ItemStoryblok } from '@/types/storyblok'
 
 export function BoardCard({
   imageUrl,
@@ -43,9 +44,11 @@ export function BoardCard({
           {board &&
             board.setOfData &&
             board.setOfData.length > 0 &&
-            board.setOfData[0].item.map((item: any, index: number) => (
-              <li key={`name-${index}`}>{item.detail ? item.detail : ''}</li>
-            ))}
+            board.setOfData[0].item.map(
+              (item: ItemStoryblok, index: number) => (
+                <li key={`name-${index}`}>{item.detail ? item.detail : ''}</li>
+              )
+            )}
         </ul>
       </div>
     </Animation>
