@@ -45,15 +45,14 @@ export async function POST(req: NextRequest) {
   } else if (fullSlug?.includes(SlugType.BOARD)) {
     console.log('------ Revalidate secret BOARD AND COMMITTEE--------')
     revalidateTag(RevalidateTag.BOARD)
-  } else if (fullSlug.includes(SlugType.WARRANT)) {
+  } else if (fullSlug?.includes(SlugType.WARRANT)) {
     console.log('------ Revalidate secret WARRANT--------')
-    console.log('------ fullSlug: ', fullSlug, '--------')
-
+    console.log('------ Warant fullSlug: ', fullSlug, '--------')
     revalidateTag(RevalidateTag.WARRANT)
   } else {
     console.log('------ cannot revalidate any known tag --------')
     console.log('cannot revalidate any known tag')
-    console.log('------ fullSlug: ', fullSlug, '--------')
+    console.log('------ Else fullSlug: ', fullSlug, '--------')
   }
 
   return NextResponse.json({ ok: true, fullSlug })
