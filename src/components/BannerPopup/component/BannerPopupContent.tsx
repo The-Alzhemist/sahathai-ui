@@ -3,8 +3,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { BannerStoryblok } from '@/types/storyblok'
+import { BannerPopupProps } from '@/components/BannerPopup/component/interface'
 
-export default function BannerPopupContent({ data }: any) {
+export default function BannerPopupContent({ data }: BannerPopupProps) {
   const [open, setOpen] = useState(true)
 
   const isShowBannerConfig = data.story.content.body[0].isShowBanner
@@ -17,9 +18,7 @@ export default function BannerPopupContent({ data }: any) {
     return null
   }
 
-  const bannerData = data?.story?.content?.body?.[0] as
-    | BannerStoryblok
-    | undefined
+  const bannerData = data.story?.content?.body?.[0] as BannerStoryblok
 
   if (!bannerData || !bannerData.bannerImage) {
     return null

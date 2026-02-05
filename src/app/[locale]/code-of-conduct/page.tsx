@@ -1,6 +1,7 @@
 import { CodeOfConductPage } from '@/features/investorRelations/pages/CodeConductPage/CodeConductPage'
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function CodeOfConduct({
@@ -10,7 +11,7 @@ export default async function CodeOfConduct({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/code-of-conduct',
     locale,
     'published'

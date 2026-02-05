@@ -1,3 +1,5 @@
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+
 export interface ActivityPageProps {
-  data: any
+  data: StoryblokStoryResponse
 }

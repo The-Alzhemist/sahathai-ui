@@ -1,6 +1,7 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function AboutUs({
@@ -9,7 +10,7 @@ export default async function AboutUs({
   params: { locale: string }
 }) {
   const { locale } = params
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'board-and-committee/board-and-committee',
     locale,
     'published',
