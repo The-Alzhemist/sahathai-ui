@@ -22,15 +22,9 @@ export async function generateMetadata({
       description: t('Infrastructure.Description'),
       images: [
         {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-infra.jpg',
+          url: `${process.env.DOMAIN_NAME}/seo/container/container-meta-img-${locale}.png`,
           width: 800,
           height: 600,
-          alt: 'sahathai-infra-meta-image',
-        },
-        {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-infra.jpg',
-          width: 1800,
-          height: 1600,
           alt: 'sahathai-infra-meta-image',
         },
       ],

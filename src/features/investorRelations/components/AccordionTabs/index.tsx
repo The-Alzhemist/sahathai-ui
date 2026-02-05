@@ -63,7 +63,7 @@ export const AccordionTabs = ({
               </div>
 
               {lang === 'th' && rowItem.file?.filename && (
-                <div>
+                <div className='px-1'>
                   <DownloadButton
                     className={` ${
                       !rowItem.file.filename
@@ -76,7 +76,7 @@ export const AccordionTabs = ({
               )}
 
               {lang === 'en' && rowItem.englishFile?.filename && (
-                <div>
+                <div className='px-1'>
                   <DownloadButton
                     className={` ${
                       !rowItem.englishFile.filename
@@ -89,7 +89,7 @@ export const AccordionTabs = ({
               )}
 
               {lang === 'cn ' && rowItem.chineseFile?.filename && (
-                <div>
+                <div className='px-1'>
                   <DownloadButton
                     className={` ${
                       !rowItem.chineseFile.filename

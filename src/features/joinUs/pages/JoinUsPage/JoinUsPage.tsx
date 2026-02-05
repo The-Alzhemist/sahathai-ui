@@ -1,4 +1,3 @@
-import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 import { Banner } from '../../components/Banner'
 import { ContactHumanResources } from '../../components/ContactHumanResources'
 import { Policy } from '../../components/Policy'

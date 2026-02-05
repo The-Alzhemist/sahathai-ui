@@ -40,11 +40,11 @@ export function FinancialInformationPage({
           />
 
           <section className='px-5 pb-5  pt-[50px] md:pt-[100px] max-w-4xl mx-auto space-y-6'>
-            <h1 className='text-lg md:text-3xl mb-10 text-blue-400 text-center'>
+            <h1 className='text-lg md:text-3xl mb-1 md:mb-10 text-blue-400 text-center'>
               {tMenu('investorRelations.FinancialInformation')}
             </h1>
             {group.map((groupItem: GroupStoryblok, groupIndex: number) => (
-              <div key={groupIndex} className=' rounded-md p-4'>
+              <div key={groupIndex} className=' rounded-md px-0 py-0 md:p-4'>
                 <h2 className='   text-left text-lg mb-7 text-blue-400 '>
                   {groupItem.heading}
                 </h2>

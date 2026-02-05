@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
@@ -6,6 +6,7 @@ import { Line } from '@/components/Line'
 
 export function CorporateGroupOrganizationalStructure() {
   const t = useTranslations('AboutUsPage.CorporateGroupOrganizationalStructure')
+  const locale = useLocale()
 
   return (
     <section className='mt-[80px] w-full relative'>
@@ -14,7 +15,13 @@ export function CorporateGroupOrganizationalStructure() {
         <Line className='my-[8px]' />
         <Animation className='w-full mt-[50px] shadow-8 rounded-[15px] overflow-hidden'>
           <div className='relative pt-[55.77%] w-full'>
-            <Image src='/about-us/corporate-group.png' fill alt='' />
+            {(locale === 'th' || locale === 'en') && (
+              <Image src='/about-us/corporate-group.png' fill alt='' />
+            )}
+
+            {locale === 'cn' && (
+              <Image src='/about-us/new/corporate-group-cn.webp' fill alt='' />
+            )}
           </div>
         </Animation>
 
@@ -32,7 +39,21 @@ export function CorporateGroupOrganizationalStructure() {
 
         <Animation className='w-full mt-[50px] rounded-[15px] shadow-8 overflow-hidden'>
           <div className='relative pt-[77.31%] w-full'>
-            <Image src='/about-us/organizational-structure.png' fill alt='' />
+            {(locale === 'th' || locale === 'en') && (
+              <Image
+                src='/about-us/organizational-structure.png'
+                fill
+                alt='organizational-structure'
+              />
+            )}
+
+            {locale === 'cn' && (
+              <Image
+                src='/about-us/new/organizational-structure-cn.webp'
+                fill
+                alt='organizational-structure-cn'
+              />
+            )}
           </div>
         </Animation>
       </div>

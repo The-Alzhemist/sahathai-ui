@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sahathai-ui.vercel.app'
+  const baseUrl = process.env.DOMAIN_NAME || 'https://sahathai-ui.vercel.app'
   const languages = ['th', 'en', 'cn']
 
   const pages = [

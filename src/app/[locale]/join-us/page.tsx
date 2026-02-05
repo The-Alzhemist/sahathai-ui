@@ -22,7 +22,7 @@ export async function generateMetadata({
       description: t('JoinUs.Description'),
       images: [
         {
-          url: `https://sahathai-ui.vercel.app/seo/join-us/joinus-meta-img-${locale}.png`,
+          url: `${process.env.DOMAIN_NAME}/seo/join-us/joinus-meta-img-${locale}.png`,
           width: 800,
           height: 600,
           alt: 'sahathai-join-us-meta-image',

@@ -22,7 +22,7 @@ export async function generateMetadata({
       description: t('Service.Description'),
       images: [
         {
-          url: `https://sahathai-ui.vercel.app/seo/service/service-meta-img-${locale}.png`,
+          url: `${process.env.DOMAIN_NAME}/seo/service/service-meta-img-${locale}.png`,
           width: 800,
           height: 600,
           alt: 'sahathai-service-meta-image',

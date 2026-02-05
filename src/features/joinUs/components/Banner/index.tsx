@@ -18,7 +18,7 @@ export function Banner() {
       />
 
       <Animation className='max-w-[896px] w-full mx-auto mb-[85px] z-[1] px-5 pt-1ุ6 md:p-[14px] text-white'>
-        <h1 className='font-[700] text-[36px] leading-[44px] text-center whitespace-pre-wrap'>
+        <h1 className='font-[700] text-[22px] md:text-[36px] leading-[44px] text-center whitespace-pre-wrap'>
           {t('title')}
         </h1>
         <p className='mt-[24px] text-center body-1 whitespace-pre-wrap'>
