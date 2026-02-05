@@ -22,19 +22,12 @@ export async function generateMetadata({
       description: t('PrivacyPolicy.Description'),
       images: [
         {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-john-us.jpg',
+          url: `${process.env.DOMAIN_NAME}/seo/home/home-meta-img-${locale}.png`,
           width: 800,
           height: 600,
-          alt: 'sahathai-privacy-meta-image',
-        },
-        {
-          url: 'https://sahathai-ui.vercel.app' + '/seo/meta-image-john-us.jpg',
-          width: 1800,
-          height: 1600,
-          alt: 'sahathai-privacy-meta-image',
+          alt: 'sahathai-meta-image',
         },
       ],
     },
-
   }
 }
