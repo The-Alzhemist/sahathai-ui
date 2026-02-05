@@ -1,5 +1,6 @@
 import { WarrantPage } from '@/features/investorRelations/pages/WarrantPage/WarrantPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function Warrant({
@@ -9,7 +10,7 @@ export default async function Warrant({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/f777dd5a-6232-450c-b6c8-7b1850a1d3ec',
     locale,
     'published'

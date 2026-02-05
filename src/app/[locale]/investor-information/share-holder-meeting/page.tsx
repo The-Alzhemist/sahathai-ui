@@ -1,5 +1,6 @@
 import { ShareHolderMeetingPage } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function ShareHolderMeeting({
@@ -9,7 +10,7 @@ export default async function ShareHolderMeeting({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/90ee2b39-0565-41ce-bdb4-dad2425245a4',
     locale,
     'published'
