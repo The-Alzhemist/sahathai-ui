@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { ActivityPage } from '@/features/investorRelations/pages/ActivityPage/ActivityPage'
 
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
@@ -14,7 +15,9 @@ export default async function Activity({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/f7414f1c-4de7-4cfb-88f7-5bed4e23ffce',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'activity'
   )
   return <ActivityPage data={response} />
 }
