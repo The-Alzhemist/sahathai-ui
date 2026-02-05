@@ -1,5 +1,6 @@
 import { DocumentAnnouncementPage } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function DocumentAnnouncement({
@@ -9,7 +10,7 @@ export default async function DocumentAnnouncement({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/ed6b6179-86fc-473f-8188-81827cb9b1e8',
     locale,
     'published'

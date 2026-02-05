@@ -1,5 +1,6 @@
 import { PerformanceReportPage } from '@/features/investorRelations/pages/PerformanceReportPage/PerformanceReportPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function PerformanceReport({
@@ -9,7 +10,7 @@ export default async function PerformanceReport({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/1c52b131-12fd-4d51-9daa-dccd33b4e410',
     locale,
     'published'

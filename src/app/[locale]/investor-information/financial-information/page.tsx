@@ -1,5 +1,6 @@
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
+import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'
 
 export default async function FinancialInformation({
@@ -9,7 +10,7 @@ export default async function FinancialInformation({
 }) {
   const { locale } = params
 
-  const response = await fetchStoryblokStory(
+  const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/financialinformationpage',
     locale,
     'published'
