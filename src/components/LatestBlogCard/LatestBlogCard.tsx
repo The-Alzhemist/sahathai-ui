@@ -5,7 +5,7 @@ import { cn } from '@/libs/util'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { Link } from '@/libs/intl/navigation'
-import { getTranslations } from 'next-intl/server'
+
 import { useTranslations } from 'next-intl'
 import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
 

@@ -33,7 +33,7 @@ export function PeopleInformationModal({ selectPeople, onClose }: any) {
                     key={data._uid ?? index}
                     className='mt-2 text-black-6 body-2 w-full space-y-1'
                   >
-                    <ul className='space-y-1'>
+                    <ul className='px-1 space-y-1'>
                       {data.item?.map((item: any, idx: number) => (
                         <li
                           key={item._uid ?? idx}

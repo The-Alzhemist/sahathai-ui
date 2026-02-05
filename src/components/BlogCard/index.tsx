@@ -10,9 +10,7 @@ import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
 export function BlogCard({
   title,
   content,
-  createdAt,
   slug,
-  direction = 'vertical',
   page = 'news',
 }: NewsCardProps) {
   const common = useTranslations('common')

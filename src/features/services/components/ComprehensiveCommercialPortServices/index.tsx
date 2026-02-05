@@ -22,7 +22,7 @@ export function ComprehensiveCommercialPortServices() {
       </div>
 
       <Animation className='max-w-[1100px] w-full mt-[90px] mx-auto px-5'>
-        <h2 className='text-navy text-[40px] font-[500] leading-[60.48px] text-center'>
+        <h2 className='headline-2 text-navy text-[40px] font-[500] leading-[60.48px] text-center'>
           {t('title')}
         </h2>
         <p className='mt-[15px] body-1 text-center text-black-6'>

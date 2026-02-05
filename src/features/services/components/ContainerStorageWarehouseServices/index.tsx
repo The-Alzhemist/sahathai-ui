@@ -21,7 +21,7 @@ export function ContainerStorageWarehouseServices() {
             <Line />
           </div>
 
-          <section className='flex  flex-col md:flex-row justify-center items-center gap-[73px]'>
+          <section className='flex  flex-col md:flex-row justify-center items-center gap-[73px] flex-wrap'>
             <MiniCard
               imageUrl='/services/container.png'
               content={t('content1')}

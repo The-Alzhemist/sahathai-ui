@@ -22,7 +22,7 @@ export function SustainabilityManagementPage() {
   const t = useTranslations('SustainabilityManagementPage')
   const locale = useLocale()
   return (
-    <main className=''>
+    <main className='bg-white'>
       <AnimatePresence mode='wait'>
         <Animation key={`code-of-conduct-${Date.now()}`}>
           <Menu />
@@ -47,7 +47,7 @@ export function SustainabilityManagementPage() {
               </h2>
             </div>
 
-            <Animation className='relative z-10 mt-[50px] mb-[100px] max-w-[950px] mx-auto flex gap-y-5 justify-center md:justify-between flex-wrap'>
+            <Animation className='relative  mt-[50px] mb-[100px] max-w-[950px] mx-auto flex gap-y-5 justify-center md:justify-between flex-wrap'>
               <SustainabilityCard
                 title={t('economicDimension.title')}
                 descriptions={[t('economicDimension.description')]}
@@ -115,7 +115,6 @@ export function SustainabilityManagementPage() {
           </section>
         </Animation>
       </AnimatePresence>
-      <Menu />
     </main>
   )
 }
