@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
   // }
 
   const fullSlug = body.full_slug
-  console.log('-------------full slug-------', fullSlug)
+  console.log('full slug called -------', fullSlug)
 
   if (fullSlug?.includes(SlugType.BLOG)) {
     console.log('---------Revalidate secret BLOG---------')
