@@ -30,7 +30,7 @@ export function Highlight() {
         <p className='body-1 text-black-6'>{t('description')}</p>
       </div>
 
-      <Animation className='max-w-[951px] mx-auto mt-[50px] flex justify-center flex-wrap gap-[32px]'>
+      <Animation className='max-w-[951px] mx-auto mt-[50px] flex justify-center flex-wrap gap-[32px] pb-14 md:pb-0'>
         <HighlightCard
           title={t('location.title')}
           description={t('location.description')}

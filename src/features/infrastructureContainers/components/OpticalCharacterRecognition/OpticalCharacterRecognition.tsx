@@ -9,7 +9,7 @@ const OpticalCharacterRecognition = () => {
         className='bg-modellBgDark/60 text-white pt-[100px] pb-[140px] px-5 flex flex-col justify-center items-center'
         id='optical-character-recognition'
       >
-        <h2 className='font-[500] text-[40px] leading-[60.48px] text-white text-center'>
+        <h2 className='headline-2 font-[500] text-[40px] leading-[60.48px] text-white text-center'>
           {t('Title')}
         </h2>
         <p className='mt-[20px] body-1 text-white-1 text-center max-w-[1100px]'>
