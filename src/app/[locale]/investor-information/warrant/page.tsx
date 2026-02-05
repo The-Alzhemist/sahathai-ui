@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { WarrantPage } from '@/features/investorRelations/pages/WarrantPage/WarrantPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -13,7 +14,9 @@ export default async function Warrant({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/f777dd5a-6232-450c-b6c8-7b1850a1d3ec',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'warrant'
   )
 
   return <WarrantPage data={response} />
