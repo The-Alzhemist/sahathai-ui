@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { PerformanceReportPage } from '@/features/investorRelations/pages/PerformanceReportPage/PerformanceReportPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -13,7 +14,9 @@ export default async function PerformanceReport({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/1c52b131-12fd-4d51-9daa-dccd33b4e410',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'performance-report'
   )
 
   return <PerformanceReportPage performanceReportData={response} />

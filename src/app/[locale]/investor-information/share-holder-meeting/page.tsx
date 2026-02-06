@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { ShareHolderMeetingPage } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -13,7 +14,9 @@ export default async function ShareHolderMeeting({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/90ee2b39-0565-41ce-bdb4-dad2425245a4',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'share-holder-meeting'
   )
 
   return <ShareHolderMeetingPage shareHolderMeetingData={response} />
