@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -13,7 +14,9 @@ export default async function FinancialInformation({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/financialinformationpage',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'financial-information'
   )
 
   return <FinancialInformationPage financialInformationData={response} />
