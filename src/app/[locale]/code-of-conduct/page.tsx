@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { CodeOfConductPage } from '@/features/investorRelations/pages/CodeConductPage/CodeConductPage'
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
@@ -14,7 +15,9 @@ export default async function CodeOfConduct({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/code-of-conduct',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'code-of-conduct'
   )
 
   return <CodeOfConductPage conOdConductData={response} />
