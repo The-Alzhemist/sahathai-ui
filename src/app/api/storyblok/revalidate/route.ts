@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
 import { RevalidateTag, SlugType } from '@/enums/CacheEnum'
-import { date } from 'yup'
 
 const REVALIDATE_SECRET_BLOG = 'abc123xyz987'
 
