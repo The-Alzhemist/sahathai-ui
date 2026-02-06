@@ -162,7 +162,7 @@ const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
         >
           <Image
             className='w-full'
-            src='/contact-us-map.png'
+            src='/contact-us-map.webp'
             width={0}
             height={0}
             sizes='100vw'

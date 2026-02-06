@@ -5,7 +5,7 @@ export function Background({ children, className }: BackgroundProps) {
   return (
     <section
       className={cn(
-        'bg-[url("/background.jpeg")] bg-center bg-cover',
+        'bg-[url("/background.jpg")] bg-center bg-cover',
         className
       )}
     >
