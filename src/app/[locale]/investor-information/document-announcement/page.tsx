@@ -1,3 +1,4 @@
+import { REVALIDATE_TIME } from '@/config/environtment'
 import { DocumentAnnouncementPage } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -13,7 +14,9 @@ export default async function DocumentAnnouncement({
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
     'investor-relations/ed6b6179-86fc-473f-8188-81827cb9b1e8',
     locale,
-    'published'
+    'published',
+    REVALIDATE_TIME,
+    'document-announcement'
   )
 
   return <DocumentAnnouncementPage data={response} />
