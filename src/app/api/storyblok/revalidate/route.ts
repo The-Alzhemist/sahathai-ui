@@ -72,5 +72,5 @@ export async function POST(req: NextRequest) {
     console.warn('Cannot revalidate unknown slug:', fullSlug)
   }
 
-  return NextResponse.json({ ok: true, fullSlug })
+  return NextResponse.json({ ok: true, fullSlug, date: new Date() })
 }
