@@ -17,7 +17,7 @@ export function BlogCard({
 
   const body0 = content?.body?.[0] as EventNewsDetailCardStoryblok
   const newsDate: string | undefined = body0?.newsDate
-  const imageSrc = body0?.newsImageCover?.filename ?? '/background.jpeg'
+  const imageSrc = body0?.newsImageCover?.filename ?? '/background.jpg'
 
   return (
     <Link

@@ -39,40 +39,6 @@ export function ContainerStorageWarehouseServices() {
         </Animation>
       </section>
 
-      {/*<section className='max-w-[1040px] w-full mx-auto space-y-10 md:space-y-[100px] py-10 md:py-[170px] px-5'>*/}
-      {/*  <Card*/}
-      {/*    imageUrl='/services/free-trade-zone-container-yard.png'*/}
-      {/*    title={t('freeTradeZoneContainerYard.title')}*/}
-      {/*    content={t('freeTradeZoneContainerYard.content')}*/}
-      {/*    position='left'*/}
-      {/*  />*/}
-      {/*  <Card*/}
-      {/*    imageUrl='/services/general-warehouseand-bonded-warehouse.png'*/}
-      {/*    title={t('generalWarehouseandBondedWarehouse.title')}*/}
-      {/*    content={t('generalWarehouseandBondedWarehouse.content')}*/}
-      {/*    position='right'*/}
-      {/*  />*/}
-      {/*  <Card*/}
-      {/*    imageUrl='/services/cold-storage-warehouse.png'*/}
-      {/*    title={t('coldStorageWarehouse.title')}*/}
-      {/*    content={t('coldStorageWarehouse.content')}*/}
-      {/*    position='left'*/}
-      {/*  />*/}
-      {/*  <Card*/}
-      {/*    imageUrl='/services/free-trade-zone-warehouse.png'*/}
-      {/*    title={t('freeTradeZoneWarehouse.title')}*/}
-      {/*    content={t('freeTradeZoneWarehouse.content')}*/}
-      {/*    position='right'*/}
-      {/*  />*/}
-      {/*  <Card*/}
-      {/*    imageUrl='/services/service-provider-import-export.png'*/}
-      {/*    title={t('serviceProviderImportExport.title')}*/}
-      {/*    content={t('serviceProviderImportExport.content')}*/}
-      {/*    position='left'*/}
-      {/*  />*/}
-
-      {/*</section>*/}
-
       <BannerTextCard
         imageUrl='/services/new/container-service-1.webp'
         title={t('freeTradeZoneContainerYard.title')}
