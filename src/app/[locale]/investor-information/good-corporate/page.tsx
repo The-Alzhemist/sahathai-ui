@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorporatePage/GoodCorporatePage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function GoodCorporate({
     locale,
     'published',
     REVALIDATE_TIME,
-    'good-corporate'
+    RevalidateTag.GOOD_CORPORATE
   )
   return <GoodCorporatePage data={response} />
 }

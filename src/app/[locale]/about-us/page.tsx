@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -15,7 +16,7 @@ export default async function AboutUs({
     locale,
     'published',
     REVALIDATE_TIME,
-    'board-and-committee'
+    RevalidateTag.BOARD
   )
 
   return <AboutUsPage boardData={response} />

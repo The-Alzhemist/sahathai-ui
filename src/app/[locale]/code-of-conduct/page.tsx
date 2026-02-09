@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { CodeOfConductPage } from '@/features/investorRelations/pages/CodeConductPage/CodeConductPage'
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
@@ -17,7 +18,7 @@ export default async function CodeOfConduct({
     locale,
     'published',
     REVALIDATE_TIME,
-    'code-of-conduct'
+    RevalidateTag.CODE_OF_CONDUCT
   )
 
   return <CodeOfConductPage conOdConductData={response} />

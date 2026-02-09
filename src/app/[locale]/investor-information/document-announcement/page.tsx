@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { DocumentAnnouncementPage } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function DocumentAnnouncement({
     locale,
     'published',
     REVALIDATE_TIME,
-    'document-announcement'
+    RevalidateTag.DOCUMENT_ANNOUNCEMENT
   )
 
   return <DocumentAnnouncementPage data={response} />

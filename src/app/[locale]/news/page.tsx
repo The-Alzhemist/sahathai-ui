@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
 import NewsComponent from '@/components/NewsComponent/NewsComponent'
+import { RevalidateTag } from '@/enums/CacheEnum'
 
 export default async function news({
   params,
@@ -24,13 +25,13 @@ export default async function news({
     version: 'published',
     search,
     startsWith: 'news/',
-    tag: 'story:news-list',
+    tag: RevalidateTag.NEWS,
   })
 
   const latestBlog = await fetchLastBlog({
     lang: locale,
     startsWith: 'news/',
-    tag: 'story:news-list',
+    tag: RevalidateTag.NEWS,
   })
 
   const totalPages = Math.ceil(total / perPage)
