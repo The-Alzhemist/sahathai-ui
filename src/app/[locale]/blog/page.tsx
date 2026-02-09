@@ -3,6 +3,7 @@ import React from 'react'
 
 import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
 import BlogComponent from '@/components/BlogComponent/BlogComponent'
+import { RevalidateTag } from '@/enums/CacheEnum'
 
 export default async function Blog({
   params,
@@ -26,11 +27,13 @@ export default async function Blog({
     version: 'published',
     search,
     startsWith: 'blog/',
+    tag: RevalidateTag.BLOG,
   })
 
   const latestBlog = await fetchLastBlog({
     lang: locale,
     startsWith: 'blog/',
+    tag: RevalidateTag.BLOG,
   })
 
   const totalPages = Math.ceil(total / perPage)

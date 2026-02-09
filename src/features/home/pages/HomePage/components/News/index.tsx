@@ -6,6 +6,7 @@ import { BlogCard } from '@/components/BlogCard'
 
 import React from 'react'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
+import { RevalidateTag } from '@/enums/CacheEnum'
 
 export default async function HomePageNews({ params }: HomePageProps) {
   // translation
@@ -24,7 +25,7 @@ export default async function HomePageNews({ params }: HomePageProps) {
     version: 'published',
     search,
     startsWith: 'news/',
-    tag: 'story:news-list',
+    tag: RevalidateTag.NEWS,
   })
 
   return (

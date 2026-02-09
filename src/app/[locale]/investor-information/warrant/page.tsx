@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { WarrantPage } from '@/features/investorRelations/pages/WarrantPage/WarrantPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function Warrant({
     locale,
     'published',
     REVALIDATE_TIME,
-    'warrant'
+    RevalidateTag.WARRANT
   )
 
   return <WarrantPage data={response} />

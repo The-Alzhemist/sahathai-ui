@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function FinancialInformation({
     locale,
     'published',
     REVALIDATE_TIME,
-    'financial-information'
+    RevalidateTag.FINANCIAL_INFORMATION
   )
 
   return <FinancialInformationPage financialInformationData={response} />

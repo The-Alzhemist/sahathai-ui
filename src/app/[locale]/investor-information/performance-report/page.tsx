@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { PerformanceReportPage } from '@/features/investorRelations/pages/PerformanceReportPage/PerformanceReportPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function PerformanceReport({
     locale,
     'published',
     REVALIDATE_TIME,
-    'performance-report'
+    RevalidateTag.PERFORMANT_REPORT
   )
 
   return <PerformanceReportPage performanceReportData={response} />
