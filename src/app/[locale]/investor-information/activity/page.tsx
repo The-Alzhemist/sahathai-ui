@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { ActivityPage } from '@/features/investorRelations/pages/ActivityPage/ActivityPage'
 
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
@@ -17,7 +18,7 @@ export default async function Activity({
     locale,
     'published',
     REVALIDATE_TIME,
-    'activity'
+    RevalidateTag.ACTIVITY
   )
   return <ActivityPage data={response} />
 }

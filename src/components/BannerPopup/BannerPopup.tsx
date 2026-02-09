@@ -4,6 +4,7 @@ import Image from 'next/image'
 import BannerPopupContent from '@/components/BannerPopup/component/BannerPopupContent'
 import { useLocale } from 'next-intl'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { RevalidateTag } from '@/enums/CacheEnum'
 
 export const BannerPopup = async ({ locale }: { locale: string }) => {
   const response: StoryblokStoryResponse = await fetchStoryblokStory(
@@ -11,7 +12,7 @@ export const BannerPopup = async ({ locale }: { locale: string }) => {
     locale,
     'published',
     REVALIDATE_TIME,
-    'e-service'
+    RevalidateTag.BANNER_POPUP
   )
 
   return <BannerPopupContent data={response} />
