@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { ShareHolderMeetingPage } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function ShareHolderMeeting({
     locale,
     'published',
     REVALIDATE_TIME,
-    'share-holder-meeting'
+    RevalidateTag.SHARE_HOLDER_MEETING
   )
 
   return <ShareHolderMeetingPage shareHolderMeetingData={response} />

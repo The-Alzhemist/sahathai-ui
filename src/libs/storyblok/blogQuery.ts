@@ -1,3 +1,4 @@
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { buildUrl } from './client'
 
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -51,7 +52,7 @@ export async function fetchLastBlog({
   startsWith = 'blog/',
   revalidate = REVALIDATE_TIME, // 1 วัน
   sortBy = 'created_at:desc',
-  tag = 'story:blog-list',
+  tag = '',
 }: {
   lang?: string
   startsWith?: string
@@ -99,7 +100,7 @@ export async function fetchNewsBySlug(
   const res = await fetch(url, {
     next: {
       revalidate: revalidate,
-      tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
+      tags: [`story:${slug}`, RevalidateTag.NEWS], // <- for invalidate cache
     },
   })
   if (!res.ok) throw new Error('Failed to fetch story')
@@ -122,7 +123,7 @@ export async function fetchBlogBySlug(
   const res = await fetch(url, {
     next: {
       revalidate: revalidate,
-      tags: [`story:${slug}`, 'story:blog-list'], // <- for invalidate cache
+      tags: [`story:${slug}`, RevalidateTag.BLOG], // <- for invalidate cache
     },
   })
   if (!res.ok) throw new Error('Failed to fetch story')

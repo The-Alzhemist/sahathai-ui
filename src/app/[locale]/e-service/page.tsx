@@ -1,4 +1,5 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
+import { RevalidateTag } from '@/enums/CacheEnum'
 import { EServicePage } from '@/features/investorRelations/pages/EServicePage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
@@ -16,7 +17,7 @@ export default async function EService({
     locale,
     'published',
     REVALIDATE_TIME,
-    'e-service'
+    RevalidateTag.ESERVICE
   )
 
   return <EServicePage data={response} />
