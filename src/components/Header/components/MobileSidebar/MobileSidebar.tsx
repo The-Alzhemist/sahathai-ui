@@ -12,6 +12,7 @@ import { useSubmenu } from '@/hooks/useSubmenu'
 
 import React from 'react'
 import MenuCollapse from '@/components/Header/components/MenuCollapse/MenuCollapse'
+import { NewspaperIcon } from '@/components/icons/NewsIcon'
 
 interface SidebarLinkProps {
   href: string
@@ -111,6 +112,12 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
           </div>
 
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
+            <SidebarLink
+              href='/blog'
+              icon={<NewspaperIcon width='20' height='20' />}
+              label={t('blog')}
+              onClick={handleOnToggle}
+            />
             <SidebarLink
               href='/contact-us'
               icon={<PhoneIcon width='20' height='20' />}
