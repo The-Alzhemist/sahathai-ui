@@ -24,7 +24,7 @@ export function ShareHolderPage() {
   const t = useTranslations('InvestorInformationPage.Shareholder')
 
   return (
-    <main className=' pb-[176px] bg-white '>
+    <main className='pb-[176px] bg-white '>
       <AnimatePresence mode='wait'>
         <Animation key={`financial-information-${Date.now()}`}>
           <Menu />
@@ -48,11 +48,12 @@ export function ShareHolderPage() {
                   />
 
                   {/* Overlay content wrapper */}
-                  <div className='relative z-10 space-y-[50px] px-3 '>
+                  <div className='relative z-0 space-y-[50px] px-3 '>
                     <h2
                       id={InvestorInformationEnum.Shareholder}
                       className='headline-2 text-black-80 text-center text-navy pt-[80px]'
                     >
+
                       {t('title')}
                     </h2>
 
