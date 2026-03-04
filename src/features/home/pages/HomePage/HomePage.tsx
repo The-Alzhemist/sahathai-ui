@@ -7,14 +7,10 @@ import { Highlight } from './components/Highlight'
 import { OurSubsidiaries } from './components/OurSubsidiaries'
 import { HamburgerMenu } from './components/HamburgerMenu'
 import ContactUs from '@/components/ContactUs/ContactUs'
-import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
-import { getTranslations } from 'next-intl/server'
-import { Metadata } from 'next'
-import { REVALIDATE_TIME } from '@/config/environtment'
-import News from '@/features/home/pages/HomePage/components/News'
-import homePageNews from '@/features/home/pages/HomePage/components/News'
+
 import HomePageNews from '@/features/home/pages/HomePage/components/News'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
+import ScrollToTopButton from '@/components/ScrollToTop/ScrollToTop'
 
 export function HomePage({ params }: HomePageProps) {
   return (
@@ -28,6 +24,7 @@ export function HomePage({ params }: HomePageProps) {
       <OurSubsidiaries />
       <ContactUs className='mt-[94px] mb-[111px]' />
       <HamburgerMenu />
+      <ScrollToTopButton />
     </main>
   )
 }
