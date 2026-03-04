@@ -19,6 +19,7 @@ import { ScrollVisibleProvider } from '@/context/ScrollVisibleContext'
 
 import '@/libs/storyblok/init'
 import { BannerPopup } from '@/components/BannerPopup/BannerPopup'
+import ScrollToTopButton from '@/components/ScrollToTop/ScrollToTop'
 
 export const revalidate = 604800 //7 days
 
@@ -58,6 +59,7 @@ export default async function LocaleLayout({
               <ToastContainer />
               <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
               <CookieConsentFloatingBar />
+              <ScrollToTopButton />
             </ScrollVisibleProvider>
           </NextIntlClientProvider>
         </body>
