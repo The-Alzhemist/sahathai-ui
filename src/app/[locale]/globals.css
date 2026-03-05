@@ -256,7 +256,7 @@ thead {
 tbody {
   tr > td {
     text-align: center;
-    padding: 8px;
+    /* padding: 8px; */
   }
 }
 
