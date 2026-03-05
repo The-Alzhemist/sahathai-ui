@@ -34,7 +34,7 @@ export default function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-20 right-6 z-10 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-red-300 text-white shadow-lg transition`}
+      className={`fixed bottom-20 right-5 z-10 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-red-300 text-white shadow-lg transition`}
       aria-label='Scroll to top'
     >
       <ArrowUpWhiteIcon />

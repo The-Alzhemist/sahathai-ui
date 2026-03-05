@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 import { StockMarketInformationProps } from '@/features/investorRelations/components/StockMarketInformation/interface'
 import { useTranslations } from 'next-intl'
+import { PORT_HTML } from '@/features/home/pages/HomePage/components/port'
 
 const StockMarketInformation = async ({
   stockData,
@@ -20,9 +21,13 @@ const StockMarketInformation = async ({
     <section className=''>
       <Animation
         className="
-        relative isolate space-y-[32px]
-        after:content-['']  after:bg-[url('/investor-relations/new/bg-blue-gray.webp')]  after:absolute after:inset-0
-        after:opacity-100 after:-z-10 py-20"
+    relative isolate py-20
+    after:content-['']
+    after:bg-[url('/investor-relations/new/bg-blue-gray.webp')]
+    after:absolute after:inset-0
+    after:bg-cover after:bg-center
+    after:-z-10
+  "
       >
         <h2
           id={InvestorInformationEnum.StockMarketInformation}
@@ -112,6 +117,28 @@ const StockMarketInformation = async ({
             </tr>
           </tbody>
         </table>
+
+        <div className='flex flex-col md:flex-row  justify-center items-center gap-5  mt-10'>
+          {/* Production: iframe นี้ต้องใช้ origin:https://sahathaiterminal.com/ จึงแสดงบน production เท่านั้น */}
+          {/* <iframe
+          src='https://weblink.settrade.com/IRPage/irpage.jsp?txtSymbol=PORT&amp;language=th&amp;key=31525'
+          width='200'
+          height='200'
+          frameborder='0'
+          scrolling='no'
+          data-dashlane-frameid='563'
+        ></iframe> */}
+
+          {/* staging mock  */}
+          <div dangerouslySetInnerHTML={{ __html: PORT_HTML }} />
+          <iframe
+            src='https://weblink.settrade.com/banner/banner3.jsp'
+            width='200'
+            height='230'
+            frameBorder='0'
+            scrolling='no'
+          ></iframe>
+        </div>
       </Animation>
     </section>
   )
