@@ -11,6 +11,7 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import HomePageNews from '@/features/home/pages/HomePage/components/News'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 import ScrollToTopButton from '@/components/ScrollToTop/ScrollToTop'
+import { PORT_HTML } from '@/features/home/pages/HomePage/components/port'
 
 export function HomePage({ params }: HomePageProps) {
   return (
@@ -25,6 +26,14 @@ export function HomePage({ params }: HomePageProps) {
       <ContactUs className='mt-[94px] mb-[111px]' />
       <HamburgerMenu />
       <ScrollToTopButton />
+      {/* <div dangerouslySetInnerHTML={{ __html: PORT_HTML }} />
+      <iframe
+        src='https://weblink.settrade.com/banner/banner3.jsp'
+        width='800'
+        height='200'
+        frameborder='0'
+        scrolling='no'
+      ></iframe> */}
     </main>
   )
 }
