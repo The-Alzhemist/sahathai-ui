@@ -38,21 +38,6 @@ export function Footer() {
 
       <section className='flex justify-start'>
         <Link href='/privacy-policy'>{t('Privacy_policy')}</Link>
-        {/* <iframe
-          src='https://weblink.settrade.com/IRPage/irpage.jsp?txtSymbol=PORT&amp;language=th&amp;key=31525'
-          width='200'
-          height='200'
-          frameborder='0'
-          scrolling='no'
-          data-dashlane-frameid='563'
-        ></iframe> */}
-        {/* <iframe
-          src='https://weblink.settrade.com/banner/banner3.jsp'
-          width='200'
-          height='260'
-          frameborder='0'
-          scrolling='no'
-        ></iframe> */}
       </section>
     </footer>
   )
