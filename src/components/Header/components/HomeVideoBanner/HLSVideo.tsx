@@ -35,6 +35,12 @@ export default function HLSVideo({ src, className }: HLSVideoProps) {
     }
   }, [src])
 
+  useEffect(() => {
+    setTimeout(() => {
+      videoRef.current?.play()
+    }, 1000)
+  }, [])
+
   return (
     <video
       ref={videoRef}
