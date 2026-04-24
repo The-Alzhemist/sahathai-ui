@@ -15,10 +15,18 @@ export default function HLSVideo({ src, className }: HLSVideoProps) {
     const video = videoRef.current
     if (!video) return
 
+    const playVideo = () => {
+      video.play()
+    }
+
     //Safari / iOS
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = src
-      return
+      video.addEventListener('loadedmetadata', playVideo)
+
+      return () => {
+        video.removeEventListener('loadedmetadata', playVideo)
+      }
     }
 
     // Chrome / Android
@@ -30,16 +38,11 @@ export default function HLSVideo({ src, className }: HLSVideoProps) {
 
       hls.loadSource(src)
       hls.attachMedia(video)
+      hls.on(Hls.Events.MANIFEST_PARSED, playVideo)
 
       return () => hls.destroy()
     }
   }, [src])
-
-  useEffect(() => {
-    setTimeout(() => {
-      videoRef.current?.play()
-    }, 1000)
-  }, [])
 
   return (
     <video
