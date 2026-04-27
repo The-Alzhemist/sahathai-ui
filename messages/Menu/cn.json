@@ -15,6 +15,9 @@
       "operationGuidelines": "Operational Guidelines",
       "contactUs": "Contact Us"
     },
+    "home": {
+      "title": "Home"
+    },
     "service": {
       "title": "Services",
       "commercialDock": "Commercial Dock",

@@ -2,7 +2,7 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import { getTranslations } from 'next-intl/server'
 
 export default function Contact() {
-  return <ContactUs className='pt-[96px] pb-[124px]' />
+  return <ContactUs className='pb-[124px]' />
 }
 
 export async function generateMetadata({
