@@ -5,7 +5,7 @@ import { UserIcon } from '@/components/icons/UserIcon'
 import { HeadsetIcon } from '@/components/icons/HeadsetIcon'
 import { ShippingIcon } from '@/components/icons/ShippingIcon'
 import { NewspaperIcon } from '@/components/icons/NewsIcon'
-import { DeviceMobileIcon } from '@/components/icons/DeviceMobileIcon'
+
 import { ChartIcon } from '@/components/icons/ChartIcon'
 
 export function useSubmenu() {
@@ -217,6 +217,12 @@ export function useSubmenu() {
             pathname: `/investor-information/financial-information`,
           },
           {
+            title: t('investorRelations.SetExchangeAnnouncement'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/investor-information/set-exchange-announcement`,
+          },
+          {
             title: t('investorRelations.PerformanceReport'),
             isExternalLink: false,
             isScroll: true,
@@ -234,7 +240,6 @@ export function useSubmenu() {
             isScroll: true,
             pathname: `/investor-information/good-corporate`,
           },
-
           {
             title: t('investorRelations.Activity'),
             isExternalLink: false,
