@@ -83,6 +83,10 @@
     "EService": {
       "Title": "Sahathai | e-service",
       "Description": "提供一站式港口与物流管理服务，通过先进的电子服务系统实现高效、便捷的操作。"
+    },
+    "SetExchangeAnnouncement": {
+      "Title": "Sahathai | Stock Exchange Announcements",
+      "Description": "Information and important announcements from the stock exchange related to the company."
     }
   }
 }
