@@ -23,7 +23,7 @@ export function BlogCard({
     <Link
       href={`/${page}/${slug}`}
       className={cn(
-        'block w-full md:w-[290px] overflow-hidden rounded-[8px] p-2  hover:scale-[1.02] hover:shadow-1 transition-all  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
+        'border border-gray-300 block w-full md:w-[290px] overflow-hidden rounded-[8px] p-2  hover:scale-[1.02] hover:shadow-1 transition-all  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2'
       )}
     >
       <article className='w-full'>
