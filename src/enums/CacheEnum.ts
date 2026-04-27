@@ -5,6 +5,7 @@ export enum SlugType {
   ESERVICE = 'e-service/e-service-list',
   BANNER_POPUP = 'banner/bannerpopup',
   BOARD = 'board-and-committee/board-and-committee',
+  SET_EXCHANGE_ANNOUNCEMENT = 'investor-relations/set-exchange-announcement',
 
   //
   CODE_OF_CONDUCT = 'investor-relations/code-of-conduct',
@@ -24,6 +25,7 @@ export enum RevalidateTag {
   ESERVICE = 'story:e-service',
   BANNER_POPUP = 'story:bannerpopup',
   BOARD = 'story:board-and-committee',
+  SET_EXCHANGE_ANNOUNCEMENT = 'story:set-exchange-announcement',
 
   //
   CODE_OF_CONDUCT = 'story:code-of-conduct',
