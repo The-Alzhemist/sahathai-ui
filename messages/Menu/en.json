@@ -24,6 +24,9 @@
       "groundContainerTransportationServices": "Ground Container Transportation Services",
       "containerServices": "Container Yard and Warehouse Services"
     },
+    "home": {
+      "title": "Home"
+    },
     "news": {
       "title": "News",
       "latestNews": "Latest News",
