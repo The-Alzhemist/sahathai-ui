@@ -14,6 +14,13 @@ export function useSubmenu() {
   const menus = useMemo(() => {
     return [
       {
+        title: t('home.title'),
+        pathname: '/',
+        isExternalLink: false,
+        isScroll: true,
+        icon: <ChartIcon width='20' height='20' />,
+      },
+      {
         title: t('aboutUs.title'),
         pathname: '/about-us',
         isExternalLink: false,

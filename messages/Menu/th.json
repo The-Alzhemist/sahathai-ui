@@ -24,6 +24,9 @@
       "groundContainerTransportationServices": "บริการขนส่งตู้คอนเทนเนอร์ทางบก",
       "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า"
     },
+    "home": {
+      "title": "หน้าแรก"
+    },
     "news": {
       "title": "ข่าวประชาสัมพันธ์",
       "latestNews": "ข่าวล่าสุด",
