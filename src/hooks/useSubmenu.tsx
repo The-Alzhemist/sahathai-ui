@@ -158,13 +158,19 @@ export function useSubmenu() {
           },
           {
             title: t('news.pressRelease'),
-            pathname: '/news#press-release',
+            pathname: '/news#press-releases',
             isExternalLink: false,
             isScroll: true,
           },
         ],
       },
-
+      {
+        title: t('pressRelease.title'),
+        pathname: '/press-releases',
+        isExternalLink: false,
+        isScroll: true,
+        icon: <NewspaperIcon width='20' height='20' />,
+      },
       {
         title: t('eService.title'),
         pathname: '/e-service',

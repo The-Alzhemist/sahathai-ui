@@ -45,7 +45,7 @@ export default function NewsComponent({
         {/*All blog*/}
         <section
           className='bg-white pt-[70px] min-h-[400px]'
-          id='press-release'
+          id='press-releases'
         >
           <div className='max-w-[1100px] mx-auto p-6'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>

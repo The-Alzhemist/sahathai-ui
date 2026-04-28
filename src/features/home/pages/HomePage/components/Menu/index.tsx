@@ -19,6 +19,9 @@ export function Menu() {
         <Menu.Item className='min-w-[140px]' href='/news'>
           {t('news.title')}
         </Menu.Item>
+        <Menu.Item className='min-w-[140px]' href='/press-releases'>
+          {t('pressRelease.title')}
+        </Menu.Item>
         <Menu.Item className='min-w-[140px]' href='/e-service'>
           {t('eService.title')}
         </Menu.Item>
