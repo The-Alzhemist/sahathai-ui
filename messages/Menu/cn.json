@@ -32,6 +32,9 @@
       "latestNews": "Latest News",
       "pressRelease": "Press Release"
     },
+    "pressRelease": {
+      "title": "Press Release"
+    },
     "eService": {
       "title": "e-service",
       "TrackByContainer": "Track by Container",

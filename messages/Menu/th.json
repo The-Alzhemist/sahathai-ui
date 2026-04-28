@@ -32,6 +32,9 @@
       "latestNews": "ข่าวล่าสุด",
       "pressRelease": "ข่าวประชาสัมพันธ์"
     },
+    "pressRelease": {
+      "title": "ข่าวสารจากบริษัท"
+    },
     "eService": {
       "title": "e-service",
       "TrackByContainer": "ตรวจสอบสถานะจากหมายเลขตู้คอนเทนเนอร์",

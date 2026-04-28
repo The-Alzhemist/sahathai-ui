@@ -1,6 +1,7 @@
 export enum SlugType {
   BLOG = 'blog',
   NEWS = 'news',
+  PRESS_RELEASE = 'press-releases',
   INVESTOR = 'investor-relations',
   ESERVICE = 'e-service/e-service-list',
   BANNER_POPUP = 'banner/bannerpopup',
@@ -21,6 +22,7 @@ export enum SlugType {
 export enum RevalidateTag {
   BLOG = 'story:blog-list',
   NEWS = 'story:news-list',
+  PRESS_RELEASE = 'story:press-release-list',
   INVESTOR = 'story:investor-accordion-list',
   ESERVICE = 'story:e-service',
   BANNER_POPUP = 'story:bannerpopup',

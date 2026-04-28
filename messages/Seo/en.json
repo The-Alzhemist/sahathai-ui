@@ -20,9 +20,13 @@
       "Title": "Sahathai | News",
       "Description": "Stay updated with the latest movements and important information from Sahathai Terminal so you never miss what matters."
     },
+    "PressRelease": {
+      "Title": "Sahathai | Press Releases",
+      "Description": "Reports on corporate performance and organizational activities."
+    },
     "Blog": {
       "Title": "Sahathai | Blog",
-      "Description": "อัพเดตทุกความเคลื่อนไหวและข้อมูลสำคัญจากสหไทย เทอร์มินอล เพื่อให้คุณไม่พลาดบทความที่สำคัญของเรา"
+      "Description": "Stay updated with the latest movements and important information from Sahathai Terminal so you never miss what matters."
     },
     "JoinUs": {
       "Title": "Sahathai | Careers",
