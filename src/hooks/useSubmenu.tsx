@@ -172,6 +172,13 @@ export function useSubmenu() {
         icon: <NewspaperIcon width='20' height='20' />,
       },
       {
+        title: t('socialResponsibility.title'),
+        pathname: '/social-responsibility',
+        isExternalLink: false,
+        isScroll: true,
+        icon: <NewspaperIcon width='20' height='20' />,
+      },
+      {
         title: t('eService.title'),
         pathname: '/e-service',
         isExternalLink: false,

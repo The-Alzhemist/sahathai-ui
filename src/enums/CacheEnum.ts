@@ -17,6 +17,7 @@ export enum SlugType {
   GOOD_CORPORATE = 'investor-relations/b2c20980',
   ACTIVITY = 'investor-relations/f7414f1c',
   WARRANT = 'investor-relations/f777dd5a',
+  SOCIAL_RESPONSIBILITY = 'social-responsibility',
 }
 
 export enum RevalidateTag {
@@ -28,6 +29,7 @@ export enum RevalidateTag {
   BANNER_POPUP = 'story:bannerpopup',
   BOARD = 'story:board-and-committee',
   SET_EXCHANGE_ANNOUNCEMENT = 'story:set-exchange-announcement',
+  SOCIAL_RESPONSIBILITY = 'story:social-responsibility',
 
   //
   CODE_OF_CONDUCT = 'story:code-of-conduct',
