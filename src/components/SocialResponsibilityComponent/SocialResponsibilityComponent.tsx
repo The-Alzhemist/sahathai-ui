@@ -11,7 +11,8 @@ import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import { Brochure } from '@/features/blog/components/Brochure'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
-export default function PressReleaseComponent({
+import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
+export default function SocialResponsibilityComponent({
   stories,
   latestBlog,
   locale,
@@ -30,19 +31,25 @@ export default function PressReleaseComponent({
   const t = useTranslations('NewsPage')
   return (
     <div>
-      <Animation key={`press-release-${Date.now()}`}>
+      <Animation key={`social-responsibility-${Date.now()}`}>
         <Menu />
+
+        <BannerImage
+          mobileImageSrc='/investor-relations/new/investor-banner-mobile-9.webp'
+          imageSrc='/investor-relations/new/investor-banner-9.webp'
+          alt='investor-banner-9'
+        />
 
         {/* Latest Blog */}
         <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
-            {t('latestPressRelease')}
+            {t('latestBlog')}
           </h2>
 
           <LatestBlogCard
             blog={latestBlog}
             locale={locale}
-            page='press-releases'
+            page='social-responsibility'
           />
         </section>
 
@@ -64,7 +71,7 @@ export default function PressReleaseComponent({
                       content={s.content}
                       createdAt={s.created_at ?? ''}
                       slug={s.slug}
-                      page='press-releases'
+                      page='social-responsibility'
                     />
                   ))}
                 </div>

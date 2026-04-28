@@ -35,6 +35,9 @@
     "pressRelease": {
       "title": "ข่าวสารจากบริษัท"
     },
+    "socialResponsibility": {
+      "title": "ความรับผิดชอบต่อสังคม"
+    },
     "eService": {
       "title": "e-service",
       "TrackByContainer": "ตรวจสอบสถานะจากหมายเลขตู้คอนเทนเนอร์",

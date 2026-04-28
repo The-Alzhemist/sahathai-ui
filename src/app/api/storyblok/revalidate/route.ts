@@ -45,6 +45,10 @@ const REVALIDATE_RULES: Array<{
     slug: SlugType.SET_EXCHANGE_ANNOUNCEMENT,
     tag: RevalidateTag.SET_EXCHANGE_ANNOUNCEMENT,
   },
+  {
+    slug: SlugType.SOCIAL_RESPONSIBILITY,
+    tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
+  },
 ]
 
 export async function POST(req: NextRequest) {

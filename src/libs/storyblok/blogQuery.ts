@@ -153,3 +153,26 @@ export async function fetchPressReleaseBySlug(
   if (!res.ok) throw new Error('Failed to fetch story')
   return res.json()
 }
+
+export async function fetchSocialResponsibilityBySlug(
+  slug: string,
+  lang: string,
+  revalidate = REVALIDATE_TIME
+) {
+  const url =
+    `https://api.storyblok.com/v2/cdn/stories/social-responsibility/${slug}?` +
+    new URLSearchParams({
+      token: process.env.STORYBLOK_TOKEN as string,
+      version: 'published',
+      language: lang,
+    })
+
+  const res = await fetch(url, {
+    next: {
+      revalidate: revalidate,
+      tags: [`story:${slug}`, RevalidateTag.SOCIAL_RESPONSIBILITY], // <- for invalidate cache
+    },
+  })
+  if (!res.ok) throw new Error('Failed to fetch story')
+  return res.json()
+}

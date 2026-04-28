@@ -35,6 +35,9 @@
     "pressRelease": {
       "title": "Press Release"
     },
+    "socialResponsibility": {
+      "title": "Social Responsibility"
+    },
     "eService": {
       "title": "e-service",
       "TrackByContainer": "Track by Container",
