@@ -33,7 +33,9 @@
       "pressRelease": "Press Release"
     },
     "pressRelease": {
-      "title": "Press Release"
+      "title": "Press Release",
+      "latestNews": "Latest Press Releases",
+      "pressRelease": "All Press Release"
     },
     "socialResponsibility": {
       "title": "Social Responsibility"

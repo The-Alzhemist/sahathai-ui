@@ -33,10 +33,14 @@
       "pressRelease": "ข่าวประชาสัมพันธ์"
     },
     "pressRelease": {
-      "title": "ข่าวสารจากบริษัท"
+      "title": "ข่าวสารจากบริษัท",
+      "latestNews": "ข่าวสารล่าสุด",
+      "pressRelease": "ข่าวสารจากบริษัท"
     },
     "socialResponsibility": {
-      "title": "ความรับผิดชอบต่อสังคม"
+      "title": "ความรับผิดชอบต่อสังคม",
+      "latestNews": "บทความล่าสุด",
+      "pressRelease": "บทความทั้งหมด"
     },
     "eService": {
       "title": "e-service",
