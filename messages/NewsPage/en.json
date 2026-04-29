@@ -3,6 +3,8 @@
     "latestNews": "Latest News",
     "pressRelease": "News & Articles",
     "latestBlog": "Latest Articles",
+    "latestPressRelease": "Latest Press Releases",
+    "allPressRelease": "All Press Releases",
     "allBlog": "All Articles",
     "Brochure": {
       "title": "Download Our Brochure Here",
@@ -11,6 +13,8 @@
     "PageContent": {
       "BlogTitle": "ฺBlog",
       "Title": "News & Articles",
+      "PressRelease": "Press Releases",
+      "SocialResponsibility": "Social Responsibility",
       "Back": "Back to Homepage"
     }
   }

@@ -32,6 +32,14 @@
       "latestNews": "Latest News",
       "pressRelease": "Press Release"
     },
+    "pressRelease": {
+      "title": "Press Release",
+      "latestNews": "Latest Press Releases",
+      "pressRelease": "All Press Release"
+    },
+    "socialResponsibility": {
+      "title": "Social Responsibility"
+    },
     "eService": {
       "title": "e-service",
       "TrackByContainer": "Track by Container",
