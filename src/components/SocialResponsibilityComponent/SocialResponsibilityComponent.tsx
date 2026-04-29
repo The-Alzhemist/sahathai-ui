@@ -41,7 +41,10 @@ export default function SocialResponsibilityComponent({
         />
 
         {/* Latest Blog */}
-        <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'>
+        <section
+          id='latestNews'
+          className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'
+        >
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
             {t('latestBlog')}
           </h2>
@@ -54,7 +57,10 @@ export default function SocialResponsibilityComponent({
         </section>
 
         {/* All Blog */}
-        <section className='bg-white pt-[70px] min-h-[600px]'>
+        <section
+          id='press-releases'
+          className='bg-white pt-[70px] min-h-[600px]'
+        >
           <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[600px]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('allBlog')}
