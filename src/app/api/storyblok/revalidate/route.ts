@@ -40,6 +40,15 @@ const REVALIDATE_RULES: Array<{
   { slug: SlugType.GOOD_CORPORATE, tag: RevalidateTag.GOOD_CORPORATE },
   { slug: SlugType.ACTIVITY, tag: RevalidateTag.ACTIVITY },
   { slug: SlugType.WARRANT, tag: RevalidateTag.WARRANT },
+  { slug: SlugType.PRESS_RELEASE, tag: RevalidateTag.PRESS_RELEASE },
+  {
+    slug: SlugType.SET_EXCHANGE_ANNOUNCEMENT,
+    tag: RevalidateTag.SET_EXCHANGE_ANNOUNCEMENT,
+  },
+  {
+    slug: SlugType.SOCIAL_RESPONSIBILITY,
+    tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
+  },
 ]
 
 export async function POST(req: NextRequest) {

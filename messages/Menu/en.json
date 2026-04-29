@@ -30,7 +30,18 @@
     "news": {
       "title": "News",
       "latestNews": "Latest News",
-      "pressRelease": "Press Release"
+      "pressRelease": "News Release"
+    },
+
+    "pressRelease": {
+      "title": "Press Release",
+      "latestNews": "Latest Press Releases",
+      "pressRelease": "All Press Release"
+    },
+    "socialResponsibility": {
+      "title": "Social Responsibility",
+      "latestNews": "Latest Articles",
+      "pressRelease": "All Articles"
     },
     "eService": {
       "title": "e-service",

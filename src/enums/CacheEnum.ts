@@ -1,6 +1,7 @@
 export enum SlugType {
   BLOG = 'blog',
   NEWS = 'news',
+  PRESS_RELEASE = 'press-releases',
   INVESTOR = 'investor-relations',
   ESERVICE = 'e-service/e-service-list',
   BANNER_POPUP = 'banner/bannerpopup',
@@ -16,16 +17,19 @@ export enum SlugType {
   GOOD_CORPORATE = 'investor-relations/b2c20980',
   ACTIVITY = 'investor-relations/f7414f1c',
   WARRANT = 'investor-relations/f777dd5a',
+  SOCIAL_RESPONSIBILITY = 'social-responsibility',
 }
 
 export enum RevalidateTag {
   BLOG = 'story:blog-list',
   NEWS = 'story:news-list',
+  PRESS_RELEASE = 'story:press-release-list',
   INVESTOR = 'story:investor-accordion-list',
   ESERVICE = 'story:e-service',
   BANNER_POPUP = 'story:bannerpopup',
   BOARD = 'story:board-and-committee',
   SET_EXCHANGE_ANNOUNCEMENT = 'story:set-exchange-announcement',
+  SOCIAL_RESPONSIBILITY = 'story:social-responsibility',
 
   //
   CODE_OF_CONDUCT = 'story:code-of-conduct',

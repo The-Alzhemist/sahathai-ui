@@ -158,13 +158,54 @@ export function useSubmenu() {
           },
           {
             title: t('news.pressRelease'),
-            pathname: '/news#press-release',
+            pathname: '/news#press-releases',
             isExternalLink: false,
             isScroll: true,
           },
         ],
       },
-
+      {
+        title: t('pressRelease.title'),
+        pathname: '/press-releases',
+        isExternalLink: false,
+        isScroll: true,
+        icon: <NewspaperIcon width='20' height='20' />,
+        children: [
+          {
+            title: t('pressRelease.latestNews'),
+            pathname: '/press-releases#latestNews',
+            isExternalLink: false,
+            isScroll: true,
+          },
+          {
+            title: t('pressRelease.pressRelease'),
+            pathname: '/press-releases#press-releases',
+            isExternalLink: false,
+            isScroll: true,
+          },
+        ],
+      },
+      {
+        title: t('socialResponsibility.title'),
+        pathname: '/social-responsibility',
+        isExternalLink: false,
+        isScroll: true,
+        icon: <NewspaperIcon width='20' height='20' />,
+        children: [
+          {
+            title: t('socialResponsibility.latestNews'),
+            pathname: '/social-responsibility#latestNews',
+            isExternalLink: false,
+            isScroll: true,
+          },
+          {
+            title: t('socialResponsibility.pressRelease'),
+            pathname: '/social-responsibility#press-releases',
+            isExternalLink: false,
+            isScroll: true,
+          },
+        ],
+      },
       {
         title: t('eService.title'),
         pathname: '/e-service',

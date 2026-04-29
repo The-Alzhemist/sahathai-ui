@@ -2,8 +2,10 @@
   "NewsPage": {
     "latestNews": "最新新闻",
     "pressRelease": "新闻发布",
-    "latestBlog": "บทความล่าสุด",
-    "allBlog": "บทความทั้งหมด",
+    "latestBlog": "Latest Articles",
+    "latestPressRelease": "Latest Press Releases",
+    "allPressRelease": "All Press Releases",
+    "allBlog": "All Articles",
     "Brochure": {
       "title": "在此下载我们的宣传册",
       "description": "我们的宣传册为3.3MB的PDF文件，内容包括公司、港口及我们的运营信息。点击图片下载或点击以在浏览器中查看图片。"
@@ -11,6 +13,8 @@
     "PageContent": {
       "BlogTitle": "ฺBlog",
       "Title": "新闻发布",
+      "PressRelease": "公司新闻",
+      "SocialResponsibility": "Social Responsibility",
       "Back": "返回首页"
     }
   }
