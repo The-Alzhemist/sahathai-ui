@@ -5,12 +5,16 @@ interface BannerImageProps {
   imageSrc: string
   mobileImageSrc?: string
   alt?: string
+  children?: React.ReactNode
+  overlayClassName?: string
 }
 
 export default function BannerImage({
   imageSrc,
   mobileImageSrc,
   alt = 'Banner image',
+  children,
+  overlayClassName = 'absolute inset-0 z-10 flex items-center justify-center px-6 text-center md:px-12',
 }: BannerImageProps) {
   return (
     <section className='relative z-0 -mt-[50px] w-full'>
@@ -23,6 +27,7 @@ export default function BannerImage({
           priority
           className='object-cover md:rounded-b-[60px]'
         />
+        {children ? <div className={overlayClassName}>{children}</div> : null}
       </div>
 
       {/* Mobile */}
@@ -34,6 +39,7 @@ export default function BannerImage({
           priority
           className='object-cover'
         />
+        {children ? <div className={overlayClassName}>{children}</div> : null}
       </div>
     </section>
   )
