@@ -30,9 +30,9 @@ export function SetExchangeAnnouncementPage({
           <Menu />
 
           <BannerImage
-            mobileImageSrc='/investor-relations/new/investor-banner-mobile-9.webp'
-            imageSrc='/investor-relations/new/investor-banner-9.webp'
-            alt='investor-banner-9'
+            mobileImageSrc='/investor-relations/new/set-banner-3x.webp'
+            imageSrc='/investor-relations/new/set-banner-3x.webp'
+            alt='set-banner-3x'
           />
 
           <section className='px-5 pb-5  pt-[50px] md:pt-[100px] max-w-4xl mx-auto space-y-6'>
