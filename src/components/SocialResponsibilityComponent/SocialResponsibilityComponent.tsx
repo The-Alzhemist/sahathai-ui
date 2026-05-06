@@ -35,9 +35,9 @@ export default function SocialResponsibilityComponent({
         <Menu />
 
         <BannerImage
-          mobileImageSrc='/investor-relations/new/investor-banner-mobile-9.webp'
-          imageSrc='/investor-relations/new/investor-banner-9.webp'
-          alt='investor-banner-9'
+          mobileImageSrc='/social-responsibility/social-responsibility-3x.webp'
+          imageSrc='/social-responsibility/social-responsibility-3x.webp'
+          alt='social-responsibility-banner'
         >
           <div className='mx-auto flex max-w-[1400px] flex-col items-center justify-center text-white'>
             <p className='max-w-[800px] text-center text-md font-normal leading-[1.25]  md:text-2xl md:leading-[1.35] mb-5'>
@@ -117,7 +117,7 @@ export default function SocialResponsibilityComponent({
         </section>
 
         {/* Brochure */}
-        <section className='relative min-h-[450px] flex justify-center items-center px-5'>
+        {/* <section className='relative min-h-[450px] flex justify-center items-center px-5'>
           <Image
             src='/news/blog-contact-bg.webp'
             alt='Blog Background'
@@ -127,7 +127,7 @@ export default function SocialResponsibilityComponent({
           />
 
           <Brochure className='z-10' />
-        </section>
+        </section> */}
       </Animation>
     </div>
   )
