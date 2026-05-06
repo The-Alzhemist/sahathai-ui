@@ -10,7 +10,7 @@ import Image from 'next/image'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import { Brochure } from '@/features/blog/components/Brochure'
 import { Animation } from '@/components/Animation'
-import { useRouter } from '@/libs/intl/navigation'
+import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 export default function SocialResponsibilityComponent({
   stories,
@@ -38,7 +38,30 @@ export default function SocialResponsibilityComponent({
           mobileImageSrc='/investor-relations/new/investor-banner-mobile-9.webp'
           imageSrc='/investor-relations/new/investor-banner-9.webp'
           alt='investor-banner-9'
-        />
+        >
+          <div className='mx-auto flex max-w-[1400px] flex-col items-center justify-center text-white'>
+            <p className='max-w-[800px] text-center text-md font-normal leading-[1.25]  md:text-2xl md:leading-[1.35] mb-5'>
+              สหไทย เทอร์มินอล มีความมุ่งมั่นและให้ความสําคัญกับความรับผิดชอบ
+              ต่อสังคมและสิ่งแวดล้อมเป็นอย่างยิ่ง
+              โดยเรามุ่งมั่นและคํานึงถึงความรับผิดชอบดังกล่าวตามแนวทางการปฏิบัติงานของเรา
+            </p>
+
+            <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
+              <Link
+                href='https://a.storyblok.com/f/316761/x/2eeaaaa42d/csr-policy.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='font-normal '
+              >
+                ดาวน์โหลดนโยบายความรับผิดชอบต่อสังคมของเรา
+              </Link>
+            </button>
+
+            {/* <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all'>
+              โครงการมอบทุนการศึกษา
+            </button> */}
+          </div>
+        </BannerImage>
 
         {/* Latest Blog */}
         <section
