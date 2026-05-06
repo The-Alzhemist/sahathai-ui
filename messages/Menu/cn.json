@@ -38,7 +38,9 @@
       "pressRelease": "All Press Release"
     },
     "socialResponsibility": {
-      "title": "Social Responsibility"
+      "title": "Social Responsibility",
+      "latestNews": "Latest Social Responsibility Articles",
+      "pressRelease": "All Social Responsibility Articles"
     },
     "eService": {
       "title": "e-service",
