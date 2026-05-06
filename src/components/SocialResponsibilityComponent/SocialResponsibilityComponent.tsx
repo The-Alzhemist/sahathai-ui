@@ -29,6 +29,8 @@ export default function SocialResponsibilityComponent({
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
+  const tSocial = useTranslations('Responsibility')
+
   return (
     <div>
       <Animation key={`social-responsibility-${Date.now()}`}>
@@ -41,9 +43,7 @@ export default function SocialResponsibilityComponent({
         >
           <div className='mx-auto flex max-w-[1400px] flex-col items-center justify-center text-white'>
             <p className='max-w-[800px] text-center text-md font-normal leading-[1.25]  md:text-2xl md:leading-[1.35] mb-5'>
-              สหไทย เทอร์มินอล มีความมุ่งมั่นและให้ความสําคัญกับความรับผิดชอบ
-              ต่อสังคมและสิ่งแวดล้อมเป็นอย่างยิ่ง
-              โดยเรามุ่งมั่นและคํานึงถึงความรับผิดชอบดังกล่าวตามแนวทางการปฏิบัติงานของเรา
+              {tSocial('Banner.Title')}
             </p>
 
             <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
@@ -53,7 +53,7 @@ export default function SocialResponsibilityComponent({
                 rel='noopener noreferrer'
                 className='font-normal '
               >
-                ดาวน์โหลดนโยบายความรับผิดชอบต่อสังคมของเรา
+                {tSocial('Banner.download')}
               </Link>
             </button>
 

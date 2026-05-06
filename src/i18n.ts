@@ -27,6 +27,7 @@ export default getRequestConfig(async ({ locale }) => {
     'Seo',
     'EServicePage',
     'Footer',
+    'SocialResponsibility',
   ]
 
   const messages = {}
