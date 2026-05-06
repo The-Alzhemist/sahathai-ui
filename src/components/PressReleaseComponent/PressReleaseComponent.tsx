@@ -87,7 +87,7 @@ export default function PressReleaseComponent({
         </section>
 
         {/* Brochure */}
-        <section className='relative min-h-[450px] flex justify-center items-center px-5'>
+        {/* <section className='relative min-h-[450px] flex justify-center items-center px-5'>
           <Image
             src='/news/blog-contact-bg.webp'
             alt='Blog Background'
@@ -97,7 +97,7 @@ export default function PressReleaseComponent({
           />
 
           <Brochure className='z-10' />
-        </section>
+        </section> */}
       </Animation>
     </div>
   )
