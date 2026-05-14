@@ -25,13 +25,17 @@ import Link from 'next/link'
 import { RedWarningIcon } from '@/components/icons/WarningRedIcon'
 import { Menu } from '@/components/Menu'
 
-const ContactUs = ({ className, handleOnSubmitForm }: ContactUsProps) => {
+const ContactUs = ({
+  className,
+  handleOnSubmitForm,
+  isShowMenuBar = false,
+}: ContactUsProps) => {
   const t = useTranslations('ContactUs')
   const common = useTranslations('common')
 
   return (
     <Animation className={cn('', className)} key={`contact-us-${Date.now()}`}>
-      <Menu />
+      {isShowMenuBar && <Menu />}
       <section className='container-mini pt-[96px] space-y-[52px]'>
         <h2
           className='w-full text-center text-[32px] leading-[48.38px] font-[500] text-navy'
