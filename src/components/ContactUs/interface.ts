@@ -2,11 +2,13 @@ import { IconProps } from '../icons/interface'
 
 export interface ContactUsProps {
   className?: string
+  isShowMenuBar?: boolean
   handleOnSubmitForm: (value: ContactUsForm, resetForm: any) => void
 }
 
 export interface ContactUsAcceptProps {
   className?: string
+  isShowMenuBar?: boolean
 }
 
 export interface CardProps {
