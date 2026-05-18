@@ -187,7 +187,7 @@ const ContactUs = ({
                 className='mt-[24px] flex h-[60px] w-full items-center justify-center gap-[10px] rounded-[8px] bg-white text-[16px] font-[600] text-secondary shadow-6'
               >
                 <LocationIcon className='h-[18px] w-[18px]' />
-                เส้นทาง
+                {t('getDirection')}
               </Link>
             </div>
           </div>

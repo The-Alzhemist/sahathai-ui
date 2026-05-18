@@ -1,6 +1,7 @@
 {
   "ContactUs": {
     "title": "Contact Us",
+    "getDirection": "Get Direction",
     "nameField": {
       "label": "Name",
       "placeholder": "Enter your name"
