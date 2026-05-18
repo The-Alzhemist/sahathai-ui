@@ -1,6 +1,7 @@
 {
   "ContactUs": {
     "title": "ติดต่อเรา",
+    "getDirection": "ดูเส้นทาง",
     "nameField": {
       "label": "ชื่อ",
       "placeholder": "กรอกชื่อ"

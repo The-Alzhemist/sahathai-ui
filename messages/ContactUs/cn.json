@@ -1,6 +1,7 @@
 {
   "ContactUs": {
     "title": "联系我们",
+    "getDirection": "获取路线",
     "nameField": {
       "label": "姓名",
       "placeholder": "请输入姓名"
