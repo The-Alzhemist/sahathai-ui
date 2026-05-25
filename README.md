@@ -199,6 +199,10 @@ npm run start
 
 ก่อน deploy ควรตรวจสอบว่า environment variables ถูกตั้งค่าครบ และ Storyblok webhook ชี้มายัง environment ที่ต้องการแล้ว
 
+
+## Google Tag and GA4 
+- can access by developer@codework-tech.com
+
 ## Notes
 
 - Locale default คือ `th`
@@ -206,5 +210,4 @@ npm run start
 - Remote images ที่อนุญาตอยู่ใน `next.config.mjs`
 - SVG import ผ่าน `@svgr/webpack`
 - Path alias หลักคือ `@/*` สำหรับ `src/*`
-
 
