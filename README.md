@@ -211,3 +211,7 @@ npm run start
 - SVG import ผ่าน `@svgr/webpack`
 - Path alias หลักคือ `@/*` สำหรับ `src/*`
 
+
+
+
+

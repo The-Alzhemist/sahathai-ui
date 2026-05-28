@@ -1,30 +1,48 @@
-# how to generate type for storyblok components
+# Generate Storyblok Types
 
-# Login
-npx storyblok login  
-- region EU 
+ใช้สำหรับดึง schema ของ Storyblok แล้ว generate TypeScript types สำหรับ blok ต่าง ๆ
 
-# Yarn command 
-- yarn pull-storyblok-components 
-- yarn generate-sb-types
+## Login
 
-- หรือใช้คำสั่งตามด้านล่างนี้
+```bash
+npx storyblok login
+- อีเมล password ดูใน slack
+- เลือก EU
+```
 
+## คำสั่งที่ใช้ในโปรเจกต์
 
-# Pull components from your space
-- npx storyblok comp pull --space SPACE_ID 
-- จะได้ component.json อยู่ใน .storyblok/components/SPACE_ID/component.json
+```bash
+yarn pull-storyblok-components
+yarn generate-sb-types
+```
 
+## หรือรันแบบตรง ๆ
 
-# Generate TypeScript types
+### 1. Pull components จาก Storyblok space
+
+```bash
+npx storyblok comp pull --space SPACE_ID
+```
+
+ไฟล์ schema จะถูกสร้างที่:
+
+```text
+.storyblok/components/SPACE_ID/components.json
+```
+
+### 2. Generate TypeScript types
+
+```bash
 storyblok-generate-ts source=.storyblok/components/SPACE_ID/components.json target=src/types/storyblok
+```
 
+ผลลัพธ์:
 
-- จะได้ไฟล์ storyblok.d.ts มา อยู่ที่ /types/storyblok
-- generate type ของ blok แต่ละตัว
-- นำไป assign ตอน loop map body ที่ได้จาก response 
+- ได้ไฟล์ `src/types/storyblok.d.ts`
+- ใช้สำหรับ assign type ของ blok แต่ละตัว
+- นำไปใช้ตอน loop หรือ map ข้อมูลจาก Storyblok response
 
+## Reference
 
-
-# Read more in 
-https://www.storyblok.com/mp/introducing-storyblok-cli-v4 (v4)
+https://www.storyblok.com/mp/introducing-storyblok-cli-v4
