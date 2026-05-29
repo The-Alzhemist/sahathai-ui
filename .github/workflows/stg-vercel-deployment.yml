@@ -1,0 +1,35 @@
+name: (STG) Deploy to Vercel
+on:
+    push:
+        branches:
+            - develop
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Override git author
+              run: |
+                  git config user.email "pornsit@codework-tech.com"
+                  git config user.name "pornsit"
+                  git commit --amend --reset-author --no-edit
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "24.10"
+            - name: Install Vercel CLI
+              run: npm install -g vercel
+            - name: Link Project
+              run: vercel link --yes --project sahathai-ui --token=${{ secrets.VERCEL_TOKEN }}
+            - name: Pull Environment
+              run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+            - name: Build
+              run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+              env:
+                  STORYBLOK_TOKEN: ${{ secrets.STORYBLOK_TOKEN }}
+                  NEXT_PUBLIC_FORM_SPREE_ID: "mbljnjjo"
+                  GTM_STAGING: "GTM-PJ6XCKHT"
+                  STORYBLOK_BASE_URL: "https://api.storyblok.com/v2/cdn"
+                  DOMAIN_NAME: "https://sahathai-ui.vercel.app"
+            - name: Deploy
+              run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
