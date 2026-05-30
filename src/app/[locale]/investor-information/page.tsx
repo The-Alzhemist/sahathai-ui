@@ -29,7 +29,6 @@ export default async function InvestorInformation() {
     stockData = await response.json()
   }
 
-  // xxx
   return <InvestorInformationPage stockData={stockData} />
 }
 

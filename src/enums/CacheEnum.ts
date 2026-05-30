@@ -6,7 +6,7 @@ export enum SlugType {
   ESERVICE = 'e-service/e-service-list',
   BANNER_POPUP = 'banner/bannerpopup',
   BOARD = 'board-and-committee/board-and-committee',
-  SET_EXCHANGE_ANNOUNCEMENT = 'investor-relations/set-exchange-announcement',
+  SET_EXCHANGE_ANNOUNCEMENT = 'investor-relations/a7763650-2514-4a2d-916a-c21512aea1a5',
 
   //
   CODE_OF_CONDUCT = 'investor-relations/code-of-conduct',
