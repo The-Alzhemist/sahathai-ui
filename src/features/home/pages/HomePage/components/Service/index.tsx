@@ -37,19 +37,11 @@ export function Service() {
             imageSize={68}
           />
 
-
-
           <ServiceCard
             title={t('coastalShippingServices.title')}
             content={t('coastalShippingServices.content')}
             imageUrl='/home/cargo-ship.png'
             imageSize={76}
-          />
-          <ServiceCard
-            title={t('bulkCargoProjectCargo.title')}
-            content={t('bulkCargoProjectCargo.content')}
-            imageUrl='/home/road-freight.png'
-            imageSize={70}
           />
 
           <ServiceCard
@@ -66,9 +58,8 @@ export function Service() {
         >
           {common('seeMore')}
           <div className='bg-blue-300 rounded-full'>
-            <ArrowRightCircleIcon  width='40' height='40' />
+            <ArrowRightCircleIcon width='40' height='40' />
           </div>
-
         </Link>
       </Animation>
     </section>
