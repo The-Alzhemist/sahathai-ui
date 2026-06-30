@@ -58,7 +58,6 @@
     "investorRelations": {
       "title": "Investor Relations",
       "investorInformation": "Investor Information",
-      "sustainabilityManagement": "Sustainability Management (ESG)",
       "codeConduct": "Code of Conduct",
       "shareHolder": "Shareholders",
       "shareHolderMeeting": "Annual General Meeting of Shareholders",
@@ -66,7 +65,6 @@
       "PerformanceReport": "Performance Report",
       "DocumentAnnouncement": "Publications",
       "GoodCorporate": "Good Corporate Governance",
-      "SustainableDevelopment": "Sustainable Development",
       "Activity": "Activities",
       "Warrant": "Warrants",
       "SetExchangeAnnouncement": "Set News"

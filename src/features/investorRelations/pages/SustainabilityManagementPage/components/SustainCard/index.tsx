@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { cn } from '@/libs/util'
 import { Animation } from '@/components/Animation'
-import { SustainCardProps } from '@/features/investorRelations/pages/SustainabilityManagementPage/SustainCard/Card/interface'
+import { SustainCardProps } from './interface'
 
 export function SustainCard({
   imageUrl,

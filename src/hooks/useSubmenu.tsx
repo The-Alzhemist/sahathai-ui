@@ -185,13 +185,6 @@ export function useSubmenu() {
             pathname: `/investor-information`,
           },
           {
-            title: t('investorRelations.sustainabilityManagement'),
-            isExternalLink: false,
-            isScroll: true,
-            pathname: `/sustainability-management`,
-          },
-
-          {
             title: t('investorRelations.shareHolder'),
             isExternalLink: false,
             isScroll: true,
