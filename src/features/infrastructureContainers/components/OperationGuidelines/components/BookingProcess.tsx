@@ -22,7 +22,7 @@ export default function BookingProcess() {
 
 const BookingProcessTH = () => {
   return (
-    <>
+    <div className='px-5 text-sm text-gray-600'>
       <h3 className='text-sm text-gray-800 mb-2 underline'>
         ลานวางตู้คอนเทนเนอร์สำหรับส่งออก
       </h3>
@@ -76,13 +76,6 @@ const BookingProcessTH = () => {
         </li>
       </ul>
 
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span className='text-sm text-gray-600'>
-          ส่งอีเมล์ไปยังสำนักงานจัดเตรียมเอกสารที่
-        </span>
-        <span className='text-primary-1'>cr.stt@sahathai.com</span>
-      </div>
-
       <h3 className='text-sm text-gray-800 mb-2 underline'>
         ลานเก็บตู้คอนเทนเนอร์ส่งออก (CFS)
       </h3>
@@ -101,25 +94,6 @@ const BookingProcessTH = () => {
           บริษัทจัดส่งสินค้าทางเรือจะต้องส่งใบกำกับก่อนการบรรจุ
         </li>
       </ul>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span className='text-sm text-gray-600'>
-          ส่งอีเมล์สำนักงานจัดเตรียมเอกสารที่
-        </span>
-        <span className='text-primary-1'>cr.stt@sahathai.com</span>
-      </div>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span className='text-sm text-gray-600'>โททรศัพท์ ติดต่อ</span>
-        <span className='text-primary-1'>
-          +66 (0)84-540-7912, +66(0)92-224-4818{' '}
-        </span>
-      </div>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span className='text-sm text-gray-600'>โทรสาร</span>
-        <span className='text-primary-1'> +66(0)2-386-8008</span>
-      </div>
 
       <h3 className='text-sm text-gray-800 mb-2 underline'>
         การขนส่งสินค้าทางเรือเพื่อนำเข้า
@@ -145,14 +119,7 @@ const BookingProcessTH = () => {
           เทอร์มินอล
         </li>
       </ul>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span className='text-sm text-gray-600'>
-          ส่งอีเมล์ไปยังสำนักงานจัดเตรียมเอกสาร ที่
-        </span>
-        <span className='text-primary-1'>cr.stt@sahathai.com</span>
-      </div>
-    </>
+    </div>
   )
 }
 
@@ -191,16 +158,6 @@ const BookingProcessEN = () => {
         </li>
       </ul>
 
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span>Email the Documentation Office at</span>
-        <a
-          href='mailto:cr.stt@sahathai.com'
-          className='text-primary-1 underline'
-        >
-          cr.stt@sahathai.com
-        </a>
-      </div>
-
       <h3 className='text-sm text-gray-800 mb-2 underline'>Export CFS</h3>
       <ul className='flex flex-col gap-y-5 list-disc'>
         <li>
@@ -213,28 +170,6 @@ const BookingProcessEN = () => {
         </li>
         <li>The shipper is to submit a Bai-Kam-Kab before stuffing.</li>
       </ul>
-
-      <div className='flex flex-col gap-2 border rounded-md px-3 py-2 my-5'>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <span>Click here to email the Documentation Office at</span>
-          <a
-            href='mailto:cr.stt@sahathai.com'
-            className='text-primary-1 underline'
-          >
-            cr.stt@sahathai.com
-          </a>
-        </div>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <span>Service Hotline:</span>
-          <span className='text-primary-1'>
-            +66 (0)84-540-7912, +66 (0)92-224-4818
-          </span>
-        </div>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <span>Fax:</span>
-          <span className='text-primary-1'>+66 (0)2-386-8008</span>
-        </div>
-      </div>
 
       <h3 className='text-sm text-gray-800 mb-2 underline'>Import Shipment</h3>
       <ul className='flex flex-col gap-y-5 list-disc'>
@@ -251,16 +186,6 @@ const BookingProcessEN = () => {
           of shipment (CY/DIR/LCL/CFS) 24 hours before shipment arrival at STT.
         </li>
       </ul>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span>Click here to email the Documentation Office at</span>
-        <a
-          href='mailto:cr.stt@sahathai.com'
-          className='text-primary-1 underline'
-        >
-          cr.stt@sahathai.com
-        </a>
-      </div>
     </div>
   )
 }
@@ -300,16 +225,6 @@ const BookingProcessCN = () => {
         </li>
       </ul>
 
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span>Email the Documentation Office at</span>
-        <a
-          href='mailto:cr.stt@sahathai.com'
-          className='text-primary-1 underline'
-        >
-          cr.stt@sahathai.com
-        </a>
-      </div>
-
       <h3 className='text-sm text-gray-800 mb-2 underline'>Export CFS</h3>
       <ul className='flex flex-col gap-y-5 list-disc'>
         <li>
@@ -322,28 +237,6 @@ const BookingProcessCN = () => {
         </li>
         <li>The shipper is to submit a Bai-Kam-Kab before stuffing.</li>
       </ul>
-
-      <div className='flex flex-col gap-2 border rounded-md px-3 py-2 my-5'>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <span>Click here to email the Documentation Office at</span>
-          <a
-            href='mailto:cr.stt@sahathai.com'
-            className='text-primary-1 underline'
-          >
-            cr.stt@sahathai.com
-          </a>
-        </div>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <span>Service Hotline:</span>
-          <span className='text-primary-1'>
-            +66 (0)84-540-7912, +66 (0)92-224-4818
-          </span>
-        </div>
-        <div className='flex flex-wrap gap-2 items-center'>
-          <span>Fax:</span>
-          <span className='text-primary-1'>+66 (0)2-386-8008</span>
-        </div>
-      </div>
 
       <h3 className='text-sm text-gray-800 mb-2 underline'>Import Shipment</h3>
       <ul className='flex flex-col gap-y-5 list-disc'>
@@ -360,16 +253,6 @@ const BookingProcessCN = () => {
           of shipment (CY/DIR/LCL/CFS) 24 hours before shipment arrival at STT.
         </li>
       </ul>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2 my-5'>
-        <span>Click here to email the Documentation Office at</span>
-        <a
-          href='mailto:cr.stt@sahathai.com'
-          className='text-primary-1 underline'
-        >
-          cr.stt@sahathai.com
-        </a>
-      </div>
     </div>
   )
 }

@@ -43,14 +43,6 @@ export const DockingInfoTH = () => {
         เทอร์มินอล ยืนยันแผนการเข้าเทียบท่า (POB)
         และประมาณการของวันที่ที่เรือจะออกจากท่าเรือต้นทาง (ETD)
       </p>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
-        <span className='text-sm text-gray-600'>
-          ส่งอีเมล์ถึงสำนักงานปฏิบัติการของ สหไทย เทอร์มินอล ได้ที่
-        </span>
-
-        <span className='text-primary-1'>planner.stt@sahathai.com</span>
-      </div>
     </>
   )
 }
@@ -58,57 +50,37 @@ export const DockingInfoTH = () => {
 export const DockingInfoEN = () => {
   return (
     <>
-      <>
-        <p className='text-gray-600 text-sm mb-3'>
-          The shipping line or agent must email the vessel’s particulars,
-          service lane, and vessel definition (general stowage plan, lashing
-          arrangement plan, reefer arrangement plan, hatch securing, and
-          container capacity table) to the STT Planner at least 1 week prior to
-          calling.
-        </p>
+      <p className='text-gray-600 text-sm mb-3'>
+        The shipping line or agent must email the vessel’s particulars, service
+        lane, and vessel definition (general stowage plan, lashing arrangement
+        plan, reefer arrangement plan, hatch securing, and container capacity
+        table) to the STT Planner at least 1 week prior to calling.
+      </p>
 
-        <p className='text-gray-600 text-sm mb-3'>
-          The shipping line or agent must submit the long-term calling rotations
-          1 month prior to calling to the STT Planner in order to make a
-          long-term vessel plan for container booking. 7, 3 and 1 day(s) prior
-          to arrival, the shipping line or agent must update both the ETA
-          (Estimate Time of Arrival) and the estimated volume of
-          discharging/loading in order to allow the STT Planner to confirm the
-          POB and ETD (Estimate Time of Departure){' '}
-        </p>
-
-        <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
-          <span className='text-sm text-gray-600'>
-            Email STT Operations Office at
-          </span>
-          <span className='text-primary-1'>planner.stt@sahathai.com</span>
-        </div>
-      </>
+      <p className='text-gray-600 text-sm mb-3'>
+        The shipping line or agent must submit the long-term calling rotations 1
+        month prior to calling to the STT Planner in order to make a long-term
+        vessel plan for container booking. 7, 3 and 1 day(s) prior to arrival,
+        the shipping line or agent must update both the ETA (Estimate Time of
+        Arrival) and the estimated volume of discharging/loading in order to
+        allow the STT Planner to confirm the POB and ETD (Estimate Time of
+        Departure){' '}
+      </p>
     </>
   )
 }
 
 export const DockingInfoCN = () => {
   return (
-    <>
-      <p className='text-gray-800 text-sm mb-3'>
-        船公司或船公司代理必须提前至少 1
-        周发送电子邮件，提供货船的详细信息、服务和货船特性（一般装载计划、
-        系泊计划、冷藏集装箱布置计划、安全系统以及集装箱插槽分配计划）到
-        Sahathai Terminal。船公司或船公司代理 必须提前至少 1
-        个月提供长期停泊时间表，以便在停泊前 7、3 和 1
-        天预订集装箱插槽。此外，船公司或代理人还
-        必须提供预计到达时间（ETA）和预计装卸货物的数量。Sahathai Terminal
-        将确认停泊计划（POB）以及预计的 离港时间（ETD）。
-      </p>
-
-      <div className='flex flex-wrap gap-2 border rounded-md items-center px-3 py-2'>
-        <span className='text-sm text-gray-700'>
-          请发送电子邮件至 Sahathai Terminal 的运营办公室，邮箱为
-        </span>
-
-        <span className='text-primary-1'>planner.stt@sahathai.com</span>
-      </div>
-    </>
+    <p className='text-gray-800 text-sm mb-3'>
+      船公司或船公司代理必须提前至少 1
+      周发送电子邮件，提供货船的详细信息、服务和货船特性（一般装载计划、
+      系泊计划、冷藏集装箱布置计划、安全系统以及集装箱插槽分配计划）到 Sahathai
+      Terminal。船公司或船公司代理 必须提前至少 1
+      个月提供长期停泊时间表，以便在停泊前 7、3 和 1
+      天预订集装箱插槽。此外，船公司或代理人还
+      必须提供预计到达时间（ETA）和预计装卸货物的数量。Sahathai Terminal
+      将确认停泊计划（POB）以及预计的 离港时间（ETD）。
+    </p>
   )
 }
