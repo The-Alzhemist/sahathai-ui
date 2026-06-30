@@ -91,7 +91,7 @@ export default function NewsComponent({
         </section>
 
         {/* Brochure */}
-        <section className='relative  min-h-[700px] flex justify-center items-center  px-5'>
+        {/* <section className='relative  min-h-[700px] flex justify-center items-center  px-5'>
           <Image
             src='/news/new/news-bg.webp'
             alt='Sustainability Background'
@@ -101,7 +101,7 @@ export default function NewsComponent({
           />
 
           <Brochure className='z-10 mt-[300px]' />
-        </section>
+        </section> */}
       </Animation>
     </section>
   )

@@ -60,7 +60,7 @@ const withContactUs = (Component: React.FC<ContactUsProps>) => {
         const contactType =
           value.type === ContactUsTypeEnum.CONTACT
             ? 'แบบฟอร์มติดต่อ (contact)'
-            : 'แบบฟอร์มร้องเรียนการทุจริต (Fraud complaint)'
+            : 'แบบฟอร์มข้อร้องเรียนเรื่องการบริการ (Service complaint)'
 
         const contactName = value.name || '-'
         const contactPhone = value.phone || '-'

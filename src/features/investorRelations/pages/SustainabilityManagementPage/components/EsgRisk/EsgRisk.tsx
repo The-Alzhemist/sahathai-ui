@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { SustainCard } from '@/features/investorRelations/pages/SustainabilityManagementPage/SustainCard/Card'
 import { useTranslations } from 'next-intl'
+import { SustainCard } from '../SustainCard'
 
 export const EsgRisk = () => {
   const t = useTranslations('SustainabilityManagementPage')

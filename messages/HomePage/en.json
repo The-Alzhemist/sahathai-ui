@@ -32,7 +32,11 @@
     "License": {
       "title": "Success Guaranteed by Quality",
       "content": "Our awards and certifications not only reflect our achievements but also affirm the high service standards we deliver to every customer. With a strong commitment to continuous improvement, we take pride in presenting accomplishments recognized by leading organizations both locally and internationally.",
-      "iso": "ISO 9001 and ISO 14001"
+      "iso": "ISO 9001 and ISO 14001",
+      "globalSecurityVerification": "GSV (C-TPAT)",
+      "thaiInvestorAssociation": "Annual General Meeting 2025 quality rated as Excellent",
+      "sustainability": "Thai Listed Companies Corporate Governance Rating (CGR) 2025 rated as Excellent",
+      "acknowledgements": "Sustainability Disclosure Recognition 2025"
     },
     "Service": {
       "title": "Comprehensive Services for Your Business",
@@ -45,16 +49,12 @@
         "content": "Inspection, cleaning, and maintenance services with a storage area of 59,200 sq.m., supporting 350,000 containers per year. Quality and safety guaranteed."
       },
       "freeTradeZone": {
-        "title": "Free Zone",
+        "title": "Free Zone and Bonded Warehouse",
         "content": "Our Free Zone, located 200 meters from Sahathai Terminal, spans 6,400 sq.m., reducing logistics time and costs."
       },
       "coastalShippingServices": {
-        "title": "Coastal Shipping Services",
+        "title": "Domestic and International Freight Services",
         "content": "A multi-purpose port offering comprehensive services to handle all types of containers with the highest quality and safety standards."
-      },
-      "bulkCargoProjectCargo": {
-        "title": "Bulk and Project Cargo",
-        "content": "We provide transportation services for all types of cargo, including bulk, stacked, and large-scale projects, with expertise, specialized equipment, and professional teams ensuring maximum safety and efficiency."
       },
       "automatedContainerReadingTechnology": {
         "title": "Automated Container Reading Technology (OCR)",

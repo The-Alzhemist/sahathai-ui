@@ -12,6 +12,7 @@ import { Brochure } from '@/features/blog/components/Brochure'
 import { Animation } from '@/components/Animation'
 import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
+import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
 export default function SocialResponsibilityComponent({
   stories,
   latestBlog,
@@ -128,6 +129,7 @@ export default function SocialResponsibilityComponent({
 
           <Brochure className='z-10' />
         </section> */}
+        <SustainabilityManagementContent />
       </Animation>
     </div>
   )

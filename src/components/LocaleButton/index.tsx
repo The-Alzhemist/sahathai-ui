@@ -29,12 +29,8 @@ export function LocaleButton({ className, isHomePage }: LocaleButtonProps) {
   // const queryStrings = useSearchParams()
 
   function handleLocaleChange(value: LocaleEnum) {
-    // const query = queryStrings.toString()
-    // router.replace(query ? `${pathname}?${query}` : pathname, {
-    //   locale: locale as 'th' | 'en' | 'cn' | undefined,
-    //   scroll: false,
-    // })
-    router.replace(pathname, {
+    const hash = window.location.hash
+    router.replace(hash ? (`${pathname}${hash}` as typeof pathname) : pathname, {
       locale: value,
       scroll: false,
     })

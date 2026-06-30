@@ -38,9 +38,9 @@
       "pressRelease": "All Press Release"
     },
     "socialResponsibility": {
-      "title": "Social Responsibility",
-      "latestNews": "Latest Social Responsibility Articles",
-      "pressRelease": "All Social Responsibility Articles"
+      "title": "可持续发展管理",
+      "latestNews": "最新可持续发展管理文章",
+      "pressRelease": "所有可持续发展管理文章"
     },
     "eService": {
       "title": "e-service",
@@ -57,7 +57,6 @@
     "investorRelations": {
       "title": "Investor Relations",
       "investorInformation": "Investor Information",
-      "sustainabilityManagement": "Sustainability Management (ESG)",
       "codeConduct": "Code of Conduct",
       "shareHolder": "Shareholders",
       "shareHolderMeeting": "Annual General Meeting of Shareholders",
@@ -65,7 +64,6 @@
       "PerformanceReport": "Performance Report",
       "DocumentAnnouncement": "Publications",
       "GoodCorporate": "Good Corporate Governance",
-      "SustainableDevelopment": "Sustainable Development",
       "Activity": "Activities",
       "Warrant": "Warrants",
       "SetExchangeAnnouncement": "Set News"

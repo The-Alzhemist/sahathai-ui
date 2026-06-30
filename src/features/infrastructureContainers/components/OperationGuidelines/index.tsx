@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { Animation } from '@/components/Animation'
@@ -22,6 +22,7 @@ import Image from 'next/image'
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
+  const sectionRef = useRef<HTMLElement>(null)
   const [activeTab, setActive] = useState<TabType>('docking')
 
   const tabs: { key: TabType; title: string }[] = [
@@ -44,8 +45,25 @@ export function OperationGuidelines() {
     { key: 'serviceCharge', title: t('serviceCharge.title') },
   ]
 
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '') as TabType
+    const validKeys = tabs.map((t) => t.key)
+    if (hash && validKeys.includes(hash)) {
+      setActive(hash)
+      setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }, [])
+
+  function onTabChange(value: TabType) {
+    setActive(value)
+    window.location.hash = value
+  }
+
   return (
     <section
+      ref={sectionRef}
       className='relative py-10 min-h-[1200px]'
       id='operation-guidelines'
     >
@@ -61,7 +79,7 @@ export function OperationGuidelines() {
               <Tab
                 key={key}
                 isActive={activeTab === key}
-                onClick={() => setActive(key)}
+                onClick={() => onTabChange(key)}
               >
                 {title}
               </Tab>
