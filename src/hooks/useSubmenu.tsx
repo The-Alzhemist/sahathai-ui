@@ -245,12 +245,6 @@ export function useSubmenu() {
             isScroll: true,
             pathname: `/investor-information/activity`,
           },
-          {
-            title: t('investorRelations.Warrant'),
-            isExternalLink: false,
-            isScroll: true,
-            pathname: `/investor-information/warrant`,
-          },
         ],
       },
     ]
