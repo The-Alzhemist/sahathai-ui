@@ -45,16 +45,12 @@
         "content": "检查、清洁和维修服务，储存区域为59,200平方米，支持每年350,000个集装箱。质量和安全有保障。"
       },
       "freeTradeZone": {
-        "title": "自由贸易区",
+        "title": "自由贸易区及保税仓库",
         "content": "我们的自由贸易区距离萨哈泰终端200米，面积为6,400平方米，能够减少物流时间和成本。"
       },
       "coastalShippingServices": {
         "title": "沿海运输服务",
         "content": "一个多用途的港口，提供全面服务，处理所有类型的集装箱，确保最高的质量和安全标准。"
-      },
-      "bulkCargoProjectCargo": {
-        "title": "散货和项目货物",
-        "content": "我们提供各种货物运输服务，包括散货、堆放货物和大型项目货物，凭借专业知识、专用设备和专业团队，确保最大安全性和高效性。"
       },
       "automatedContainerReadingTechnology": {
         "title": "自动集装箱读取技术（OCR）",

@@ -45,16 +45,12 @@
         "content": "Inspection, cleaning, and maintenance services with a storage area of 59,200 sq.m., supporting 350,000 containers per year. Quality and safety guaranteed."
       },
       "freeTradeZone": {
-        "title": "Free Zone",
+        "title": "Free Zone and Bonded Warehouse",
         "content": "Our Free Zone, located 200 meters from Sahathai Terminal, spans 6,400 sq.m., reducing logistics time and costs."
       },
       "coastalShippingServices": {
         "title": "Coastal Shipping Services",
         "content": "A multi-purpose port offering comprehensive services to handle all types of containers with the highest quality and safety standards."
-      },
-      "bulkCargoProjectCargo": {
-        "title": "Bulk and Project Cargo",
-        "content": "We provide transportation services for all types of cargo, including bulk, stacked, and large-scale projects, with expertise, specialized equipment, and professional teams ensuring maximum safety and efficiency."
       },
       "automatedContainerReadingTechnology": {
         "title": "Automated Container Reading Technology (OCR)",
