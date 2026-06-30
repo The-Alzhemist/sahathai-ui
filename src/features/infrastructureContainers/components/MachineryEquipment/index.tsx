@@ -1,8 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import { Collapse } from '../Collapse'
 import { Card } from '@/features/services/components/Card'
-import Image from 'next/image'
 
 export function MachineryEquipment() {
   const t = useTranslations('InfrastructureContainersPage.MachineryEquipment')
@@ -28,52 +26,45 @@ export function MachineryEquipment() {
         />
 
         <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-3.webp'}
-          title={t('rtg.title')}
-          content={t('rtg.content')}
-          position={'left'}
-        />
-
-        <Card
           imageUrl={'/infrastructure-containers/new/infrastructure-4.webp'}
           title={t('mobileHarborCrane.title')}
           content={t('mobileHarborCrane.content')}
-          position={'right'}
+          position={'left'}
         />
 
         <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-5.webp'}
-          title={t('barge.title')}
-          content={t('barge.content')}
-          position={'left'}
+          imageUrl={'/infrastructure-containers/new/infrastructure-3.webp'}
+          title={t('rtg.title')}
+          content={t('rtg.content')}
+          position={'right'}
         />
 
         <Card
           imageUrl={'/infrastructure-containers/new/infrastructure-6.webp'}
           title={t('reachStacker.title')}
           content={t('reachStacker.content')}
-          position={'right'}
+          position={'left'}
         />
 
         <Card
           imageUrl={'/infrastructure-containers/new/infrastructure-7.webp'}
           title={t('emptyContainerHandler.title')}
           content={t('emptyContainerHandler.content')}
-          position={'left'}
+          position={'right'}
         />
 
         <Card
           imageUrl={'/infrastructure-containers/new/infrastructure-8.webp'}
           title={t('tractorTrailer.title')}
           content={t('tractorTrailer.content')}
-          position={'right'}
+          position={'left'}
         />
 
         <Card
           imageUrl={'/infrastructure-containers/new/infrastructure-9.webp'}
           title={t('forklift.title')}
           content={t('forklift.content')}
-          position={'left'}
+          position={'right'}
         />
       </div>
     </section>
