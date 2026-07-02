@@ -1,4 +1,6 @@
-export const contactUsInitialValue = {
+import { ContactUsFormType } from './interface'
+
+export const contactUsInitialValue: ContactUsFormType = {
   name: '',
   email: '',
   phone: '',

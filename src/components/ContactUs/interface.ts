@@ -3,7 +3,6 @@ import { IconProps } from '../icons/interface'
 export interface ContactUsProps {
   className?: string
   isShowMenuBar?: boolean
-  handleOnSubmitForm: (value: ContactUsForm, resetForm: any) => void
 }
 
 export interface ContactUsAcceptProps {
@@ -18,10 +17,14 @@ export interface CardProps {
   contactUsType: string
 }
 
-export interface ContactUsForm {
+export interface ContactUsFormType {
   name: string
   email: string
   phone: string
   message: string
-  type: string
+  type: 'contact-form' | 'fraud-complaint-form'
+}
+
+export interface ContactUsFormProps {
+  hideContactForm?: boolean
 }

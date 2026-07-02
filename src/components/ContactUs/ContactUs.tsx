@@ -1,39 +1,23 @@
 'use client'
-import { Form, Formik } from 'formik'
 import { useTranslations } from 'next-intl'
 
-import { InputField } from '@/components/forms/InputField'
-import { TextAreaField } from '@/components/forms/TextAreaField'
-import { cn } from '@/libs/util'
 import { ContactUsProps } from './interface'
 
 import { TelephoneIcon } from '../icons/TelephoneIcon'
-import { ContactTypeField } from '../forms/ContactTypeField'
 import { PrinterIcon } from '../icons/PrinterIcon'
-import { EnvelopeIcon } from '../icons/EnvelopeIcon'
 import { LocationIcon } from '../icons/LocationIcon'
 import { Animation } from '../Animation'
 
-import { MailIcon } from '../icons/MailIcon'
 import withContactUs from '@/components/ContactUs/withContactUs'
-import { contactUsInitialValue } from '@/components/ContactUs/ContactUsInitialValue'
-import { contactUsValidationSchema } from '@/components/ContactUs/ContactUsValidation'
-import { Card } from '@/components/ContactUs/components/Card/Card'
-import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 import Link from 'next/link'
-import { RedWarningIcon } from '@/components/icons/WarningRedIcon'
 import { Menu } from '@/components/Menu'
+import { ContactUsForm } from './ContactUsForm'
 
-const ContactUs = ({
-  className,
-  handleOnSubmitForm,
-  isShowMenuBar = false,
-}: ContactUsProps) => {
+const ContactUs = ({ className, isShowMenuBar = false }: ContactUsProps) => {
   const t = useTranslations('ContactUs')
-  const common = useTranslations('common')
 
   return (
-    <Animation className={cn('', className)} key={`contact-us-${Date.now()}`}>
+    <Animation className={className} key={`contact-us-${Date.now()}`}>
       {isShowMenuBar && <Menu />}
       <section className='container-mini pt-[96px] space-y-[52px]'>
         <h2
@@ -42,122 +26,7 @@ const ContactUs = ({
         >
           {t('title')}
         </h2>
-        <Formik
-          initialValues={contactUsInitialValue}
-          validationSchema={contactUsValidationSchema}
-          onSubmit={(v, { resetForm }) => {
-            handleOnSubmitForm(v, resetForm)
-          }}
-        >
-          {({ values }) => (
-            <Form>
-              <div className='flex gap-[24px] mobile:flex-col'>
-                <ContactTypeField
-                  className='flex-1'
-                  name='type'
-                  text={t('contactForm')}
-                  value='contact-form'
-                  checked={values.type === ContactUsTypeEnum.CONTACT}
-                  Icon={MailIcon}
-                  contactUsType={ContactUsTypeEnum.CONTACT}
-                />
-                <ContactTypeField
-                  className='flex-1'
-                  name='type'
-                  text={t('fraudComplaintForm')}
-                  value='fraud-complaint-form'
-                  checked={values.type === ContactUsTypeEnum.FRAUD_COMPLAINT}
-                  Icon={RedWarningIcon}
-                  contactUsType={ContactUsTypeEnum.FRAUD_COMPLAINT}
-                />
-              </div>
-              <div className='flex gap-[70px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
-                <div className='max-w-[416px] w-full shrink-0 space-y-[15px] mobile:max-w-none'>
-                  <InputField
-                    name='name'
-                    label={t('nameField.label')}
-                    placeholder={t('nameField.placeholder')}
-                    inputClassName={
-                      values.type === ContactUsTypeEnum.CONTACT
-                        ? ''
-                        : 'focus:border-red-400'
-                    }
-                  />
-                  <InputField
-                    name='phone'
-                    type='text'
-                    label={t('phoneNumberField.label')}
-                    placeholder={t('phoneNumberField.placeholder')}
-                    inputClassName={
-                      values.type === ContactUsTypeEnum.CONTACT
-                        ? ''
-                        : 'focus:border-red-400'
-                    }
-                    onlyNumber
-                  />
-                  <InputField
-                    name='email'
-                    className='capitalize'
-                    label={common('email')}
-                    placeholder={t('emailField.placeholder')}
-                    inputClassName={
-                      values.type === ContactUsTypeEnum.CONTACT
-                        ? ''
-                        : 'focus:border-red-400'
-                    }
-                  />
-                  <TextAreaField
-                    textAreaClassName={`h-[154px] ${
-                      values.type === ContactUsTypeEnum.CONTACT
-                        ? ''
-                        : 'focus:border-red-400'
-                    }`}
-                    name='message'
-                    label={t('message.label')}
-                    placeholder={t('message.placeholder')}
-                    maxLength={500}
-                  />
-                  <button
-                    className={`${
-                      values.type === ContactUsTypeEnum.CONTACT
-                        ? 'bg-background'
-                        : 'bg-red-400'
-                    } w-full py-[10px] rounded-full text-white button`}
-                    type='submit'
-                  >
-                    {t('submit')}
-                  </button>
-                </div>
-                <div className='space-y-[33px]'>
-                  <Card
-                    Icon={TelephoneIcon}
-                    title={t('contactNumber.title')}
-                    description={t('contactNumber.description')}
-                    contactUsType={values.type as ContactUsTypeEnum}
-                  />
-                  <Card
-                    Icon={PrinterIcon}
-                    title={t('fax.title')}
-                    description={t('fax.description')}
-                    contactUsType={values.type as ContactUsTypeEnum}
-                  />
-                  <Card
-                    Icon={EnvelopeIcon}
-                    title={common('email')}
-                    description='info@sahathaiterminal.com'
-                    contactUsType={values.type as ContactUsTypeEnum}
-                  />
-                  <Card
-                    Icon={LocationIcon}
-                    title={t('address.title')}
-                    description={t('address.description')}
-                    contactUsType={values.type as ContactUsTypeEnum}
-                  />
-                </div>
-              </div>
-            </Form>
-          )}
-        </Formik>
+        <ContactUsForm />
         <section className='flex overflow-hidden rounded-[10px] bg-[#F7F9FC] mobile:flex-col'>
           <div className='flex items-center justify-center px-10  shrink-0  mobile:w-full mobile:p-5'>
             <div className='rounded-[14px] bg-white p-[24px] shadow-6 md:w-[300px]'>
