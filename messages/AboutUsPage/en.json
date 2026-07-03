@@ -228,7 +228,7 @@
         "shareholding": "Percentage of the Company’s Shareholding",
         "disciplinary": "Legal record in the last 5 years",
         "family": "Family Relationship with Other Directors and Executives",
-        "note": "หมายเหตุ"
+        "note": "Note"
       },
       "common": {
         "none": "-None-"

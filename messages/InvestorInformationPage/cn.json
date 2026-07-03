@@ -2,12 +2,12 @@
   "InvestorInformationPage": {
     "StockMarketInformation": {
       "title": "股票市场信息",
-      "stockName": "Stock Symbol",
-      "maxPrice": "Highest Price",
-      "minPrice": "Lowest Price",
-      "quantity": "Trading Volume (Shares)",
-      "change": "Change",
-      "updateDate": "Update at"
+      "stockName": "股票代码",
+      "maxPrice": "最高价",
+      "minPrice": "最低价",
+      "quantity": "成交量（股）",
+      "change": "涨跌",
+      "updateDate": "更新时间"
     },
     "FinancialReports": {
       "title": "财务报告与财务信息",
@@ -58,9 +58,9 @@
       "detail": "下载 Fact Sheet 资料"
     },
     "OneReportTable": {
-      "AnnualReport": "Annual Report\n",
-      "56-1oneReport": "Report 56-1",
-      "56-1OneReport": "56-1 One\nReport"
+      "AnnualReport": "年度报告\n",
+      "56-1oneReport": "56-1 报告",
+      "56-1OneReport": "56-1 综合\n报告"
     },
     "OtherFinancialStatementsTable": {
       "q1": "第一季度",
@@ -161,7 +161,7 @@
         "four": "年度"
       }
     },
-    "warrant": {
+    "Warrant": {
       "heading": "第 {number} 次认股权证（{code}）",
       "tabs": {
         "condition": "权利条款",

@@ -1,41 +1,41 @@
 {
   "Menu": {
     "aboutUs": {
-      "title": "About Us",
-      "visionMission": "Vision and Mission",
-      "ourCommitmentSuccess": "Our Commitment and Success",
-      "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
-      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
+      "title": "关于我们",
+      "visionMission": "愿景与使命",
+      "ourCommitmentSuccess": "我们的承诺与成就",
+      "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
+      "corporateGroupStructureOrganizationalStructure": "企业集团结构与组织架构"
     },
     "infrastructureContainers": {
-      "title": "Terminal",
-      "machineryEquipment": "Key Machinery and Equipment in the Port",
-      "logisticInnovation": "Logistic Innovation",
-      "opticalCharacterRecognition": "Automatic Cargo Container Reading Technology (OCR)",
-      "operationGuidelines": "Operational Guidelines",
-      "contactUs": "Contact Us"
+      "title": "码头",
+      "machineryEquipment": "港口主要机械与设备",
+      "logisticInnovation": "物流创新",
+      "opticalCharacterRecognition": "集装箱自动识别技术（OCR）",
+      "operationGuidelines": "操作指南",
+      "contactUs": "联系我们"
     },
     "home": {
-      "title": "Home"
+      "title": "首页"
     },
     "service": {
-      "title": "Services",
-      "commercialDock": "Commercial Dock",
-      "bargeServices": "Barge Services",
-      "containerHandling": "Container Handling | CFS LCL",
-      "containerMaintenance": "Container Maintenance",
-      "groundContainerTransportationServices": "Ground Container Transportation Services",
-      "containerServices": "Container Yard and Warehouse Services"
+      "title": "服务",
+      "commercialDock": "商业码头",
+      "bargeServices": "驳船服务",
+      "containerHandling": "集装箱装卸 | CFS LCL",
+      "containerMaintenance": "集装箱维护",
+      "groundContainerTransportationServices": "陆地集装箱运输服务",
+      "containerServices": "堆场与仓库服务"
     },
     "news": {
-      "title": "News",
-      "latestNews": "Latest News",
-      "pressRelease": "Press Release"
+      "title": "新闻",
+      "latestNews": "最新新闻",
+      "pressRelease": "新闻稿"
     },
     "pressRelease": {
-      "title": "Press Release",
-      "latestNews": "Latest Press Releases",
-      "pressRelease": "All Press Release"
+      "title": "新闻稿",
+      "latestNews": "最新新闻稿",
+      "pressRelease": "所有新闻稿"
     },
     "socialResponsibility": {
       "title": "可持续发展管理",
@@ -43,30 +43,30 @@
       "pressRelease": "所有可持续发展管理文章"
     },
     "eService": {
-      "title": "e-service",
-      "TrackByContainer": "Track by Container",
-      "TrackByBookingNumber": "TrackByBookingNumber",
-      "TrackByBLNumber": "Track by B/L Number",
-      "ContainerDepotBooking": "Container Depot Booking",
-      "FreeZone": "Free Zone",
-      "BTSTracking": "BTS Tracking",
-      "DGChecking": "DG Checking",
-      "BCDSBookingQueue": "BCDS Booking Queue",
-      "EReceipt": "E-Receipt"
+      "title": "电子服务",
+      "TrackByContainer": "按集装箱追踪",
+      "TrackByBookingNumber": "按订舱号追踪",
+      "TrackByBLNumber": "按提单号追踪",
+      "ContainerDepotBooking": "集装箱堆场预订",
+      "FreeZone": "自由贸易区",
+      "BTSTracking": "BTS 追踪",
+      "DGChecking": "危险品查询",
+      "BCDSBookingQueue": "BCDS 预约排队",
+      "EReceipt": "电子收据"
     },
     "investorRelations": {
-      "title": "Investor Relations",
-      "investorInformation": "Investor Information",
+      "title": "投资者关系",
+      "investorInformation": "投资者信息",
       "codeConduct": "反腐败政策",
-      "shareHolder": "Shareholders",
-      "shareHolderMeeting": "Annual General Meeting of Shareholders",
-      "FinancialInformation": "Financial Information",
-      "PerformanceReport": "Performance Report",
-      "DocumentAnnouncement": "Publications",
-      "GoodCorporate": "Good Corporate Governance",
-      "Activity": "Activities",
-      "Warrant": "Warrants",
-      "SetExchangeAnnouncement": "Set News"
+      "shareHolder": "股东",
+      "shareHolderMeeting": "年度股东大会",
+      "FinancialInformation": "财务信息",
+      "PerformanceReport": "业绩报告",
+      "DocumentAnnouncement": "公开文件",
+      "GoodCorporate": "良好公司治理",
+      "Activity": "活动",
+      "Warrant": "认股权证",
+      "SetExchangeAnnouncement": "证交所公告"
     }
   }
 }
