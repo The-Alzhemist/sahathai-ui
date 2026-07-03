@@ -61,7 +61,7 @@ export function ContainerStorageWarehouseServices() {
       />
 
       <BannerTextCard
-        imageUrl='/services/new/container-service-4.webp'
+      imageUrl='/services/new/container-service-4.webp'
         title={t('freeTradeZoneWarehouse.title')}
         content={t('freeTradeZoneWarehouse.content')}
         position='right'
