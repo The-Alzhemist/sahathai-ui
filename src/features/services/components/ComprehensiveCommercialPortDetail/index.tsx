@@ -4,11 +4,11 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/libs/intl/navigation'
 import { Menu } from '@/components/Menu'
 import { ComprehensiveCommercialPortDetailProps } from './interface'
+import { Card } from './Card'
 
 export function ComprehensiveCommercialPortDetail({
   title,
-  imageUrl,
-  content,
+  data,
 }: ComprehensiveCommercialPortDetailProps) {
   const common = useTranslations('common')
 
@@ -27,14 +27,14 @@ export function ComprehensiveCommercialPortDetail({
             {common('back')}
           </Link>
         </div>
-        <div className='mt-[22px] p-[30px] rounded-[15px] shadow-8 bg-white'>
-          <div className='max-w-[980px] w-full'>
-            <div className='relative pt-[63.47%] w-full'>
-              <Image src={imageUrl} alt='' fill />
-            </div>
-          </div>
-          <p className='body-1 text-black-6 mt-[25px]'>{content}</p>
-        </div>
+        {data.map((row, index) => (
+          <Card
+            key={index}
+            title={row.title}
+            imageUrl={row.imageUrl}
+            content={row.content}
+          />
+        ))}
       </section>
     </main>
   )

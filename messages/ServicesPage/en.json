@@ -5,7 +5,14 @@
       "content": "Two private river ports capable of handling up to 740,000 TEUs/year. Empty container maintenance yard with a capacity of up to 350,000 TEUs/year.",
       "commercialDock": {
         "title": "Commercial Port",
-        "content": "Barge terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
+        "bbt": {
+          "title": "BBT Barge Terminal",
+          "content": "Barge terminal with a berth width of 96 meters, capable of accommodating 2 vessels simultaneously."
+        },
+        "sahathai": {
+          "title": "Sahathai Terminal",
+          "content": "A feeder vessel terminal with a berth width of 170 meters, and 2 barge berths each with a width of 65 meters."
+        }
       },
       "bargeServices": {
         "title": "Barge Services",

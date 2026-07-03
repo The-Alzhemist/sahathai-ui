@@ -10,8 +10,12 @@ export function ContainerHandlingPage() {
   return (
     <ComprehensiveCommercialPortDetail
       title={t('title')}
-      imageUrl='/services/new/service-inside-3.webp'
-      content={t('content')}
+      data={[
+        {
+          imageUrl: '/services/new/service-inside-3.webp',
+          content: t('content'),
+        },
+      ]}
     />
   )
 }
