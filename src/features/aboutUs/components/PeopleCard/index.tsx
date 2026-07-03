@@ -40,9 +40,7 @@ export function PeopleCard({
         <Line />
         <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5'>
           {jobTitle?.map((title: string, index: number) => (
-            <li key={index} className=''>
-              {title}
-            </li>
+            <li key={index}>{title}</li>
           ))}
         </ul>
       </div>
