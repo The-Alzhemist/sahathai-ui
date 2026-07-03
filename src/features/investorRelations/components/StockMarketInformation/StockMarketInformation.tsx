@@ -18,7 +18,7 @@ const StockMarketInformation = async ({
   const changedPrice = lastPriceData.high - lastPriceData.low || 0
 
   return (
-    <section className=''>
+    <section>
       <Animation
         className="
     relative isolate py-20

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 const OpticalCharacterRecognition = () => {
   const t = useTranslations('InfrastructureContainersPage.OCR')
   return (
-    <Background className=''>
+    <Background>
       <section
         className='bg-modellBgDark/60 text-white pt-[100px] pb-[140px] px-5 flex flex-col justify-center items-center'
         id='optical-character-recognition'
