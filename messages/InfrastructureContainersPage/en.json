@@ -83,7 +83,19 @@
       },
       "cfsLcl": {
         "title": "CFS/LCL Cargo",
-        "description": "This service is for receiving goods from exporters to load into containers at Sahathai port for shipment, for exporters who do not have their own packing facilities. Typically, it is a service for full container loading of a single exporter’s goods. Charges will apply to exporters or their representatives. Additionally, services are available for importers for opening containers at Sahathai Terminal to unload goods and prepare them for pickup. This includes opening containers with goods from multiple importers in a shared container (less-than-container load). Goods will be stored in a warehouse until each importer picks them up, or it may be a full container load where the importer picks up goods directly from the container."
+        "CfsGoodsContent": {
+          "title1": "Sahathai Terminal accepts the following CFS/LCL cargo",
+          "content1_1": "Goods packed in packaging or on pallets weighing no more than 2 tons, which can be lifted by forklift.",
+          "content1_2": "For goods packed in packaging or on pallets weighing more than 2 tons, please contact our Customer Relations department to inform us of your request.",
+          "content1_3": "Additional charges will apply if special equipment or tools are required for storing the goods.",
+          "title2": "Sahathai Terminal does not accept the following CFS/LCL cargo",
+          "content2_1": "Goods that may cause pollution at the port or warehouse, such as powder or molten chemical substances.",
+          "content2_2": "Goods prohibited by government agencies, such as certain types of dangerous goods (DG).",
+          "content2_3": "Heavy equipment, imbalanced goods, and other goods that cannot be lifted by forklift and/or require special lifting equipment.",
+          "content2_4": "Sahathai Terminal reserves the right to provide additional equipment and personnel for special cargo handling cases. In such cases, the cargo owner must arrange their own lifting equipment and personnel.",
+          "title3": "Regulations for goods packed in wooden packaging at the destination country",
+          "content3_1": "If regulations regarding wooden packaging must be specified, customers must notify Sahathai Terminal at the time of booking."
+        }
       },
       "regulationsCargoShips": {
         "title": "Vessel Operations",
