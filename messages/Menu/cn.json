@@ -28,31 +28,16 @@
       "containerServices": "堆场与仓库服务"
     },
     "news": {
-      "title": "新闻",
-      "latestNews": "最新新闻",
-      "pressRelease": "新闻稿"
+      "title": "新闻"
     },
     "pressRelease": {
-      "title": "新闻稿",
-      "latestNews": "最新新闻稿",
-      "pressRelease": "所有新闻稿"
+      "title": "新闻稿"
     },
     "socialResponsibility": {
-      "title": "可持续发展管理",
-      "latestNews": "最新可持续发展管理文章",
-      "pressRelease": "所有可持续发展管理文章"
+      "title": "可持续发展管理"
     },
     "eService": {
-      "title": "电子服务",
-      "TrackByContainer": "按集装箱追踪",
-      "TrackByBookingNumber": "按订舱号追踪",
-      "TrackByBLNumber": "按提单号追踪",
-      "ContainerDepotBooking": "集装箱堆场预订",
-      "FreeZone": "自由贸易区",
-      "BTSTracking": "BTS 追踪",
-      "DGChecking": "危险品查询",
-      "BCDSBookingQueue": "BCDS 预约排队",
-      "EReceipt": "电子收据"
+      "title": "电子服务"
     },
     "investorRelations": {
       "title": "投资者关系",
@@ -65,7 +50,6 @@
       "DocumentAnnouncement": "公开文件",
       "GoodCorporate": "良好公司治理",
       "Activity": "活动",
-      "Warrant": "认股权证",
       "SetExchangeAnnouncement": "证交所公告"
     }
   }

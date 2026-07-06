@@ -39,10 +39,7 @@
     },
     "DividendPayment": {
       "title": "股息支付",
-      "dividendPaymentDate": "股息支付日期",
-      "dividend": "股息\n（泰铢/股）",
-      "unit": "单位",
-      "financialPeriod": "财务期间"
+      "dividend": "股息\n（泰铢/股）"
     },
     "ShareholdersMeeting": {
       "title": "股东大会"
@@ -71,31 +68,11 @@
     "ShareHolderMeeting": {
       "heading": "{year} 年度股东大会",
       "title": {
-        "proposeAgenda": "{{year}} 年度股东大会议程提案",
-        "invitation": "{{year}} 年度股东大会会议通知",
         "minutes": "{{year}} 年度股东大会会议纪要",
         "video": "{{year}} 年度股东大会会议视频"
       },
-      "proposeAgenda": {
-        "criteria": "{{year}} 年度股东大会议程提案资格与标准",
-        "nominationForm": "董事候选人提名表（沙泰码头公众有限公司）",
-        "agendaForm": "股东大会会议议程提案表",
-        "questionForm": "公司相关问题事前提交表"
-      },
       "invitation": {
-        "document": "{year} 年度股东大会会议通知",
-        "invitationLetter": "{year} 年度股东大会会议邀请函",
-        "meetingReport2567": "{year} 年度股东大会会议纪要",
-        "annualReport2567": "{year} 年度年度信息披露表 / 年度报告",
-        "candidateInfo": "董事候选人信息",
-        "confirmationChannel": "股东参会确认渠道",
-        "registrationGuide": "电子股东大会（e-AGM）门票预约、注册、文件出示及参会说明",
-        "proxyInfo": "公司指定的独立代理人信息",
-        "proxyFormA": "授权委托书 表格 A",
-        "proxyFormB": "授权委托书 表格 B",
-        "proxyFormC": "授权委托书 表格 C",
-        "eAgmGuide": "电子股东大会系统使用指南",
-        "privacyNotice": "电子股东大会个人数据保护声明（Privacy Notice）"
+        "document": "{year} 年度股东大会会议通知"
       },
       "minutes": {
         "document": "{{year}} 年度股东大会会议纪要"
@@ -131,25 +108,7 @@
     "GoodCorporate": {
       "title": "良好公司治理文件",
       "document": {
-        "governanceManual": "良好公司治理手册",
-        "codeOfConduct": "商业行为准则",
-        "boardCharter": "董事会章程",
-        "chairmanDuties": "董事长职责",
-        "auditCommitteeCharter": "审计委员会章程",
-        "nominationAndRemunerationCharter": "提名与薪酬委员会章程",
-        "riskGovernanceSustainabilityCommittee": "风险管理、公司治理与可持续发展委员会",
-        "executiveCommitteeCharter": "执行委员会章程",
-        "ceoAuthorityAndResponsibilities": "首席执行官的权限、职责与责任",
-        "sustainabilityPolicy": "可持续发展管理政策",
-        "riskManagementPolicy": "风险管理政策",
-        "insiderInformationPolicy": "内幕信息使用政策",
-        "intellectualPropertyPolicy": "知识产权不侵权政策",
-        "csrPolicy": "企业社会责任政策",
-        "antiCorruptionPolicy": "反腐败政策",
-        "personalDataProtectionPolicy": "个人数据保护政策",
-        "companyRegulation": "公司章程细则",
-        "memorandumOfAssociation": "公司章程（设立章程）",
-        "companySecretaryContact": "公司秘书联系方式"
+        "codeOfConduct": "商业行为准则"
       }
     },
     "Activity": {
@@ -164,19 +123,10 @@
     "Warrant": {
       "heading": "第 {number} 次认股权证（{code}）",
       "tabs": {
-        "condition": "权利条款",
-        "round1": "PORT-W3 第一次行权安排",
-        "round2": "PORT-W3 第二次行权安排",
-        "round3": "PORT-W3 第三次行权安排",
-        "round4": "PORT-W3 第四次行权安排",
-        "round5": "PORT-W3 第五次行权安排",
-        "roundFinal": "PORT-W3 最终行权安排"
+        "condition": "权利条款"
       },
       "content": {
-        "condition": "认股权证发行人之权利与义务条款",
-        "round1Notice": "PORT-W3 第一次行权通知",
-        "conditionNote": "关于认股权证发行人及认股权证持有人购买公司普通股之权利与义务条款",
-        "formNote": "沙泰码头公众有限公司普通股认购行权申请表"
+        "condition": "认股权证发行人之权利与义务条款"
       }
     }
   }

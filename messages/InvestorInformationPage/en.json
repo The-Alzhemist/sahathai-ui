@@ -39,10 +39,7 @@
     },
     "DividendPayment": {
       "title": "Dividend Payment",
-      "dividendPaymentDate": "Dividend Payment Date",
-      "dividend": "Dividend\n(Baht/Share)",
-      "unit": "Unit",
-      "financialPeriod": "Financial Period"
+      "dividend": "Dividend\n(Baht/Share)"
     },
     "ShareholdersMeeting": { "title": "Shareholder meeting" },
     "CompanyIntroductionVideo": { "title": "Company introduction video" },
@@ -64,31 +61,11 @@
     "ShareHolderMeeting": {
       "heading": "Annual General Meeting {year}",
       "title": {
-        "proposeAgenda": "Agenda Proposal for {{year}}",
-        "invitation": "Annual General Meeting Invitation {{year}}",
         "minutes": "Meeting Minutes {{year}}",
         "video": "Annual General Meeting Video {{year}}"
       },
-      "proposeAgenda": {
-        "criteria": "Criteria for Shareholders to Propose Agenda Items for the Annual General Meeting {{year}}",
-        "nominationForm": "Nomination Form for Director Candidates of Sahathai Terminal Public Company Limited",
-        "agendaForm": "Agenda Proposal Form for the Annual General Meeting",
-        "questionForm": "Advance Question Submission Form"
-      },
       "invitation": {
-        "document": "Invitation to the Annual General Meeting {year}",
-        "invitationLetter": "Invitation Letter to the Annual General Meeting {year}",
-        "meetingReport2567": "Minutes of the Annual General Meeting {year}",
-        "annualReport2567": "Annual Report / 56-1 One Report {year}",
-        "candidateInfo": "Information of Persons Nominated for Director Positions",
-        "confirmationChannel": "Shareholder Meeting Attendance Confirmation Channel",
-        "registrationGuide": "Instructions for Seat Reservation, Registration, Proof of Identity, and Attendance via e-AGM",
-        "proxyInfo": "Information on Independent Directors Proposed as Proxy Recipients",
-        "proxyFormA": "Proxy Form A",
-        "proxyFormB": "Proxy Form B",
-        "proxyFormC": "Proxy Form C",
-        "eAgmGuide": "e-AGM System User Guide",
-        "privacyNotice": "Privacy Notice for e-AGM"
+        "document": "Invitation to the Annual General Meeting {year}"
       },
       "minutes": {
         "document": "Minutes of the Annual General Meeting {{year}}"
@@ -124,25 +101,7 @@
     "GoodCorporate": {
       "title": "Good Corporate Governance Documents",
       "document": {
-        "governanceManual": "Good Corporate Governance Manual",
-        "codeOfConduct": "Business Code of Conduct",
-        "boardCharter": "Board of Directors Charter",
-        "chairmanDuties": "Roles and Duties of the Chairman",
-        "auditCommitteeCharter": "Audit Committee Charter",
-        "nominationAndRemunerationCharter": "Nomination and Remuneration Committee Charter",
-        "riskGovernanceSustainabilityCommittee": "Risk Management, Corporate Governance and Sustainability Committee",
-        "executiveCommitteeCharter": "Executive Committee Charter",
-        "ceoAuthorityAndResponsibilities": "Scope of Authority, Duties and Responsibilities of the Chief Executive Officer",
-        "sustainabilityPolicy": "Sustainability Management Policy",
-        "riskManagementPolicy": "Risk Management Policy",
-        "insiderInformationPolicy": "Insider Information Usage Policy",
-        "intellectualPropertyPolicy": "Intellectual Property Non-Infringement Policy",
-        "csrPolicy": "Corporate Social Responsibility Policy",
-        "antiCorruptionPolicy": "Anti-Corruption Policy",
-        "personalDataProtectionPolicy": "Personal Data Protection Policy",
-        "companyRegulation": "Company Regulations",
-        "memorandumOfAssociation": "Memorandum of Association",
-        "companySecretaryContact": "Company Secretary Contact Channel"
+        "codeOfConduct": "Business Code of Conduct"
       }
     },
 
@@ -158,19 +117,10 @@
     "Warrant": {
       "heading": "Warrant No. {number} ({code})",
       "tabs": {
-        "condition": "Rights Terms",
-        "round1": "Exercise Schedule for PORT-W3 Round 1",
-        "round2": "Exercise Schedule for PORT-W3 Round 2",
-        "round3": "Exercise Schedule for PORT-W3 Round 3",
-        "round4": "Exercise Schedule for PORT-W3 Round 4",
-        "round5": "Exercise Schedule for PORT-W3 Round 5",
-        "roundFinal": "Final Exercise Schedule for PORT-W3"
+        "condition": "Rights Terms"
       },
       "content": {
-        "condition": "Terms and Obligations of the Warrant Issuer",
-        "round1Notice": "Notice of PORT-W3 Exercise Schedule - Round 1",
-        "conditionNote": "Terms governing the rights and obligations of the warrant issuer and warrant holder to purchase ordinary shares of the company",
-        "formNote": "Form expressing intention to exercise the right to purchase ordinary shares of Sahathai Terminal Public Company Limited"
+        "condition": "Terms and Obligations of the Warrant Issuer"
       }
     }
   }

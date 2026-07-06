@@ -48,10 +48,6 @@
       "Title": "Sahathai | 投资者信息",
       "Description": "为投资者提供的信息与资源。"
     },
-    "shareHolder": {
-      "Title": "Sahathai | 股东",
-      "Description": "有关公司股东名单及股权结构的详细信息。"
-    },
     "shareHolderMeeting": {
       "Title": "Sahathai | 股东大会",
       "Description": "年度股东大会的相关信息及会议文件。"
@@ -76,17 +72,9 @@
       "Title": "Sahathai | 良好公司治理",
       "Description": "公司良好企业治理的原则、政策与实践。"
     },
-    "SustainableDevelopment": {
-      "Title": "Sahathai | 可持续发展",
-      "Description": "公司在可持续发展与环境责任方面的计划与举措。"
-    },
     "Activity": {
       "Title": "Sahathai | 活动",
       "Description": "公司举办或参与的各类企业活动概览。"
-    },
-    "Warrant": {
-      "Title": "Sahathai | 认股权证",
-      "Description": "有关认股权证及股票认购权利的相关信息。"
     },
     "EService": {
       "Title": "Sahathai | 电子服务",

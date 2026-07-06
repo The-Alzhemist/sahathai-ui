@@ -213,21 +213,6 @@
     "ExecutiveProfile": {
       "labels": {
         "age": "Age",
-        "positions": "Present Position",
-        "education": "Education",
-        "trainings": "Training Program",
-        "directorType": "Type of Directors",
-        "appointments": "Date of Appointment",
-        "directorYears": "Length of Service",
-        "workExp5y": "Experience (past 5 years)",
-        "listedRoles": "Directorship(s) in Listed Company",
-        "relatedCompanyRoles": "Directorship(s) in Related Companies",
-        "otherCompanyRoles": "Directorship(s) in Other Company",
-        "otherOrgRoles": "Directorship(s) in Other Organization",
-        "pastRoles": "Former (last 5 years)",
-        "shareholding": "Percentage of the Company’s Shareholding",
-        "disciplinary": "Legal record in the last 5 years",
-        "family": "Family Relationship with Other Directors and Executives",
         "note": "Note"
       },
       "common": {
