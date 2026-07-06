@@ -133,7 +133,23 @@
       },
       "hazardousGoods": {
         "title": "危险货物",
-        "description": "危险货物通过UN编号进行识别和分类。危险货物分为三类：<br/>第1类：禁止装卸。<br/>第2类：不接受存储；客户必须在船侧提货。<br/>第3类：可以存储最多5个工作日；客户必须在集装箱放置在堆场后的5天内提货。<br/>更多信息，用户可以通过以下系统检查UN编号：<br/>https://stt.sahathaiterminal.com/containerinquery/Default.aspx?type=DG"
+        "HazardousGoodsContent": {
+          "content": "危险货物将通过UN编号进行核查及分类，可分为以下3类：",
+          "link1": "可通过以下系统查询UN编号信息：",
+          "link2": "系统查询链接",
+          "group1": {
+            "title": "第1组",
+            "content": "禁止装卸"
+          },
+          "group2": {
+            "title": "第2组",
+            "content": "不接受存储（客户须仅在船侧提货）"
+          },
+          "group3": {
+            "title": "第3组",
+            "content": "可存储最多5个工作日；客户须在集装箱放置于堆场后5天内提货"
+          }
+        }
       },
       "requestPermissionContact": {
         "title": "联系访问许可",
