@@ -153,7 +153,32 @@
       },
       "requestPermissionContact": {
         "title": "Visitor Access",
-        "description": "For access to Sahathai Terminal's port area by external visitors:<br/>1) If a visitor wants to meet port staff, security must follow the control procedure for entering and exiting the port area.<br/>2) If the visitor is meeting port staff, security will evaluate the appropriateness of the visit and issue a pass after verifying identity with an ID card or government-issued document. Visitors must obtain a permission slip and get it signed by the staff they are visiting.<br/>3) After the visit, visitors must return their pass. If access to the terminal’s office buildings is required, visitors must follow the access control procedures.<br/>4) Contractors working temporarily on the premises must follow the same procedures to obtain a work permit and follow the security protocols."
+        "RequestPermissionContactContent": {
+          "group1": {
+            "title": "Requesting a Permit for Temporary Visits",
+            "content": "Visitors wishing to visit the office building or operational building must exchange their ID card and obtain a visitor permit from the security department at the port entrance gate."
+          },
+          "group2": {
+            "title": "Requesting a Permit for Long-Term Visits",
+            "content": "Shipping line agents requiring a permit for long-term access to Sahathai Terminal must complete a request form and submit the documents to the Terminal Service office. Click here to send an email to the SSHE office at sshe.stt@sahathai.com."
+          },
+          "group3": {
+            "title": "Access Rights to the Port Area and Cargo Vessels",
+            "content": "Personnel (other than shipping line agents) wishing to enter the port area or board a vessel must complete a request form, certified by the shipping line agent, in order to obtain Sahathai Terminal's permission to enter the operational area."
+          },
+          "group4": {
+            "title": "Working Within the Port Area",
+            "content": "Personnel wishing to work within the port area must fully complete the Work Permit Form and notify the Terminal Service office. Click here to send an email to the SSHE office at sshe.stt@sahathai.com."
+          },
+          "group5": {
+            "title": "Crew Members Wishing to Enter the Port Area",
+            "content": "Crew members wishing to enter the port's operational area must contact the security department at the port to register and exchange their crew ID card."
+          },
+          "group6": {
+            "title": "Vehicle Stickers for Shipping Line Agents",
+            "content": "Shipping line agents requiring a vehicle sticker to access the office building must fully complete the vehicle sticker request form and submit it along with a copy of their driver's license and vehicle registration to the Terminal Service office. Click here to send an email to the SSHE office at sshe.stt@sahathai.com."
+          }
+        }
       },
       "documentSubmissionProcess": {
         "title": "Document Submission Process",
