@@ -73,7 +73,13 @@
       },
       "operatingHours": {
         "title": "Operating Hours",
-        "description": "The operations department works 7 days a week, 24 hours a day."
+        "content1": "Working days: Monday-Saturday, Working hours: 08:00-17:00",
+        "content2": "General containers transported by truck: 24 hours before Actual Time of Berthing (ATB)",
+        "content3": "Reefer containers (fruit cargo): 1 hour before ATB",
+        "content4": "Dangerous goods, Group 2 (DG GROUP2): transported directly from vessel/chassis to chassis/vessel",
+        "content5": "Dangerous goods, Group 3 (DG GROUP3): can be stored at the port for up to 48 hours after being unloaded from the vessel, or 48 hours before the operating time of the Container Freight Station (CFS) at origin",
+        "content6": "If overtime work is required, it must be notified before 16:00 on a working day",
+        "content7": "CFS cargo cut-off time: 6 hours before the CY cargo cut-off time"
       },
       "cfsLcl": {
         "title": "CFS/LCL Cargo",
