@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import { useLocale } from 'next-intl'
+
+import { DockingInfoContent } from './DockingInfoContent'
 
 export default function DockingInfo() {
-  const locale = useLocale()
   return (
     <section>
       <Image
@@ -13,74 +13,7 @@ export default function DockingInfo() {
         width={720}
         height={328}
       />
-      {locale === 'th' && <DockingInfoTH />}
-      {locale === 'en' && <DockingInfoEN />}
-      {locale === 'cn' && <DockingInfoCN />}
+      <DockingInfoContent />
     </section>
-  )
-}
-
-export const DockingInfoTH = () => {
-  return (
-    <>
-      <p className='text-gray-600 text-sm mb-3'>
-        สายการเดินเรือหรือตัวแทนสายการเดินเรือ
-        ต้องส่งอีเมล์รายละเอียดของเรือบรรทุกสินค้า บริการ
-        และลักษณะของเรือบรรทุกสินค้า (แผนการจัดเก็บทั่วไป แผนการผูกยึดเรือ
-        แผนการจัดวางตู้สินค้าเย็น ระบบความปลอดภัย
-        และตารางพื้นที่ระวางตู้คอนเทนเนอร์) ให้แก่ สหไทย เทอร์มินอล
-        ล่วงหน้าอย่างน้อย 1 สัปดาห์ ก่อนเข้าเทียบท่า
-      </p>
-
-      <p className='text-gray-600 text-sm mb-3'>
-        สายการเดินเรือหรือตัวแทนสายการเดินเรือ
-        ต้องส่งข้อมูลตารางการเข้าเทียบท่าระยะยาวล่วงหน้าอย่างน้อย 1 เดือน
-        ให้กับสหไทย เทอร์มินอล เพื่อให้สหไทย
-        เทอร์มินอลวางแผนจองตู้คอนเทนเนอร์ให้กับเรือขนส่งสินค้าล่วงหน้าอย่างน้อย
-        7, 3 และ 1 วัน ก่อนเข้าเทียบท่า สายการเดินเรือหรือตัวแทนสายการเดินเรือ
-        ต้องส่งข้อมูลประมาณการของวันที่เรือจะเข้าเทียบท่า (ETA)
-        และปริมาณสินค้าที่จะทำการโหลดขึ้นหรือลงโดยประมาณ เพื่อให้ สหไทย
-        เทอร์มินอล ยืนยันแผนการเข้าเทียบท่า (POB)
-        และประมาณการของวันที่ที่เรือจะออกจากท่าเรือต้นทาง (ETD)
-      </p>
-    </>
-  )
-}
-
-export const DockingInfoEN = () => {
-  return (
-    <>
-      <p className='text-gray-600 text-sm mb-3'>
-        The shipping line or agent must email the vessel’s particulars, service
-        lane, and vessel definition (general stowage plan, lashing arrangement
-        plan, reefer arrangement plan, hatch securing, and container capacity
-        table) to the STT Planner at least 1 week prior to calling.
-      </p>
-
-      <p className='text-gray-600 text-sm mb-3'>
-        The shipping line or agent must submit the long-term calling rotations 1
-        month prior to calling to the STT Planner in order to make a long-term
-        vessel plan for container booking. 7, 3 and 1 day(s) prior to arrival,
-        the shipping line or agent must update both the ETA (Estimate Time of
-        Arrival) and the estimated volume of discharging/loading in order to
-        allow the STT Planner to confirm the POB and ETD (Estimate Time of
-        Departure){' '}
-      </p>
-    </>
-  )
-}
-
-export const DockingInfoCN = () => {
-  return (
-    <p className='text-gray-800 text-sm mb-3'>
-      船公司或船公司代理必须提前至少 1
-      周发送电子邮件，提供货船的详细信息、服务和货船特性（一般装载计划、
-      系泊计划、冷藏集装箱布置计划、安全系统以及集装箱插槽分配计划）到 Sahathai
-      Terminal。船公司或船公司代理 必须提前至少 1
-      个月提供长期停泊时间表，以便在停泊前 7、3 和 1
-      天预订集装箱插槽。此外，船公司或代理人还
-      必须提供预计到达时间（ETA）和预计装卸货物的数量。Sahathai Terminal
-      将确认停泊计划（POB）以及预计的 离港时间（ETD）。
-    </p>
   )
 }

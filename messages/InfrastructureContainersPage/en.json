@@ -64,7 +64,8 @@
       "title": "Operational Guidelines",
       "docking": {
         "title": "Berth Allocations",
-        "description": "Shipping lines or their agents must email the details of the cargo vessel, services, and characteristics of the cargo vessel (general storage plan, ship securing plan, cold storage container placement plan, safety systems, and container space schedule) to Sahathai Terminal at least one week in advance before docking. The shipping line or agent must send the long-term docking schedule at least one month in advance to Sahathai Terminal so that the terminal can plan the container booking in advance by 7, 3, and 1 day before docking. The shipping line or agent must also send an estimated docking date (ETA) and the approximate amount of cargo to be loaded or unloaded so that Sahathai Terminal can confirm the docking plan (POB) and the estimated departure date (ETD) of the vessel. Email operations at planner.stt@sahathai.com."
+        "content1": "Shipping lines or their agents must email the details of the cargo vessel, services, and characteristics of the cargo vessel (general storage plan, ship securing plan, cold storage container placement plan, safety systems, and container space schedule) to Sahathai Terminal at least one week in advance before docking.",
+        "content2": "The shipping line or agent must send the long-term docking schedule at least one month in advance to Sahathai Terminal so that the terminal can plan the container booking in advance by 7, 3, and 1 day before docking. The shipping line or agent must also send an estimated docking date (ETA) and the approximate amount of cargo to be loaded or unloaded so that Sahathai Terminal can confirm the docking plan (POB) and the estimated departure date (ETD) of the vessel."
       },
       "responsibilityScope": {
         "title": "Liability",
