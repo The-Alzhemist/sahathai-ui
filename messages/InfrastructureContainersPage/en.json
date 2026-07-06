@@ -219,7 +219,11 @@
       },
       "serviceCharge": {
         "title": "Billing",
-        "description": ""
+        "ServiceProcess": {
+          "content1": "We are developing and improving our billing process to make it more convenient and faster.",
+          "content2": "If you have any questions or would like further information, please contact us at",
+          "tell": "+66 (0) 2386 8000."
+        }
       }
     },
     "OCR": {

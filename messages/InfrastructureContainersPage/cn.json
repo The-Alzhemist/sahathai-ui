@@ -219,7 +219,11 @@
       },
       "serviceCharge": {
         "title": "服务收费",
-        "description": ""
+        "ServiceProcess": {
+          "content1": "我们正在开发并改进收费流程，使其更加便捷和快速。",
+          "content2": "如有任何疑问或需要更多信息，请联系我们，电话：",
+          "tell": "+66 (0) 2386 8000。"
+        }
       }
     },
 
