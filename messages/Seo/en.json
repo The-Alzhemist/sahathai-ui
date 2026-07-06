@@ -48,10 +48,6 @@
       "Title": "Sahathai | Investor Information",
       "Description": "Information and resources for investors."
     },
-    "shareHolder": {
-      "Title": "Sahathai | Shareholders",
-      "Description": "Information on the list of shareholders and the company’s shareholding structure."
-    },
     "shareHolderMeeting": {
       "Title": "Sahathai | Shareholders Meeting",
       "Description": "Details of the annual shareholders meeting, including related documents."
@@ -76,17 +72,9 @@
       "Title": "Sahathai | Corporate Governance",
       "Description": "Principles and policies on good corporate governance within the company."
     },
-    "SustainableDevelopment": {
-      "Title": "Sahathai | Sustainability",
-      "Description": "Plans and initiatives on sustainability and environmental responsibility."
-    },
     "Activity": {
       "Title": "Sahathai | Activities",
       "Description": "Overview of various corporate activities organized or presented by the company."
-    },
-    "Warrant": {
-      "Title": "Sahathai | Warrants",
-      "Description": "Information on warrants and rights to purchase shares."
     },
     "EService": {
       "Title": "Sahathai | e-service",

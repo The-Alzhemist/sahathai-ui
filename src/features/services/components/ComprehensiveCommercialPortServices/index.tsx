@@ -37,7 +37,7 @@ export function ComprehensiveCommercialPortServices() {
                 <Image src='/bbt.png' width={46} height={20.7} alt='' />
               </Fragment>
             }
-            content={t('commercialDock.content')}
+            content={t('commercialDock.bbt.content')}
             imageUrl='/services/new/service-1.webp'
             link='/services/commercial-dock'
           />

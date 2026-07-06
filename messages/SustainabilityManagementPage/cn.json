@@ -1,7 +1,6 @@
 {
   "SustainabilityManagementPage": {
     "title": "可持续发展管理",
-    "subTitle": "（可持续发展）",
     "economicDimension": {
       "title": "经济维度",
       "description": "致力于以客户需求为核心，发展服务并提升泰国物流产业，通过为客户创造价值并引入新创新以提高服务效率，提供全面且符合国际一流标准的服务。"
@@ -41,11 +40,7 @@
       }
     },
     "SustainabilityManagementPolicy": {
-      "title": "可持续发展管理政策",
-      "description": "可持续发展管理政策是组织为确保其运营具备可持续性而制定的框架与原则，涵盖经济、社会及环境三个维度。该政策旨在从长期角度减少负面影响，并为组织及社会创造最大的正面价值。"
-    },
-    "ManagementPolicyYear": {
-      "2024": "2024 年可持续发展绩效"
+      "title": "可持续发展管理政策"
     }
   }
 }

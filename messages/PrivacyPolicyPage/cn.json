@@ -1,24 +1,24 @@
 {
   "PrivacyPolicyPage": {
     "CookiePolicy": {
-      "title": "COOKIES POLICY",
-      "description": "When visiting our website, some information regarding to your visit will be automatically kept by COOKIES. This policy will describe what they are, how they work, for which reasons and even how to delete and/or block. By using our website, you are agreeing that we can use cookies in line with this policy."
+      "title": "Cookie 政策",
+      "description": "当您访问我们的网站时，系统将通过 Cookie 自动收集与您访问相关的部分信息。本政策将说明 Cookie 是什么、其运作方式、使用目的，以及如何删除或阻止 Cookie。使用我们的网站即表示您同意我们依据本政策使用 Cookie。"
     },
     "WhatAreCookies": {
-      "title": "WHAT ARE COOKIES?",
-      "description": "Cookies are small piece of files containing information which being able to store on your computer and/or device (tablets, smartphones and etc.) by your web browser while you are visiting our website. In general, cookies do not harm your computer and/or device With Cookies we can enhance the user experience in our online services by remembering your language and retain user preferences, store information for things like your unique identifier and security, goods and services. Cookies can also measure traffic in our online services, to modify content based on browsing actions and previous visits, or for advertising purposes. In these cases, your personal data may be collected."
+      "title": "什么是 Cookie？",
+      "description": "Cookie 是包含信息的小型文件，当您访问我们的网站时，您的网络浏览器会将其存储在您的计算机和/或设备（平板电脑、智能手机等）上。通常情况下，Cookie 不会对您的计算机和/或设备造成损害。借助 Cookie，我们可以通过记住您的语言偏好、保留用户设置、存储唯一标识符和安全信息等方式，提升您在我们在线服务中的使用体验。Cookie 还可以用于衡量在线服务的流量、根据浏览行为和历史访问记录调整内容，或用于广告目的。在这些情况下，可能会收集您的个人数据。"
     },
     "HowWeUseCookies": {
-      "title": "HOW WE USE COOKIES?",
-      "description": "To enhance user experience and your visit’s satisfaction, we use cookies to recognize you more quickly, make our website’s friendliness to you and simplify your browsing. By doing so, third-parties services are also included and perform on our behalf. They also use (Internet Protocol) IP addresses and cookies to create, process transactional data, or to associate accounts with you for statistical and marketing purposes."
+      "title": "我们如何使用 Cookie？",
+      "description": "为提升用户体验和访问满意度，我们使用 Cookie 更快速地识别您的身份、使我们的网站更加友好，并简化您的浏览体验。为此，我们也会引入第三方服务代表我们运营。这些第三方服务同样会使用 IP 地址和 Cookie 来创建、处理交易数据，或将账户与您关联，用于统计和营销目的。"
     },
     "HowToManageCookies": {
-      "title": "HOW TO MANAGE COOKIES?",
-      "description": "Cookies can be blocked/erased from your browser."
+      "title": "如何管理 Cookie？",
+      "description": "您可以通过浏览器设置来阻止或删除 Cookie。"
     },
     "UpdateCookiesPolicy": {
-      "title": "UPDATES TO THE COOKIES POLICY?",
-      "description": "This policy may be updated to properly comply with upcoming rules and regulations. So, to ensure that you get with updated version, we recommended checking this page from time to time."
+      "title": "Cookie 政策的更新",
+      "description": "本政策可能会根据最新法规进行更新，以确保合规。建议您定期查阅本页面，以获取最新版本。"
     }
   }
 }

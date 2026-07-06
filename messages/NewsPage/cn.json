@@ -2,20 +2,13 @@
   "NewsPage": {
     "latestNews": "最新新闻",
     "pressRelease": "新闻发布",
-    "latestBlog": "Latest Articles",
-    "latestPressRelease": "Latest Press Releases",
-    "allPressRelease": "All Press Releases",
-    "allBlog": "All Articles",
+    "latestBlog": "最新文章",
+    "latestPressRelease": "最新新闻稿",
+    "allPressRelease": "所有新闻稿",
+    "allBlog": "所有文章",
     "Brochure": {
       "title": "在此下载我们的宣传册",
       "description": "我们的宣传册为3.3MB的PDF文件，内容包括公司、港口及我们的运营信息。点击图片下载或点击以在浏览器中查看图片。"
-    },
-    "PageContent": {
-      "BlogTitle": "ฺBlog",
-      "Title": "新闻发布",
-      "PressRelease": "公司新闻",
-      "SocialResponsibility": "可持续发展管理",
-      "Back": "返回首页"
     }
   }
 }

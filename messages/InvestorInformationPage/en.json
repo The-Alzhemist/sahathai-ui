@@ -13,7 +13,7 @@
       "title": "Financial reports and information",
       "oneReport": "One Report",
       "yearlyReport": "Annual report",
-      "otherFinancialStatements": "งบการเงินอื่นๆ"
+      "otherFinancialStatements": "Other Financial Statements"
     },
     "Shareholder": {
       "title": "Shareholder Information",
@@ -28,7 +28,7 @@
       "numberShareholder": "Total Shareholders",
       "scriptlessShares": " % Shares in Scripless Holding",
       "stockDistribution": "List of major shareholders and share distribution",
-      "note": "หมายเหตุ: * อื่นๆ ประกอบด้วยผู้ถือหุ้นรายบุคคลในกลุ่มครอบครัวรัตนศิริวิไล โดยผู้ถือหุ้นแต่ละรายถือหุ้นน้อยกว่าร้อยละ 3.00",
+      "note": "Note: * Others consist of individual shareholders in the Rattanasiriwilai family group, each holding less than 3.00% of shares.",
       "profit": {
         "title": "Dividend Distribution",
         "heading1": "Company Dividend Policy",
@@ -38,11 +38,8 @@
       }
     },
     "DividendPayment": {
-      "title": "การจ่ายเงินปันผล",
-      "dividendPaymentDate": "วันจ่ายปันผล",
-      "dividend": "เงินปันผล\n(บาท/หุ้น)",
-      "unit": "หน่วย",
-      "financialPeriod": "รอบผลประกอบการ"
+      "title": "Dividend Payment",
+      "dividend": "Dividend\n(Baht/Share)"
     },
     "ShareholdersMeeting": { "title": "Shareholder meeting" },
     "CompanyIntroductionVideo": { "title": "Company introduction video" },
@@ -56,121 +53,74 @@
       "56-1OneReport": "56-1 One\nReport"
     },
     "OtherFinancialStatementsTable": {
-      "q1": "ไตรมาส 1",
-      "q2": "ไตรมาส 2",
-      "q3": "ไตรมาส 3",
-      "annual": "ประจำปี"
+      "q1": "Q1",
+      "q2": "Q2",
+      "q3": "Q3",
+      "annual": "Annual"
     },
     "ShareHolderMeeting": {
-      "heading": "การประชุมสามัญผู้ถือหุ้นประจำปี {year}",
+      "heading": "Annual General Meeting {year}",
       "title": {
-        "proposeAgenda": "การเสนอระเบียบวาระการประชุม ปี {{year}}",
-        "invitation": "การเชิญประชุมสามัญผู้ถือหุ้น ปี {{year}}",
-        "minutes": "รายงานการประชุม ปี {{year}}",
-        "video": "วิดีโอการประชุมสามัญผู้ถือหุ้น ปี {{year}}"
-      },
-      "proposeAgenda": {
-        "criteria": "หลักเกณฑ์การให้สิทธิผู้ถือหุ้นเสนอระเบียบวาระการประชุมสามัญผู้ถือหุ้น ประจำปี {{year}}",
-        "nominationForm": "แบบเสนอชื่อบุคคลเพื่อเข้ารับการคัดเลือกเป็นกรรมการ บริษัท สหไทย เทอร์มินอล จำกัด (มหาชน)",
-        "agendaForm": "แบบเสนอระเบียบวาระการประชุมสามัญผู้ถือหุ้น",
-        "questionForm": "แบบส่งคำถามเกี่ยวกับบริษัทล่วงหน้า"
+        "minutes": "Meeting Minutes {{year}}",
+        "video": "Annual General Meeting Video {{year}}"
       },
       "invitation": {
-        "document": "หนังสือเชิญประชุมสามัญผู้ถือหุ้น ประจำปี {year}",
-          "invitationLetter": "หนังสือเชิญประชุมสามัญผู้ถือหุ้น ประจำปี {year}",
-          "meetingReport2567": "รายงานการประชุมสามัญผู้ถือหุ้น ประจำปี {year}",
-          "annualReport2567": "แบบแสดงการรายงานข้อมูลประจำปี/รายงานประจำปี {year}",
-          "candidateInfo": "ข้อมูลของบุคคลที่ได้รับการเสนอชื่อเข้าดำรงตำแหน่งกรรมการ",
-          "confirmationChannel": "ช่องทางตอบรับการเข้าประชุมผู้ถือหุ้น",
-          "registrationGuide": "คำชี้แจงวิธีการจองบัตร การลงทะเบียน การแสดงหลักฐานและการเข้าร่วมประชุมผ่านสื่ออิเล็กทรอนิกส์ (e-AGM)",
-          "proxyInfo": "ข้อมูลการมาริสระที่บริษัทเสนอให้เป็นผู้รับมอบฉันทะจากผู้ถือหุ้น",
-          "proxyFormA": "แบบหนังสือมอบอำนาจ แบบ ก.",
-          "proxyFormB": "แบบหนังสือมอบอำนาจ แบบ ข.",
-          "proxyFormC": "แบบหนังสือมอบอำนาจ แบบ ค.",
-          "eAgmGuide": "คู่มือการใช้งานระบบการประชุมผู้ถือหุ้นผ่านสื่ออิเล็กทรอนิกส์",
-          "privacyNotice": "คำประกาศเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคล (Privacy Notice) สำหรับ e-AGM"
+        "document": "Invitation to the Annual General Meeting {year}"
       },
       "minutes": {
-        "document": "รายงานการประชุมสามัญผู้ถือหุ้น ประจำปี {{year}}"
+        "document": "Minutes of the Annual General Meeting {{year}}"
       }
     },
     "FinancialInformation": {
-      "title": "งบการเงิน ปี {year}",
+      "title": "Financial Statements {year}",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "Q1",
+        "two": "Q2",
+        "three": "Q3",
+        "four": "Annual"
       }
     },
     "PerformanceReport": {
-      "title": "รายงานผลการดำเนินงานปี {year}",
+      "title": "Performance Report {year}",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "Q1",
+        "two": "Q2",
+        "three": "Q3",
+        "four": "Annual"
       }
     },
     "DocumentAnnouncement": {
-      "title": "เอกสารเผยแพร่ปี {year}",
+      "title": "Published Documents {year}",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "Q1",
+        "two": "Q2",
+        "three": "Q3",
+        "four": "Annual"
       }
     },
     "GoodCorporate": {
-      "title": "เอกสารการกำกับดูแลกิจการที่ดี",
+      "title": "Good Corporate Governance Documents",
       "document": {
-        "governanceManual": "คู่มือการกำกับดูแลกิจการที่ดี",
-        "codeOfConduct": "จรรยาบรรณธุรกิจ",
-        "boardCharter": "กฎบัตรคณะกรรมการ",
-        "chairmanDuties": "บทบาทหน้าที่ประธานกรรมการ",
-        "auditCommitteeCharter": "กฎบัตรคณะกรรมการตรวจสอบ",
-        "nominationAndRemunerationCharter": "กฎบัตรคณะกรรมการสรรหาและกำหนดค่าตอบแทน",
-        "riskGovernanceSustainabilityCommittee": "คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
-        "executiveCommitteeCharter": "กฎบัตรคณะกรรมการบริหาร",
-        "ceoAuthorityAndResponsibilities": "ขอบเขตอำนาจ หน้าที่ และความรับผิดชอบของประธานเจ้าหน้าที่บริหาร",
-        "sustainabilityPolicy": "นโยบายบริหารจัดการด้านความยั่งยืน",
-        "riskManagementPolicy": "นโยบายบริหารความเสี่ยง",
-        "insiderInformationPolicy": "นโยบายการใช้ข้อมูลภายใน",
-        "intellectualPropertyPolicy": "นโยบายที่การไม่ละเมิดทรัพย์สินทางปัญญา",
-        "csrPolicy": "นโยบายความรับผิดชอบต่อสังคม",
-        "antiCorruptionPolicy": "นโยบายการต่อต้านการทุจริต",
-        "personalDataProtectionPolicy": "นโยบายคุ้มครองข้อมูลส่วนบุคคล",
-        "companyRegulation": "ข้อบังคับบริษัท",
-        "memorandumOfAssociation": "บริคณห์สนธิ",
-        "companySecretaryContact": "ช่องทางติดต่อเลขานุการบริษัท"
+        "codeOfConduct": "Business Code of Conduct"
       }
     },
 
     "Activity": {
-      "title": "กิจกรรมปี {year}",
+      "title": "Activities {year}",
       "quarter": {
-        "one": "ไตรมาส 1",
-        "two": "ไตรมาส 2",
-        "three": "ไตรมาส 3",
-        "four": "ประจำปี"
+        "one": "Q1",
+        "two": "Q2",
+        "three": "Q3",
+        "four": "Annual"
       }
     },
-    "warrant": {
-      "heading": "ใบสำคัญแสดงสิทธิ ครั้งที่ {number} ({code})",
+    "Warrant": {
+      "heading": "Warrant No. {number} ({code})",
       "tabs": {
-        "condition": "ข้อกำหนดสิทธิ",
-        "round1": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งแรก",
-        "round2": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 2",
-        "round3": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 3",
-        "round4": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 4",
-        "round5": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งที่ 5",
-        "roundFinal": "กำหนดการใช้สิทธิ ตามใบสำคัญแสดงสิทธิ PORT-W3 ครั้งสุดท้าย"
+        "condition": "Rights Terms"
       },
       "content": {
-        "condition": "ข้อกำหนดสิทธิและหน้าที่ของผู้ออกใบสำคัญแสดงสิทธิ",
-        "round1Notice": "แจ้งกำหนดการใช้สิทธิ PORT -W3 ครั้งแรก",
-        "conditionNote": "ข้อกำหนดสิทธิว่าด้วยสิทธิและหน้าที่ของผู้ออกใบสำคัญแสดงสิทธิและผู้ถือใบสำคัญแสดงสิทธิที่จะซื้อหุ้นสามัญของบริษัท",
-        "formNote": "แบบฟอร์มแสดงความจำนงการใช้สิทธิที่จะซื้อหุ้นสามัญของบริษัท สหไทย เทอร์มินอล จำกัด (มหาชน)"
+        "condition": "Terms and Obligations of the Warrant Issuer"
       }
     }
   }

@@ -12,7 +12,6 @@ export default getRequestConfig(async ({ locale }) => {
     'HomePage',
     'Header',
     'JoinUsPage',
-    'investorRelations',
     'InvestorInformationPage',
     'SustainabilityManagementPage',
     'NewsPage',

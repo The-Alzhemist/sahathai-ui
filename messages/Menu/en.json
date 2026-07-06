@@ -28,32 +28,16 @@
       "title": "Home"
     },
     "news": {
-      "title": "News",
-      "latestNews": "Latest News",
-      "pressRelease": "News Release"
+      "title": "News"
     },
-
     "pressRelease": {
-      "title": "Press Release",
-      "latestNews": "Latest Press Releases",
-      "pressRelease": "All Press Release"
+      "title": "Press Release"
     },
     "socialResponsibility": {
-      "title": "Sustainability Management",
-      "latestNews": "Latest Sustainability Management Articles",
-      "pressRelease": "All Sustainability Management Articles"
+      "title": "Sustainability Management"
     },
     "eService": {
-      "title": "e-service",
-      "TrackByContainer": "Track by Container",
-      "TrackByBookingNumber": "TrackByBookingNumber",
-      "TrackByBLNumber": "Track by B/L Number",
-      "ContainerDepotBooking": "Container Depot Booking",
-      "FreeZone": "Free Zone",
-      "BTSTracking": "BTS Tracking",
-      "DGChecking": "DG Checking",
-      "BCDSBookingQueue": "BCDS Booking Queue",
-      "EReceipt": "E-Receipt"
+      "title": "e-service"
     },
     "investorRelations": {
       "title": "Investor Relations",
@@ -66,7 +50,6 @@
       "DocumentAnnouncement": "Publications",
       "GoodCorporate": "Good Corporate Governance",
       "Activity": "Activities",
-      "Warrant": "Warrants",
       "SetExchangeAnnouncement": "Set News"
     }
   }

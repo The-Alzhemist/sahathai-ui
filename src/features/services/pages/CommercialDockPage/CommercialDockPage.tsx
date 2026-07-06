@@ -17,8 +17,18 @@ export function CommercialDockPage() {
           <Image src='/bbt.png' width={70} height={31.5} alt='' />
         </Fragment>
       }
-      imageUrl='/services/new/service-inside-1.webp'
-      content={t('content')}
+      data={[
+        {
+          title: t('sahathai.title'),
+          imageUrl: '/services/new/service-inside-1.webp',
+          content: t('sahathai.content'),
+        },
+        {
+          title: t('bbt.title'),
+          imageUrl: '/services/new/service-inside-6.webp',
+          content: t('bbt.content'),
+        },
+      ]}
     />
   )
 }

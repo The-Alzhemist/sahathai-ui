@@ -17,8 +17,12 @@ export function GroundContainerTransportationServicesPage() {
           <Image src='/bts.png' width={62.5} height={25} alt='' />
         </Fragment>
       }
-      imageUrl='/services/new/service-inside-5.webp'
-      content={t('content')}
+      data={[
+        {
+          imageUrl: '/services/new/service-inside-5.webp',
+          content: t('content'),
+        },
+      ]}
     />
   )
 }

@@ -3,15 +3,7 @@
     "Title": "ตรวจสอบสถานะตู้คอนเทนเนอร์",
     "Description": "เราอำนวยความสะดวกในการติดตามสถานะตู้คอนเทนเนอร์ของคุณ เพียงเลือกช่องทางการตรวจสอบสถานะตู้คอนเทอเนอร์ จากหมายเลขตู้คอนเทนเนอร์ หมายเลขการจอง หมายเลข B/L หรือจะเป็นการจองพื้นที่ในท่าเรือของเราสำหรับตู้คอนเทนเนอร์ของคุณ",
     "TrackingService": {
-      "TrackByContainer": "ตรวจสอบสถานะจากหมายเลขตู้คอนเทนเนอร์",
-      "TrackByBookingNumber": "ตรวจสอบสถานะจากหมายเลขการจอง",
-      "TrackByBLNumber": "ตรวจสอบสถานะจากหมายเลข B/L",
-      "ContainerDepotBooking": "Container Depot Booking",
-      "FreeZone": "จองพื้นที่วางตู้สินค้า",
-      "BTSTracking": "BTS Tracking",
-      "DGChecking": "DG Checking",
-      "BCDSBookingQueue": "จอง Q BCDS",
-      "EReceipt": "E-Receipt"
+      "FreeZone": "จองพื้นที่วางตู้สินค้า"
     }
   }
 }

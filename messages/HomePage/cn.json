@@ -2,7 +2,6 @@
   "HomePage": {
     "Banner": {
       "title": "连接",
-      "title2": "您",
       "subTitle": "到泰国物流"
     },
     "About": {
@@ -35,8 +34,8 @@
       "iso": "ISO 9001 和 ISO 14001",
       "globalSecurityVerification": "GSV (C-TPAT)",
       "thaiInvestorAssociation": "2025年度股东大会质量评级为优秀",
-      "sustainability": "2025年泰国上市公司企业治理评级 (CGR) 达到优秀水平",
-      "acknowledgements": "2025年度'可持续发展信息披露认可'荣誉"
+      "sustainability": "2025年度'可持续发展信息披露认可'荣誉",
+      "acknowledgements": "2025年泰国上市公司企业治理评级 (CGR) 达到优秀水平"
     },
     "Service": {
       "title": "为您的业务提供综合服务",

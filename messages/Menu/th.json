@@ -28,31 +28,16 @@
       "title": "หน้าแรก"
     },
     "news": {
-      "title": "ข่าวประชาสัมพันธ์",
-      "latestNews": "ข่าวล่าสุด",
-      "pressRelease": "ข่าวประชาสัมพันธ์"
+      "title": "ข่าวประชาสัมพันธ์"
     },
     "pressRelease": {
-      "title": "ข่าวสารจากบริษัท",
-      "latestNews": "ข่าวสารล่าสุด",
-      "pressRelease": "ข่าวสารจากบริษัท"
+      "title": "ข่าวสารจากบริษัท"
     },
     "socialResponsibility": {
-      "title": "การบริหารความยั่งยืน",
-      "latestNews": "บทความ การบริหารความยั่งยืนล่าสุด",
-      "pressRelease": "บทความ การบริหารความยั่งยืนทั้งหมด"
+      "title": "การบริหารความยั่งยืน"
     },
     "eService": {
-      "title": "e-service",
-      "TrackByContainer": "ตรวจสอบสถานะจากหมายเลขตู้คอนเทนเนอร์",
-      "TrackByBookingNumber": "ตรวจสอบสถานะจากหมายเลขการจอง",
-      "TrackByBLNumber": "ตรวจสอบสถานะจากหมายเลข B/L",
-      "ContainerDepotBooking": "Container Depot Booking",
-      "FreeZone": "จองพื้นที่วางตู้สินค้า",
-      "BTSTracking": "BTS Tracking",
-      "DGChecking": "DG Checking",
-      "BCDSBookingQueue": "จอง Q BCDS",
-      "EReceipt": "E-Receipt"
+      "title": "e-service"
     },
     "investorRelations": {
       "title": "นักลงทุนสัมพันธ์",
@@ -66,7 +51,6 @@
       "GoodCorporate": "การกำกับดูแลกิจการที่ดี",
 
       "Activity": "กิจกรรม",
-      "Warrant": "ใบสำคัญแสดงสิทธิ",
       "SetExchangeAnnouncement": "ประกาศตลาดหลักทรัพย์"
     }
   }

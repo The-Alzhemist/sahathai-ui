@@ -1,27 +1,27 @@
 {
   "MetaData": {
     "Home": {
-      "Title": "Sahathai | Home",
+      "Title": "Sahathai | 首页",
       "Description": "探索沙哈泰码头的世界级服务，提供全面、便捷且完整的一站式解决方案，满足您的所有需求。"
     },
     "AboutUs": {
-      "Title": "Sahathai | About Us",
+      "Title": "Sahathai | 关于我们",
       "Description": "沙哈泰码头提供可靠的物流与货物装卸服务，凭借专业团队与现代化设施，值得信赖。"
     },
     "Service": {
-      "Title": "Sahathai | Services",
+      "Title": "Sahathai | 服务",
       "Description": "提供高效的物流服务、安全的货物装卸以及量身定制的仓储解决方案。"
     },
     "Infrastructure": {
-      "Title": "Sahathai | Infrastructure",
+      "Title": "Sahathai | 基础设施",
       "Description": "沙哈泰码头拥有高品质设施与专业服务，全面满足客户的各项需求。"
     },
     "News": {
-      "Title": "Sahathai | News",
+      "Title": "Sahathai | 新闻",
       "Description": "及时了解沙哈泰码头的最新动态与重要资讯，不错过任何关键信息。"
     },
     "PressRelease": {
-      "Title": "Sahathai | Press Releases",
+      "Title": "Sahathai | 新闻稿",
       "Description": "公司业绩报告及企业活动新闻。"
     },
     "SocialResponsibility": {
@@ -29,72 +29,60 @@
       "Description": "公司业绩报告及企业活动新闻。"
     },
     "Blog": {
-      "Title": "Sahathai | Blog",
+      "Title": "Sahathai | 博客",
       "Description": "及时更新沙哈泰码头的重要动态与资讯，为您呈现有价值的专业文章。"
     },
     "JoinUs": {
-      "Title": "Sahathai | Careers",
+      "Title": "Sahathai | 招聘",
       "Description": "探索沙哈泰码头的职业发展机会，与我们一同成长并创造成功。"
     },
     "ContactUs": {
-      "Title": "Sahathai | Contact Us",
+      "Title": "Sahathai | 联系我们",
       "Description": "欢迎联系沙哈泰码头，咨询服务或获取更多信息，我们随时为您提供协助。"
     },
     "PrivacyPolicy": {
-      "Title": "Sahathai | Privacy Policy",
+      "Title": "Sahathai | 隐私政策",
       "Description": "了解我们如何保护您的个人数据，并确保隐私政策的透明与安全。"
     },
     "InvestorInformation": {
-      "Title": "Sahathai | Investor Information",
+      "Title": "Sahathai | 投资者信息",
       "Description": "为投资者提供的信息与资源。"
     },
-    "shareHolder": {
-      "Title": "Sahathai | Shareholders",
-      "Description": "有关公司股东名单及股权结构的详细信息。"
-    },
     "shareHolderMeeting": {
-      "Title": "Sahathai | Shareholders Meeting",
+      "Title": "Sahathai | 股东大会",
       "Description": "年度股东大会的相关信息及会议文件。"
     },
     "FinancialInformation": {
-      "Title": "Sahathai | Financial Information",
+      "Title": "Sahathai | 财务信息",
       "Description": "公司年度及季度财务报表，以及其他重要的财务信息。"
     },
     "codeOfConduct": {
-      "Title": "Sahathai | Anti-Corruption Policy",
+      "Title": "Sahathai | 反腐败政策",
       "Description": "反腐败与反贿赂政策"
     },
     "PerformanceReport": {
-      "Title": "Sahathai | Performance Reports",
+      "Title": "Sahathai | 业绩报告",
       "Description": "公司在不同期间的经营业绩与表现概览。"
     },
     "DocumentAnnouncement": {
-      "Title": "Sahathai | Announcements & Publications",
+      "Title": "Sahathai | 公告与出版物",
       "Description": "公司的公告、出版物及重要企业资讯。"
     },
     "GoodCorporate": {
-      "Title": "Sahathai | Corporate Governance",
+      "Title": "Sahathai | 良好公司治理",
       "Description": "公司良好企业治理的原则、政策与实践。"
     },
-    "SustainableDevelopment": {
-      "Title": "Sahathai | Sustainability",
-      "Description": "公司在可持续发展与环境责任方面的计划与举措。"
-    },
     "Activity": {
-      "Title": "Sahathai | Activities",
+      "Title": "Sahathai | 活动",
       "Description": "公司举办或参与的各类企业活动概览。"
     },
-    "Warrant": {
-      "Title": "Sahathai | Warrants",
-      "Description": "有关认股权证及股票认购权利的相关信息。"
-    },
     "EService": {
-      "Title": "Sahathai | e-service",
+      "Title": "Sahathai | 电子服务",
       "Description": "提供一站式港口与物流管理服务，通过先进的电子服务系统实现高效、便捷的操作。"
     },
     "SetExchangeAnnouncement": {
-      "Title": "Sahathai | Stock Exchange Announcements",
-      "Description": "Information and important announcements from the stock exchange related to the company."
+      "Title": "Sahathai | 证交所公告",
+      "Description": "来自证券交易所的公司相关重要信息与公告。"
     }
   }
 }
