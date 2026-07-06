@@ -96,7 +96,15 @@
       },
       "documentSubmissionProcess": {
         "title": "文件提交流程",
-        "description": ""
+        "DocumentProcess": {
+          "title1": "进港船舶的文件提交",
+          "content1": "船公司或其代理必须在预计到港时间（ETA）前至少12小时，通过EDI（Baplie）/CASP提交信息及特殊货物清单给沙泰码头。船公司须向沙泰码头文件办公室提交载货清单、进港集装箱清单、危险品及特殊货物信息。",
+          "title2": "出港船舶的文件提交",
+          "content2_1": "船公司或其代理必须在预计到港时间（ETA）前至少12小时，向沙泰码头提交订舱预报（Booking Forecast）、预装计划（Pre-loading Plan）及特殊配载说明（Special Stowage Instructions）。",
+          "content2_2": "船公司或其代理必须在预计到港时间（ETA）前至少12小时，向沙泰码头提交最终装船清单（Final Loading List）、最终装船汇总（Final Loading Summary）及最终装船计划（如有）。",
+          "content2_3": "当集装箱堆场的截关时间已过，船公司或其代理必须立即向沙泰码头提交等待装船的集装箱文件，以避免延误。",
+          "content2_4": "如泊位已被订满，船公司或其代理必须向沙泰码头提交等待装船的集装箱文件，以避免延误。"
+        }
       },
       "bookingProcess": {
         "title": "预订流程",

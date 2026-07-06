@@ -18,7 +18,6 @@ import ResponsibilityScope from '@/features/infrastructureContainers/components/
 import DocumentProcess from '@/features/infrastructureContainers/components/OperationGuidelines/components/DocumentProcess'
 import ServiceProcess from '@/features/infrastructureContainers/components/OperationGuidelines/components/ServiceProcess'
 import BookingProcess from '@/features/infrastructureContainers/components/OperationGuidelines/components/BookingProcess'
-import Image from 'next/image'
 
 export function OperationGuidelines() {
   const t = useTranslations('InfrastructureContainersPage.OperationGuidelines')
@@ -47,7 +46,7 @@ export function OperationGuidelines() {
 
   useEffect(() => {
     const hash = window.location.hash.replace('#', '') as TabType
-    const validKeys = tabs.map((t) => t.key)
+    const validKeys = tabs.map(t => t.key)
     if (hash && validKeys.includes(hash)) {
       setActive(hash)
       setTimeout(() => {

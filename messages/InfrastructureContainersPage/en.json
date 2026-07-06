@@ -96,7 +96,15 @@
       },
       "documentSubmissionProcess": {
         "title": "Document Submission Process",
-        "description": ""
+        "DocumentProcess": {
+          "title1": "Document Submission for Inbound Vessels",
+          "content1": "The shipping line or its agent must submit information via EDI (Baplie)/CASP and a list of special cargo to Sahathai Terminal at least 12 hours before the estimated time of arrival (ETA). The shipping line must submit the ship's manifest, inbound container list, dangerous goods, and special cargo to Sahathai Terminal's documentation office.",
+          "title2": "Document Submission for Outbound Vessels",
+          "content2_1": "The shipping line or its agent must submit the Booking Forecast, Pre-loading Plan, and Special Stowage Instructions to Sahathai Terminal at least 12 hours before the estimated time of arrival (ETA).",
+          "content2_2": "The shipping line or its agent must submit the Final Loading List, Final Loading Summary, and Final Loading Plan (if any) to Sahathai Terminal at least 12 hours before the estimated time of arrival (ETA).",
+          "content2_3": "Once the cargo cut-off time at the container yard has passed, the shipping line or its agent must immediately submit the documents for containers awaiting loading to Sahathai Terminal to prevent delays.",
+          "content2_4": "In the event that the berth is fully booked, the shipping line or its agent must submit the documents for containers awaiting loading to Sahathai Terminal to prevent delays."
+        }
       },
       "bookingProcess": {
         "title": "Booking Process",
