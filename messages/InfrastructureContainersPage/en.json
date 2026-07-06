@@ -103,7 +103,18 @@
         }
       },
       "regulationsCargoShips": {
-        "title": "Vessel Operations"
+        "title": "Vessel Operations",
+        "RegulationsCargoShipsContent": {
+          "content1": "The ship's captain/chief officer is responsible for jointly inspecting Sahathai Terminal's property to ensure that no damage occurs from collisions when the cargo vessel berths, and throughout the time the vessel remains docked at the port.",
+          "content2": "A gangway with appropriate handrails, as well as a safety net, must be provided as soon as the cargo vessel berths at the port.",
+          "content3": "The ship's captain/chief officer is responsible for moving or repositioning the ship's crane whenever necessary to avoid obstructing port operations and to prevent collisions between the quay crane and the ship's derricks. Prior approval from Sahathai Terminal must be obtained each time before any movement or repositioning takes place.",
+          "content4": "The ship's captain/chief officer is responsible for providing appropriate and effective lashing equipment. If requested by Sahathai Terminal, the captain/chief officer must inspect the lashing equipment to ensure it is safe and effective. If the lashing equipment does not meet standards, Sahathai Terminal staff must be notified immediately. Any delay or impact on operating time resulting from the lashing equipment inspection will require the shipping line's agent to pay additional charges.",
+          "content5": "The ship's captain/chief officer is responsible for maintaining the safety of the cargo vessel, such as ensuring mooring lines remain tightly secured throughout the docking period.",
+          "content6": "If crew members or other personnel wish to enter the port area, they must contact Sahathai Terminal's security department beforehand each time.",
+          "content7": "Emission of smoke from the ship's funnel beyond the specified limit is not permitted.",
+          "content8": "Discharging oil into the river or within the operational area is not permitted.",
+          "content9": "Writing or marking within the port area is not permitted."
+        }
       },
       "safetyRegulations": {
         "title": "Safety Regulations",
