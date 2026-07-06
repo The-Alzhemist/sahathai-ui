@@ -69,7 +69,12 @@
       },
       "responsibilityScope": {
         "title": "Liability",
-        "description": ""
+        "ResponsibilityScopeContent": {
+          "content1": "In the event that goods are damaged during container loading or unloading under Sahathai Terminal's responsibility, such as during lifting by forklift for transfer onto a truck, including any damage caused by Sahathai Terminal, Sahathai Terminal will be liable to the cargo owner or consignee for an amount not exceeding 50,000 Baht per item and/or 500,000 Baht per container.",
+          "content2": "In the event that goods are damaged and/or lost prior to being under Sahathai Terminal's responsibility, Sahathai Terminal reserves the right not to be liable under any circumstances.",
+          "content3": "Once Sahathai Terminal has delivered the goods in complete and proper condition, Sahathai Terminal shall bear no responsibility for any damage occurring after delivery.",
+          "content4": "Any person who signs the delivery form on behalf of the customer shall be deemed the recipient and responsible on behalf of the customer. Sahathai Terminal shall bear no responsibility for any loss or damage to the goods occurring after delivery to the recipient."
+        }
       },
       "operatingHours": {
         "title": "Operating Hours",
@@ -98,8 +103,7 @@
         }
       },
       "regulationsCargoShips": {
-        "title": "Vessel Operations",
-        "description": "1. Receive and dispatch cargo containers through the NSW TOS system.<br/>2. Matching.<br/>3. Mobile X-Ray Machine."
+        "title": "Vessel Operations"
       },
       "safetyRegulations": {
         "title": "Safety Regulations",
