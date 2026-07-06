@@ -118,7 +118,18 @@
       },
       "safetyRegulations": {
         "title": "Safety Regulations",
-        "description": "Thailand is a signatory to the International Convention for the Safety of Life at Sea 1974, as amended 2002, which requires vessels and ports to follow security protocols to prevent threats and ensure safety. Sahathai Terminal has developed a security plan in compliance with the International Ship and Port Facility Security (ISPS) Code. The terminal is committed to preventing various threats such as theft, drug smuggling, stowaways, piracy, terrorism, sabotage, hijacking, kidnapping, arson, assassination, and other security risks. A security plan and risk assessments have been submitted to the Marine Department for approval and certification."
+        "SafetyRegulationsContent": {
+          "content1": "Visitors are prohibited from entering the port area without permission from authorized Sahathai Terminal personnel.",
+          "content2": "Visitors must contact the Terminal Service (TMS) office to receive and change into appropriate attire as provided by Sahathai Terminal, to ensure safety and that visitors are clearly visible.",
+          "content3": "Visitors must comply with all prohibition signs, instructions, and warnings, and must wear a safety helmet at all times.",
+          "content4": "Visitors entering the port area via the parking lot and/or boarding a cargo vessel must use the pedestrian walkway along the port perimeter fence and are prohibited from cutting through the container yard.",
+          "content5": "Photography and video recording within the port area are prohibited without permission from authorized Sahathai Terminal personnel.",
+          "content6": "All vehicles operating within the container area must not exceed a speed of 20 km/h on working days.",
+          "content7": "All drivers within the port area must comply with traffic rules and safety regulations, and vehicles must not be left parked without authorization.",
+          "content8": "Parking any type of vehicle that may obstruct traffic within the operational area is prohibited.",
+          "content9": "All personnel must immediately notify Sahathai Terminal upon discovering any act that may affect safety within the port, or any act that may affect the port's infrastructure and security as defined under the International Ship and Port Facility Security (ISPS) Code.",
+          "content10": "Violation of these regulations will result in revocation of the cargo vessel's permit."
+        }
       },
       "hazardousGoods": {
         "title": "Hazardous Goods",
