@@ -194,7 +194,28 @@
       },
       "bookingProcess": {
         "title": "Booking Process",
-        "description": ""
+        "BookingProcessContent": {
+          "title": "Container Yard for Export",
+          "content": "The shipping line or its agent must submit a \"Pre-advise\" to Sahathai Terminal's documentation office by email, EDI, or fax, containing the following container information:",
+          "bullet1": "Name of the cargo vessel and voyage number",
+          "bullet2": "The shipping line or its agent must submit the final customer name",
+          "bullet3": "Container operator",
+          "bullet4": "Destination port",
+          "bullet5": "Vessel booking number",
+          "bullet6": "Mode of transport (truck or barge)",
+          "bullet7": "Type of goods (general cargo, dangerous goods, reefer cargo, etc.)",
+          "bullet8": "Special conditions (such as temperature or the International Maritime Dangerous Goods Code)",
+          "bullet9": "The invoice or receipt must be prepared and submitted to the customs office at the entrance gate at the time the container is brought in by truck",
+          "bullet10": "For containers transported by barge, the barge controller will make a confirmed booking with Sahathai Terminal's documentation office before the barge arrives. The invoice must be submitted to Sahathai Terminal's documentation office before the container is brought in by barge",
+          "title2": "Export Container Freight Station (CFS) Yard",
+          "bullet11": "The shipping line or its agent must submit the CFS booking documents to the documentation office by email or fax",
+          "bullet12": "The shipping agent must submit the invoice/packing list before the goods are brought in",
+          "bullet13": "The shipping agent must submit the invoice before packing",
+          "title3": "Cargo Transportation for Import",
+          "bullet14": "The consignee must submit the Delivery Order (D/O) and customs documents to Sahathai Terminal's documentation office for domestic import containers",
+          "bullet15": "Sahathai Terminal's documentation office will prepare the delivery documents for storing import containers",
+          "bullet16": "The shipping line or its agent must submit the ship's manifest and notify the cargo status (CY/DIR/LCL/CFS) at least 24 hours before the cargo arrives at Sahathai Terminal"
+        }
       },
       "serviceCharge": {
         "title": "Billing",

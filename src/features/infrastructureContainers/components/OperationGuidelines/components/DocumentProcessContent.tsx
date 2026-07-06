@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { Fragment } from 'react'
 
 export function DocumentProcessContent() {
   const t = useTranslations(
@@ -6,7 +7,7 @@ export function DocumentProcessContent() {
   )
 
   return (
-    <div className='px-5'>
+    <Fragment>
       <h3 className='text-sm text-gray-800 mb-2 underline font-[500]'>
         {t('title1')}
       </h3>
@@ -15,12 +16,12 @@ export function DocumentProcessContent() {
       <h3 className='text-sm text-gray-800 mb-2 underline font-[500]'>
         {t('title2')}
       </h3>
-      <ul className='flex flex-col gap-y-5 list-disc text-gray-600 text-sm'>
+      <ul className='flex flex-col gap-y-5 list-disc text-gray-600 text-sm px-5'>
         <li>{t('content2_1')}</li>
         <li>{t('content2_2')}</li>
         <li>{t('content2_3')}</li>
         <li>{t('content2_4')}</li>
       </ul>
-    </div>
+    </Fragment>
   )
 }
