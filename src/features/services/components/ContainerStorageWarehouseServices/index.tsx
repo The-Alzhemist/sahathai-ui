@@ -1,11 +1,9 @@
 import { useTranslations } from 'next-intl'
 
-import { Background } from '@/components/Background'
 import { Animation } from '@/components/Animation'
-import { MiniCard } from '../MiniCard'
-import { Card } from '../Card'
 import { BannerTextCard } from '@/features/services/components/BannerTextCard'
 import { Line } from '@/components/Line'
+import { MiniCard } from '../MiniCard'
 
 export function ContainerStorageWarehouseServices() {
   const t = useTranslations('ServicesPage.ContainerStorageWarehouseServices')
@@ -61,7 +59,7 @@ export function ContainerStorageWarehouseServices() {
       />
 
       <BannerTextCard
-      imageUrl='/services/new/container-service-4.webp'
+        imageUrl='/services/new/container-service-4.webp'
         title={t('freeTradeZoneWarehouse.title')}
         content={t('freeTradeZoneWarehouse.content')}
         position='right'

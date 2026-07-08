@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl'
 
 import { Menu } from '@/components/Menu'
-import { Banner } from '@/components/Banner'
 import { ContainerStorageWarehouseServices } from '@/features/services/components/ContainerStorageWarehouseServices'
 
 export function ContainerServicesPage() {
