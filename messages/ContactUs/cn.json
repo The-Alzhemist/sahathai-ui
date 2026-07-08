@@ -31,12 +31,6 @@
       "title": "地址",
       "description": "萨泰终端股份有限公司，51/1号，Moo 3，Phu Chao Saming Phrai路，Bang Yai Prak街区，Phra Pradaeng区，Samut Prakan 10130，泰国"
     },
-    "submit": "提交",
-    "Validate": {
-      "Name": "姓名是必填项",
-      "Phone": "电话号码是必填项",
-      "Email": "电子邮件是必填项",
-      "Content": "内容是必填项"
-    }
+    "submit": "提交"
   }
 }

@@ -6,7 +6,6 @@
       "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
       "corporateGroupStructureOrganizationalStructure": "集团架构与组织结构"
     },
-
     "VisionMissionValues": {
       "Slogan": {
         "title": "这是我们作为领先港口运营商所秉持的信念，体现了沙泰码头的运营理念，以及我们对客户与合作伙伴的承诺。"
@@ -121,7 +120,9 @@
           "intro2": "公司设有内部审计部门，并直接向审计委员会汇报工作，同时委任 Dharmniti Auditing Co., Ltd 作为内部审计机构。",
           "noteTitle": "备注",
           "note": [
-            { "content": "具备会计相关知识与经验" },
+            {
+              "content": "具备会计相关知识与经验"
+            },
             {
               "content": "公司已充分审议独立董事及审计委员会成员的资格"
             }
@@ -209,15 +210,6 @@
       "organizationalStructure": {
         "title": "组织结构",
         "content": "下图展示了截至 2023 年 11 月 10 日公司的组织结构。沙泰码头公众有限公司董事会下设风险管理、公司治理与可持续发展委员会、审计委员会、执行委员会，以及提名与薪酬委员会。"
-      }
-    },
-    "ExecutiveProfile": {
-      "labels": {
-        "age": "年龄",
-        "note": "备注"
-      },
-      "common": {
-        "none": "无"
       }
     }
   }

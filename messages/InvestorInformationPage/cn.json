@@ -11,7 +11,6 @@
     },
     "FinancialReports": {
       "title": "财务报告与财务信息",
-      "oneReport": "综合年度报告（One Report）",
       "yearlyReport": "年度报告",
       "otherFinancialStatements": "其他财务报表"
     },
@@ -37,10 +36,6 @@
         "detail2": "子公司的股息分配须经公司董事会及各子公司股东大会审议批准。公司董事会将通过其委派的董事，监督子公司在扣除依法应缴纳的所得税、法定准备金及贷款协议项下义务后，按子公司单体财务报表的净利润不少于 40.00% 向股东分配股息。\n\n子公司的股息分配亦将视其投资计划、资金需求及其他适当因素而定。\n\n为确保子公司股息分配符合公司治理原则，具备透明性与可核查性，当子公司进行股息分配时，其董事会须在下一次公司董事会会议上进行报告。"
       }
     },
-    "DividendPayment": {
-      "title": "股息支付",
-      "dividend": "股息\n（泰铢/股）"
-    },
     "ShareholdersMeeting": {
       "title": "股东大会"
     },
@@ -65,68 +60,10 @@
       "q3": "第三季度",
       "annual": "年度"
     },
-    "ShareHolderMeeting": {
-      "heading": "{year} 年度股东大会",
-      "title": {
-        "minutes": "{{year}} 年度股东大会会议纪要",
-        "video": "{{year}} 年度股东大会会议视频"
-      },
-      "invitation": {
-        "document": "{year} 年度股东大会会议通知"
-      },
-      "minutes": {
-        "document": "{{year}} 年度股东大会会议纪要"
-      }
-    },
-    "FinancialInformation": {
-      "title": "{year} 年度财务报表",
-      "quarter": {
-        "one": "第一季度",
-        "two": "第二季度",
-        "three": "第三季度",
-        "four": "年度"
-      }
-    },
-    "PerformanceReport": {
-      "title": "{year} 年度经营业绩报告",
-      "quarter": {
-        "one": "第一季度",
-        "two": "第二季度",
-        "three": "第三季度",
-        "four": "年度"
-      }
-    },
-    "DocumentAnnouncement": {
-      "title": "{year} 年度信息披露文件",
-      "quarter": {
-        "one": "第一季度",
-        "two": "第二季度",
-        "three": "第三季度",
-        "four": "年度"
-      }
-    },
     "GoodCorporate": {
       "title": "良好公司治理文件",
       "document": {
         "codeOfConduct": "商业行为准则"
-      }
-    },
-    "Activity": {
-      "title": "{year} 年度活动",
-      "quarter": {
-        "one": "第一季度",
-        "two": "第二季度",
-        "three": "第三季度",
-        "four": "年度"
-      }
-    },
-    "Warrant": {
-      "heading": "第 {number} 次认股权证（{code}）",
-      "tabs": {
-        "condition": "权利条款"
-      },
-      "content": {
-        "condition": "认股权证发行人之权利与义务条款"
       }
     }
   }

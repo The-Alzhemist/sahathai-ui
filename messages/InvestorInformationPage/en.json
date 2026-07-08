@@ -11,7 +11,6 @@
     },
     "FinancialReports": {
       "title": "Financial reports and information",
-      "oneReport": "One Report",
       "yearlyReport": "Annual report",
       "otherFinancialStatements": "Other Financial Statements"
     },
@@ -37,10 +36,6 @@
         "detail2": "Dividend payments of subsidiaries are subject to the consideration and approval of the subsidiaries’ Board of Directors and Shareholders’ Meeting. Through its representatives on the subsidiaries’ boards, the Company oversees that each subsidiary distributes dividends of not less than 40.00% of the net profit shown in its separate financial statements after deduction of corporate income tax, legal reserves as required by law, and obligations under loan agreements.\n\nDividend payments will also depend on investment plans, funding requirements, and other appropriateness.\n\nTo ensure that dividend payments of subsidiaries are in line with good corporate governance principles, transparent, and verifiable, whenever a subsidiary declares a dividend payment, the subsidiary’s Board of Directors must report such payment to the Company’s Board of Directors at the next meeting."
       }
     },
-    "DividendPayment": {
-      "title": "Dividend Payment",
-      "dividend": "Dividend\n(Baht/Share)"
-    },
     "ShareholdersMeeting": { "title": "Shareholder meeting" },
     "CompanyIntroductionVideo": { "title": "Company introduction video" },
     "CompanyAdvertiseVideo": { "title": "Company public relations video" },
@@ -58,69 +53,10 @@
       "q3": "Q3",
       "annual": "Annual"
     },
-    "ShareHolderMeeting": {
-      "heading": "Annual General Meeting {year}",
-      "title": {
-        "minutes": "Meeting Minutes {{year}}",
-        "video": "Annual General Meeting Video {{year}}"
-      },
-      "invitation": {
-        "document": "Invitation to the Annual General Meeting {year}"
-      },
-      "minutes": {
-        "document": "Minutes of the Annual General Meeting {{year}}"
-      }
-    },
-    "FinancialInformation": {
-      "title": "Financial Statements {year}",
-      "quarter": {
-        "one": "Q1",
-        "two": "Q2",
-        "three": "Q3",
-        "four": "Annual"
-      }
-    },
-    "PerformanceReport": {
-      "title": "Performance Report {year}",
-      "quarter": {
-        "one": "Q1",
-        "two": "Q2",
-        "three": "Q3",
-        "four": "Annual"
-      }
-    },
-    "DocumentAnnouncement": {
-      "title": "Published Documents {year}",
-      "quarter": {
-        "one": "Q1",
-        "two": "Q2",
-        "three": "Q3",
-        "four": "Annual"
-      }
-    },
     "GoodCorporate": {
       "title": "Good Corporate Governance Documents",
       "document": {
         "codeOfConduct": "Business Code of Conduct"
-      }
-    },
-
-    "Activity": {
-      "title": "Activities {year}",
-      "quarter": {
-        "one": "Q1",
-        "two": "Q2",
-        "three": "Q3",
-        "four": "Annual"
-      }
-    },
-    "Warrant": {
-      "heading": "Warrant No. {number} ({code})",
-      "tabs": {
-        "condition": "Rights Terms"
-      },
-      "content": {
-        "condition": "Terms and Obligations of the Warrant Issuer"
       }
     }
   }
