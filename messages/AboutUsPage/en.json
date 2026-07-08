@@ -120,7 +120,9 @@
           "intro2": "The company has internal audit and directly report to Audit committee and also appointment Dharmniti Auditing Co., Ltd to be internal audit.",
           "noteTitle": "Note",
           "note": [
-            { "content": "Has knowledge and experience in accounting" },
+            {
+              "content": "Has knowledge and experience in accounting"
+            },
             {
               "content": "The Company has considered the qualifications of the independent directors and the audit committee"
             }
@@ -208,15 +210,6 @@
       "organizationalStructure": {
         "title": "Organizational Structure",
         "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
-      }
-    },
-    "ExecutiveProfile": {
-      "labels": {
-        "age": "Age",
-        "note": "Note"
-      },
-      "common": {
-        "none": "-None-"
       }
     }
   }
