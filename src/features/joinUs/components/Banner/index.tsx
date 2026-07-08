@@ -7,17 +7,17 @@ export function Banner() {
   const t = useTranslations('JoinUsPage.Banner')
 
   return (
-    <section className='relative h-[600px] md:h-[424px] flex flex-col justify-end'>
+    <section className='relative h-[600px] md:h-[570px] flex flex-col justify-end -mt-[60px] md:rounded-b-[60px] overflow-hidden'>
       <Image
-        className='absolute top-0 left-0 w-full h-full object-cover'
-        src='/join-us/banner.png'
+        className='absolute inset-0 w-full h-full object-cover object-[center_30%]'
+        src='/join-us/banner.webp'
         width={0}
         height={0}
         sizes='100vw'
         alt=''
       />
 
-      <Animation className='max-w-[896px] w-full mx-auto mb-[85px] z-[1] px-5 pt-1ุ6 md:p-[14px] text-white'>
+      <Animation className='max-w-[896px] w-full mx-auto mb-[55px] z-[1] px-5 pt-[50px] md:p-[14px] text-white'>
         <h1 className='font-[700] text-[22px] md:text-[36px] leading-[44px] text-center whitespace-pre-wrap'>
           {t('title')}
         </h1>
@@ -25,6 +25,13 @@ export function Banner() {
           {t('description')}
         </p>
       </Animation>
+      <div
+        className='w-full h-full absolute top-0 left-0'
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(1, 90, 153, 0) 29.3%, #003C66 94.56%)',
+        }}
+      />
     </section>
   )
 }

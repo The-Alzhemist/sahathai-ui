@@ -113,7 +113,7 @@ export const DropdownMenuComponent = React.forwardRef<
               <FloatingFocusManager context={context} modal={false}>
                 <div
                   ref={refs.setFloating}
-                  className='bg-background p-[4px] rounded-b-[6px] outline-0 text-white min-w-[163px]'
+                  className='z-50 bg-background p-[4px] rounded-b-[6px] outline-0 text-white min-w-[163px]'
                   style={floatingStyles}
                   {...getFloatingProps()}
                 >
