@@ -1,7 +1,7 @@
 interface DetailType {
   title?: string
   imageUrl: string
-  content: string
+  contents: string[]
 }
 
 export interface ComprehensiveCommercialPortDetailProps {
@@ -12,5 +12,5 @@ export interface ComprehensiveCommercialPortDetailProps {
 export interface CardProps {
   title?: string
   imageUrl: string
-  content: string
+  contents: string[]
 }

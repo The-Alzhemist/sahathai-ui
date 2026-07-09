@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { CardProps } from './interface'
 import { cn } from '@/libs/util'
 
-export function Card({ title, imageUrl, content }: CardProps) {
+export function Card({ title, imageUrl, contents }: CardProps) {
   return (
     <div className='mt-[22px] p-[30px] rounded-[15px] shadow-8 bg-white'>
       <div className='max-w-[980px] w-full rounded-[10px] overflow-hidden'>
@@ -11,11 +11,16 @@ export function Card({ title, imageUrl, content }: CardProps) {
         </div>
       </div>
       {title && <h2 className='font-[500] text-navy mt-[25px]'>{title}</h2>}
-      <p
-        className={cn('body-1 text-black-6 mt-[8px]', { 'mt-[25px]': !title })}
-      >
-        {content}
-      </p>
+      {contents.map((content, index) => (
+        <p
+          className={cn('body-1 text-black-6 mt-[8px] indent-8', {
+            'mt-[25px]': !title && index === 0,
+          })}
+          key={index}
+        >
+          {content}
+        </p>
+      ))}
     </div>
   )
 }

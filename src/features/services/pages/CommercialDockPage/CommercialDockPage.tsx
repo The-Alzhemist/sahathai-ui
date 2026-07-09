@@ -21,12 +21,12 @@ export function CommercialDockPage() {
         {
           title: t('sahathai.title'),
           imageUrl: '/services/new/service-inside-1.webp',
-          content: t('sahathai.content'),
+          contents: [t('sahathai.content')],
         },
         {
           title: t('bbt.title'),
           imageUrl: '/services/new/service-inside-6.webp',
-          content: t('bbt.content'),
+          contents: [t('bbt.content')],
         },
       ]}
     />

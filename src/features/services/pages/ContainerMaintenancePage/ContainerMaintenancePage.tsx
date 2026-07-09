@@ -20,7 +20,7 @@ export function ContainerMaintenancePage() {
       data={[
         {
           imageUrl: '/services/new/service-inside-4.webp',
-          content: t('content'),
+          contents: [t('content')],
         },
       ]}
     />

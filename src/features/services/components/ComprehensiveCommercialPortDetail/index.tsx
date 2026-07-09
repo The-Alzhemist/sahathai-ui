@@ -32,7 +32,7 @@ export function ComprehensiveCommercialPortDetail({
             key={index}
             title={row.title}
             imageUrl={row.imageUrl}
-            content={row.content}
+            contents={row.contents}
           />
         ))}
       </section>
