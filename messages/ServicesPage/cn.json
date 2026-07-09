@@ -22,7 +22,9 @@
       },
       "containerHandling": {
         "title": "集装箱装卸 | CFS 拼箱服务",
-        "content": "沙泰码头可处理各类集装箱，包括 20、40、45 标准箱、高箱（High Cube）及框架箱（Flat Rack），涵盖整箱（FCL）与拼箱（LCL）业务。码头配备 80,000 平方米的 CFS 与 CY 场地，以及龙门吊、叉车等现代化设备，严格执行从吊装、装箱、卸货到维修的各个安全环节。CFS 位于码头内部，确保货物转运顺畅、高效且安全，为客户提供可靠的交付保障。"
+        "content": "沙泰码头为没有自有装箱团队的出口商（Shipper）提供集装箱装箱服务（Stuffing）。货物从出口商处收取后，在沙泰码头装入集装箱，随即可装船运输。此项服务大多为单一出口商的整箱装载（Full Container Load: FCL），使出口作业便捷、快速，一站式完成。",
+        "content2": "针对进口商（Consignee），我们提供开箱及拆箱服务（Un-stuffing），涵盖拼箱（Less than Container Load: LCL）——将多家进口商的货物合并装于同一集装箱内（Consolidated Container），货物存放于货物仓库中等待各进口商前来提货；以及整箱直提（Direct）——由单一进口商直接从集装箱提取货物。全面满足各类进口需求。",
+        "content3": "凭借完善的作业区域与专业团队，2025 年我们提供的 CFS 服务总量超过 23,900 标准箱，其中出口装箱服务（Stuffing）21,466 标准箱，进口拆箱服务（Un-stuffing）2,491 标准箱。"
       },
       "containerMaintenance": {
         "title": "集装箱维修服务",
