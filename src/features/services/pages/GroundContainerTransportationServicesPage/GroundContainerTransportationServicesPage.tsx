@@ -20,7 +20,7 @@ export function GroundContainerTransportationServicesPage() {
       data={[
         {
           imageUrl: '/services/new/service-inside-5.webp',
-          contents: [t('content')],
+          contents: [t('content'), t('content2'), t('content3')],
         },
       ]}
     />
