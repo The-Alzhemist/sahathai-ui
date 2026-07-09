@@ -16,11 +16,15 @@
       },
       "bargeServices": {
         "title": "Barge Services",
-        "content": "Our terminals can accommodate international cargo vessels or feeder vessels of approximately 1,000 TEUs, as well as barges ranging from 40 to 240 TEUs. Sahathai Terminal operates two port berths: the main Sahathai berth with a 170-meter frontage and a barge berth with a 65-meter frontage. Additionally, the BBT barge terminal features a 96-meter berth frontage and can accommodate two barges simultaneously."
+        "content": "Our barge services are operated by Bangkok Barge Service Co., Ltd. (BBS), a joint venture between Sahathai Terminal Public Company Limited and an affiliate of the global shipping line Mediterranean Shipping Company (MSC). BBS provides waterborne container transport by barge, connecting directly between Sahathai Terminal and Laem Chabang Port, helping to reduce transportation costs, ease road congestion, and offer an environmentally friendly transport alternative.",
+        "content2": "BBS currently operates approximately 11 chartered barges per month, accommodating barges of 40–240 TEUs, with a rotating jib crane stationed at every berth. Additional slot capacity can also be arranged during periods of high container volume, ensuring flexibility and continuity of service. BBS also sells barge slot capacity to nearby ports, and in 2025 the volume of containers handled through this service exceeded 36,000 TEUs.",
+        "content3": "With a network of 3 barge berths — 2 barge berths at Sahathai Terminal, each 65 meters wide, and the BBT barge berth, 96 meters wide and capable of accommodating 2 vessels simultaneously — supporting approximately 240,000 TEUs per year, BBS is well positioned to be part of a comprehensive logistics solution that efficiently meets the waterborne transport needs of shipping lines, importers, and exporters."
       },
       "containerHandling": {
         "title": "Container Handling | CFS LCL",
-        "content": "At Sahathai Terminal, we handle all types of containers such as 20, 40, 45 TEUs, high cube containers, and flat rack containers. This includes both full container load (FCL) and less than container load (LCL). With an 80,000 square meter area for CFS and CY and modern equipment such as gantry cranes and forklifts, we emphasize safety in every step, from lifting and packing to unloading and maintenance. The CFS location within the terminal ensures seamless transfers, with efficient and safe packing to guarantee secure delivery of goods."
+        "content": "Sahathai Terminal provides container stuffing services for shippers who do not have their own packing team. Goods are received from the shipper and packed into containers at Sahathai Terminal, ready to be loaded onto the vessel immediately. This is mostly full container load (FCL) packing for a single shipper, making export convenient, fast, and fully handled in one place.",
+        "content2": "For consignees, we provide container opening and un-stuffing services, covering both less than container load (LCL) — where goods from multiple consignees are consolidated into the same container (consolidated container) and stored in a warehouse awaiting pickup by each consignee — and direct, single-consignee containers where the consignee collects the goods directly from the container. This comprehensively covers every form of import.",
+        "content3": "With well-equipped operational areas and a professional team, in 2025 we provided CFS services totaling over 23,900 TEUs, comprising 21,466 TEUs of export stuffing services and 2,491 TEUs of import un-stuffing services."
       },
       "containerMaintenance": {
         "title": "Container Maintenance",
@@ -28,7 +32,9 @@
       },
       "groundContainerTransportationServices": {
         "title": "Ground Container Transportation Services",
-        "content": "Door-to-Door services to facilitate customer operations and offer an option for seamless container transportation from Laem Chabang Port."
+        "content": "We provide ground container transportation services through Bangkok Trucking Service Co., Ltd. (BTS), a subsidiary wholly owned (100%) by the Company, completing our role as a one-stop logistics solution provider by seamlessly connecting transportation from the port to the customer's factory or warehouse gate.",
+        "content2": "Our services cover container transportation between exporters' or importers' factories or warehouses and Sahathai Terminal, transportation within the Laem Chabang Port area between factories or warehouses and Laem Chabang Port, as well as round-trip container transportation between Sahathai Terminal and Laem Chabang Port by truck, serving as an alternative to barge transport for customers who require extra speed and flexibility.",
+        "content3": "In addition, we have a network of multiple truck haulage partners, allowing us to continuously arrange transportation for customers without them having to source trucks themselves — convenient, time-saving, and reliable for every trip. In 2025, we provided ground container transportation services totaling over 54,700 TEUs."
       },
       "containerService": {
         "title": "Container Yard and Warehouse Services",

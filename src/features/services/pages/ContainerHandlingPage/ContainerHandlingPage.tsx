@@ -13,7 +13,7 @@ export function ContainerHandlingPage() {
       data={[
         {
           imageUrl: '/services/new/service-inside-3.webp',
-          content: t('content'),
+          contents: [t('content'), t('content2'), t('content3')],
         },
       ]}
     />

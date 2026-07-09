@@ -55,7 +55,7 @@ export function ComprehensiveCommercialPortServices() {
           <ComprehensiveCommercialPortCard
             title={t('containerHandling.title')}
             content={t('containerHandling.content')}
-            imageUrl='/services/new/service-3.webp'
+            imageUrl='/services/new/service-inside-3.webp'
             link='/services/container-handling'
           />
           <ComprehensiveCommercialPortCard

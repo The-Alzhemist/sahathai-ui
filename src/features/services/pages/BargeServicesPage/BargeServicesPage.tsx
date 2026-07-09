@@ -20,7 +20,7 @@ export function BargeServicesPage() {
       data={[
         {
           imageUrl: '/services/new/service-inside-2.webp',
-          content: t('content'),
+          contents: [t('content'), t('content2'), t('content3')],
         },
       ]}
     />
