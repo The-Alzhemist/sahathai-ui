@@ -34,7 +34,10 @@
         "detail1": "The Company has a policy to pay dividends of not less than 40.00% of the net profit shown in the Company’s separate financial statements after deduction of corporate income tax, legal reserves as required by law, and obligations under loan agreements.\n\nHowever, such dividend payments are subject to the Company’s investment plans, funding requirements, and other future appropriateness. Once the Board of Directors has resolved to approve the annual dividend payment, it must be proposed for approval at the Shareholders’ Meeting, except in the case of an interim dividend, which the Board of Directors has the authority to approve. The interim dividend payment must then be reported to the Shareholders’ Meeting at the next meeting.",
         "heading2": "Subsidiaries’ Dividend Policy",
         "detail2": "Dividend payments of subsidiaries are subject to the consideration and approval of the subsidiaries’ Board of Directors and Shareholders’ Meeting. Through its representatives on the subsidiaries’ boards, the Company oversees that each subsidiary distributes dividends of not less than 40.00% of the net profit shown in its separate financial statements after deduction of corporate income tax, legal reserves as required by law, and obligations under loan agreements.\n\nDividend payments will also depend on investment plans, funding requirements, and other appropriateness.\n\nTo ensure that dividend payments of subsidiaries are in line with good corporate governance principles, transparent, and verifiable, whenever a subsidiary declares a dividend payment, the subsidiary’s Board of Directors must report such payment to the Company’s Board of Directors at the next meeting."
-      }
+      },
+      "topTen": "Top 10 Total",
+      "otherMinorShareholders": "Other Minor Shareholders",
+      "total": "Total"
     },
     "ShareholdersMeeting": { "title": "Shareholder meeting" },
     "CompanyIntroductionVideo": { "title": "Company introduction video" },

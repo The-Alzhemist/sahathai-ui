@@ -4,6 +4,24 @@ import { useTranslations } from 'next-intl'
 export const InvestorInformationTable = () => {
   const t = useTranslations('InvestorInformationPage.Shareholder')
 
+  const topTen = investmentStakeholderList.reduce(
+    (acc, curr) => {
+      return {
+        stockAmount: acc.stockAmount + curr.stockAmount,
+        percentAmount: acc.percentAmount + curr.percentAmount,
+      }
+    },
+    {
+      stockAmount: 0,
+      percentAmount: 0,
+    }
+  )
+
+  const otherMinorShareholders = {
+    stockAmount: 241_631_855,
+    percentAmount: 39.8,
+  }
+
   return (
     <div className='min-w-[720px] md:min-w-0 max-w-[860px] mx-auto shadow-6 rounded-[20px] bg-white p-5 md:p-6'>
       {/* Body */}
@@ -34,6 +52,42 @@ export const InvestorInformationTable = () => {
                 <div className='tabular-nums'>{item.percentAmount}%</div>
               </div>
             ))}
+            <div
+              className={`grid grid-cols-[80px_3fr_2fr_1fr] gap-x-4 py-4 text-sm font-light`}
+            >
+              <div />
+              <div>{t('topTen')}</div>
+              <div className='tabular-nums'>
+                {topTen.stockAmount.toLocaleString()}
+              </div>
+              <div className='tabular-nums'>{topTen.percentAmount}%</div>
+            </div>
+            <div
+              className={`grid grid-cols-[80px_3fr_2fr_1fr] gap-x-4 py-4 text-sm font-light`}
+            >
+              <div />
+              <div>{t('otherMinorShareholders')}</div>
+              <div className='tabular-nums'>
+                {otherMinorShareholders.stockAmount.toLocaleString()}
+              </div>
+              <div className='tabular-nums'>
+                {otherMinorShareholders.percentAmount}%
+              </div>
+            </div>
+            <div
+              className={`grid grid-cols-[80px_3fr_2fr_1fr] gap-x-4 py-4 text-sm font-light`}
+            >
+              <div />
+              <div>{t('total')}</div>
+              <div className='tabular-nums'>
+                {(
+                  otherMinorShareholders.stockAmount + topTen.stockAmount
+                ).toLocaleString()}
+              </div>
+              <div className='tabular-nums'>
+                {otherMinorShareholders.percentAmount + topTen.percentAmount}%
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -53,7 +53,6 @@ export function ShareHolderPage() {
                       id={InvestorInformationEnum.Shareholder}
                       className='headline-2 text-black-80 text-center text-navy pt-[80px]'
                     >
-
                       {t('title')}
                     </h2>
 
