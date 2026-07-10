@@ -16,7 +16,7 @@ export function Menu() {
 
   return (
     <div
-      className={`hidden lg:block lg:sticky top-[50px] bg-background text-white md:rounded-b-[30px] w-full z-10 transition-all duration-300 ${
+      className={`hidden lg:block lg:sticky top-[50px] bg-background text-white md:rounded-b-[30px] w-full z-30 transition-all duration-300 ${
         isVisible
           ? 'translate-y-0 opacity-100'
           : '-translate-y-full opacity-0 pointer-events-none'
