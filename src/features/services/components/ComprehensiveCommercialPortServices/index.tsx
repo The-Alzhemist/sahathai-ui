@@ -37,7 +37,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('commercialDock.bbt.content')}
-            imageUrl='/services/new/service-1.webp'
+            imageUrl='/services/new/service-inside-6.webp'
             link='/services/commercial-dock'
           />
           <ComprehensiveCommercialPortCard
@@ -48,7 +48,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('bargeServices.content')}
-            imageUrl='/services/new/service-2.webp'
+            imageUrl='/services/new/service-inside-2.webp'
             link='/services/barge-services'
           />
           <ComprehensiveCommercialPortCard
@@ -65,7 +65,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('containerMaintenance.content')}
-            imageUrl='/services/new/service-4.webp'
+            imageUrl='/services/new/service-inside-4.webp'
             link='/services/container-maintenance'
           />
           <ComprehensiveCommercialPortCard
@@ -76,7 +76,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('groundContainerTransportationServices.content')}
-            imageUrl='/services/new/service-5.webp'
+            imageUrl='/services/new/service-inside-5.webp'
             link='/services/ground-container-transportation-services'
           />
           <ComprehensiveCommercialPortCard
