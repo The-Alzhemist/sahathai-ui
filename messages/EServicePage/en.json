@@ -1,9 +1,6 @@
 {
   "EServicePage": {
     "Title": "Tracking",
-    "Description": "We can help you locate and track your containers at our terminal. Just select whether you’d like to track via container number, booking number, B/L number, or whether you’d like to book space at our container depot.",
-    "TrackingService": {
-      "FreeZone": "Free Zone"
-    }
+    "Description": "We can help you locate and track your containers at our terminal. Just select whether you’d like to track via container number, booking number, B/L number, or whether you’d like to book space at our container depot."
   }
 }

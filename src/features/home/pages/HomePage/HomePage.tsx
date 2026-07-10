@@ -25,14 +25,6 @@ export function HomePage({ params }: HomePageProps) {
       <ContactUs className='mt-[94px] mb-[111px]' />
       <HamburgerMenu />
       <ScrollToTopButton />
-      {/* <div dangerouslySetInnerHTML={{ __html: PORT_HTML }} />
-      <iframe
-        src='https://weblink.settrade.com/banner/banner3.jsp'
-        width='800'
-        height='200'
-        frameborder='0'
-        scrolling='no'
-      ></iframe> */}
     </main>
   )
 }

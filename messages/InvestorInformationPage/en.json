@@ -39,7 +39,6 @@
       "otherMinorShareholders": "Other Minor Shareholders",
       "total": "Total"
     },
-    "ShareholdersMeeting": { "title": "Shareholder meeting" },
     "CompanyIntroductionVideo": { "title": "Company introduction video" },
     "CompanyAdvertiseVideo": { "title": "Company public relations video" },
     "FactSheet": { "title": "FactSheet",
@@ -55,12 +54,6 @@
       "q2": "Q2",
       "q3": "Q3",
       "annual": "Annual"
-    },
-    "GoodCorporate": {
-      "title": "Good Corporate Governance Documents",
-      "document": {
-        "codeOfConduct": "Business Code of Conduct"
-      }
     }
   }
 }

@@ -1,16 +1,8 @@
 {
   "Header": {
-    "home": "首页",
     "contactUs": "联系我们",
     "blog": "博客",
     "joinUs": "加入我们",
-    "search": "搜索",
-    "news": "新闻",
-    "eService": "电子服务",
-    "aboutUs": "关于我们",
-    "service": "服务",
-    "shareHolder": "股东",
-    "shareHolderMeeting": "股东大会",
     "sahathai": "Sahathai",
     "terminal": "Terminal"
   }

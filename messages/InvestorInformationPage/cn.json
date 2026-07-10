@@ -39,9 +39,6 @@
       "otherMinorShareholders": "其他中小股东",
       "total": "合计"
     },
-    "ShareholdersMeeting": {
-      "title": "股东大会"
-    },
     "CompanyIntroductionVideo": {
       "title": "公司介绍视频"
     },
@@ -62,12 +59,6 @@
       "q2": "第二季度",
       "q3": "第三季度",
       "annual": "年度"
-    },
-    "GoodCorporate": {
-      "title": "良好公司治理文件",
-      "document": {
-        "codeOfConduct": "商业行为准则"
-      }
     }
   }
 }
