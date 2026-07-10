@@ -39,6 +39,14 @@
       "containerService": {
         "title": "Container Yard and Warehouse Services",
         "content": "We provide container yard and warehouse facilities to support our customers, including a bonded container yard in the free zone and a bonded warehouse with an area of 6,301 square meters."
+      },
+      "sahathaiTerminal": {
+        "title": "Sahathai Terminal | Sahathai Terminal",
+        "content": "A comprehensive commercial port terminal on the Chao Phraya River, located on Pu Chao Saming Phrai Road, Phra Pradaeng District, Samut Prakan Province. It accommodates international cargo vessels or feeder vessels of approximately 1,000 TEUs, and barges of approximately 40–240 TEUs, used for transport connecting Sahathai Terminal and Laem Chabang Port. The terminal has 3 berths in total: a feeder berth with a 170-meter frontage, and 2 barge berths each with a 65-meter frontage, equipped with 4 gantry cranes, 1 mobile harbor crane, and rotating jib cranes stationed at every barge berth, providing fast and efficient container handling. In 2025, the terminal handled a total of over 362,000 TEUs of containers."
+      },
+      "feederVesselServices": {
+        "title": "Feeder Vessel Berthing Services | Feeder",
+        "content": "Sahathai Terminal provides berthing services for international cargo vessels or feeder vessels of approximately 1,000 TEUs, with a feeder berth 170 meters wide, equipped with 4 gantry cranes that move containers on and off vessels accurately and safely, supplemented by 1 mobile harbor crane to support periods of high handling volume. Leading global shipping lines call regularly, including MSC, CMA CGM, and Maersk Line, meeting the needs of importers and exporters who require convenient and efficient international transport connections from the heart of Bangkok and Samut Prakan."
       }
     },
     "ContainerStorageWarehouseServices": {
