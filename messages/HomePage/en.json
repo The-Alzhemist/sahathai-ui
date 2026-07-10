@@ -58,6 +58,10 @@
       "automatedContainerReadingTechnology": {
         "title": "Automated Container Reading Technology (OCR)",
         "content": "Implementing OCR systems for automatic container number reading at port gates, increasing accuracy, reducing processing time, and enhancing service quality."
+      },
+      "trackingOnline": {
+        "title": "Online Container Tracking System (Tracking Online)",
+        "content": "Track inbound container status in real time, 24 hours a day, via LINE OA: @Sahathai, with automatic notifications when containers arrive at the port. Fast, accurate, and available anytime without needing to call in."
       }
     },
     "News": {

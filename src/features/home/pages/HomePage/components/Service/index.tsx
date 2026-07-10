@@ -50,6 +50,13 @@ export function Service() {
             imageUrl='/home/phone.png'
             imageSize={64}
           />
+
+          <ServiceCard
+            title={t('trackingOnline.title')}
+            content={t('trackingOnline.content')}
+            imageUrl='/home/truck.png'
+            imageSize={70}
+          />
         </div>
 
         <Link
