@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 import { Link } from '@/libs/intl/navigation'

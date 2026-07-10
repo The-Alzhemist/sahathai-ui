@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
-
+import { fetchAllBlog } from '@/libs/storyblok/blogQuery'
 import { BlogCard } from '@/components/BlogCard'
 
 import React from 'react'

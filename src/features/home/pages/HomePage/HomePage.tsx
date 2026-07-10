@@ -11,7 +11,6 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import HomePageNews from '@/features/home/pages/HomePage/components/News'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 import ScrollToTopButton from '@/components/ScrollToTop/ScrollToTop'
-import { PORT_HTML } from '@/features/home/pages/HomePage/components/port'
 
 export function HomePage({ params }: HomePageProps) {
   return (

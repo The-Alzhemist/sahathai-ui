@@ -4,11 +4,9 @@ import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
 import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
-import { useState } from 'react'
-import { AccordionTabs } from '../../components/AccordionTabs'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok, TabStoryblok } from '@/types/storyblok'
+import { GroupStoryblok } from '@/types/storyblok'
 import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'

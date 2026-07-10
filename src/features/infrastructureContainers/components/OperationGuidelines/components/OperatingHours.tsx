@@ -1,11 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import { useLocale } from 'next-intl'
 
 import { OperatingHoursContent } from './OperatingHoursContent'
 
 export default function OperatingHours() {
-  const locale = useLocale()
   return (
     <section>
       {

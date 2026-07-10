@@ -5,9 +5,6 @@ import { oneReportInformationList } from '@/features/investorRelations/component
 export function OneReportTable() {
   const common = useTranslations('common')
   const t = useTranslations('InvestorInformationPage.OneReportTable')
-  const investorTranslate = useTranslations(
-    'InvestorInformationPage.OneReportTable'
-  )
 
   return (
     <div

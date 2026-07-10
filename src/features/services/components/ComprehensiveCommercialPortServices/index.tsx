@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
 import { ComprehensiveCommercialPortCard } from '../ComprehensiveCommercialPortCard'
-import ContainerServices from '@/app/[locale]/services/container-services/page'
 
 export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')

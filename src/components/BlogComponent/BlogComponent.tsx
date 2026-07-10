@@ -6,9 +6,7 @@ import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 
-import Image from 'next/image'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Brochure } from '@/features/blog/components/Brochure'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
 export default function BlogComponent({

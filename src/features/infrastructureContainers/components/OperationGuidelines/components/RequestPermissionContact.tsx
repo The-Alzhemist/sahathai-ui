@@ -1,10 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { useLocale } from 'next-intl'
 import { RequestPermissionContactContent } from './RequestPermissionContactContent'
 
 export default function RequestPermissionContact() {
-  const locale = useLocale()
   return (
     <section>
       <Image

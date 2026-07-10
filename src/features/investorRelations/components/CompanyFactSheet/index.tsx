@@ -1,12 +1,8 @@
-import { useLocale, useTranslations } from 'next-intl'
-
+import { useTranslations } from 'next-intl'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
-import { LocaleButton } from '../LocaleButton'
 import { DownloadButton } from '@/components/DownloadButton'
-import Image from 'next/image'
 import { DocumentIcon } from '@/components/icons/DocumentIcon'
-import { PlusIcon } from '@/components/icons/PlusIcon'
 
 export function CompanyFactSheet() {
   const t = useTranslations('InvestorInformationPage.FactSheet')

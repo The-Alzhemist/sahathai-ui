@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { Link, usePathname } from '@/libs/intl/navigation'
+import { Link } from '@/libs/intl/navigation'
 import { cn } from '@/libs/util'
 
 import { MobileSidebarProps } from '@/components/Header/components/MobileSidebar/interface'
@@ -50,7 +50,6 @@ const SidebarLink = ({
 const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   const t = useTranslations('Header')
   const { menus } = useSubmenu()
-  const pathname = usePathname()
 
   return (
     <nav
@@ -73,7 +72,6 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
         <section className='flex flex-col justify-between h-full'>
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
             {menus.map(menu => {
-              const isActive = menu.pathname === pathname
               if (menu.children && menu.children.length) {
                 return (
                   <MenuCollapse

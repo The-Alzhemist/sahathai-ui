@@ -11,7 +11,7 @@ import { OneReportTable } from '../OneReportTable'
 
 export function FinancialReports() {
   const t = useTranslations('InvestorInformationPage.FinancialReports')
-  const [active, setActive] = useState<FinancialReportsEnum>(
+  const [active] = useState<FinancialReportsEnum>(
     FinancialReportsEnum.OneReport
   )
 

@@ -1,7 +1,6 @@
 'use client'
 import { Fragment, useState } from 'react'
 import { useLocale } from 'next-intl'
-import { useSearchParams } from 'next/navigation'
 
 import {
   autoUpdate,

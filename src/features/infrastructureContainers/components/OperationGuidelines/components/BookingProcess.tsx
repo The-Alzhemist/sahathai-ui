@@ -1,10 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { useLocale } from 'next-intl'
 import { BookingProcessContent } from './BookingProcessContent'
 
 export default function BookingProcess() {
-  const locale = useLocale()
   return (
     <section>
       <Image

@@ -9,11 +9,7 @@ import ShowTwoImage from '@/components/Storyblok/news/ShowTwoImage'
 import Page from '@/components/Storyblok/Page'
 
 
-import {
-  apiPlugin,
-  ISbStoriesParams,
-  storyblokInit,
-} from '@storyblok/react/rsc'
+import { apiPlugin, storyblokInit } from '@storyblok/react/rsc'
 
 export const getStoryblokApi = storyblokInit({
   accessToken: process.env.STORYBLOK_TOKEN,

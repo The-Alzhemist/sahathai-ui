@@ -1,7 +1,6 @@
 import { REVALIDATE_TIME } from '@/config/environtment'
 import { RevalidateTag } from '@/enums/CacheEnum'
 import { CodeOfConductPage } from '@/features/investorRelations/pages/CodeConductPage/CodeConductPage'
-import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
 import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
 import { StoryblokStoryResponse } from '@/libs/storyblok/types'
 import { getTranslations } from 'next-intl/server'

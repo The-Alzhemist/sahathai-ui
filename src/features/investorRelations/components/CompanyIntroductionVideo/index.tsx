@@ -1,8 +1,6 @@
-import {useLocale, useTranslations} from 'next-intl'
-
+import { useTranslations } from 'next-intl'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
-import { LocaleButton } from '../LocaleButton'
 
 export function CompanyIntroductionVideo() {
   const t = useTranslations('InvestorInformationPage.CompanyIntroductionVideo')

@@ -6,7 +6,7 @@ import { Menu } from '@/components/Menu'
 import { GoodCorporatePageProps } from '@/features/investorRelations/pages/GoodCorporatePage/interface'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok, TabStoryblok } from '@/types/storyblok'
+import { GroupStoryblok } from '@/types/storyblok'
 import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
 import { useRouter } from '@/libs/intl/navigation'
 import { AnimatePresence } from 'framer-motion'

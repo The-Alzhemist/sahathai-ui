@@ -1,8 +1,6 @@
 import { useTranslations } from 'next-intl'
 
 import { AboutCard } from '../AboutCard'
-import { SahathaiText } from '@/components/SahathaiText'
-import styles from './ford.module.scss'
 import { WhyChooseSahathai } from '@/features/home/pages/HomePage/components/About/component/WhyChooseSahathai/WhyChooseSahathai'
 import { BuildingIcon } from '@/components/icons/AboutUsBuildingIcon'
 import { ScaleIcon } from '@/components/icons/ScaleIcon'

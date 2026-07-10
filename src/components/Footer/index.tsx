@@ -2,8 +2,7 @@ import { Link } from '@/libs/intl/navigation'
 import { FacebookIcon } from '../icons/FacebookIcon'
 import { InstagramIcon } from '../icons/InstagramIcon'
 import { YoutubeIcon } from '../icons/YoutubeIcon'
-import { useLocale, useTranslations } from 'next-intl'
-
+import { useTranslations } from 'next-intl'
 export function Footer() {
   const t = useTranslations('Footer')
 
