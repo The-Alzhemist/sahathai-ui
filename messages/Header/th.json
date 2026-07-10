@@ -1,16 +1,8 @@
 {
   "Header": {
-    "home": "หน้าแรก",
     "contactUs": "ติดต่อเรา",
     "blog": "บทความ",
     "joinUs": "ร่วมงานกับเรา",
-    "search": "ค้นหา",
-    "news": "ข่าวประชาสัมพันธ์",
-    "eService": "e-service",
-    "aboutUs": "เกี่ยวกับเรา",
-    "service": "บริการ",
-    "shareHolder": "ผู้ถือหุ้น",
-    "shareHolderMeeting": "การประชุมผู้ถือหุ้น",
     "sahathai": "สหไทย",
     "terminal": "เทอร์มินอล"
   }

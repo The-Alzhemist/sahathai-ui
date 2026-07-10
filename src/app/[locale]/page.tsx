@@ -1,7 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
 import { HomePage } from '@/features/home/pages/HomePage'
 import { Metadata } from 'next'
-import { useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 
 export default function Home({ params }: { params: { locale: string } }) {

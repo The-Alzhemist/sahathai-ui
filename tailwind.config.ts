@@ -99,19 +99,11 @@ const config: Config = {
         7: '0px 1px 10px 2px #00000026',
         8: '0px 3px 30px 0px #0000001A',
         9: '0px 3px 4px 0px #00000040',
-        // 1: '0px 1px 3px 0px #A6AFC366',
-        // 2: '0px 4px 24px 0px #0000000D',
-        // 3: '0px 3px 8px 0px #00000014',
-        // 4: '0px 3px 15.2px 5px #00000003',
-        // 5: '0px 4px 8px 0px #ADC4D524',
-        // 6: '0px 1px 4px 0px #0C0C0D1A',
-        // 7: ' 0px 4px 24px 0px #00000024',
       },
       backgroundImage: {
         mainGradient: 'linear-gradient(to bottom, #0194D3, #E54C3C)',
       },
     },
-
   },
   plugins: [],
 }

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import { LicenseCardProps } from './interface'
-import { cn } from '@/libs/util'
 
 export function LicenseCard({
   imageUrl,

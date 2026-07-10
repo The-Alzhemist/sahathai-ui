@@ -11,7 +11,7 @@ export function Modal({ children, className, onClose }: ModalProps) {
       ref={ref}
       className={cn(
         animationClassName,
-        'fixed bg-black/60 top-0 left-0 w-full h-screen z-20 overflow-auto duration-500 modal-open'
+        'fixed bg-black/60 top-0 left-0 w-full h-screen z-40 overflow-auto duration-500 modal-open'
       )}
     >
       <div
@@ -21,7 +21,7 @@ export function Modal({ children, className, onClose }: ModalProps) {
         )}
       >
         <button
-          className='absolute top-[20px] right-[16px] z-20'
+          className='absolute top-[20px] right-[16px] z-40'
           type='button'
           onClick={onClose}
         >

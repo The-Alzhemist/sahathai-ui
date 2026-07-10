@@ -6,9 +6,7 @@ import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 
-import Image from 'next/image'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Brochure } from '@/features/blog/components/Brochure'
 import { Animation } from '@/components/Animation'
 import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
@@ -57,10 +55,6 @@ export default function SocialResponsibilityComponent({
                 {tSocial('Banner.download')}
               </Link>
             </button>
-
-            {/* <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all'>
-              โครงการมอบทุนการศึกษา
-            </button> */}
           </div>
         </BannerImage>
 
@@ -117,18 +111,6 @@ export default function SocialResponsibilityComponent({
           </div>
         </section>
 
-        {/* Brochure */}
-        {/* <section className='relative min-h-[450px] flex justify-center items-center px-5'>
-          <Image
-            src='/news/blog-contact-bg.webp'
-            alt='Blog Background'
-            fill
-            className='absolute inset-0 object-cover object-center z-0'
-            priority
-          />
-
-          <Brochure className='z-10' />
-        </section> */}
         <SustainabilityManagementContent />
       </Animation>
     </div>

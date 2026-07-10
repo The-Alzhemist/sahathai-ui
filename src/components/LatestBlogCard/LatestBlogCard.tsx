@@ -11,7 +11,6 @@ import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
 
 export async function LatestBlogCard({
   blog,
-  locale,
   page,
 }: LatestBlogCardProps) {
   const common = useTranslations('common')

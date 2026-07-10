@@ -1,10 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { StoryblokStory } from '@storyblok/react/rsc'
 import Link from 'next/link'
-import {
-  fetchNewsBySlug,
-  fetchPressReleaseBySlug,
-} from '@/libs/storyblok/blogQuery'
+import { fetchPressReleaseBySlug } from '@/libs/storyblok/blogQuery'
 
 export default async function Page({
   params,

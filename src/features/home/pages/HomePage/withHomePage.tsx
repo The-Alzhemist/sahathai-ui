@@ -1,4 +1,3 @@
-import { FunctionComponentType } from '@/models/FunctionComponentType'
 
 
 interface HomePageAcceptProps {

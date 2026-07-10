@@ -1,9 +1,7 @@
 import Image from 'next/image'
 
-import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { Link } from '@/libs/intl/navigation'
 import { TrackingCardProps } from './interface'
-import { useTranslations } from 'next-intl'
 
 export function TrackingCard({ title, imageUrl, link }: TrackingCardProps) {
   return (

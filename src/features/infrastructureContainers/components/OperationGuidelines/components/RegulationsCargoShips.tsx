@@ -1,10 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { useLocale } from 'next-intl'
 import { RegulationsCargoShipsContent } from './RegulationsCargoShipsContent'
 
 export default function RegulationsCargoShips() {
-  const locale = useLocale()
   return (
     <section>
       <Image

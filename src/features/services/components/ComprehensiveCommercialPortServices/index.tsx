@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
 import { ComprehensiveCommercialPortCard } from '../ComprehensiveCommercialPortCard'
-import ContainerServices from '@/app/[locale]/services/container-services/page'
 
 export function ComprehensiveCommercialPortServices() {
   const t = useTranslations('ServicesPage.ComprehensiveCommercialPortServices')
@@ -38,7 +37,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('commercialDock.bbt.content')}
-            imageUrl='/services/new/service-1.webp'
+            imageUrl='/services/new/service-inside-6.webp'
             link='/services/commercial-dock'
           />
           <ComprehensiveCommercialPortCard
@@ -49,7 +48,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('bargeServices.content')}
-            imageUrl='/services/new/service-2.webp'
+            imageUrl='/services/new/service-inside-2.webp'
             link='/services/barge-services'
           />
           <ComprehensiveCommercialPortCard
@@ -66,7 +65,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('containerMaintenance.content')}
-            imageUrl='/services/new/service-4.webp'
+            imageUrl='/services/new/service-inside-4.webp'
             link='/services/container-maintenance'
           />
           <ComprehensiveCommercialPortCard
@@ -77,7 +76,7 @@ export function ComprehensiveCommercialPortServices() {
               </Fragment>
             }
             content={t('groundContainerTransportationServices.content')}
-            imageUrl='/services/new/service-5.webp'
+            imageUrl='/services/new/service-inside-5.webp'
             link='/services/ground-container-transportation-services'
           />
           <ComprehensiveCommercialPortCard
@@ -85,6 +84,18 @@ export function ComprehensiveCommercialPortServices() {
             content={t('containerService.content')}
             imageUrl='/services/new/service-6.webp'
             link='/services/container-services'
+          />
+          <ComprehensiveCommercialPortCard
+            title={<Fragment>{t('sahathaiTerminal.title')}</Fragment>}
+            content={t('sahathaiTerminal.content')}
+            imageUrl='/services/new/service-inside-7.webp'
+            link='/services/sahathai-terminal'
+          />
+          <ComprehensiveCommercialPortCard
+            title={<Fragment>{t('feederVesselServices.title')}</Fragment>}
+            content={t('feederVesselServices.content')}
+            imageUrl='/services/new/service-inside-8.webp'
+            link='/services/feeder-vessel-services'
           />
         </section>
       </Animation>

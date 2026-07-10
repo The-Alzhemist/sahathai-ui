@@ -1,11 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import { useLocale } from 'next-intl'
 
 import { ServiceProcessContent } from './ServiceProcessContent'
 
 export default function ServiceProcess() {
-  const locale = useLocale()
   return (
     <section>
       <Image

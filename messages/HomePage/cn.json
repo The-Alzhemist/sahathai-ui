@@ -58,10 +58,11 @@
       "automatedContainerReadingTechnology": {
         "title": "自动集装箱读取技术（OCR）",
         "content": "采用OCR系统在港口门进行自动集装箱编号读取，提高准确性，缩短处理时间，提升服务质量。"
+      },
+      "trackingOnline": {
+        "title": "在线集装箱状态追踪系统（Tracking Online）",
+        "content": "透过 LINE OA：@Sahathai 实时追踪进港集装箱状态，全天24小时可查，并在集装箱抵达码头时自动发送通知。快速、准确，随时可查，无需致电询问。"
       }
-    },
-    "News": {
-      "title": "新闻和公告"
     },
     "Highlight": {
       "title": "物流和供应链服务的最佳选择",

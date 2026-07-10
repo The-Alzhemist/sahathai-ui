@@ -2,8 +2,6 @@ import { PrivacyPolicyBox } from '@/features/privacy-policy/components/PrivacyPo
 import withPolicyPage from './withPolicyPage'
 import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
-import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
-import { Banner } from '@/components/Banner'
 
 const PolicyPage = () => {
   const t = useTranslations('PrivacyPolicyPage')

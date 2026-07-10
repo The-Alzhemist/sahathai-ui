@@ -11,7 +11,7 @@ import { OneReportTable } from '../OneReportTable'
 
 export function FinancialReports() {
   const t = useTranslations('InvestorInformationPage.FinancialReports')
-  const [active, setActive] = useState<FinancialReportsEnum>(
+  const [active] = useState<FinancialReportsEnum>(
     FinancialReportsEnum.OneReport
   )
 
@@ -24,7 +24,6 @@ export function FinancialReports() {
         after:opacity-100 after:-z-10 p-3 !mt-0
       "
     >
-      {/* Title */}
       <h2
         id={InvestorInformationEnum.FinancialReports}
         className='headline-2 text-blue-400 text-center'
@@ -35,33 +34,7 @@ export function FinancialReports() {
         ({t('yearlyReport')})
       </h3>
 
-      {/* Tabs (ถ้าจะใช้) */}
-      {/*
-      <FinancialReportsTabs>
-        <Tab
-          isActive={active === FinancialReportsEnum.OneReport}
-          onClick={() => setActive(FinancialReportsEnum.OneReport)}
-        >
-          รายงานประจำปี
-        </Tab>
-
-        <Tab
-          isActive={active === FinancialReportsEnum.OtherFinancialStatements}
-          onClick={() => setActive(FinancialReportsEnum.OtherFinancialStatements)}
-        >
-          {t('otherFinancialStatements')}
-        </Tab>
-      </FinancialReportsTabs>
-      */}
-
-      {/* Content */}
       {active === FinancialReportsEnum.OneReport && <OneReportTable />}
-
-      {/*
-      {active === FinancialReportsEnum.OtherFinancialStatements && (
-        <OtherFinancialStatementsTable />
-      )}
-      */}
     </Animation>
   )
 }

@@ -39,7 +39,6 @@
       "otherMinorShareholders": "ผู้ถือหุ้นรายย่อยอื่นๆ",
       "total": "รวมทั้งหมด"
     },
-    "ShareholdersMeeting": { "title": "การประชุมผู้ถือหุ้น" },
     "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
     "CompanyAdvertiseVideo": { "title": "วิดิโอประชาสัมพันธ์บริษัท" },
     "FactSheet": {
@@ -56,12 +55,6 @@
       "q2": "ไตรมาส 2",
       "q3": "ไตรมาส 3",
       "annual": "ประจำปี"
-    },
-    "GoodCorporate": {
-      "title": "เอกสารการกำกับดูแลกิจการที่ดี",
-      "document": {
-        "codeOfConduct": "จรรยาบรรณธุรกิจ"
-      }
     }
   }
 }

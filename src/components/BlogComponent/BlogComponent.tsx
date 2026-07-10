@@ -6,9 +6,7 @@ import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 
-import Image from 'next/image'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Brochure } from '@/features/blog/components/Brochure'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
 export default function BlogComponent({
@@ -75,19 +73,6 @@ export default function BlogComponent({
             </div>
           </div>
         </section>
-
-        {/* Brochure */}
-        {/* <section className='relative min-h-[450px] flex justify-center items-center px-5'>
-          <Image
-            src='/news/blog-contact-bg.webp'
-            alt='Blog Background'
-            fill
-            className='absolute inset-0 object-cover object-center z-0'
-            priority
-          />
-
-          <Brochure className='z-10' />
-        </section> */}
       </Animation>
     </div>
   )

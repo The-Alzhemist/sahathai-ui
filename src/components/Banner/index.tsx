@@ -7,7 +7,7 @@ export interface BannerProps {
   className?: string
 }
 
-export function Banner({ imagePath, alt, caption, className }: BannerProps) {
+export function Banner({ imagePath, alt, className }: BannerProps) {
   return (
     <section className={`relative h-[450px] ${className}`}>
       <Image

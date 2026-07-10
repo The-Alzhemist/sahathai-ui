@@ -123,7 +123,7 @@ const EventNewsDetailCard: React.FC<EventNewsDetailCardProps> = ({ blok }) => {
     [NODE_HR]: () => <hr className='my-6 border-gray-200' />,
     [NODE_BR]: () => <br />,
     [NODE_IMAGE]: (
-      children: React.ReactNode,
+      _children: React.ReactNode,
       props?: { src?: string; alt?: string; title?: string }
     ) => {
       if (!props?.src) {

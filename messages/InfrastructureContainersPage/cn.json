@@ -35,31 +35,6 @@
         "content": "为了高效管理货物，我们拥有13辆叉车，帮助快速安全地处理Sathai仓库区域内的货物。"
       }
     },
-
-    "Ocr": {
-      "title": "自动货物集装箱读取技术（OCR）",
-      "content": "Sathai Terminal与国内组织合作，开发了用于读取港口入口处货物集装箱编号的光学字符识别（OCR）系统。使用OCR技术提高了操作效率和流畅度，增加了验证的准确性，减少了处理时间，使客户能够获得更快速和高质量的服务。"
-    },
-    "FreeTradeZoneGroup": {
-      "title": "自由贸易区",
-      "content": "Sathai Terminal深知在港区设立海关办公室的重要性，它在减少时间和成本方面发挥着至关重要的作用。",
-      "FreeTradeZone": {
-        "title": "自由贸易区",
-        "content": "距离Sathai Terminal仅200米，总面积达到6400平方米。"
-      },
-      "Facilitate": {
-        "title": "便利设施",
-        "content": "专为更顺畅的货物处理和更简便的停靠操作设计。"
-      },
-      "GoodsStorageServices": {
-        "title": "货物储存服务",
-        "content": "不限时间的货物储存服务。"
-      },
-      "StorageArea": {
-        "title": "储存区",
-        "content": "用于整箱货物（FCL）及指定的自由贸易区储存区域。"
-      }
-    },
     "OperationGuidelines": {
       "title": "操作指南",
       "docking": {

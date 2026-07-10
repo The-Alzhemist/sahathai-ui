@@ -5,7 +5,6 @@ import { useInView } from 'framer-motion'
 
 import { AboutCardProps } from './interface'
 import { cn } from '@/libs/util'
-import { BuildingIcon } from '@/components/icons/AboutUsBuildingIcon'
 
 export function AboutCard({ title, content, imageUrl,icon
                             }: AboutCardProps) {

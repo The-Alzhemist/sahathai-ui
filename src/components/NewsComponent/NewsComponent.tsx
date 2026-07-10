@@ -5,9 +5,7 @@ import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 import React from 'react'
-import Image from 'next/image'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Brochure } from '@/features/news/components/Brochure'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
 export default function NewsComponent({
@@ -52,17 +50,6 @@ export default function NewsComponent({
               {t('pressRelease')}
             </h2>
 
-            {/* Search box แบบง่าย (Server + link) */}
-            {/*<form action="" className="mb-4 flex gap-2">*/}
-            {/*  <input*/}
-            {/*    name="search"*/}
-            {/*    defaultValue={search ?? ''}*/}
-            {/*    placeholder="Search news..."*/}
-            {/*    className="border px-3 py-1 rounded w-full"*/}
-            {/*  />*/}
-            {/*  <button className="px-4 py-1 bg-blue-600 text-white rounded">Search</button>*/}
-            {/*</form>*/}
-
             <section className='flex flex-col justify-center items-center '>
               <div className=' flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
                 {stories.length ? (
@@ -89,19 +76,6 @@ export default function NewsComponent({
             {/*  */}
           </div>
         </section>
-
-        {/* Brochure */}
-        {/* <section className='relative  min-h-[700px] flex justify-center items-center  px-5'>
-          <Image
-            src='/news/new/news-bg.webp'
-            alt='Sustainability Background'
-            fill
-            className='absolute inset-0 object-cover object-center z-0'
-            priority
-          />
-
-          <Brochure className='z-10 mt-[300px]' />
-        </section> */}
       </Animation>
     </section>
   )
