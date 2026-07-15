@@ -5,7 +5,7 @@ import { LogisticInnovation } from '../../components/LogisticInnovation'
 import ContactUs from '@/components/ContactUs/ContactUs'
 import OpticalCharacterRecognition from '@/features/infrastructureContainers/components/OpticalCharacterRecognition/OpticalCharacterRecognition'
 
-import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 

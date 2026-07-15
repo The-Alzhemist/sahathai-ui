@@ -7,7 +7,7 @@ import { BoardAndExecutives } from '../../components/BoardAndExecutives'
 import { CommitmentSuccess } from '../../components/CommitmentSuccess'
 import { CorporateGroupOrganizationalStructure } from '../../components/CorporateGroupOrganizationalStructure'
 import { AboutPageProps, AboutUsTabEnum } from './interface'
-import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 

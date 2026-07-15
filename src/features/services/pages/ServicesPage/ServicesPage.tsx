@@ -6,7 +6,7 @@ import { ComprehensiveCommercialPortServices } from '../../components/Comprehens
 import { InventoryManagementServices } from '../../components/InventoryManagementServices'
 import ContactUs from '@/components/ContactUs/ContactUs'
 
-import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 

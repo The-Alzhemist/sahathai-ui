@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 
 import { Menu } from '@/components/Menu'
 
-import SwiperVertical from '@/components/Header/components/BannerSwiper/BannerSwiper'
+import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { TrackingService } from '@/features/investorRelations/pages/EServicePage/component/TrackingService/TrackingService'
 import { EServicePageProps } from '@/app/[locale]/e-service/interface'
 import { AnimatePresence } from 'framer-motion'

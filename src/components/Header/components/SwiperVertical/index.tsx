@@ -4,49 +4,27 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay, Pagination } from 'swiper/modules'
 import type { SwiperProps } from 'swiper/react'
-import { useEffect, useState } from 'react'
 import { Animation } from '@/components/Animation'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import { cn } from '@/libs/util'
 
 type Slide =
-  | { type: 'image'; src: string }
+  | { type: 'image'; src: string; className?: string }
   | { type: 'video'; src: string; poster?: string }
 
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const mq = window.matchMedia(`(max-width: ${breakpoint}px)`)
-
-    const handleChange = () => setIsMobile(mq.matches)
-    handleChange()
-
-    mq.addEventListener('change', handleChange)
-    return () => mq.removeEventListener('change', handleChange)
-  }, [breakpoint])
-
-  return isMobile
-}
-
 export default function SwiperVertical() {
-  const isMobile = useIsMobile()
-
-  const slidesDesktop: Slide[] = [
-    { type: 'image', src: '/home/new/new-banner-1.webp' },
+  const activeSlides: Slide[] = [
+    {
+      type: 'image',
+      src: '/home/new/new-banner-1.webp',
+      className: 'object-top',
+    },
     { type: 'image', src: '/home/new/new-banner-2.webp' },
-    { type: 'image', src: '/home/new/new-banner-3.webp' },
+    {
+      type: 'image',
+      src: '/home/new/new-banner-3.webp',
+      className: 'object-[center_30%]',
+    },
   ]
-
-  const slidesMobile: Slide[] = [
-    { type: 'image', src: '/home/new/mobile-1.webp' },
-    { type: 'image', src: '/home/new/mobile-2.webp' },
-    { type: 'image', src: '/home/new/mobile-3.webp' },
-  ]
-
-  const activeSlides = isMobile ? slidesMobile : slidesDesktop
 
   const swiperConfig: SwiperProps = {
     modules: [Navigation, Autoplay, Pagination],
@@ -54,7 +32,7 @@ export default function SwiperVertical() {
     slidesPerView: 1,
     loop: true,
     autoplay: { delay: 10000 },
-    className: 'mySwiper w-full h-full',
+    className: 'w-full h-full md:rounded-b-[60px]',
     pagination: {
       el: '.custom-pagination',
       clickable: true,
@@ -63,18 +41,18 @@ export default function SwiperVertical() {
 
   return (
     <Animation>
-      <section className='relative w-full h-[230px] md:h-[630px] z-0 -mt-[50px] top-[50px] md:top-0'>
+      <section className='relative w-full h-[430px] md:h-[630px] z-0 -mt-[60px] md:top-0'>
         <Swiper {...swiperConfig}>
           {activeSlides.map((slide, index) => (
             <SwiperSlide key={`banner-slide-${index}`}>
-              <div className='relative w-full h-[230px] md:h-[630px]'>
+              <div className='relative w-full h-[430px] md:h-[630px]'>
                 {slide.type === 'image' && (
                   <Image
                     src={slide.src}
                     alt={`Slide ${index + 1}`}
                     fill
                     sizes='(max-width: 768px) 100vw, 100vw'
-                    className='object-cover md:rounded-b-[60px]'
+                    className={cn('object-cover', slide.className)}
                     priority={index === 0}
                   />
                 )}
