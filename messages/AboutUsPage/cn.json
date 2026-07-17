@@ -4,7 +4,7 @@
       "visionMission": "愿景与使命",
       "ourCommitmentSuccess": "我们的承诺与成就",
       "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
-      "corporateGroupStructureOrganizationalStructure": "集团架构与组织结构"
+      "corporateGroupStructureOrganizationalStructure": "集团持股结构与公司治理结构"
     },
     "VisionMissionValues": {
       "Slogan": {
@@ -206,9 +206,55 @@
       }
     },
     "CorporateGroupOrganizationalStructure": {
-      "corporateGroup": "集团架构",
+      "corporateGroup": "集团持股结构",
+      "chart": {
+        "parentCompany": "沙泰码头公众有限公司",
+        "subsidiaryLabel": "子公司",
+        "associateLabel": "联营公司",
+        "subsidiaries": [
+          {
+            "percent": "100%",
+            "code": "BBT",
+            "name": "曼谷驳船码头有限公司"
+          },
+          {
+            "percent": "100%",
+            "code": "BCDS",
+            "name": "曼谷集装箱堆场服务有限公司"
+          },
+          {
+            "percent": "100%",
+            "code": "BTS",
+            "name": "曼谷货运服务有限公司"
+          }
+        ],
+        "associates": [
+          {
+            "percent": "40%",
+            "code": "BBS",
+            "name": "曼谷驳船服务有限公司"
+          },
+          {
+            "percent": "25%",
+            "code": "BLP",
+            "name": "曼谷物流园区有限公司"
+          }
+        ],
+        "summary": "公司共有3家子公司及2家联营公司，分别为",
+        "subsidiaryDetailsTitle": "子公司",
+        "subsidiaryDetails": [
+          "曼谷驳船码头有限公司（\"BBT\"）经营沿海船舶或驳船的商业泊位服务（\"BBT码头\"），用于BBT码头与林查班港之间的国内货物运输。公司持有BBT 100%的股份。",
+          "曼谷集装箱堆场服务有限公司（\"BCDS\"）经营集装箱维修服务。公司持有BCDS 100%的股份。",
+          "曼谷货运服务有限公司（\"BTS\"）经营陆路运输服务。公司持有BTS 100%的股份。"
+        ],
+        "associateDetailsTitle": "联营公司",
+        "associateDetails": [
+          "曼谷驳船服务有限公司（\"BBS\"）经营驳船集装箱货物运输服务。公司持有BBS已缴注册资本的40.00%，其余60.00%由South East Asia Medlog Logistics Co., Pte. Ltd.有限公司（持股30.00%）及Global Thai Depot有限公司（持股30.00%）持有，两家公司均为地中海航运公司（MSC）的关联公司。",
+          "曼谷物流园区有限公司（\"BLP\"）从事配送中心的开发与管理。公司持有BLP已缴注册资本的25.00%，其余75.00%由Frasers Property（泰国）公众有限公司持有。"
+        ]
+      },
       "organizationalStructure": {
-        "title": "组织结构",
+        "title": "公司治理结构",
         "content": "下图展示了截至 2023 年 11 月 10 日公司的组织结构。沙泰码头公众有限公司董事会下设风险管理、公司治理与可持续发展委员会、审计委员会、执行委员会，以及提名与薪酬委员会。"
       }
     }
