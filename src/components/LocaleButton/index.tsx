@@ -11,6 +11,7 @@ import {
   autoPlacement,
   useClick,
   useDismiss,
+  FloatingPortal,
 } from '@floating-ui/react'
 import { LocaleEnum } from '@/enums/LocaleEnum'
 import { usePathname, useRouter } from '@/libs/intl/navigation'
@@ -76,55 +77,56 @@ export function LocaleButton({ className, isHomePage }: LocaleButtonProps) {
         {locale}
       </button>
       {isOpen && (
-        <ul
-          className={twMerge(
-            'relative p-[4px] rounded-[6px] z-[10] shadow-3 bg-white w-full text-black-80 uppercase',
-
-          )}
-          ref={refs.setFloating}
-          style={floatingStyles}
-          {...getFloatingProps()}
-        >
-          <li
+        <FloatingPortal>
+          <ul
             className={twMerge(
-              'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
-              isHomePage && 'text-gray-800'
+              'relative p-[4px] rounded-[6px] z-50 shadow-3 bg-white w-full text-black-80 uppercase'
             )}
-            {...getItemProps({
-              onClick() {
-                handleLocaleChange(LocaleEnum.TH)
-              },
-            })}
+            ref={refs.setFloating}
+            style={floatingStyles}
+            {...getFloatingProps()}
           >
-            {LocaleEnum.TH}
-          </li>
-          <li
-            className={twMerge(
-              'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
-              isHomePage && 'text-gray-800'
-            )}
-            {...getItemProps({
-              onClick() {
-                handleLocaleChange(LocaleEnum.EN)
-              },
-            })}
-          >
-            {LocaleEnum.EN}
-          </li>
-          <li
-            className={twMerge(
-              'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
-              isHomePage && 'text-gray-800'
-            )}
-            {...getItemProps({
-              onClick() {
-                handleLocaleChange(LocaleEnum.CN)
-              },
-            })}
-          >
-            {LocaleEnum.CN}
-          </li>
-        </ul>
+            <li
+              className={twMerge(
+                'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
+                isHomePage && 'text-gray-800'
+              )}
+              {...getItemProps({
+                onClick() {
+                  handleLocaleChange(LocaleEnum.TH)
+                },
+              })}
+            >
+              {LocaleEnum.TH}
+            </li>
+            <li
+              className={twMerge(
+                'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
+                isHomePage && 'text-gray-800'
+              )}
+              {...getItemProps({
+                onClick() {
+                  handleLocaleChange(LocaleEnum.EN)
+                },
+              })}
+            >
+              {LocaleEnum.EN}
+            </li>
+            <li
+              className={twMerge(
+                'py-[10px] px-[12px] text-[14px] hover:bg-white-2 hover:cursor-pointer rounded-[6px] text-blue-300',
+                isHomePage && 'text-gray-800'
+              )}
+              {...getItemProps({
+                onClick() {
+                  handleLocaleChange(LocaleEnum.CN)
+                },
+              })}
+            >
+              {LocaleEnum.CN}
+            </li>
+          </ul>
+        </FloatingPortal>
       )}
     </Fragment>
   )
