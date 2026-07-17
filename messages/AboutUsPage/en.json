@@ -4,7 +4,7 @@
       "visionMission": "Vision and Mission",
       "ourCommitmentSuccess": "Our Commitment and Success",
       "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
-      "corporateGroupStructureOrganizationalStructure": "Corporate Group Structure and Organizational Structure"
+      "corporateGroupStructureOrganizationalStructure": "Shareholding Structure of the Corporate Group and Corporate Governance Structure"
     },
     "VisionMissionValues": {
       "Slogan": {
@@ -206,9 +206,55 @@
       }
     },
     "CorporateGroupOrganizationalStructure": {
-      "corporateGroup": "Corporate Group Structure",
+      "corporateGroup": "Shareholding Structure of the Corporate Group",
+      "chart": {
+        "parentCompany": "Sahathai Terminal Public Company Limited",
+        "subsidiaryLabel": "Subsidiaries",
+        "associateLabel": "Associates",
+        "subsidiaries": [
+          {
+            "percent": "100%",
+            "code": "BBT",
+            "name": "Bangkok Barge Terminal Co., Ltd."
+          },
+          {
+            "percent": "100%",
+            "code": "BCDS",
+            "name": "Bangkok Container Depot Service Co., Ltd."
+          },
+          {
+            "percent": "100%",
+            "code": "BTS",
+            "name": "Bangkok Trucking Service Co., Ltd."
+          }
+        ],
+        "associates": [
+          {
+            "percent": "40%",
+            "code": "BBS",
+            "name": "Bangkok Barge Service Co., Ltd."
+          },
+          {
+            "percent": "25%",
+            "code": "BLP",
+            "name": "Bangkok Logistics Park Co., Ltd."
+          }
+        ],
+        "summary": "The Company has 3 subsidiaries and 2 associated companies, as follows",
+        "subsidiaryDetailsTitle": "Subsidiaries",
+        "subsidiaryDetails": [
+          "Bangkok Barge Terminal Co., Ltd. (\"BBT\"), which operates a commercial berth service for coastal vessels or barges (\"BBT Port\") used for domestic cargo transport between BBT Port and Laem Chabang Port. The Company holds 100% of shares in BBT.",
+          "Bangkok Container Depot Service Co., Ltd. (\"BCDS\"), which operates container maintenance services. The Company holds 100% of shares in BCDS.",
+          "Bangkok Trucking Service Co., Ltd. (\"BTS\"), which operates land transportation services. The Company holds 100% of shares in BTS."
+        ],
+        "associateDetailsTitle": "Associates",
+        "associateDetails": [
+          "Bangkok Barge Service Co., Ltd. (\"BBS\"), which operates container cargo transport services by barge. The Company holds 40.00% of the paid-up registered capital in BBS, with the remaining 60.00% held by South East Asia Medlog Logistics Co., Pte. Ltd. (30.00% of the paid-up registered capital) and Global Thai Depot Co., Ltd. (30.00% of the paid-up registered capital), both of which are affiliates of Mediterranean Shipping Company (MSC).",
+          "Bangkok Logistics Park Co., Ltd. (\"BLP\"), which develops and manages a distribution center. The Company holds 25.00% of the paid-up registered capital in BLP, with the remaining 75.00% held by Frasers Property (Thailand) Public Company Limited."
+        ]
+      },
       "organizationalStructure": {
-        "title": "Organizational Structure",
+        "title": "Corporate Governance Structure",
         "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
       }
     }
