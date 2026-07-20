@@ -29,11 +29,15 @@ export function LocaleButton({ className, isHomePage }: LocaleButtonProps) {
   // const queryStrings = useSearchParams()
 
   function handleLocaleChange(value: LocaleEnum) {
+    const search = window.location.search
     const hash = window.location.hash
-    router.replace(hash ? (`${pathname}${hash}` as typeof pathname) : pathname, {
-      locale: value,
-      scroll: false,
-    })
+    router.replace(
+      `${pathname}${search}${hash}` as typeof pathname,
+      {
+        locale: value,
+        scroll: false,
+      }
+    )
   }
 
   const { refs, floatingStyles, context } = useFloating<HTMLLabelElement>({
