@@ -236,22 +236,22 @@
         "进出口代理"
       ],
       "process": {
-        "title": "提升工作流程的创新",
+        "title": "提升内部系统运作的创新",
         "subtitle": "（Process Innovation）",
         "columns": [
           [
-            "自动预约车辆-船只排队系统（Truck Queue）",
-            "自动集装箱盘点系统（e-Tally）",
-            "码头营运管理系统（TOS）"
+            "通过Truck Queue系统在线预约空箱收发排队",
+            "通过e-Tally系统管理货物装箱作业",
+            "通过TOS系统管理码头内部运营"
           ],
           [
-            "运输管理系统（TMS）"
+            "通过TMS系统管理陆路运输车辆"
           ],
           [
-            "仓库管理系统（WMS）"
+            "通过WMS系统管理仓库"
           ],
           [
-            "货运代理软件系统"
+            "通过Forward Soft系统管理货运代理业务"
           ]
         ]
       },
@@ -260,26 +260,26 @@
         "subtitle": "（Service Innovation）",
         "columns": [
           [
-            "在线货物追踪系统（Tracking Online）",
-            "LINE Notify 通知系统",
-            "在线支付系统（e-Payment）"
+            "通过LINE官方账号 @Sahathai 查询货柜状态（Tracking Online）",
+            "通过LINE Notify通知客户进口货柜状态",
+            "e-Payment系统为客户提供便捷的服务费缴纳方式"
           ],
           [],
           [
-            "自动化与机器人系统（Automation & Robot）",
-            "温控仓库"
+            "通过Automation & Robot系统实现仓库内部自动化管理",
+            "开发保税仓及自由贸易区立体（垂直式）仓储设施"
           ],
           []
         ]
       },
       "safety": {
-        "title": "安全与质量创新",
+        "title": "提升服务质量与安全的创新",
         "subtitle": "（Safety & Quality）",
         "columns": [
           [
-            "光学字符识别系统（OCR）",
-            "自动核对系统（e-Matching）",
-            "移动式货柜X光检查系统（Mobile X-Ray）"
+            "OCR系统用于记录进出港口的货柜编号",
+            "通过e-Matching系统核对货物运输单据及放柜指令",
+            "通过Mobile X-Ray System检查货柜内货物"
           ],
           [],
           [],

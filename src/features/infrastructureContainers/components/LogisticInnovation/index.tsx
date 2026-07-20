@@ -1,44 +1,51 @@
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
-import { ShippingIcon } from '@/components/icons/ShippingIcon'
-import { RoadIcon } from '@/components/icons/RoadIcon'
-import { StoreIcon } from '@/components/icons/StoreIcon'
-import { CustomerSupportIcon } from '@/components/icons/CustomerSupportIcon'
-import { CalendarIcon } from '@/components/icons/CalendarIcon'
-import { ListIcon } from '@/components/icons/ListIcon'
-import { PathIcon } from '@/components/icons/PathIcon'
-import { FileTextIcon } from '@/components/icons/FileTextIcon'
-import { DeviceMobileIcon } from '@/components/icons/DeviceMobileIcon'
-import { EnvelopeIcon } from '@/components/icons/EnvelopeIcon'
-import { CheckCircle2Icon } from '@/components/icons/CheckCircle2Icon'
-import { SparklesIcon } from '@/components/icons/SparklesIcon'
-import { EyeIcon } from '@/components/icons/EyeIcon'
-import { WarningIcon } from '@/components/icons/WarningIcon'
+import { cn } from '@/libs/util'
 
-const GROUP_ICONS = [ShippingIcon, RoadIcon, StoreIcon, CustomerSupportIcon]
+const GROUP_ICONS = [
+  '/infrastructure-containers/shipping.png',
+  '/infrastructure-containers/road.png',
+  '/infrastructure-containers/store.png',
+  '/infrastructure-containers/customer-support.png',
+]
 
 const PROCESS_ICONS = [
-  [CalendarIcon, ListIcon, PathIcon],
-  [RoadIcon],
-  [StoreIcon],
-  [FileTextIcon],
+  [
+    '/infrastructure-containers/truck-queue.png',
+    '/infrastructure-containers/e-tally.png',
+    '/infrastructure-containers/tos.png',
+  ],
+  ['/infrastructure-containers/tms.png'],
+  ['/infrastructure-containers/wms.png'],
+  ['/infrastructure-containers/forward-software.png'],
 ]
 
 const SERVICE_ICONS = [
-  [DeviceMobileIcon, EnvelopeIcon, CheckCircle2Icon],
+  [
+    '/infrastructure-containers/tracking-online.png',
+    '/infrastructure-containers/line-notify.png',
+    '/infrastructure-containers/e-payment.png',
+  ],
   [],
-  [SparklesIcon, StoreIcon],
+  [
+    '/infrastructure-containers/automation.png',
+    '/infrastructure-containers/warehouse.png',
+  ],
   [],
 ]
 
-const SAFETY_ICONS = [[EyeIcon, CheckCircle2Icon, WarningIcon], [], [], []]
-
-type IconComponent = React.ComponentType<{
-  width?: string
-  height?: string
-  className?: string
-}>
+const SAFETY_ICONS = [
+  [
+    '/infrastructure-containers/ocr.png',
+    '/infrastructure-containers/e-matching.png',
+    '/infrastructure-containers/mobile-x-ray-system.png',
+  ],
+  [],
+  [],
+  [],
+]
 
 type Band = {
   title: string
@@ -53,7 +60,7 @@ function BandSection({
   titleClassName,
 }: {
   band: Band
-  icons: IconComponent[][]
+  icons: string[][]
   bgClassName: string
   titleClassName: string
 }) {
@@ -77,13 +84,22 @@ function BandSection({
                   className='flex flex-col items-center gap-2 text-center'
                 >
                   {ItemIcon && (
-                    <ItemIcon
-                      width='36'
-                      height='36'
+                    <Image
+                      src={ItemIcon}
+                      width='60'
+                      height='60'
                       className={titleClassName}
+                      alt=''
                     />
                   )}
-                  <p className={`caption-1 ${titleClassName}`}>{item}</p>
+                  <p
+                    className={cn(
+                      'caption-1 whitespace-pre-wrap',
+                      titleClassName
+                    )}
+                  >
+                    {item}
+                  </p>
                 </div>
               )
             })}
@@ -108,7 +124,9 @@ export function LogisticInnovation() {
         id='logistic-innovation'
         className='mb-10 shadow-6 bg-white p-[20px] rounded-[14px]'
       >
-        <h2 className='headline-2 text-primary-1 text-center'>{t('title')}</h2>
+        <h2 className='headline-2 text-primary-1 text-center !font-[500]'>
+          {t('title')}
+        </h2>
 
         <div className='mt-8 grid grid-cols-2 md:grid-cols-4 gap-4'>
           {businessGroups.map((group, index) => {
@@ -118,7 +136,7 @@ export function LogisticInnovation() {
                 key={index}
                 className='flex flex-col items-center gap-3 text-center'
               >
-                <GroupIcon width='44' height='44' />
+                <Image src={GroupIcon} width='80' height='80' alt='' />
                 <p className='body-2 font-semibold'>{group}</p>
               </div>
             )
