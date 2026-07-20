@@ -1,4 +1,4 @@
-import Building from '@/assets/icons/scale.svg'
+import Scale from '@/assets/icons/scale.svg'
 import { Icon } from './Icon'
 
-export const ScaleIcon = Icon(Building)
+export const ScaleIcon = Icon(Scale)

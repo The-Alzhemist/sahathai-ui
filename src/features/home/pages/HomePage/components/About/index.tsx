@@ -49,7 +49,9 @@ export function About() {
               title={t('globalTransportationNetwork.title')}
               content={t('globalTransportationNetwork.content')}
               imageUrl='/home/new/sustain-2-2x.webp'
-              icon={<ScaleIcon width={'30'} height={'30'} />}
+              icon={
+                <ScaleIcon className='text-white' width={'30'} height={'30'} />
+              }
             />
             <AboutCard
               title={t('worldClassStandards.title')}

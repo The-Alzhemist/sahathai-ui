@@ -1,4 +1,4 @@
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Fragment } from 'react'
 
@@ -8,10 +8,10 @@ import { SustainabilityCard } from '@/features/investorRelations/components/Sust
 import { EsgRisk } from '../EsgRisk/EsgRisk'
 import { EmergingRisk } from '../EmergingRisk/EmergingRisk'
 import ESGPolicy from '../ESGPolicy/ESGPolicy'
+import { SustainabilityGoal } from '../SustainabilityGoal'
 
 export function SustainabilityManagementContent() {
   const t = useTranslations('SustainabilityManagementPage')
-  const locale = useLocale()
 
   return (
     <Fragment>
@@ -64,39 +64,7 @@ export function SustainabilityManagementContent() {
       <EsgRisk />
       <EmergingRisk />
       <ESGPolicy />
-
-      <section className='space-y-[40px] py-[88px] bg-white'>
-        <Animation className='max-w-[965px] w-full mx-auto'>
-          <div className='relative w-full pt-[200%]'>
-            {locale === 'th' && (
-              <Image
-                src='/investor-relations/new/sustain-th.webp'
-                alt='sustain-th'
-                className='object-cover'
-                fill
-              />
-            )}
-
-            {locale === 'en' && (
-              <Image
-                src='/investor-relations/new/sustain-en.webp'
-                alt='sustain-en'
-                className='object-cover'
-                fill
-              />
-            )}
-
-            {locale === 'cn' && (
-              <Image
-                src='/investor-relations/new/sustain-cn.webp'
-                alt='sustain-cn'
-                className='object-cover'
-                fill
-              />
-            )}
-          </div>
-        </Animation>
-      </section>
+      <SustainabilityGoal />
     </Fragment>
   )
 }

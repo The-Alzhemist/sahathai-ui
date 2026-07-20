@@ -41,6 +41,48 @@
     },
     "SustainabilityManagementPolicy": {
       "title": "Sustainability Management Policy"
+    },
+    "sustainabilityGoal": {
+      "title": "The Company's Sustainability Management Goals",
+      "intro": "The Company is committed to elevating logistics service development in Thailand by providing services that meet international standards and align with customer needs, while being accountable to all stakeholders, fostering transparency, and developing sustainably. The Company operates to achieve its long-term sustainability development goals for 2022–2027 by setting the following sustainability management strategic directions:",
+      "strategicDirectionTitle": "Strategic Direction",
+      "dimensions": {
+        "environment": "Environmental Dimension",
+        "social": "Social Dimension",
+        "economicGovernance": "Economic and Governance Dimension"
+      },
+      "strategyTitle": "Strategies",
+      "strategyColumns": [
+        {
+          "countLabel": "Consists of 2 strategies:",
+          "items": [
+            "Improving environmental quality and using energy and resources efficiently",
+            "Managing climate change"
+          ]
+        },
+        {
+          "countLabel": "Consists of 3 strategies:",
+          "items": [
+            "Developing employee potential and engagement to support business growth",
+            "Complying with human rights principles and fostering a positive environment",
+            "Creating shared value with communities and society"
+          ]
+        },
+        {
+          "countLabel": "Consists of 2 strategies:",
+          "items": [
+            "Providing end-to-end logistics services and creating added value throughout the supply chain",
+            "Good corporate governance"
+          ]
+        }
+      ],
+      "successFactorsTitle": "Key Success Factors",
+      "successFactors": [
+        "Supply chain management",
+        "Stakeholder management",
+        "Promoting the use of innovation that creates business value"
+      ],
+      "sdgTitle": "Supporting the United Nations Sustainable Development Goals"
     }
   }
 }
