@@ -256,6 +256,162 @@
       "organizationalStructure": {
         "title": "โครงสร้างการกำกับดูแลกิจการ",
         "content": "แผนภาพด้านล่างแสดงให้เห็นถึงโครงสร้างองค์กรของเรา ณ วันที่ 10 พฤศจิกายน 2566 คณะกรรมการของบริษัท สหไทย เทอร์มินอล จำกัด (มหาชน)\n\nประกอบด้วย\n<name>- คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ</name>\n<name>- คณะกรรมการตรวจสอบ</name>\n<name>- คณะกรรมการบริหาร</name>\n<name>- คณะกรรมการสรรหาและพิจารณาค่าตอบแทน</name>"
+      },
+      "orgChart": {
+        "board": {
+          "label": "คณะกรรมการบริษัท",
+          "en": "Board of Directors"
+        },
+        "committees": [
+          {
+            "label": "คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ",
+            "en": "Risk Management, Governance and Sustainability Committee"
+          },
+          {
+            "label": "คณะกรรมการตรวจสอบ",
+            "en": "Audit Committee"
+          },
+          {
+            "label": "คณะกรรมการบริหาร",
+            "en": "Executive Committee"
+          },
+          {
+            "label": "คณะกรรมการสรรหาและกำหนดค่าตอบแทน",
+            "en": "Nomination and Remuneration Committee"
+          }
+        ],
+        "internalAudit": {
+          "label": "ฝ่ายตรวจสอบภายใน",
+          "en": "Internal Audit"
+        },
+        "complianceUnit": {
+          "label": "หน่วยงานดูแลกำกับองค์กร",
+          "en": "Compliance Unit"
+        },
+        "ceo": {
+          "label": "ประธานเจ้าหน้าที่บริหาร",
+          "en": "Chief Executive Officer"
+        },
+        "deputyCeo": {
+          "label": "รองประธานเจ้าหน้าที่บริหาร",
+          "en": "Deputy Chief Executive Officer"
+        },
+        "deputyCeoChildren": [
+          {
+            "title": {
+              "label": "ประธานเจ้าหน้าที่ฝ่ายบริหารจัดการ",
+              "en": "Chief Administrative Officer"
+            },
+            "departments": [
+              {
+                "label": "สายงานทรัพยากรบุคคล",
+                "en": "Human Resource"
+              },
+              {
+                "label": "สายงานจัดซื้อ",
+                "en": "Procurement"
+              },
+              {
+                "label": "สายงานเทคโนโลยีสารสนเทศ",
+                "en": "Information Technology"
+              },
+              {
+                "label": "สายงานธุรการ",
+                "en": "Administration"
+              },
+              {
+                "label": "สายงานความรับผิดชอบต่อสังคม",
+                "en": "Corporate Social Responsibility"
+              }
+            ]
+          },
+          {
+            "title": {
+              "label": "ประธานเจ้าหน้าที่ฝ่ายการเงิน",
+              "en": "Chief Financial Officer"
+            },
+            "departments": [
+              {
+                "label": "สายงานบัญชีและการเงิน",
+                "en": "Accounting and Finance"
+              }
+            ]
+          }
+        ],
+        "ceoDirectOfficers": [
+          {
+            "title": {
+              "label": "ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการกลุ่มขนส่งทางเรือ",
+              "en": "Chief Operating Officer - Terminal"
+            },
+            "departments": [
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานท่าเทียบเรือระหว่างประเทศ",
+                "en": "Operation - International Terminal"
+              },
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานท่าเทียบเรือในประเทศ",
+                "en": "Operation - Inland Terminal"
+              },
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานซ่อมบำรุงตู้คอนเทนเนอร์",
+                "en": "Operation - Depot Service"
+              },
+              {
+                "label": "สายงานควบคุมคุณภาพ ความปลอดภัย อาชีวอนามัยและสิ่งแวดล้อม",
+                "en": "QSSHE"
+              }
+            ]
+          },
+          {
+            "title": {
+              "label": "ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการกลุ่มขนส่งและคลังสินค้า",
+              "en": "Chief Operating Officer - Logistic Solution"
+            },
+            "departments": [
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานบริการขนส่งและสินค้า",
+                "en": "Operation - Freight and Solution"
+              },
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานขนส่งทางบก",
+                "en": "Operation - Trucking"
+              },
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานขนส่งทางน้ำ",
+                "en": "Operation - Barge"
+              },
+              {
+                "label": "สายงานปฏิบัติการ กลุ่มงานคลังสินค้า",
+                "en": "Operation - Warehouse"
+              }
+            ]
+          },
+          {
+            "title": {
+              "label": "ประธานเจ้าหน้าที่ฝ่ายพาณิชย์",
+              "en": "Chief Commercial Officer"
+            },
+            "departments": [
+              {
+                "label": "สายงานพาณิชย์ กลุ่มงานการตลาดท่าเทียบเรือ",
+                "en": "Commercial - Terminal"
+              },
+              {
+                "label": "สายงานพาณิชย์ กลุ่มงานด้านลูกค้าและขนส่ง",
+                "en": "Freight and Customer Service"
+              },
+              {
+                "label": "สายงานพาณิชย์ กลุ่มลูกค้าสัมพันธ์",
+                "en": "Customer Service"
+              },
+              {
+                "label": "สายงานพาณิชย์ กลุ่มพัฒนาธุรกิจ",
+                "en": "Business Development"
+              }
+            ]
+          }
+        ]
       }
     }
   }

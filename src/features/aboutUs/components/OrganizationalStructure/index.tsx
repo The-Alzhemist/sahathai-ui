@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Animation } from '@/components/Animation'
 import { useLayoutEffect, useRef, useState } from 'react'
 
-type Bilingual = { th: string; en: string }
+type Bilingual = { label: string; en: string }
 
 type OfficerColumn = {
   title: Bilingual
@@ -13,137 +13,6 @@ type OfficerColumn = {
 }
 
 const GAP_PX = 24
-
-const BOARD: Bilingual = {
-  th: 'คณะกรรมการบริษัท',
-  en: 'Board of Directors',
-}
-
-const COMMITTEES: Bilingual[] = [
-  {
-    th: 'คณะกรรมการบริหารความเสี่ยง บรรษัทภิบาล และความยั่งยืนของกิจการ',
-    en: 'Risk Management, Governance and Sustainability Committee',
-  },
-  { th: 'คณะกรรมการตรวจสอบ', en: 'Audit Committee' },
-  { th: 'คณะกรรมการบริหาร', en: 'Executive Committee' },
-  {
-    th: 'คณะกรรมการสรรหาและกำหนดค่าตอบแทน',
-    en: 'Nomination and Remuneration Committee',
-  },
-]
-
-const INTERNAL_AUDIT: Bilingual = {
-  th: 'ฝ่ายตรวจสอบภายใน',
-  en: 'Internal Audit',
-}
-
-const COMPLIANCE_UNIT: Bilingual = {
-  th: 'หน่วยงานดูแลกำกับองค์กร',
-  en: 'Compliance Unit',
-}
-
-const CEO: Bilingual = {
-  th: 'ประธานเจ้าหน้าที่บริหาร',
-  en: 'Chief Executive Officer',
-}
-
-const DEPUTY_CEO: Bilingual = {
-  th: 'รองประธานเจ้าหน้าที่บริหาร',
-  en: 'Deputy Chief Executive Officer',
-}
-
-// Direct subordinates of the Deputy CEO
-const DEPUTY_CEO_CHILDREN: OfficerColumn[] = [
-  {
-    title: {
-      th: 'ประธานเจ้าหน้าที่ฝ่ายบริหารจัดการ',
-      en: 'Chief Administrative Officer',
-    },
-    departments: [
-      { th: 'สายงานทรัพยากรบุคคล', en: 'Human Resource' },
-      { th: 'สายงานจัดซื้อ', en: 'Procurement' },
-      { th: 'สายงานเทคโนโลยีสารสนเทศ', en: 'Information Technology' },
-      { th: 'สายงานธุรการ', en: 'Administration' },
-      {
-        th: 'สายงานความรับผิดชอบต่อสังคม',
-        en: 'Corporate Social Responsibility',
-      },
-    ],
-  },
-  {
-    title: {
-      th: 'ประธานเจ้าหน้าที่ฝ่ายการเงิน',
-      en: 'Chief Financial Officer',
-    },
-    departments: [
-      { th: 'สายงานบัญชีและการเงิน', en: 'Accounting and Finance' },
-    ],
-  },
-]
-
-// Officers reporting directly to the CEO (siblings of the Deputy CEO)
-const CEO_DIRECT_OFFICERS: OfficerColumn[] = [
-  {
-    title: {
-      th: 'ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการกลุ่มขนส่งทางเรือ',
-      en: 'Chief Operating Officer - Terminal',
-    },
-    departments: [
-      {
-        th: 'สายงานปฏิบัติการ กลุ่มงานท่าเทียบเรือระหว่างประเทศ',
-        en: 'Operation - International Terminal',
-      },
-      {
-        th: 'สายงานปฏิบัติการ กลุ่มงานท่าเทียบเรือในประเทศ',
-        en: 'Operation - Inland Terminal',
-      },
-      {
-        th: 'สายงานปฏิบัติการ กลุ่มงานซ่อมบำรุงตู้คอนเทนเนอร์',
-        en: 'Operation - Depot Service',
-      },
-      {
-        th: 'สายงานควบคุมคุณภาพ ความปลอดภัย อาชีวอนามัยและสิ่งแวดล้อม',
-        en: 'QSSHE',
-      },
-    ],
-  },
-  {
-    title: {
-      th: 'ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการกลุ่มขนส่งและคลังสินค้า',
-      en: 'Chief Operating Officer - Logistic Solution',
-    },
-    departments: [
-      {
-        th: 'สายงานปฏิบัติการ กลุ่มงานบริการขนส่งและสินค้า',
-        en: 'Operation - Freight and Solution',
-      },
-      { th: 'สายงานปฏิบัติการ กลุ่มงานขนส่งทางบก', en: 'Operation - Trucking' },
-      { th: 'สายงานปฏิบัติการ กลุ่มงานขนส่งทางน้ำ', en: 'Operation - Barge' },
-      {
-        th: 'สายงานปฏิบัติการ กลุ่มงานคลังสินค้า',
-        en: 'Operation - Warehouse',
-      },
-    ],
-  },
-  {
-    title: {
-      th: 'ประธานเจ้าหน้าที่ฝ่ายพาณิชย์',
-      en: 'Chief Commercial Officer',
-    },
-    departments: [
-      {
-        th: 'สายงานพาณิชย์ กลุ่มงานการตลาดท่าเทียบเรือ',
-        en: 'Commercial - Terminal',
-      },
-      {
-        th: 'สายงานพาณิชย์ กลุ่มงานด้านลูกค้าและขนส่ง',
-        en: 'Freight and Customer Service',
-      },
-      { th: 'สายงานพาณิชย์ กลุ่มลูกค้าสัมพันธ์', en: 'Customer Service' },
-      { th: 'สายงานพาณิชย์ กลุ่มพัฒนาธุรกิจ', en: 'Business Development' },
-    ],
-  },
-]
 
 function columnCenterX(index: number, count: number, gapPx: number): string {
   const percent = ((index + 0.5) / count) * 100
@@ -172,10 +41,7 @@ function TreeConnector({
     dropStyle === 'dotted' ? 'border-l border-dotted' : 'border-l-2'
 
   return (
-    <div
-      className='relative block w-full'
-      style={{ height: totalHeight }}
-    >
+    <div className='relative block w-full' style={{ height: totalHeight }}>
       {/* stem down from parent */}
       <div
         className='absolute left-1/2 -translate-x-1/2 top-0 border-l-2 border-secondary'
@@ -253,7 +119,7 @@ function BilingualBox({
       <p
         className={`text-xs md:text-sm font-semibold leading-snug ${textColorClass}`}
       >
-        {data.th}
+        {data.label}
       </p>
       <p className='text-[10px] md:text-xs text-black-6 leading-snug mt-[2px]'>
         ({data.en})
@@ -262,8 +128,26 @@ function BilingualBox({
   )
 }
 
+function DepartmentLabel({ data }: { data: Bilingual }) {
+  return (
+    <div className='border-b border-secondary pb-2 text-center'>
+      <p className='text-xs font-semibold text-black-3'>{data.label}</p>
+      <p className='text-[10px] text-black-6 mt-[2px]'>({data.en})</p>
+    </div>
+  )
+}
+
 export function OrganizationalStructure() {
   const t = useTranslations('AboutUsPage.CorporateGroupOrganizationalStructure')
+
+  const board = t.raw('orgChart.board') as Bilingual
+  const committees = t.raw('orgChart.committees') as Bilingual[]
+  const internalAudit = t.raw('orgChart.internalAudit') as Bilingual
+  const complianceUnit = t.raw('orgChart.complianceUnit') as Bilingual
+  const ceo = t.raw('orgChart.ceo') as Bilingual
+  const deputyCeo = t.raw('orgChart.deputyCeo') as Bilingual
+  const deputyCeoChildren = t.raw('orgChart.deputyCeoChildren') as OfficerColumn[]
+  const ceoDirectOfficers = t.raw('orgChart.ceoDirectOfficers') as OfficerColumn[]
 
   // Compliance Unit (under Risk Committee, column 0) and Internal Audit
   // (under Audit Committee, column 1) can end up taller than the CEO's own
@@ -341,7 +225,7 @@ export function OrganizationalStructure() {
                 <hr className='flex-1 border-t-[3px] border-t-red-300' />
               </div>
               <div className='max-w-[280px] w-full'>
-                <BilingualBox data={BOARD} variant='solid' />
+                <BilingualBox data={board} variant='solid' />
               </div>
               <div className='w-full max-w-[300px] flex items-center mt-2'>
                 <hr className='flex-1 border-t-[3px] border-t-blue-300' />
@@ -358,7 +242,7 @@ export function OrganizationalStructure() {
                 run across to the CEO (index 2), not to the committee above
                 them. */}
             <div ref={gridRef} className='relative grid grid-cols-5 gap-x-6'>
-              {COMMITTEES.slice(0, 2).map((committee, index) => (
+              {committees.slice(0, 2).map((committee, index) => (
                 <div key={index} className='flex flex-col items-center'>
                   <BilingualBox data={committee} />
 
@@ -366,7 +250,7 @@ export function OrganizationalStructure() {
                     <>
                       <div className='h-6 border-l border-dotted border-lightGray' />
                       <div ref={column1Ref} className='w-full'>
-                        <BilingualBox data={INTERNAL_AUDIT} variant='light' />
+                        <BilingualBox data={internalAudit} variant='light' />
                       </div>
                     </>
                   )}
@@ -375,7 +259,7 @@ export function OrganizationalStructure() {
                     <>
                       <div className='h-6 border-l border-dotted border-lightGray' />
                       <div ref={column0Ref} className='w-full'>
-                        <BilingualBox data={COMPLIANCE_UNIT} variant='light' />
+                        <BilingualBox data={complianceUnit} variant='light' />
                       </div>
                     </>
                   )}
@@ -393,7 +277,7 @@ export function OrganizationalStructure() {
                   style={{ height: ceoDropHeight }}
                 />
                 <div ref={ceoBoxRef} className='max-w-[240px] w-full'>
-                  <BilingualBox data={CEO} variant='solid' />
+                  <BilingualBox data={ceo} variant='solid' />
                 </div>
 
                 {/* Bridges the gap down to CEO's subtree below (which is
@@ -407,7 +291,7 @@ export function OrganizationalStructure() {
                 />
               </div>
 
-              {COMMITTEES.slice(2).map((committee, i) => {
+              {committees.slice(2).map((committee, i) => {
                 const index = i + 3
                 return (
                   <div key={index} className='flex flex-col items-center'>
@@ -468,13 +352,13 @@ export function OrganizationalStructure() {
             <div className='grid grid-cols-4 gap-x-6'>
               <div className='flex flex-col items-center'>
                 <div className='max-w-[180px] w-full'>
-                  <BilingualBox data={DEPUTY_CEO} variant='dashed-emphasis' />
+                  <BilingualBox data={deputyCeo} variant='dashed-emphasis' />
                 </div>
 
                 <TreeConnector count={2} gapPx={16} dropStyle='dotted' />
 
                 <div className='grid grid-cols-2 gap-x-4 w-full'>
-                  {DEPUTY_CEO_CHILDREN.map((child, childIndex) => (
+                  {deputyCeoChildren.map((child, childIndex) => (
                     <div
                       key={childIndex}
                       className='flex flex-col items-center'
@@ -483,17 +367,7 @@ export function OrganizationalStructure() {
 
                       <div className='mt-6 w-full space-y-4'>
                         {child.departments.map((dept, deptIndex) => (
-                          <div
-                            key={deptIndex}
-                            className='border-b border-secondary pb-2 text-center'
-                          >
-                            <p className='text-xs font-semibold text-black-3'>
-                              {dept.th}
-                            </p>
-                            <p className='text-[10px] text-black-6 mt-[2px]'>
-                              ({dept.en})
-                            </p>
-                          </div>
+                          <DepartmentLabel key={deptIndex} data={dept} />
                         ))}
                       </div>
                     </div>
@@ -501,23 +375,13 @@ export function OrganizationalStructure() {
                 </div>
               </div>
 
-              {CEO_DIRECT_OFFICERS.map((officer, officerIndex) => (
+              {ceoDirectOfficers.map((officer, officerIndex) => (
                 <div key={officerIndex} className='flex flex-col items-center'>
                   <BilingualBox data={officer.title} variant='solid' />
 
                   <div className='mt-6 w-full space-y-4'>
                     {officer.departments.map((dept, deptIndex) => (
-                      <div
-                        key={deptIndex}
-                        className='border-b border-secondary pb-2 text-center'
-                      >
-                        <p className='text-xs font-semibold text-black-3'>
-                          {dept.th}
-                        </p>
-                        <p className='text-[10px] text-black-6 mt-[2px]'>
-                          ({dept.en})
-                        </p>
-                      </div>
+                      <DepartmentLabel key={deptIndex} data={dept} />
                     ))}
                   </div>
                 </div>
