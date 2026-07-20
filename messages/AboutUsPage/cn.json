@@ -256,6 +256,162 @@
       "organizationalStructure": {
         "title": "公司治理结构",
         "content": "下图展示了截至 2023 年 11 月 10 日公司的组织结构。沙泰码头公众有限公司董事会下设风险管理、公司治理与可持续发展委员会、审计委员会、执行委员会，以及提名与薪酬委员会。"
+      },
+      "orgChart": {
+        "board": {
+          "label": "董事会",
+          "en": "Board of Directors"
+        },
+        "committees": [
+          {
+            "label": "风险管理、公司治理与可持续发展委员会",
+            "en": "Risk Management, Governance and Sustainability Committee"
+          },
+          {
+            "label": "审计委员会",
+            "en": "Audit Committee"
+          },
+          {
+            "label": "执行委员会",
+            "en": "Executive Committee"
+          },
+          {
+            "label": "提名与薪酬委员会",
+            "en": "Nomination and Remuneration Committee"
+          }
+        ],
+        "internalAudit": {
+          "label": "内部审计部",
+          "en": "Internal Audit"
+        },
+        "complianceUnit": {
+          "label": "合规管理单位",
+          "en": "Compliance Unit"
+        },
+        "ceo": {
+          "label": "首席执行官",
+          "en": "Chief Executive Officer"
+        },
+        "deputyCeo": {
+          "label": "副首席执行官",
+          "en": "Deputy Chief Executive Officer"
+        },
+        "deputyCeoChildren": [
+          {
+            "title": {
+              "label": "首席行政官",
+              "en": "Chief Administrative Officer"
+            },
+            "departments": [
+              {
+                "label": "人力资源部",
+                "en": "Human Resource"
+              },
+              {
+                "label": "采购部",
+                "en": "Procurement"
+              },
+              {
+                "label": "信息技术部",
+                "en": "Information Technology"
+              },
+              {
+                "label": "行政部",
+                "en": "Administration"
+              },
+              {
+                "label": "企业社会责任部",
+                "en": "Corporate Social Responsibility"
+              }
+            ]
+          },
+          {
+            "title": {
+              "label": "首席财务官",
+              "en": "Chief Financial Officer"
+            },
+            "departments": [
+              {
+                "label": "会计与财务部",
+                "en": "Accounting and Finance"
+              }
+            ]
+          }
+        ],
+        "ceoDirectOfficers": [
+          {
+            "title": {
+              "label": "港口运输运营首席官",
+              "en": "Chief Operating Officer - Terminal"
+            },
+            "departments": [
+              {
+                "label": "运营部 - 国际码头组",
+                "en": "Operation - International Terminal"
+              },
+              {
+                "label": "运营部 - 国内码头组",
+                "en": "Operation - Inland Terminal"
+              },
+              {
+                "label": "运营部 - 集装箱维修组",
+                "en": "Operation - Depot Service"
+              },
+              {
+                "label": "质量、安全、职业健康与环境管理部（QSSHE）",
+                "en": "QSSHE"
+              }
+            ]
+          },
+          {
+            "title": {
+              "label": "运输与仓储运营首席官",
+              "en": "Chief Operating Officer - Logistic Solution"
+            },
+            "departments": [
+              {
+                "label": "运营部 - 货运服务组",
+                "en": "Operation - Freight and Solution"
+              },
+              {
+                "label": "运营部 - 陆运组",
+                "en": "Operation - Trucking"
+              },
+              {
+                "label": "运营部 - 驳船运输组",
+                "en": "Operation - Barge"
+              },
+              {
+                "label": "运营部 - 仓储组",
+                "en": "Operation - Warehouse"
+              }
+            ]
+          },
+          {
+            "title": {
+              "label": "首席商务官",
+              "en": "Chief Commercial Officer"
+            },
+            "departments": [
+              {
+                "label": "商务部 - 码头市场组",
+                "en": "Commercial - Terminal"
+              },
+              {
+                "label": "货运与客户服务组",
+                "en": "Freight and Customer Service"
+              },
+              {
+                "label": "商务部 - 客户关系组",
+                "en": "Customer Service"
+              },
+              {
+                "label": "商务部 - 业务发展组",
+                "en": "Business Development"
+              }
+            ]
+          }
+        ]
       }
     }
   }

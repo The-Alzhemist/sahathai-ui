@@ -41,6 +41,48 @@
     },
     "SustainabilityManagementPolicy": {
       "title": "可持续发展管理政策"
+    },
+    "sustainabilityGoal": {
+      "title": "公司可持续发展管理目标",
+      "intro": "公司致力于提升泰国物流服务的发展水平，以符合国际标准并满足客户需求的服务，同时对各利益相关方负责，营造透明度并实现可持续发展。公司致力于实现2022年至2027年的长期可持续发展目标，为此制定了以下可持续发展管理战略方向：",
+      "strategicDirectionTitle": "战略方向",
+      "dimensions": {
+        "environment": "环境维度",
+        "social": "社会维度",
+        "economicGovernance": "经济与公司治理维度"
+      },
+      "strategyTitle": "战略",
+      "strategyColumns": [
+        {
+          "countLabel": "共2项战略：",
+          "items": [
+            "提升环境质量，高效利用能源与资源",
+            "管理气候变化"
+          ]
+        },
+        {
+          "countLabel": "共3项战略：",
+          "items": [
+            "发展员工潜力与凝聚力，支持业务增长",
+            "遵循人权原则，营造良好环境",
+            "与社区及社会共创价值"
+          ]
+        },
+        {
+          "countLabel": "共2项战略：",
+          "items": [
+            "提供全方位物流服务，为整个供应链创造附加价值",
+            "良好的公司治理"
+          ]
+        }
+      ],
+      "successFactorsTitle": "促成成功的关键因素",
+      "successFactors": [
+        "供应链管理",
+        "利益相关方管理",
+        "推动创新应用以创造商业价值"
+      ],
+      "sdgTitle": "支持联合国可持续发展目标"
     }
   }
 }

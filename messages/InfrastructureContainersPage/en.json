@@ -226,6 +226,66 @@
           "Description": "Dedicated storage areas for full container load (FCL) and free trade zone-specific areas."
         }
       }
+    },
+    "LogisticInnovation": {
+      "title": "Logistic Innovation",
+      "businessGroups": [
+        "Integrated Commercial Port",
+        "Inland Container Transportation",
+        "Container Storage & Warehousing",
+        "Import-Export Agent"
+      ],
+      "process": {
+        "title": "Innovation to Develop Internal Systems",
+        "subtitle": "(Process Innovation)",
+        "columns": [
+          [
+            "Online empty container pick-up/drop-off queue booking via the Truck Queue system",
+            "Cargo loading management via the e-Tally system",
+            "Terminal operations management via the Terminal Operating System (TOS)"
+          ],
+          [
+            "Land transport management via the Transportation Management System (TMS)"
+          ],
+          [
+            "Warehouse management via the Warehouse Management System (WMS)"
+          ],
+          [
+            "Freight forwarder operations management via the Forward Soft system"
+          ]
+        ]
+      },
+      "service": {
+        "title": "Innovation to Improve Service",
+        "subtitle": "(Service Innovation)",
+        "columns": [
+          [
+            "Container status tracking (Tracking Online) via LINE Official Account: @Sahathai",
+            "Inbound container status alerts for customers via LINE Notify",
+            "e-Payment system for convenient service fee payment"
+          ],
+          [],
+          [
+            "Automated warehouse management via Automation & Robot systems",
+            "Development of vertical (multi-storey) bonded warehouse and free trade zone facilities"
+          ],
+          []
+        ]
+      },
+      "safety": {
+        "title": "Innovation to Elevate Service Quality and Safety",
+        "subtitle": "(Safety & Quality)",
+        "columns": [
+          [
+            "OCR system for recording container numbers entering and exiting the port",
+            "Verification of cargo transfer documents and container release orders via the e-Matching system",
+            "Cargo inspection inside containers via the Mobile X-Ray System"
+          ],
+          [],
+          [],
+          []
+        ]
+      }
     }
   }
 }

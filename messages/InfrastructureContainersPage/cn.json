@@ -201,7 +201,6 @@
         }
       }
     },
-
     "OCR": {
       "Title": "自动货柜读取技术 (OCR)",
       "Description": "Sathai 码头与国内组织合作开发了一套自动货柜读取系统，即 OCR（光学字符识别）技术，用于在港口入口读取货柜编号。使用 OCR 技术可以提高运营效率和流畅性，增强验证的准确性，并缩短处理时间，使客户能够获得更快速、更高质量的服务。"
@@ -226,6 +225,66 @@
           "Title": "货物存储区",
           "Description": "专用于整箱货物（FCL）和自由贸易区特定区域的存储。"
         }
+      }
+    },
+    "LogisticInnovation": {
+      "title": "Logistic Innovation",
+      "businessGroups": [
+        "全方位商业港口服务",
+        "陆路集装箱运输",
+        "集装箱存储与仓储",
+        "进出口代理"
+      ],
+      "process": {
+        "title": "提升内部系统运作的创新",
+        "subtitle": "（Process Innovation）",
+        "columns": [
+          [
+            "通过Truck Queue系统在线预约空箱收发排队",
+            "通过e-Tally系统管理货物装箱作业",
+            "通过TOS系统管理码头内部运营"
+          ],
+          [
+            "通过TMS系统管理陆路运输车辆"
+          ],
+          [
+            "通过WMS系统管理仓库"
+          ],
+          [
+            "通过Forward Soft系统管理货运代理业务"
+          ]
+        ]
+      },
+      "service": {
+        "title": "提升服务水平的创新",
+        "subtitle": "（Service Innovation）",
+        "columns": [
+          [
+            "通过LINE官方账号 @Sahathai 查询货柜状态（Tracking Online）",
+            "通过LINE Notify通知客户进口货柜状态",
+            "e-Payment系统为客户提供便捷的服务费缴纳方式"
+          ],
+          [],
+          [
+            "通过Automation & Robot系统实现仓库内部自动化管理",
+            "开发保税仓及自由贸易区立体（垂直式）仓储设施"
+          ],
+          []
+        ]
+      },
+      "safety": {
+        "title": "提升服务质量与安全的创新",
+        "subtitle": "（Safety & Quality）",
+        "columns": [
+          [
+            "OCR系统用于记录进出港口的货柜编号",
+            "通过e-Matching系统核对货物运输单据及放柜指令",
+            "通过Mobile X-Ray System检查货柜内货物"
+          ],
+          [],
+          [],
+          []
+        ]
       }
     }
   }
