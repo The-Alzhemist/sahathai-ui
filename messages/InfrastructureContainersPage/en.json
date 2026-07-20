@@ -226,6 +226,66 @@
           "Description": "Dedicated storage areas for full container load (FCL) and free trade zone-specific areas."
         }
       }
+    },
+    "LogisticInnovation": {
+      "title": "Logistic Innovation",
+      "businessGroups": [
+        "Integrated Commercial Port",
+        "Inland Container Transportation",
+        "Container Storage & Warehousing",
+        "Import-Export Agent"
+      ],
+      "process": {
+        "title": "Innovation to Improve Work Processes",
+        "subtitle": "(Process Innovation)",
+        "columns": [
+          [
+            "Automated truck-queue booking system (Truck Queue)",
+            "Automated container tally system (e-Tally)",
+            "Terminal Operating System (TOS)"
+          ],
+          [
+            "Transportation Management System (TMS)"
+          ],
+          [
+            "Warehouse Management System (WMS)"
+          ],
+          [
+            "Forwarder Software system"
+          ]
+        ]
+      },
+      "service": {
+        "title": "Innovation to Improve Service",
+        "subtitle": "(Service Innovation)",
+        "columns": [
+          [
+            "Online cargo tracking system (Tracking Online)",
+            "LINE Notify alert system",
+            "Online payment system (e-Payment)"
+          ],
+          [],
+          [
+            "Automation & Robot systems",
+            "Temperature-controlled warehouse"
+          ],
+          []
+        ]
+      },
+      "safety": {
+        "title": "Innovation for Safety and Quality",
+        "subtitle": "(Safety & Quality)",
+        "columns": [
+          [
+            "Optical Character Recognition system (OCR)",
+            "Automated verification system (e-Matching)",
+            "Mobile X-Ray container inspection system"
+          ],
+          [],
+          [],
+          []
+        ]
+      }
     }
   }
 }
