@@ -1,56 +1,59 @@
 import { useTranslations } from 'next-intl'
 
 import { Animation } from '@/components/Animation'
-import { LeavesIcon } from '@/components/icons/LeavesIcon'
-import { GlobeIcon } from '@/components/icons/GlobeIcon'
-import { UsersIcon } from '@/components/icons/UsersIcon'
-import { PeopleIcon } from '@/components/icons/PeopleIcon'
-import { KindnessIcon } from '@/components/icons/KindnessIcon'
-import { ShippingIcon } from '@/components/icons/ShippingIcon'
-import { ScaleIcon } from '@/components/icons/ScaleIcon'
-import { ChartIcon } from '@/components/icons/ChartIcon'
+import Image from 'next/image'
+import { cn } from '@/libs/util'
 
-const DIMENSION_ICONS = [LeavesIcon, UsersIcon, ChartIcon]
-
-const STRATEGY_ICONS = [
-  [LeavesIcon, GlobeIcon],
-  [UsersIcon, PeopleIcon, KindnessIcon],
-  [ShippingIcon, ScaleIcon],
+const DIMENSION_ICONS: string[] = [
+  '/social-responsibility/environment-1.png',
+  '/social-responsibility/social-1.png',
+  '/social-responsibility/economic-governance-1.png',
 ]
 
-const SDG_COLORS: Record<number, string> = {
-  4: '#C5192D',
-  5: '#FF3A21',
-  6: '#26BDE2',
-  7: '#FCC30B',
-  8: '#A21942',
-  9: '#FD6925',
-  10: '#DD1367',
-  13: '#3F7E44',
-  16: '#00689D',
-}
+const STRATEGY_ICONS: string[][] = [
+  [
+    '/social-responsibility/environment-2.png',
+    '/social-responsibility/environment-3.png',
+  ],
+  [
+    '/social-responsibility/social-2.png',
+    '/social-responsibility/social-3.png',
+    '/social-responsibility/social-4.png',
+  ],
+  [
+    '/social-responsibility/economic-governance-2.png',
+    '/social-responsibility/economic-governance-3.png',
+  ],
+]
+
+const SDG_COLUMN_GRID_CLASSES = ['grid-cols-2', 'grid-cols-3', 'grid-cols-2']
 
 const SDG_COLUMNS = [
-  [9, 6, 13, 7],
-  [9, 4, 5, 8, 10, 16],
-  [8, 9, 16],
+  [
+    '/social-responsibility/3.png',
+    '/social-responsibility/6.png',
+    '/social-responsibility/7.png',
+    '/social-responsibility/13.png',
+  ],
+  [
+    '/social-responsibility/3.png',
+    '/social-responsibility/4.png',
+    '/social-responsibility/5.png',
+    '/social-responsibility/8.png',
+    '/social-responsibility/10.png',
+    '/social-responsibility/16.png',
+  ],
+  [
+    '/social-responsibility/8.png',
+    '/social-responsibility/9.png',
+    '/social-responsibility/16.png',
+  ],
 ]
 
 function SectionHeader({ children }: { children: string }) {
   return (
     <div className='bg-blue-400 text-white text-center py-3 rounded-[4px] headline-6 font-semibold'>
       {children}
-    </div>
-  )
-}
-
-function SdgBadge({ number }: { number: number }) {
-  return (
-    <div
-      className='w-[52px] h-[52px] rounded-[4px] flex flex-col items-center justify-center text-white shrink-0'
-      style={{ backgroundColor: SDG_COLORS[number] ?? '#999999' }}
-    >
-      <span className='text-[10px] font-bold leading-none'>{number}</span>
     </div>
   )
 }
@@ -88,11 +91,8 @@ export function SustainabilityGoal() {
                   key={index}
                   className='flex flex-col items-center gap-3 px-4'
                 >
-                  <DimensionIcon
-                    width='48'
-                    height='48'
-                    className='text-red-400'
-                  />
+                  <Image src={DimensionIcon} width={80} height={80} alt='' />
+
                   <p className='body-2 font-semibold text-blue-400 text-center'>
                     {label}
                   </p>
@@ -125,10 +125,11 @@ export function SustainabilityGoal() {
                           <div className='absolute bg-secondary w-[6px] h-[6px] rounded-full left-1/2 -translate-x-1/2' />
                         </div>
                         {StrategyIcon && (
-                          <StrategyIcon
-                            width='36'
-                            height='36'
-                            className='text-red-400'
+                          <Image
+                            src={StrategyIcon}
+                            width={60}
+                            height={60}
+                            alt=''
                           />
                         )}
                         <p className='mt-2 body-2 text-black-6'>{item}</p>
@@ -161,15 +162,29 @@ export function SustainabilityGoal() {
         <div className='mt-[40px] space-y-6'>
           <SectionHeader>{t('sdgTitle')}</SectionHeader>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-y-6 md:divide-x divide-black-8'>
+          <div className='flex flex-col gap-y-8 md:grid md:grid-cols-3 md:gap-y-0 md:divide-x divide-black-8 place-items-center'>
             {SDG_COLUMNS.map((column, columnIndex) => (
-              <div
-                key={columnIndex}
-                className='flex flex-wrap justify-center content-start gap-2 px-4'
-              >
-                {column.map(number => (
-                  <SdgBadge key={number} number={number} />
-                ))}
+              <div className='w-full grid place-items-center' key={columnIndex}>
+                <div
+                  className={cn(
+                    'grid gap-2 place-content-center w-fit',
+                    SDG_COLUMN_GRID_CLASSES[columnIndex]
+                  )}
+                >
+                  {column.map((src, index) => (
+                    <Image
+                      className={cn({
+                        'place-self-center col-span-2':
+                          columnIndex === 2 && column.length - 1 === index,
+                      })}
+                      key={index}
+                      src={src}
+                      width={60}
+                      height={60}
+                      alt=''
+                    />
+                  ))}
+                </div>
               </div>
             ))}
           </div>
