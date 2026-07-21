@@ -10,8 +10,3 @@ export type TabType =
   | 'documentSubmissionProcess'
   | 'bookingProcess'
   | 'serviceCharge'
-
-export interface DockProps {
-  imageUrl: string
-  description: string
-}
