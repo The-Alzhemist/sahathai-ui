@@ -45,14 +45,83 @@ export function OperationGuidelines() {
   ]
 
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '') as TabType
-    const validKeys = tabs.map(t => t.key)
-    if (hash && validKeys.includes(hash)) {
-      setActive(hash)
-      setTimeout(() => {
-        sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
+    // The browser restores the scroll position from before a refresh, which
+    // races with (and usually wins against) our own scrollIntoView below —
+    // that's why the anchor scroll would silently fail specifically on
+    // reload. Take manual control so our hash-based scroll is authoritative.
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
     }
+
+    // Content above this section (e.g. the machinery-equipment carousel)
+    // renders many times taller than its final size until its slider
+    // library initializes client-side, so this section keeps moving for a
+    // while after mount. Rather than guess a fixed delay, keep re-aligning
+    // (with an instant, non-animated scroll so it doesn't fight a moving
+    // target) until the section's position stops shifting. `cancelled` lets
+    // the effect's cleanup stop this loop — without it, React Strict Mode's
+    // dev-only double-invoke runs two competing loops that fight each other.
+    let cancelled = false
+    let timeoutId: ReturnType<typeof setTimeout> | undefined
+
+    const scrollToSection = () => {
+      let lastTop: number | null = null
+      let stableCount = 0
+      let attempts = 0
+      const maxAttempts = 60 // ~12s at 200ms
+      const requiredStableChecks = 5 // ~1s of no movement before trusting it
+
+      const check = () => {
+        if (cancelled) return
+        attempts += 1
+        const el = sectionRef.current
+        if (!el) return
+
+        el.scrollIntoView({ behavior: 'auto' })
+
+        const top = el.getBoundingClientRect().top
+        if (lastTop !== null && Math.abs(top - lastTop) < 2) {
+          stableCount += 1
+        } else {
+          stableCount = 0
+        }
+        lastTop = top
+
+        if (stableCount < requiredStableChecks && attempts < maxAttempts) {
+          timeoutId = setTimeout(check, 200)
+        }
+      }
+
+      check()
+    }
+
+    const handleHash = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash === 'operation-guidelines') {
+        scrollToSection()
+        return
+      }
+
+      const validKeys = tabs.map(t => t.key)
+      if (hash && validKeys.includes(hash as TabType)) {
+        setActive(hash as TabType)
+        scrollToSection()
+      }
+    }
+
+    handleHash()
+    window.addEventListener('hashchange', handleHash)
+    // The browser re-asserts its own previous-scroll-position restoration
+    // around the `load` event on this image-heavy page, overriding whatever
+    // we scrolled to earlier — re-run our correction once more after that.
+    window.addEventListener('load', handleHash)
+    return () => {
+      cancelled = true
+      window.removeEventListener('load', handleHash)
+      if (timeoutId) clearTimeout(timeoutId)
+      window.removeEventListener('hashchange', handleHash)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function onTabChange(value: TabType) {
