@@ -9,14 +9,16 @@ export function Vision() {
   const t = useTranslations('AboutUsPage.VisionMissionValues.Vision')
 
   return (
-    <Animation className='mt-[90px] flex flex-col-reverse  lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
-      <div className='relative w-[220px] md:w-[550px] h-auto shrink-0'>
-        <Image
-          src='/about-us/new/team-3x.webp'
-          alt='About us team'
-          fill
-          className='object-contain'
-        />
+    <Animation className='mt-[90px] flex flex-col-reverse items-center lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
+      <div className='w-full md:w-[550px] shrink-0'>
+        <div className='relative pt-[66.73%] w-full'>
+          <Image
+            src='/about-us/new/team.webp'
+            alt='About us team'
+            fill
+            className='object-contain rounded-[30px] overflow-hidden'
+          />
+        </div>
       </div>
       <section className='py-[20px] pr-[30px]'>
         <div className='max-w-[400px] w-full'>
