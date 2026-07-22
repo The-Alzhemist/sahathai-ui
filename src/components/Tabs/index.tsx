@@ -1,8 +1,11 @@
 import { cn } from '@/libs/util'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 import { TabsProps } from './interface'
 import { Tab } from './Tab'
 
 export function Tabs({ className, tabs, style, active, onChange }: TabsProps) {
+  const { bumpTick } = useNavigationTick()
+
   return (
     <div
       className={cn('flex overflow-x-auto gap-x-2', className, {
@@ -16,7 +19,10 @@ export function Tabs({ className, tabs, style, active, onChange }: TabsProps) {
           icon={row.icon}
           style={style}
           isActive={active === row.key || active === row.title}
-          onClick={() => onChange(row.key ?? row.title)}
+          onClick={() => {
+            bumpTick()
+            onChange(row.key ?? row.title)
+          }}
         />
       ))}
     </div>

@@ -8,6 +8,7 @@ import React from 'react'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 export default function NewsComponent({
   stories,
   latestBlog,
@@ -25,9 +26,11 @@ export default function NewsComponent({
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
+  const { tick } = useNavigationTick()
+
   return (
     <section>
-      <Animation key={`news-${Date.now()}`}>
+      <Animation key={tick}>
         <Menu />
         <section
           id='latestNews'

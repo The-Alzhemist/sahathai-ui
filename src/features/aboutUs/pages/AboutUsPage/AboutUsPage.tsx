@@ -10,12 +10,15 @@ import { AboutPageProps, AboutUsTabEnum } from './interface'
 import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function AboutUsPage({ active, boardData }: AboutPageProps) {
+  const { tick } = useNavigationTick()
+
   return (
     <main>
       <AnimatePresence mode='wait'>
-        <Animation key={`about-us-page+${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <SwiperVertical />
 

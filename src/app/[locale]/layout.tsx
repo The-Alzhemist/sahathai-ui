@@ -16,6 +16,7 @@ import StoryblokProvider from '@/components/StoryBokProvider'
 
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 import { ScrollVisibleProvider } from '@/context/ScrollVisibleContext'
+import { NavigationTickProvider } from '@/context/NavigationTickContext'
 
 import '@/libs/storyblok/init'
 import { BannerPopup } from '@/components/BannerPopup/BannerPopup'
@@ -51,15 +52,17 @@ export default async function LocaleLayout({
         <body>
           <NextIntlClientProvider messages={messages}>
             <ScrollVisibleProvider>
-              <Header />
+              <NavigationTickProvider>
+                <Header />
 
-              {children}
-              <Footer />
-              <BannerPopup locale={locale} />
-              <ToastContainer />
-              <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
-              <CookieConsentFloatingBar />
-              <ScrollToTopButton />
+                {children}
+                <Footer />
+                <BannerPopup locale={locale} />
+                <ToastContainer />
+                <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
+                <CookieConsentFloatingBar />
+                <ScrollToTopButton />
+              </NavigationTickProvider>
             </ScrollVisibleProvider>
           </NextIntlClientProvider>
         </body>

@@ -10,11 +10,13 @@ import { GroupStoryblok } from '@/types/storyblok'
 import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function DocumentAnnouncementPage({
   data,
 }: DocumentAnnouncementPageProps) {
   const tMenu = useTranslations('Menu')
+  const { tick } = useNavigationTick()
 
   if (!data) {
     return <div>No data</div>
@@ -25,7 +27,7 @@ export function DocumentAnnouncementPage({
   return (
     <main className='pb-[176px] bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`document-announcement-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <BannerImage
             mobileImageSrc='/investor-relations/new/investor-banner-mobile-8.webp'

@@ -11,10 +11,12 @@ import GroupAccordionTabs from '@/features/investorRelations/components/GroupAcc
 import { useRouter } from '@/libs/intl/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
   useRouter()
   const tMenu = useTranslations('Menu')
+  const { tick } = useNavigationTick()
 
   if (!data) {
     return <div>No data</div>
@@ -25,7 +27,7 @@ export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
   return (
     <main className='pb-[176px] bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`good-corporate-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
 
           <BannerImage

@@ -12,12 +12,14 @@ import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
 import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
 import { ContactUsForm } from '@/components/ContactUs/ContactUsForm'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function CodeOfConductPage({
   conOdConductData,
 }: CodeOfConductPageProps) {
   useRouter()
   const t = useTranslations('CodeConductPage')
+  const { tick } = useNavigationTick()
 
   if (!conOdConductData) {
     return <div>No data</div>
@@ -28,7 +30,7 @@ export function CodeOfConductPage({
   return (
     <main className='pb-[176px] bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`code-of-conduct-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <BannerImage
             mobileImageSrc='/investor-relations/new/investor-banner-mobile-4.webp'

@@ -13,7 +13,3 @@ export interface TabProps extends TabType {
   isActive?: boolean
   onClick: () => void
 }
-
-export interface TabProviderProps {
-  children: React.ReactNode
-}

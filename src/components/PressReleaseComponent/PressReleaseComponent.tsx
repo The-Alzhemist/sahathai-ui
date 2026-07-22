@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 export default function PressReleaseComponent({
   stories,
   latestBlog,
@@ -26,9 +27,11 @@ export default function PressReleaseComponent({
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
+  const { tick } = useNavigationTick()
+
   return (
     <div>
-      <Animation key={`press-release-${Date.now()}`}>
+      <Animation key={tick}>
         <Menu />
 
         {/* Latest Blog */}

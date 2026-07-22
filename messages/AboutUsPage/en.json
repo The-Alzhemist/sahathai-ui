@@ -255,7 +255,7 @@
       },
       "organizationalStructure": {
         "title": "Corporate Governance Structure",
-        "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited consists of the Risk Management, Corporate Governance, and Sustainability Committee, the Audit Committee, the Executive Committee, and the Nomination and Remuneration Committee."
+        "content": "The diagram below illustrates our organizational structure as of November 10, 2023. The Board of Directors of Sahathai Terminal Public Company Limited\n\nconsists of\n<name>- Risk Management, Corporate Governance and Sustainability Committee</name>\n<name>- Audit Committee</name>\n<name>- Executive Committee</name>\n<name>- Nomination and Remuneration Committee</name>"
       },
       "orgChart": {
         "board": {

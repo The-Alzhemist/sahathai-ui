@@ -11,12 +11,14 @@ import { AnimatePresence } from 'framer-motion'
 
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function ShareHolderMeetingPage({
   shareHolderMeetingData,
 }: ShareHolderMeetingPageProps) {
   useRouter()
   const tMenu = useTranslations('Menu')
+  const { tick } = useNavigationTick()
 
   if (!shareHolderMeetingData) {
     return <div>No data</div>
@@ -29,7 +31,7 @@ export function ShareHolderMeetingPage({
   return (
     <main className='pb-[176px] bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`code-of-conduct-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <BannerImage
             mobileImageSrc='/investor-relations/new/investor-banner-mobile-5.webp'

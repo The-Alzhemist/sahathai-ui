@@ -12,6 +12,7 @@ import { useRouter } from '@/libs/intl/navigation'
 
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function FinancialInformationPage({
   financialInformationData,
@@ -19,6 +20,7 @@ export function FinancialInformationPage({
   useRouter()
 
   const tMenu = useTranslations('Menu')
+  const { tick } = useNavigationTick()
 
   if (!financialInformationData) {
     return <div>No data</div>
@@ -31,7 +33,7 @@ export function FinancialInformationPage({
   return (
     <main className='pb-[176px] bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`financial-information-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <BannerImage
             mobileImageSrc='/investor-relations/new/investor-banner-mobile-6.webp'

@@ -11,6 +11,7 @@ import { Animation } from '@/components/Animation'
 import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export default function SocialResponsibilityComponent({
   stories,
@@ -31,9 +32,11 @@ export default function SocialResponsibilityComponent({
   const t = useTranslations('NewsPage')
   const tSocial = useTranslations('Responsibility')
 
+  const { tick } = useNavigationTick()
+
   return (
     <div>
-      <Animation key={`social-responsibility-${Date.now()}`}>
+      <Animation key={tick}>
         <Menu />
 
         <BannerImage

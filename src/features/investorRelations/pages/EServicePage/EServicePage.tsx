@@ -7,14 +7,17 @@ import { TrackingService } from '@/features/investorRelations/pages/EServicePage
 import { EServicePageProps } from '@/app/[locale]/e-service/interface'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function EServicePage({ data }: EServicePageProps) {
   const t = useTranslations('EServicePage')
 
+  const { tick } = useNavigationTick()
+
   return (
     <main className='bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`e-service-page-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <SwiperVertical />
           <section className=' max-w-[1120px] w-full mx-auto px-5'>
