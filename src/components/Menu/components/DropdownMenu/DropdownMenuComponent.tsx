@@ -108,7 +108,17 @@ export const DropdownMenuComponent = React.forwardRef<
         <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
           {isOpen && (
             <FloatingPortal>
-              <FloatingFocusManager context={context} modal={false}>
+              {/* This dropdown only opens on hover (no useClick/useFocus is
+                  registered above), so it has no real keyboard interaction to
+                  manage. FloatingFocusManager's defaults still move focus on
+                  open/close, though, and calling .focus() on the trigger
+                  button — which sits inside a `position: sticky` Menu nested
+                  in a `position: sticky` Header — makes the browser's
+                  scroll-to-reveal-focused-element behavior jump to the
+                  button's static (un-stuck) document position instead of
+                  its visible one. Disabling focus management here removes
+                  that scroll jump without any loss of function. */}
+              <FloatingFocusManager context={context} modal={false} disabled>
                 <div
                   ref={refs.setFloating}
                   className='z-50 bg-background p-[4px] rounded-b-[6px] outline-0 text-white min-w-[163px]'
