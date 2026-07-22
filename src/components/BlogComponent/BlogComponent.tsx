@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 export default function BlogComponent({
   stories,
   latestBlog,
@@ -26,9 +27,11 @@ export default function BlogComponent({
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
+  const { tick } = useNavigationTick()
+
   return (
     <div>
-      <Animation key={`blog-${Date.now()}`}>
+      <Animation key={tick}>
         <Menu />
 
         {/* Latest Blog */}

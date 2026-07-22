@@ -8,12 +8,15 @@ import OpticalCharacterRecognition from '@/features/infrastructureContainers/com
 import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function InfrastructureContainersPage() {
+  const { tick } = useNavigationTick()
+
   return (
     <main>
       <AnimatePresence mode='wait'>
-        <Animation key={`infra-structure-page-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
 
           <SwiperVertical />

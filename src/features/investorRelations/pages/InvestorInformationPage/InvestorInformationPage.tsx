@@ -16,14 +16,17 @@ import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { InvestorInformationPageProps } from '@/features/investorRelations/pages/InvestorInformationPage/interface'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
-export async function InvestorInformationPage({
+export function InvestorInformationPage({
   stockData,
 }: InvestorInformationPageProps) {
+  const { tick } = useNavigationTick()
+
   return (
     <main className='bg-[#F5f5f5]'>
       <AnimatePresence mode='wait'>
-        <Animation key={`about-us-page+${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
           <BannerImage
             mobileImageSrc='/investor-relations/new/investor-banner-mobile-1.webp'

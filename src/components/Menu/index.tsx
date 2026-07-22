@@ -6,12 +6,14 @@ import { DropdownMenu } from '@/components/Menu/components/DropdownMenu/Dropdown
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 import { useScrollVisible } from '@/context/ScrollVisibleContext'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 import { DropdownMenuItem } from './components/DropdownMenuItem/DropdownMenuItem'
 
 export function Menu() {
   const { menus } = useSubmenu()
   const pathname = usePathname()
   const { isVisible } = useScrollVisible()
+  const { bumpTick } = useNavigationTick()
   const router = useRouter()
 
   return (
@@ -47,7 +49,10 @@ export function Menu() {
                 key={menu.title}
                 label={menu.title}
                 className={twMerge(isActive ? ' bg-white/15' : '')}
-                onClick={() => router.push(menu.pathname)}
+                onClick={() => {
+                  bumpTick()
+                  router.push(menu.pathname)
+                }}
               >
                 {menu.children.map(subMenu => {
                   return (
@@ -63,6 +68,7 @@ export function Menu() {
                             : undefined
                         }
                         href={subMenu.pathname}
+                        onClick={bumpTick}
                       >
                         {subMenu.title}
                       </Link>
@@ -82,6 +88,7 @@ export function Menu() {
                 target={menu.isExternalLink ? '_blank' : undefined}
                 rel={menu.isExternalLink ? 'noopener noreferrer' : undefined}
                 href={menu.pathname}
+                onClick={bumpTick}
               >
                 {menu.title}
               </Link>

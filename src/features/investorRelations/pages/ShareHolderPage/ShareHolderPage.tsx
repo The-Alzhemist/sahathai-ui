@@ -18,15 +18,18 @@ import DividendPolicy from '@/features/investorRelations/pages/ShareHolderPage/c
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { AnimatePresence } from 'framer-motion'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function ShareHolderPage() {
   useRouter()
   const t = useTranslations('InvestorInformationPage.Shareholder')
 
+  const { tick } = useNavigationTick()
+
   return (
     <main className='pb-[176px] bg-white '>
       <AnimatePresence mode='wait'>
-        <Animation key={`financial-information-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
 
           <BannerImage

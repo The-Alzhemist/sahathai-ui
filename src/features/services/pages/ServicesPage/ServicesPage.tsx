@@ -9,12 +9,15 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function ServicesPage() {
+  const { tick } = useNavigationTick()
+
   return (
     <main>
       <AnimatePresence mode='wait'>
-        <Animation key={`service-page+${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
 
           <SwiperVertical />

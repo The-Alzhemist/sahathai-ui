@@ -12,12 +12,15 @@ import withContactUs from '@/components/ContactUs/withContactUs'
 import Link from 'next/link'
 import { Menu } from '@/components/Menu'
 import { ContactUsForm } from './ContactUsForm'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 const ContactUs = ({ className, isShowMenuBar = false }: ContactUsProps) => {
   const t = useTranslations('ContactUs')
 
+  const { tick } = useNavigationTick()
+
   return (
-    <Animation className={className} key={`contact-us-${Date.now()}`}>
+    <Animation className={className} key={tick}>
       {isShowMenuBar && <Menu />}
       <section className='container-mini pt-[96px] space-y-[52px]'>
         <h2

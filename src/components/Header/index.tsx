@@ -13,11 +13,13 @@ import { FacebookIcon } from '@/components/icons/FacebookIcon'
 import { InstagramIcon } from '@/components/icons/InstagramIcon'
 import { usePathname } from 'next/navigation'
 import { useScrollVisible } from '@/context/ScrollVisibleContext'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function Header() {
   const t = useTranslations('Header')
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
   const { isVisible } = useScrollVisible()
+  const { bumpTick } = useNavigationTick()
   const pathname = usePathname()
 
   const handleOnToggleMobileSidebar = () => {
@@ -63,7 +65,7 @@ export function Header() {
         )}
       >
         {!isHomePage && (
-          <Link href='/' className='shrink-0 p-[10px]'>
+          <Link href='/' className='shrink-0 p-[10px]' onClick={bumpTick}>
             <Image src='/logo.png' width={101} height={24} alt='' priority />
           </Link>
         )}
@@ -71,17 +73,29 @@ export function Header() {
         <section className='flex gap-x-5'>
           <ul className='flex justify-end items-center w-full medium gap-[42px] lg:mr-10'>
             <li className='hidden lg:block '>
-              <Link href='/blog?page=1' className='flex items-center'>
+              <Link
+                href='/blog?page=1'
+                className='flex items-center'
+                onClick={bumpTick}
+              >
                 {t('blog')}
               </Link>
             </li>
             <li className='hidden lg:block '>
-              <Link href='/contact-us' className='flex items-center'>
+              <Link
+                href='/contact-us'
+                className='flex items-center'
+                onClick={bumpTick}
+              >
                 {t('contactUs')}
               </Link>
             </li>
             <li className='hidden lg:block '>
-              <Link className='flex items-center' href='/join-us'>
+              <Link
+                className='flex items-center'
+                href='/join-us'
+                onClick={bumpTick}
+              >
                 {t('joinUs')}
               </Link>
             </li>
@@ -139,7 +153,7 @@ export function Header() {
       {/* header secondary */}
       {isHomePage && (
         <section className=' relative px-5 py-[8px] flex justify-between items-center h-[60px]'>
-          <Link href='/' className='shrink-0 absolute'>
+          <Link href='/' className='shrink-0 absolute' onClick={bumpTick}>
             <Image
               src='/logo.png'
               className='p-2'

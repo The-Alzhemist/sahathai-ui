@@ -10,12 +10,14 @@ import { useRouter } from '@/libs/intl/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 import { SetExchangeAnnouncementPageProps } from '@/features/investorRelations/pages/SetExchangeAnnouncementPage/interface'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function SetExchangeAnnouncementPage({
   data,
 }: SetExchangeAnnouncementPageProps) {
   useRouter()
   const tMenu = useTranslations('Menu')
+  const { tick } = useNavigationTick()
 
   if (!data) {
     return <div>No data</div>
@@ -26,7 +28,7 @@ export function SetExchangeAnnouncementPage({
   return (
     <main className='pb-[176px] bg-white'>
       <AnimatePresence mode='wait'>
-        <Animation key={`set-exchange-announcement-${Date.now()}`}>
+        <Animation key={tick}>
           <Menu />
 
           <BannerImage

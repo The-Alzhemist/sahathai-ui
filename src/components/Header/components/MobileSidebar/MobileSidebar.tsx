@@ -13,6 +13,7 @@ import { useSubmenu } from '@/hooks/useSubmenu'
 import React from 'react'
 import MenuCollapse from '@/components/Header/components/MenuCollapse/MenuCollapse'
 import { NewspaperIcon } from '@/components/icons/NewsIcon'
+import { useNavigationTick } from '@/context/NavigationTickContext'
 
 interface SidebarLinkProps {
   href: string
@@ -31,8 +32,15 @@ const SidebarLink = ({
   isExternalLink = false,
   isSubMenu = false,
 }: SidebarLinkProps) => {
+  const { bumpTick } = useNavigationTick()
+
   return (
-    <div onClick={onClick}>
+    <div
+      onClick={() => {
+        bumpTick()
+        onClick()
+      }}
+    >
       <Link
         className='flex items-center gap-x-2'
         href={href}
@@ -50,6 +58,7 @@ const SidebarLink = ({
 const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   const t = useTranslations('Header')
   const { menus } = useSubmenu()
+  const { bumpTick } = useNavigationTick()
 
   return (
     <nav
@@ -61,7 +70,7 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
     >
       <div className='h-full max-w-7xl mx-auto flex flex-col'>
         <section className='flex justify-between pb-2 border-b'>
-          <Link href='/' className='shrink-0 p-[10px]'>
+          <Link href='/' className='shrink-0 p-[10px]' onClick={bumpTick}>
             <Image src='/logo.png' width={101} height={24} alt='' priority />
           </Link>
           <div className='text-xl cursor-pointer' onClick={handleOnToggle}>
