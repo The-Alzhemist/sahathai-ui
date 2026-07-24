@@ -13,6 +13,9 @@ import { useSubmenu } from '@/hooks/useSubmenu'
 import React from 'react'
 import MenuCollapse from '@/components/Header/components/MenuCollapse/MenuCollapse'
 import { NewspaperIcon } from '@/components/icons/NewsIcon'
+import { YoutubeIcon } from '@/components/icons/YoutubeIcon'
+import { FacebookIcon } from '@/components/icons/FacebookIcon'
+import { InstagramIcon } from '@/components/icons/InstagramIcon'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 
 interface SidebarLinkProps {
@@ -42,14 +45,14 @@ const SidebarLink = ({
       }}
     >
       <Link
-        className='flex items-center gap-x-2'
+        className='group flex items-center gap-x-2'
         href={href}
         target={isExternalLink ? '_blank' : undefined}
         rel={isExternalLink ? 'noopener noreferrer' : undefined}
       >
         {icon && icon}
-        {isSubMenu && <span className='px-2'>-</span>}
-        <span className='text-black-6'>{label}</span>
+        {isSubMenu && <span className='px-2 group-hover:text-navy'>-</span>}
+        <span className='text-black-6 group-hover:text-navy'>{label}</span>
       </Link>
     </div>
   )
@@ -63,12 +66,12 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
   return (
     <nav
       className={cn(
-        'bg-white h-full w-full fixed top-0 left-0 z-20 p-5 overflow-y-scroll',
+        'bg-white h-full w-full fixed top-0 left-0 z-20 flex flex-col',
         'transition-all duration-500',
         isVisible ? 'opacity-100 ' : ' opacity-0'
       )}
     >
-      <div className='h-full max-w-7xl mx-auto flex flex-col'>
+      <div className='max-w-7xl w-full mx-auto px-5 pt-5 shrink-0'>
         <section className='flex justify-between pb-2 border-b'>
           <Link href='/' className='shrink-0 p-[10px]' onClick={bumpTick}>
             <Image src='/logo.png' width={101} height={24} alt='' priority />
@@ -77,8 +80,13 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
             X
           </div>
         </section>
+      </div>
 
-        <section className='flex flex-col justify-between h-full'>
+      <div
+        className='max-w-7xl w-full mx-auto px-5 flex-1 min-h-0 overflow-y-auto'
+        style={{ paddingBottom: 'max(24px, env(safe-area-inset-bottom))' }}
+      >
+        <div className='min-h-full flex flex-col justify-between'>
           <div className='flex flex-col mt-10 gap-y-6 text-gray-700'>
             {menus.map(menu => {
               if (menu.children && menu.children.length) {
@@ -137,8 +145,35 @@ const MobileSidebar = ({ handleOnToggle, isVisible }: MobileSidebarProps) => {
               label={t('joinUs')}
               onClick={handleOnToggle}
             />
+
+            <div className='flex items-center gap-x-2 text-blue-300 -ml-2'>
+              <Link
+                href='https://www.youtube.com/channel/UCp2XYZiyDSN6Xt5DSQv_foA/videos?view=0&sort=dd&shelf_id=0'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2'
+              >
+                <YoutubeIcon width='22' height='22' />
+              </Link>
+              <Link
+                href='https://www.facebook.com/sahathaiterminal/?locale=th_TH'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2'
+              >
+                <FacebookIcon width='22' height='22' />
+              </Link>
+              <Link
+                href='https://www.instagram.com/sahathaiterminal/?hl=en'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-2'
+              >
+                <InstagramIcon width='22' height='22' />
+              </Link>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </nav>
   )

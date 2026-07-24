@@ -109,7 +109,7 @@ export function Header() {
 
           <div
             className={twMerge(
-              `flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`
+              `hidden lg:flex gap-x-[16px] ${isHomePage ? 'text-white' : 'text-blue-300'}`
             )}
           >
             <Link

@@ -9,12 +9,18 @@ const MenuCollapse = ({ children, title, icon }: MenuCollapseProps) => {
   return (
     <div className='min-h-[40px]'>
       <div
-        className='flex py-[12px] justify-between items-center'
+        className='group flex py-[12px] justify-between items-center'
         onClick={() => setToggle(prev => !prev)}
       >
         <div className='flex gap-x-2'>
           {icon}
-          <h3 className={cn('prompt', { 'text-navy': toggle })}>{title}</h3>
+          <h3
+            className={cn('prompt group-hover:text-navy', {
+              'text-navy': toggle,
+            })}
+          >
+            {title}
+          </h3>
         </div>
         {toggle ? (
           <ChevronUpIcon className='text-navy' width='20' height='20' />
