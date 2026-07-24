@@ -31,7 +31,7 @@ export function SustainabilityManagementContent() {
           </h2>
         </div>
 
-        <Animation className='relative  mt-[50px] mb-[100px] max-w-[950px] mx-auto flex gap-y-5 justify-center md:justify-between flex-wrap'>
+        <Animation className='relative  mt-[50px] mb-[100px] max-w-[950px] mx-auto flex gap-5 justify-center md:justify-between flex-wrap'>
           <SustainabilityCard
             title={t('economicDimension.title')}
             descriptions={[t('economicDimension.description')]}
