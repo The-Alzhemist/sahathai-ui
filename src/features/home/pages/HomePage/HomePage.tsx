@@ -10,7 +10,6 @@ import ContactUs from '@/components/ContactUs/ContactUs'
 
 import HomePageNews from '@/features/home/pages/HomePage/components/News'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
-import ScrollToTopButton from '@/components/ScrollToTop/ScrollToTop'
 
 export function HomePage({ params }: HomePageProps) {
   return (
@@ -24,7 +23,6 @@ export function HomePage({ params }: HomePageProps) {
       <OurSubsidiaries />
       <ContactUs className='mt-[94px] mb-[111px]' />
       <HamburgerMenu />
-      <ScrollToTopButton />
     </main>
   )
 }

@@ -9,6 +9,7 @@ import {
   useDismiss,
   arrow,
   FloatingArrow,
+  FloatingPortal,
   size as elementSize,
 } from '@floating-ui/react'
 
@@ -74,33 +75,35 @@ export function HamburgerMenu({ className }: HamburgerMenuProps) {
         )}
       </button>
       {isOpen && (
-        <ul
-          className='relative py-[16px] rounded-[6px] z-[10] shadow-3 bg-white w-full text-darkGray uppercase'
-          ref={refs.setFloating}
-          style={floatingStyles}
-          {...getFloatingProps()}
-        >
-          <FloatingArrow
-            className='fill-white'
-            ref={arrowRef}
-            context={context}
-          />
-          {menus.map(menu => {
-            return (
-              <li
-                key={menu.title}
-                className='py-[10px] px-[24px] text-[14px] hover:text-navy hover:bg-white-1 hover:cursor-pointer'
-                {...getItemProps({
-                  onClick() {
-                    handleClick(menu.pathname)
-                  },
-                })}
-              >
-                {menu.title}
-              </li>
-            )
-          })}
-        </ul>
+        <FloatingPortal>
+          <ul
+            className='relative py-[16px] rounded-[6px] z-[10] shadow-3 bg-white w-full text-darkGray uppercase'
+            ref={refs.setFloating}
+            style={floatingStyles}
+            {...getFloatingProps()}
+          >
+            <FloatingArrow
+              className='fill-white'
+              ref={arrowRef}
+              context={context}
+            />
+            {menus.map(menu => {
+              return (
+                <li
+                  key={menu.title}
+                  className='py-[10px] px-[24px] text-[14px] hover:text-navy hover:bg-white-1 hover:cursor-pointer'
+                  {...getItemProps({
+                    onClick() {
+                      handleClick(menu.pathname)
+                    },
+                  })}
+                >
+                  {menu.title}
+                </li>
+              )
+            })}
+          </ul>
+        </FloatingPortal>
       )}
     </Fragment>
   )
