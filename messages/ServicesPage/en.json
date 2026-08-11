@@ -11,20 +11,19 @@
         },
         "sahathai": {
           "title": "Sahathai Terminal",
-          "content": "A feeder vessel terminal with a berth width of 170 meters, and 2 barge berths each with a width of 65 meters."
+          "content": "A comprehensive commercial port terminal on the Chao Phraya River, located on Pu Chao Saming Phrai Road, Phra Pradaeng District, Samut Prakan Province. It accommodates international cargo vessels or feeder vessels of approximately 1,000 TEUs, and barges of approximately 40–240 TEUs, used for transport connecting Sahathai Terminal and Laem Chabang Port. The terminal has 3 berths in total: a feeder berth with a 170-meter frontage, and 2 barge berths each with a 65-meter frontage, equipped with 4 gantry cranes, 1 mobile harbor crane, and rotating jib cranes stationed at every barge berth, providing fast and efficient container handling."
         }
       },
       "bargeServices": {
         "title": "Barge Services",
         "content": "Our barge services are operated by Bangkok Barge Service Co., Ltd. (BBS), a joint venture between Sahathai Terminal Public Company Limited and an affiliate of the global shipping line Mediterranean Shipping Company (MSC). BBS provides waterborne container transport by barge, connecting directly between Sahathai Terminal and Laem Chabang Port, helping to reduce transportation costs, ease road congestion, and offer an environmentally friendly transport alternative.",
-        "content2": "BBS currently operates approximately 11 chartered barges per month, accommodating barges of 40–240 TEUs, with a rotating jib crane stationed at every berth. Additional slot capacity can also be arranged during periods of high container volume, ensuring flexibility and continuity of service. BBS also sells barge slot capacity to nearby ports, and in 2025 the volume of containers handled through this service exceeded 36,000 TEUs.",
+        "content2": "BBS currently operates chartered barges, accommodating barges of 40–240 TEUs. Additional slot capacity can also be arranged during periods of high container volume, ensuring flexibility and continuity of service. BBS also sells barge slot capacity to nearby ports.",
         "content3": "With a network of 3 barge berths — 2 barge berths at Sahathai Terminal, each 65 meters wide, and the BBT barge berth, 96 meters wide and capable of accommodating 2 vessels simultaneously — supporting approximately 240,000 TEUs per year, BBS is well positioned to be part of a comprehensive logistics solution that efficiently meets the waterborne transport needs of shipping lines, importers, and exporters."
       },
       "containerHandling": {
         "title": "Container Handling | CFS LCL",
         "content": "Sahathai Terminal provides container stuffing services for shippers who do not have their own packing team. Goods are received from the shipper and packed into containers at Sahathai Terminal, ready to be loaded onto the vessel immediately. This is mostly full container load (FCL) packing for a single shipper, making export convenient, fast, and fully handled in one place.",
-        "content2": "For consignees, we provide container opening and un-stuffing services, covering both less than container load (LCL) — where goods from multiple consignees are consolidated into the same container (consolidated container) and stored in a warehouse awaiting pickup by each consignee — and direct, single-consignee containers where the consignee collects the goods directly from the container. This comprehensively covers every form of import.",
-        "content3": "With well-equipped operational areas and a professional team, in 2025 we provided CFS services totaling over 23,900 TEUs, comprising 21,466 TEUs of export stuffing services and 2,491 TEUs of import un-stuffing services."
+        "content2": "For consignees, we provide container opening and un-stuffing services, covering both less than container load (LCL) — where goods from multiple consignees are consolidated into the same container (consolidated container) and stored in a warehouse awaiting pickup by each consignee — and direct, single-consignee containers where the consignee collects the goods directly from the container. This comprehensively covers every form of import."
       },
       "containerMaintenance": {
         "title": "Container Maintenance",
@@ -34,15 +33,11 @@
         "title": "Ground Container Transportation Services",
         "content": "We provide ground container transportation services through Bangkok Trucking Service Co., Ltd. (BTS), a subsidiary wholly owned (100%) by the Company, completing our role as a one-stop logistics solution provider by seamlessly connecting transportation from the port to the customer's factory or warehouse gate.",
         "content2": "Our services cover container transportation between exporters' or importers' factories or warehouses and Sahathai Terminal, transportation within the Laem Chabang Port area between factories or warehouses and Laem Chabang Port, as well as round-trip container transportation between Sahathai Terminal and Laem Chabang Port by truck, serving as an alternative to barge transport for customers who require extra speed and flexibility.",
-        "content3": "In addition, we have a network of multiple truck haulage partners, allowing us to continuously arrange transportation for customers without them having to source trucks themselves — convenient, time-saving, and reliable for every trip. In 2025, we provided ground container transportation services totaling over 54,700 TEUs."
+        "content3": "In addition, we have a network of multiple truck haulage partners, allowing us to continuously arrange transportation for customers without them having to source trucks themselves — convenient, time-saving, and reliable for every trip."
       },
       "containerService": {
         "title": "Container Yard and Warehouse Services",
         "content": "We provide container yard and warehouse facilities to support our customers, including a bonded container yard in the free zone and a bonded warehouse with an area of 6,301 square meters."
-      },
-      "sahathaiTerminal": {
-        "title": "Sahathai Terminal | Sahathai Terminal",
-        "content": "A comprehensive commercial port terminal on the Chao Phraya River, located on Pu Chao Saming Phrai Road, Phra Pradaeng District, Samut Prakan Province. It accommodates international cargo vessels or feeder vessels of approximately 1,000 TEUs, and barges of approximately 40–240 TEUs, used for transport connecting Sahathai Terminal and Laem Chabang Port. The terminal has 3 berths in total: a feeder berth with a 170-meter frontage, and 2 barge berths each with a 65-meter frontage, equipped with 4 gantry cranes, 1 mobile harbor crane, and rotating jib cranes stationed at every barge berth, providing fast and efficient container handling. In 2025, the terminal handled a total of over 362,000 TEUs of containers."
       },
       "feederVesselServices": {
         "title": "Feeder Vessel Berthing Services | Feeder",
@@ -61,7 +56,7 @@
       },
       "generalWarehouseandBondedWarehouse": {
         "title": "General and Bonded Warehouse",
-        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n \u2022 Storing\n \u2022 Exhibiting\n \u2022 Selling\n \u2022 Packing or assembling stored items\nThis reduces production or import costs for goods from abroad."
+        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n • Storing\n • Exhibiting\n • Selling\n • Packing or assembling stored items\nThis reduces production or import costs for goods from abroad."
       },
       "coldStorageWarehouse": {
         "title": "Cold Storage Warehouse",
@@ -69,7 +64,7 @@
       },
       "freeTradeZoneWarehouse": {
         "title": "Free Zone Warehouse",
-        "content": "To ensure timely inventory management for production and assist in import tax planning, the Free Trade Zone warehouse offers:\n \u2022 Customs offices\n \u2022 Food and Drug Administration officers\n \u2022 Agricultural officers\n \u2022 Fisheries officers\nAll customs procedures and product inspections can be conveniently carried out at the port."
+        "content": "To ensure timely inventory management for production and assist in import tax planning, the Free Trade Zone warehouse offers:\n • Customs offices\n • Food and Drug Administration officers\n • Agricultural officers\n • Fisheries officers\nAll customs procedures and product inspections can be conveniently carried out at the port."
       },
       "serviceProviderImportExport": {
         "title": "Import and Export Representation Services",
