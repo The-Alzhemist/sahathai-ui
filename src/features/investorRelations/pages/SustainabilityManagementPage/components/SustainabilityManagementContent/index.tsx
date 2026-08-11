@@ -8,6 +8,7 @@ import { SustainabilityCard } from '@/features/investorRelations/components/Sust
 import { EsgRisk } from '../EsgRisk/EsgRisk'
 import { EmergingRisk } from '../EmergingRisk/EmergingRisk'
 import ESGPolicy from '../ESGPolicy/ESGPolicy'
+import { SustainabilityPolicy } from '../SustainabilityPolicy'
 import { SustainabilityGoal } from '../SustainabilityGoal'
 
 export function SustainabilityManagementContent() {
@@ -64,6 +65,7 @@ export function SustainabilityManagementContent() {
       <EsgRisk />
       <EmergingRisk />
       <ESGPolicy />
+      <SustainabilityPolicy />
       <SustainabilityGoal />
     </Fragment>
   )
