@@ -40,7 +40,34 @@
       }
     },
     "SustainabilityManagementPolicy": {
-      "title": "Sustainability Management Policy"
+      "title": "Sustainability Management Policy",
+      "sectionTitle": "Sustainability Management Policy and Goals",
+      "intro": "The Company is committed to conducting business in accordance with sustainable development guidelines that align with good corporate governance principles and social responsibility practices, by building engagement and value for all stakeholders. The Board of Directors has approved the Sustainable Development Policy, formulated by considering the organization's context, emerging trends, changes, and sustainability factors both internal and external, as well as stakeholder expectations gathered through various stakeholder engagement processes. This includes relevant requirements, regulations, and standards across 5 dimensions: economic, social, environmental, well-being, and growth, with consideration for all stakeholders, in order to achieve sustainability goals and respond to the Sustainable Development Goals (SDGs), in accordance with the SET Sustainability Reporting Guide for listed companies. The Board of Directors, management, and all employees contribute to and drive sustainable development through practices across the organization and throughout the supply chain via various channels. The Company hopes that conducting business under this Sustainability Management Policy will drive the organization to operate with integrity and transparency for the benefit of the public, alongside the Company's continued growth.",
+      "policyBoxTitle": "The Company's Sustainability Management Policy",
+      "columns": [
+        {
+          "title": "Environmental Dimension",
+          "items": [
+            "Manage the use of energy and resources to maximize benefit",
+            "Build an organizational culture of sustainable environmental care"
+          ]
+        },
+        {
+          "title": "Social Dimension",
+          "items": [
+            "Promote business operations with responsibility toward communities and society",
+            "Develop employees' potential and quality of life by building a good working environment and supporting equal career growth",
+            "Promote the development of living conditions, employment, and education for nearby communities"
+          ]
+        },
+        {
+          "title": "Economic and Governance Dimension",
+          "items": [
+            "Promote good corporate governance, strictly comply with laws and regulations, and oppose fraud and corruption",
+            "Focus on developing and elevating Thailand's logistics services through innovations that meet customer needs, creating shared value, while prioritizing supply chain management to support sustainable growth"
+          ]
+        }
+      ]
     },
     "sustainabilityGoal": {
       "title": "The Company's Sustainability Management Goals",

@@ -7,11 +7,7 @@
       "corporateGroupStructureOrganizationalStructure": "集团持股结构与公司治理结构"
     },
     "VisionMissionValues": {
-      "Slogan": {
-        "title": "这是我们作为领先港口运营商所秉持的信念，体现了沙泰码头的运营理念，以及我们对客户与合作伙伴的承诺。"
-      },
       "Vision": {
-        "content": "这是我们作为领先港口运营商所秉持的信念，体现了沙泰码头的运营理念，以及我们对客户与合作伙伴的承诺。",
         "vision": {
           "title": "愿景",
           "content": "成为提供一体化物流服务的领导者，以创新解决方案真正满足客户需求。"
@@ -25,7 +21,7 @@
         },
         "missionToShareholders": {
           "title": "我们对股东的使命",
-          "content": "“通过可持续增长和高标准管理，为股东创造价值。”"
+          "content": "“通过可持续增长和良好的公司治理，为股东创造价值。”"
         },
         "missionToEmployees": {
           "title": "我们对员工的使命",

@@ -18,11 +18,12 @@ export function Service() {
       <Animation className='mt-[80px] w-full container-mini'>
         <div className='flex justify-center flex-wrap gap-x-[24px] gap-y-[75px]'>
           <ServiceCard
-            title={t('containerMaintenanceRepairServices.title')}
-            content={t('containerMaintenanceRepairServices.content')}
-            imageUrl='/home/container.png'
-            imageSize={75}
+            title={t('coastalShippingServices.title')}
+            content={t('coastalShippingServices.content')}
+            imageUrl='/home/cargo-ship.png'
+            imageSize={76}
           />
+
           <ServiceCard
             title={t('containerFreightStationContainerYard.title')}
             content={t('containerFreightStationContainerYard.content')}
@@ -31,17 +32,17 @@ export function Service() {
           />
 
           <ServiceCard
+            title={t('containerMaintenanceRepairServices.title')}
+            content={t('containerMaintenanceRepairServices.content')}
+            imageUrl='/home/container.png'
+            imageSize={75}
+          />
+
+          <ServiceCard
             title={t('freeTradeZone.title')}
             content={t('freeTradeZone.content')}
             imageUrl='/home/taxes.png'
             imageSize={68}
-          />
-
-          <ServiceCard
-            title={t('coastalShippingServices.title')}
-            content={t('coastalShippingServices.content')}
-            imageUrl='/home/cargo-ship.png'
-            imageSize={76}
           />
 
           <ServiceCard

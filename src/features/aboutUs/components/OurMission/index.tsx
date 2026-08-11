@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 
 import { MissionCard } from '../MissionCard'
+import { Line } from '@/components/Line'
 
 export function OurMission() {
   const t = useTranslations('AboutUsPage.VisionMissionValues.OurMission')
@@ -10,6 +11,9 @@ export function OurMission() {
       <h2 className='text-[40px] leading-[60.48px] font-[500] text-navy prompt text-center'>
         {t('title')}
       </h2>
+      <div className='flex justify-center'>
+        <Line className='mt-[14px]' />
+      </div>
       <div className='mt-[50px] flex flex-col  md:flex-row  items-center  justify-center flex-wrap  gap-x-5 gap-y-7 md:gap-x-6 md:gap-y-6 px-5 md:px-2'>
         <MissionCard
           imageUrl='/about-us/new/mission-to-customers.webp'
@@ -17,9 +21,9 @@ export function OurMission() {
           content={t('missionToCustomers.content')}
         />
         <MissionCard
-          imageUrl='/about-us/new/mission-to-customers-2-2.webp'
-          title={t('missionToShareholders.title')}
-          content={t('missionToShareholders.content')}
+          imageUrl='/about-us/new/mission-to-customers-4-2.webp'
+          title={t('missionToSociety.title')}
+          content={t('missionToSociety.content')}
         />
         <MissionCard
           imageUrl='/about-us/new/mission-to-customers-3-2.webp'
@@ -27,9 +31,9 @@ export function OurMission() {
           content={t('missionToEmployees.content')}
         />
         <MissionCard
-          imageUrl='/about-us/new/mission-to-customers-4-2.webp'
-          title={t('missionToSociety.title')}
-          content={t('missionToSociety.content')}
+          imageUrl='/about-us/new/mission-to-customers-2-2.webp'
+          title={t('missionToShareholders.title')}
+          content={t('missionToShareholders.content')}
         />
       </div>
     </section>

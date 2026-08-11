@@ -8,7 +8,7 @@
       },
       "jibCrane": {
         "title": "Jib Crane - Container Lifting Crane at the Dock with Rotating Function",
-        "content": "Used for lifting containers on and off barge vessels, as the barge is a smaller vessel with a limited number of containers. The rotating container lifting crane is stationed at both of Sahathai Port’s barge docks, with one unit at each dock. Additionally, BBT has two rotating container lifting cranes at its barge docks."
+        "content": "Used for lifting containers on and off barge vessels, as the barge is a smaller vessel with a limited number of containers. The rotating container lifting crane is stationed at both of Sahathai Port's barge docks, with one unit at each dock. Additionally, BBT has rotating container lifting cranes at its barge docks."
       },
       "rtg": {
         "title": "RTG - Rubber-Tyred Gantry Crane for Container Yard Lifting",
@@ -20,19 +20,19 @@
       },
       "reachStacker": {
         "title": "Reach Stacker - Container Lifting Truck",
-        "content": "Our reach stacker can lift cargo weighing up to 42 tons, efficiently transporting containers within the dock area."
+        "content": "Our reach stacker can lift containers weighing up to 42 tons, efficiently transporting containers within the dock area."
       },
       "emptyContainerHandler": {
         "title": "Empty Container Handler",
-        "content": "Our terminal efficiently and quickly manages large empty containers."
+        "content": "Can efficiently and quickly manage large empty containers."
       },
       "tractorTrailer": {
         "title": "Tractor and Trailer",
-        "content": "Our tractors can quickly move containers, coupled with strong and durable trailers, ensuring safe transportation of containers throughout the journey."
+        "content": "Our tractors can quickly move containers, ensuring safe transportation of containers throughout the journey."
       },
       "forklift": {
         "title": "Forklift",
-        "content": "To manage goods efficiently, we have 13 forklifts to help handle goods within Sahathai’s warehouse areas quickly and safely."
+        "content": "To manage goods efficiently, we have forklifts to help handle goods within Sahathai's warehouse areas quickly and safely."
       }
     },
     "OperationGuidelines": {

@@ -7,11 +7,7 @@
       "corporateGroupStructureOrganizationalStructure": "Shareholding Structure of the Corporate Group and Corporate Governance Structure"
     },
     "VisionMissionValues": {
-      "Slogan": {
-        "title": "This is what we believe in as a leading port operator, the operational approach of Sahathai Terminal, and our commitment to our customers and partners."
-      },
       "Vision": {
-        "content": "This is what we believe in as a leading port operator, the operational approach of Sahathai Terminal, and our commitment to our customers and partners.",
         "vision": {
           "title": "Vision",
           "content": "To be a leader in providing integrated logistics services with innovative solutions that truly meet customer needs."
@@ -25,7 +21,7 @@
         },
         "missionToShareholders": {
           "title": "Our Mission to Shareholders",
-          "content": "“Creating value for our shareholders through sustainable growth and high-standard management.”"
+          "content": "“Creating value for our shareholders through sustainable growth and good governance.”"
         },
         "missionToEmployees": {
           "title": "Our Mission to Employees",

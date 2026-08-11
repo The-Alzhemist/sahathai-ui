@@ -86,12 +86,6 @@ export function ComprehensiveCommercialPortServices() {
             link='/services/container-services'
           />
           <ComprehensiveCommercialPortCard
-            title={<Fragment>{t('sahathaiTerminal.title')}</Fragment>}
-            content={t('sahathaiTerminal.content')}
-            imageUrl='/services/new/service-inside-7.webp'
-            link='/services/sahathai-terminal'
-          />
-          <ComprehensiveCommercialPortCard
             title={<Fragment>{t('feederVesselServices.title')}</Fragment>}
             content={t('feederVesselServices.content')}
             imageUrl='/services/new/service-inside-8.webp'

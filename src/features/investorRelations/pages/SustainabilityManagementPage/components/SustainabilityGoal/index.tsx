@@ -68,7 +68,7 @@ export function SustainabilityGoal() {
   const successFactors = t.raw('successFactors') as string[]
 
   return (
-    <section className='py-[88px] bg-white'>
+    <section className='pb-[88px] bg-white'>
       <Animation className='max-w-[950px] w-full mx-auto px-5'>
         <h2 className='headline-2 text-blue-400'>{t('title')}</h2>
         <p className='mt-[16px] body-1 text-black-6'>{t('intro')}</p>
