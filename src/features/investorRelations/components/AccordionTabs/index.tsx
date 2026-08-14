@@ -88,10 +88,10 @@ export const AccordionTabs = ({
                 </div>
               )}
 
-              {lang === 'cn ' && rowItem.chineseFile?.filename && (
+              {lang === 'cn' && rowItem.chineseFile?.filename && (
                 <div className='px-1'>
                   <DownloadButton
-                    className={` ${
+                    className={`whitespace-nowrap ${
                       !rowItem.chineseFile.filename
                         ? 'opacity-30 pointer-events-none '
                         : ''
