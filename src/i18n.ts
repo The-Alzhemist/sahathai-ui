@@ -16,6 +16,7 @@ export default getRequestConfig(async ({ locale }) => {
     'SustainabilityManagementPage',
     'NewsPage',
     'ContactUs',
+    'CompanySecretaryContact',
     'AboutUsPage',
     'ServicesPage',
     'CodeConductPage',

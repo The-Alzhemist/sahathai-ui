@@ -83,6 +83,10 @@
     "SetExchangeAnnouncement": {
       "Title": "Sahathai | 证交所公告",
       "Description": "来自证券交易所的公司相关重要信息与公告。"
+    },
+    "CompanySecretaryContact": {
+      "Title": "沙泰 | 联系公司秘书",
+      "Description": "联系沙泰码头公司秘书 Banchai Karuchit 先生，获取相关信息与联络方式。"
     }
   }
 }
