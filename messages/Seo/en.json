@@ -83,6 +83,10 @@
     "SetExchangeAnnouncement": {
       "Title": "Sahathai | Stock Exchange Announcements",
       "Description": "Information and important announcements from the stock exchange related to the company."
+    },
+    "CompanySecretaryContact": {
+      "Title": "Sahathai | Company Secretary Contact",
+      "Description": "Contact the Company Secretary of Sahathai Terminal, Mr. Banchai Karuchit, for information and correspondence."
     }
   }
 }
