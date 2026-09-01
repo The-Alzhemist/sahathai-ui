@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 import { TimelineCard } from '../TimelineCard'
-import Image from 'next/image'
-import { cn } from '@/libs/util'
 
 export function Timeline() {
   const t = useTranslations('AboutUsPage.CommitmentSuccess')
@@ -12,21 +11,21 @@ export function Timeline() {
       <TimelineCard
         contentPosition='right'
         year={t('2551.year')}
-        imageUrl='/about-us/new/commitment-success-1.webp'
+        imageUrl='/about-us/new/2551.webp'
       >
-        <Image
-          className='mb-[10px]'
-          src='/about-us/shcp.png'
-          width={90}
-          height={67}
-          alt=''
-        />
-        <div className='headline-4'>{t('2551.title')}</div>
+        <p className='font-light'>{t('2551.content')}</p>
       </TimelineCard>
       <TimelineCard
         contentPosition='left'
+        year={t('2554.year')}
+        imageUrl='/about-us/new/2554.webp'
+      >
+        <p className='font-light'>{t('2554.content')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='right'
         year={t('2556.year')}
-        imageUrl='/about-us/new/commitment-success-2.webp'
+        imageUrl='/about-us/new/2556.webp'
       >
         <Image
           className='mb-[30px]'
@@ -35,87 +34,129 @@ export function Timeline() {
           height={35}
           alt=''
         />
-        <div className='headline-4'>{t('2556.title')}</div>
-      </TimelineCard>
-      <TimelineCard
-        contentPosition='right'
-        year={t('2558.year')}
-        imageUrl='/about-us/new/commitment-success-3-2x.webp'
-      >
-        <Image
-          className='mb-[20px]'
-          src='/bbt.png'
-          width={90}
-          height={41}
-          alt=''
-        />
-
-        <div className='headline-4'>{t('2558.title')}</div>
-        <p className='body-2 text-black-6 mt-[10px]'>{t('2558.content')}</p>
+        <p className='font-light'>
+          {t.rich('2556.content', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
+        </p>
       </TimelineCard>
       <TimelineCard
         contentPosition='left'
-        year={t('2559_2560.year')}
-        imageUrl='/about-us/new/commitment-success-4.webp'
+        year={t('2558.year')}
+        imageUrl='/about-us/new/2558.webp'
       >
-        <Image
-          className='mb-[20px]'
-          src='/bbs.png'
-          width={90}
-          height={41}
-          alt=''
-        />
-
-        <div className='headline-4'>{t('2559_2560.title')}</div>
-        <p className='body-2 text-black-6 mt-[10px]'>
-          {t('2559_2560.content')}
+        <p className='font-light'>{t('2558.content')}</p>
+        <p className='font-light mt-[16px]'>
+          {t.rich('2558.content2', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
         </p>
       </TimelineCard>
       <TimelineCard
         contentPosition='right'
-        year={t('2560_2562.year')}
-        imageUrl='/about-us/new/commitment-success-5.webp'
+        year={t('2559.year')}
+        imageUrl='/about-us/new/2559.webp'
       >
-        <Image
-          className='mb-[20px]'
-          src='/about-us/sahathai.png'
-          width={152}
-          height={35}
-          alt=''
-        />
-
-        {[
-          t('2560_2562.content'),
-          t('2560_2562.content2'),
-          t('2560_2562.content3'),
-          t('2560_2562.content4'),
-        ].map((row, index, arr) => (
-          <div
-            key={index}
-            className={cn('flex gap-x-[10px] text-black-6 body-2', {
-              'mb-[5px]': index !== arr.length - 1,
-            })}
-          >
-            <span className='block text-center'>&bull;</span>
-            <span className='block text-left'>{row}</span>
-          </div>
-        ))}
+        <p className='font-light'>{t('2559.content')}</p>
+        <p className='font-light mt-[16px]'>
+          {t.rich('2559.content2', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
+        </p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='left'
+        year={t('2560.year')}
+        imageUrl='/about-us/new/2560.webp'
+      >
+        <p className='font-light'>
+          {t.rich('2560.content', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
+        </p>
+        <p className='font-light mt-[16px]'>{t('2560.content2')}</p>
+        <p className='font-light mt-[16px]'>{t('2560.content3')}</p>
+        <p className='font-light mt-[16px]'>
+          {t.rich('2560.content4', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
+        </p>
+        <p className='font-light mt-[16px]'>{t('2560.content5')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='right'
+        year={t('2561.year')}
+        imageUrl='/about-us/new/2561.webp'
+      >
+        <p className='font-light'>{t('2561.content')}</p>
+        <p className='font-light mt-[16px]'>
+          {t.rich('2561.content2', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
+        </p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='left'
+        year={t('2562.year')}
+        imageUrl='/about-us/new/2562.webp'
+      >
+        <p className='font-light'>
+          {t.rich('2562.content', {
+            b: chunks => <strong>{chunks}</strong>,
+          })}
+        </p>
+        <p className='font-light mt-[16px]'>{t('2562.content2')}</p>
+        <p className='font-light mt-[16px]'>{t('2562.content3')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='right'
+        year={t('2563.year')}
+        imageUrl='/about-us/new/2563.webp'
+      >
+        <p className='font-light'>{t('2563.content')}</p>
+        <p className='font-light mt-[16px]'>{t('2563.content2')}</p>
+        <p className='font-light mt-[16px]'>{t('2563.content3')}</p>
+        <p className='font-light mt-[16px]'>{t('2563.content4')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='left'
+        year={t('2564.year')}
+        imageUrl='/about-us/new/2564.webp'
+      >
+        <p className='font-light'>{t('2564.content')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='right'
+        year={t('2565.year')}
+        imageUrl='/about-us/new/2565.webp'
+      >
+        <p className='font-light'>{t('2565.content')}</p>
+        <p className='font-light mt-[16px]'>{t('2565.content2')}</p>
+        <p className='font-light mt-[16px]'>{t('2565.content3')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='left'
+        year={t('2566.year')}
+        imageUrl='/about-us/new/2566.webp'
+      >
+        <p className='font-light'>{t('2566.content')}</p>
+        <p className='font-light mt-[16px]'>{t('2566.content2')}</p>
+      </TimelineCard>
+      <TimelineCard
+        contentPosition='right'
+        year={t('2567.year')}
+        imageUrl='/about-us/new/2567.webp'
+      >
+        <p className='font-light'>{t('2567.content')}</p>
+        <p className='font-light mt-[16px]'>{t('2567.content2')}</p>
+        <p className='font-light mt-[16px]'>{t('2567.content3')}</p>
       </TimelineCard>
       <TimelineCard
         contentPosition='left'
         year={t('2568.year')}
-        imageUrl='/about-us/new/commitment-success-6.webp'
+        imageUrl='/about-us/new/2568.webp'
       >
-        <Image
-          className='mb-[30px]'
-          src='/about-us/circle.png'
-          width={114}
-          height={76}
-          alt=''
-        />
-        <p className='body-2 text-black-6 whitespace-pre-line'>
-          {t('2568.content')}
-        </p>
+        <p className='font-light'>{t('2568.content')}</p>
       </TimelineCard>
     </section>
   )

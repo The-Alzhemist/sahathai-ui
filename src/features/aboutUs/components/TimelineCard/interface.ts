@@ -5,3 +5,7 @@ export interface TimelineCardProps {
   contentPosition: 'left' | 'right'
   children: React.ReactNode
 }
+
+export interface TimelineCardVariantProps extends TimelineCardProps {
+  animationClassName: string
+}
