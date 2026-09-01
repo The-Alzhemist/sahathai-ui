@@ -24,13 +24,16 @@ export function TimelineCard({
           animationClassName
         )}
       >
-        <div className='order-1 col-span-3 text-black-6 span-subtitle !font-[400] text-center'>
+        <div className='order-1 col-span-3 text-blue-300 span-subtitle !font-[400] text-center'>
           {year}
         </div>
         <div
-          className={cn('w-full shrink-0 order-2', {
-            'order-4': contentPosition === 'left',
-          })}
+          className={cn(
+            'w-full shrink-0 order-2 rounded-[10px] overflow-hidden shadow-9',
+            {
+              'order-4': contentPosition === 'left',
+            }
+          )}
         >
           <div className='relative pt-[60.61%] w-full'>
             <Image src={imageUrl} fill alt='' />
@@ -38,7 +41,7 @@ export function TimelineCard({
         </div>
         <TimeLine />
         <div
-          className={cn('flex flex-col justify-center order-4', {
+          className={cn('flex flex-col justify-center order-4 text-darkGray', {
             'order-2': contentPosition === 'left',
           })}
         >
@@ -53,7 +56,7 @@ export function TimelineCard({
           animationClassName
         )}
       >
-        <div className='order-1 col-span-3 text-black-6 text-3xl !font-[400] text-left'>
+        <div className='order-1 col-span-3 text-blue-300 text-3xl !font-[400] text-left'>
           {year}
         </div>
         <div className='order-1'>
@@ -61,10 +64,10 @@ export function TimelineCard({
         </div>
 
         <section className='order-2'>
-          <div className={cn('flex flex-col justify-center mb-5')}>
+          <div className='flex flex-col justify-center mb-5 text-darkGray'>
             {children}
           </div>
-          <div className={cn('w-full shrink-0 order-2')}>
+          <div className='w-full shrink-0 order-2 rounded-[10px] overflow-hidden shadow-9'>
             <div className='relative pt-[60.61%] w-full'>
               <Image src={imageUrl} fill alt='' />
             </div>
