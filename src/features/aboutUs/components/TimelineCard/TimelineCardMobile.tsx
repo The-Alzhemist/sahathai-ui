@@ -14,17 +14,16 @@ export function TimelineCardMobile({
   return (
     <section
       className={cn(
-        'grid md:hidden grid-cols-[15%, 85%] items-center gap-x-3 gap-y-3 w-full mb-5',
+        'grid md:hidden grid-cols-[15px_1fr] items-center gap-x-3 gap-y-3 w-full mb-5',
         className,
         animationClassName
       )}
     >
-      <div className='order-1 col-span-3 text-blue-300 text-3xl !font-[400] text-left'>
+      <div className='order-1 col-span-2 text-blue-300 text-3xl !font-[400] text-left'>
         {year}
       </div>
-      <div className='order-1 self-stretch'>
-        <TimeLine />
-      </div>
+
+      <TimeLine className='order-1' />
 
       <section className='order-2'>
         <div className='flex flex-col justify-center mb-5 text-darkGray'>
