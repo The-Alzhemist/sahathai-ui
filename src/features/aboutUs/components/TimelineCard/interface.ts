@@ -9,3 +9,7 @@ export interface TimelineCardProps {
 export interface TimelineCardVariantProps extends TimelineCardProps {
   animationClassName: string
 }
+
+export interface TimeLineProps {
+  className?: string
+}
