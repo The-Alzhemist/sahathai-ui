@@ -1,5 +1,12 @@
 export const oneReportInformationList = [
   {
+    year: 2025,
+    annualReportUrl: '',
+    report56Url: '',
+    oneReportUrl:
+      'https://a.storyblok.com/f/316761/x/efc61b9081/one_report_2025.pdf',
+  },
+  {
     year: 2024,
     annualReportUrl: '',
     report56Url: '',
