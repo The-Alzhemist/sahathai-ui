@@ -46,11 +46,15 @@ const ContactUs = ({ className, isShowMenuBar = false }: ContactUsProps) => {
               <div className='mt-[18px] space-y-[10px] text-[14px] font-[500] leading-[20px] text-[#60666F]'>
                 <div className='flex items-center gap-[10px]'>
                   <TelephoneIcon className='h-[18px] w-[18px]' />
-                  <span>โทรศัพท์: +66 (0) 2386 8000</span>
+                  <span>
+                    {t('officePhone.title')}: {t('officePhone.description')}
+                  </span>
                 </div>
                 <div className='flex items-center gap-[10px]'>
                   <PrinterIcon className='h-[18px] w-[18px]' />
-                  <span>อีเมล: info@sahathaiterminal.com</span>
+                  <span>
+                    {t('officeEmail.title')}: {t('officeEmail.description')}
+                  </span>
                 </div>
               </div>
               <Link

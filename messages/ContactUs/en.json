@@ -31,6 +31,14 @@
       "title": "Address",
       "description": "Sahathai Terminal Public Company Limited, 51/1 Moo 3, Phu Chao Saming Phrai Road, Bang Yai Prak Subdistrict, Phra Pradaeng District, Samut Prakan 10130, Thailand"
     },
-    "submit": "Submit"
+    "submit": "Submit",
+    "officePhone": {
+      "title": "Phone",
+      "description": "+66 (0) 2386 8000"
+    },
+    "officeEmail": {
+      "title": "Email",
+      "description": "info@sahathaiterminal.com"
+    }
   }
 }
