@@ -6,6 +6,8 @@ import { VisionMissionValues } from '../../components/VisionMissionValues'
 import { BoardAndExecutives } from '../../components/BoardAndExecutives'
 import { CommitmentSuccess } from '../../components/CommitmentSuccess'
 import { CorporateGroupOrganizationalStructure } from '../../components/CorporateGroupOrganizationalStructure'
+import { CorporateGroup } from '../../components/CorporateGroup'
+import { OrganizationalStructure } from '../../components/OrganizationalStructure'
 import { AboutPageProps, AboutUsTabEnum } from './interface'
 import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
@@ -29,7 +31,13 @@ export function AboutUsPage({ active, boardData }: AboutPageProps) {
           ) : active === AboutUsTabEnum.BOARD_DIRECTORS_EXE ? (
             <BoardAndExecutives boardData={boardData} />
           ) : active === AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE ? (
-            <CorporateGroupOrganizationalStructure />
+            <CorporateGroupOrganizationalStructure>
+              <CorporateGroup />
+            </CorporateGroupOrganizationalStructure>
+          ) : active === AboutUsTabEnum.ORGANIZATIONAL_STRUCTURE ? (
+            <CorporateGroupOrganizationalStructure>
+              <OrganizationalStructure />
+            </CorporateGroupOrganizationalStructure>
           ) : null}
         </Animation>
       </AnimatePresence>

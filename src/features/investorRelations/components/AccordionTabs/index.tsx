@@ -6,18 +6,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { RowStoryblok } from '@/types/storyblok'
 export const AccordionTabs = ({
-  groupIndex,
-  tabIndex,
   isOpen,
   tabItem,
   toggleTab,
 }: AccordionTabsProps) => {
   const lang = useLocale()
   return (
-    <div key={tabIndex} className='overflow-hidden'>
+    <div id={tabItem._uid} className='overflow-hidden'>
       {/* --- Tab Toggle Button --- */}
       <button
-        onClick={() => toggleTab(groupIndex, tabIndex)}
+        onClick={() => toggleTab(tabItem._uid)}
         className='w-full flex justify-between items-center text-left px-4 py-3 h-[70px] text-darkGray border-l-[4px] border-l-blue-300 bg-gray-50 hover:bg-gray-100 transition'
       >
         <span>{tabItem.heading ? tabItem.heading : '-'}</span>

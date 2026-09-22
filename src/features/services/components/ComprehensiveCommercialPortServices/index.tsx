@@ -33,6 +33,13 @@ export function ComprehensiveCommercialPortServices() {
             title={
               <Fragment>
                 {t('commercialDock.title')}&nbsp;|&nbsp;
+                <Image
+                  src='/logo.png'
+                  width={46}
+                  height={20.7}
+                  className='mr-0.5'
+                  alt=''
+                />
                 <Image src='/bbt.png' width={46} height={20.7} alt='' />
               </Fragment>
             }
@@ -84,12 +91,6 @@ export function ComprehensiveCommercialPortServices() {
             content={t('containerService.content')}
             imageUrl='/services/new/service-6.webp'
             link='/services/container-services'
-          />
-          <ComprehensiveCommercialPortCard
-            title={<Fragment>{t('feederVesselServices.title')}</Fragment>}
-            content={t('feederVesselServices.content')}
-            imageUrl='/services/new/service-inside-8.webp'
-            link='/services/feeder-vessel-services'
           />
         </section>
       </Animation>

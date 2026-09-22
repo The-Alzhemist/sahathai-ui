@@ -1,4 +1,4 @@
-import { Formik, Form } from 'formik'
+import { Form, Formik } from 'formik'
 import { useTranslations } from 'next-intl'
 import { useForm as useFormSpree } from '@formspree/react'
 import { toast } from 'react-toastify'
@@ -106,116 +106,116 @@ export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
         handleOnSubmitForm(v, resetForm)
       }}
     >
-      {({ values }) => (
-        <Form>
-          <div className='flex gap-[24px] mobile:flex-col'>
-            {!hideContactForm && (
+      {({ values }) => {
+        const isComplaint = values.type === ContactUsTypeEnum.FRAUD_COMPLAINT
+        const isContact = values.type === ContactUsTypeEnum.CONTACT
+        return (
+          <Form>
+            <div className='flex gap-[24px] mobile:flex-col'>
+              {!hideContactForm && (
+                <ContactTypeField
+                  className='flex-1'
+                  name='type'
+                  text={t('contactForm')}
+                  value='contact-form'
+                  checked={isContact}
+                  Icon={MailIcon}
+                  contactUsType={ContactUsTypeEnum.CONTACT}
+                />
+              )}
               <ContactTypeField
                 className='flex-1'
                 name='type'
-                text={t('contactForm')}
-                value='contact-form'
-                checked={values.type === ContactUsTypeEnum.CONTACT}
-                Icon={MailIcon}
-                contactUsType={ContactUsTypeEnum.CONTACT}
-              />
-            )}
-            <ContactTypeField
-              className='flex-1'
-              name='type'
-              text={t('fraudComplaintForm')}
-              value='fraud-complaint-form'
-              checked={values.type === ContactUsTypeEnum.FRAUD_COMPLAINT}
-              Icon={RedWarningIcon}
-              contactUsType={ContactUsTypeEnum.FRAUD_COMPLAINT}
-            />
-          </div>
-          <div className='flex gap-[70px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
-            <div className='max-w-[416px] w-full shrink-0 space-y-[15px] mobile:max-w-none'>
-              <InputField
-                name='name'
-                label={t('nameField.label')}
-                placeholder={t('nameField.placeholder')}
-                inputClassName={
-                  values.type === ContactUsTypeEnum.CONTACT
-                    ? ''
-                    : 'focus:border-red-400'
-                }
-              />
-              <InputField
-                name='phone'
-                type='text'
-                label={t('phoneNumberField.label')}
-                placeholder={t('phoneNumberField.placeholder')}
-                inputClassName={
-                  values.type === ContactUsTypeEnum.CONTACT
-                    ? ''
-                    : 'focus:border-red-400'
-                }
-                onlyNumber
-              />
-              <InputField
-                name='email'
-                className='capitalize'
-                label={common('email')}
-                placeholder={t('emailField.placeholder')}
-                inputClassName={
-                  values.type === ContactUsTypeEnum.CONTACT
-                    ? ''
-                    : 'focus:border-red-400'
-                }
-              />
-              <TextAreaField
-                textAreaClassName={`h-[154px] ${
-                  values.type === ContactUsTypeEnum.CONTACT
-                    ? ''
-                    : 'focus:border-red-400'
-                }`}
-                name='message'
-                label={t('message.label')}
-                placeholder={t('message.placeholder')}
-                maxLength={500}
-              />
-              <button
-                className={`${
-                  values.type === ContactUsTypeEnum.CONTACT
-                    ? 'bg-background'
-                    : 'bg-red-400'
-                } w-full py-[10px] rounded-full text-white button`}
-                type='submit'
-              >
-                {t('submit')}
-              </button>
-            </div>
-            <div className='space-y-[33px]'>
-              <Card
-                Icon={TelephoneIcon}
-                title={t('contactNumber.title')}
-                description={t('contactNumber.description')}
-                contactUsType={values.type as ContactUsTypeEnum}
-              />
-              <Card
-                Icon={PrinterIcon}
-                title={t('fax.title')}
-                description={t('fax.description')}
-                contactUsType={values.type as ContactUsTypeEnum}
-              />
-              <Card
-                Icon={EnvelopeIcon}
-                title={common('email')}
-                description='info@sahathaiterminal.com'
-                contactUsType={values.type as ContactUsTypeEnum}
-              />
-              <Card
-                Icon={LocationIcon}
-                title={t('address.title')}
-                description={t('address.description')}
-                contactUsType={values.type as ContactUsTypeEnum}
+                text={t('fraudComplaintForm')}
+                value='fraud-complaint-form'
+                checked={isComplaint}
+                Icon={RedWarningIcon}
+                contactUsType={ContactUsTypeEnum.FRAUD_COMPLAINT}
               />
             </div>
-          </div>
-        </Form>
-      )}
+            <div className='flex gap-[50px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
+              <div className='max-w-[416px] w-full shrink-0 space-y-[15px] mobile:max-w-none'>
+                <InputField
+                  name='name'
+                  label={t('nameField.label')}
+                  placeholder={t('nameField.placeholder')}
+                  inputClassName={isContact ? '' : 'focus:border-red-400'}
+                />
+                <InputField
+                  name='phone'
+                  type='text'
+                  label={t('phoneNumberField.label')}
+                  placeholder={t('phoneNumberField.placeholder')}
+                  inputClassName={isContact ? '' : 'focus:border-red-400'}
+                  onlyNumber
+                />
+                <InputField
+                  name='email'
+                  className='capitalize'
+                  label={common('email')}
+                  placeholder={t('emailField.placeholder')}
+                  inputClassName={isContact ? '' : 'focus:border-red-400'}
+                />
+                <TextAreaField
+                  textAreaClassName={`h-[154px] ${
+                    isContact ? '' : 'focus:border-red-400'
+                  }`}
+                  name='message'
+                  label={t('message.label')}
+                  placeholder={t('message.placeholder')}
+                  maxLength={500}
+                />
+                <button
+                  className={`${
+                    isContact ? 'bg-background' : 'bg-red-400'
+                  } w-full py-[10px] rounded-full text-white button`}
+                  type='submit'
+                >
+                  {t('submit')}
+                </button>
+              </div>
+              <div className='min-w-0 flex-1 space-y-[33px]'>
+                <Card
+                  Icon={TelephoneIcon}
+                  title={t('contactNumber.title')}
+                  description={t(
+                    isComplaint
+                      ? 'contactNumber.descriptionComplaint'
+                      : 'contactNumber.description'
+                  )}
+                  contactUsType={values.type as ContactUsTypeEnum}
+                />
+                <Card
+                  Icon={PrinterIcon}
+                  title={t('fax.title')}
+                  description={t('fax.description')}
+                  contactUsType={values.type as ContactUsTypeEnum}
+                />
+                <Card
+                  Icon={EnvelopeIcon}
+                  title={common('email')}
+                  description={
+                    isComplaint
+                      ? 'anticorrupt.stt@sahathaiterminal.com'
+                      : 'info@sahathaiterminal.com'
+                  }
+                  contactUsType={values.type as ContactUsTypeEnum}
+                />
+                <Card
+                  Icon={LocationIcon}
+                  title={t('address.title')}
+                  description={
+                    isComplaint
+                      ? t('address.descriptionComplaint')
+                      : t('address.description')
+                  }
+                  contactUsType={values.type as ContactUsTypeEnum}
+                />
+              </div>
+            </div>
+          </Form>
+        )
+      }}
     </Formik>
   )
 }

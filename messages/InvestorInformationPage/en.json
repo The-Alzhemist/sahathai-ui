@@ -41,8 +41,15 @@
     },
     "CompanyIntroductionVideo": { "title": "Company introduction video" },
     "CompanyAdvertiseVideo": { "title": "Company public relations video" },
-    "FactSheet": { "title": "FactSheet",
-      "detail": "Download data factSheet "
+    "FactSheet": {
+      "title": "FactSheet",
+      "detail": "Download data factSheet ",
+      "Contact": {
+        "title": "Contact",
+        "detail": "If you require further information about the Company to support your investment decision, we are pleased to provide it. Please contact our Investor Relations at",
+        "coordinator": "Coordinator : Investor Relations",
+        "phone": "Tel: +66(0)2386 8000"
+      }
     },
     "OneReportTable": {
       "AnnualReport": "Annual Report\n",

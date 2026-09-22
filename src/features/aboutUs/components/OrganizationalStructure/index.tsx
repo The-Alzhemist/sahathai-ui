@@ -10,7 +10,7 @@ export function OrganizationalStructure() {
 
   return (
     <div>
-      <h2 className='mt-[110px] headline-2 text-navy'>
+      <h2 className='headline-2 text-navy'>
         {t('organizationalStructure.title')}
       </h2>
       <Line className='my-[8px]' />

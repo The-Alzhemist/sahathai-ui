@@ -17,7 +17,9 @@ export function Card({ Icon, title, description, contactUsType }: CardProps) {
         <div className='subtitle-1 text-black'>{title}</div>
       </div>
       <div />
-      <div className='body-1 text-black-6'>{description}</div>
+      <div className='body-1 text-black-6 whitespace-pre-wrap break-words'>
+        {description}
+      </div>
     </div>
   )
 }

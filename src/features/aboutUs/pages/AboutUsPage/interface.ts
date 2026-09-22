@@ -16,5 +16,6 @@ export enum AboutUsTabEnum {
   VISION_MISSION = 'visionMission',
   OUT_COMMITMENT_SUCCESS = 'ourCommitmentSuccess',
   BOARD_DIRECTORS_EXE = 'boardDirectorsExecutiveCommittee',
-  CORPORATE_GROUP_STRUCTURE = 'corporateGroupStructureOrganizationalStructure',
+  CORPORATE_GROUP_STRUCTURE = 'corporateGroupStructure',
+  ORGANIZATIONAL_STRUCTURE = 'organizationalStructure',
 }

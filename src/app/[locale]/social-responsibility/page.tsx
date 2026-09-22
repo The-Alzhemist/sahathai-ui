@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 
 import React from 'react'
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
+import { fetchAllBlog } from '@/libs/storyblok/blogQuery'
 
 import { RevalidateTag } from '@/enums/CacheEnum'
 import SocialResponsibilityComponent from '@/components/SocialResponsibilityComponent/SocialResponsibilityComponent'
@@ -32,11 +32,11 @@ export default async function socialResponsibility({
     tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
   })
 
-  const latestBlog = await fetchLastBlog({
-    lang: locale,
-    startsWith: 'social-responsibility/',
-    tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
-  })
+  // const latestBlog = await fetchLastBlog({
+  //   lang: locale,
+  //   startsWith: 'social-responsibility/',
+  //   tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
+  // })
 
   const totalPages = Math.ceil(total / perPage)
 
@@ -44,7 +44,6 @@ export default async function socialResponsibility({
     <main>
       <SocialResponsibilityComponent
         stories={stories}
-        latestBlog={latestBlog}
         locale={locale}
         page={page}
         totalPages={totalPages}

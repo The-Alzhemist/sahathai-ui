@@ -5,13 +5,13 @@
       "visionMission": "愿景与使命",
       "ourCommitmentSuccess": "我们的承诺与成就",
       "boardDirectorsExecutiveCommittee": "董事会与执行委员会",
-      "corporateGroupStructureOrganizationalStructure": "集团持股结构与公司治理结构"
+      "corporateGroupStructure": "集团持股结构",
+      "organizationalStructure": "公司治理结构"
     },
     "infrastructureContainers": {
-      "title": "码头",
+      "title": "设施",
       "machineryEquipment": "港口主要机械与设备",
       "logisticInnovation": "物流创新",
-      "opticalCharacterRecognition": "集装箱自动识别技术（OCR）",
       "operationGuidelines": "操作指南",
       "contactUs": "联系我们"
     },
@@ -43,13 +43,13 @@
       "title": "投资者关系",
       "investorInformation": "投资者信息",
       "codeConduct": "反腐败政策",
-      "shareHolder": "股东",
-      "shareHolderMeeting": "年度股东大会",
+      "shareHolder": "股东信息",
+      "shareHolderMeeting": "股东大会",
       "FinancialInformation": "财务信息",
       "PerformanceReport": "业绩报告",
       "DocumentAnnouncement": "公开文件",
       "GoodCorporate": "良好公司治理",
-      "Activity": "活动",
+      "Activity": "投资者关系活动",
       "SetExchangeAnnouncement": "证交所公告"
     }
   }

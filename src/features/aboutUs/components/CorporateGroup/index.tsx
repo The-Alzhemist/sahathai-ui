@@ -144,7 +144,7 @@ export function CorporateGroup() {
         </div>
       </Animation>
 
-      <Animation className='w-full mt-[30px]'>
+      <Animation className='w-full mt-[30px] shadow-8 rounded-[15px] bg-white px-5 py-[40px] md:px-[60px] md:py-[60px]'>
         <p className='body-1 text-black-6'>{t('chart.summary')}</p>
 
         <h3 className='headline-5 text-secondary mt-[24px]'>

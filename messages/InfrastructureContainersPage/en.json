@@ -32,7 +32,7 @@
       },
       "forklift": {
         "title": "Forklift",
-        "content": "To manage goods efficiently, we have forklifts to help handle goods within Sahathai's warehouse areas quickly and safely."
+        "content": "To manage goods efficiently, we have forklifts to help handle cargo loading and unloading in areas such as the packing yard and warehouses quickly and safely."
       }
     },
     "OperationGuidelines": {
@@ -201,10 +201,7 @@
         }
       }
     },
-    "OCR": {
-      "Title": "Automatic Cargo Container Reading Technology (OCR)",
-      "Description": "Sahathai Terminal has collaborated with domestic organizations to develop an automatic cargo container reading system, or OCR (Optical Character Recognition), for reading container numbers at the port entrance. The use of OCR technology enhances operational efficiency and smoothness, increases accuracy in verification, and reduces processing time, enabling customers to receive faster and higher-quality service."
-    },
+
     "FreeTradeZone": {
       "Title": "Free Trade Zone",
       "Description": "Sahathai Terminal understands the importance of having a customs office within the port area, which plays a key role in reducing time and costs for you.",
@@ -247,9 +244,7 @@
           [
             "Land transport management via the Transportation Management System (TMS)"
           ],
-          [
-            "Warehouse management via the Warehouse Management System (WMS)"
-          ],
+          ["Warehouse management via the Warehouse Management System (WMS)"],
           [
             "Freight forwarder operations management via the Forward Soft system"
           ]

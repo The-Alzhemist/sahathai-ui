@@ -5,13 +5,13 @@
       "visionMission": "วิสัยทัศน์และพันธกิจ",
       "ourCommitmentSuccess": "ความมุ่งมั่นและความสำเร็จของเรา",
       "boardDirectorsExecutiveCommittee": "คณะกรรมการ & คณะผู้บริหาร",
-      "corporateGroupStructureOrganizationalStructure": "โครงสร้างการถือหุ้นของกลุ่มบริษัทและโครงสร้างการกำกับดูแลกิจการ"
+      "corporateGroupStructure": "โครงสร้างการถือหุ้นของกลุ่มบริษัท",
+      "organizationalStructure": "โครงสร้างการกำกับดูแลกิจการ"
     },
     "infrastructureContainers": {
-      "title": "ท่าเทียบเรือ",
+      "title": "สิ่งอำนวยความสะดวก",
       "machineryEquipment": "เครื่องจักรและอุปกรณ์สำคัญภายในท่าเรือ",
       "logisticInnovation": "Logistic Innovation",
-      "opticalCharacterRecognition": "เทคโนโลยีการอ่านตู้สินค้าอัตโนมัติ (OCR)",
       "operationGuidelines": "คำแนะนำเกี่ยวกับขั้นตอนการปฏิบัติการ",
       "contactUs": "ติดต่อเรา"
     },
@@ -42,15 +42,15 @@
     "investorRelations": {
       "title": "นักลงทุนสัมพันธ์",
       "investorInformation": "ข้อมูลสำหรับนักลงทุน",
-      "codeConduct": "นโยบายต่อต้านการทุจริตคอร์ปชั่น",
-      "shareHolder": "ผู้ถือหุ้น",
-      "shareHolderMeeting": "การประชุมสามัญผู้ถือหุ้น",
+      "codeConduct": "นโยบายต่อต้านการทุจริตคอร์ปรับชั่น",
+      "shareHolder": "ข้อมูลผู้ถือหุ้น",
+      "shareHolderMeeting": "การประชุมผู้ถือหุ้น",
       "FinancialInformation": "ข้อมูลทางการเงิน",
       "PerformanceReport": "รายงานผลการดำเนินงาน",
       "DocumentAnnouncement": "เอกสารเผยแพร่",
       "GoodCorporate": "การกำกับดูแลกิจการที่ดี",
 
-      "Activity": "กิจกรรม",
+      "Activity": "กิจกรรมนักลงทุนสัมพันธ์",
       "SetExchangeAnnouncement": "ประกาศตลาดหลักทรัพย์"
     }
   }

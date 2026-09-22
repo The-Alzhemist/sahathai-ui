@@ -1,6 +1,6 @@
 import { AccordionTabs } from '@/features/investorRelations/components/AccordionTabs'
 import { GroupStoryblok, TabStoryblok } from '@/types/storyblok'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function GroupAccordionTabs({
   pageKey = '',
@@ -9,16 +9,33 @@ export default function GroupAccordionTabs({
   pageKey: string
   group: GroupStoryblok[]
 }) {
-  const toggleTab = (groupIndex: number, tabIndex: number) => {
-    setOpenTabs(prev => {
-      const groupOpenTabs = prev[groupIndex] || []
-      const newOpenTabs = groupOpenTabs.includes(tabIndex)
-        ? groupOpenTabs.filter(i => i !== tabIndex)
-        : [...groupOpenTabs, tabIndex]
-      return { ...prev, [groupIndex]: newOpenTabs }
-    })
+  const [openTabs, setOpenTabs] = useState<string[]>([])
+
+  useEffect(() => {
+    const ids =
+      new URLSearchParams(window.location.search)
+        .get('tab')
+        ?.split(',')
+        .filter(Boolean) ?? []
+    setOpenTabs(ids)
+    if (!ids[0]) return
+
+    requestAnimationFrame(() =>
+      document.getElementById(ids[0])?.scrollIntoView({ block: 'start' })
+    )
+  }, [])
+
+  const toggleTab = (uid: string) => {
+    const next = openTabs.includes(uid)
+      ? openTabs.filter(id => id !== uid)
+      : [...openTabs, uid]
+    setOpenTabs(next)
+    const url = new URL(window.location.href)
+    next.length
+      ? url.searchParams.set('tab', next.join(','))
+      : url.searchParams.delete('tab')
+    window.history.replaceState(null, '', url)
   }
-  const [openTabs, setOpenTabs] = useState<Record<number, number[]>>({})
 
   if (!group) {
     return <div>No data</div>
@@ -33,19 +50,14 @@ export default function GroupAccordionTabs({
           </h2>
 
           <div className='space-y-4'>
-            {groupItem.tab?.map((tabItem: TabStoryblok, tabIndex: number) => {
-              const isOpen = openTabs[groupIndex]?.includes(tabIndex) || false
-              return (
-                <AccordionTabs
-                  tabIndex={tabIndex}
-                  key={pageKey + tabIndex}
-                  groupIndex={groupIndex}
-                  toggleTab={toggleTab}
-                  tabItem={tabItem}
-                  isOpen={isOpen}
-                />
-              )
-            })}
+            {groupItem.tab?.map((tabItem: TabStoryblok, tabIndex: number) => (
+              <AccordionTabs
+                key={pageKey + tabIndex}
+                toggleTab={toggleTab}
+                tabItem={tabItem}
+                isOpen={openTabs.includes(tabItem._uid)}
+              />
+            ))}
           </div>
         </div>
       ))}

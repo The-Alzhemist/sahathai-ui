@@ -16,6 +16,10 @@ export function SustainabilityManagementContent() {
 
   return (
     <Fragment>
+      <ESGPolicy />
+      <SustainabilityPolicy />
+      <SustainabilityGoal />
+
       <section className='relative pt-[-20px] pb-[30px] overflow-hidden'>
         <Image
           src='/investor-relations/new/ir-sustain-bg.webp'
@@ -64,9 +68,6 @@ export function SustainabilityManagementContent() {
 
       <EsgRisk />
       <EmergingRisk />
-      <ESGPolicy />
-      <SustainabilityPolicy />
-      <SustainabilityGoal />
     </Fragment>
   )
 }
