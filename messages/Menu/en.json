@@ -5,13 +5,13 @@
       "visionMission": "Vision and Mission",
       "ourCommitmentSuccess": "Our Commitment and Success",
       "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
-      "corporateGroupStructureOrganizationalStructure": "Shareholding Structure of the Corporate Group and Corporate Governance Structure"
+      "corporateGroupStructure": "Shareholding Structure of the Corporate Group",
+      "organizationalStructure": "Corporate Governance Structure"
     },
     "infrastructureContainers": {
-      "title": "Terminal",
+      "title": "Facilities",
       "machineryEquipment": "Key Machinery and Equipment in the Port",
       "logisticInnovation": "Logistic Innovation",
-      "opticalCharacterRecognition": "Automatic Cargo Container Reading Technology (OCR)",
       "operationGuidelines": "Operational Guidelines",
       "contactUs": "Contact Us"
     },
@@ -43,13 +43,13 @@
       "title": "Investor Relations",
       "investorInformation": "Investor Information",
       "codeConduct": "Anti-Corruption Policy",
-      "shareHolder": "Shareholders",
-      "shareHolderMeeting": "Annual General Meeting of Shareholders",
+      "shareHolder": "Shareholder Information",
+      "shareHolderMeeting": "Shareholders' Meeting",
       "FinancialInformation": "Financial Information",
       "PerformanceReport": "Performance Report",
       "DocumentAnnouncement": "Publications",
       "GoodCorporate": "Good Corporate Governance",
-      "Activity": "Activities",
+      "Activity": "IR Activities",
       "SetExchangeAnnouncement": "Set News"
     }
   }

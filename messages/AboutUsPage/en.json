@@ -4,7 +4,8 @@
       "visionMission": "Vision and Mission",
       "ourCommitmentSuccess": "Our Commitment and Success",
       "boardDirectorsExecutiveCommittee": "Board of Directors & Executive Committee",
-      "corporateGroupStructureOrganizationalStructure": "Shareholding Structure of the Corporate Group and Corporate Governance Structure"
+      "corporateGroupStructure": "Shareholding Structure of the Corporate Group",
+      "organizationalStructure": "Corporate Governance Structure"
     },
     "VisionMissionValues": {
       "Vision": {
@@ -54,7 +55,7 @@
     },
     "CommitmentSuccess": {
       "startingBusiness": "Established in 2007",
-      "content": "Sahathai Terminal is a privately owned company that began operations in 2007. The company operates on a total area of 315,200 square meters, which includes a container maintenance and repair area, an on-site customs office, and fully equipped port facilities for full-scale cargo handling.With skilled and experienced personnel, Sahathai Terminal is located along the Chao Phraya River and offers comprehensive, end-to-end services. You can rely on us for complete solutions and a wide range of value-added services tailored to your needs. All our services are certified to global standards, while maintaining the flexibility that only an independent terminal operator can provide.",
+      "content": "Sahathai Terminal is a private port company that began operations in 2007. The company operates on a total area of 315,200 square meters, which includes a berth service area, a cargo handling area, a container maintenance and repair area, an on-site customs office, and fully equipped port facilities for full-scale cargo handling.\n\nWith skilled and experienced personnel, Sahathai Terminal is located along the Chao Phraya River and offers comprehensive, end-to-end services. You can rely on us for complete solutions and a wide range of value-added services tailored to your needs. All our services are certified to global standards, while maintaining the flexibility to serve you.",
       "2551": {
         "year": "2008",
         "content": "Established the company on March 10, 2008, with an initial capital of THB 2.0 million, with Sahathai Steel Pipe Public Company Limited holding 100.0% of the company's shares."
@@ -93,8 +94,7 @@
       "2562": {
         "year": "2019",
         "content": "Formed a joint venture with Frasers Property (Thailand) PCL under the name <b>Bangkok Logistics Park Co., Ltd. ('BLP')</b>, with an initial capital of THB 300.0 million, engaging in the development and management of a distribution center.",
-        "content2": "Increased registered capital and issued the Company's 1st warrants for newly issued ordinary shares (PORT-W1), with proceeds used to repay financial institution loans for investments in BLP and BRT and/or as working capital for the Company.",
-        "content3": "Transferred the Company's listed securities from the Market for Alternative Investment (MAI) to the Stock Exchange of Thailand (SET)."
+        "content2": "Transferred the Company's listed securities from the Market for Alternative Investment (MAI) to the Stock Exchange of Thailand (SET)."
       },
       "2563": {
         "year": "2020",
@@ -109,9 +109,7 @@
       },
       "2565": {
         "year": "2022",
-        "content": "Increased registered capital to accommodate the exercise of rights under the Company's 2nd (PORT-W2) and 3rd (PORT-W3) warrants for newly issued ordinary shares, allocated pro rata to existing shareholders.",
-        "content2": "Received a license to establish a free zone and a license to operate a vehicle parking rental business.",
-        "content3": "Developed Thailand's first vertical building-format warehouse in line with Green Logistics principles, using clean energy by installing solar panels on the warehouse building to generate renewable energy on-site and reduce electricity consumption."
+        "content": "Developed Thailand's first vertical building-format warehouse in line with Green Logistics principles, using clean energy by installing solar panels on the warehouse building to generate renewable energy on-site and reduce electricity consumption."
       },
       "2566": {
         "year": "2023",

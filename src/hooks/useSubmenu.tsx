@@ -46,10 +46,16 @@ export function useSubmenu() {
             pathname: `/about-us?tab=${AboutUsTabEnum.BOARD_DIRECTORS_EXE}`,
           },
           {
-            title: t('aboutUs.corporateGroupStructureOrganizationalStructure'),
+            title: t('aboutUs.corporateGroupStructure'),
             isExternalLink: false,
             isScroll: true,
             pathname: `/about-us?tab=${AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE}`,
+          },
+          {
+            title: t('aboutUs.organizationalStructure'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/about-us?tab=${AboutUsTabEnum.ORGANIZATIONAL_STRUCTURE}`,
           },
         ],
       },
@@ -124,12 +130,6 @@ export function useSubmenu() {
             pathname: `/infrastructure-containers#logistic-innovation`,
           },
           {
-            title: t('infrastructureContainers.opticalCharacterRecognition'),
-            isExternalLink: false,
-            isScroll: true,
-            pathname: `/infrastructure-containers#optical-character-recognition`,
-          },
-          {
             title: t('infrastructureContainers.operationGuidelines'),
             isExternalLink: false,
             isScroll: true,
@@ -191,12 +191,6 @@ export function useSubmenu() {
             pathname: `/investor-information/share-holder`,
           },
           {
-            title: t('investorRelations.codeConduct'),
-            isExternalLink: false,
-            isScroll: true,
-            pathname: `/code-of-conduct`,
-          },
-          {
             title: t('investorRelations.shareHolderMeeting'),
             isExternalLink: false,
             isScroll: true,
@@ -207,12 +201,6 @@ export function useSubmenu() {
             isExternalLink: false,
             isScroll: true,
             pathname: `/investor-information/financial-information`,
-          },
-          {
-            title: t('investorRelations.SetExchangeAnnouncement'),
-            isExternalLink: false,
-            isScroll: true,
-            pathname: `/investor-information/set-exchange-announcement`,
           },
           {
             title: t('investorRelations.PerformanceReport'),
@@ -231,6 +219,18 @@ export function useSubmenu() {
             isExternalLink: false,
             isScroll: true,
             pathname: `/investor-information/good-corporate`,
+          },
+          {
+            title: t('investorRelations.codeConduct'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/code-of-conduct`,
+          },
+          {
+            title: t('investorRelations.SetExchangeAnnouncement'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/investor-information/set-exchange-announcement`,
           },
           {
             title: t('investorRelations.Activity'),

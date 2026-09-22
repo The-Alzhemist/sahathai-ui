@@ -6,7 +6,7 @@ import { Menu } from '@/components/Menu'
 import { Animation } from '@/components/Animation'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 
-import { Link, useRouter } from '@/libs/intl/navigation'
+import { Link } from '@/libs/intl/navigation'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 
 import ShareHolderFreeFloatTable from '@/features/investorRelations/pages/ShareHolderPage/components/ShareHolderFreeFloatTable/ShareHolderFreeFloatTable'
@@ -14,20 +14,18 @@ import ShareHolderOverviewTable from '@/features/investorRelations/pages/ShareHo
 
 import { InvestorInformationTable } from '@/features/investorRelations/pages/ShareHolderPage/components/InvestorInformationTable/InvestorInformationTable'
 import Image from 'next/image'
-import DividendPolicy from '@/features/investorRelations/pages/ShareHolderPage/components/DividendPolicy/DividendPolicy'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { AnimatePresence } from 'framer-motion'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function ShareHolderPage() {
-  useRouter()
   const t = useTranslations('InvestorInformationPage.Shareholder')
 
   const { tick } = useNavigationTick()
 
   return (
-    <main className='pb-[176px] bg-white '>
+    <main className='bg-white'>
       <AnimatePresence mode='wait'>
         <Animation key={tick}>
           <Menu />
@@ -40,7 +38,7 @@ export function ShareHolderPage() {
           <section className='relative w-full mx-auto'>
             <section>
               <Animation>
-                <section className='relative mb-10'>
+                <section className='relative'>
                   {/* Background image */}
                   <Image
                     src='/investor-relations/stock-bg.webp'
@@ -54,7 +52,7 @@ export function ShareHolderPage() {
                   <div className='relative z-0 space-y-[50px] px-3 '>
                     <h2
                       id={InvestorInformationEnum.Shareholder}
-                      className='headline-2 text-black-80 text-center text-navy pt-[80px]'
+                      className='headline-2 text-black-80 text-center text-navy pt-[60px]'
                     >
                       {t('title')}
                     </h2>
@@ -77,15 +75,17 @@ export function ShareHolderPage() {
                   </div>
                 </section>
 
-                <div>
-                  <h2
-                    id={InvestorInformationEnum.Shareholder}
-                    className='headline-2 text-black-80 mb-5 text-center text-navy pt-[80px]'
-                  >
-                    {t('profit.title')}
-                  </h2>
-                  <DividendPolicy />
-                </div>
+                <Link
+                  href='/investor-information/dividend'
+                  className='relative block w-full h-[200px] md:h-[300px] overflow-hidden hover:opacity-90 transition-opacity'
+                >
+                  <Image
+                    src='/investor-relations/new/dividend-link-banner.webp'
+                    alt={t('profit.title')}
+                    fill
+                    className='object-cover object-right'
+                  />
+                </Link>
               </Animation>
             </section>
           </section>

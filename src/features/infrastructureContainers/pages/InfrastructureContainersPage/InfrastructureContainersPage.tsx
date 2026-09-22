@@ -3,7 +3,6 @@ import { OperationGuidelines } from '../../components/OperationGuidelines'
 import { MachineryEquipment } from '../../components/MachineryEquipment'
 import { LogisticInnovation } from '../../components/LogisticInnovation'
 import ContactUs from '@/components/ContactUs/ContactUs'
-import OpticalCharacterRecognition from '@/features/infrastructureContainers/components/OpticalCharacterRecognition/OpticalCharacterRecognition'
 
 import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
@@ -22,7 +21,6 @@ export function InfrastructureContainersPage() {
           <SwiperVertical />
           <MachineryEquipment />
           <LogisticInnovation />
-          <OpticalCharacterRecognition />
           {/*<FreeTradeZone />*/}
           <OperationGuidelines />
           <ContactUs className='my-[80px]' />

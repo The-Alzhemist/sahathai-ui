@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { BlogCard } from '@/components/BlogCard'
-import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 
@@ -15,14 +14,11 @@ import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export default function SocialResponsibilityComponent({
   stories,
-  latestBlog,
-  locale,
   page,
   totalPages,
   search,
 }: {
   stories: any
-  latestBlog: any
   locale: string
   page: number
   totalPages: number
@@ -43,6 +39,7 @@ export default function SocialResponsibilityComponent({
           mobileImageSrc='/social-responsibility/social-responsibility-3x.webp'
           imageSrc='/social-responsibility/social-responsibility-3x.webp'
           alt='social-responsibility-banner'
+          imageClassName='md:rounded-b-none'
         >
           <div className='mx-auto flex max-w-[1400px] flex-col items-center justify-center text-white'>
             <p className='max-w-[800px] text-center text-md font-normal leading-[1.25]  md:text-2xl md:leading-[1.35] mb-5'>
@@ -62,21 +59,7 @@ export default function SocialResponsibilityComponent({
           </div>
         </BannerImage>
 
-        {/* Latest Blog */}
-        <section
-          id='latestNews'
-          className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'
-        >
-          <h2 className='headline-2 text-blue-400 text-center mb-7'>
-            {t('latestBlog')}
-          </h2>
-
-          <LatestBlogCard
-            blog={latestBlog}
-            locale={locale}
-            page='social-responsibility'
-          />
-        </section>
+        <SustainabilityManagementContent />
 
         {/* All Blog */}
         <section
@@ -115,7 +98,21 @@ export default function SocialResponsibilityComponent({
           </div>
         </section>
 
-        <SustainabilityManagementContent />
+        {/* Latest Blog */}
+        {/*<section*/}
+        {/*  id='latestNews'*/}
+        {/*  className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'*/}
+        {/*>*/}
+        {/*  <h2 className='headline-2 text-blue-400 text-center mb-7'>*/}
+        {/*    {t('latestBlog')}*/}
+        {/*  </h2>*/}
+
+        {/*  <LatestBlogCard*/}
+        {/*    blog={latestBlog}*/}
+        {/*    locale={locale}*/}
+        {/*    page='social-responsibility'*/}
+        {/*  />*/}
+        {/*</section>*/}
       </Animation>
     </div>
   )

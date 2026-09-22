@@ -3,6 +3,7 @@ import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInfor
 import { Animation } from '@/components/Animation'
 import { DownloadButton } from '@/components/DownloadButton'
 import { DocumentIcon } from '@/components/icons/DocumentIcon'
+import { MailIcon } from '@/components/icons/MailIcon'
 
 export function CompanyFactSheet() {
   const t = useTranslations('InvestorInformationPage.FactSheet')
@@ -32,6 +33,14 @@ export function CompanyFactSheet() {
                 href='https://a.storyblok.com/f/316761/x/1a86f1d2d5/company-snapshot-9m-2021.pdf'
               />
             </div>
+          </div>
+
+          <div className='mt-10 pt-4 text-center font-light border-t-[1px] border-blue-200'>
+            <MailIcon className='mx-auto h-8 w-8 text-navy' />
+            <h3 className='mt-3 font-semibold'>{t('Contact.title')}</h3>
+            <p className='mt-2'>{t('Contact.detail')}</p>
+            <p>{t('Contact.coordinator')}</p>
+            <p>{t('Contact.phone')}</p>
           </div>
         </section>
       </div>

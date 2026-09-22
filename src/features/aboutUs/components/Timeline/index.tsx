@@ -106,7 +106,6 @@ export function Timeline() {
           })}
         </p>
         <p className='font-light mt-[16px]'>{t('2562.content2')}</p>
-        <p className='font-light mt-[16px]'>{t('2562.content3')}</p>
       </TimelineCard>
       <TimelineCard
         contentPosition='right'
@@ -131,8 +130,6 @@ export function Timeline() {
         imageUrl='/about-us/new/2565.webp'
       >
         <p className='font-light'>{t('2565.content')}</p>
-        <p className='font-light mt-[16px]'>{t('2565.content2')}</p>
-        <p className='font-light mt-[16px]'>{t('2565.content3')}</p>
       </TimelineCard>
       <TimelineCard
         contentPosition='left'

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
 interface BannerImageProps {
   imageSrc: string
@@ -7,6 +8,7 @@ interface BannerImageProps {
   alt?: string
   children?: React.ReactNode
   overlayClassName?: string
+  imageClassName?: string
 }
 
 export default function BannerImage({
@@ -15,6 +17,7 @@ export default function BannerImage({
   alt = 'Banner image',
   children,
   overlayClassName = 'absolute inset-0 z-10 flex items-center justify-center px-6 text-center md:px-12',
+  imageClassName,
 }: BannerImageProps) {
   return (
     <section className='relative z-0 -mt-[50px] w-full'>
@@ -25,7 +28,10 @@ export default function BannerImage({
           alt={alt}
           fill
           priority
-          className='object-cover md:rounded-b-[60px]'
+          className={twMerge(
+            'object-cover md:rounded-b-[60px]',
+            imageClassName
+          )}
         />
         {children ? <div className={overlayClassName}>{children}</div> : null}
       </div>

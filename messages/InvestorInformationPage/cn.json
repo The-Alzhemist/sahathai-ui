@@ -47,7 +47,13 @@
     },
     "FactSheet": {
       "title": "公司概况（Fact Sheet）",
-      "detail": "下载 Fact Sheet 资料"
+      "detail": "下载 Fact Sheet 资料",
+      "Contact": {
+        "title": "联系我们",
+        "detail": "如您需要公司的更多信息以供投资决策参考，我们乐意为您提供。请联系投资者关系部：",
+        "coordinator": "联系人：投资者关系部",
+        "phone": "电话：+66(0)2386 8000"
+      }
     },
     "OneReportTable": {
       "AnnualReport": "年度报告\n",

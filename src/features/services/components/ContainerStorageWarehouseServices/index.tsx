@@ -46,15 +46,15 @@ export function ContainerStorageWarehouseServices() {
 
       <BannerTextCard
         imageUrl='/services/new/container-service-2.webp'
-        title={t('generalWarehouseandBondedWarehouse.title')}
-        content={t('generalWarehouseandBondedWarehouse.content')}
+        title={t('bondedWarehouse.title')}
+        content={t('bondedWarehouse.content')}
         position='right'
       />
 
       <BannerTextCard
         imageUrl='/services/new/container-service-3.webp'
-        title={t('coldStorageWarehouse.title')}
-        content={t('coldStorageWarehouse.content')}
+        title={t('generalWarehouse.title')}
+        content={t('generalWarehouse.content')}
         position='left'
       />
 

@@ -44,7 +44,7 @@ export function CodeOfConductPage({
             </h1>
             <GroupAccordionTabs pageKey='code-of-conduct' group={group} />
           </section>
-          <section className='px-5 pb-5 pt-[50px] max-w-4xl mx-auto space-y-6'>
+          <section className='pb-5 pt-[50px] max-w-4xl mx-auto space-y-6'>
             <ContactUsForm hideContactForm />
           </section>
         </Animation>

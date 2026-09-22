@@ -5,6 +5,7 @@ import { EyeIcon } from '@/components/icons/EyeIcon'
 import { CheckCircle2Icon } from '@/components/icons/CheckCircle2Icon'
 import { PeopleIcon } from '@/components/icons/PeopleIcon'
 import { TreeStructureIcon } from '@/components/icons/TreeStructureIcon'
+import { BuildingIcon } from '@/components/icons/AboutUsBuildingIcon'
 import {
   AboutPageAcceptProps,
   AboutPageProps,
@@ -39,7 +40,12 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
         },
         {
           key: AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE,
-          title: t('corporateGroupStructureOrganizationalStructure'),
+          title: t('corporateGroupStructure'),
+          icon: <BuildingIcon width='20' height='20' />,
+        },
+        {
+          key: AboutUsTabEnum.ORGANIZATIONAL_STRUCTURE,
+          title: t('organizationalStructure'),
           icon: <TreeStructureIcon width='20' height='20' />,
         },
       ],

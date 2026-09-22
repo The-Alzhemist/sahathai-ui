@@ -38,10 +38,6 @@
       "containerService": {
         "title": "Container Yard and Warehouse Services",
         "content": "We provide container yard and warehouse facilities to support our customers, including a bonded container yard in the free zone and a bonded warehouse with an area of 6,301 square meters."
-      },
-      "feederVesselServices": {
-        "title": "Feeder Vessel Berthing Services | Feeder",
-        "content": "Sahathai Terminal provides berthing services for international cargo vessels or feeder vessels of approximately 1,000 TEUs, with a feeder berth 170 meters wide, equipped with 4 gantry cranes that move containers on and off vessels accurately and safely, supplemented by 1 mobile harbor crane to support periods of high handling volume. Leading global shipping lines call regularly, including MSC, CMA CGM, and Maersk Line, meeting the needs of importers and exporters who require convenient and efficient international transport connections from the heart of Bangkok and Samut Prakan."
       }
     },
     "ContainerStorageWarehouseServices": {
@@ -52,15 +48,15 @@
       "content4": "General warehouse with an area of 15,606 square meters",
       "freeTradeZoneContainerYard": {
         "title": "Free Zone Container Yard",
-        "content": "The company provides container storage services in the Free Trade Zone, primarily serving a major automobile manufacturer. This manufacturer uses the space to store imported auto parts for car assembly in Thailand. The parts are stored in the Free Trade Zone to manage import duties and customs clearance, which are paid only when the parts are withdrawn for use in production."
+        "content": "The company provides container storage services in the Free Trade Zone (Free zone yard) to manage import duties; customs clearance and duty payment take place only when the customer needs to use the goods."
       },
-      "generalWarehouseandBondedWarehouse": {
-        "title": "General and Bonded Warehouse",
-        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n • Storing\n • Exhibiting\n • Selling\n • Packing or assembling stored items\nThis reduces production or import costs for goods from abroad."
+      "bondedWarehouse": {
+        "title": "Bonded Warehouse",
+        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n • Storing\n • Exhibiting\n • Selling\n • Packing or assembling stored items\nThis reduces production or import costs for goods from abroad.\nWarehouse efficiency is further enhanced with automated systems using robots to replace human operations within the cold storage facility."
       },
-      "coldStorageWarehouse": {
-        "title": "Cold Storage Warehouse",
-        "content": "Enhancing warehouse efficiency with automated systems using robots to replace human operations within the cold storage facility."
+      "generalWarehouse": {
+        "title": "General Warehouse",
+        "content": "Located within the company's port area with a total rental area of approximately 15,606 square meters, providing general goods storage for tenants, either for general storage or for use as a Distribution Center."
       },
       "freeTradeZoneWarehouse": {
         "title": "Free Zone Warehouse",

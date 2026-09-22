@@ -46,13 +46,6 @@ export function Service() {
           />
 
           <ServiceCard
-            title={t('automatedContainerReadingTechnology.title')}
-            content={t('automatedContainerReadingTechnology.content')}
-            imageUrl='/home/phone.png'
-            imageSize={64}
-          />
-
-          <ServiceCard
             title={t('trackingOnline.title')}
             content={t('trackingOnline.content')}
             imageUrl='/home/truck.png'
