@@ -19,7 +19,12 @@ export default async function pressRelease({
 
   const search = searchParams.search?.trim() || undefined
 
-  const data = await getArticles({ locale, type: ArticleEnum.PressRelease })
+  const data = await getArticles({
+    locale,
+    type: ArticleEnum.PressRelease,
+    page,
+    perPage: 9,
+  })
 
   return (
     <main>

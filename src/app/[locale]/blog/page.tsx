@@ -19,7 +19,12 @@ export default async function Blog({
 
   const search = searchParams.search?.trim() || undefined
 
-  const data = await getArticles({ locale, type: ArticleEnum.Article })
+  const data = await getArticles({
+    locale,
+    type: ArticleEnum.Article,
+    page,
+    perPage: 9,
+  })
 
   return (
     <main>

@@ -16,7 +16,12 @@ export default async function news({
   const page = Number(searchParams.page ?? 1)
   const search = searchParams.search?.trim() || undefined
 
-  const data = await getArticles({ locale, type: ArticleEnum.CompanyNews })
+  const data = await getArticles({
+    locale,
+    type: ArticleEnum.CompanyNews,
+    page,
+    perPage: 9,
+  })
 
   return (
     <main>

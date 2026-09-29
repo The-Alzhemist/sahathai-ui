@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { ISbStoryData } from '@storyblok/react'
 import { BlogCard } from '@/components/BlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
@@ -12,18 +11,15 @@ import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
 import { useNavigationTick } from '@/context/NavigationTickContext'
-import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
-
-type NewsStory = ISbStoryData<{ body: EventNewsDetailCardStoryblok[] }>
+import { ArticleCardDataType } from '@/types/ArticleCardDataType'
 
 export default function SocialResponsibilityComponent({
-  stories,
+  data,
   page,
   totalPages,
   search,
 }: {
-  stories: NewsStory[]
-  locale: string
+  data: ArticleCardDataType[]
   page: number
   totalPages: number
   search?: string
@@ -65,27 +61,27 @@ export default function SocialResponsibilityComponent({
 
         <SustainabilityManagementContent />
 
-        {/* All Blog */}
         <section
-          id='press-releases'
-          className='bg-white pt-[70px] min-h-[600px]'
+          id='social-responsibility'
+          className='bg-white pt-[70px]'
         >
-          <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[600px]'>
+          <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[calc(100vh-240px)]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('allBlog')}
             </h2>
 
-            {/* Blog list */}
             <div className='flex-1 flex justify-center items-center'>
-              {stories.length ? (
+              {data.length ? (
                 <div className='flex flex-wrap gap-5 justify-center'>
-                  {stories.map((s: NewsStory) => (
+                  {data.map((s: ArticleCardDataType) => (
                     <BlogCard
-                      key={s.content.body[0]._uid}
-                      title={s.content.body[0].newsTitle}
-                      content={s.content}
-                      createdAt={s.created_at ?? ''}
+                      key={s.documentId}
+                      title={s.title}
+                      description={s.shortDescription}
+                      createdAt={s.publishDate ?? ''}
                       slug={s.slug}
+                      publishDate={s.publishDate}
+                      imageUrl={s.cover.url}
                       page='social-responsibility'
                     />
                   ))}
@@ -95,28 +91,17 @@ export default function SocialResponsibilityComponent({
               )}
             </div>
 
-            {/* Pagination */}
-            <div className='mt-auto flex justify-center mb-[90px]'>
-              <Pagination page={page} totalPages={totalPages} search={search} />
-            </div>
+            {data.length > 0 && (
+              <div className='mt-auto flex justify-center mb-[90px]'>
+                <Pagination
+                  page={page}
+                  totalPages={totalPages}
+                  search={search}
+                />
+              </div>
+            )}
           </div>
         </section>
-
-        {/* Latest Blog */}
-        {/*<section*/}
-        {/*  id='latestNews'*/}
-        {/*  className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'*/}
-        {/*>*/}
-        {/*  <h2 className='headline-2 text-blue-400 text-center mb-7'>*/}
-        {/*    {t('latestBlog')}*/}
-        {/*  </h2>*/}
-
-        {/*  <LatestBlogCard*/}
-        {/*    blog={latestBlog}*/}
-        {/*    locale={locale}*/}
-        {/*    page='social-responsibility'*/}
-        {/*  />*/}
-        {/*</section>*/}
       </Animation>
     </div>
   )

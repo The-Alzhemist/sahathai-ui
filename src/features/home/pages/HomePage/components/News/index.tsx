@@ -1,39 +1,26 @@
 import { getTranslations } from 'next-intl/server'
-import { ISbStoryData } from '@storyblok/react'
 
-import { fetchAllBlog } from '@/libs/storyblok/blogQuery'
 import { BlogCard } from '@/components/BlogCard'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { getArticles } from '@/libs/strapi/article'
+import { ArticleCardDataType } from '@/types/ArticleCardDataType'
 
 import React from 'react'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
-import { RevalidateTag } from '@/enums/CacheEnum'
-import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
-
-type NewsStory = ISbStoryData<{ body: EventNewsDetailCardStoryblok[] }>
 
 export default async function HomePageNews({ params }: HomePageProps) {
-  // translation
   const t = await getTranslations('NewsPage')
 
   const locale = params.locale
-  const page = 1
-  const perPage = 3
-  const search = undefined
 
-  //  fetching data
-  const { stories } = await fetchAllBlog({
-    page,
-    perPage,
-    lang: locale,
-    version: 'published',
-    search,
-    startsWith: 'news/',
-    tag: RevalidateTag.NEWS,
+  const { data: articles } = await getArticles({
+    locale,
+    type: ArticleEnum.PressRelease,
+    perPage: 3,
   })
 
   return (
     <main>
-      {/*All blog*/}
       <section className='bg-white py-[70px]'>
         <div className='max-w-[1100px] mx-auto p-6'>
           <h2 className='headline-2 text-blue-400 text-center mb-7'>
@@ -42,14 +29,16 @@ export default async function HomePageNews({ params }: HomePageProps) {
 
           <section className='flex flex-col justify-center items-center '>
             <div className=' flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
-              {stories.length ? (
-                stories.map((s: NewsStory) => (
+              {articles.length ? (
+                articles.map((s: ArticleCardDataType) => (
                   <BlogCard
-                    key={s.content.body[0]._uid}
-                    title={s.content.body[0].newsTitle}
-                    content={s.content}
-                    createdAt={s.created_at ?? ''}
+                    key={s.documentId}
+                    title={s.title}
+                    description={s.shortDescription}
+                    createdAt={s.publishDate ?? ''}
                     slug={s.slug}
+                    publishDate={s.publishDate}
+                    imageUrl={s.cover.url}
                     page={'press-releases'}
                   />
                 ))
