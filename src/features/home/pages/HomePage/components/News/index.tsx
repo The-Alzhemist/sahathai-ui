@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server'
+import { ISbStoryData } from '@storyblok/react'
 
 import { fetchAllBlog } from '@/libs/storyblok/blogQuery'
 import { BlogCard } from '@/components/BlogCard'
@@ -6,6 +7,9 @@ import { BlogCard } from '@/components/BlogCard'
 import React from 'react'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 import { RevalidateTag } from '@/enums/CacheEnum'
+import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
+
+type NewsStory = ISbStoryData<{ body: EventNewsDetailCardStoryblok[] }>
 
 export default async function HomePageNews({ params }: HomePageProps) {
   // translation
@@ -39,14 +43,14 @@ export default async function HomePageNews({ params }: HomePageProps) {
           <section className='flex flex-col justify-center items-center '>
             <div className=' flex flex-wrap px-5 gap-5 mx-auto mb-10 flex-col md:flex-row justify-center items-center'>
               {stories.length ? (
-                stories.map((s: any) => (
+                stories.map((s: NewsStory) => (
                   <BlogCard
                     key={s.content.body[0]._uid}
                     title={s.content.body[0].newsTitle}
                     content={s.content}
                     createdAt={s.created_at ?? ''}
                     slug={s.slug}
-                    page={'news'}
+                    page={'press-releases'}
                   />
                 ))
               ) : (

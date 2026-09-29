@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { ArticleEnum } from '@/enums/ArticleEnum'
 import { getArticles } from '@/libs/strapi/article'
-import PressReleaseComponent from '@/components/PressReleaseComponent/PressReleaseComponent'
+import PressReleaseListComponent from '@/components/PressReleaseListComponent/PressReleaseListComponent'
 
 export default async function pressRelease({
   params,
@@ -19,11 +19,11 @@ export default async function pressRelease({
 
   const search = searchParams.search?.trim() || undefined
 
-  const data = await getArticles({ locale, type: ArticleEnum.CompanyNews })
+  const data = await getArticles({ locale, type: ArticleEnum.PressRelease })
 
   return (
     <main>
-      <PressReleaseComponent
+      <PressReleaseListComponent
         page={page}
         totalPages={data.meta.pagination.pageCount}
         search={search}

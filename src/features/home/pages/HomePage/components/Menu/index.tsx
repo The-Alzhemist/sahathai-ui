@@ -16,11 +16,11 @@ export function Menu() {
         <Menu.Item href='/infrastructure-containers'>
           {t('infrastructureContainers.title')}
         </Menu.Item>
-        <Menu.Item className='min-w-[140px]' href='/news'>
-          {t('news.title')}
-        </Menu.Item>
         <Menu.Item className='min-w-[140px]' href='/press-releases'>
           {t('pressRelease.title')}
+        </Menu.Item>
+        <Menu.Item className='min-w-[140px]' href='/news'>
+          {t('companyNews.title')}
         </Menu.Item>
         <Menu.Item className='min-w-[140px]' href='/social-responsibility'>
           {t('socialResponsibility.title')}

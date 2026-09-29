@@ -1,9 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 
 import React from 'react'
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
-import NewsComponent from '@/components/NewsComponent/NewsComponent'
-import { RevalidateTag } from '@/enums/CacheEnum'
+import CompanyNewsListComponent from '@/components/CompanyNewsListComponent/CompanyNewsListComponent'
 import { ArticleEnum } from '@/enums/ArticleEnum'
 import { getArticles } from '@/libs/strapi/article'
 
@@ -18,11 +16,11 @@ export default async function news({
   const page = Number(searchParams.page ?? 1)
   const search = searchParams.search?.trim() || undefined
 
-  const data = await getArticles({ locale, type: ArticleEnum.PressRelease })
+  const data = await getArticles({ locale, type: ArticleEnum.CompanyNews })
 
   return (
     <main>
-      <NewsComponent
+      <CompanyNewsListComponent
         page={page}
         totalPages={data.meta.pagination.pageCount}
         search={search}
@@ -42,11 +40,11 @@ export async function generateMetadata({
   const t = await getTranslations('MetaData')
 
   return {
-    title: t('News.Title'),
-    description: t('News.Description'),
+    title: t('CompanyNews.Title'),
+    description: t('CompanyNews.Description'),
     openGraph: {
-      title: t('News.Title'),
-      description: t('News.Description'),
+      title: t('CompanyNews.Title'),
+      description: t('CompanyNews.Description'),
       images: [
         {
           url: `${process.env.DOMAIN_NAME}/seo/news/news-meta-img-${locale}.png`,

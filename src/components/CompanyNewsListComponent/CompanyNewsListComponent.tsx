@@ -10,7 +10,7 @@ import { useRouter } from '@/libs/intl/navigation'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 import { ArticleCardDataType } from '@/types/ArticleCardDataType'
 
-export default function NewsComponent({
+export default function CompanyNewsListComponent({
   page,
   totalPages,
   search,
@@ -26,14 +26,14 @@ export default function NewsComponent({
   const { tick } = useNavigationTick()
 
   return (
-    <section>
+    <div>
       <Animation key={tick}>
         <Menu />
 
-        <section className='bg-white' id='press-releases'>
+        <section className='bg-white' id='news'>
           <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[calc(100vh-240px)]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
-              {t('pressRelease')}
+              {t('allPressRelease')}
             </h2>
 
             <div className='flex-1 flex justify-center items-center'>
@@ -48,7 +48,7 @@ export default function NewsComponent({
                       slug={s.slug}
                       publishDate={s.publishDate}
                       imageUrl={s.cover.url}
-                      page={'news'}
+                      page='news'
                     />
                   ))}
                 </div>
@@ -69,6 +69,6 @@ export default function NewsComponent({
           </div>
         </section>
       </Animation>
-    </section>
+    </div>
   )
 }

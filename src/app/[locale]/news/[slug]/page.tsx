@@ -18,7 +18,7 @@ export default async function Page({
     <PressReleasePage
       locale={locale}
       data={data}
-      title={t('PageContent.Title')}
+      title={t('PageContent.CompanyNews')}
       backHref={`/${locale}/news`}
     />
   )

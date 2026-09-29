@@ -12,8 +12,8 @@
     },
     "PageContent": {
       "BlogTitle": "Blog",
-      "Title": "News & Articles",
-      "PressRelease": "Press Releases",
+      "PressRelease": "Press Release",
+      "CompanyNews": "Company News",
       "SocialResponsibility": "Sustainability Management",
       "Back": "Back to Homepage"
     }

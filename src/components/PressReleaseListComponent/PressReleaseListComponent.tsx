@@ -10,7 +10,7 @@ import { useRouter } from '@/libs/intl/navigation'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 import { ArticleCardDataType } from '@/types/ArticleCardDataType'
 
-export default function PressReleaseComponent({
+export default function PressReleaseListComponent({
   page,
   totalPages,
   search,
@@ -26,14 +26,14 @@ export default function PressReleaseComponent({
   const { tick } = useNavigationTick()
 
   return (
-    <div>
+    <section>
       <Animation key={tick}>
         <Menu />
 
         <section className='bg-white' id='press-releases'>
           <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[calc(100vh-240px)]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
-              {t('allPressRelease')}
+              {t('pressRelease')}
             </h2>
 
             <div className='flex-1 flex justify-center items-center'>
@@ -48,7 +48,7 @@ export default function PressReleaseComponent({
                       slug={s.slug}
                       publishDate={s.publishDate}
                       imageUrl={s.cover.url}
-                      page='press-releases'
+                      page={'press-releases'}
                     />
                   ))}
                 </div>
@@ -69,6 +69,6 @@ export default function PressReleaseComponent({
           </div>
         </section>
       </Animation>
-    </div>
+    </section>
   )
 }

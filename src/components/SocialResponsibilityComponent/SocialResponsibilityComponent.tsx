@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { ISbStoryData } from '@storyblok/react'
 import { BlogCard } from '@/components/BlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
@@ -11,6 +12,9 @@ import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
 import { useNavigationTick } from '@/context/NavigationTickContext'
+import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
+
+type NewsStory = ISbStoryData<{ body: EventNewsDetailCardStoryblok[] }>
 
 export default function SocialResponsibilityComponent({
   stories,
@@ -18,7 +22,7 @@ export default function SocialResponsibilityComponent({
   totalPages,
   search,
 }: {
-  stories: any
+  stories: NewsStory[]
   locale: string
   page: number
   totalPages: number
@@ -75,7 +79,7 @@ export default function SocialResponsibilityComponent({
             <div className='flex-1 flex justify-center items-center'>
               {stories.length ? (
                 <div className='flex flex-wrap gap-5 justify-center'>
-                  {stories.map((s: any) => (
+                  {stories.map((s: NewsStory) => (
                     <BlogCard
                       key={s.content.body[0]._uid}
                       title={s.content.body[0].newsTitle}

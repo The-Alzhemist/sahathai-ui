@@ -27,11 +27,11 @@
     "home": {
       "title": "Home"
     },
-    "news": {
-      "title": "News"
-    },
     "pressRelease": {
       "title": "Press Release"
+    },
+    "companyNews": {
+      "title": "Company News"
     },
     "socialResponsibility": {
       "title": "Sustainability Management"

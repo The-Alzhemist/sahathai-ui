@@ -16,12 +16,12 @@
       "Title": "Sahathai | Infrastructure",
       "Description": "Sahathai Terminal delivers premium facilities and quality services to fully meet all customer requirements."
     },
-    "News": {
-      "Title": "Sahathai | News",
-      "Description": "Stay updated with the latest movements and important information from Sahathai Terminal so you never miss what matters."
-    },
     "PressRelease": {
       "Title": "Sahathai | Press Releases",
+      "Description": "Stay updated with the latest movements and important information from Sahathai Terminal so you never miss what matters."
+    },
+    "CompanyNews": {
+      "Title": "Sahathai | Company News",
       "Description": "Reports on corporate performance and organizational activities."
     },
     "SocialResponsibility": {
