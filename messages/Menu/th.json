@@ -50,7 +50,8 @@
       "DocumentAnnouncement": "เอกสารเผยแพร่",
       "GoodCorporate": "การกำกับดูแลกิจการที่ดี",
       "Activity": "กิจกรรมนักลงทุนสัมพันธ์",
-      "SetExchangeAnnouncement": "ประกาศตลาดหลักทรัพย์"
+      "SetExchangeAnnouncement": "ประกาศตลาดหลักทรัพย์",
+      "AnnualReport": "รายงานประจำปี"
     }
   }
 }

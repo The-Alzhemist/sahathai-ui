@@ -87,6 +87,10 @@
     "CompanySecretaryContact": {
       "Title": "Sahathai | Company Secretary Contact",
       "Description": "Contact the Company Secretary of Sahathai Terminal, Mr. Banchai Karuchit, for information and correspondence."
+    },
+    "AnnualReport": {
+      "Title": "Sahathai | Annual Report",
+      "Description": "The company's annual report (One Report) and information for shareholders and investors."
     }
   }
 }

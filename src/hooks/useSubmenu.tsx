@@ -203,6 +203,12 @@ export function useSubmenu() {
             pathname: `/investor-information/financial-information`,
           },
           {
+            title: t('investorRelations.AnnualReport'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/investor-information/annual-report`,
+          },
+          {
             title: t('investorRelations.PerformanceReport'),
             isExternalLink: false,
             isScroll: true,

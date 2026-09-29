@@ -50,7 +50,8 @@
       "DocumentAnnouncement": "公开文件",
       "GoodCorporate": "良好公司治理",
       "Activity": "投资者关系活动",
-      "SetExchangeAnnouncement": "证交所公告"
+      "SetExchangeAnnouncement": "证交所公告",
+      "AnnualReport": "年度报告"
     }
   }
 }

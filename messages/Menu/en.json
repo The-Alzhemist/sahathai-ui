@@ -50,7 +50,8 @@
       "DocumentAnnouncement": "Publications",
       "GoodCorporate": "Good Corporate Governance",
       "Activity": "IR Activities",
-      "SetExchangeAnnouncement": "Set News"
+      "SetExchangeAnnouncement": "Set News",
+      "AnnualReport": "Annual Report"
     }
   }
 }

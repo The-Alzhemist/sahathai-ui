@@ -2,9 +2,17 @@ import { useTranslations } from 'next-intl'
 import { DownloadButton } from '@/components/DownloadButton'
 import { oneReportInformationList } from '@/features/investorRelations/components/OneReportTable/oneReportInformationList'
 
-export function OneReportTable() {
+export function OneReportTable({
+  showLatestThreeYears = false,
+}: {
+  showLatestThreeYears?: boolean
+}) {
   const common = useTranslations('common')
   const t = useTranslations('InvestorInformationPage.OneReportTable')
+
+  const items = showLatestThreeYears
+    ? oneReportInformationList.slice(0, 3)
+    : oneReportInformationList
 
   return (
     <div
@@ -33,7 +41,7 @@ export function OneReportTable() {
         {/* Body */}
         <div className='rounded-[20px] border border-[#CFE6FF] bg-[#F9FCFF] p-4 md:p-5'>
           <div className='divide-y divide-[#E6F2FF]'>
-            {oneReportInformationList.map((item, idx) => (
+            {items.map((item, idx) => (
               <div
                 key={idx}
                 className='grid grid-cols-[120px,1fr,1fr,1fr] md:grid-cols-[160px,1fr,1fr,1fr] gap-x-4 py-5 items-center'

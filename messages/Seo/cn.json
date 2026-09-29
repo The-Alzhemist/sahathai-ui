@@ -87,6 +87,10 @@
     "CompanySecretaryContact": {
       "Title": "沙泰 | 联系公司秘书",
       "Description": "联系沙泰码头公司秘书 Banchai Karuchit 先生，获取相关信息与联络方式。"
+    },
+    "AnnualReport": {
+      "Title": "Sahathai | 年度报告",
+      "Description": "公司年度报告（One Report）及股东与投资者相关信息。"
     }
   }
 }
