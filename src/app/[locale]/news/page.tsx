@@ -4,6 +4,8 @@ import React from 'react'
 import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
 import NewsComponent from '@/components/NewsComponent/NewsComponent'
 import { RevalidateTag } from '@/enums/CacheEnum'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { getArticles } from '@/libs/strapi/article'
 
 export default async function news({
   params,
@@ -14,37 +16,17 @@ export default async function news({
 }) {
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
-  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  //  fetching data
-  const { stories, total } = await fetchAllBlog({
-    page,
-    perPage,
-    lang: locale,
-    version: 'published',
-    search,
-    startsWith: 'news/',
-    tag: RevalidateTag.NEWS,
-  })
-
-  const latestBlog = await fetchLastBlog({
-    lang: locale,
-    startsWith: 'news/',
-    tag: RevalidateTag.NEWS,
-  })
-
-  const totalPages = Math.ceil(total / perPage)
+  const data = await getArticles({ locale, type: ArticleEnum.PressRelease })
 
   return (
     <main>
       <NewsComponent
-        stories={stories}
-        latestBlog={latestBlog}
-        locale={locale}
         page={page}
-        totalPages={totalPages}
+        totalPages={data.meta.pagination.pageCount}
         search={search}
+        data={data.data}
       />
     </main>
   )

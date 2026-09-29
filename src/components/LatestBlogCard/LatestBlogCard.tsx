@@ -1,18 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { cn } from '@/libs/util'
+import { cn, formatDateTime, getStrapiImageUrl } from '@/libs/util'
 import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import { ArrowRightIcon } from '@/components/icons/ArrowRightIcon'
 import { Link } from '@/libs/intl/navigation'
 
 import { useTranslations } from 'next-intl'
 import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
+import { LatestBlogCardProps } from './interface'
 
-export async function LatestBlogCard({
-  blog,
-  page,
-}: LatestBlogCardProps) {
+export function LatestBlogCard({ blog, page }: LatestBlogCardProps) {
   const common = useTranslations('common')
 
   if (!blog) {
@@ -34,8 +32,6 @@ export async function LatestBlogCard({
     )
   }
 
-  const content = blog.content.body[0] as EventNewsDetailCardStoryblok
-
   return (
     <Link
       href={`/${page}/${blog.slug}`}
@@ -49,11 +45,8 @@ export async function LatestBlogCard({
         <div className='w-full md:w-[48%] md:min-w-[400px]'>
           <div className='relative w-full aspect-[16/9] md:aspect-[4/3] overflow-hidden'>
             <Image
-              src={
-                content.newsImageCover?.filename ||
-                'https://placehold.co/600x400'
-              }
-              alt={content.newsTitle || 'News image'}
+              src={getStrapiImageUrl(blog.cover.url)}
+              alt={blog.title || 'News image'}
               fill
               priority
               className='object-cover transition-transform duration-300 group-hover:scale-105'
@@ -64,15 +57,15 @@ export async function LatestBlogCard({
 
         <div className='w-full md:w-[52%] md:min-w-[400px] p-5'>
           <h2 className='mt-[23px] line-clamp-2 text-black headline-4'>
-            {content.newsTitle}
+            {blog.title}
           </h2>
 
           <p className='mt-[10px] line-clamp-2 text-black-6 body-2'>
-            {extractTextFieldsStoryblok(content.newsDescription)}
+            {blog.shortDescription}
           </p>
 
           <div className='mt-[10px] caption text-black-3'>
-            {content.newsDate}
+            {formatDateTime(blog.publishDate)}
           </div>
 
           <div className='mt-[23px] flex w-fit items-center gap-[10px] text-navy button-small'>

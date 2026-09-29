@@ -1,29 +1,25 @@
 'use client'
 
-import React from 'react'
 import { BlogCard } from '@/components/BlogCard'
-import { LatestBlogCard } from '@/components/LatestBlogCard/LatestBlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
-
+import React from 'react'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
 import { useNavigationTick } from '@/context/NavigationTickContext'
+import { ArticleCardDataType } from '@/types/ArticleCardDataType'
+
 export default function BlogComponent({
-  stories,
-  latestBlog,
-  locale,
   page,
   totalPages,
   search,
+  data,
 }: {
-  stories: any
-  latestBlog: any
-  locale: string
   page: number
   totalPages: number
   search?: string
+  data: ArticleCardDataType[]
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
@@ -34,33 +30,24 @@ export default function BlogComponent({
       <Animation key={tick}>
         <Menu />
 
-        {/* Latest Blog */}
-        <section className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'>
-          <h2 className='headline-2 text-blue-400 text-center mb-7'>
-            {t('latestBlog')}
-          </h2>
-
-          <LatestBlogCard blog={latestBlog} locale={locale} page='blog' />
-        </section>
-
-        {/* All Blog */}
-        <section className='bg-white pt-[70px] min-h-[600px]'>
-          <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[600px]'>
+        <section className='bg-white'>
+          <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[calc(100vh-240px)]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('allBlog')}
             </h2>
 
-            {/* Blog list */}
             <div className='flex-1 flex justify-center items-center'>
-              {stories.length ? (
+              {data.length ? (
                 <div className='flex flex-wrap gap-5 justify-center'>
-                  {stories.map((s: any) => (
+                  {data.map((s: ArticleCardDataType) => (
                     <BlogCard
-                      key={s.content.body[0]._uid}
-                      title={s.content.body[0].newsTitle}
-                      content={s.content}
-                      createdAt={s.created_at ?? ''}
+                      key={s.documentId}
+                      title={s.title}
+                      description={s.shortDescription}
+                      createdAt={s.publishDate ?? ''}
                       slug={s.slug}
+                      publishDate={s.publishDate}
+                      imageUrl={s.cover.url}
                       page='blog'
                     />
                   ))}
@@ -70,10 +57,15 @@ export default function BlogComponent({
               )}
             </div>
 
-            {/* Pagination */}
-            <div className='mt-auto flex justify-center mb-[90px]'>
-              <Pagination page={page} totalPages={totalPages} search={search} />
-            </div>
+            {data.length > 0 && (
+              <div className='mt-auto flex justify-center mb-[90px]'>
+                <Pagination
+                  page={page}
+                  totalPages={totalPages}
+                  search={search}
+                />
+              </div>
+            )}
           </div>
         </section>
       </Animation>
