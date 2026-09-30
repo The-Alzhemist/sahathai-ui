@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
 import { ArticleEnum } from '@/enums/ArticleEnum'
+import { StrapiRevalidateTag } from '@/enums/StrapiCacheEnum'
 import { ARTICLE_REVALIDATE_TAG } from '@/libs/strapi/article'
 
 // body ส่งมาหน้าตาประมาณนี้ (Strapi webhook)
@@ -24,7 +25,16 @@ export async function POST(req: NextRequest) {
   console.log('------ Strapi webhook payload ------')
   console.log(JSON.stringify(body, null, 2))
 
+  const model: string | undefined = body.model
   const entry = body.entry
+
+  if (model === 'person') {
+    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.Person} ------`)
+    revalidateTag(StrapiRevalidateTag.Person)
+
+    return NextResponse.json({ ok: true, model, dateResponse: new Date() })
+  }
+
   const type: ArticleEnum | undefined = entry?.type
   const slug: string | undefined = entry?.slug
 

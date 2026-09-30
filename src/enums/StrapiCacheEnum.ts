@@ -3,4 +3,5 @@ export enum StrapiRevalidateTag {
   CompanyNews = 'article:company-news-list',
   Article = 'article:article-list',
   SocialResponsibility = 'article:social-responsibility-list',
+  Person = 'person:person-list',
 }
