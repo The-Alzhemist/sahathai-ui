@@ -29,7 +29,7 @@ export async function getArticles({
   const tag = ARTICLE_REVALIDATE_TAG[type]
 
   const res = await fetch(
-    `http://localhost:1337/api/articles?status=published&filters[type]=${type}&populate=cover&locale=${locale}&pagination[page]=${page}&pagination[pageSize]=${perPage}`,
+    `${process.env.STRAPI_BASE_URL}/api/articles?status=published&filters[type]=${type}&populate=cover&locale=${locale}&pagination[page]=${page}&pagination[pageSize]=${perPage}`,
     {
       next: {
         revalidate: revalidate,
@@ -51,7 +51,7 @@ export async function getArticleBySlug(
   revalidate = REVALIDATE_TIME
 ): Promise<NewsDataType> {
   const res = await fetch(
-    `http://localhost:1337/api/articles?status=published&populate[cover]=true&populate[description][on][shared.gallery][populate]=files&populate[description][on][shared.media][populate]=file&populate[description][on][shared.rich-text]=true&filters[slug][$eq]=${slug}&locale=${locale}`,
+    `${process.env.STRAPI_BASE_URL}/api/articles?status=published&populate[cover]=true&populate[description][on][shared.gallery][populate]=files&populate[description][on][shared.media][populate]=file&populate[description][on][shared.rich-text]=true&filters[slug][$eq]=${slug}&locale=${locale}`,
     {
       next: {
         revalidate,

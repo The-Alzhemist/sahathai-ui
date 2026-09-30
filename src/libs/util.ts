@@ -12,7 +12,5 @@ export const commaNumberFormat = (v: number) =>
 export const formatDateTime = (date: string | Date) =>
   format(new Date(date), 'yyyy-MM-dd HH:mm')
 
-const STRAPI_BASE_URL = 'http://localhost:1337'
-
 export const getStrapiImageUrl = (imagePath: string) =>
-  `${STRAPI_BASE_URL}${imagePath}`
+  `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${imagePath}`
