@@ -1,17 +1,8 @@
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { REVALIDATE_TIME } from '@/config/environtment'
+import { getBannerPopup } from '@/libs/strapi/bannerPopup'
 import BannerPopupContent from '@/components/BannerPopup/component/BannerPopupContent'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
-import { RevalidateTag } from '@/enums/CacheEnum'
 
 export const BannerPopup = async ({ locale }: { locale: string }) => {
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'banner/bannerpopup',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.BANNER_POPUP
-  )
+  const response = await getBannerPopup(locale)
 
-  return <BannerPopupContent data={response} />
+  return <BannerPopupContent data={response.data[0]} />
 }

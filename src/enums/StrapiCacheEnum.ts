@@ -5,4 +5,5 @@ export enum StrapiRevalidateTag {
   SocialResponsibility = 'article:social-responsibility-list',
   Person = 'person:person-list',
   Committee = 'committee:committee-list',
+  PopupBanner = 'popup-banner:popup-banner-list',
 }

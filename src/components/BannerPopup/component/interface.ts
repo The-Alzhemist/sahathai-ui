@@ -1,4 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { PopupBanner } from '@/types/PopupBanner'
+
 export interface BannerPopupProps {
-  data: StoryblokStoryResponse
+  data?: PopupBanner
 }
