@@ -1,5 +1,5 @@
 import { ArticleEnum } from '@/enums/ArticleEnum'
-import { CoverType } from './CoverType'
+import { MediaType } from './MediaType'
 
 export type ArticleCardDataType = {
   documentId: string
@@ -9,5 +9,5 @@ export type ArticleCardDataType = {
   type: ArticleEnum
   publishDate: string
   shortDescription: string
-  cover: CoverType
+  cover: MediaType
 }
