@@ -15,7 +15,10 @@ import { useSearchParams } from 'next/navigation'
 import { useRouter } from '@/libs/intl/navigation'
 
 export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
-  function WithAboutUsPage({ boardData }: AboutPageAcceptProps) {
+  function WithAboutUsPage({
+    boardData,
+    committeeData,
+  }: AboutPageAcceptProps) {
     const t = useTranslations('AboutUsPage.Tabs')
     const searchParams = useSearchParams()
     const searchParamTab = searchParams.get('tab')
@@ -66,6 +69,7 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
       active,
       handleOnActiveTabChange,
       boardData,
+      committeeData,
     }
 
     return <Component {...componentProps} />

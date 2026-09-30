@@ -14,7 +14,10 @@ import { Person } from '@/types/Person'
 import { getStrapiImageUrl } from '@/libs/util'
 import { BoardSection } from '../BoardSection'
 
-export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
+export function BoardAndExecutives({
+  boardData,
+  committeeData,
+}: BoardAndExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
 
   const [selectPeople, setSelectPeople] = useState<Person | null>(null)
@@ -56,7 +59,7 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
             className='object-cover object-bottom'
           />
         </div>
-        <Subcommittee />
+        <Subcommittee data={committeeData} />
       </section>
       {/* Executive */}
       <BoardSection title={t('Executives.title')}>

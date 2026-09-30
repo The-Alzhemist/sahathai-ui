@@ -1,4 +1,5 @@
 import { Person } from '@/types/Person'
+import { Committee } from '@/types/Committee'
 import { TabType } from '@/models/TabType'
 
 export interface AboutPageProps {
@@ -6,10 +7,12 @@ export interface AboutPageProps {
   active: AboutUsTabEnum
   handleOnActiveTabChange: (tab: AboutUsTabEnum) => void
   boardData: Person[]
+  committeeData: Committee[]
 }
 
 export interface AboutPageAcceptProps {
   boardData: Person[]
+  committeeData: Committee[]
 }
 
 export enum AboutUsTabEnum {

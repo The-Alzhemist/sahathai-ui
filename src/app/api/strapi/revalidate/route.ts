@@ -35,6 +35,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, model, dateResponse: new Date() })
   }
 
+  if (model === 'committee') {
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.Committee} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.Committee)
+
+    return NextResponse.json({ ok: true, model, dateResponse: new Date() })
+  }
+
   const type: ArticleEnum | undefined = entry?.type
   const slug: string | undefined = entry?.slug
 
