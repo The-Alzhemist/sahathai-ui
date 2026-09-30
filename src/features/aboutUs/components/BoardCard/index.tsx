@@ -5,7 +5,6 @@ import { Line } from '@/components/Line'
 
 import { NoPhotoIcon } from '@/components/icons/NoPhotoIcon'
 import { BoardCardProps } from '@/features/aboutUs/components/BoardCard/interface'
-import { ItemStoryblok } from '@/types/storyblok'
 
 export function BoardCard({
   imageUrl,
@@ -41,14 +40,9 @@ export function BoardCard({
         <h3 className='subtitle-1'>{name}</h3>
         <Line />
         <ul className='list-disc pl-5 whitespace-pre-wrap caption-mini leading-5 body-2'>
-          {board &&
-            board.setOfData &&
-            board.setOfData.length > 0 &&
-            board.setOfData[0].item.map(
-              (item: ItemStoryblok, index: number) => (
-                <li key={`name-${index}`}>{item.detail ? item.detail : ''}</li>
-              )
-            )}
+          {board?.positions.map(item => (
+            <li key={item.id}>{item.value}</li>
+          ))}
         </ul>
       </div>
     </Animation>

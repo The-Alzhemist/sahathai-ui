@@ -1,15 +1,15 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { Person } from '@/types/Person'
 import { TabType } from '@/models/TabType'
 
 export interface AboutPageProps {
   tabs: TabType[]
   active: AboutUsTabEnum
   handleOnActiveTabChange: (tab: AboutUsTabEnum) => void
-  boardData: StoryblokStoryResponse
+  boardData: Person[]
 }
 
 export interface AboutPageAcceptProps {
-  boardData: StoryblokStoryResponse
+  boardData: Person[]
 }
 
 export enum AboutUsTabEnum {

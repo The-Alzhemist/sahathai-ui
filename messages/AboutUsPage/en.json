@@ -241,6 +241,25 @@
             }
           ]
         }
+      },
+      "PeopleModal": {
+        "age": "Age",
+        "ageValue": "{age} years",
+        "education": "Education",
+        "trainingHistory": "Training History",
+        "directorType": "Director Type",
+        "appointmentDates": "Appointment Date(s)",
+        "tenureDuration": "Number of Years Served as Director",
+        "workExperience5Years": "Work Experience (Last 5 Years)",
+        "positionsInListedCompanies": "Positions Held in Listed Companies",
+        "positionsInRelatedCompanies": "Positions Held in Related Companies",
+        "positionsInOtherCompanies": "Positions Held in Other Companies",
+        "positionsInOtherOrganizations": "Positions Held in Other Organizations",
+        "pastPositions": "Past Positions Held",
+        "shareholding": "Direct and Indirect Shareholding in the Company",
+        "penaltyHistory5Years": "Penalty History of Directors, Executives, and Controlling Persons in the Past 5 Years",
+        "familyRelationships": "Family Relationships Among Executives",
+        "remarks": "Remarks"
       }
     },
     "CorporateGroupOrganizationalStructure": {

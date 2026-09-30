@@ -4,10 +4,11 @@ import { REVALIDATE_TIME } from '@/config/environtment'
 import { StrapiRevalidateTag } from '@/enums/StrapiCacheEnum'
 
 export async function getPersons(
+  locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Person[]>> {
   const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/people?status=published&populate=*`,
+    `${process.env.STRAPI_BASE_URL}/api/people?status=published&populate=*&pagination[pageSize]=100&pagination[page]=1&locale=${locale}`,
     {
       next: {
         revalidate,

@@ -1,6 +1,6 @@
-import { BoardAndCommitteeStoryblok } from '@/types/storyblok'
+import { Person } from '@/types/Person'
 
 export interface PeopleInformationModalProps {
-  selectPeople: BoardAndCommitteeStoryblok
+  selectPeople: Person
   onClose: () => void
 }
