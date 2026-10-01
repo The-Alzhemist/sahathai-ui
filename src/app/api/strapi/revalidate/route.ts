@@ -21,9 +21,14 @@ const DRAFT_PUBLISH_EVENTS = ['entry.publish', 'entry.unpublish']
 const NO_DRAFT_PUBLISH_EVENTS = ['entry.create', 'entry.update', 'entry.delete']
 
 export async function POST(req: NextRequest) {
+  console.log('------ Strapi webhook received ------')
+
   const secret = req.headers.get('x-webhook-secret')
 
   if (secret !== process.env.STRAPI_WEBHOOK_SECRET) {
+    console.warn('------ Strapi webhook: secret mismatch ------', {
+      headerPresent: secret !== null,
+    })
     return NextResponse.json(
       { ok: false, message: 'Invalid secret' },
       { status: 401 }
@@ -54,7 +59,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true, skipped: true })
     }
 
-    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.Committee} ------`)
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.Committee} ------`
+    )
     revalidateTag(StrapiRevalidateTag.Committee)
 
     return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
@@ -69,6 +76,17 @@ export async function POST(req: NextRequest) {
       `------ Revalidate tag: ${StrapiRevalidateTag.PopupBanner} ------`
     )
     revalidateTag(StrapiRevalidateTag.PopupBanner)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::e-service.e-service') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.EService} ------`)
+    revalidateTag(StrapiRevalidateTag.EService)
 
     return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
   }

@@ -1,8 +1,5 @@
 export interface TrackingCardProps {
-  title: {
-    textTH: string
-    textEN: string
-  }
+  title: string
   imageUrl: string
   link: string
 }

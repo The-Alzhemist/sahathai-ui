@@ -6,4 +6,5 @@ export enum StrapiRevalidateTag {
   Person = 'person:person-list',
   Committee = 'committee:committee-list',
   PopupBanner = 'popup-banner:popup-banner-list',
+  EService = 'e-service:e-service-list',
 }
