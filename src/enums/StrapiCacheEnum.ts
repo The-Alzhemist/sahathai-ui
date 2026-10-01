@@ -16,4 +16,5 @@ export enum StrapiRevalidateTag {
   Policy = 'policy:policy-list',
   SetAnnouncement = 'set-announcement:set-announcement-list',
   InvestorActivity = 'investor-activity:investor-activity-list',
+  Service = 'service:service-list',
 }

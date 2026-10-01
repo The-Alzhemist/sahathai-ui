@@ -17,7 +17,7 @@ export function HomePage({ params }: HomePageProps) {
       <Banner />
       <About />
       <License />
-      <Service />
+      <Service params={params} />
       <HomePageNews params={params} />
       <Highlight />
       <OurSubsidiaries />

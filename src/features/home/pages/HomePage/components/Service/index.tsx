@@ -1,13 +1,18 @@
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 import { Link } from '@/libs/intl/navigation'
 import { ArrowRightCircleIcon } from '@/components/icons/ArrowRightCircleIcon'
 import { Animation } from '@/components/Animation'
+import { getServices } from '@/libs/strapi/service'
+import { getStrapiImageUrl } from '@/libs/util'
+import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
 import { ServiceCard } from '../ServiceCard'
 
-export function Service() {
-  const t = useTranslations('HomePage.Service')
-  const common = useTranslations('common')
+export async function Service({ params }: HomePageProps) {
+  const t = await getTranslations('HomePage.Service')
+  const common = await getTranslations('common')
+
+  const { data: services } = await getServices(params.locale)
 
   return (
     <section className=' py-[62px] bg-modellBgDark'>
@@ -17,40 +22,15 @@ export function Service() {
 
       <Animation className='mt-[80px] w-full container-mini'>
         <div className='flex justify-center flex-wrap gap-x-[24px] gap-y-[75px]'>
-          <ServiceCard
-            title={t('coastalShippingServices.title')}
-            content={t('coastalShippingServices.content')}
-            imageUrl='/home/cargo-ship.png'
-            imageSize={76}
-          />
-
-          <ServiceCard
-            title={t('containerFreightStationContainerYard.title')}
-            content={t('containerFreightStationContainerYard.content')}
-            imageUrl='/home/container2.png'
-            imageSize={62}
-          />
-
-          <ServiceCard
-            title={t('containerMaintenanceRepairServices.title')}
-            content={t('containerMaintenanceRepairServices.content')}
-            imageUrl='/home/container.png'
-            imageSize={75}
-          />
-
-          <ServiceCard
-            title={t('freeTradeZone.title')}
-            content={t('freeTradeZone.content')}
-            imageUrl='/home/taxes.png'
-            imageSize={68}
-          />
-
-          <ServiceCard
-            title={t('trackingOnline.title')}
-            content={t('trackingOnline.content')}
-            imageUrl='/home/truck.png'
-            imageSize={70}
-          />
+          {services.map(service => (
+            <ServiceCard
+              key={service.id}
+              title={service.title}
+              content={service.description}
+              imageUrl={service.icon ? getStrapiImageUrl(service.icon.url) : ''}
+              imageSize={70}
+            />
+          ))}
         </div>
 
         <Link
