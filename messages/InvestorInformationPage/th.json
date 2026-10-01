@@ -68,6 +68,9 @@
     },
     "PerformanceReport": {
       "yearTitle": "รายงานผลการดำเนินงานปี {year}"
+    },
+    "DocumentAnnouncement": {
+      "yearTitle": "เอกสารเผยแพร่ปี {year}"
     }
   }
 }

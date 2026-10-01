@@ -68,6 +68,9 @@
     },
     "PerformanceReport": {
       "yearTitle": "{year}年度经营业绩报告"
+    },
+    "DocumentAnnouncement": {
+      "yearTitle": "{year}年度公开文件"
     }
   }
 }

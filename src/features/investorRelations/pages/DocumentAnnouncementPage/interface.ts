@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { PublishedDocument } from '@/types/PublishedDocument'
 
 export interface DocumentAnnouncementPageProps {
-  data: StoryblokStoryResponse
+  data: PublishedDocument[]
 }

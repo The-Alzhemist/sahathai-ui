@@ -68,6 +68,9 @@
     },
     "PerformanceReport": {
       "yearTitle": "Performance Report {year}"
+    },
+    "DocumentAnnouncement": {
+      "yearTitle": "Publications {year}"
     }
   }
 }

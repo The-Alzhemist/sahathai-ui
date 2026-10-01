@@ -11,4 +11,5 @@ export enum StrapiRevalidateTag {
   FinancialInfo = 'financial-info:financial-info-list',
   AnnualReport = 'annual-report:annual-report-list',
   OperatingResult = 'operating-result:operating-result-list',
+  PublishedDocument = 'published-document:published-document-list',
 }
