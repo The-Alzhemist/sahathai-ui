@@ -4,15 +4,16 @@ import { useTranslations } from 'next-intl'
 import { InvestorInformationEnum } from '@/enums/investorRelations/InvestorInformationEnum'
 import { Animation } from '@/components/Animation'
 import { cn } from '@/libs/util'
+import { AnnualReport } from '@/types/AnnualReport'
 
 import { OneReportTable } from '../OneReportTable'
 
 export function FinancialReports({
+  data,
   showBackground = false,
-  showLatestThreeYears = false,
 }: {
+  data: AnnualReport[]
   showBackground?: boolean
-  showLatestThreeYears?: boolean
 }) {
   const t = useTranslations('InvestorInformationPage.FinancialReports')
 
@@ -34,7 +35,7 @@ export function FinancialReports({
         ({t('yearlyReport')})
       </h3>
 
-      <OneReportTable showLatestThreeYears={showLatestThreeYears} />
+      <OneReportTable data={data} />
     </Animation>
   )
 }

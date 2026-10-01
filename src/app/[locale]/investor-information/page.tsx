@@ -1,9 +1,15 @@
 import { StockData } from '@/features/investorRelations/components/StockMarketInformation/interface'
 import { InvestorInformationPage } from '@/features/investorRelations/pages/InvestorInformationPage'
+import { getAnnualReports } from '@/libs/strapi/annualReport'
 import { getTranslations } from 'next-intl/server'
 import { headers } from 'next/headers'
 
-export default async function InvestorInformation() {
+export default async function InvestorInformation({
+  params,
+}: {
+  params: { locale: string }
+}) {
+  const { locale } = params
   const host = headers().get('host')
   let stockData: StockData[] = []
 
@@ -29,7 +35,14 @@ export default async function InvestorInformation() {
     stockData = await response.json()
   }
 
-  return <InvestorInformationPage stockData={stockData} />
+  const annualReportResponse = await getAnnualReports(locale, 3)
+
+  return (
+    <InvestorInformationPage
+      stockData={stockData}
+      annualReportData={annualReportResponse.data}
+    />
+  )
 }
 
 export async function generateMetadata({

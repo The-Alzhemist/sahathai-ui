@@ -1,9 +1,17 @@
 import { getTranslations } from 'next-intl/server'
 
 import { AnnualReportPage } from '@/features/investorRelations/pages/AnnualReportPage/AnnualReportPage'
+import { getAnnualReports } from '@/libs/strapi/annualReport'
 
-export default async function AnnualReport() {
-  return <AnnualReportPage />
+export default async function AnnualReport({
+  params,
+}: {
+  params: { locale: string }
+}) {
+  const { locale } = params
+  const response = await getAnnualReports(locale)
+
+  return <AnnualReportPage data={response.data} />
 }
 
 export async function generateMetadata({

@@ -6,8 +6,9 @@ import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { AnimatePresence } from 'framer-motion'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 import { FinancialReports } from '@/features/investorRelations/components/FinancialReports'
+import { AnnualReport } from '@/types/AnnualReport'
 
-export function AnnualReportPage() {
+export function AnnualReportPage({ data }: { data: AnnualReport[] }) {
   const { tick } = useNavigationTick()
 
   return (
@@ -23,7 +24,7 @@ export function AnnualReportPage() {
           />
 
           <section className='max-w-[1100px] w-full mx-auto py-[60px] px-3'>
-            <FinancialReports />
+            <FinancialReports data={data} />
           </section>
         </Animation>
       </AnimatePresence>

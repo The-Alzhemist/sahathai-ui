@@ -7,9 +7,11 @@ export function withInvestorInformationPage(
 ) {
   function WithInvestorInformationPage({
     stockData,
+    annualReportData,
   }: InvestorInformationPageAcceptProps) {
     const props = {
       stockData,
+      annualReportData,
     }
 
     return <Component {...props} />
