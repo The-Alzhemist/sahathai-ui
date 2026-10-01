@@ -11,10 +11,10 @@ import { getStrapiImageUrl } from '@/libs/util'
 import { FinancialInfo, FinancialInfoQuarter } from '@/types/FinancialInfo'
 
 function FinancialInfoQuarterRow({
-  fallbackLabel,
+  label,
   quarter,
 }: {
-  fallbackLabel: string
+  label: string
   quarter: FinancialInfoQuarter
 }) {
   if (!quarter) return null
@@ -24,9 +24,7 @@ function FinancialInfoQuarterRow({
       <div className='w-[15px] h-[15px] border-[2px] border-blue-300 rounded-full absolute -left-[1px] bg-white top-0 -translate-x-1/2'></div>
 
       <div className='mb-10 w-full'>
-        <h3 className='text-sm text-gray-700 mb-5'>
-          {quarter.label || fallbackLabel}
-        </h3>
+        <h3 className='text-sm text-gray-700 mb-5'>{label}</h3>
       </div>
 
       {quarter.file && (
@@ -92,13 +90,10 @@ function FinancialInfoYearTab({
         }}
       >
         <div className='p-4'>
-          <FinancialInfoQuarterRow fallbackLabel={t('q1')} quarter={info.q1} />
-          <FinancialInfoQuarterRow fallbackLabel={t('q2')} quarter={info.q2} />
-          <FinancialInfoQuarterRow fallbackLabel={t('q3')} quarter={info.q3} />
-          <FinancialInfoQuarterRow
-            fallbackLabel={t('annual')}
-            quarter={info.annual}
-          />
+          <FinancialInfoQuarterRow label={t('q1')} quarter={info.q1} />
+          <FinancialInfoQuarterRow label={t('q2')} quarter={info.q2} />
+          <FinancialInfoQuarterRow label={t('q3')} quarter={info.q3} />
+          <FinancialInfoQuarterRow label={t('annual')} quarter={info.annual} />
         </div>
       </div>
     </div>

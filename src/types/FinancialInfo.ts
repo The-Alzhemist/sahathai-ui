@@ -2,7 +2,6 @@ import { MediaType } from './MediaType'
 
 export type FinancialInfoQuarter = {
   id: number
-  label: string
   url: string | null
   file: MediaType | null
 } | null
