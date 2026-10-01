@@ -15,4 +15,5 @@ export enum StrapiRevalidateTag {
   CorporateGovernance = 'corporate-governance:corporate-governance',
   Policy = 'policy:policy-list',
   SetAnnouncement = 'set-announcement:set-announcement-list',
+  InvestorActivity = 'investor-activity:investor-activity-list',
 }

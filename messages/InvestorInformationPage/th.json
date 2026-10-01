@@ -77,6 +77,9 @@
     },
     "SetExchangeAnnouncement": {
       "yearTitle": "ปี {year}"
+    },
+    "Activity": {
+      "yearTitle": "กิจกรรมปี {year}"
     }
   }
 }

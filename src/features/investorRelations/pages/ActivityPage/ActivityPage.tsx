@@ -6,8 +6,7 @@ import { Menu } from '@/components/Menu'
 import { ActivityPageProps } from '@/features/investorRelations/pages/ActivityPage/interface'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { InvestorActivityAccordion } from '@/features/investorRelations/pages/ActivityPage/components/InvestorActivityAccordion'
 import { useRouter } from '@/libs/intl/navigation'
 
 import { AnimatePresence } from 'framer-motion'
@@ -18,12 +17,6 @@ export function ActivityPage({ data }: ActivityPageProps) {
   useRouter()
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!data) {
-    return <div>No data</div>
-  }
-
-  const group = (data.story.content.body[0].group as GroupStoryblok[]) || []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -40,7 +33,7 @@ export function ActivityPage({ data }: ActivityPageProps) {
             <h1 className='text-lg md:text-3xl mb-7 text-blue-400 text-center'>
               {tMenu('investorRelations.Activity')}
             </h1>
-            <GroupAccordionTabs group={group} pageKey='activity' />
+            <InvestorActivityAccordion data={data} />
           </section>
         </Animation>
       </AnimatePresence>

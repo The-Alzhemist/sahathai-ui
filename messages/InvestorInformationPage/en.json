@@ -77,6 +77,9 @@
     },
     "SetExchangeAnnouncement": {
       "yearTitle": "Year {year}"
+    },
+    "Activity": {
+      "yearTitle": "IR Activities {year}"
     }
   }
 }
