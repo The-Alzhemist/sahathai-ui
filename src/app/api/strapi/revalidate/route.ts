@@ -104,6 +104,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
   }
 
+  if (uid === 'api::financial-info.financial-info') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.FinancialInfo} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.FinancialInfo)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
   if (uid === 'api::article.article') {
     if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
       return NextResponse.json({ ok: true, skipped: true })

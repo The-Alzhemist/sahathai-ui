@@ -6,8 +6,7 @@ import { Menu } from '@/components/Menu'
 import { FinancialInformationPageProps } from '@/features/investorRelations/pages/FinancialInformationPage/interface'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { FinancialInformationAccordion } from '@/features/investorRelations/pages/FinancialInformationPage/components/FinancialInformationAccordion'
 import { useRouter } from '@/libs/intl/navigation'
 
 import { AnimatePresence } from 'framer-motion'
@@ -21,14 +20,6 @@ export function FinancialInformationPage({
 
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!financialInformationData) {
-    return <div>No data</div>
-  }
-
-  const group =
-    (financialInformationData.story.content.body[0]
-      .group as GroupStoryblok[]) || []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -45,20 +36,7 @@ export function FinancialInformationPage({
             <h1 className='text-lg md:text-3xl mb-1 md:mb-10 text-blue-400 text-center'>
               {tMenu('investorRelations.FinancialInformation')}
             </h1>
-            {group.map((groupItem: GroupStoryblok, groupIndex: number) => (
-              <div key={groupIndex} className=' rounded-md px-0 py-0 md:p-4'>
-                <h2 className='   text-left text-lg mb-7 text-blue-400 '>
-                  {groupItem.heading}
-                </h2>
-
-                <div className='space-y-4'>
-                  <GroupAccordionTabs
-                    pageKey='financial-information'
-                    group={group}
-                  />
-                </div>
-              </div>
-            ))}
+            <FinancialInformationAccordion data={financialInformationData} />
           </section>
         </Animation>
       </AnimatePresence>

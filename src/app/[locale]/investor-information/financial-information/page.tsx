@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { FinancialInformationPage } from '@/features/investorRelations/pages/FinancialInformationPage/FinancialInformationPage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getFinancialInfos } from '@/libs/strapi/financialInfo'
 import { getTranslations } from 'next-intl/server'
 
 export default async function FinancialInformation({
@@ -12,15 +9,9 @@ export default async function FinancialInformation({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/financialinformationpage',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.FINANCIAL_INFORMATION
-  )
+  const response = await getFinancialInfos(locale)
 
-  return <FinancialInformationPage financialInformationData={response} />
+  return <FinancialInformationPage financialInformationData={response.data} />
 }
 
 export async function generateMetadata({
