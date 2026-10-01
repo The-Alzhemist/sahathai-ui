@@ -1,18 +1,18 @@
-import { CorporateGovernance } from '@/types/CorporateGovernance'
+import { QualityAchievement } from '@/types/QualityAchievement'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
 import { StrapiRevalidateTag } from '@/enums/StrapiCacheEnum'
 
-export async function getCorporateGovernance(
+export async function getQualityAchievement(
   locale: string,
   revalidate = REVALIDATE_TIME
-): Promise<ResponseData<CorporateGovernance>> {
+): Promise<ResponseData<QualityAchievement>> {
   const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/corporate-governance?status=published&populate[documents][populate]=file&locale=${locale}`,
+    `${process.env.STRAPI_BASE_URL}/api/quality-achievement?status=published&locale=${locale}&populate[items][populate]=image`,
     {
       next: {
         revalidate,
-        tags: [StrapiRevalidateTag.CorporateGovernance],
+        tags: [StrapiRevalidateTag.QualityAchievement],
       },
     }
   )
@@ -22,7 +22,8 @@ export async function getCorporateGovernance(
       data: {
         id: 0,
         documentId: '',
-        documents: [],
+        description: '',
+        items: [],
         locale,
         publishedAt: '',
         createdAt: '',
@@ -32,7 +33,7 @@ export async function getCorporateGovernance(
     }
   }
 
-  if (!res.ok) throw new Error('Failed to fetch corporate governance')
+  if (!res.ok) throw new Error('Failed to fetch quality achievement')
 
   return await res.json()
 }
