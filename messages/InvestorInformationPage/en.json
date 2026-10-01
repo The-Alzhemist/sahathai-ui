@@ -71,6 +71,9 @@
     },
     "DocumentAnnouncement": {
       "yearTitle": "Publications {year}"
+    },
+    "GoodCorporate": {
+      "documentsTitle": "Good Corporate Governance Documents"
     }
   }
 }

@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { CorporateGovernance } from '@/types/CorporateGovernance'
 
 export interface GoodCorporatePageProps {
-  data: StoryblokStoryResponse
+  data: CorporateGovernance
 }

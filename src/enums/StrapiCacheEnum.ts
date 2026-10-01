@@ -12,4 +12,5 @@ export enum StrapiRevalidateTag {
   AnnualReport = 'annual-report:annual-report-list',
   OperatingResult = 'operating-result:operating-result-list',
   PublishedDocument = 'published-document:published-document-list',
+  CorporateGovernance = 'corporate-governance:corporate-governance',
 }

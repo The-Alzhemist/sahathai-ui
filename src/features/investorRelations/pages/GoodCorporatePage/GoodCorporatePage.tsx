@@ -6,8 +6,7 @@ import { Menu } from '@/components/Menu'
 import { GoodCorporatePageProps } from '@/features/investorRelations/pages/GoodCorporatePage/interface'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { CorporateGovernanceDocumentList } from '@/features/investorRelations/pages/GoodCorporatePage/components/CorporateGovernanceDocumentList'
 import { useRouter } from '@/libs/intl/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
@@ -17,12 +16,6 @@ export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
   useRouter()
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!data) {
-    return <div>No data</div>
-  }
-
-  const group = (data.story.content.body[0].group as GroupStoryblok[]) || []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -41,7 +34,10 @@ export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
               {tMenu('investorRelations.GoodCorporate')}
             </h1>
 
-            <GroupAccordionTabs pageKey='good-corporate' group={group} />
+            <CorporateGovernanceDocumentList
+              id={data.id}
+              documents={data.documents}
+            />
           </section>
         </Animation>
       </AnimatePresence>
