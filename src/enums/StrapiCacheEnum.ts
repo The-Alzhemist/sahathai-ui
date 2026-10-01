@@ -10,4 +10,5 @@ export enum StrapiRevalidateTag {
   ShareHolderMeeting = 'shareholder-meeting:shareholder-meeting-list',
   FinancialInfo = 'financial-info:financial-info-list',
   AnnualReport = 'annual-report:annual-report-list',
+  OperatingResult = 'operating-result:operating-result-list',
 }

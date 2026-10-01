@@ -65,6 +65,9 @@
       "q2": "第二季度",
       "q3": "第三季度",
       "annual": "年度"
+    },
+    "PerformanceReport": {
+      "yearTitle": "{year}年度经营业绩报告"
     }
   }
 }

@@ -39,8 +39,12 @@
       "otherMinorShareholders": "ผู้ถือหุ้นรายย่อยอื่นๆ",
       "total": "รวมทั้งหมด"
     },
-    "CompanyIntroductionVideo": { "title": "วิดิโอแนะนำบริษัท" },
-    "CompanyAdvertiseVideo": { "title": "วิดิโอประชาสัมพันธ์บริษัท" },
+    "CompanyIntroductionVideo": {
+      "title": "วิดิโอแนะนำบริษัท"
+    },
+    "CompanyAdvertiseVideo": {
+      "title": "วิดิโอประชาสัมพันธ์บริษัท"
+    },
     "FactSheet": {
       "title": "FactSheet",
       "detail": "Download ข้อมูล FactSheet ได้ที่นี่",
@@ -61,6 +65,9 @@
       "q2": "ไตรมาส 2",
       "q3": "ไตรมาส 3",
       "annual": "ประจำปี"
+    },
+    "PerformanceReport": {
+      "yearTitle": "รายงานผลการดำเนินงานปี {year}"
     }
   }
 }
