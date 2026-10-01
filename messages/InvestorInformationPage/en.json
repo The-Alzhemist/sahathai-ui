@@ -74,6 +74,9 @@
     },
     "GoodCorporate": {
       "documentsTitle": "Good Corporate Governance Documents"
+    },
+    "SetExchangeAnnouncement": {
+      "yearTitle": "Year {year}"
     }
   }
 }

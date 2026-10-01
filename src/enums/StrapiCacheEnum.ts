@@ -14,4 +14,5 @@ export enum StrapiRevalidateTag {
   PublishedDocument = 'published-document:published-document-list',
   CorporateGovernance = 'corporate-governance:corporate-governance',
   Policy = 'policy:policy-list',
+  SetAnnouncement = 'set-announcement:set-announcement-list',
 }

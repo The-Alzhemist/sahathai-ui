@@ -104,6 +104,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
   }
 
+  if (uid === 'api::set-announcement.set-announcement') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.SetAnnouncement} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.SetAnnouncement)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
   if (uid === 'api::policy.policy') {
     if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
       return NextResponse.json({ ok: true, skipped: true })

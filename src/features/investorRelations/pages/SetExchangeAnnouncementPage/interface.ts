@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { SetAnnouncement } from '@/types/SetAnnouncement'
 
 export interface SetExchangeAnnouncementPageProps {
-  data: StoryblokStoryResponse
+  data: SetAnnouncement[]
 }

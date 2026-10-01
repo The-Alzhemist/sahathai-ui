@@ -74,6 +74,9 @@
     },
     "GoodCorporate": {
       "documentsTitle": "เอกสารการกำกับดูแลกิจการที่ดี"
+    },
+    "SetExchangeAnnouncement": {
+      "yearTitle": "ปี {year}"
     }
   }
 }

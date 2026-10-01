@@ -74,6 +74,9 @@
     },
     "GoodCorporate": {
       "documentsTitle": "良好公司治理文件"
+    },
+    "SetExchangeAnnouncement": {
+      "yearTitle": "{year}年"
     }
   }
 }
