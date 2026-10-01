@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { CodeOfConductPage } from '@/features/investorRelations/pages/CodeConductPage/CodeConductPage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getPolicies } from '@/libs/strapi/policy'
 import { getTranslations } from 'next-intl/server'
 
 export default async function CodeOfConduct({
@@ -12,15 +9,9 @@ export default async function CodeOfConduct({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/code-of-conduct',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.CODE_OF_CONDUCT
-  )
+  const response = await getPolicies(locale)
 
-  return <CodeOfConductPage conOdConductData={response} />
+  return <CodeOfConductPage policyData={response.data} />
 }
 
 export async function generateMetadata() {

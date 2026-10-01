@@ -13,4 +13,5 @@ export enum StrapiRevalidateTag {
   OperatingResult = 'operating-result:operating-result-list',
   PublishedDocument = 'published-document:published-document-list',
   CorporateGovernance = 'corporate-governance:corporate-governance',
+  Policy = 'policy:policy-list',
 }

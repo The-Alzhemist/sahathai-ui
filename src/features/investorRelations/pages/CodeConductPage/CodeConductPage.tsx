@@ -5,27 +5,18 @@ import { Menu } from '@/components/Menu'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { CodeOfConductPageProps } from '@/features/investorRelations/pages/CodeConductPage'
-import { GroupStoryblok } from '@/types/storyblok'
+import { PolicyDocumentList } from '@/features/investorRelations/pages/CodeConductPage/components/PolicyDocumentList'
 
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 import { useRouter } from '@/libs/intl/navigation'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
 import { ContactUsForm } from '@/components/ContactUs/ContactUsForm'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 
-export function CodeOfConductPage({
-  conOdConductData,
-}: CodeOfConductPageProps) {
+export function CodeOfConductPage({ policyData }: CodeOfConductPageProps) {
   useRouter()
   const t = useTranslations('CodeConductPage')
   const { tick } = useNavigationTick()
-
-  if (!conOdConductData) {
-    return <div>No data</div>
-  }
-  const group =
-    (conOdConductData.story.content.body[0].group as GroupStoryblok[]) || []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -42,7 +33,7 @@ export function CodeOfConductPage({
             <h1 className='text-lg md:text-3xl mb-10 text-blue-400 text-center'>
               {t('title')}
             </h1>
-            <GroupAccordionTabs pageKey='code-of-conduct' group={group} />
+            <PolicyDocumentList policies={policyData} />
           </section>
           <section className='pb-5 pt-[50px] max-w-4xl mx-auto space-y-6'>
             <ContactUsForm hideContactForm />

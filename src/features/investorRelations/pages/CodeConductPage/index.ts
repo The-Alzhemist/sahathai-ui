@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { Policy } from '@/types/Policy'
 
 export interface CodeOfConductPageProps {
-  conOdConductData: StoryblokStoryResponse
+  policyData: Policy[]
 }
