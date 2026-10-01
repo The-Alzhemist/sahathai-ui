@@ -5,8 +5,7 @@ import { ShareHolderMeetingPageProps } from '@/features/investorRelations/pages/
 import { Menu } from '@/components/Menu'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { ShareHolderMeetingAccordion } from '@/features/investorRelations/pages/ShareHolderMeetingPage/components/ShareHolderMeetingAccordion'
 import { AnimatePresence } from 'framer-motion'
 
 import { Animation } from '@/components/Animation'
@@ -19,14 +18,6 @@ export function ShareHolderMeetingPage({
   useRouter()
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!shareHolderMeetingData) {
-    return <div>No data</div>
-  }
-
-  const group =
-    (shareHolderMeetingData.story.content.body[0].group as GroupStoryblok[]) ||
-    []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -43,7 +34,7 @@ export function ShareHolderMeetingPage({
             <h1 className='text-lg md:text-3xl mb-7 text-blue-400 text-center'>
               {tMenu('investorRelations.shareHolderMeeting')}
             </h1>
-            <GroupAccordionTabs pageKey='share-holder-meeting' group={group} />
+            <ShareHolderMeetingAccordion data={shareHolderMeetingData} />
           </section>
         </Animation>
       </AnimatePresence>

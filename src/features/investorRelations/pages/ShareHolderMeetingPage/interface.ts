@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { ShareHolderMeeting } from '@/types/ShareHolderMeeting'
 
 export interface ShareHolderMeetingPageProps {
-  shareHolderMeetingData: StoryblokStoryResponse
+  shareHolderMeetingData: ShareHolderMeeting[]
 }

@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { ShareHolderMeetingPage } from '@/features/investorRelations/pages/ShareHolderMeetingPage/ShareHolderMeetingPage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getShareHolderMeetings } from '@/libs/strapi/shareHolderMeeting'
 import { getTranslations } from 'next-intl/server'
 
 export default async function ShareHolderMeeting({
@@ -12,15 +9,9 @@ export default async function ShareHolderMeeting({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/90ee2b39-0565-41ce-bdb4-dad2425245a4',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.SHARE_HOLDER_MEETING
-  )
+  const response = await getShareHolderMeetings(locale)
 
-  return <ShareHolderMeetingPage shareHolderMeetingData={response} />
+  return <ShareHolderMeetingPage shareHolderMeetingData={response.data} />
 }
 
 export async function generateMetadata({
