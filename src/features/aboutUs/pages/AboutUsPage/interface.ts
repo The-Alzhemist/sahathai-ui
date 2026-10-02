@@ -2,6 +2,7 @@ import { Person } from '@/types/Person'
 import { Committee } from '@/types/Committee'
 import { CompanyHistory } from '@/types/CompanyHistory'
 import { ShareholdingStructure } from '@/types/ShareholdingStructure'
+import { GovernanceStructure } from '@/types/GovernanceStructure'
 import { TabType } from '@/models/TabType'
 
 export interface AboutPageProps {
@@ -12,6 +13,7 @@ export interface AboutPageProps {
   committeeData: Committee[]
   companyHistoryData: CompanyHistory
   shareholdingStructureData: ShareholdingStructure
+  governanceStructureData: GovernanceStructure
 }
 
 export interface AboutPageAcceptProps {
@@ -19,6 +21,7 @@ export interface AboutPageAcceptProps {
   committeeData: Committee[]
   companyHistoryData: CompanyHistory
   shareholdingStructureData: ShareholdingStructure
+  governanceStructureData: GovernanceStructure
 }
 
 export enum AboutUsTabEnum {

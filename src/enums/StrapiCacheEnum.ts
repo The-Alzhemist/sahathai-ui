@@ -20,4 +20,5 @@ export enum StrapiRevalidateTag {
   QualityAchievement = 'quality-achievement:quality-achievement',
   CompanyHistory = 'company-history:company-history',
   ShareholdingStructure = 'shareholding-structure:shareholding-structure',
+  GovernanceStructure = 'governance-structure:governance-structure',
 }
