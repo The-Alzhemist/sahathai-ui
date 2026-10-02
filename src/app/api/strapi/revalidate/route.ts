@@ -104,6 +104,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
   }
 
+  if (uid === 'api::shareholding-structure.shareholding-structure') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.ShareholdingStructure} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.ShareholdingStructure)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
   if (uid === 'api::company-history.company-history') {
     if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
       return NextResponse.json({ ok: true, skipped: true })

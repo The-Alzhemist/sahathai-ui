@@ -19,6 +19,7 @@ export function AboutUsPage({
   boardData,
   committeeData,
   companyHistoryData,
+  shareholdingStructureData,
 }: AboutPageProps) {
   const { tick } = useNavigationTick()
 
@@ -40,7 +41,7 @@ export function AboutUsPage({
             />
           ) : active === AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE ? (
             <CorporateGroupOrganizationalStructure>
-              <CorporateGroup />
+              <CorporateGroup data={shareholdingStructureData} />
             </CorporateGroupOrganizationalStructure>
           ) : active === AboutUsTabEnum.ORGANIZATIONAL_STRUCTURE ? (
             <CorporateGroupOrganizationalStructure>
