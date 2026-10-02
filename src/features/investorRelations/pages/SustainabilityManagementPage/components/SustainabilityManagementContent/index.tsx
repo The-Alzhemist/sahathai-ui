@@ -10,15 +10,20 @@ import { EmergingRisk } from '../EmergingRisk/EmergingRisk'
 import ESGPolicy from '../ESGPolicy/ESGPolicy'
 import { SustainabilityPolicy } from '../SustainabilityPolicy'
 import { SustainabilityGoal } from '../SustainabilityGoal'
+import { Sustainability } from '@/types/Sustainability'
 
-export function SustainabilityManagementContent() {
+export function SustainabilityManagementContent({
+  data,
+}: {
+  data: Sustainability
+}) {
   const t = useTranslations('SustainabilityManagementPage')
-
+  console.log(data)
   return (
     <Fragment>
       <ESGPolicy />
-      <SustainabilityPolicy />
-      <SustainabilityGoal />
+      <SustainabilityPolicy data={data.policy} />
+      <SustainabilityGoal data={data.goals} />
 
       <section className='relative pt-[-20px] pb-[30px] overflow-hidden'>
         <Image

@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import React from 'react'
 import { ArticleEnum } from '@/enums/ArticleEnum'
 import { getArticles } from '@/libs/strapi/article'
+import { getSustainability } from '@/libs/strapi/sustainability'
 import SocialResponsibilityComponent from '@/components/SocialResponsibilityComponent/SocialResponsibilityComponent'
 
 export default async function socialResponsibility({
@@ -19,12 +20,15 @@ export default async function socialResponsibility({
 
   const search = searchParams.search?.trim() || undefined
 
-  const data = await getArticles({
-    locale,
-    type: ArticleEnum.SocialResponsibility,
-    page,
-    perPage: 9,
-  })
+  const [data, sustainabilityResponse] = await Promise.all([
+    getArticles({
+      locale,
+      type: ArticleEnum.SocialResponsibility,
+      page,
+      perPage: 9,
+    }),
+    getSustainability(locale),
+  ])
 
   return (
     <main>
@@ -33,6 +37,7 @@ export default async function socialResponsibility({
         totalPages={data.meta.pagination.pageCount}
         search={search}
         data={data.data}
+        sustainability={sustainabilityResponse.data}
       />
     </main>
   )

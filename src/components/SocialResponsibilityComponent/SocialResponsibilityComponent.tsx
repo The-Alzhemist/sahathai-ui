@@ -12,17 +12,21 @@ import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 import { ArticleCardDataType } from '@/types/ArticleCardDataType'
+import { Sustainability } from '@/types/Sustainability'
+import { getStrapiImageUrl } from '@/libs/util'
 
 export default function SocialResponsibilityComponent({
   data,
   page,
   totalPages,
   search,
+  sustainability,
 }: {
   data: ArticleCardDataType[]
   page: number
   totalPages: number
   search?: string
+  sustainability: Sustainability
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
@@ -30,36 +34,42 @@ export default function SocialResponsibilityComponent({
 
   const { tick } = useNavigationTick()
 
+  const bannerImageUrl = sustainability.bannerImage
+    ? getStrapiImageUrl(sustainability.bannerImage.url)
+    : '/social-responsibility/social-responsibility-3x.webp'
+
   return (
     <div>
       <Animation key={tick}>
         <Menu />
 
         <BannerImage
-          mobileImageSrc='/social-responsibility/social-responsibility-3x.webp'
-          imageSrc='/social-responsibility/social-responsibility-3x.webp'
+          mobileImageSrc={bannerImageUrl}
+          imageSrc={bannerImageUrl}
           alt='social-responsibility-banner'
           imageClassName='md:rounded-b-none'
         >
           <div className='mx-auto flex max-w-[1400px] flex-col items-center justify-center text-white'>
             <p className='max-w-[800px] text-center text-md font-normal leading-[1.25]  md:text-2xl md:leading-[1.35] mb-5'>
-              {tSocial('Banner.Title')}
+              {sustainability.bannerText || tSocial('Banner.Title')}
             </p>
 
-            <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
-              <Link
-                href='https://a.storyblok.com/f/316761/x/2eeaaaa42d/csr-policy.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='font-normal '
-              >
-                {tSocial('Banner.download')}
-              </Link>
-            </button>
+            {sustainability.bannerFile && (
+              <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
+                <Link
+                  href={getStrapiImageUrl(sustainability.bannerFile.url)}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-normal '
+                >
+                  {tSocial('Banner.download')}
+                </Link>
+              </button>
+            )}
           </div>
         </BannerImage>
 
-        <SustainabilityManagementContent />
+        <SustainabilityManagementContent data={sustainability} />
 
         <section
           id='social-responsibility'

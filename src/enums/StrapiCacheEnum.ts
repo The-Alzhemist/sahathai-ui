@@ -21,4 +21,5 @@ export enum StrapiRevalidateTag {
   CompanyHistory = 'company-history:company-history',
   ShareholdingStructure = 'shareholding-structure:shareholding-structure',
   GovernanceStructure = 'governance-structure:governance-structure',
+  Sustainability = 'sustainability:sustainability',
 }
