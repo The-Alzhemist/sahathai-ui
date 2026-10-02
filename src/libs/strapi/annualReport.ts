@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { AnnualReport } from '@/types/AnnualReport'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -8,8 +9,9 @@ export async function getAnnualReports(
   perPage = 100,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<AnnualReport[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/annual-reports?status=published&sort=year:desc&populate[annualReport][populate]=file&populate[report56_1][populate]=file&populate[oneReport][populate]=file&locale=${locale}&pagination[pageSize]=${perPage}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/annual-reports?status=published&sort=year:desc&populate[annualReport][populate]=file&populate[report56_1][populate]=file&populate[oneReport][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
+    locale,
     {
       next: {
         revalidate,

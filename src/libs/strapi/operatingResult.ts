@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { OperatingResult } from '@/types/OperatingResult'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -8,8 +9,9 @@ export async function getOperatingResults(
   perPage = 100,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<OperatingResult[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/operating-results?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${locale}&pagination[pageSize]=${perPage}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/operating-results?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
+    locale,
     {
       next: {
         revalidate,

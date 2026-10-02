@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { SetAnnouncement } from '@/types/SetAnnouncement'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -8,8 +9,9 @@ export async function getSetAnnouncements(
   perPage = 100,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<SetAnnouncement[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/set-announcements?status=published&sort=year:desc&populate[items][populate]=file&locale=${locale}&pagination[pageSize]=${perPage}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/set-announcements?status=published&sort=year:desc&populate[items][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
+    locale,
     {
       next: {
         revalidate,

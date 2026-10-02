@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { ShareholdingStructure } from '@/types/ShareholdingStructure'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getShareholdingStructure(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<ShareholdingStructure>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/shareholding-structure?status=published&locale=${locale}&populate=chartImage`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/shareholding-structure?status=published&locale=${l}&populate=chartImage`,
+    locale,
     {
       next: {
         revalidate,

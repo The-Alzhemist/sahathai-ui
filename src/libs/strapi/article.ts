@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { ArticleEnum } from '@/enums/ArticleEnum'
 import { StrapiRevalidateTag } from '@/enums/StrapiCacheEnum'
 import { ArticleCardDataType } from '@/types/ArticleCardDataType'
@@ -28,8 +29,9 @@ export async function getArticles({
 }): Promise<ResponseData<ArticleCardDataType[]>> {
   const tag = ARTICLE_REVALIDATE_TAG[type]
 
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/articles?status=published&filters[type]=${type}&populate=cover&locale=${locale}&pagination[page]=${page}&pagination[pageSize]=${perPage}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/articles?status=published&filters[type]=${type}&populate=cover&locale=${l}&pagination[page]=${page}&pagination[pageSize]=${perPage}`,
+    locale,
     {
       next: {
         revalidate: revalidate,
@@ -50,8 +52,9 @@ export async function getArticleBySlug(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<NewsDataType> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/articles?status=published&populate[cover]=true&populate[description][on][shared.gallery][populate]=files&populate[description][on][shared.media][populate]=file&populate[description][on][shared.rich-text]=true&filters[slug][$eq]=${slug}&locale=${locale}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/articles?status=published&populate[cover]=true&populate[description][on][shared.gallery][populate]=files&populate[description][on][shared.media][populate]=file&populate[description][on][shared.rich-text]=true&filters[slug][$eq]=${slug}&locale=${l}`,
+    locale,
     {
       next: {
         revalidate,

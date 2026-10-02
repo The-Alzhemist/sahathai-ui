@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { ShareHolderMeeting } from '@/types/ShareHolderMeeting'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getShareHolderMeetings(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<ShareHolderMeeting[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/shareholder-meetings?status=published&sort=order:asc&populate[sections][populate][items][populate]=file&locale=${locale}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/shareholder-meetings?status=published&sort=order:asc&populate[sections][populate][items][populate]=file&locale=${l}`,
+    locale,
     {
       next: {
         revalidate,

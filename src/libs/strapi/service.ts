@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { Service } from '@/types/Service'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getServices(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Service[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/services?status=published&locale=${locale}&sort=order:asc&populate=icon`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/services?status=published&locale=${l}&sort=order:asc&populate=icon`,
+    locale,
     {
       next: {
         revalidate,

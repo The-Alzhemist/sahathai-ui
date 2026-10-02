@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { FinancialInfo } from '@/types/FinancialInfo'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getFinancialInfos(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<FinancialInfo[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/financial-infos?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${locale}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/financial-infos?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${l}`,
+    locale,
     {
       next: {
         revalidate,

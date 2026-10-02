@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { PopupBanner } from '@/types/PopupBanner'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getBannerPopup(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<PopupBanner[]>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/popup-banners?filters[isActive][$eq]=true&populate=image&locale=${locale}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/popup-banners?filters[isActive][$eq]=true&populate=image&locale=${l}`,
+    locale,
     {
       next: {
         revalidate,

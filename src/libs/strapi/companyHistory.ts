@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { CompanyHistory } from '@/types/CompanyHistory'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getCompanyHistory(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<CompanyHistory>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/company-history?status=published&locale=${locale}&populate[timeline][populate][0]=image&populate[timeline][populate][1]=icon`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/company-history?status=published&locale=${l}&populate[timeline][populate][0]=image&populate[timeline][populate][1]=icon`,
+    locale,
     {
       next: {
         revalidate,

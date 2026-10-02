@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { CorporateGovernance } from '@/types/CorporateGovernance'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getCorporateGovernance(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<CorporateGovernance>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/corporate-governance?status=published&populate[documents][populate]=file&locale=${locale}`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/corporate-governance?status=published&populate[documents][populate]=file&locale=${l}`,
+    locale,
     {
       next: {
         revalidate,

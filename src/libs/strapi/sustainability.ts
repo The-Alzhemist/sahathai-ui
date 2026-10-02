@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { Sustainability } from '@/types/Sustainability'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getSustainability(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Sustainability>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/sustainability?status=published&locale=${locale}&populate[bannerImage]=true&populate[bannerFile]=true&populate[policy][populate]=image&populate[goals][populate]=image`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/sustainability?status=published&locale=${l}&populate[bannerImage]=true&populate[bannerFile]=true&populate[policy][populate]=image&populate[goals][populate]=image`,
+    locale,
     {
       next: {
         revalidate,

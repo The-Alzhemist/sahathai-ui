@@ -1,3 +1,4 @@
+import { fetchStrapi } from './fetchStrapi'
 import { GovernanceStructure } from '@/types/GovernanceStructure'
 import { ResponseData } from '@/types/ResponseData'
 import { REVALIDATE_TIME } from '@/config/environtment'
@@ -7,8 +8,9 @@ export async function getGovernanceStructure(
   locale: string,
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<GovernanceStructure>> {
-  const res = await fetch(
-    `${process.env.STRAPI_BASE_URL}/api/governance-structure?status=published&locale=${locale}&populate=chartImage`,
+  const res = await fetchStrapi(
+    l => `${process.env.STRAPI_BASE_URL}/api/governance-structure?status=published&locale=${l}&populate=chartImage`,
+    locale,
     {
       next: {
         revalidate,
