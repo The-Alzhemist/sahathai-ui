@@ -31,7 +31,7 @@ export function TimelineCardMobile({
         </div>
         <div className='w-full shrink-0 order-2 rounded-[10px] overflow-hidden shadow-9'>
           <div className='relative pt-[60.61%] w-full'>
-            <Image src={imageUrl} fill alt='' />
+            <Image src={imageUrl} fill alt='' className='object-cover' />
           </div>
         </div>
       </section>

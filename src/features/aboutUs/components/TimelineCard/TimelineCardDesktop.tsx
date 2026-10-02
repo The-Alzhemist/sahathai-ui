@@ -32,7 +32,7 @@ export function TimelineCardDesktop({
         )}
       >
         <div className='relative pt-[60.61%] w-full'>
-          <Image src={imageUrl} fill alt='' />
+          <Image src={imageUrl} fill alt='' className='object-cover' />
         </div>
       </div>
       <TimeLine />

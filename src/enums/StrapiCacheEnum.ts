@@ -18,4 +18,5 @@ export enum StrapiRevalidateTag {
   InvestorActivity = 'investor-activity:investor-activity-list',
   Service = 'service:service-list',
   QualityAchievement = 'quality-achievement:quality-achievement',
+  CompanyHistory = 'company-history:company-history',
 }

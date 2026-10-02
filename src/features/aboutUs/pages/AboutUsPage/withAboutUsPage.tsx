@@ -18,6 +18,7 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
   function WithAboutUsPage({
     boardData,
     committeeData,
+    companyHistoryData,
   }: AboutPageAcceptProps) {
     const t = useTranslations('AboutUsPage.Tabs')
     const searchParams = useSearchParams()
@@ -70,6 +71,7 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
       handleOnActiveTabChange,
       boardData,
       committeeData,
+      companyHistoryData,
     }
 
     return <Component {...componentProps} />

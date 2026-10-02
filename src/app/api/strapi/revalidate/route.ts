@@ -104,6 +104,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
   }
 
+  if (uid === 'api::company-history.company-history') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.CompanyHistory} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.CompanyHistory)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
   if (uid === 'api::quality-achievement.quality-achievement') {
     if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
       return NextResponse.json({ ok: true, skipped: true })

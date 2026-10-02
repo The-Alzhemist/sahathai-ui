@@ -1,6 +1,7 @@
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
 import { getPersons } from '@/libs/strapi/person'
 import { getCommittees } from '@/libs/strapi/committee'
+import { getCompanyHistory } from '@/libs/strapi/companyHistory'
 import { getTranslations } from 'next-intl/server'
 
 export default async function AboutUs({
@@ -9,15 +10,18 @@ export default async function AboutUs({
   params: { locale: string }
 }) {
   const { locale } = params
-  const [personResponse, committeeResponse] = await Promise.all([
-    getPersons(locale),
-    getCommittees(locale),
-  ])
+  const [personResponse, committeeResponse, companyHistoryResponse] =
+    await Promise.all([
+      getPersons(locale),
+      getCommittees(locale),
+      getCompanyHistory(locale),
+    ])
 
   return (
     <AboutUsPage
       boardData={personResponse.data}
       committeeData={committeeResponse.data}
+      companyHistoryData={companyHistoryResponse.data}
     />
   )
 }

@@ -18,6 +18,7 @@ export function AboutUsPage({
   active,
   boardData,
   committeeData,
+  companyHistoryData,
 }: AboutPageProps) {
   const { tick } = useNavigationTick()
 
@@ -31,7 +32,7 @@ export function AboutUsPage({
           {active === AboutUsTabEnum.VISION_MISSION ? (
             <VisionMissionValues />
           ) : active === AboutUsTabEnum.OUT_COMMITMENT_SUCCESS ? (
-            <CommitmentSuccess />
+            <CommitmentSuccess data={companyHistoryData} />
           ) : active === AboutUsTabEnum.BOARD_DIRECTORS_EXE ? (
             <BoardAndExecutives
               boardData={boardData}
