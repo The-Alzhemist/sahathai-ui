@@ -10,7 +10,7 @@ export async function getInvestorActivities(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<InvestorActivity[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/investor-activities?status=published&sort=year:desc&locale=${l}&pagination[pageSize]=${perPage}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/investor-activities?status=published&sort=year:desc&locale=${l}&pagination[pageSize]=${perPage}`,
     locale,
     {
       next: {

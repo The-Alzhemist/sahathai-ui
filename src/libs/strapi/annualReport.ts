@@ -10,7 +10,7 @@ export async function getAnnualReports(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<AnnualReport[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/annual-reports?status=published&sort=year:desc&populate[annualReport][populate]=file&populate[report56_1][populate]=file&populate[oneReport][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/annual-reports?status=published&sort=year:desc&populate[annualReport][populate]=file&populate[report56_1][populate]=file&populate[oneReport][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
     locale,
     {
       next: {

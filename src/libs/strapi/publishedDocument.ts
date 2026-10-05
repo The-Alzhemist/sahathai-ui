@@ -10,7 +10,7 @@ export async function getPublishedDocuments(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<PublishedDocument[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/published-documents?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/published-documents?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
     locale,
     {
       next: {

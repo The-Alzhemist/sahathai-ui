@@ -9,7 +9,7 @@ export async function getPolicies(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Policy[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/policies?status=published&locale=${l}&populate=*`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/policies?status=published&locale=${l}&populate=*`,
     locale,
     {
       next: {

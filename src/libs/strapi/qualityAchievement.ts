@@ -9,7 +9,7 @@ export async function getQualityAchievement(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<QualityAchievement>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/quality-achievement?status=published&locale=${l}&populate[items][populate]=image`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/quality-achievement?status=published&locale=${l}&populate[items][populate]=image`,
     locale,
     {
       next: {

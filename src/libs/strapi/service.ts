@@ -9,7 +9,7 @@ export async function getServices(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Service[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/services?status=published&locale=${l}&sort=order:asc&populate=icon`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/services?status=published&locale=${l}&sort=order:asc&populate=icon`,
     locale,
     {
       next: {

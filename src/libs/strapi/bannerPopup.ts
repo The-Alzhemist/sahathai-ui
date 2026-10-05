@@ -9,7 +9,7 @@ export async function getBannerPopup(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<PopupBanner[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/popup-banners?filters[isActive][$eq]=true&populate=image&locale=${l}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/popup-banners?filters[isActive][$eq]=true&populate=image&locale=${l}`,
     locale,
     {
       next: {

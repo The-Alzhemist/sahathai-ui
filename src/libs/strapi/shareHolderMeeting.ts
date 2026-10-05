@@ -9,7 +9,7 @@ export async function getShareHolderMeetings(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<ShareHolderMeeting[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/shareholder-meetings?status=published&sort=order:asc&populate[sections][populate][items][populate]=file&locale=${l}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/shareholder-meetings?status=published&sort=order:asc&populate[sections][populate][items][populate]=file&locale=${l}`,
     locale,
     {
       next: {

@@ -9,7 +9,7 @@ export async function getCorporateGovernance(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<CorporateGovernance>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/corporate-governance?status=published&populate[documents][populate]=file&locale=${l}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/corporate-governance?status=published&populate[documents][populate]=file&locale=${l}`,
     locale,
     {
       next: {

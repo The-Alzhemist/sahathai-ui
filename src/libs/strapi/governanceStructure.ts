@@ -9,7 +9,7 @@ export async function getGovernanceStructure(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<GovernanceStructure>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/governance-structure?status=published&locale=${l}&populate=chartImage`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/governance-structure?status=published&locale=${l}&populate=chartImage`,
     locale,
     {
       next: {

@@ -9,7 +9,7 @@ export async function getPersons(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Person[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/people?status=published&populate=*&pagination[pageSize]=100&pagination[page]=1&locale=${l}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/people?status=published&populate=*&pagination[pageSize]=100&pagination[page]=1&locale=${l}`,
     locale,
     {
       next: {

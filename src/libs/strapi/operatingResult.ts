@@ -10,7 +10,7 @@ export async function getOperatingResults(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<OperatingResult[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/operating-results?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/operating-results?status=published&sort=year:desc&populate[q1][populate]=file&populate[q2][populate]=file&populate[q3][populate]=file&populate[annual][populate]=file&locale=${l}&pagination[pageSize]=${perPage}`,
     locale,
     {
       next: {

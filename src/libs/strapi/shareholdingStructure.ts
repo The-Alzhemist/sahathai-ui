@@ -9,7 +9,7 @@ export async function getShareholdingStructure(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<ShareholdingStructure>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/shareholding-structure?status=published&locale=${l}&populate=chartImage`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/shareholding-structure?status=published&locale=${l}&populate=chartImage`,
     locale,
     {
       next: {

@@ -9,7 +9,7 @@ export async function getSustainability(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Sustainability>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/sustainability?status=published&locale=${l}&populate[bannerImage]=true&populate[bannerFile]=true&populate[policy][populate]=image&populate[goals][populate]=image`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/sustainability?status=published&locale=${l}&populate[bannerImage]=true&populate[bannerFile]=true&populate[policy][populate]=image&populate[goals][populate]=image`,
     locale,
     {
       next: {

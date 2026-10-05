@@ -9,7 +9,7 @@ export async function getCommittees(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<Committee[]>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/committees?status=published&sort=order:asc&populate[content][on][shared.rich-text]=true&populate[content][on][shared.committee-member]=true&locale=${l}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/committees?status=published&sort=order:asc&populate[content][on][shared.rich-text]=true&populate[content][on][shared.committee-member]=true&locale=${l}`,
     locale,
     {
       next: {

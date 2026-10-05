@@ -9,7 +9,7 @@ export async function getCompanyHistory(
   revalidate = REVALIDATE_TIME
 ): Promise<ResponseData<CompanyHistory>> {
   const res = await fetchStrapi(
-    l => `${process.env.STRAPI_BASE_URL}/api/company-history?status=published&locale=${l}&populate[timeline][populate][0]=image&populate[timeline][populate][1]=icon`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/company-history?status=published&locale=${l}&populate[timeline][populate][0]=image&populate[timeline][populate][1]=icon`,
     locale,
     {
       next: {
