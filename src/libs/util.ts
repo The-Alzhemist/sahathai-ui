@@ -13,4 +13,6 @@ export const formatDateTime = (date: string | Date) =>
   format(new Date(date), 'yyyy-MM-dd HH:mm')
 
 export const getStrapiImageUrl = (imagePath: string) =>
-  `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${imagePath}`
+  imagePath.startsWith('http')
+    ? imagePath
+    : `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${imagePath}`
