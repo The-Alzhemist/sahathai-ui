@@ -30,7 +30,7 @@ export function CompanyFactSheet() {
             <div>
               <DownloadButton
                 className='mx-auto'
-                href='https://a.storyblok.com/f/316761/x/1a86f1d2d5/company-snapshot-9m-2021.pdf'
+                href='https://storage.googleapis.com/sahathai-cms-uploads-510409/company_snapshot_9m_2021_6ccbb7c485/company_snapshot_9m_2021_6ccbb7c485.pdf'
               />
             </div>
           </div>
