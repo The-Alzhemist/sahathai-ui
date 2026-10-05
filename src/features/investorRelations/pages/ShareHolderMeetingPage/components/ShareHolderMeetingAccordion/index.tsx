@@ -28,7 +28,7 @@ function ShareHolderMeetingItemRow({
       <div className='mb-10 w-full'>
         <h3 className='text-sm text-gray-700 mb-5'>{item.label || '-'}</h3>
 
-        {item.url && isYoutubeUrl(item.url) && (
+        {!item.file && item.url && isYoutubeUrl(item.url) && (
           <div className='w-full h-[300px]'>
             <iframe
               className='w-full h-full rounded-[30px]'
@@ -47,7 +47,7 @@ function ShareHolderMeetingItemRow({
         </div>
       )}
 
-      {item.url && !isYoutubeUrl(item.url) && (
+      {!item.file && item.url && !isYoutubeUrl(item.url) && (
         <Link
           href={item.url}
           target='_blank'

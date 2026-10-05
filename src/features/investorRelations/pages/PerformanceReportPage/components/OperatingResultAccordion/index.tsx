@@ -34,7 +34,7 @@ function OperatingResultQuarterRow({
         </div>
       )}
 
-      {quarter?.url && (
+      {!quarter?.file && quarter?.url && (
         <Link
           href={quarter.url}
           target='_blank'

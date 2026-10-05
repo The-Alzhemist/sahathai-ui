@@ -30,7 +30,7 @@ function SetAnnouncementItemRow({ item }: { item: SetAnnouncementItem }) {
         </div>
       )}
 
-      {item.url && (
+      {!item.file && item.url && (
         <Link
           href={item.url}
           target='_blank'

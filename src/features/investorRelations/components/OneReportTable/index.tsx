@@ -3,6 +3,9 @@ import { DownloadButton } from '@/components/DownloadButton'
 import { getStrapiImageUrl } from '@/libs/util'
 import { AnnualReport } from '@/types/AnnualReport'
 
+// CMS stores the Gregorian year (Buddhist = year + 543); tolerate Buddhist values too.
+const toBuddhistYear = (year: number) => (year > 2400 ? year : year + 543)
+
 export function OneReportTable({ data }: { data: AnnualReport[] }) {
   const common = useTranslations('common')
   const t = useTranslations('InvestorInformationPage.OneReportTable')
@@ -41,10 +44,10 @@ export function OneReportTable({ data }: { data: AnnualReport[] }) {
               >
                 <div>
                   <div className='small-medium text-black-2'>
-                    {item.year}
+                    {toBuddhistYear(item.year)}
                   </div>
                   <div className='small-reg text-dark-40'>
-                    {item.year - 543}
+                    {toBuddhistYear(item.year) - 543}
                   </div>
                 </div>
 

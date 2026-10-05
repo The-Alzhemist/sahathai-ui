@@ -29,7 +29,7 @@ function CorporateGovernanceDocumentRow({
         </div>
       )}
 
-      {document.url && (
+      {!document.file && document.url && (
         <Link
           href={document.url}
           target='_blank'
@@ -70,7 +70,7 @@ export function CorporateGovernanceDocumentList({
     requestAnimationFrame(() =>
       document.getElementById(tabId)?.scrollIntoView({ block: 'start' })
     )
-  }, [])
+  }, [tabId])
 
   const toggleTab = () => {
     const next = !isOpen
