@@ -34,11 +34,6 @@ const nextConfig = {
       },
 
       {
-        protocol: 'https',
-        hostname: 'a.storyblok.com', // Your image's domain
-        pathname: '/**', // Matches all paths under the domain
-      },
-      {
         protocol: 'http',
         hostname: 'localhost', // Your image's domain
         pathname: '/**', // Matches all paths under the domain
