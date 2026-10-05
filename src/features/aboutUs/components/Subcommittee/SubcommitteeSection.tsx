@@ -1,31 +1,6 @@
 import { AvatarIcon } from '@/components/icons/AvatarIcon'
 import { Committee } from '@/types/Committee'
-import { RichTextChild, RichTextNode } from '@/types/DescriptionType'
-
-function RichTextInline({ child }: { child: RichTextChild }) {
-  let content: React.ReactNode = child.text
-
-  if (child.bold) content = <strong>{content}</strong>
-  if (child.italic) content = <em>{content}</em>
-  if (child.underline) content = <u>{content}</u>
-  if (child.strikethrough) content = <s>{content}</s>
-
-  return content
-}
-
-function RichTextBody({ body }: { body: RichTextNode[] }) {
-  return (
-    <div className='space-y-3'>
-      {body.map((node, index) => (
-        <p key={index}>
-          {node.children.map((child, childIndex) => (
-            <RichTextInline key={childIndex} child={child} />
-          ))}
-        </p>
-      ))}
-    </div>
-  )
-}
+import { StrapiBlocks } from '@/components/StrapiBlocks'
 
 export function SubcommitteeSection({ committee }: { committee: Committee }) {
   return (
@@ -48,7 +23,7 @@ export function SubcommitteeSection({ committee }: { committee: Committee }) {
 
         return (
           <div key={block.id} className='mb-7'>
-            <RichTextBody body={block.body} />
+            <StrapiBlocks body={block.body} />
           </div>
         )
       })}

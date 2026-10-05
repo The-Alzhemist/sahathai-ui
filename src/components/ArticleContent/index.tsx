@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { formatDateTime, getStrapiImageUrl } from '@/libs/util'
 import { DisplayStyleEnum } from '@/enums/DisplayStyleEnum'
 import { StrapiMediaFile } from '@/types/StrapiMediaFile'
-import { RichTextChild, RichTextNode } from '@/types/DescriptionType'
+import { StrapiBlocks } from '@/components/StrapiBlocks'
 
 import { ArticleContentProps } from './interface'
 
@@ -32,31 +32,6 @@ function MediaBlockImage({
         height={450}
         className='h-auto w-full object-contain'
       />
-    </div>
-  )
-}
-
-function RichTextInline({ child }: { child: RichTextChild }) {
-  let content: React.ReactNode = child.text
-
-  if (child.bold) content = <strong>{content}</strong>
-  if (child.italic) content = <em>{content}</em>
-  if (child.underline) content = <u>{content}</u>
-  if (child.strikethrough) content = <s>{content}</s>
-
-  return content
-}
-
-function RichTextBody({ body }: { body: RichTextNode[] }) {
-  return (
-    <div className='space-y-3 text-black-6 body-1'>
-      {body.map((node, index) => (
-        <p key={index}>
-          {node.children.map((child, childIndex) => (
-            <RichTextInline key={childIndex} child={child} />
-          ))}
-        </p>
-      ))}
     </div>
   )
 }
@@ -113,7 +88,13 @@ export function ArticleContent({
           )
         }
 
-        return <RichTextBody key={block.id} body={block.body} />
+        return (
+          <StrapiBlocks
+            key={block.id}
+            body={block.body}
+            className='space-y-3 text-black-6 body-1'
+          />
+        )
       })}
     </section>
   )

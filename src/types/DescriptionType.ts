@@ -14,18 +14,21 @@ export type DescriptionMediaBlock = {
   file: StrapiMediaFile
 }
 
-export type RichTextChild = {
-  type: 'text'
-  text: string
+// Strapi Blocks JSON node (paragraph, heading, list, list-item, quote, code,
+// link, image, text). One loose recursive shape keeps the renderer simple.
+export type RichTextNode = {
+  type: string
+  children?: RichTextNode[]
+  text?: string
   bold?: boolean
   italic?: boolean
   underline?: boolean
   strikethrough?: boolean
-}
-
-export type RichTextNode = {
-  type: string
-  children: RichTextChild[]
+  code?: boolean
+  level?: number
+  format?: 'ordered' | 'unordered'
+  url?: string
+  image?: { url: string; alternativeText?: string | null }
 }
 
 export type DescriptionRichTextBlock = {
