@@ -30,7 +30,7 @@ export async function getArticles({
   const tag = ARTICLE_REVALIDATE_TAG[type]
 
   const res = await fetchStrapi(
-    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/articles?status=published&filters[type]=${type}&populate=cover&locale=${l}&pagination[page]=${page}&pagination[pageSize]=${perPage}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/articles?status=published&filters[type][$eq]=${type}&populate=cover&locale=${l}&pagination[page]=${page}&pagination[pageSize]=${perPage}`,
     locale,
     {
       next: {

@@ -21,8 +21,6 @@ const DRAFT_PUBLISH_EVENTS = ['entry.publish', 'entry.unpublish']
 const NO_DRAFT_PUBLISH_EVENTS = ['entry.create', 'entry.update', 'entry.delete']
 
 export async function POST(req: NextRequest) {
-  console.log('------ Strapi webhook received ------')
-
   const secret = req.headers.get('x-webhook-secret')
 
   if (secret !== process.env.STRAPI_WEBHOOK_SECRET) {
@@ -35,13 +33,23 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const body = await req.json()
-  console.log('------ Strapi webhook payload ------')
-  console.log(JSON.stringify(body, null, 2))
+  let body
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json(
+      { ok: false, message: 'Invalid JSON body' },
+      { status: 400 }
+    )
+  }
 
   const event: string | undefined = body.event
   const uid: string | undefined = body.uid
   const entry = body.entry
+
+  // Log identifiers only: webhooks fire for every content-type and the
+  // entries can contain personal data.
+  console.log('Strapi webhook:', { event, uid, id: entry?.id, locale: entry?.locale })
 
   if (uid === 'api::person.person') {
     if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
@@ -301,11 +309,8 @@ export async function POST(req: NextRequest) {
     const tag = ARTICLE_REVALIDATE_TAG[type]
 
     if (!tag) {
-      console.warn('Cannot revalidate unknown article type:', type)
-      return NextResponse.json(
-        { ok: false, message: `Unknown article type: ${type}` },
-        { status: 400 }
-      )
+      console.warn('Ignoring unknown article type:', type)
+      return NextResponse.json({ ok: true, skipped: true })
     }
 
     console.log(`------ Revalidate tag: ${tag} ------`)
@@ -322,9 +327,8 @@ export async function POST(req: NextRequest) {
     })
   }
 
-  console.warn('Cannot revalidate unknown uid:', uid)
-  return NextResponse.json(
-    { ok: false, message: `Unknown uid: ${uid}` },
-    { status: 400 }
-  )
+  // Strapi webhooks fire for every content-type, so anything we don't
+  // handle must be acknowledged with a 2xx, never an error.
+  console.log('Ignoring unhandled uid:', uid)
+  return NextResponse.json({ ok: true, skipped: true })
 }
