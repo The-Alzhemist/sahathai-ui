@@ -16,6 +16,7 @@ import { BoardSection } from '../BoardSection'
 
 export function BoardAndExecutives({
   boardData,
+  executiveData,
   committeeData,
 }: BoardAndExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
@@ -36,19 +37,15 @@ export function BoardAndExecutives({
         {t('content')}
       </p>
       <BoardSection title={t('Board.title')}>
-        {boardData
-          .filter(person => person.isBoardMember)
-          .map(person => (
-            <BoardCard
-              key={person.id}
-              name={person.fullName}
-              imageUrl={
-                person.photo ? getStrapiImageUrl(person.photo.url) : ''
-              }
-              board={person}
-              onClick={() => setSelectPeople(person)}
-            />
-          ))}
+        {boardData.map(person => (
+          <BoardCard
+            key={person.id}
+            name={person.fullName}
+            imageUrl={person.photo ? getStrapiImageUrl(person.photo.url) : ''}
+            board={person}
+            onClick={() => setSelectPeople(person)}
+          />
+        ))}
       </BoardSection>
       <section className='relative min-h-[1190px] md:min-h-[990px]'>
         <div className='absolute top-0 left-0  w-full h-full'>
@@ -63,19 +60,15 @@ export function BoardAndExecutives({
       </section>
       {/* Executive */}
       <BoardSection title={t('Executives.title')}>
-        {boardData
-          .filter(person => person.isExecutive)
-          .map(person => (
-            <BoardCard
-              key={person.id}
-              name={person.fullName}
-              imageUrl={
-                person.photo ? getStrapiImageUrl(person.photo.url) : ''
-              }
-              board={person}
-              onClick={() => setSelectPeople(person)}
-            />
-          ))}
+        {executiveData.map(person => (
+          <BoardCard
+            key={person.id}
+            name={person.fullName}
+            imageUrl={person.photo ? getStrapiImageUrl(person.photo.url) : ''}
+            board={person}
+            onClick={() => setSelectPeople(person)}
+          />
+        ))}
       </BoardSection>
       {selectPeople && (
         <PeopleInformationModal

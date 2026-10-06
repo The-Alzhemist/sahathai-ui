@@ -17,6 +17,7 @@ import { useRouter } from '@/libs/intl/navigation'
 export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
   function WithAboutUsPage({
     boardData,
+    executiveData,
     committeeData,
     companyHistoryData,
     shareholdingStructureData,
@@ -72,6 +73,7 @@ export function withAboutUsPage(Component: React.FC<AboutPageProps>) {
       active,
       handleOnActiveTabChange,
       boardData,
+      executiveData,
       committeeData,
       companyHistoryData,
       shareholdingStructureData,

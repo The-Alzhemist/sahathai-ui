@@ -17,6 +17,7 @@ import { useNavigationTick } from '@/context/NavigationTickContext'
 export function AboutUsPage({
   active,
   boardData,
+  executiveData,
   committeeData,
   companyHistoryData,
   shareholdingStructureData,
@@ -38,6 +39,7 @@ export function AboutUsPage({
           ) : active === AboutUsTabEnum.BOARD_DIRECTORS_EXE ? (
             <BoardAndExecutives
               boardData={boardData}
+              executiveData={executiveData}
               committeeData={committeeData}
             />
           ) : active === AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE ? (

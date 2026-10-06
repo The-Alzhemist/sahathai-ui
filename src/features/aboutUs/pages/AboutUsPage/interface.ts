@@ -10,6 +10,7 @@ export interface AboutPageProps {
   active: AboutUsTabEnum
   handleOnActiveTabChange: (tab: AboutUsTabEnum) => void
   boardData: Person[]
+  executiveData: Person[]
   committeeData: Committee[]
   companyHistoryData: CompanyHistory
   shareholdingStructureData: ShareholdingStructure
@@ -18,6 +19,7 @@ export interface AboutPageProps {
 
 export interface AboutPageAcceptProps {
   boardData: Person[]
+  executiveData: Person[]
   committeeData: Committee[]
   companyHistoryData: CompanyHistory
   shareholdingStructureData: ShareholdingStructure

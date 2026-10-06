@@ -1,5 +1,5 @@
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
-import { getPersons } from '@/libs/strapi/person'
+import { getBoardMembers, getExecutives } from '@/libs/strapi/person'
 import { getCommittees } from '@/libs/strapi/committee'
 import { getCompanyHistory } from '@/libs/strapi/companyHistory'
 import { getShareholdingStructure } from '@/libs/strapi/shareholdingStructure'
@@ -13,13 +13,15 @@ export default async function AboutUs({
 }) {
   const { locale } = params
   const [
-    personResponse,
+    boardResponse,
+    executiveResponse,
     committeeResponse,
     companyHistoryResponse,
     shareholdingStructureResponse,
     governanceStructureResponse,
   ] = await Promise.all([
-    getPersons(locale),
+    getBoardMembers(locale),
+    getExecutives(locale),
     getCommittees(locale),
     getCompanyHistory(locale),
     getShareholdingStructure(locale),
@@ -28,7 +30,8 @@ export default async function AboutUs({
 
   return (
     <AboutUsPage
-      boardData={personResponse.data}
+      boardData={boardResponse.data}
+      executiveData={executiveResponse.data}
       committeeData={committeeResponse.data}
       companyHistoryData={companyHistoryResponse.data}
       shareholdingStructureData={shareholdingStructureResponse.data}

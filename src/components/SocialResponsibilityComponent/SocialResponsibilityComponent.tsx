@@ -71,10 +71,7 @@ export default function SocialResponsibilityComponent({
 
         <SustainabilityManagementContent data={sustainability} />
 
-        <section
-          id='social-responsibility'
-          className='bg-white pt-[70px]'
-        >
+        <section id='social-responsibility' className='bg-white pt-[70px]'>
           <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[calc(100vh-240px)]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('allBlog')}
