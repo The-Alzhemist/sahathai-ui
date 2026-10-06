@@ -16,12 +16,12 @@
       "Title": "Sahathai | 基础设施",
       "Description": "沙哈泰码头拥有高品质设施与专业服务，全面满足客户的各项需求。"
     },
-    "News": {
-      "Title": "Sahathai | 新闻",
-      "Description": "及时了解沙哈泰码头的最新动态与重要资讯，不错过任何关键信息。"
-    },
     "PressRelease": {
       "Title": "Sahathai | 新闻稿",
+      "Description": "及时了解沙哈泰码头的最新动态与重要资讯，不错过任何关键信息。"
+    },
+    "CompanyNews": {
+      "Title": "Sahathai | 公司新闻",
       "Description": "公司业绩报告及企业活动新闻。"
     },
     "SocialResponsibility": {
@@ -87,6 +87,10 @@
     "CompanySecretaryContact": {
       "Title": "沙泰 | 联系公司秘书",
       "Description": "联系沙泰码头公司秘书 Banchai Karuchit 先生，获取相关信息与联络方式。"
+    },
+    "AnnualReport": {
+      "Title": "Sahathai | 年度报告",
+      "Description": "公司年度报告（One Report）及股东与投资者相关信息。"
     }
   }
 }

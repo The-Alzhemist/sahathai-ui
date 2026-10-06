@@ -1,23 +1,19 @@
 import Image from 'next/image'
 import { Link } from '@/libs/intl/navigation'
 import { useTranslations } from 'next-intl'
-import { cn } from '@/libs/util'
+import { cn, formatDateTime, getStrapiImageUrl } from '@/libs/util'
 import { ArrowRightIcon } from '../icons/ArrowRightIcon'
-import { extractTextFieldsStoryblok } from '@/utils/extractTextFieldsStoryblok'
 import type { NewsCardProps } from './interface'
-import { EventNewsDetailCardStoryblok } from '@/types/storyblok'
 
 export function BlogCard({
   title,
-  content,
   slug,
+  publishDate,
+  imageUrl,
+  description,
   page = 'news',
 }: NewsCardProps) {
   const common = useTranslations('common')
-
-  const body0 = content?.body?.[0] as EventNewsDetailCardStoryblok
-  const newsDate: string | undefined = body0?.newsDate
-  const imageSrc = body0?.newsImageCover?.filename ?? '/background.jpg'
 
   return (
     <Link
@@ -28,7 +24,7 @@ export function BlogCard({
     >
       <article className='w-full'>
         <Image
-          src={imageSrc}
+          src={getStrapiImageUrl(imageUrl)}
           alt={title}
           width={500}
           height={500}
@@ -40,10 +36,12 @@ export function BlogCard({
         </h2>
 
         <p className='mt-[8px] body-2 line-clamp-2 text-black-6 h-[42px]'>
-          {extractTextFieldsStoryblok(content)}
+          {description}
         </p>
 
-        <div className='mt-[8px] caption text-black-3'>{newsDate}</div>
+        <div className='mt-[8px] caption text-black-3'>
+          {formatDateTime(publishDate)}
+        </div>
 
         <div className='mt-[16px] button-small text-navy w-fit flex gap-[10px] items-center'>
           <span

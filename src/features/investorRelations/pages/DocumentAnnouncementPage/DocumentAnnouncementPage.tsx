@@ -6,8 +6,7 @@ import { Menu } from '@/components/Menu'
 import { DocumentAnnouncementPageProps } from '@/features/investorRelations/pages/DocumentAnnouncementPage/interface'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { PublishedDocumentAccordion } from '@/features/investorRelations/pages/DocumentAnnouncementPage/components/PublishedDocumentAccordion'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 import { useNavigationTick } from '@/context/NavigationTickContext'
@@ -17,12 +16,6 @@ export function DocumentAnnouncementPage({
 }: DocumentAnnouncementPageProps) {
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!data) {
-    return <div>No data</div>
-  }
-
-  const group = (data.story.content.body[0].group as GroupStoryblok[]) || []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -40,7 +33,7 @@ export function DocumentAnnouncementPage({
               {tMenu('investorRelations.DocumentAnnouncement')}
             </h1>
 
-            <GroupAccordionTabs pageKey='document-announcement' group={group} />
+            <PublishedDocumentAccordion data={data} />
           </section>
         </Animation>
       </AnimatePresence>

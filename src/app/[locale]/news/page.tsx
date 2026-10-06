@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server'
 
 import React from 'react'
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
-import NewsComponent from '@/components/NewsComponent/NewsComponent'
-import { RevalidateTag } from '@/enums/CacheEnum'
+import CompanyNewsListComponent from '@/components/CompanyNewsListComponent/CompanyNewsListComponent'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { getArticles } from '@/libs/strapi/article'
 
 export default async function news({
   params,
@@ -14,37 +14,22 @@ export default async function news({
 }) {
   const locale = params.locale
   const page = Number(searchParams.page ?? 1)
-  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  //  fetching data
-  const { stories, total } = await fetchAllBlog({
+  const data = await getArticles({
+    locale,
+    type: ArticleEnum.CompanyNews,
     page,
-    perPage,
-    lang: locale,
-    version: 'published',
-    search,
-    startsWith: 'news/',
-    tag: RevalidateTag.NEWS,
+    perPage: 9,
   })
-
-  const latestBlog = await fetchLastBlog({
-    lang: locale,
-    startsWith: 'news/',
-    tag: RevalidateTag.NEWS,
-  })
-
-  const totalPages = Math.ceil(total / perPage)
 
   return (
     <main>
-      <NewsComponent
-        stories={stories}
-        latestBlog={latestBlog}
-        locale={locale}
+      <CompanyNewsListComponent
         page={page}
-        totalPages={totalPages}
+        totalPages={data.meta.pagination.pageCount}
         search={search}
+        data={data.data}
       />
     </main>
   )
@@ -60,11 +45,11 @@ export async function generateMetadata({
   const t = await getTranslations('MetaData')
 
   return {
-    title: t('News.Title'),
-    description: t('News.Description'),
+    title: t('CompanyNews.Title'),
+    description: t('CompanyNews.Description'),
     openGraph: {
-      title: t('News.Title'),
-      description: t('News.Description'),
+      title: t('CompanyNews.Title'),
+      description: t('CompanyNews.Description'),
       images: [
         {
           url: `${process.env.DOMAIN_NAME}/seo/news/news-meta-img-${locale}.png`,

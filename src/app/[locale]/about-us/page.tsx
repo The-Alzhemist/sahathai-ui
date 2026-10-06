@@ -1,8 +1,9 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { AboutUsPage } from '@/features/aboutUs/pages/AboutUsPage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getBoardMembers, getExecutives } from '@/libs/strapi/person'
+import { getCommittees } from '@/libs/strapi/committee'
+import { getCompanyHistory } from '@/libs/strapi/companyHistory'
+import { getShareholdingStructure } from '@/libs/strapi/shareholdingStructure'
+import { getGovernanceStructure } from '@/libs/strapi/governanceStructure'
 import { getTranslations } from 'next-intl/server'
 
 export default async function AboutUs({
@@ -11,15 +12,32 @@ export default async function AboutUs({
   params: { locale: string }
 }) {
   const { locale } = params
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'board-and-committee/board-and-committee',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.BOARD
-  )
+  const [
+    boardResponse,
+    executiveResponse,
+    committeeResponse,
+    companyHistoryResponse,
+    shareholdingStructureResponse,
+    governanceStructureResponse,
+  ] = await Promise.all([
+    getBoardMembers(locale),
+    getExecutives(locale),
+    getCommittees(locale),
+    getCompanyHistory(locale),
+    getShareholdingStructure(locale),
+    getGovernanceStructure(locale),
+  ])
 
-  return <AboutUsPage boardData={response} />
+  return (
+    <AboutUsPage
+      boardData={boardResponse.data}
+      executiveData={executiveResponse.data}
+      committeeData={committeeResponse.data}
+      companyHistoryData={companyHistoryResponse.data}
+      shareholdingStructureData={shareholdingStructureResponse.data}
+      governanceStructureData={governanceStructureResponse.data}
+    />
+  )
 }
 
 export async function generateMetadata({

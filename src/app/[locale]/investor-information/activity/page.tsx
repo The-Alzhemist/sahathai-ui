@@ -1,9 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { ActivityPage } from '@/features/investorRelations/pages/ActivityPage/ActivityPage'
-
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getInvestorActivities } from '@/libs/strapi/investorActivity'
 import { getTranslations } from 'next-intl/server'
 
 export default async function Activity({
@@ -13,14 +9,9 @@ export default async function Activity({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/f7414f1c-4de7-4cfb-88f7-5bed4e23ffce',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.ACTIVITY
-  )
-  return <ActivityPage data={response} />
+  const response = await getInvestorActivities(locale)
+
+  return <ActivityPage data={response.data} />
 }
 
 export async function generateMetadata({

@@ -1,0 +1,26 @@
+import { fetchStrapi } from './fetchStrapi'
+import { InvestorActivity } from '@/types/InvestorActivity'
+import { ResponseData } from '@/types/ResponseData'
+import { REVALIDATE_TIME } from '@/config/environtment'
+import { StrapiRevalidateTag } from '@/enums/StrapiCacheEnum'
+
+export async function getInvestorActivities(
+  locale: string,
+  perPage = 100,
+  revalidate = REVALIDATE_TIME
+): Promise<ResponseData<InvestorActivity[]>> {
+  const res = await fetchStrapi(
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/investor-activities?status=published&sort=year:desc&locale=${l}&pagination[pageSize]=${perPage}`,
+    locale,
+    {
+      next: {
+        revalidate,
+        tags: [StrapiRevalidateTag.InvestorActivity],
+      },
+    }
+  )
+
+  if (!res.ok) throw new Error('Failed to fetch investor activities')
+
+  return await res.json()
+}

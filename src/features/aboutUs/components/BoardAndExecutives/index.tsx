@@ -10,14 +10,18 @@ import { BoardAndExecutivesProps } from '@/features/aboutUs/components/BoardAndE
 
 import { BoardCard } from '@/features/aboutUs/components/BoardCard'
 import { PeopleInformationModal } from '@/features/aboutUs/components/PeopleModal/PeopleInformationModal'
-import { BoardAndCommitteeStoryblok } from '@/types/storyblok'
+import { Person } from '@/types/Person'
+import { getStrapiImageUrl } from '@/libs/util'
 import { BoardSection } from '../BoardSection'
 
-export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
+export function BoardAndExecutives({
+  boardData,
+  executiveData,
+  committeeData,
+}: BoardAndExecutivesProps) {
   const t = useTranslations('AboutUsPage.BoardAndExecutives')
 
-  const [selectPeople, setSelectPeople] =
-    useState<BoardAndCommitteeStoryblok | null>(null)
+  const [selectPeople, setSelectPeople] = useState<Person | null>(null)
 
   function closeModal() {
     setSelectPeople(null)
@@ -33,18 +37,15 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
         {t('content')}
       </p>
       <BoardSection title={t('Board.title')}>
-        {boardData.story.content.body?.map(
-          (board: BoardAndCommitteeStoryblok) =>
-            board.isBoardOfDirector ? (
-              <BoardCard
-                key={board._uid}
-                name={board.name || ''}
-                imageUrl={board.peopleImage?.filename || ''}
-                board={board}
-                onClick={() => setSelectPeople(board)}
-              />
-            ) : null
-        )}
+        {boardData.map(person => (
+          <BoardCard
+            key={person.id}
+            name={person.fullName}
+            imageUrl={person.photo ? getStrapiImageUrl(person.photo.url) : ''}
+            board={person}
+            onClick={() => setSelectPeople(person)}
+          />
+        ))}
       </BoardSection>
       <section className='relative min-h-[1190px] md:min-h-[990px]'>
         <div className='absolute top-0 left-0  w-full h-full'>
@@ -55,22 +56,19 @@ export function BoardAndExecutives({ boardData }: BoardAndExecutivesProps) {
             className='object-cover object-bottom'
           />
         </div>
-        <Subcommittee />
+        <Subcommittee data={committeeData} />
       </section>
       {/* Executive */}
       <BoardSection title={t('Executives.title')}>
-        {boardData.story.content.body?.map(
-          (board: BoardAndCommitteeStoryblok) =>
-            board.isCommittee ? (
-              <BoardCard
-                key={board._uid}
-                name={board.name || ''}
-                imageUrl={board.peopleImage?.filename || ''}
-                board={board}
-                onClick={() => setSelectPeople(board)}
-              />
-            ) : null
-        )}
+        {executiveData.map(person => (
+          <BoardCard
+            key={person.id}
+            name={person.fullName}
+            imageUrl={person.photo ? getStrapiImageUrl(person.photo.url) : ''}
+            board={person}
+            onClick={() => setSelectPeople(person)}
+          />
+        ))}
       </BoardSection>
       {selectPeople && (
         <PeopleInformationModal

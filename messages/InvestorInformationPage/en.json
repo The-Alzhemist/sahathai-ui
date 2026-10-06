@@ -39,8 +39,12 @@
       "otherMinorShareholders": "Other Minor Shareholders",
       "total": "Total"
     },
-    "CompanyIntroductionVideo": { "title": "Company introduction video" },
-    "CompanyAdvertiseVideo": { "title": "Company public relations video" },
+    "CompanyIntroductionVideo": {
+      "title": "Company introduction video"
+    },
+    "CompanyAdvertiseVideo": {
+      "title": "Company public relations video"
+    },
     "FactSheet": {
       "title": "FactSheet",
       "detail": "Download data factSheet ",
@@ -61,6 +65,21 @@
       "q2": "Q2",
       "q3": "Q3",
       "annual": "Annual"
+    },
+    "PerformanceReport": {
+      "yearTitle": "Performance Report {year}"
+    },
+    "DocumentAnnouncement": {
+      "yearTitle": "Publications {year}"
+    },
+    "GoodCorporate": {
+      "documentsTitle": "Good Corporate Governance Documents"
+    },
+    "SetExchangeAnnouncement": {
+      "yearTitle": "Year {year}"
+    },
+    "Activity": {
+      "yearTitle": "IR Activities {year}"
     }
   }
 }

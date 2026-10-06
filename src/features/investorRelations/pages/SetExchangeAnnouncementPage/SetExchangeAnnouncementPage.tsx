@@ -4,8 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Menu } from '@/components/Menu'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { SetAnnouncementAccordion } from '@/features/investorRelations/pages/SetExchangeAnnouncementPage/components/SetAnnouncementAccordion'
 import { useRouter } from '@/libs/intl/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
@@ -18,12 +17,6 @@ export function SetExchangeAnnouncementPage({
   useRouter()
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!data) {
-    return <div>No data</div>
-  }
-
-  const group = (data.story.content.body[0].group as GroupStoryblok[]) || []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -42,10 +35,7 @@ export function SetExchangeAnnouncementPage({
               {tMenu('investorRelations.SetExchangeAnnouncement')}
             </h1>
 
-            <GroupAccordionTabs
-              pageKey='set-exchange-announcement'
-              group={group}
-            />
+            <SetAnnouncementAccordion data={data} />
           </section>
         </Animation>
       </AnimatePresence>

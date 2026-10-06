@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { GoodCorporatePage } from '@/features/investorRelations/pages/GoodCorporatePage/GoodCorporatePage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getCorporateGovernance } from '@/libs/strapi/corporateGovernance'
 import { getTranslations } from 'next-intl/server'
 
 export default async function GoodCorporate({
@@ -12,14 +9,9 @@ export default async function GoodCorporate({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/b2c20980-2a9d-4536-b06d-5f299c26314e',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.GOOD_CORPORATE
-  )
-  return <GoodCorporatePage data={response} />
+  const response = await getCorporateGovernance(locale)
+
+  return <GoodCorporatePage data={response.data} />
 }
 
 export async function generateMetadata({

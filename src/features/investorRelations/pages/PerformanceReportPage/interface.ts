@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { OperatingResult } from '@/types/OperatingResult'
 
 export interface PerformanceReportPageProps {
-  performanceReportData: StoryblokStoryResponse
+  performanceReportData: OperatingResult[]
 }

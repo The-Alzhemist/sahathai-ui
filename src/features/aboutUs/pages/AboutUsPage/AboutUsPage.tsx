@@ -14,7 +14,15 @@ import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 import { useNavigationTick } from '@/context/NavigationTickContext'
 
-export function AboutUsPage({ active, boardData }: AboutPageProps) {
+export function AboutUsPage({
+  active,
+  boardData,
+  executiveData,
+  committeeData,
+  companyHistoryData,
+  shareholdingStructureData,
+  governanceStructureData,
+}: AboutPageProps) {
   const { tick } = useNavigationTick()
 
   return (
@@ -27,16 +35,20 @@ export function AboutUsPage({ active, boardData }: AboutPageProps) {
           {active === AboutUsTabEnum.VISION_MISSION ? (
             <VisionMissionValues />
           ) : active === AboutUsTabEnum.OUT_COMMITMENT_SUCCESS ? (
-            <CommitmentSuccess />
+            <CommitmentSuccess data={companyHistoryData} />
           ) : active === AboutUsTabEnum.BOARD_DIRECTORS_EXE ? (
-            <BoardAndExecutives boardData={boardData} />
+            <BoardAndExecutives
+              boardData={boardData}
+              executiveData={executiveData}
+              committeeData={committeeData}
+            />
           ) : active === AboutUsTabEnum.CORPORATE_GROUP_STRUCTURE ? (
             <CorporateGroupOrganizationalStructure>
-              <CorporateGroup />
+              <CorporateGroup data={shareholdingStructureData} />
             </CorporateGroupOrganizationalStructure>
           ) : active === AboutUsTabEnum.ORGANIZATIONAL_STRUCTURE ? (
             <CorporateGroupOrganizationalStructure>
-              <OrganizationalStructure />
+              <OrganizationalStructure data={governanceStructureData} />
             </CorporateGroupOrganizationalStructure>
           ) : null}
         </Animation>

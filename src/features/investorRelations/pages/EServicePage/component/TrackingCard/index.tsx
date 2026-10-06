@@ -23,14 +23,8 @@ export function TrackingCard({ title, imageUrl, link }: TrackingCardProps) {
 
         <div className='py-[22px] px-[30px]  relative'>
           <h3 className='text-navy headline-6 !leading-[20px] flex flex-wrap items-center whitespace-nowrap !text-sm'>
-            {title.textTH ? title.textTH : title.textEN}
+            {title}
           </h3>
-
-          {title.textEN && (
-            <h4 className='text-navy headline-6 !leading-[20px] flex flex-wrap items-center whitespace-nowrap !text-sm'>
-              ({title.textEN})
-            </h4>
-          )}
         </div>
       </div>
     </Link>

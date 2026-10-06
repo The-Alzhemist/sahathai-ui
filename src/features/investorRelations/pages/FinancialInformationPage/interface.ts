@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { FinancialInfo } from '@/types/FinancialInfo'
 
 export interface FinancialInformationPageProps {
-  financialInformationData: StoryblokStoryResponse
+  financialInformationData: FinancialInfo[]
 }

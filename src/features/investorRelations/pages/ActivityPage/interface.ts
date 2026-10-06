@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { InvestorActivity } from '@/types/InvestorActivity'
 
 export interface ActivityPageProps {
-  data: StoryblokStoryResponse
+  data: InvestorActivity[]
 }

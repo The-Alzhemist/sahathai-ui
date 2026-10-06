@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { SetExchangeAnnouncementPage } from '@/features/investorRelations/pages/SetExchangeAnnouncementPage/SetExchangeAnnouncementPage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getSetAnnouncements } from '@/libs/strapi/setAnnouncement'
 import { getTranslations } from 'next-intl/server'
 
 export default async function SetExchangeAnnouncement({
@@ -12,14 +9,9 @@ export default async function SetExchangeAnnouncement({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/a7763650-2514-4a2d-916a-c21512aea1a5',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.SET_EXCHANGE_ANNOUNCEMENT
-  )
-  return <SetExchangeAnnouncementPage data={response} />
+  const response = await getSetAnnouncements(locale)
+
+  return <SetExchangeAnnouncementPage data={response.data} />
 }
 
 export async function generateMetadata({

@@ -20,6 +20,7 @@ import { useNavigationTick } from '@/context/NavigationTickContext'
 
 export function InvestorInformationPage({
   stockData,
+  annualReportData,
 }: InvestorInformationPageProps) {
   const { tick } = useNavigationTick()
 
@@ -36,7 +37,10 @@ export function InvestorInformationPage({
           <section className=' w-full  mx-auto   '>
             <section className='w-full space-y-[112px] '>
               <StockMarketInformation stockData={stockData} />
-              <FinancialReports />
+              <FinancialReports
+                data={annualReportData}
+                showBackground
+              />
 
               <Background className='!my-0'>
                 <div className='flex flex-col gap-y-10 bg-modellBgDark/60 py-[100px] px-5'>

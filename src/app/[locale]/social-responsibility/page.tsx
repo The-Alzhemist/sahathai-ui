@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server'
 
 import React from 'react'
-import { fetchAllBlog } from '@/libs/storyblok/blogQuery'
-
-import { RevalidateTag } from '@/enums/CacheEnum'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { getArticles } from '@/libs/strapi/article'
+import { getSustainability } from '@/libs/strapi/sustainability'
 import SocialResponsibilityComponent from '@/components/SocialResponsibilityComponent/SocialResponsibilityComponent'
 
 export default async function socialResponsibility({
@@ -18,36 +18,26 @@ export default async function socialResponsibility({
   const pageParam = Number(searchParams.page)
   const page = Number.isInteger(pageParam) && pageParam > 0 ? pageParam : 1
 
-  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  //  fetching data
-  const { stories, total } = await fetchAllBlog({
-    page,
-    perPage,
-    lang: locale,
-    version: 'published',
-    search,
-    startsWith: 'social-responsibility/',
-    tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
-  })
-
-  // const latestBlog = await fetchLastBlog({
-  //   lang: locale,
-  //   startsWith: 'social-responsibility/',
-  //   tag: RevalidateTag.SOCIAL_RESPONSIBILITY,
-  // })
-
-  const totalPages = Math.ceil(total / perPage)
+  const [data, sustainabilityResponse] = await Promise.all([
+    getArticles({
+      locale,
+      type: ArticleEnum.SocialResponsibility,
+      page,
+      perPage: 9,
+    }),
+    getSustainability(locale),
+  ])
 
   return (
     <main>
       <SocialResponsibilityComponent
-        stories={stories}
-        locale={locale}
         page={page}
-        totalPages={totalPages}
+        totalPages={data.meta.pagination.pageCount}
         search={search}
+        data={data.data}
+        sustainability={sustainabilityResponse.data}
       />
     </main>
   )

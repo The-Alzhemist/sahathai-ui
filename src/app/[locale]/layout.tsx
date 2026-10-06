@@ -12,13 +12,11 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import StoryblokProvider from '@/components/StoryBokProvider'
 
 import CookieConsentFloatingBar from '@/components/CookieConsentFloatingBar/CookieConsentFloatingBar'
 import { ScrollVisibleProvider } from '@/context/ScrollVisibleContext'
 import { NavigationTickProvider } from '@/context/NavigationTickContext'
 
-import '@/libs/storyblok/init'
 import { BannerPopup } from '@/components/BannerPopup/BannerPopup'
 import ScrollToTopButton from '@/components/ScrollToTop/ScrollToTop'
 
@@ -40,33 +38,31 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <StoryblokProvider>
-      <html lang={locale}>
-        <head>
-          <link rel='icon' href='/favicon.ico' sizes='any' />
-          <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1.0, user-scalable=no'
-          />
-        </head>
-        <body>
-          <NextIntlClientProvider messages={messages}>
-            <ScrollVisibleProvider>
-              <NavigationTickProvider>
-                <Header />
+    <html lang={locale}>
+      <head>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, user-scalable=no'
+        />
+      </head>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <ScrollVisibleProvider>
+            <NavigationTickProvider>
+              <Header />
 
-                {children}
-                <Footer />
-                <BannerPopup locale={locale} />
-                <ToastContainer />
-                <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
-                <CookieConsentFloatingBar />
-                <ScrollToTopButton />
-              </NavigationTickProvider>
-            </ScrollVisibleProvider>
-          </NextIntlClientProvider>
-        </body>
-      </html>
-    </StoryblokProvider>
+              {children}
+              <Footer />
+              <BannerPopup locale={locale} />
+              <ToastContainer />
+              <GoogleTagManager gtmId={process.env.GTM_STAGING!} />
+              <CookieConsentFloatingBar />
+              <ScrollToTopButton />
+            </NavigationTickProvider>
+          </ScrollVisibleProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   )
 }

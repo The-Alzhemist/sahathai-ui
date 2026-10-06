@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/code-of-conduct',
     '/investor-information/share-holder-meeting',
     '/investor-information/financial-information',
+    '/investor-information/annual-report',
     '/investor-information/performance-report',
     '/investor-information/document-announcement',
     '/investor-information/good-corporate',

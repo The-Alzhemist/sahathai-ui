@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { EServicePage } from '@/features/investorRelations/pages/EServicePage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getEServices } from '@/libs/strapi/eService'
 import { getTranslations } from 'next-intl/server'
 
 export default async function EService({
@@ -12,15 +9,9 @@ export default async function EService({
 }) {
   const locale = params.locale
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'e-service/e-service-list',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.ESERVICE
-  )
+  const response = await getEServices(locale)
 
-  return <EServicePage data={response} />
+  return <EServicePage data={response.data} />
 }
 
 export async function generateMetadata({

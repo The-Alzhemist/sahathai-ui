@@ -1,10 +1,17 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { DownloadButton } from '@/components/DownloadButton'
-import { oneReportInformationList } from '@/features/investorRelations/components/OneReportTable/oneReportInformationList'
+import { getStrapiImageUrl } from '@/libs/util'
+import { AnnualReport } from '@/types/AnnualReport'
+import { LocaleEnum } from '@/enums/LocaleEnum'
 
-export function OneReportTable() {
+// CMS stores the Buddhist year; tolerate Gregorian values too.
+const toBuddhistYear = (year: number) => (year > 2400 ? year : year + 543)
+
+export function OneReportTable({ data }: { data: AnnualReport[] }) {
   const common = useTranslations('common')
   const t = useTranslations('InvestorInformationPage.OneReportTable')
+  // Thai site shows the Buddhist year first; English/Chinese show Gregorian first.
+  const isThai = useLocale() === LocaleEnum.TH
 
   return (
     <div
@@ -33,23 +40,29 @@ export function OneReportTable() {
         {/* Body */}
         <div className='rounded-[20px] border border-[#CFE6FF] bg-[#F9FCFF] p-4 md:p-5'>
           <div className='divide-y divide-[#E6F2FF]'>
-            {oneReportInformationList.map((item, idx) => (
+            {data.map(item => (
               <div
-                key={idx}
+                key={item.id}
                 className='grid grid-cols-[120px,1fr,1fr,1fr] md:grid-cols-[160px,1fr,1fr,1fr] gap-x-4 py-5 items-center'
               >
                 <div>
                   <div className='small-medium text-black-2'>
-                    {item.year + 543}
+                    {isThai
+                      ? toBuddhistYear(item.year)
+                      : toBuddhistYear(item.year) - 543}
                   </div>
-                  <div className='small-reg text-dark-40'>{item.year}</div>
+                  <div className='small-reg text-dark-40'>
+                    {isThai
+                      ? toBuddhistYear(item.year) - 543
+                      : toBuddhistYear(item.year)}
+                  </div>
                 </div>
 
                 <div className='flex justify-start md:justify-center'>
-                  {item.annualReportUrl ? (
+                  {item.annualReport?.file ? (
                     <DownloadButton
                       className='md:mx-auto'
-                      href={item.annualReportUrl}
+                      href={getStrapiImageUrl(item.annualReport.file.url)}
                     />
                   ) : (
                     <span>-</span>
@@ -57,10 +70,10 @@ export function OneReportTable() {
                 </div>
 
                 <div className='flex justify-start md:justify-center'>
-                  {item.report56Url ? (
+                  {item.report56_1?.file ? (
                     <DownloadButton
                       className='md:mx-auto'
-                      href={item.report56Url}
+                      href={getStrapiImageUrl(item.report56_1.file.url)}
                     />
                   ) : (
                     <span>-</span>
@@ -68,8 +81,10 @@ export function OneReportTable() {
                 </div>
 
                 <div className='flex justify-end'>
-                  {item.oneReportUrl ? (
-                    <DownloadButton href={item.oneReportUrl} />
+                  {item.oneReport?.file ? (
+                    <DownloadButton
+                      href={getStrapiImageUrl(item.oneReport.file.url)}
+                    />
                   ) : (
                     <span>-</span>
                   )}

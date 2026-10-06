@@ -5,8 +5,8 @@ Landing website ของ Sahathai Terminal สร้างด้วย **Next.j
 ## Features
 
 - รองรับหลายภาษา `th`, `en`, `cn`
-- Blog, News, Press Releases, investor relations สามารถอัพเดทเนื้อหาใน Storyblok ได้
-- Storyblok webhook สำหรับ revalidate cache หลัง publish content
+- Blog, News, Press Releases, investor relations สามารถอัพเดทเนื้อหาใน Strapi ได้
+- Strapi webhook สำหรับ revalidate cache หลัง publish content
 - Contact form handle การส่ง email โดยใช้ Formspree/Formik
 - SEO metadata และ Open Graph รายหน้าหลัก
 - Styling ด้วย Tailwind CSS และ global CSS
@@ -22,8 +22,7 @@ Landing website ของ Sahathai Terminal สร้างด้วย **Next.j
 - TypeScript `5`
 - Tailwind CSS `3.4.1`
 - next-intl `3.15.0`
-- Storyblok React SDK `4.2.0`
-- Storyblok CLI / storyblok-generate-ts
+- Strapi (headless CMS, REST API)
 - Formspree
 - Formik / Yup
 - Framer Motion
@@ -43,7 +42,7 @@ src/
   enums/        shared enums เช่น locale และ cache tags
   features/     page-level feature modules
   hooks/        custom React hooks
-  libs/         Storyblok และ next-intl integrations
+  libs/         Strapi และ next-intl integrations
   types/        shared/generated TypeScript types
   utils/        utility functions
 messages/       translation files แยกตาม namespace และ locale
@@ -71,8 +70,6 @@ http://localhost:3000
 | `npm run build` | Build production |
 | `npm run start` | Run production server |
 | `npm run lint` | Run Next.js ESLint |
-| `npm run pull-storyblok-components` | Pull Storyblok component schema |
-| `npm run generate-sb-types` | Generate TypeScript types จาก Storyblok schema |
 
 ## Environment Variables
 ดู env ได้ที่ slack
@@ -124,36 +121,33 @@ http://localhost:3000
 - `/[locale]/privacy-policy`
 - `/[locale]/code-of-conduct`
 
-## Storyblok Content
+## Strapi Content
 
-โปรเจ็คใช้ Storyblok เป็น CMS สำหรับ content แบบ dynamic เช่น blog, news, press releases, banner popup, social responsibility และข้อมูลนักลงทุน(investor-relation)
+โปรเจ็คใช้ Strapi เป็น CMS สำหรับ content แบบ dynamic เช่น article (blog/news/press releases), banner popup, sustainability และข้อมูลนักลงทุน (investor-relation)
 
 ไฟล์หลักที่เกี่ยวข้อง:
 
-- `src/libs/storyblok/init.ts`
-- `src/libs/storyblok.ts`
-- `src/libs/storyblok/client.ts`
-- `src/components/Storyblok/`
-- `src/app/api/storyblok/revalidate/route.ts`
+- `src/libs/strapi/` fetch function ของแต่ละ content type
+- `src/libs/strapi/fetchStrapi.ts` map locale `cn` เป็น `zh` และ fallback เป็น `th` เมื่อไม่มีข้อมูล
+- `src/enums/StrapiCacheEnum.ts` cache tags
+- `src/components/StrapiBlocks/` render rich text (Strapi Blocks JSON)
+- `src/app/api/strapi/revalidate/route.ts`
 
-Storyblok components ที่ register ไว้:
+Environment variables ที่เกี่ยวข้อง:
 
-- `page`
-- `eventNewsDetailCard`
-- `showOneImage`
-- `showTwoImage`
-- `showThreeImage`
-- `downloadLink`
+- `NEXT_PUBLIC_STRAPI_BASE_URL` (ต้องตั้งก่อน build)
+- `STRAPI_WEBHOOK_SECRET`
 
 ## Revalidation
 
-Webhook endpoint สำหรับ Storyblok:
+Webhook endpoint สำหรับ Strapi:
 
 ```text
-POST /api/storyblok/revalidate?secret=<secret>
+POST /api/strapi/revalidate
+Header: x-webhook-secret: <STRAPI_WEBHOOK_SECRET>
 ```
 
-ระบบจะอ่าน `full_slug` จาก request body แล้ว revalidate cache tag ที่เกี่ยวข้อง เช่น blog, news, press releases, e-service, banner popup, board/committee, investor information และ social responsibility
+ระบบจะอ่าน `uid` และ `event` จาก request body แล้ว revalidate cache tag ของ content type นั้น (content ที่มี draft/publish ตอบเฉพาะ `entry.publish` / `entry.unpublish`, popup banner ตอบ `entry.create` / `entry.update` / `entry.delete`)
 
 ค่า revalidate หลักปัจจุบันคือ 7 วัน หรือ `604800` วินาที
 
@@ -197,7 +191,7 @@ Run production server:
 npm run start
 ```
 
-ก่อน deploy ควรตรวจสอบว่า environment variables ถูกตั้งค่าครบ และ Storyblok webhook ชี้มายัง environment ที่ต้องการแล้ว
+ก่อน deploy ควรตรวจสอบว่า environment variables ถูกตั้งค่าครบ และ Strapi webhook ชี้มายัง environment ที่ต้องการแล้ว
 
 
 ## Google Tag and GA4 

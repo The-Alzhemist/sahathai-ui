@@ -25,11 +25,5 @@ jobs:
               run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
             - name: Build
               run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-              env:
-                  STORYBLOK_TOKEN: ${{ secrets.STORYBLOK_TOKEN }}
-                  NEXT_PUBLIC_FORM_SPREE_ID: "mbljnjjo"
-                  GTM_STAGING: "GTM-PJ6XCKHT"
-                  STORYBLOK_BASE_URL: "https://api.storyblok.com/v2/cdn"
-                  DOMAIN_NAME: "https://sahathai-ui.vercel.app"
             - name: Deploy
               run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

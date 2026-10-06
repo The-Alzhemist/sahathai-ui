@@ -241,6 +241,25 @@
             }
           ]
         }
+      },
+      "PeopleModal": {
+        "age": "อายุ",
+        "ageValue": "{age} ปี",
+        "education": "การศึกษา",
+        "trainingHistory": "ประวัติการอบรม",
+        "directorType": "ประเภทกรรมการ",
+        "appointmentDates": "วันที่ได้รับการแต่งตั้ง",
+        "tenureDuration": "จำนวนปีที่เป็นกรรมการ",
+        "workExperience5Years": "ประสบการณ์ทำงานในระยะเวลา 5 ปี",
+        "positionsInListedCompanies": "การดำรงตำแหน่งในบริษัทจดทะเบียน",
+        "positionsInRelatedCompanies": "การดำรงตำแหน่งในบริษัทที่เกี่ยวข้อง",
+        "positionsInOtherCompanies": "การดำรงตำแหน่งในบริษัทอื่น",
+        "positionsInOtherOrganizations": "การดำรงตำแหน่งในองค์กรอื่น",
+        "pastPositions": "การดำรงตำแหน่งในอดีต",
+        "shareholding": "การถือหุ้นของบริษัทฯ ทั้งทางตรงและทางอ้อม",
+        "penaltyHistory5Years": "ข้อมูลประวัติการถูกลงโทษของกรรมการ ผู้บริหาร และผู้มีอำนาจควบคุมในช่วง 5 ปีที่ผ่านมา",
+        "familyRelationships": "ความสัมพันธ์ทางครอบครัวระหว่างผู้บริหาร",
+        "remarks": "หมายเหตุ"
       }
     },
     "CorporateGroupOrganizationalStructure": {

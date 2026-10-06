@@ -1,9 +1,9 @@
-import { BoardAndCommitteeStoryblok } from '@/types/storyblok'
+import { Person } from '@/types/Person'
 
 export interface BoardCardProps {
   imageUrl?: string
   imageClassName?: string
   name: string
-  board?: BoardAndCommitteeStoryblok
+  board?: Person
   onClick: () => void
 }

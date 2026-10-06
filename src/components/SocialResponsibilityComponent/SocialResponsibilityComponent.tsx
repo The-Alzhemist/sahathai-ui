@@ -11,18 +11,22 @@ import { Link, useRouter } from '@/libs/intl/navigation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
 import { useNavigationTick } from '@/context/NavigationTickContext'
+import { ArticleCardDataType } from '@/types/ArticleCardDataType'
+import { Sustainability } from '@/types/Sustainability'
+import { getStrapiImageUrl } from '@/libs/util'
 
 export default function SocialResponsibilityComponent({
-  stories,
+  data,
   page,
   totalPages,
   search,
+  sustainability,
 }: {
-  stories: any
-  locale: string
+  data: ArticleCardDataType[]
   page: number
   totalPages: number
   search?: string
+  sustainability: Sustainability
 }) {
   useRouter()
   const t = useTranslations('NewsPage')
@@ -30,58 +34,61 @@ export default function SocialResponsibilityComponent({
 
   const { tick } = useNavigationTick()
 
+  const bannerImageUrl = sustainability.bannerImage
+    ? getStrapiImageUrl(sustainability.bannerImage.url)
+    : '/social-responsibility/social-responsibility-3x.webp'
+
   return (
     <div>
       <Animation key={tick}>
         <Menu />
 
         <BannerImage
-          mobileImageSrc='/social-responsibility/social-responsibility-3x.webp'
-          imageSrc='/social-responsibility/social-responsibility-3x.webp'
+          mobileImageSrc={bannerImageUrl}
+          imageSrc={bannerImageUrl}
           alt='social-responsibility-banner'
           imageClassName='md:rounded-b-none'
         >
           <div className='mx-auto flex max-w-[1400px] flex-col items-center justify-center text-white'>
             <p className='max-w-[800px] text-center text-md font-normal leading-[1.25]  md:text-2xl md:leading-[1.35] mb-5'>
-              {tSocial('Banner.Title')}
+              {sustainability.bannerText || tSocial('Banner.Title')}
             </p>
 
-            <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
-              <Link
-                href='https://a.storyblok.com/f/316761/x/2eeaaaa42d/csr-policy.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='font-normal '
-              >
-                {tSocial('Banner.download')}
-              </Link>
-            </button>
+            {sustainability.bannerFile && (
+              <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
+                <Link
+                  href={getStrapiImageUrl(sustainability.bannerFile.url)}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-normal '
+                >
+                  {tSocial('Banner.download')}
+                </Link>
+              </button>
+            )}
           </div>
         </BannerImage>
 
-        <SustainabilityManagementContent />
+        <SustainabilityManagementContent data={sustainability} />
 
-        {/* All Blog */}
-        <section
-          id='press-releases'
-          className='bg-white pt-[70px] min-h-[600px]'
-        >
-          <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[600px]'>
+        <section id='social-responsibility' className='bg-white pt-[70px]'>
+          <div className='max-w-[1100px] mx-auto p-6 flex flex-col min-h-[calc(100vh-240px)]'>
             <h2 className='headline-2 text-blue-400 text-center mb-7'>
               {t('allBlog')}
             </h2>
 
-            {/* Blog list */}
             <div className='flex-1 flex justify-center items-center'>
-              {stories.length ? (
+              {data.length ? (
                 <div className='flex flex-wrap gap-5 justify-center'>
-                  {stories.map((s: any) => (
+                  {data.map((s: ArticleCardDataType) => (
                     <BlogCard
-                      key={s.content.body[0]._uid}
-                      title={s.content.body[0].newsTitle}
-                      content={s.content}
-                      createdAt={s.created_at ?? ''}
+                      key={s.documentId}
+                      title={s.title}
+                      description={s.shortDescription}
+                      createdAt={s.publishDate ?? ''}
                       slug={s.slug}
+                      publishDate={s.publishDate}
+                      imageUrl={s.cover.url}
                       page='social-responsibility'
                     />
                   ))}
@@ -91,28 +98,17 @@ export default function SocialResponsibilityComponent({
               )}
             </div>
 
-            {/* Pagination */}
-            <div className='mt-auto flex justify-center mb-[90px]'>
-              <Pagination page={page} totalPages={totalPages} search={search} />
-            </div>
+            {data.length > 0 && (
+              <div className='mt-auto flex justify-center mb-[90px]'>
+                <Pagination
+                  page={page}
+                  totalPages={totalPages}
+                  search={search}
+                />
+              </div>
+            )}
           </div>
         </section>
-
-        {/* Latest Blog */}
-        {/*<section*/}
-        {/*  id='latestNews'*/}
-        {/*  className='flex flex-col items-center justify-center pt-14 pb-[100px] px-6 min-h-[500px]'*/}
-        {/*>*/}
-        {/*  <h2 className='headline-2 text-blue-400 text-center mb-7'>*/}
-        {/*    {t('latestBlog')}*/}
-        {/*  </h2>*/}
-
-        {/*  <LatestBlogCard*/}
-        {/*    blog={latestBlog}*/}
-        {/*    locale={locale}*/}
-        {/*    page='social-responsibility'*/}
-        {/*  />*/}
-        {/*</section>*/}
       </Animation>
     </div>
   )

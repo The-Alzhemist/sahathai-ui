@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
 
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { getArticles } from '@/libs/strapi/article'
 import BlogComponent from '@/components/BlogComponent/BlogComponent'
-import { RevalidateTag } from '@/enums/CacheEnum'
 
 export default async function Blog({
   params,
@@ -17,36 +17,22 @@ export default async function Blog({
   const pageParam = Number(searchParams.page)
   const page = Number.isInteger(pageParam) && pageParam > 0 ? pageParam : 1
 
-  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  const { stories, total } = await fetchAllBlog({
+  const data = await getArticles({
+    locale,
+    type: ArticleEnum.Article,
     page,
-    perPage,
-    lang: locale,
-    version: 'published',
-    search,
-    startsWith: 'blog/',
-    tag: RevalidateTag.BLOG,
+    perPage: 9,
   })
-
-  const latestBlog = await fetchLastBlog({
-    lang: locale,
-    startsWith: 'blog/',
-    tag: RevalidateTag.BLOG,
-  })
-
-  const totalPages = Math.ceil(total / perPage)
 
   return (
     <main>
       <BlogComponent
-        stories={stories}
-        latestBlog={latestBlog}
-        locale={locale}
         page={page}
-        totalPages={totalPages}
+        totalPages={data.meta.pagination.pageCount}
         search={search}
+        data={data.data}
       />
     </main>
   )

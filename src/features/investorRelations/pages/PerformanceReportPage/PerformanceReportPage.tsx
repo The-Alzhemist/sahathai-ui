@@ -6,8 +6,7 @@ import { Menu } from '@/components/Menu'
 import { PerformanceReportPageProps } from '@/features/investorRelations/pages/PerformanceReportPage/interface'
 
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
-import { GroupStoryblok } from '@/types/storyblok'
-import GroupAccordionTabs from '@/features/investorRelations/components/GroupAccordionTabs/GroupAccordionTabs'
+import { OperatingResultAccordion } from '@/features/investorRelations/pages/PerformanceReportPage/components/OperatingResultAccordion'
 import { useRouter } from '@/libs/intl/navigation'
 
 import { AnimatePresence } from 'framer-motion'
@@ -21,14 +20,6 @@ export function PerformanceReportPage({
   useRouter()
   const tMenu = useTranslations('Menu')
   const { tick } = useNavigationTick()
-
-  if (!performanceReportData) {
-    return <div>No data</div>
-  }
-
-  const group =
-    (performanceReportData.story.content.body[0].group as GroupStoryblok[]) ||
-    []
 
   return (
     <main className='pb-[176px] bg-white'>
@@ -47,9 +38,7 @@ export function PerformanceReportPage({
               {tMenu('investorRelations.PerformanceReport')}
             </h1>
 
-            <div className='space-y-4'>
-              <GroupAccordionTabs group={group} pageKey='performance-report' />
-            </div>
+            <OperatingResultAccordion data={performanceReportData} />
           </section>
         </Animation>
       </AnimatePresence>

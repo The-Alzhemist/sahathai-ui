@@ -1,5 +1,5 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { EService } from '@/types/EService'
 
 export interface TrackingServiceProps {
-  data: StoryblokStoryResponse
+  data: EService[]
 }

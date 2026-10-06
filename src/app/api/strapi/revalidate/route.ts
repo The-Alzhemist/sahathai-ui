@@ -1,0 +1,334 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { revalidateTag } from 'next/cache'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { StrapiRevalidateTag } from '@/enums/StrapiCacheEnum'
+import { ARTICLE_REVALIDATE_TAG } from '@/libs/strapi/article'
+
+// Strapi webhook payload shape (confirmed from Strapi's source, not docs):
+// {
+//   event: 'entry.publish',
+//   createdAt: '2026-09-30T10:00:00.000Z',
+//   model: 'article',
+//   uid: 'api::article.article',
+//   entry: { id: 4, slug: 'my-article', locale: 'th', type: 'press_release', ... }
+// }
+//
+// Content-types with draft/publish only go live on entry.publish/entry.unpublish.
+// Content-types with draftAndPublish: false (e.g. popup-banner) have no publish
+// event at all — entry.create/entry.update/entry.delete are what matter there.
+
+const DRAFT_PUBLISH_EVENTS = ['entry.publish', 'entry.unpublish']
+const NO_DRAFT_PUBLISH_EVENTS = ['entry.create', 'entry.update', 'entry.delete']
+
+export async function POST(req: NextRequest) {
+  const secret = req.headers.get('x-webhook-secret')
+
+  if (secret !== process.env.STRAPI_WEBHOOK_SECRET) {
+    console.warn('------ Strapi webhook: secret mismatch ------', {
+      headerPresent: secret !== null,
+    })
+    return NextResponse.json(
+      { ok: false, message: 'Invalid secret' },
+      { status: 401 }
+    )
+  }
+
+  let body
+  try {
+    body = await req.json()
+  } catch {
+    return NextResponse.json(
+      { ok: false, message: 'Invalid JSON body' },
+      { status: 400 }
+    )
+  }
+
+  const event: string | undefined = body.event
+  const uid: string | undefined = body.uid
+  const entry = body.entry
+
+  // Log identifiers only: webhooks fire for every content-type and the
+  // entries can contain personal data.
+  console.log('Strapi webhook:', { event, uid, id: entry?.id, locale: entry?.locale })
+
+  if (uid === 'api::person.person') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.Person} ------`)
+    revalidateTag(StrapiRevalidateTag.Person)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::committee.committee') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.Committee} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.Committee)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::popup-banner.popup-banner') {
+    if (!event || !NO_DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.PopupBanner} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.PopupBanner)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::e-service.e-service') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.EService} ------`)
+    revalidateTag(StrapiRevalidateTag.EService)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::shareholder-meeting.shareholder-meeting') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.ShareHolderMeeting} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.ShareHolderMeeting)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::sustainability.sustainability') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.Sustainability} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.Sustainability)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::governance-structure.governance-structure') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.GovernanceStructure} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.GovernanceStructure)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::shareholding-structure.shareholding-structure') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.ShareholdingStructure} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.ShareholdingStructure)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::company-history.company-history') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.CompanyHistory} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.CompanyHistory)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::quality-achievement.quality-achievement') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.QualityAchievement} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.QualityAchievement)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::service.service') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.Service} ------`)
+    revalidateTag(StrapiRevalidateTag.Service)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::investor-activity.investor-activity') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.InvestorActivity} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.InvestorActivity)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::set-announcement.set-announcement') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.SetAnnouncement} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.SetAnnouncement)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::policy.policy') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(`------ Revalidate tag: ${StrapiRevalidateTag.Policy} ------`)
+    revalidateTag(StrapiRevalidateTag.Policy)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::corporate-governance.corporate-governance') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.CorporateGovernance} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.CorporateGovernance)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::published-document.published-document') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.PublishedDocument} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.PublishedDocument)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::operating-result.operating-result') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.OperatingResult} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.OperatingResult)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::annual-report.annual-report') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.AnnualReport} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.AnnualReport)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::financial-info.financial-info') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(
+      `------ Revalidate tag: ${StrapiRevalidateTag.FinancialInfo} ------`
+    )
+    revalidateTag(StrapiRevalidateTag.FinancialInfo)
+
+    return NextResponse.json({ ok: true, uid, event, dateResponse: new Date() })
+  }
+
+  if (uid === 'api::article.article') {
+    if (!event || !DRAFT_PUBLISH_EVENTS.includes(event)) {
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    const type: ArticleEnum | undefined = entry?.type
+    const slug: string | undefined = entry?.slug
+
+    if (!type || !slug) {
+      console.log('Missing entry.type or entry.slug in request body')
+      return NextResponse.json(
+        { ok: false, message: 'Missing entry.type or entry.slug' },
+        { status: 400 }
+      )
+    }
+
+    const tag = ARTICLE_REVALIDATE_TAG[type]
+
+    if (!tag) {
+      console.warn('Ignoring unknown article type:', type)
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    console.log(`------ Revalidate tag: ${tag} ------`)
+    revalidateTag(tag)
+    revalidateTag(`article:${slug}`)
+
+    return NextResponse.json({
+      ok: true,
+      uid,
+      event,
+      slug,
+      type,
+      dateResponse: new Date(),
+    })
+  }
+
+  // Strapi webhooks fire for every content-type, so anything we don't
+  // handle must be acknowledged with a 2xx, never an error.
+  console.log('Ignoring unhandled uid:', uid)
+  return NextResponse.json({ ok: true, skipped: true })
+}

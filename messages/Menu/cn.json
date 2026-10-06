@@ -27,11 +27,11 @@
       "groundContainerTransportationServices": "陆地集装箱运输服务",
       "containerServices": "堆场与仓库服务"
     },
-    "news": {
-      "title": "新闻"
-    },
     "pressRelease": {
       "title": "新闻稿"
+    },
+    "companyNews": {
+      "title": "公司新闻"
     },
     "socialResponsibility": {
       "title": "可持续发展管理"
@@ -50,7 +50,8 @@
       "DocumentAnnouncement": "公开文件",
       "GoodCorporate": "良好公司治理",
       "Activity": "投资者关系活动",
-      "SetExchangeAnnouncement": "证交所公告"
+      "SetExchangeAnnouncement": "证交所公告",
+      "AnnualReport": "年度报告"
     }
   }
 }

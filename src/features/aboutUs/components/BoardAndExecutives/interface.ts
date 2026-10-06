@@ -1,5 +1,8 @@
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { Person } from '@/types/Person'
+import { Committee } from '@/types/Committee'
 
 export interface BoardAndExecutivesProps {
-  boardData: StoryblokStoryResponse
+  boardData: Person[]
+  executiveData: Person[]
+  committeeData: Committee[]
 }

@@ -241,6 +241,25 @@
             }
           ]
         }
+      },
+      "PeopleModal": {
+        "age": "年龄",
+        "ageValue": "{age} 岁",
+        "education": "教育背景",
+        "trainingHistory": "培训经历",
+        "directorType": "董事类型",
+        "appointmentDates": "任命日期",
+        "tenureDuration": "担任董事年数",
+        "workExperience5Years": "过去5年工作经验",
+        "positionsInListedCompanies": "在上市公司的任职情况",
+        "positionsInRelatedCompanies": "在关联公司的任职情况",
+        "positionsInOtherCompanies": "在其他公司的任职情况",
+        "positionsInOtherOrganizations": "在其他组织的任职情况",
+        "pastPositions": "过去任职情况",
+        "shareholding": "直接及间接持有本公司股份情况",
+        "penaltyHistory5Years": "过去5年董事、高管及有控制权人员的处罚记录",
+        "familyRelationships": "高管之间的家庭关系",
+        "remarks": "备注"
       }
     },
     "CorporateGroupOrganizationalStructure": {

@@ -1,8 +1,5 @@
-import { REVALIDATE_TIME } from '@/config/environtment'
-import { RevalidateTag } from '@/enums/CacheEnum'
 import { DocumentAnnouncementPage } from '@/features/investorRelations/pages/DocumentAnnouncementPage/DocumentAnnouncementPage'
-import { fetchStoryblokStory } from '@/libs/storyblok/accordionsQuery'
-import { StoryblokStoryResponse } from '@/libs/storyblok/types'
+import { getPublishedDocuments } from '@/libs/strapi/publishedDocument'
 import { getTranslations } from 'next-intl/server'
 
 export default async function DocumentAnnouncement({
@@ -12,15 +9,9 @@ export default async function DocumentAnnouncement({
 }) {
   const { locale } = params
 
-  const response: StoryblokStoryResponse = await fetchStoryblokStory(
-    'investor-relations/ed6b6179-86fc-473f-8188-81827cb9b1e8',
-    locale,
-    'published',
-    REVALIDATE_TIME,
-    RevalidateTag.DOCUMENT_ANNOUNCEMENT
-  )
+  const response = await getPublishedDocuments(locale)
 
-  return <DocumentAnnouncementPage data={response} />
+  return <DocumentAnnouncementPage data={response.data} />
 }
 
 export async function generateMetadata({

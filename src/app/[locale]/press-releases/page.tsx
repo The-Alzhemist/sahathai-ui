@@ -1,10 +1,9 @@
 import { getTranslations } from 'next-intl/server'
 
 import React from 'react'
-import { fetchAllBlog, fetchLastBlog } from '@/libs/storyblok/blogQuery'
-
-import { RevalidateTag } from '@/enums/CacheEnum'
-import PressReleaseComponent from '@/components/PressReleaseComponent/PressReleaseComponent'
+import { ArticleEnum } from '@/enums/ArticleEnum'
+import { getArticles } from '@/libs/strapi/article'
+import PressReleaseListComponent from '@/components/PressReleaseListComponent/PressReleaseListComponent'
 
 export default async function pressRelease({
   params,
@@ -18,37 +17,22 @@ export default async function pressRelease({
   const pageParam = Number(searchParams.page)
   const page = Number.isInteger(pageParam) && pageParam > 0 ? pageParam : 1
 
-  const perPage = 9
   const search = searchParams.search?.trim() || undefined
 
-  //  fetching data
-  const { stories, total } = await fetchAllBlog({
+  const data = await getArticles({
+    locale,
+    type: ArticleEnum.PressRelease,
     page,
-    perPage,
-    lang: locale,
-    version: 'published',
-    search,
-    startsWith: 'press-releases/',
-    tag: RevalidateTag.PRESS_RELEASE,
+    perPage: 9,
   })
-
-  const latestBlog = await fetchLastBlog({
-    lang: locale,
-    startsWith: 'press-releases/',
-    tag: RevalidateTag.PRESS_RELEASE,
-  })
-
-  const totalPages = Math.ceil(total / perPage)
 
   return (
     <main>
-      <PressReleaseComponent
-        stories={stories}
-        latestBlog={latestBlog}
-        locale={locale}
+      <PressReleaseListComponent
         page={page}
-        totalPages={totalPages}
+        totalPages={data.meta.pagination.pageCount}
         search={search}
+        data={data.data}
       />
     </main>
   )

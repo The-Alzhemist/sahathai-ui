@@ -144,15 +144,15 @@ export function useSubmenu() {
         ],
       },
       {
-        title: t('news.title'),
-        pathname: '/news',
+        title: t('pressRelease.title'),
+        pathname: '/press-releases',
         isExternalLink: false,
         isScroll: true,
         icon: <NewspaperIcon width='20' height='20' />,
       },
       {
-        title: t('pressRelease.title'),
-        pathname: '/press-releases',
+        title: t('companyNews.title'),
+        pathname: '/news',
         isExternalLink: false,
         isScroll: true,
         icon: <NewspaperIcon width='20' height='20' />,
@@ -201,6 +201,12 @@ export function useSubmenu() {
             isExternalLink: false,
             isScroll: true,
             pathname: `/investor-information/financial-information`,
+          },
+          {
+            title: t('investorRelations.AnnualReport'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/investor-information/annual-report`,
           },
           {
             title: t('investorRelations.PerformanceReport'),
