@@ -24,7 +24,7 @@ export async function getQualityAchievement(
       data: {
         id: 0,
         documentId: '',
-        description: '',
+        description: [],
         items: [],
         locale,
         publishedAt: '',

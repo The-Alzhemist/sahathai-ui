@@ -1,9 +1,10 @@
 import { MediaType } from './MediaType'
+import { RichTextNode } from './DescriptionType'
 
 export type GovernanceStructure = {
   id: number
   documentId: string
-  description: string
+  description: RichTextNode[]
   chartImage: MediaType | null
   locale: string
   publishedAt: string

@@ -1,4 +1,5 @@
 import { Line } from '@/components/Line'
+import { StrapiBlocks } from '@/components/StrapiBlocks'
 import { useTranslations } from 'next-intl'
 import { Animation } from '@/components/Animation'
 import Image from 'next/image'
@@ -18,9 +19,10 @@ export function OrganizationalStructure({
         {t('organizationalStructure.title')}
       </h2>
       <Line className='my-[8px]' />
-      <p className='mt-[20px] text-black-6 body-1 whitespace-pre-line'>
-        {data.description}
-      </p>
+      <StrapiBlocks
+        className='mt-[20px] text-black-6 body-1 space-y-3'
+        body={data.description}
+      />
 
       {data.chartImage && (
         <Animation className='w-full mt-[50px] shadow-8 rounded-[15px] overflow-hidden bg-white'>

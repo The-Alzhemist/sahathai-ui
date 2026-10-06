@@ -24,7 +24,7 @@ export async function getCompanyHistory(
       data: {
         id: 0,
         documentId: '',
-        description: '',
+        description: [],
         timeline: [],
         locale,
         publishedAt: '',

@@ -1,4 +1,5 @@
 import { MediaType } from './MediaType'
+import { RichTextNode } from './DescriptionType'
 
 export type QualityAchievementItem = {
   id: number
@@ -9,7 +10,7 @@ export type QualityAchievementItem = {
 export type QualityAchievement = {
   id: number
   documentId: string
-  description: string
+  description: RichTextNode[]
   items: QualityAchievementItem[]
   locale: string
   publishedAt: string

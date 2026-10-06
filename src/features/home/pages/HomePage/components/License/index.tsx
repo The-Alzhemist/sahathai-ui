@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
 import { Animation } from '@/components/Animation'
+import { StrapiBlocks } from '@/components/StrapiBlocks'
 import { getQualityAchievement } from '@/libs/strapi/qualityAchievement'
 import { getStrapiImageUrl } from '@/libs/util'
 import { HomePageProps } from '@/features/home/pages/HomePage/withHomePage'
@@ -31,9 +32,10 @@ export async function License({ params }: HomePageProps) {
       <h2 className='headline-2 text-navy text-center mb-[10px]'>
         {t('title')}
       </h2>
-      <p className='text-black-6 font-light text-sm text-center mb-[45px] max-w-[896px] mx-auto'>
-        {qualityAchievement.description}
-      </p>
+      <StrapiBlocks
+        className='text-black-6 font-light text-sm text-center mb-[45px] max-w-[896px] mx-auto space-y-2'
+        body={qualityAchievement.description}
+      />
       <Animation className='flex flex-wrap justify-center gap-[15px]'>
         {qualityAchievement.items.map(item => {
           const width = item.image

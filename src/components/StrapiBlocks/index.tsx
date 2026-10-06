@@ -112,9 +112,14 @@ export function StrapiBlocks({
   body,
   className,
 }: {
-  body: RichTextNode[]
+  body: RichTextNode[] | string
   className?: string
 }) {
+  // Tolerate a plain string while a field is still being migrated in the CMS.
+  if (typeof body === 'string') {
+    return <p className={`${className ?? ''} whitespace-pre-line`}>{body}</p>
+  }
+
   return (
     <div className={className ?? 'space-y-3'}>
       {body.map((node, index) => renderBlock(node, index))}

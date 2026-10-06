@@ -24,7 +24,7 @@ export async function getGovernanceStructure(
       data: {
         id: 0,
         documentId: '',
-        description: '',
+        description: [],
         chartImage: null,
         locale,
         publishedAt: '',

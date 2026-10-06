@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { StrapiBlocks } from '@/components/StrapiBlocks'
 import { getStrapiImageUrl } from '@/libs/util'
 import { CompanyHistoryTimelineItem } from '@/types/CompanyHistory'
 import { TimelineCard } from '../TimelineCard'
@@ -23,7 +24,7 @@ export function Timeline({ items }: { items: CompanyHistoryTimelineItem[] }) {
               alt=''
             />
           )}
-          <p className='font-light'>{item.description}</p>
+          <StrapiBlocks className='font-light space-y-2' body={item.description} />
         </TimelineCard>
       ))}
     </section>
