@@ -12,6 +12,10 @@ export const commaNumberFormat = (v: number) =>
 export const formatDateTime = (date: string | Date) =>
   format(new Date(date), 'yyyy-MM-dd HH:mm')
 
+// CMS links: absolute URLs are external sites; '/...' paths are pages on this
+// site that already include the locale.
+export const isExternalUrl = (url: string) => url.startsWith('http')
+
 export const getStrapiImageUrl = (imagePath: string) =>
   imagePath.startsWith('http')
     ? imagePath

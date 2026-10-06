@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
 
 import { DownloadButton } from '@/components/DownloadButton'
-import { getStrapiImageUrl } from '@/libs/util'
+import { getStrapiImageUrl, isExternalUrl } from '@/libs/util'
 import {
   PublishedDocument,
   PublishedDocumentQuarter,
@@ -37,7 +37,7 @@ function PublishedDocumentQuarterRow({
       {!quarter?.file && quarter?.url && (
         <Link
           href={quarter.url}
-          target='_blank'
+          target={isExternalUrl(quarter.url) ? '_blank' : undefined}
           className='mt-0.5 mx-3 min-w-[60px] h-fit block px-[19px] py-[4px] border border-blue-300 rounded-[10px] bg-blue-50 hover:scale-105 transition-all'
         >
           <Image

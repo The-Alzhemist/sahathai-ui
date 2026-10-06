@@ -1,14 +1,17 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { DownloadButton } from '@/components/DownloadButton'
 import { getStrapiImageUrl } from '@/libs/util'
 import { AnnualReport } from '@/types/AnnualReport'
+import { LocaleEnum } from '@/enums/LocaleEnum'
 
-// CMS stores the Gregorian year (Buddhist = year + 543); tolerate Buddhist values too.
+// CMS stores the Buddhist year; tolerate Gregorian values too.
 const toBuddhistYear = (year: number) => (year > 2400 ? year : year + 543)
 
 export function OneReportTable({ data }: { data: AnnualReport[] }) {
   const common = useTranslations('common')
   const t = useTranslations('InvestorInformationPage.OneReportTable')
+  // Thai site shows the Buddhist year first; English/Chinese show Gregorian first.
+  const isThai = useLocale() === LocaleEnum.TH
 
   return (
     <div
@@ -44,10 +47,14 @@ export function OneReportTable({ data }: { data: AnnualReport[] }) {
               >
                 <div>
                   <div className='small-medium text-black-2'>
-                    {toBuddhistYear(item.year)}
+                    {isThai
+                      ? toBuddhistYear(item.year)
+                      : toBuddhistYear(item.year) - 543}
                   </div>
                   <div className='small-reg text-dark-40'>
-                    {toBuddhistYear(item.year) - 543}
+                    {isThai
+                      ? toBuddhistYear(item.year) - 543
+                      : toBuddhistYear(item.year)}
                   </div>
                 </div>
 
