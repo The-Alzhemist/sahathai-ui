@@ -1,16 +1,12 @@
-'use client'
-
 import React from 'react'
 import { BlogCard } from '@/components/BlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Animation } from '@/components/Animation'
-import { Link, useRouter } from '@/libs/intl/navigation'
+import { TickAnimation } from '@/components/TickAnimation'
 import BannerImage from '@/components/Header/components/BannerImage/BannerImage'
 import { SustainabilityManagementContent } from '@/features/investorRelations/pages/SustainabilityManagementPage/components/SustainabilityManagementContent'
-import { useNavigationTick } from '@/context/NavigationTickContext'
 import { ArticleCardDataType } from '@/types/ArticleCardDataType'
 import { Sustainability } from '@/types/Sustainability'
 import { getStrapiImageUrl } from '@/libs/util'
@@ -28,11 +24,8 @@ export default function SocialResponsibilityComponent({
   search?: string
   sustainability: Sustainability
 }) {
-  useRouter()
   const t = useTranslations('NewsPage')
   const tSocial = useTranslations('Responsibility')
-
-  const { tick } = useNavigationTick()
 
   const bannerImageUrl = sustainability.bannerImage
     ? getStrapiImageUrl(sustainability.bannerImage.url)
@@ -40,7 +33,7 @@ export default function SocialResponsibilityComponent({
 
   return (
     <div>
-      <Animation key={tick}>
+      <TickAnimation>
         <Menu />
 
         <BannerImage
@@ -55,16 +48,14 @@ export default function SocialResponsibilityComponent({
             </p>
 
             {sustainability.bannerFile && (
-              <button className='text-md bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'>
-                <Link
-                  href={getStrapiImageUrl(sustainability.bannerFile.url)}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='font-normal '
-                >
-                  {tSocial('Banner.download')}
-                </Link>
-              </button>
+              <a
+                href={getStrapiImageUrl(sustainability.bannerFile.url)}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-md font-normal bg-white-1 text-gray-500 border border-gray-500 px-4 py-1 rounded-3xl hover:text-blue-300 hover:border-blue-300 transition-all mb-5'
+              >
+                {tSocial('Banner.download')}
+              </a>
             )}
           </div>
         </BannerImage>
@@ -109,7 +100,7 @@ export default function SocialResponsibilityComponent({
             )}
           </div>
         </section>
-      </Animation>
+      </TickAnimation>
     </div>
   )
 }
