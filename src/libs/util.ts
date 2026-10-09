@@ -1,16 +1,31 @@
 import classNames, { ArgumentArray } from 'classnames'
 import { twMerge } from 'tailwind-merge'
-import { format } from 'date-fns'
 
 export function cn(...args: ArgumentArray) {
   return twMerge(classNames(...args))
 }
 
 export const commaNumberFormat = (v: number) =>
-  new Intl.NumberFormat("th-TH", { maximumFractionDigits: 2 }).format(v);
+  new Intl.NumberFormat('th-TH', { maximumFractionDigits: 2 }).format(v)
 
-export const formatDateTime = (date: string | Date) =>
-  format(new Date(date), 'yyyy-MM-dd HH:mm')
+// Always show Thai time: server (UTC on Vercel) and browser must render the same
+// text, and it should match what the editor picked in the CMS.
+const dateTimeParts = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Asia/Bangkok',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23',
+})
+
+export const formatDateTime = (date: string | Date) => {
+  const parts = Object.fromEntries(
+    dateTimeParts.formatToParts(new Date(date)).map(p => [p.type, p.value])
+  )
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`
+}
 
 // CMS links: absolute URLs are external sites; '/...' paths are pages on this
 // site that already include the locale.

@@ -1,13 +1,9 @@
-'use client'
-
 import { BlogCard } from '@/components/BlogCard'
 import { Menu } from '@/components/Menu'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { Pagination } from '@/features/blog/components/Paginate/Pagination'
-import { Animation } from '@/components/Animation'
-import { useRouter } from '@/libs/intl/navigation'
-import { useNavigationTick } from '@/context/NavigationTickContext'
+import { TickAnimation } from '@/components/TickAnimation'
 import { ArticleCardDataType } from '@/types/ArticleCardDataType'
 
 export default function CompanyNewsListComponent({
@@ -21,13 +17,11 @@ export default function CompanyNewsListComponent({
   search?: string
   data: ArticleCardDataType[]
 }) {
-  useRouter()
   const t = useTranslations('NewsPage')
-  const { tick } = useNavigationTick()
 
   return (
     <div>
-      <Animation key={tick}>
+      <TickAnimation>
         <Menu />
 
         <section className='bg-white' id='news'>
@@ -68,7 +62,7 @@ export default function CompanyNewsListComponent({
             )}
           </div>
         </section>
-      </Animation>
+      </TickAnimation>
     </div>
   )
 }
