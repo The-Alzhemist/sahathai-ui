@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 
 import { getArticleBySlug } from '@/libs/strapi/article'
+import { getArticleMetadata } from '@/libs/articleMetadata'
 import { PressReleasePage } from '@/features/news/pages/PressReleasePage'
 import { LocaleEnum } from '@/enums/LocaleEnum'
 
@@ -22,4 +23,12 @@ export default async function Page({
       backHref={`/${locale}/news`}
     />
   )
+}
+
+export function generateMetadata({
+  params: { locale, slug },
+}: {
+  params: { locale: LocaleEnum; slug: string }
+}) {
+  return getArticleMetadata({ slug, locale, section: 'CompanyNews' })
 }

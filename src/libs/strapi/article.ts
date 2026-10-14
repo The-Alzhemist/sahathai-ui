@@ -53,7 +53,7 @@ export async function getArticleBySlug(
   revalidate = REVALIDATE_TIME
 ): Promise<NewsDataType> {
   const res = await fetchStrapi(
-    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/articles?status=published&populate[cover]=true&populate[description][on][shared.gallery][populate]=files&populate[description][on][shared.media][populate]=file&populate[description][on][shared.rich-text]=true&filters[slug][$eq]=${slug}&locale=${l}`,
+    l => `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}/api/articles?status=published&populate[cover]=true&populate[description][on][shared.gallery][populate]=files&populate[description][on][shared.media][populate]=file&populate[description][on][shared.rich-text]=true&populate[seo][populate]=shareImage&filters[slug][$eq]=${slug}&locale=${l}`,
     locale,
     {
       next: {
