@@ -1,10 +1,12 @@
-import { FunctionComponentType } from '@/models/FunctionComponentType'
+import { InfrastructureContainersPageProps } from './interface'
 
 export function withInfrastructureContainersPage(
-  Component: React.FC<FunctionComponentType>
+  Component: React.FC<InfrastructureContainersPageProps>
 ) {
-  function WithInfrastructureContainersPage() {
-    return <Component />
+  function WithInfrastructureContainersPage({
+    machineryData,
+  }: InfrastructureContainersPageProps) {
+    return <Component machineryData={machineryData} />
   }
 
   return WithInfrastructureContainersPage

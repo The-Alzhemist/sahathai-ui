@@ -4,8 +4,15 @@ import { cn } from '@/libs/util'
 import { Animation } from '@/components/Animation'
 import { CardProps } from './interface'
 
-export function Card({ imageUrl, title, content, position }: CardProps) {
-  const [title1, title2] = title.split('-')
+export function Card({
+  imageUrl,
+  title,
+  subtitle,
+  content,
+  position,
+}: CardProps) {
+  const [title1, title2] =
+    subtitle !== undefined ? [title, subtitle] : title.split('-')
 
   return (
     <>

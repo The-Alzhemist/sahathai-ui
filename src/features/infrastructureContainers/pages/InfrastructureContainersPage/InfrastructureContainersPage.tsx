@@ -8,8 +8,11 @@ import SwiperVertical from '@/components/Header/components/SwiperVertical'
 import { AnimatePresence } from 'framer-motion'
 import { Animation } from '@/components/Animation'
 import { useNavigationTick } from '@/context/NavigationTickContext'
+import { InfrastructureContainersPageProps } from './interface'
 
-export function InfrastructureContainersPage() {
+export function InfrastructureContainersPage({
+  machineryData,
+}: InfrastructureContainersPageProps) {
   const { tick } = useNavigationTick()
 
   return (
@@ -19,7 +22,7 @@ export function InfrastructureContainersPage() {
           <Menu />
 
           <SwiperVertical />
-          <MachineryEquipment />
+          <MachineryEquipment data={machineryData} />
           <LogisticInnovation />
           {/*<FreeTradeZone />*/}
           <OperationGuidelines />
