@@ -21,17 +21,23 @@
     },
     "contactNumber": {
       "title": "Contact Number",
-      "description": "+66 (0) 2386 8000",
-      "descriptionComplaint": "+66 (0) 2386 8000 ext. 1888 (Company Secretary)"
+      "description": "02-386-8000"
     },
     "fax": {
       "title": "Fax",
-      "description": "+66 (0) 2386 8008"
+      "description": "02-366-8008"
     },
     "address": {
       "title": "Address",
       "description": "Sahathai Terminal Public Company Limited, 51/1 Moo 3, Phu Chao Saming Phrai Road, Bang Yai Prak Subdistrict, Phra Pradaeng District, Samut Prakan 10130, Thailand",
       "descriptionComplaint": "Chairman of the Audit Committee\nSahathai Terminal Public Company Limited, 51/1 Moo 3, Phu Chao Saming Phrai Road, Bang Yai Prak Subdistrict, Phra Pradaeng District, Samut Prakan 10130, Thailand"
+    },
+    "investorRelations": {
+      "description": "If you would like more information about the Company to support your investment decision, we are pleased to provide it. Please contact Investor Relations at:",
+      "coordinator": {
+        "title": "Coordinator",
+        "description": "Investor Relations"
+      }
     },
     "submit": "Submit",
     "officePhone": {
