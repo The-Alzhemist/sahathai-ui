@@ -17,18 +17,18 @@ export function Vision({
 
   return (
     <Animation className='mt-[90px] flex flex-col-reverse items-center lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
-      <div className='w-full md:w-[550px] shrink-0'>
-        <div className='relative pt-[66.73%] w-full'>
-          <Image
-            src={
-              image ? getStrapiImageUrl(image.url) : '/about-us/new/team.webp'
-            }
-            alt='About us team'
-            fill
-            className='object-contain rounded-[30px] overflow-hidden'
-          />
+      {image && (
+        <div className='w-full md:w-[550px] shrink-0'>
+          <div className='relative pt-[66.73%] w-full'>
+            <Image
+              src={getStrapiImageUrl(image.url)}
+              alt={image.alternativeText || 'About us team'}
+              fill
+              className='object-contain rounded-[30px] overflow-hidden'
+            />
+          </div>
         </div>
-      </div>
+      )}
       <section className='py-[20px] pr-[30px]'>
         <div className='w-full'>
           <h2 className='headline-1 text-background'>{t('vision.title')}</h2>
