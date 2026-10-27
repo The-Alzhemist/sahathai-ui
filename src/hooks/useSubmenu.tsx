@@ -25,7 +25,7 @@ export function useSubmenu() {
         pathname: '/about-us',
         isExternalLink: false,
         isScroll: true,
-        icon: <UserIcon width='20' height='20' />,
+        icon: <UserIcon className='text-primary' width='20' height='20' />,
         children: [
           {
             title: t('aboutUs.visionMission'),
