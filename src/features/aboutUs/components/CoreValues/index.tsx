@@ -18,6 +18,8 @@ const CORE_VALUE_ICONS: Record<CoreValueIcon, typeof CustomerSupportIcon> = {
 export function CoreValues({ coreValues }: { coreValues: CoreValue[] }) {
   const t = useTranslations('AboutUsPage.VisionMissionValues.CoreValues')
 
+  if (!coreValues.length) return null
+
   return (
     <section className='mt-[100px] max-w-[1064px] w-full mx-auto px-3'>
       <div className='flex flex-col  items-center'>

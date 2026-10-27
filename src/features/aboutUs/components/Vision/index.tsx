@@ -15,6 +15,8 @@ export function Vision({
 }) {
   const t = useTranslations('AboutUsPage.VisionMissionValues.Vision')
 
+  if (!vision && !image) return null
+
   return (
     <Animation className='mt-[90px] flex flex-col-reverse items-center lg:flex-row px-5 md:px-3 justify-center gap-[89px] max-w-[1065px] mx-auto'>
       {image && (

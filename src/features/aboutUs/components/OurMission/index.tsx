@@ -8,6 +8,8 @@ import { MissionCard as MissionCardType } from '@/types/VisionMission'
 export function OurMission({ missions }: { missions: MissionCardType[] }) {
   const t = useTranslations('AboutUsPage.VisionMissionValues.OurMission')
 
+  if (!missions.length) return null
+
   return (
     <section className='mt-[80px] max-w-[930px] w-full mx-auto'>
       <h2 className='text-[40px] leading-[60.48px] font-[500] text-navy prompt text-center'>
