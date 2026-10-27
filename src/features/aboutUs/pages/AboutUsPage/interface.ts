@@ -3,6 +3,7 @@ import { Committee } from '@/types/Committee'
 import { CompanyHistory } from '@/types/CompanyHistory'
 import { ShareholdingStructure } from '@/types/ShareholdingStructure'
 import { GovernanceStructure } from '@/types/GovernanceStructure'
+import { VisionMission } from '@/types/VisionMission'
 import { TabType } from '@/models/TabType'
 
 export interface AboutPageProps {
@@ -15,6 +16,7 @@ export interface AboutPageProps {
   companyHistoryData: CompanyHistory
   shareholdingStructureData: ShareholdingStructure
   governanceStructureData: GovernanceStructure
+  visionMissionData: VisionMission
 }
 
 export interface AboutPageAcceptProps {
@@ -24,6 +26,7 @@ export interface AboutPageAcceptProps {
   companyHistoryData: CompanyHistory
   shareholdingStructureData: ShareholdingStructure
   governanceStructureData: GovernanceStructure
+  visionMissionData: VisionMission
 }
 
 export enum AboutUsTabEnum {

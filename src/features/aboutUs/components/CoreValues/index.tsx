@@ -6,8 +6,16 @@ import { CustomerSupportIcon } from '@/components/icons/CustomerSupportIcon'
 import { KindnessIcon } from '@/components/icons/KindnessIcon'
 import { HonestIcon } from '@/components/icons/HonestIcon'
 import { InnovationIcon } from '@/components/icons/InnovationIcon'
+import { CoreValue, CoreValueIcon } from '@/types/VisionMission'
 
-export function CoreValues() {
+const CORE_VALUE_ICONS: Record<CoreValueIcon, typeof CustomerSupportIcon> = {
+  service: CustomerSupportIcon,
+  heart: KindnessIcon,
+  integrity: HonestIcon,
+  innovation: InnovationIcon,
+}
+
+export function CoreValues({ coreValues }: { coreValues: CoreValue[] }) {
   const t = useTranslations('AboutUsPage.VisionMissionValues.CoreValues')
 
   return (
@@ -22,26 +30,14 @@ export function CoreValues() {
       </div>
 
       <div className='mt-[50px] flex justify-center flex-wrap gap-[24px]'>
-        <CoreValuesItem
-          Icon={CustomerSupportIcon}
-          title={t('serviceMind.title')}
-          content={t('serviceMind.content')}
-        />
-        <CoreValuesItem
-          Icon={KindnessIcon}
-          title={t('openness.title')}
-          content={t('openness.content')}
-        />
-        <CoreValuesItem
-          Icon={HonestIcon}
-          title={t('integrity.title')}
-          content={t('integrity.content')}
-        />
-        <CoreValuesItem
-          Icon={InnovationIcon}
-          title={t('innovation.title')}
-          content={t('innovation.content')}
-        />
+        {coreValues.map(value => (
+          <CoreValuesItem
+            key={value.id}
+            Icon={CORE_VALUE_ICONS[value.icon] ?? CustomerSupportIcon}
+            title={value.title}
+            content={value.description}
+          />
+        ))}
       </div>
     </section>
   )

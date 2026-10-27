@@ -4,6 +4,7 @@ import { getCommittees } from '@/libs/strapi/committee'
 import { getCompanyHistory } from '@/libs/strapi/companyHistory'
 import { getShareholdingStructure } from '@/libs/strapi/shareholdingStructure'
 import { getGovernanceStructure } from '@/libs/strapi/governanceStructure'
+import { getVisionMission } from '@/libs/strapi/visionMission'
 import { getTranslations } from 'next-intl/server'
 
 export default async function AboutUs({
@@ -19,6 +20,7 @@ export default async function AboutUs({
     companyHistoryResponse,
     shareholdingStructureResponse,
     governanceStructureResponse,
+    visionMissionResponse,
   ] = await Promise.all([
     getBoardMembers(locale),
     getExecutives(locale),
@@ -26,6 +28,7 @@ export default async function AboutUs({
     getCompanyHistory(locale),
     getShareholdingStructure(locale),
     getGovernanceStructure(locale),
+    getVisionMission(locale),
   ])
 
   return (
@@ -36,6 +39,7 @@ export default async function AboutUs({
       companyHistoryData={companyHistoryResponse.data}
       shareholdingStructureData={shareholdingStructureResponse.data}
       governanceStructureData={governanceStructureResponse.data}
+      visionMissionData={visionMissionResponse.data}
     />
   )
 }
