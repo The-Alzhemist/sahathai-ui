@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
@@ -47,25 +46,33 @@ function CorporateGovernanceDocumentRow({
   )
 }
 
+function getOpenTabIds() {
+  return (
+    new URLSearchParams(window.location.search)
+      .get('tab')
+      ?.split(',')
+      .filter(Boolean) ?? []
+  )
+}
+
 export function CorporateGovernanceDocumentList({
-  id,
-  documents,
+  index,
+  title,
+  items,
 }: {
-  id: number
-  documents: CorporateGovernanceDocument[]
+  index: number
+  title: string
+  items: CorporateGovernanceDocument[]
 }) {
-  const t = useTranslations('InvestorInformationPage.GoodCorporate')
   const [isOpen, setIsOpen] = useState(false)
-  const tabId = `corporate-governance-${id}`
+  // Strapi recreates component ids on every save, so the tab id uses the
+  // section's position to keep shared ?tab= links working.
+  const tabId = `corporate-governance-${index}`
 
   useEffect(() => {
-    const ids =
-      new URLSearchParams(window.location.search)
-        .get('tab')
-        ?.split(',')
-        .filter(Boolean) ?? []
+    const ids = getOpenTabIds()
     setIsOpen(ids.includes(tabId))
-    if (!ids.includes(tabId)) return
+    if (ids[0] !== tabId) return
 
     requestAnimationFrame(() =>
       document.getElementById(tabId)?.scrollIntoView({ block: 'start' })
@@ -75,8 +82,13 @@ export function CorporateGovernanceDocumentList({
   const toggleTab = () => {
     const next = !isOpen
     setIsOpen(next)
+    // Several sections share the ?tab= param, so add or remove only this one.
+    const ids = getOpenTabIds().filter(id => id !== tabId)
+    if (next) ids.push(tabId)
     const url = new URL(window.location.href)
-    next ? url.searchParams.set('tab', tabId) : url.searchParams.delete('tab')
+    ids.length
+      ? url.searchParams.set('tab', ids.join(','))
+      : url.searchParams.delete('tab')
     window.history.replaceState(null, '', url)
   }
 
@@ -86,7 +98,7 @@ export function CorporateGovernanceDocumentList({
         onClick={toggleTab}
         className='w-full flex justify-between items-center text-left px-4 py-3 h-[70px] text-darkGray border-l-[4px] border-l-blue-300 bg-gray-50 hover:bg-gray-100 transition'
       >
-        <span>{t('documentsTitle')}</span>
+        <span>{title || '-'}</span>
         {isOpen ? (
           <FaChevronDown className='text-blue-300' />
         ) : (
@@ -102,7 +114,7 @@ export function CorporateGovernanceDocumentList({
         }}
       >
         <div className='p-4'>
-          {documents.map(doc => (
+          {items.map(doc => (
             <CorporateGovernanceDocumentRow key={doc.id} document={doc} />
           ))}
         </div>

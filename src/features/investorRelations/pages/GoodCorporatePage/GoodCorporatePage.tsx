@@ -34,10 +34,14 @@ export function GoodCorporatePage({ data }: GoodCorporatePageProps) {
               {tMenu('investorRelations.GoodCorporate')}
             </h1>
 
-            <CorporateGovernanceDocumentList
-              id={data.id}
-              documents={data.documents}
-            />
+            {data.sections.map((section, index) => (
+              <CorporateGovernanceDocumentList
+                key={index}
+                index={index}
+                title={section.title}
+                items={section.items}
+              />
+            ))}
           </section>
         </Animation>
       </AnimatePresence>

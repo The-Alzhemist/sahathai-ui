@@ -7,10 +7,16 @@ export type CorporateGovernanceDocument = {
   file: MediaType | null
 }
 
+export type CorporateGovernanceSection = {
+  id: number
+  title: string
+  items: CorporateGovernanceDocument[]
+}
+
 export type CorporateGovernance = {
   id: number
   documentId: string
-  documents: CorporateGovernanceDocument[]
+  sections: CorporateGovernanceSection[]
   locale: string
   publishedAt: string
   createdAt: string
