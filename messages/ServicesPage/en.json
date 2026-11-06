@@ -38,29 +38,6 @@
       "containerService": {
         "title": "Container Yard and Warehouse Services",
         "content": "We provide container yard and warehouse facilities to support our customers, including a bonded container yard in the free zone and a bonded warehouse with an area of 6,301 square meters."
-      }
-    },
-    "ContainerStorageWarehouseServices": {
-      "title": "Container Storage and Warehouse Services",
-      "content1": "Container storage yards in the Free Zone",
-      "content2": "Bonded warehouse with an area of 6,301 square meters",
-      "content3": "Free Zone warehouse with an area of 10,686 square meters",
-      "content4": "General warehouse with an area of 15,606 square meters",
-      "freeTradeZoneContainerYard": {
-        "title": "Free Zone Container Yard",
-        "content": "The company provides container storage services in the Free Trade Zone (Free zone yard) to manage import duties; customs clearance and duty payment take place only when the customer needs to use the goods."
-      },
-      "bondedWarehouse": {
-        "title": "Bonded Warehouse",
-        "content": "Temperature-controlled warehouses with a total rental area of approximately 6,301 square meters. These facilities are authorized for storage under customs regulations for purposes such as:\n • Storing\n • Exhibiting\n • Selling\n • Packing or assembling stored items\nThis reduces production or import costs for goods from abroad.\nWarehouse efficiency is further enhanced with automated systems using robots to replace human operations within the cold storage facility."
-      },
-      "generalWarehouse": {
-        "title": "General Warehouse",
-        "content": "Located within the company's port area with a total rental area of approximately 15,606 square meters, providing general goods storage for tenants, either for general storage or for use as a Distribution Center."
-      },
-      "freeTradeZoneWarehouse": {
-        "title": "Free Zone Warehouse",
-        "content": "To ensure timely inventory management for production and assist in import tax planning, the Free Trade Zone warehouse offers:\n • Customs offices\n • Food and Drug Administration officers\n • Agricultural officers\n • Fisheries officers\nAll customs procedures and product inspections can be conveniently carried out at the port."
       },
       "serviceProviderImportExport": {
         "title": "Import and Export Representation Services",

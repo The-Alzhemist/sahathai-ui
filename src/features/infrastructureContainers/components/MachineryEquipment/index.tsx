@@ -1,8 +1,10 @@
 import { useTranslations } from 'next-intl'
 
 import { Card } from '@/features/services/components/Card'
+import { getStrapiImageUrl } from '@/libs/util'
+import { Machinery } from '@/types/Machinery'
 
-export function MachineryEquipment() {
+export function MachineryEquipment({ data }: { data: Machinery[] }) {
   const t = useTranslations('InfrastructureContainersPage.MachineryEquipment')
 
   return (
@@ -11,61 +13,18 @@ export function MachineryEquipment() {
         {t('title')}
       </h2>
       <div className='mt-[50px] space-y-[20px] max-w-[1082px] w-full mx-auto px-5'>
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-1.webp'}
-          title={t('gantryCrane.title')}
-          content={t('gantryCrane.content')}
-          position={'left'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-2.webp'}
-          title={t('jibCrane.title')}
-          content={t('jibCrane.content')}
-          position={'right'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-4.webp'}
-          title={t('mobileHarborCrane.title')}
-          content={t('mobileHarborCrane.content')}
-          position={'left'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-3.webp'}
-          title={t('rtg.title')}
-          content={t('rtg.content')}
-          position={'right'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-6.webp'}
-          title={t('reachStacker.title')}
-          content={t('reachStacker.content')}
-          position={'left'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-7.webp'}
-          title={t('emptyContainerHandler.title')}
-          content={t('emptyContainerHandler.content')}
-          position={'right'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-8.webp'}
-          title={t('tractorTrailer.title')}
-          content={t('tractorTrailer.content')}
-          position={'left'}
-        />
-
-        <Card
-          imageUrl={'/infrastructure-containers/new/infrastructure-9.webp'}
-          title={t('forklift.title')}
-          content={t('forklift.content')}
-          position={'right'}
-        />
+        {data.map((machinery, index) => (
+          <Card
+            key={machinery.id}
+            imageUrl={
+              machinery.image ? getStrapiImageUrl(machinery.image.url) : ''
+            }
+            title={machinery.title}
+            subtitle={machinery.subtitle ?? ''}
+            content={machinery.description}
+            position={index % 2 === 0 ? 'left' : 'right'}
+          />
+        ))}
       </div>
     </section>
   )

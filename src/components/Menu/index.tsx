@@ -24,7 +24,9 @@ export function Menu() {
           : '-translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <ul className='flex justify-start md:justify-center overflow-x-scroll  no-scrollbar   bg-gradient-to-r from-blue-300 to-red-300 rounded-b-[30px]'>
+      {/* Auto margins center the items while still letting overflowing ones
+          be scrolled to; justify-center would push them out of reach. */}
+      <ul className='flex justify-start overflow-x-scroll no-scrollbar bg-gradient-to-r from-blue-300 to-red-300 rounded-b-[30px] [&>*:first-child]:ml-auto [&>*:last-child]:mr-auto'>
         {menus.map(menu => {
           let isActive = menu.pathname.includes(pathname)
 
@@ -82,7 +84,7 @@ export function Menu() {
           return (
             <li key={menu.title}>
               <Link
-                className={`headline-6 !font-[300] block px-[24px] py-[18px]   hover:bg-white/15 data-[open]:bg-white/15 whitespace-nowrap ${
+                className={`headline-6 !font-[300] block px-[16px] xl:px-[24px] py-[18px] hover:bg-white/15 data-[open]:bg-white/15 whitespace-nowrap ${
                   isActive && ' bg-white/15'
                 }`}
                 target={menu.isExternalLink ? '_blank' : undefined}

@@ -13,6 +13,7 @@ import { LocationIcon } from '../icons/LocationIcon'
 import { MailIcon } from '../icons/MailIcon'
 import { PrinterIcon } from '../icons/PrinterIcon'
 import { TelephoneIcon } from '../icons/TelephoneIcon'
+import { UserIcon } from '../icons/UserIcon'
 import { RedWarningIcon } from '../icons/WarningRedIcon'
 import { Card } from './Card'
 import { contactUsInitialValue } from './ContactUsInitialValue'
@@ -175,42 +176,58 @@ export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
                 </button>
               </div>
               <div className='min-w-0 flex-1 space-y-[33px]'>
-                <Card
-                  Icon={TelephoneIcon}
-                  title={t('contactNumber.title')}
-                  description={t(
-                    isComplaint
-                      ? 'contactNumber.descriptionComplaint'
-                      : 'contactNumber.description'
-                  )}
-                  contactUsType={values.type as ContactUsTypeEnum}
-                />
-                <Card
-                  Icon={PrinterIcon}
-                  title={t('fax.title')}
-                  description={t('fax.description')}
-                  contactUsType={values.type as ContactUsTypeEnum}
-                />
-                <Card
-                  Icon={EnvelopeIcon}
-                  title={common('email')}
-                  description={
-                    isComplaint
-                      ? 'anticorrupt.stt@sahathaiterminal.com'
-                      : 'info@sahathaiterminal.com'
-                  }
-                  contactUsType={values.type as ContactUsTypeEnum}
-                />
-                <Card
-                  Icon={LocationIcon}
-                  title={t('address.title')}
-                  description={
-                    isComplaint
-                      ? t('address.descriptionComplaint')
-                      : t('address.description')
-                  }
-                  contactUsType={values.type as ContactUsTypeEnum}
-                />
+                {isComplaint ? (
+                  <>
+                    <Card
+                      Icon={LocationIcon}
+                      title={t('address.title')}
+                      description={t('address.descriptionComplaint')}
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                    <Card
+                      Icon={TelephoneIcon}
+                      title={t('contactNumber.title')}
+                      description={t('contactNumber.description')}
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                    <Card
+                      Icon={PrinterIcon}
+                      title={t('fax.title')}
+                      description={t('fax.description')}
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                    <Card
+                      Icon={EnvelopeIcon}
+                      title={common('email')}
+                      description='anticorrupt.stt@sahathaiterminal.com'
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <p className='body-1 text-black-6'>
+                      {t('investorRelations.description')}
+                    </p>
+                    <Card
+                      Icon={UserIcon}
+                      title={t('investorRelations.coordinator.title')}
+                      description={t('investorRelations.coordinator.description')}
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                    <Card
+                      Icon={TelephoneIcon}
+                      title={t('contactNumber.title')}
+                      description={t('contactNumber.description')}
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                    <Card
+                      Icon={EnvelopeIcon}
+                      title={common('email')}
+                      description='ir@sahathaiterminal.com'
+                      contactUsType={values.type as ContactUsTypeEnum}
+                    />
+                  </>
+                )}
               </div>
             </div>
           </Form>

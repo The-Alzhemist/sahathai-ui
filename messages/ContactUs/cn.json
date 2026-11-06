@@ -21,17 +21,23 @@
     },
     "contactNumber": {
       "title": "联系电话",
-      "description": "+66 (0) 2386 8000",
-      "descriptionComplaint": "+66 (0) 2386 8000 转 1888（公司秘书处)"
+      "description": "02-386-8000"
     },
     "fax": {
       "title": "传真",
-      "description": "+66 (0) 2386 8008"
+      "description": "02-366-8008"
     },
     "address": {
       "title": "地址",
       "description": "萨泰终端股份有限公司，51/1号，Moo 3，Phu Chao Saming Phrai路，Bang Yai Prak街区，Phra Pradaeng区，Samut Prakan 10130，泰国",
       "descriptionComplaint": "审计委员会主席\n萨泰终端股份有限公司，51/1号，Moo 3，Phu Chao Saming Phrai路，Bang Yai Prak街区，Phra Pradaeng区，Samut Prakan 10130，泰国"
+    },
+    "investorRelations": {
+      "description": "如您需要更多公司信息以作为投资决策参考，我们非常乐意为您提供。请通过以下方式联系投资者关系部：",
+      "coordinator": {
+        "title": "联络人",
+        "description": "投资者关系部"
+      }
     },
     "submit": "提交",
     "officePhone": {

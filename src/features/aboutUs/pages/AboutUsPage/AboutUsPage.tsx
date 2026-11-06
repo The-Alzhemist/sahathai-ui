@@ -22,6 +22,7 @@ export function AboutUsPage({
   companyHistoryData,
   shareholdingStructureData,
   governanceStructureData,
+  visionMissionData,
 }: AboutPageProps) {
   const { tick } = useNavigationTick()
 
@@ -33,7 +34,7 @@ export function AboutUsPage({
           <SwiperVertical />
 
           {active === AboutUsTabEnum.VISION_MISSION ? (
-            <VisionMissionValues />
+            <VisionMissionValues data={visionMissionData} />
           ) : active === AboutUsTabEnum.OUT_COMMITMENT_SUCCESS ? (
             <CommitmentSuccess data={companyHistoryData} />
           ) : active === AboutUsTabEnum.BOARD_DIRECTORS_EXE ? (

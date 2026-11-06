@@ -6,9 +6,14 @@ export function Card({ title, imageUrl, contents }: CardProps) {
   return (
     <div className='mt-[22px] p-[30px] rounded-[15px] shadow-8 bg-white'>
       <div className='max-w-[980px] w-full rounded-[10px] overflow-hidden'>
-        <div className='relative pt-[63.47%] w-full'>
-          <Image src={imageUrl} alt='' fill />
-        </div>
+        <Image
+          src={imageUrl}
+          alt=''
+          width={980}
+          height={622}
+          sizes='(max-width: 1040px) 100vw, 980px'
+          className='w-full h-auto'
+        />
       </div>
       {title && <h2 className='font-[500] text-navy mt-[25px]'>{title}</h2>}
       {contents.map((content, index) => (

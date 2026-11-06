@@ -25,7 +25,8 @@
       "containerHandling": "集装箱装卸 | CFS LCL",
       "containerMaintenance": "集装箱维护",
       "groundContainerTransportationServices": "陆地集装箱运输服务",
-      "containerServices": "堆场与仓库服务"
+      "containerServices": "堆场与仓库服务",
+      "serviceProviderImportExport": "进出口代理服务"
     },
     "pressRelease": {
       "title": "新闻稿"

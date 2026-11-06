@@ -10,6 +10,7 @@ import {
   safePolygon,
   shift,
   useFloating,
+  useDismiss,
   useFloatingNodeId,
   useHover,
   useInteractions,
@@ -32,6 +33,7 @@ export const DropdownMenuComponent = React.forwardRef<
   const elementsRef = React.useRef<Array<HTMLButtonElement | null>>([])
   const labelsRef = React.useRef<Array<string | null>>([])
   const parent = React.useContext(DropdownMenuContext)
+  const touchTapRef = React.useRef<{ wasOpen: boolean } | null>(null)
 
   const nodeId = useFloatingNodeId()
   const item = useListItem()
@@ -47,12 +49,15 @@ export const DropdownMenuComponent = React.forwardRef<
 
   const hover = useHover(context, {
     enabled: true,
+    mouseOnly: true,
     delay: { open: 75 },
     handleClose: safePolygon({ blockPointerEvents: true }),
   })
 
+  const dismiss = useDismiss(context)
+
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
-    [hover]
+    [hover, dismiss]
   )
 
   useEffect(() => {
@@ -76,21 +81,33 @@ export const DropdownMenuComponent = React.forwardRef<
         data-open={isOpen ? '' : undefined}
         data-nested={undefined}
         data-focus-inside={hasFocusInside ? '' : undefined}
-        className={`headline-6 !font-[300] block px-[24px] py-[18px] whitespace-nowrap
+        className={`headline-6 !font-[300] block px-[16px] xl:px-[24px] py-[18px] whitespace-nowrap
   hover:bg-white/15 data-[open]:bg-white/15
   transition-colors duration-200
   ${className}`}
-        {...getReferenceProps(
-          parent.getItemProps({
+        {...getReferenceProps({
+          ...parent.getItemProps({
             ...props,
             onFocus(event: React.FocusEvent<HTMLButtonElement>) {
               props.onFocus?.(event)
               setHasFocusInside(false)
               parent.setHasFocusInside(true)
             },
-          })
-        )}
+          }),
+          onPointerDown(event: React.PointerEvent<HTMLButtonElement>) {
+            touchTapRef.current =
+              event.pointerType === 'mouse' ? null : { wasOpen: isOpen }
+          },
+        })}
         onClick={event => {
+          // Touch devices have no hover, so the first tap opens the
+          // dropdown and a second tap follows the menu link.
+          const touchTap = touchTapRef.current
+          touchTapRef.current = null
+          if (touchTap && !touchTap.wasOpen) {
+            setIsOpen(true)
+            return
+          }
           props.onClick?.(event)
         }}
       >

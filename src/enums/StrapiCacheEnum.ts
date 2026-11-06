@@ -22,4 +22,6 @@ export enum StrapiRevalidateTag {
   ShareholdingStructure = 'shareholding-structure:shareholding-structure',
   GovernanceStructure = 'governance-structure:governance-structure',
   Sustainability = 'sustainability:sustainability',
+  Machinery = 'machinery:machinery-list',
+  VisionMission = 'vision-mission:vision-mission',
 }

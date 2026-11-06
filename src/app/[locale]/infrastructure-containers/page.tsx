@@ -1,8 +1,15 @@
 import { InfrastructureContainersPage } from '@/features/infrastructureContainers/pages/InfrastructureContainersPage'
 import { getTranslations } from 'next-intl/server'
+import { getMachineries } from '@/libs/strapi/machinery'
 
-export default function InfrastructureContainers() {
-  return <InfrastructureContainersPage />
+export default async function InfrastructureContainers({
+  params: { locale },
+}: {
+  params: { locale: string }
+}) {
+  const machineryResponse = await getMachineries(locale)
+
+  return <InfrastructureContainersPage machineryData={machineryResponse.data} />
 }
 
 export async function generateMetadata({
