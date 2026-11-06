@@ -38,29 +38,6 @@
       "containerService": {
         "title": "集装箱堆场与仓储服务",
         "content": "提供完善的集装箱堆场及仓储设施，包括自由区内的保税集装箱堆场，以及面积达 6,301 平方米的保税仓库，以全面支持客户需求。"
-      }
-    },
-    "ContainerStorageWarehouseServices": {
-      "title": "集装箱堆存与仓储服务",
-      "content1": "自由贸易区集装箱堆场",
-      "content2": "保税仓库，面积 6,301 平方米",
-      "content3": "自由贸易区仓库，面积 10,686 平方米",
-      "content4": "普通仓库，面积 15,606 平方米",
-      "freeTradeZoneContainerYard": {
-        "title": "自由贸易区集装箱堆场",
-        "content": "公司在自由贸易区内提供集装箱堆存服务（Free zone yard），以管理进口关税，仅在客户需要使用货物时才办理海关清关并缴纳关税。"
-      },
-      "bondedWarehouse": {
-        "title": "保税仓库",
-        "content": "配备温控系统的仓库，总可出租面积约 6,301 平方米，并获准依据海关法规用于以下用途：\n • 存储\n • 展示\n • 销售\n • 对存储货物进行包装或组装\n有助于降低进口货物的生产成本或进口成本。\n同时通过在冷藏仓库中引入自动化系统，采用机器人替代人工操作，以提升仓储运营效率。"
-      },
-      "generalWarehouse": {
-        "title": "普通仓库",
-        "content": "位于公司港区内，总可出租面积约 15,606 平方米，为租户提供普通货物仓储服务，可用于一般存储或作为配送中心（Distribution Center）使用。"
-      },
-      "freeTradeZoneWarehouse": {
-        "title": "自由贸易区仓库",
-        "content": "为确保生产所需库存的及时管理并协助进口税务规划，自由贸易区仓库配备：\n • 海关办公室\n • 食品药品监督管理人员\n • 农业部门人员\n • 渔业部门人员\n所有海关手续及产品检验均可在码头内便捷完成。"
       },
       "serviceProviderImportExport": {
         "title": "进出口代理服务",

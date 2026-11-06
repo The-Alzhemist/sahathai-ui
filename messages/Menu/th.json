@@ -22,7 +22,8 @@
       "containerHandling": "ขนถ่าย Container  |  CFS LCL",
       "containerMaintenance": "ซ่อมบำรุงตู้คอนเทนเนอร์",
       "groundContainerTransportationServices": "บริการขนส่งตู้คอนเทนเนอร์ทางบก",
-      "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า"
+      "containerServices": "บริการพื้นที่จัดเก็บตู้คอนเทนเนอร์และคลังสินค้า",
+      "serviceProviderImportExport": "ผู้บริการเป็นตัวแทนผู้นำเข้าและส่งออก"
     },
     "home": {
       "title": "หน้าแรก"

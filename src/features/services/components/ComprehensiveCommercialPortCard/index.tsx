@@ -17,7 +17,7 @@ export function ComprehensiveCommercialPortCard({
     <div className='w-[330px] rounded-[10px] overflow-hidden shadow-8 bg-white'>
       <div className='w-full'>
         <div className='relative pt-[63.64%] w-full'>
-          <Image src={imageUrl} fill alt='' />
+          <Image src={imageUrl} fill alt='' className='object-cover' />
         </div>
       </div>
       <div className='py-[22px] px-[30px] h-[240px] relative'>

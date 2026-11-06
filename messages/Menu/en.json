@@ -22,7 +22,8 @@
       "containerHandling": "Container Handling | CFS LCL",
       "containerMaintenance": "Container Maintenance",
       "groundContainerTransportationServices": "Ground Container Transportation Services",
-      "containerServices": "Container Yard and Warehouse Services"
+      "containerServices": "Container Yard and Warehouse Services",
+      "serviceProviderImportExport": "Import and Export Representation Services"
     },
     "home": {
       "title": "Home"

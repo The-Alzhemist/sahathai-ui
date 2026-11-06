@@ -22,7 +22,6 @@ export function ServicesPage() {
 
           <SwiperVertical />
           <ComprehensiveCommercialPortServices />
-          {/*<ContainerStorageWarehouseServices />*/}
           <InventoryManagementServices />
           <ContactUs className='pt-[80px] pb-[114px]' />
           {/* <CookieConsentFloatingBar /> */}

@@ -108,6 +108,12 @@ export function useSubmenu() {
             isScroll: true,
             pathname: `/services/container-services`,
           },
+          {
+            title: t('service.serviceProviderImportExport'),
+            isExternalLink: false,
+            isScroll: true,
+            pathname: `/services/service-provider-import-export`,
+          },
         ],
       },
       {

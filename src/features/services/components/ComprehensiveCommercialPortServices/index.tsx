@@ -92,6 +92,17 @@ export function ComprehensiveCommercialPortServices() {
             imageUrl='/services/new/service-6.webp'
             link='/services/container-services'
           />
+          <ComprehensiveCommercialPortCard
+            title={
+              <Fragment>
+                {t('serviceProviderImportExport.title')}&nbsp;|&nbsp;
+                <Image src='/logo.png' width={46} height={20.7} alt='' />
+              </Fragment>
+            }
+            content={t('serviceProviderImportExport.content')}
+            imageUrl='/services/new/container-service-5.webp'
+            link='/services/service-provider-import-export'
+          />
         </section>
       </Animation>
     </section>
