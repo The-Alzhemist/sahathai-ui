@@ -65,26 +65,24 @@ function ShareHolderMeetingItemRow({
   )
 }
 
-function ShareHolderMeetingSectionTab({
-  sectionId,
-  title,
+function ShareHolderMeetingTab({
+  tabId,
+  meeting,
   isOpen,
   onToggle,
-  items,
 }: {
-  sectionId: string
-  title: string
+  tabId: string
+  meeting: ShareHolderMeeting
   isOpen: boolean
   onToggle: (id: string) => void
-  items: ShareHolderMeetingItem[]
 }) {
   return (
-    <div id={sectionId} className='overflow-hidden'>
+    <div id={tabId} className='overflow-hidden'>
       <button
-        onClick={() => onToggle(sectionId)}
+        onClick={() => onToggle(tabId)}
         className='w-full flex justify-between items-center text-left px-4 py-3 h-[70px] text-darkGray border-l-[4px] border-l-blue-300 bg-gray-50 hover:bg-gray-100 transition'
       >
-        <span>{title || '-'}</span>
+        <span>{meeting.title || '-'}</span>
         {isOpen ? (
           <FaChevronDown className='text-blue-300' />
         ) : (
@@ -95,13 +93,20 @@ function ShareHolderMeetingSectionTab({
       <div
         className='transition-all duration-500 ease-in-out overflow-hidden bg-white text-darkGray'
         style={{
-          maxHeight: isOpen ? '2000px' : '0px',
+          maxHeight: isOpen ? '4000px' : '0px',
           opacity: isOpen ? 1 : 0,
         }}
       >
         <div className='p-4'>
-          {items.map(item => (
-            <ShareHolderMeetingItemRow key={item.id} item={item} />
+          {meeting.sections.map(section => (
+            <div key={section.id}>
+              {section.title && (
+                <h3 className='text-blue-400 mb-5'>{section.title}</h3>
+              )}
+              {section.items.map(item => (
+                <ShareHolderMeetingItemRow key={item.id} item={item} />
+              ))}
+            </div>
           ))}
         </div>
       </div>
@@ -143,31 +148,20 @@ export function ShareHolderMeetingAccordion({
   }
 
   return (
-    <>
-      {data.map(meeting => (
-        <div key={meeting.id} className='rounded-md p-4'>
-          <h2 className='text-left text-lg mb-7 text-blue-400'>
-            {meeting.title}
-          </h2>
+    <div className='space-y-4'>
+      {data.map(meeting => {
+        const tabId = `meeting-${meeting.id}`
 
-          <div className='space-y-4'>
-            {meeting.sections.map(section => {
-              const sectionId = `section-${section.id}`
-
-              return (
-                <ShareHolderMeetingSectionTab
-                  key={section.id}
-                  sectionId={sectionId}
-                  title={section.title}
-                  isOpen={openTabs.includes(sectionId)}
-                  onToggle={toggleTab}
-                  items={section.items}
-                />
-              )
-            })}
-          </div>
-        </div>
-      ))}
-    </>
+        return (
+          <ShareHolderMeetingTab
+            key={meeting.id}
+            tabId={tabId}
+            meeting={meeting}
+            isOpen={openTabs.includes(tabId)}
+            onToggle={toggleTab}
+          />
+        )
+      })}
+    </div>
   )
 }
