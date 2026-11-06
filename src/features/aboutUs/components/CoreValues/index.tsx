@@ -35,7 +35,7 @@ export function CoreValues({ coreValues }: { coreValues: CoreValue[] }) {
         {coreValues.map(value => (
           <CoreValuesItem
             key={value.id}
-            Icon={CORE_VALUE_ICONS[value.icon] ?? CustomerSupportIcon}
+            Icon={CORE_VALUE_ICONS[value.icon]}
             title={value.title}
             content={value.description}
           />
