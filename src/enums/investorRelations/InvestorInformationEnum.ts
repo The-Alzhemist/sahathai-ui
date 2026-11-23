@@ -6,5 +6,4 @@ export enum InvestorInformationEnum {
   ShareholdersMeeting = 'shareholders-meeting',
   CompanyIntroductionVideo = 'company-introduction-video',
   CompanyAdvertiseVideo = 'company-advertise-video',
-  Factsheet = 'fact-sheet',
 }

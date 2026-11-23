@@ -1,3 +1,4 @@
+import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 import { IconProps } from '../icons/interface'
 
 export interface ContactUsProps {
@@ -22,9 +23,15 @@ export interface ContactUsFormType {
   email: string
   phone: string
   message: string
-  type: 'contact-form' | 'fraud-complaint-form'
+  type: ContactUsTypeEnum
 }
 
+export type ContactUsFormVariant =
+  | 'default'
+  | 'complaint'
+  | 'ir'
+  | 'companySecretary'
+
 export interface ContactUsFormProps {
-  hideContactForm?: boolean
+  variant?: ContactUsFormVariant
 }

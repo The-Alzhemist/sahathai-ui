@@ -15,6 +15,8 @@
     },
     "contactForm": "联系表单",
     "fraudComplaintForm": "服务投诉表单",
+    "irContactForm": "投资者关系联系表单",
+    "companySecretaryForm": "公司秘书表单",
     "message": {
       "label": "留言",
       "placeholder": "请填写您的留言"
@@ -39,14 +41,28 @@
         "description": "投资者关系部"
       }
     },
+    "customerService": {
+      "coordinator": {
+        "title": "联络人",
+        "description": "客户服务部"
+      }
+    },
+    "companySecretary": {
+      "coordinator": {
+        "title": "联络人",
+        "description": "萨泰终端股份有限公司 审计委员会主席"
+      },
+      "address": "51/1号，Moo 3，Phu Chao Saming Phrai路，Bang Yai Prak街区，Phra Pradaeng区，Samut Prakan 10130",
+      "phone": "02-386-8000 转 1888（公司秘书）"
+    },
     "submit": "提交",
     "officePhone": {
       "title": "电话",
       "description": "+66 (0) 2386 8000"
     },
-    "officeEmail": {
-      "title": "邮箱",
-      "description": "info@sahathaiterminal.com"
+    "officeFax": {
+      "title": "传真",
+      "description": "+66 (0) 2386 8008"
     }
   }
 }

@@ -15,6 +15,8 @@
     },
     "contactForm": "แบบฟอร์มติดต่อ",
     "fraudComplaintForm": "แบบฟอร์มข้อร้องเรียนเรื่องการบริการ",
+    "irContactForm": "แบบฟอร์มติดต่อ IR",
+    "companySecretaryForm": "แบบฟอร์มเลขานุการบริษัทฯ",
     "message": {
       "label": "ข้อความ",
       "placeholder": "กรุณาพิมพ์ข้อความถึงเรา"
@@ -39,14 +41,28 @@
         "description": "นักลงทุนสัมพันธ์"
       }
     },
+    "customerService": {
+      "coordinator": {
+        "title": "ผู้ประสานงาน",
+        "description": "ฝ่ายบริการลูกค้า"
+      }
+    },
+    "companySecretary": {
+      "coordinator": {
+        "title": "ผู้ประสานงาน",
+        "description": "ประธานกรรมการตรวจสอบ บมจ.สหไทย เทอร์มินอล"
+      },
+      "address": "เลขที่ 51/1 หมู่ 3 ถนนปู่เจ้าสมิงพราย ตำบลบางหญ้าแพรก อำเภอพระประแดง จังหวัดสมุทรปราการ 10130",
+      "phone": "02-386-8000 ต่อ 1888 (เลขานุการบริษัท)"
+    },
     "submit": "ส่งข้อมูล",
     "officePhone": {
       "title": "โทรศัพท์",
       "description": "+66 (0) 2386 8000"
     },
-    "officeEmail": {
-      "title": "อีเมล",
-      "description": "info@sahathaiterminal.com"
+    "officeFax": {
+      "title": "โทรสาร",
+      "description": "+66 (0) 2386 8008"
     }
   }
 }

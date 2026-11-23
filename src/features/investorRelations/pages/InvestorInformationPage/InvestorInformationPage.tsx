@@ -8,7 +8,7 @@ import { Menu } from '@/components/Menu'
 import StockMarketInformation from '@/features/investorRelations/components/StockMarketInformation/StockMarketInformation'
 
 import { CompanyAdvertiseVideo } from '@/features/investorRelations/components/CompanyAdvertiseVideo'
-import { CompanyFactSheet } from '@/features/investorRelations/components/CompanyFactSheet'
+import { ContactUsForm } from '@/components/ContactUs/ContactUsForm'
 import { Background } from '@/components/Background'
 import { DoubleQuoteIcon } from '@/components/icons/DoubleQuoteIcon'
 
@@ -57,8 +57,10 @@ export function InvestorInformationPage({
               <div className='w-full relative px-5 !mt-0'>
                 <div className="absolute opacity-100 inset-0 bottom-0 z-0 bg-[url('/investor-relations/new/investor-relation-contact-bg.webp')] bg-center bg-no-repeat bg-cover" />
 
-                <div className='max-w-[860px]  mx-auto py-[100px] '>
-                  <CompanyFactSheet />
+                <div className='relative max-w-[1040px] mx-auto py-[100px]'>
+                  <Animation>
+                    <ContactUsForm variant='ir' />
+                  </Animation>
                 </div>
               </div>
             </section>

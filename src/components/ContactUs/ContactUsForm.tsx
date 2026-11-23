@@ -18,14 +18,55 @@ import { RedWarningIcon } from '../icons/WarningRedIcon'
 import { Card } from './Card'
 import { contactUsInitialValue } from './ContactUsInitialValue'
 import { contactUsValidationSchema } from './ContactUsValidation'
-import { ContactUsFormProps, ContactUsFormType } from './interface'
+import {
+  ContactUsFormProps,
+  ContactUsFormType,
+  ContactUsFormVariant,
+} from './interface'
+import { IconProps } from '../icons/interface'
 
-export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
+// Form type tabs shown for each variant; the first one is selected by default
+const VARIANT_TYPES: Record<ContactUsFormVariant, ContactUsTypeEnum[]> = {
+  default: [ContactUsTypeEnum.CONTACT, ContactUsTypeEnum.FRAUD_COMPLAINT],
+  complaint: [ContactUsTypeEnum.FRAUD_COMPLAINT],
+  ir: [ContactUsTypeEnum.IR_CONTACT],
+  companySecretary: [ContactUsTypeEnum.COMPANY_SECRETARY],
+}
+
+const TYPE_TAB: Record<
+  ContactUsTypeEnum,
+  { labelKey: string; Icon: React.FC<IconProps> }
+> = {
+  [ContactUsTypeEnum.CONTACT]: { labelKey: 'contactForm', Icon: MailIcon },
+  [ContactUsTypeEnum.FRAUD_COMPLAINT]: {
+    labelKey: 'fraudComplaintForm',
+    Icon: RedWarningIcon,
+  },
+  [ContactUsTypeEnum.IR_CONTACT]: { labelKey: 'irContactForm', Icon: MailIcon },
+  [ContactUsTypeEnum.COMPANY_SECRETARY]: {
+    labelKey: 'companySecretaryForm',
+    Icon: MailIcon,
+  },
+}
+
+// Label written into the submitted message so the inbox can tell forms apart
+const TYPE_SUBMIT_LABEL: Record<ContactUsTypeEnum, string> = {
+  [ContactUsTypeEnum.CONTACT]: 'แบบฟอร์มติดต่อ (contact)',
+  [ContactUsTypeEnum.FRAUD_COMPLAINT]:
+    'แบบฟอร์มข้อร้องเรียนเรื่องการบริการ (Service complaint)',
+  [ContactUsTypeEnum.IR_CONTACT]: 'แบบฟอร์มติดต่อ IR (IR contact)',
+  [ContactUsTypeEnum.COMPANY_SECRETARY]:
+    'แบบฟอร์มเลขานุการบริษัทฯ (Company secretary)',
+}
+
+export function ContactUsForm({ variant = 'default' }: ContactUsFormProps) {
   const t = useTranslations('ContactUs')
   const common = useTranslations('common')
-  const initialValues: ContactUsFormType = hideContactForm
-    ? { ...contactUsInitialValue, type: 'fraud-complaint-form' }
-    : contactUsInitialValue
+  const types = VARIANT_TYPES[variant]
+  const initialValues: ContactUsFormType = {
+    ...contactUsInitialValue,
+    type: types[0],
+  }
 
   const FORM_SPREE_ID = process.env.NEXT_PUBLIC_FORM_SPREE_ID
   const [state, sendDataToFromSpree] = useFormSpree(FORM_SPREE_ID!)
@@ -72,10 +113,7 @@ export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
 
       const formattedDate = `${day}-${month}-${year} ${hours}:${minutes}`
 
-      const contactType =
-        value.type === ContactUsTypeEnum.CONTACT
-          ? 'แบบฟอร์มติดต่อ (contact)'
-          : 'แบบฟอร์มข้อร้องเรียนเรื่องการบริการ (Service complaint)'
+      const contactType = TYPE_SUBMIT_LABEL[value.type]
 
       const contactName = value.name || '-'
       const contactPhone = value.phone || '-'
@@ -109,30 +147,25 @@ export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
     >
       {({ values }) => {
         const isComplaint = values.type === ContactUsTypeEnum.FRAUD_COMPLAINT
-        const isContact = values.type === ContactUsTypeEnum.CONTACT
+        const isContact = !isComplaint
         return (
           <Form>
             <div className='flex gap-[24px] mobile:flex-col'>
-              {!hideContactForm && (
-                <ContactTypeField
-                  className='flex-1'
-                  name='type'
-                  text={t('contactForm')}
-                  value='contact-form'
-                  checked={isContact}
-                  Icon={MailIcon}
-                  contactUsType={ContactUsTypeEnum.CONTACT}
-                />
-              )}
-              <ContactTypeField
-                className='flex-1'
-                name='type'
-                text={t('fraudComplaintForm')}
-                value='fraud-complaint-form'
-                checked={isComplaint}
-                Icon={RedWarningIcon}
-                contactUsType={ContactUsTypeEnum.FRAUD_COMPLAINT}
-              />
+              {types.map((type) => {
+                const { labelKey, Icon } = TYPE_TAB[type]
+                return (
+                  <ContactTypeField
+                    key={type}
+                    className='flex-1'
+                    name='type'
+                    text={t(labelKey)}
+                    value={type}
+                    checked={values.type === type}
+                    Icon={Icon}
+                    contactUsType={type}
+                  />
+                )
+              })}
             </div>
             <div className='flex gap-[50px] px-5 md:px-[65px] py-[48px] bg-white mt-[24px] shadow-6 rounded-[10px] mobile:flex-col'>
               <div className='max-w-[416px] w-full shrink-0 space-y-[15px] mobile:max-w-none'>
@@ -176,34 +209,63 @@ export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
                 </button>
               </div>
               <div className='min-w-0 flex-1 space-y-[33px]'>
-                {isComplaint ? (
+                {values.type === ContactUsTypeEnum.FRAUD_COMPLAINT && (
                   <>
                     <Card
                       Icon={LocationIcon}
                       title={t('address.title')}
                       description={t('address.descriptionComplaint')}
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
                     />
                     <Card
                       Icon={TelephoneIcon}
                       title={t('contactNumber.title')}
                       description={t('contactNumber.description')}
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
                     />
                     <Card
                       Icon={PrinterIcon}
                       title={t('fax.title')}
                       description={t('fax.description')}
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
                     />
                     <Card
                       Icon={EnvelopeIcon}
                       title={common('email')}
                       description='anticorrupt.stt@sahathaiterminal.com'
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
                     />
                   </>
-                ) : (
+                )}
+                {values.type === ContactUsTypeEnum.CONTACT && (
+                  <>
+                    <Card
+                      Icon={LocationIcon}
+                      title={t('address.title')}
+                      description={t('address.description')}
+                      contactUsType={values.type}
+                    />
+                    <Card
+                      Icon={UserIcon}
+                      title={t('customerService.coordinator.title')}
+                      description={t('customerService.coordinator.description')}
+                      contactUsType={values.type}
+                    />
+                    <Card
+                      Icon={TelephoneIcon}
+                      title={t('contactNumber.title')}
+                      description={t('contactNumber.description')}
+                      contactUsType={values.type}
+                    />
+                    <Card
+                      Icon={EnvelopeIcon}
+                      title={common('email')}
+                      description='cs@sahathaiterminal.com'
+                      contactUsType={values.type}
+                    />
+                  </>
+                )}
+                {values.type === ContactUsTypeEnum.IR_CONTACT && (
                   <>
                     <p className='body-1 text-black-6'>
                       {t('investorRelations.description')}
@@ -212,19 +274,47 @@ export function ContactUsForm({ hideContactForm = false }: ContactUsFormProps) {
                       Icon={UserIcon}
                       title={t('investorRelations.coordinator.title')}
                       description={t('investorRelations.coordinator.description')}
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
                     />
                     <Card
                       Icon={TelephoneIcon}
                       title={t('contactNumber.title')}
                       description={t('contactNumber.description')}
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
                     />
                     <Card
                       Icon={EnvelopeIcon}
                       title={common('email')}
                       description='ir@sahathaiterminal.com'
-                      contactUsType={values.type as ContactUsTypeEnum}
+                      contactUsType={values.type}
+                    />
+                  </>
+                )}
+                {values.type === ContactUsTypeEnum.COMPANY_SECRETARY && (
+                  <>
+                    <Card
+                      Icon={LocationIcon}
+                      title={t('address.title')}
+                      description={t('companySecretary.address')}
+                      contactUsType={values.type}
+                    />
+                    <Card
+                      Icon={UserIcon}
+                      title={t('companySecretary.coordinator.title')}
+                      description={t('companySecretary.coordinator.description')}
+                      contactUsType={values.type}
+                    />
+                    <Card
+                      Icon={TelephoneIcon}
+                      title={t('contactNumber.title')}
+                      description={t('companySecretary.phone')}
+                      contactUsType={values.type}
+                    />
+                    <Card
+                      Icon={EnvelopeIcon}
+                      title={common('email')}
+                      description='papichaya.b@sahathaiterminal.com'
+                      contactUsType={values.type}
                     />
                   </>
                 )}

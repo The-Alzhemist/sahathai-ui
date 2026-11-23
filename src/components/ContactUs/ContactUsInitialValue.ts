@@ -1,3 +1,4 @@
+import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
 import { ContactUsFormType } from './interface'
 
 export const contactUsInitialValue: ContactUsFormType = {
@@ -5,5 +6,5 @@ export const contactUsInitialValue: ContactUsFormType = {
   email: '',
   phone: '',
   message: '',
-  type: 'contact-form',
+  type: ContactUsTypeEnum.CONTACT,
 }
