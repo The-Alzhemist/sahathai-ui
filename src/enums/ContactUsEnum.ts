@@ -4,3 +4,6 @@ export enum ContactUsTypeEnum {
   IR_CONTACT = 'ir-contact-form',
   COMPANY_SECRETARY = 'company-secretary-form',
 }
+
+// Hidden honeypot field in the contact form; real users never fill it
+export const CONTACT_HONEYPOT_FIELD = 'website'

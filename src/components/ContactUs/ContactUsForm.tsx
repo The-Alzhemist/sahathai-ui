@@ -1,10 +1,12 @@
-import { Form, Formik } from 'formik'
+import { Form, Formik, FormikHelpers } from 'formik'
 import { useTranslations } from 'next-intl'
-import { useForm as useFormSpree } from '@formspree/react'
-import { toast } from 'react-toastify'
-import { useEffect } from 'react'
+import { toast, ToastOptions } from 'react-toastify'
+import { useRef } from 'react'
 
-import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
+import {
+  CONTACT_HONEYPOT_FIELD,
+  ContactUsTypeEnum,
+} from '@/enums/ContactUsEnum'
 import { ContactTypeField } from '../forms/ContactTypeField'
 import { InputField } from '../forms/InputField'
 import { TextAreaField } from '../forms/TextAreaField'
@@ -49,14 +51,10 @@ const TYPE_TAB: Record<
   },
 }
 
-// Label written into the submitted message so the inbox can tell forms apart
-const TYPE_SUBMIT_LABEL: Record<ContactUsTypeEnum, string> = {
-  [ContactUsTypeEnum.CONTACT]: 'แบบฟอร์มติดต่อ (contact)',
-  [ContactUsTypeEnum.FRAUD_COMPLAINT]:
-    'แบบฟอร์มข้อร้องเรียนเรื่องการบริการ (Service complaint)',
-  [ContactUsTypeEnum.IR_CONTACT]: 'แบบฟอร์มติดต่อ IR (IR contact)',
-  [ContactUsTypeEnum.COMPANY_SECRETARY]:
-    'แบบฟอร์มเลขานุการบริษัทฯ (Company secretary)',
+const TOAST_OPTIONS: ToastOptions = {
+  position: 'top-center',
+  autoClose: 3000,
+  theme: 'light',
 }
 
 export function ContactUsForm({ variant = 'default' }: ContactUsFormProps) {
@@ -68,72 +66,28 @@ export function ContactUsForm({ variant = 'default' }: ContactUsFormProps) {
     type: types[0],
   }
 
-  const FORM_SPREE_ID = process.env.NEXT_PUBLIC_FORM_SPREE_ID
-  const [state, sendDataToFromSpree] = useFormSpree(FORM_SPREE_ID!)
-
-  useEffect(() => {
-    if (state.submitting) {
-      toast.info("We're processing your message...", {
-        position: 'top-center',
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'light',
-      })
-    }
-    if (!state.submitting && !state.errors && state.succeeded) {
-      toast.success('Sent message successfully!...', {
-        position: 'top-center',
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'light',
-      })
-    }
-  }, [state.submitting, state.errors, state.succeeded])
+  const honeypotRef = useRef<HTMLInputElement>(null)
 
   const handleOnSubmitForm = async (
     value: ContactUsFormType,
-    resetForm: any
+    { resetForm }: FormikHelpers<ContactUsFormType>
   ) => {
     try {
-      const formData = new FormData()
-      const currentDate = new Date()
-      const day = currentDate.getDate() // Get the day without leading zero
-      const month = currentDate.getMonth() + 1 // Get the month (adding 1 because months are 0-indexed)
-      const year = currentDate.getFullYear()
-      const hours = currentDate.getHours() // Get hours without leading zero
-      const minutes = currentDate.getMinutes() // Get minutes without leading zero
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...value,
+          [CONTACT_HONEYPOT_FIELD]: honeypotRef.current?.value ?? '',
+        }),
+      })
+      if (!res.ok) throw new Error(`Contact API responded ${res.status}`)
 
-      const formattedDate = `${day}-${month}-${year} ${hours}:${minutes}`
-
-      const contactType = TYPE_SUBMIT_LABEL[value.type]
-
-      const contactName = value.name || '-'
-      const contactPhone = value.phone || '-'
-      const contactEmail = value.email || '-'
-      const message = value.message || '-'
-      const customFormattedText = `
-        ประเภทการติดต่อ (contact type): ${contactType}
-        วันที่ (date):                   ${formattedDate}
-        ชื่อผู้ติดต่อ (contact name):       ${contactName}
-        หมายเลขโทรศัพท์ (phone number): ${contactPhone}
-        อีเมล (e-mail):                ${contactEmail}
-        ข้อความ (message):             ${message}
-      `
-
-      formData.append('Contact from data:', customFormattedText.trim())
-
-      await sendDataToFromSpree(formData)
-      resetForm()
+      toast.success('Sent message successfully!', TOAST_OPTIONS)
+      // Keep the selected tab after reset
+      resetForm({ values: { ...initialValues, type: value.type } })
     } catch (error) {
-      toast.error('Cannot sent your message, please try again')
+      toast.error('Cannot send your message, please try again', TOAST_OPTIONS)
     }
   }
 
@@ -141,11 +95,9 @@ export function ContactUsForm({ variant = 'default' }: ContactUsFormProps) {
     <Formik
       initialValues={initialValues}
       validationSchema={contactUsValidationSchema}
-      onSubmit={(v, { resetForm }) => {
-        handleOnSubmitForm(v, resetForm)
-      }}
+      onSubmit={handleOnSubmitForm}
     >
-      {({ values }) => {
+      {({ values, isSubmitting }) => {
         const isComplaint = values.type === ContactUsTypeEnum.FRAUD_COMPLAINT
         const isContact = !isComplaint
         return (
@@ -199,11 +151,22 @@ export function ContactUsForm({ variant = 'default' }: ContactUsFormProps) {
                   placeholder={t('message.placeholder')}
                   maxLength={500}
                 />
+                {/* Honeypot: hidden from users, bots tend to fill it */}
+                <input
+                  ref={honeypotRef}
+                  type='text'
+                  name={CONTACT_HONEYPOT_FIELD}
+                  tabIndex={-1}
+                  autoComplete='off'
+                  aria-hidden='true'
+                  className='absolute left-[-9999px] w-px h-px opacity-0'
+                />
                 <button
                   className={`${
                     isContact ? 'bg-background' : 'bg-red-400'
-                  } w-full py-[10px] rounded-full text-white button`}
+                  } w-full py-[10px] rounded-full text-white button disabled:opacity-60 disabled:cursor-not-allowed`}
                   type='submit'
+                  disabled={isSubmitting}
                 >
                   {t('submit')}
                 </button>
