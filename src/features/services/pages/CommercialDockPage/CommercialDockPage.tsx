@@ -6,7 +6,7 @@ import { ComprehensiveCommercialPortDetail } from '../../components/Comprehensiv
 
 export function CommercialDockPage() {
   const t = useTranslations(
-    'ServicesPage.ComprehensiveCommercialPortServices.commercialDock'
+    'ServicesPage.ComprehensiveCommercialPortServices.commercialDock',
   )
 
   return (
@@ -14,6 +14,13 @@ export function CommercialDockPage() {
       title={
         <Fragment>
           {t('title')}&nbsp;|&nbsp;
+          <Image
+            src='/logo.png'
+            width={70}
+            height={31.5}
+            className='mr-0.5'
+            alt=''
+          />
           <Image src='/bbt.png' width={70} height={31.5} alt='' />
         </Fragment>
       }
