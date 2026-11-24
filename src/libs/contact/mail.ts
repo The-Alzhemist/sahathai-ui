@@ -1,23 +1,9 @@
 import nodemailer from 'nodemailer'
 
 import { ContactUsTypeEnum } from '@/enums/ContactUsEnum'
+import { buildContactEmail, ContactSubmission } from './template'
 
-export interface ContactSubmission {
-  type: ContactUsTypeEnum
-  name: string
-  email: string
-  phone: string
-  message: string
-}
-
-const TYPE_LABEL: Record<ContactUsTypeEnum, string> = {
-  [ContactUsTypeEnum.CONTACT]: 'แบบฟอร์มติดต่อ (Contact)',
-  [ContactUsTypeEnum.FRAUD_COMPLAINT]:
-    'แบบฟอร์มข้อร้องเรียนเรื่องการบริการ (Service complaint)',
-  [ContactUsTypeEnum.IR_CONTACT]: 'แบบฟอร์มติดต่อ IR (IR contact)',
-  [ContactUsTypeEnum.COMPANY_SECRETARY]:
-    'แบบฟอร์มเลขานุการบริษัทฯ (Company secretary)',
-}
+export type { ContactSubmission }
 
 // Recipient env per form type; CONTACT_TO_DEFAULT is the fallback (handy for testing)
 const RECIPIENT_ENV: Record<ContactUsTypeEnum, string> = {
@@ -54,39 +40,8 @@ function getTransporter(): nodemailer.Transporter {
   return transporter
 }
 
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;')
-}
-
 export async function sendContactMail(data: ContactSubmission): Promise<void> {
-  const label = TYPE_LABEL[data.type]
-  const sentAt = new Date().toLocaleString('th-TH', {
-    timeZone: 'Asia/Bangkok',
-  })
-
-  const rows: [string, string][] = [
-    ['ประเภท (Type)', label],
-    ['วันที่ (Date)', sentAt],
-    ['ชื่อผู้ติดต่อ (Name)', data.name],
-    ['โทรศัพท์ (Phone)', data.phone],
-    ['อีเมล (E-mail)', data.email],
-    ['ข้อความ (Message)', data.message],
-  ]
-
-  const text = rows.map(([k, v]) => `${k}: ${v}`).join('\n')
-  const html = `<table cellpadding="6" style="border-collapse:collapse;font-family:sans-serif;font-size:14px">${rows
-    .map(
-      ([k, v]) =>
-        `<tr><td style="vertical-align:top;font-weight:bold;white-space:nowrap">${escapeHtml(
-          k
-        )}</td><td style="white-space:pre-wrap">${escapeHtml(v)}</td></tr>`
-    )
-    .join('')}</table>`
+  const { subject, text, html } = buildContactEmail(data)
 
   await getTransporter().sendMail({
     from: {
@@ -95,7 +50,7 @@ export async function sendContactMail(data: ContactSubmission): Promise<void> {
     },
     to: getRecipient(data.type),
     replyTo: { name: data.name, address: data.email },
-    subject: `[${label}] ${data.name}`,
+    subject,
     text,
     html,
   })
