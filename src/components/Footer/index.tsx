@@ -32,7 +32,7 @@ export function Footer() {
         </Link>
       </section>
       <section className='w-full mb-2 text-center'>
-        info@sahathaiterminal.com @2025. All rights reserved.
+        @2025. All rights reserved.
       </section>
 
       <section className='flex justify-center'>

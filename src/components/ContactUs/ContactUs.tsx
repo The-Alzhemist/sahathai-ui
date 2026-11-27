@@ -53,7 +53,7 @@ const ContactUs = ({ className, isShowMenuBar = false }: ContactUsProps) => {
                 <div className='flex items-center gap-[10px]'>
                   <PrinterIcon className='h-[18px] w-[18px]' />
                   <span>
-                    {t('officeEmail.title')}: {t('officeEmail.description')}
+                    {t('officeFax.title')}: {t('officeFax.description')}
                   </span>
                 </div>
               </div>

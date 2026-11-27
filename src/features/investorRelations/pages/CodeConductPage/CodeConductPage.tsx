@@ -36,7 +36,7 @@ export function CodeOfConductPage({ policyData }: CodeOfConductPageProps) {
             <PolicyDocumentList policies={policyData} />
           </section>
           <section className='pb-5 pt-[50px] max-w-4xl mx-auto space-y-6'>
-            <ContactUsForm hideContactForm />
+            <ContactUsForm variant='complaint' />
           </section>
         </Animation>
       </AnimatePresence>

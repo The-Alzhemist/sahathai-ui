@@ -7,9 +7,9 @@ export function Card({ Icon, title, description, contactUsType }: CardProps) {
       <div className='col-span-2 flex gap-x-[16px] items-center'>
         <div
           className={`w-[40px] h-[40px] rounded-full ${
-            contactUsType === ContactUsTypeEnum.CONTACT
-              ? 'bg-background'
-              : 'bg-red-400'
+            contactUsType === ContactUsTypeEnum.FRAUD_COMPLAINT
+              ? 'bg-red-400'
+              : 'bg-background'
           } flex items-center justify-center text-white`}
         >
           <Icon width='24' height='24' />

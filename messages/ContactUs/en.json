@@ -15,6 +15,8 @@
     },
     "contactForm": "Contact Form",
     "fraudComplaintForm": "Service Complaint Form",
+    "irContactForm": "IR Contact Form",
+    "companySecretaryForm": "Company Secretary Form",
     "message": {
       "label": "Message",
       "placeholder": "Please leave us a message"
@@ -39,14 +41,28 @@
         "description": "Investor Relations"
       }
     },
+    "customerService": {
+      "coordinator": {
+        "title": "Coordinator",
+        "description": "Customer Service"
+      }
+    },
+    "companySecretary": {
+      "coordinator": {
+        "title": "Coordinator",
+        "description": "Chairman of the Audit Committee, Sahathai Terminal PCL"
+      },
+      "address": "51/1 Moo 3, Phu Chao Saming Phrai Road, Bang Yai Prak Subdistrict, Phra Pradaeng District, Samut Prakan 10130",
+      "phone": "02-386-8000 ext. 1888 (Company Secretary)"
+    },
     "submit": "Submit",
     "officePhone": {
       "title": "Phone",
       "description": "+66 (0) 2386 8000"
     },
-    "officeEmail": {
-      "title": "Email",
-      "description": "info@sahathaiterminal.com"
+    "officeFax": {
+      "title": "Fax",
+      "description": "+66 (0) 2386 8008"
     }
   }
 }
